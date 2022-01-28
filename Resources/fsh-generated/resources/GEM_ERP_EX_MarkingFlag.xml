@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://gematik.de/fhir/StructureDefinition/MarkingFlag" />
+  <version value="1.1.1" />
+  <name value="MarkingFlag" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ChargeItem" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Options for submitted ChargeItem" />
+      <definition value="Optional Extension for ChargeItem-Ressources in eRx workflow" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:insuranceProvider">
+      <path value="Extension.extension" />
+      <sliceName value="insuranceProvider" />
+      <short value="submitted to health insurance provider" />
+      <definition value="Patient submitted their ChargeItem to his health insurance provider." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:insuranceProvider.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="insuranceProvider" />
+    </element>
+    <element id="Extension.extension:insuranceProvider.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Extension.extension.value[x]" />
+      <short value="true = submitted to insurance provider" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:subsidy">
+      <path value="Extension.extension" />
+      <sliceName value="subsidy" />
+      <short value="submitted to aid organization ('Beihilfe')" />
+      <definition value="Patient submitted their ChargeItem to the aid organization ('Beihilfe')." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:subsidy.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="subsidy" />
+    </element>
+    <element id="Extension.extension:subsidy.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Extension.extension.value[x]" />
+      <short value="true = submitted to aid organization" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:taxOffice">
+      <path value="Extension.extension" />
+      <sliceName value="taxOffice" />
+      <short value="submitted to tax office" />
+      <definition value="Patient submitted their ChargeItem to the tax office." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:taxOffice.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="taxOffice" />
+    </element>
+    <element id="Extension.extension:taxOffice.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Extension.extension.value[x]" />
+      <short value="true = submitted to tax office" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://gematik.de/fhir/StructureDefinition/MarkingFlag" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

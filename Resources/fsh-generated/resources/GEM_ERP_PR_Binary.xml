@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://gematik.de/fhir/StructureDefinition/ErxBinary" />
+  <version value="1.1.1" />
+  <name value="Gem_erxBinary" />
+  <status value="draft" />
+  <description value="PCKS signed ePrescription Bundle" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Binary" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Binary" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Binary.contentType">
+      <path value="Binary.contentType" />
+      <fixedCode value="application/pkcs7-mime" />
+    </element>
+    <element id="Binary.data">
+      <path value="Binary.data" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

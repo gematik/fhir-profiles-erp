@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2020-04-16T13:43:30.128+00:00" />
+  </meta>
+  <url value="https://gematik.de/fhir/StructureDefinition/ErxCommunicationReply" />
+  <version value="1.1.1" />
+  <name value="Gem_erxCommunicationReply" />
+  <title value="Reply from Provider to Patient" />
+  <status value="draft" />
+  <date value="2020-04-16T13:43:27.7930941+00:00" />
+  <description value="Ressource used for the communication of the reply to dispense/info request from provider to patient/representative" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="true" />
+  <type value="Communication" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Communication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication.basedOn">
+      <path value="Communication.basedOn" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://gematik.de/fhir/StructureDefinition/ErxTask" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.basedOn.reference">
+      <path value="Communication.basedOn.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.status">
+      <path value="Communication.status" />
+      <fixedCode value="unknown" />
+    </element>
+    <element id="Communication.about">
+      <path value="Communication.about" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medikament_Freitext" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medikament_PZN" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medikament_Rezeptur" />
+        <targetProfile value="https://gematik.de/fhir/StructureDefinition/erxTask" />
+        <aggregation value="contained" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.about.reference">
+      <path value="Communication.about.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.sent">
+      <path value="Communication.sent" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.received">
+      <path value="Communication.received" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.recipient.identifier">
+      <path value="Communication.recipient.identifier" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <definition value="Message sender - set by ePrescription server using client AuthN-Credential&#xD;&#xA;The entity (e.g. person, organization) which was the source of the communication." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.sender.identifier">
+      <path value="Communication.sender.identifier" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/BaseTelematikID" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.payload">
+      <path value="Communication.payload" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Communication.payload.extension">
+      <path value="Communication.payload.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Communication.payload.extension:OfferedSupplyOptions">
+      <path value="Communication.payload.extension" />
+      <sliceName value="OfferedSupplyOptions" />
+      <short value="Offered supply options by pharmacy" />
+      <definition value="In a communication reply a pharmacy may state its available supply options, whether to serve customers at the store, send medication by messenger or use parcel shippment" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/SupplyOptionsType" />
+      </type>
+    </element>
+    <element id="Communication.payload.extension:AvailabilityStatus">
+      <path value="Communication.payload.extension" />
+      <sliceName value="AvailabilityStatus" />
+      <short value="Availability Status of queried medication" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/AvailabilityStateExtension" />
+      </type>
+    </element>
+    <element id="Communication.payload.content[x]">
+      <path value="Communication.payload.content[x]" />
+      <type>
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

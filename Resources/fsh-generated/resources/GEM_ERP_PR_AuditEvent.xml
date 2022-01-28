@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="80871938-1322-47ae-a4c4-ac080a170c73" />
+  <meta>
+    <lastUpdated value="2020-04-16T13:41:55.87+00:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Beschreibung des Inhalts des Zugriffsprotokolleintrags in einfacher Sprache</div>
+  </text>
+  <url value="https://gematik.de/fhir/StructureDefinition/ErxAuditEvent" />
+  <version value="1.1.1" />
+  <name value="Gem_erxAuditEvent" />
+  <title value="AuditEvent for Logging of ePrescription Access" />
+  <status value="draft" />
+  <date value="2020-04-16T13:41:53.3147244+00:00" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="dicom" />
+    <uri value="http://nema.org/dicom" />
+    <name value="DICOM Tag Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w3c.prov" />
+    <uri value="http://www.w3.org/ns/prov" />
+    <name value="W3C PROV" />
+  </mapping>
+  <mapping>
+    <identity value="fhirprovenance" />
+    <uri value="http://hl7.org/fhir/provenance" />
+    <name value="FHIR Provenance Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AuditEvent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AuditEvent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AuditEvent.type.system">
+      <path value="AuditEvent.type.system" />
+      <code>
+        <system value="http://terminology.hl7.org/CodeSystem/audit-event-type" />
+        <display value="rest" />
+      </code>
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/audit-event-type" />
+    </element>
+    <element id="AuditEvent.type.code">
+      <path value="AuditEvent.type.code" />
+      <min value="1" />
+      <fixedCode value="rest" />
+    </element>
+    <element id="AuditEvent.subtype">
+      <path value="AuditEvent.subtype" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AuditEvent.action">
+      <path value="AuditEvent.action" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.outcome">
+      <path value="AuditEvent.outcome" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.agent.type">
+      <path value="AuditEvent.agent.type" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.agent.who.identifier">
+      <path value="AuditEvent.agent.who.identifier" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/BaseTelematikID" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10" />
+      </type>
+    </element>
+    <element id="AuditEvent.agent.name">
+      <path value="AuditEvent.agent.name" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.source.site">
+      <path value="AuditEvent.source.site" />
+      <min value="1" />
+      <fixedString value="E-Rezept Fachdienst" />
+    </element>
+    <element id="AuditEvent.source.observer">
+      <path value="AuditEvent.source.observer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+    </element>
+    <element id="AuditEvent.source.observer.reference">
+      <path value="AuditEvent.source.observer.reference" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.entity">
+      <path value="AuditEvent.entity" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AuditEvent.entity.what">
+      <path value="AuditEvent.entity.what" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://gematik.de/fhir/StructureDefinition/ErxMedicationDispense" />
+        <targetProfile value="https://gematik.de/fhir/StructureDefinition/ErxTask" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity.name">
+      <path value="AuditEvent.entity.name" />
+      <short value="KVNR of patient that the auditEvent refers to" />
+      <definition value="KVNR of patient that the auditEvent refers to, used as filter criteria when patient accesses its data" />
+      <min value="1" />
+    </element>
+    <element id="AuditEvent.entity.description">
+      <path value="AuditEvent.entity.description" />
+      <short value="PrescriptionID (RezeptID)" />
+      <definition value="PrescriptionID (RezeptID) to have a relation to insurance company data when Task already deleted" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

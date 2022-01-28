@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://gematik.de/fhir/StructureDefinition/ErxChargeItem" />
+  <version value="1.1.1" />
+  <name value="ErxChargeItem" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ChargeItem" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ChargeItem" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ChargeItem.extension">
+      <path value="ChargeItem.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ChargeItem.extension:markingFlag">
+      <path value="ChargeItem.extension" />
+      <sliceName value="markingFlag" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/MarkingFlag" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.identifier">
+      <path value="ChargeItem.identifier" />
+      <type>
+        <code value="Identifier" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.status">
+      <path value="ChargeItem.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.code">
+      <path value="ChargeItem.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.code.coding.system">
+      <path value="ChargeItem.code.coding.system" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/data-absent-reason" />
+    </element>
+    <element id="ChargeItem.code.coding.code">
+      <path value="ChargeItem.code.coding.code" />
+      <fixedCode value="not-applicable" />
+    </element>
+    <element id="ChargeItem.subject">
+      <path value="ChargeItem.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.subject.identifier">
+      <path value="ChargeItem.subject.identifier" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10" />
+      </type>
+    </element>
+    <element id="ChargeItem.enterer">
+      <path value="ChargeItem.enterer" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.enterer.identifier">
+      <path value="ChargeItem.enterer.identifier" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/BaseTelematikID" />
+      </type>
+    </element>
+    <element id="ChargeItem.enteredDate">
+      <path value="ChargeItem.enteredDate" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.supportingInformation">
+      <path value="ChargeItem.supportingInformation" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="ChargeItem.supportingInformation:prescriptionItem">
+      <path value="ChargeItem.supportingInformation" />
+      <sliceName value="prescriptionItem" />
+      <definition value="In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format." />
+    </element>
+    <element id="ChargeItem.supportingInformation:prescriptionItem.type">
+      <path value="ChargeItem.supportingInformation.type" />
+      <fixedUri value="https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle" />
+    </element>
+    <element id="ChargeItem.supportingInformation:dispenseItem">
+      <path value="ChargeItem.supportingInformation" />
+      <sliceName value="dispenseItem" />
+    </element>
+    <element id="ChargeItem.supportingInformation:dispenseItem.type">
+      <path value="ChargeItem.supportingInformation.type" />
+      <fixedUri value="http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" />
+    </element>
+    <element id="ChargeItem.supportingInformation:receipt">
+      <path value="ChargeItem.supportingInformation" />
+      <sliceName value="receipt" />
+      <definition value="In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652]." />
+    </element>
+    <element id="ChargeItem.supportingInformation:receipt.type">
+      <path value="ChargeItem.supportingInformation.type" />
+      <fixedUri value="https://gematik.de/fhir/StructureDefinition/ErxReceipt" />
+    </element>
+  </differential>
+</StructureDefinition>

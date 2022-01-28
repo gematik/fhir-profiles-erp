@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="8e46a4b1-767b-4e8b-9032-454c4e94f8b6" />
+  <meta>
+    <lastUpdated value="2020-04-16T13:42:23.761+00:00" />
+  </meta>
+  <url value="https://gematik.de/fhir/StructureDefinition/ErxReceipt" />
+  <version value="1.1.1" />
+  <name value="Gem_erxReceipt" />
+  <title value="Document Bundle for Receipt" />
+  <status value="draft" />
+  <date value="2020-04-16T13:42:21.4495435+00:00" />
+  <description value="A document style representation of the receipt (complete, self-contained, signed)" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle.identifier">
+      <path value="Bundle.identifier" />
+      <short value="identifier of ePrescription" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="document" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.timestamp">
+      <path value="Bundle.timestamp" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <short value="ePrescription receipt entry" />
+      <min value="3" />
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.signature">
+      <path value="Bundle.signature" />
+      <type>
+        <code value="Signature" />
+        <profile value="https://gematik.de/fhir/StructureDefinition/ErxSignature" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.signature.type">
+      <path value="Bundle.signature.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
