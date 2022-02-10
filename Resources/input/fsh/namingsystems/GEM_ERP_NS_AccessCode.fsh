@@ -1,6 +1,6 @@
 Profile: AccessCode
 Parent: NamingSystem
-Id: b2857734-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-NS-AccessCode
 * name = "AccessCode"
 * status = #active
 * kind = #identifier

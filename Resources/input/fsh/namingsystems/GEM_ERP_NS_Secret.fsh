@@ -1,6 +1,6 @@
 Profile: SecretNS
 Parent: NamingSystem
-Id: b3857734-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-NS-Secret
 * name = "SecretNS"
 * status = #active
 * kind = #identifier

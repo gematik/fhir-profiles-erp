@@ -1,6 +1,6 @@
 Profile: TelematikIdNS
 Parent: NamingSystem
-Id: b4857734-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-NS-TelematikId
 * name = "TelematikIdNS"
 * status = #active
 * kind = #identifier
