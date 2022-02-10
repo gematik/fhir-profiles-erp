@@ -1,4 +1,4 @@
-Instance: Abort Operation
+Instance: AbortOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/OperationDefinition/AbortOperationDefinition"

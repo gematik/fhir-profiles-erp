@@ -1,4 +1,4 @@
-Instance: Activate Operation
+Instance: ActivateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/OperationDefinition/ActivateOperationDefinition"

@@ -1,7 +1,6 @@
-Instance: PrescriptionIdNS
-InstanceOf: NamingSystem
+Profie: PrescriptionIdNS
+Parent: NamingSystem
 Id: b5857734-8a68-11ec-a8a3-0242ac120002
-Usage: #definition
 * name = "PrescriptionIdNS"
 * status = #active
 * kind = #identifier

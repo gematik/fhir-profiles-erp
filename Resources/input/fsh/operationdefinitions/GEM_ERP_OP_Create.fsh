@@ -1,4 +1,4 @@
-Instance: Create Operation
+Instance: CreateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/OperationDefinition/CreateOperationDefinition"

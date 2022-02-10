@@ -1,4 +1,4 @@
-Instance: Close Operation
+Instance: CloseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/OperationDefinition/CloseOperationDefinition"

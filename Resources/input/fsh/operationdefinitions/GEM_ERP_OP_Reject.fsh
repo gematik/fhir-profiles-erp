@@ -1,4 +1,4 @@
-Instance: Reject Operation
+Instance: RejectOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/OperationDefinition/RejectOperationDefinition"
