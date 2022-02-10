@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "b185761c-8a68-11ec-a8a3-0242ac120002",
+  "id": "GEM-ERP-PR-Binary",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -14,8 +14,9 @@
   "url": "https://gematik.de/fhir/StructureDefinition/ErxBinary",
   "version": "1.1.1",
   "name": "Gem_erxBinary",
+  "title": "PKCS7 signed Bundle envelopig style",
   "status": "draft",
-  "description": "PCKS signed ePrescription Bundle",
+  "description": "PCKS7 signed ePrescription Bundle or Receipt",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

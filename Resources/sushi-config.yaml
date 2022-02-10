@@ -1,9 +1,12 @@
+id: fhir-profiles-erp
 canonical: https://gematik.de/fhir/
+name: Die E-Rezept-Spezifikation
+title: ePrescription workflow
+description: German fhir profiles on ePrescription workflow
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-id: Die E-Rezept-Spezifikation
-name: Die E-Rezept-Spezifikation
+
 status: draft
 version: "1.1.1"
 publisher:
