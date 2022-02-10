@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "f799aea6-8a69-11ec-a8a3-0242ac120002",
+  "url": "https://gematik.de/fhir/StructureDefinition/SubstitutionAllowedType",
+  "version": "1.1.1",
+  "name": "SubstitutionAllowedType",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Communication.payload"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Extension for aut idem substitution allowed",
+        "definition": "Aut idem substitution allowed according to MedicationRequest.substitution.allowed - field\r\ntrue = aut idem (substitution allowed), false = not allowed"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/StructureDefinition/SubstitutionAllowedType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Aut idem substitution allowed",
+        "definition": "Aut idem substitution allowed according to MedicationRequest.substitution.allowed - field\r\ntrue = aut idem (substitution allowed), false = not allowed",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

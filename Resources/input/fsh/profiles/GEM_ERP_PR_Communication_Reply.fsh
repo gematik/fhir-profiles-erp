@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationReply
 Parent: Communication
-Id: Gem_erxCommunicationReply
+Id: 8bcf7418-8a68-11ec-a8a3-0242ac120002
 Title: "Reply from Provider to Patient"
 Description: "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
@@ -14,7 +14,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1.. MS
 * status = #unknown (exactly)
-* about only Reference($KBV_PR_ERP_Medikament_Freitext or $KBV_PR_ERP_Medikament_PZN or $KBV_PR_ERP_Medikament_Rezeptur or $erxTask)
+* about only Reference($KBV_PR_ERP_Medication_Freetext or $KBV_PR_ERP_Medication_PZN or $KBV_PR_ERP_Medication_Compounding or $KBV_PR_ERP_Medication_Ingredient or $erxTask)
 * about MS
 * about ^type.aggregation = #contained
 * about.reference 1.. MS

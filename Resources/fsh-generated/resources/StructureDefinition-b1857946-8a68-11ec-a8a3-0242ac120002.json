@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "b1857946-8a68-11ec-a8a3-0242ac120002",
+  "url": "https://gematik.de/fhir/StructureDefinition/BaseTelematikID",
+  "version": "1.1.1",
+  "name": "Gem_baseTelematikID",
+  "title": "Identifier Profile for Telematik ID",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/NamingSystem/TelematikID"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "min": 1
+      }
+    ]
+  }
+}

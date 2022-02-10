@@ -1,6 +1,6 @@
 Profile: Gem_erxPrescriptionID
 Parent: Identifier
-Id: Gem_erxPrescriptionID
+Id: 19196b30-8a69-11ec-a8a3-0242ac120002
 Title: "Identifier Profile for Prescription IDs"
 Description: "The prescriptionID is an generated and not changeable sequence of numbers seperated by dots. The first three numbers define the type of the prescription. The next twelve numbers are the generated unique and consecutive sequence of the prescription. The last two digits are the check numbers according to ISO 7064."
 * ^url = "https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID"

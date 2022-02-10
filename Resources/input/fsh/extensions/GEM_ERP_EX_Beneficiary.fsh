@@ -1,5 +1,5 @@
 Extension: BeneficiaryExtension
-Id: BeneficiaryExtension
+Id: 4a694d72-8a69-11ec-a8a3-0242ac120002
 Description: "The beneficiary (e.g. pharmacy) of the erx-receipt that is created when the ePrescription-workflow finishes"
 * ^url = "https://gematik.de/fhir/StructureDefinition/BeneficiaryExtension"
 * ^version = "1.1.1"

@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationRepresentative
 Parent: Communication
-Id: Gem_erxCommunicationRepresentative
+Id: b1857b30-8a68-11ec-a8a3-0242ac120002
 Title: "Communication between Patient and Representative"
 Description: "Ressource used for the communication between patients and their representative pertaining to an ePrescription"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"

@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "DocumenttypeVS",
+  "id": "4a694728-8a69-11ec-a8a3-0242ac120002",
+  "title": "ValueSet of Documenttype Codes",
+  "description": "Type of document depending on the recipient.",
+  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/ValueSet/Documenttype",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "expansion": {
+    "identifier": "fe7e0ee0-f72e-4909-bf48-7c84ff97bac5",
+    "timestamp": "2020-05-07T07:48:29+00:00",
+    "total": 3,
+    "contains": [
+      {
+        "system": "https://gematik.de/fhir/CodeSystem/Documenttype",
+        "code": "1",
+        "display": "Health Care Provider Prescription"
+      },
+      {
+        "system": "https://gematik.de/fhir/CodeSystem/Documenttype",
+        "code": "2",
+        "display": "Patient Confirmation"
+      },
+      {
+        "system": "https://gematik.de/fhir/CodeSystem/Documenttype",
+        "code": "3",
+        "display": "Receipt"
+      }
+    ]
+  },
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/CodeSystem/Documenttype"
+      }
+    ]
+  }
+}

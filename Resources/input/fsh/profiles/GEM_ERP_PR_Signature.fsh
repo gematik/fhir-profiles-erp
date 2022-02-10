@@ -1,6 +1,6 @@
 Profile: Gem_erxSignature
 Parent: Signature
-Id: Gem_erxSignature
+Id: 19196d24-8a69-11ec-a8a3-0242ac120002
 Title: "Profile for Signature of Bundles in ePrescription Context"
 * ^url = "https://gematik.de/fhir/StructureDefinition/ErxSignature"
 * ^version = "1.1.1"

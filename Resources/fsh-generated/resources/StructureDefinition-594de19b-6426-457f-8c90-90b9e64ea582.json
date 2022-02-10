@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "594de19b-6426-457f-8c90-90b9e64ea582",
+  "meta": {
+    "lastUpdated": "2020-04-16T13:46:53.84+00:00"
+  },
+  "url": "https://gematik.de/fhir/StructureDefinition/AcceptDate",
+  "version": "1.1.1",
+  "name": "AcceptDate",
+  "title": "Date of confirmation of the prescription",
+  "status": "draft",
+  "date": "2020-04-16T13:46:51.3380095+00:00",
+  "description": "This extension should be used in the Task ressource. It stores the Date till when an insurance company will accept and pay the prescription.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Task"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Date when insurance company excepts the prescription."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/StructureDefinition/AcceptDate"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}

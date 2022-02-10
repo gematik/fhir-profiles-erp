@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationInfoReq
 Parent: Communication
-Id: Gem_erxCommunicationInfoReq
+Id: b1857310-8a68-11ec-a8a3-0242ac120002
 Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"

@@ -1,5 +1,5 @@
 CodeSystem: AvailabilityStatusCS
-Id: AvailabilityStatusCS
+Id: f799b1f8-8a69-11ec-a8a3-0242ac120002
 Title: "CodeSystem of AvailabilityStatus"
 Description: "Type of the availability status for medication availability request."
 * ^url = "https://gematik.de/fhir/CodeSystem/AvailabilityStatus"

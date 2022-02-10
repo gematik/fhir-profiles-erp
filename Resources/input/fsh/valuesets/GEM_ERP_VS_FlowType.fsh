@@ -1,5 +1,5 @@
 ValueSet: FlowtypeVS
-Id: FlowtypeVS
+Id: 4a694a48-8a69-11ec-a8a3-0242ac120002
 Title: "ValueSet of Flowtype Codes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
 * ^url = "https://gematik.de/fhir/ValueSet/Flowtype"

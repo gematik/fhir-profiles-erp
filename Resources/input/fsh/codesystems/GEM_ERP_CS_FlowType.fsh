@@ -1,5 +1,5 @@
 CodeSystem: FlowtypeCS
-Id: FlowtypeCS
+Id: f799b0b8-8a69-11ec-a8a3-0242ac120002
 Title: "CodeSystem of Flowtypes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
 * ^url = "https://gematik.de/fhir/CodeSystem/Flowtype"

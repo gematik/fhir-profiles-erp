@@ -1,6 +1,6 @@
 Profile: Gem_erxComposition
 Parent: Composition
-Id: Gem_erxComposition
+Id: b1857c34-8a68-11ec-a8a3-0242ac120002
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
 * ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
