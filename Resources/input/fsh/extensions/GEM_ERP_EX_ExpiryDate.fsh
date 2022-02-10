@@ -1,5 +1,5 @@
 Extension: ExpiryDate
-Id: cff3d9c9-12a8-4d45-beb0-3edbd253e683
+Id: GEM-ERP-EX-ExpiryDate
 Title: "Presciption expiry date"
 Description: "This extension should be used in the Task ressource. It shows the presciption expiry date."
 * ^meta.lastUpdated = "2020-04-16T13:47:34.04+00:00"

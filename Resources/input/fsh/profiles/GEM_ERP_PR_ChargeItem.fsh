@@ -1,6 +1,6 @@
 Profile: ErxChargeItem
 Parent: ChargeItem
-Id: b1857734-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-ChargeItem
 * ^url = "https://gematik.de/fhir/StructureDefinition/ErxChargeItem"
 * ^version = "1.1.1"
 * ^status = #draft

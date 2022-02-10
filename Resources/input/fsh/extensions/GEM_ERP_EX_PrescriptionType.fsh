@@ -1,5 +1,5 @@
 Extension: PrescriptionType
-Id: 06b8f9bb-cd9a-42c1-8909-bcc2f9947476
+Id: GEM-ERP-EX-PrescriptionType
 Description: "Definies the Type of a prescription."
 * ^meta.lastUpdated = "2020-04-16T14:48:56.829+00:00"
 * ^url = "https://gematik.de/fhir/StructureDefinition/PrescriptionType"

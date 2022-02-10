@@ -1,6 +1,6 @@
 Profile: Gem_erxMedicationDispense
 Parent: MedicationDispense
-Id: 40bff92a-2fec-448f-9b1c-6aec203a4053
+Id: GEM-ERP-PR-MedicationDispense
 Title: "Dispensation of the Prescription"
 Description: "Handles information about the redeem of the prescription and the submited medication."
 * ^meta.lastUpdated = "2020-04-16T13:44:27.957+00:00"

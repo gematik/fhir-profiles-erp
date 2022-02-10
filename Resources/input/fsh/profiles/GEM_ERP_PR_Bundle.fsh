@@ -1,6 +1,6 @@
 Profile: Gem_erxReceipt
 Parent: Bundle
-Id: 8e46a4b1-767b-4e8b-9032-454c4e94f8b6
+Id: GEM-ERP-PR-Bundle
 Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
 * ^meta.lastUpdated = "2020-04-16T13:42:23.761+00:00"

@@ -1,5 +1,5 @@
 Extension: SubstitutionAllowedType
-Id: f799aea6-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-EX-SubstitutionAllowedType
 * ^url = "https://gematik.de/fhir/StructureDefinition/SubstitutionAllowedType"
 * ^version = "1.1.1"
 * ^status = #draft

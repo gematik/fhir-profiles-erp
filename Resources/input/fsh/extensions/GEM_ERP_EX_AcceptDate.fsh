@@ -1,5 +1,5 @@
 Extension: AcceptDate
-Id: 594de19b-6426-457f-8c90-90b9e64ea582
+Id: GEM-ERP-EX-AcceptDate
 Title: "Date of confirmation of the prescription"
 Description: "This extension should be used in the Task ressource. It stores the Date till when an insurance company will accept and pay the prescription."
 * ^meta.lastUpdated = "2020-04-16T13:46:53.84+00:00"

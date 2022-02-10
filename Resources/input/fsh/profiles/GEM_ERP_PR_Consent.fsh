@@ -1,6 +1,6 @@
 Profile: ErxConsent
 Parent: Consent
-Id: b1857d38-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-Consent
 * ^url = "https://gematik.de/fhir/StructureDefinition/ErxConsent"
 * ^version = "1.1.1"
 * ^status = #draft

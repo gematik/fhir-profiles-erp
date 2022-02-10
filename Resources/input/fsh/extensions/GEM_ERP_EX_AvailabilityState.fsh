@@ -1,5 +1,5 @@
 Extension: AvailabilityStateExtension
-Id: 4a694c6e-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-EX-AvailabilityState
 * ^url = "https://gematik.de/fhir/StructureDefinition/AvailabilityStateExtension"
 * ^version = "1.1.1"
 * ^status = #draft

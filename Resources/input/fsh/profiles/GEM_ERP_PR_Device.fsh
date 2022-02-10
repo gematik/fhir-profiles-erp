@@ -1,6 +1,6 @@
 Profile: Gem_erxDevice
 Parent: Device
-Id: b1857e46-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-Device
 Description: "static information on the ePrescription backend server"
 * ^url = "https://gematik.de/fhir/StructureDefinition/ErxDevice"
 * ^version = "1.1.1"

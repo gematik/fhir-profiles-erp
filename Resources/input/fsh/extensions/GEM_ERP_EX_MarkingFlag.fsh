@@ -1,5 +1,5 @@
 Extension: MarkingFlag
-Id: 4a695088-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-EX-MarkingFlag
 * ^url = "https://gematik.de/fhir/StructureDefinition/MarkingFlag"
 * ^version = "1.1.1"
 * ^status = #draft

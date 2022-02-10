@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationDispReq
 Parent: Communication
-Id: b1857842-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-Communication-DispReq
 Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"

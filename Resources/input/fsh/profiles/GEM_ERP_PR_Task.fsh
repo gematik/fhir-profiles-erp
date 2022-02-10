@@ -1,6 +1,6 @@
 Profile: Gem_erxTask
 Parent: Task
-Id: 4b61a23f-f8d8-45d2-9131-a5726494c3a2
+Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * ^meta.lastUpdated = "2020-04-16T14:44:47.082+00:00"

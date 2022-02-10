@@ -1,5 +1,5 @@
 ValueSet: AvailabilityStatusVS
-Id: 19197a08-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-VS-AvailabilityStatus
 Title: "ValueSet of AvailabilityStatus Codes"
 Description: "Type of the availability status for medication availability request"
 * ^url = "https://gematik.de/fhir/ValueSet/AvailabilityStatus"

@@ -1,5 +1,5 @@
 Extension: SupplyOptionsType
-Id: 4a694b60-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-EX-SupplyOptionsType
 * ^url = "https://gematik.de/fhir/StructureDefinition/SupplyOptionsType"
 * ^version = "1.1.1"
 * ^status = #draft

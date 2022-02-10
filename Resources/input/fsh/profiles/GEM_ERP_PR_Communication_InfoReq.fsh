@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationInfoReq
 Parent: Communication
-Id: b1857310-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-Communication-InfoReq
 Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
@@ -33,7 +33,7 @@ Description: "Ressource used for the communication of informative requests betwe
     SupplyOptionsType named PreferredSupplyOptions 0..* and
     SubstitutionAllowedType named SubstitutionAllowed 1..1 and
     PrescriptionType named PrescriptionType 1..1 and
-    PackageQuanity named PackageQuantity 0..*
+    PackageQuantity named PackageQuantity 0..*
 * payload.extension[PreferredSupplyOptions] ^short = "Preferred supply options by the patient"
 * payload.extension[PreferredSupplyOptions] ^definition = "In an information request (Anfrage Belieferfähigkeit) to a pharmacy a patient may state its preferred supply options, whether to pick up at the store, getting delivered by messenger or receive parcel shippment"
 * payload.extension[SubstitutionAllowed] ^short = "Aut idem substitution allowed"

@@ -1,5 +1,5 @@
 ValueSet: DocumenttypeVS
-Id: 4a694728-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-VS-DocumentType
 Title: "ValueSet of Documenttype Codes"
 Description: "Type of document depending on the recipient."
 * ^url = "https://gematik.de/fhir/ValueSet/Documenttype"

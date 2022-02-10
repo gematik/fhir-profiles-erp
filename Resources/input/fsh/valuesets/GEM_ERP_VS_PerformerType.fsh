@@ -1,5 +1,5 @@
 ValueSet: PerformertypeVS
-Id: 19197026-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-VS-PerformerType
 Title: "ValueSet of DPerformertype Codes"
 Description: "Type of performer"
 * ^url = "https://gematik.de/fhir/ValueSet/Performertype"

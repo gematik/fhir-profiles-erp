@@ -1,6 +1,6 @@
 Profile: Gem_erxCommunicationReply
 Parent: Communication
-Id: 8bcf7418-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-Communication-Reply
 Title: "Reply from Provider to Patient"
 Description: "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"

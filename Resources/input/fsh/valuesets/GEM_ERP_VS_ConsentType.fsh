@@ -1,5 +1,5 @@
 ValueSet: ConsentTypeVS
-Id: 4a694502-8a69-11ec-a8a3-0242ac120002
+Id: GEM-ERP-VS-ConsentType
 Title: "ValueSet of Consent Codes"
 Description: "Type of Consents for the ePrescription."
 * ^url = "https://gematik.de/fhir/ValueSet/Consenttype"

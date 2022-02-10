@@ -1,6 +1,6 @@
 Profile: Gem_baseTelematikID
 Parent: Identifier
-Id: b1857946-8a68-11ec-a8a3-0242ac120002
+Id: GEM-ERP-PR-TelematikId
 Title: "Identifier Profile for Telematik ID"
 * ^url = "https://gematik.de/fhir/StructureDefinition/BaseTelematikID"
 * ^version = "1.1.1"
