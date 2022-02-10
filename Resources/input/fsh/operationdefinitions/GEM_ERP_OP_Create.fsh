@@ -16,13 +16,13 @@ Usage: #definition
 * outputProfile = "https://gematik.de/fhir/StructureDefinition/ErxTask"
 * parameter[0].name = #workflowType
 * parameter[=].use = #in
-* parameter[=].min = "1"
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "This parameter defines the type of a prescription."
 * parameter[=].type = #integer
 * parameter[+].name = #task
 * parameter[=].use = #out
-* parameter[=].min = "1"
+* parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "The created Task."
+* parameter[=].documentation = "The previously created Task's ID"
 * parameter[=].type = #Task

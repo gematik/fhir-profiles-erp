@@ -20,6 +20,7 @@
     {
       "name": "workflowType",
       "use": "in",
+      "min": 1,
       "max": "1",
       "documentation": "This parameter defines the type of a prescription.",
       "type": "integer"
@@ -27,8 +28,9 @@
     {
       "name": "task",
       "use": "out",
+      "min": 1,
       "max": "1",
-      "documentation": "The created Task.",
+      "documentation": "The previously created Task's ID",
       "type": "Task"
     }
   ]
