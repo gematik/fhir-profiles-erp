@@ -1,8 +1,8 @@
 Instance: CreateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://gematik.de/fhir/OperationDefinition/CreateOperationDefinition"
-* version = "1.1.1"
+* url = "http://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition"
+* version = "1.2"
 * name = "Create Operation"
 * status = #draft
 * kind = #operation

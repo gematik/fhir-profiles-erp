@@ -2,8 +2,8 @@ ValueSet: DocumenttypeVS
 Id: GEM-ERP-VS-DocumentType
 Title: "ValueSet of Documenttype Codes"
 Description: "Type of document depending on the recipient."
-* ^url = "https://gematik.de/fhir/ValueSet/Documenttype"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/ValueSet/Documenttype"
+* ^version = "1.2"
 * ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"

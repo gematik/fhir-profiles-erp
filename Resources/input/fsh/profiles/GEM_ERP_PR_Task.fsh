@@ -4,8 +4,8 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * ^meta.lastUpdated = "2020-04-16T14:44:47.082+00:00"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxTask"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxTask"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T14:44:44.4851338+00:00"
 * extension ^slicing.discriminator.type = #value

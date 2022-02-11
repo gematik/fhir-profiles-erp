@@ -1,7 +1,7 @@
 Extension: PackageQuantity
 Id: GEM-ERP-EX-PackageQuantity
-* ^url = "https://gematik.de/fhir/StructureDefinition/PackageQuantity"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/PackageQuantity"
+* ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Communication.payload"

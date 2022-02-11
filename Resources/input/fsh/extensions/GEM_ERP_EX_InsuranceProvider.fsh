@@ -1,8 +1,8 @@
 Extension: InsuranceProvider
 Id: GEM-ERP-EX-InsuranceProvider
 Description: "IK-number (Instituskennzeichen) of Insurance Provider covering the requested medication"
-* ^url = "https://gematik.de/fhir/StructureDefinition/InsuranceProvider"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/InsuranceProvider"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-06-04"
 * ^context.type = #element

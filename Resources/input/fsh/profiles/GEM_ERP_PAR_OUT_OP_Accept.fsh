@@ -1,8 +1,8 @@
 Profile: Gem_erxAcceptOperationOutParameters
 Parent: Parameters
 Id: GEM-ERP-PAR-OUT-OP-Accept
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxAcceptOperationOutParameters"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxAcceptOperationOutParameters"
+* ^version = "1.2"
 * ^status = #draft
 * parameter ..2
 * parameter ^slicing.discriminator.type = #value

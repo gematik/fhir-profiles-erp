@@ -4,8 +4,8 @@ Id: GEM-ERP-PR-Communication-InfoReq
 Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxCommunicationInfoReq"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxCommunicationInfoReq"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true

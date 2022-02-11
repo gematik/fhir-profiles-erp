@@ -4,8 +4,8 @@ Id: GEM-ERP-PR-Composition
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
 * ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxComposition"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxComposition"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:56.0876617+00:00"
 * extension ^slicing.discriminator.type = #value
