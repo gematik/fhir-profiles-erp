@@ -1,8 +1,8 @@
 {
   "resourceType": "OperationDefinition",
   "id": "ActivateOperation",
-  "url": "http://gematik.de/fhir/OperationDefinition/ActivateOperationDefinition",
-  "version": "1.1.1",
+  "url": "http://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition",
+  "version": "1.2",
   "name": "Activate Operation",
   "status": "draft",
   "kind": "operation",
@@ -15,7 +15,7 @@
   "system": false,
   "type": false,
   "instance": true,
-  "outputProfile": "https://gematik.de/fhir/StructureDefinition/ErxTask",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/ErxTask",
   "parameter": [
     {
       "name": "ePrescription",
@@ -25,7 +25,7 @@
       "documentation": "The qualified signed prescription element to activate the ePrescription workflow.",
       "type": "Binary",
       "targetProfile": [
-        "https://gematik.de/fhir/StructureDefinition/ErxBinary"
+        "https://gematik.de/fhir/erp/StructureDefinition/ErxBinary"
       ]
     },
     {

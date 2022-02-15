@@ -14,8 +14,8 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxComposition",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxComposition",
+  "version": "1.2",
   "name": "Gem_erxComposition",
   "title": "Receipt for Fulfillment of ePrescription",
   "status": "draft",
@@ -80,7 +80,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/BeneficiaryExtension"
+              "https://gematik.de/fhir/erp/StructureDefinition/BeneficiaryExtension"
             ]
           }
         ]
@@ -119,7 +119,7 @@
         "id": "Composition.type.coding.system",
         "path": "Composition.type.coding.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/CodeSystem/Documenttype"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/DocumentType"
       },
       {
         "id": "Composition.type.coding.code",
@@ -145,7 +145,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/StructureDefinition/ErxDevice"
+              "https://gematik.de/fhir/erp/StructureDefinition/ErxDevice"
             ],
             "aggregation": [
               "referenced",

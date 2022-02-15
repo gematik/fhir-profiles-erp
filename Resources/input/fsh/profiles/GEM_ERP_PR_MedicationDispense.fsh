@@ -24,7 +24,7 @@ Description: "Handles information about the redeem of the prescription and the s
 * subject.identifier ^short = "The patients KVNR"
 * performer 1..1 MS
 * performer.actor.identifier 1..
-* performer.actor.identifier only Gem_baseTelematikID
+* performer.actor.identifier only Gem_baseTelematikId
 * whenPrepared ^mustSupport = false
 * whenHandedOver 1.. MS
 * dosageInstruction MS

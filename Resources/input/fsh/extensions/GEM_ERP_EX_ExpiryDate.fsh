@@ -10,5 +10,5 @@ Description: "This extension should be used in the Task ressource. It shows the 
 * ^context.type = #element
 * ^context.expression = "Task"
 * . ^definition = "Optional Extension Element - found in all resources."
-* url = "https://gematik.de/fhir/StructureDefinition/ExpiryDate" (exactly)
+* url = "https://gematik.de/fhir/erp/StructureDefinition/ExpiryDate" (exactly)
 * value[x] only date

@@ -4,8 +4,8 @@
   "meta": {
     "lastUpdated": "2020-04-16T14:48:56.829+00:00"
   },
-  "url": "https://gematik.de/fhir/StructureDefinition/PrescriptionType",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/PrescriptionType",
+  "version": "1.2",
   "name": "PrescriptionType",
   "status": "draft",
   "date": "2020-04-16T14:48:54.0746171+00:00",
@@ -43,7 +43,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/StructureDefinition/PrescriptionType"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/PrescriptionType"
       },
       {
         "id": "Extension.value[x]",
@@ -55,7 +55,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ValueSet/Flowtype"
+          "valueSet": "https://gematik.de/fhir/erp/ValueSet/FlowType"
         }
       },
       {

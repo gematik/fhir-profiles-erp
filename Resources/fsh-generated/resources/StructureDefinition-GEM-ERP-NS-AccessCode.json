@@ -88,7 +88,7 @@
       {
         "id": "NamingSystem.uniqueId.value",
         "path": "NamingSystem.uniqueId.value",
-        "patternString": "https://gematik.de/fhir/NamingSystem/AccessCode"
+        "patternString": "https://gematik.de/fhir/erp/NamingSystem/AccessCode"
       },
       {
         "id": "NamingSystem.uniqueId.preferred",

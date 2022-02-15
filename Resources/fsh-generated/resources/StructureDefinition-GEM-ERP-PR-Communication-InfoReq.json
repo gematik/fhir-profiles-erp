@@ -14,8 +14,8 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxCommunicationInfoReq",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxCommunicationInfoReq",
+  "version": "1.2",
   "name": "Gem_erxCommunicationInfoReq",
   "title": "Informative request from Patient to Provider",
   "status": "draft",
@@ -108,7 +108,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/BaseTelematikID"
+              "https://gematik.de/fhir/erp/StructureDefinition/BaseTelematikId"
             ]
           }
         ],
@@ -165,7 +165,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/InsuranceProvider"
+              "https://gematik.de/fhir/erp/StructureDefinition/InsuranceProvider"
             ]
           }
         ]
@@ -182,7 +182,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/SupplyOptionsType"
+              "https://gematik.de/fhir/erp/StructureDefinition/SupplyOptionsType"
             ]
           }
         ]
@@ -198,7 +198,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/SubstitutionAllowedType"
+              "https://gematik.de/fhir/erp/StructureDefinition/SubstitutionAllowedType"
             ]
           }
         ]
@@ -215,7 +215,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/PrescriptionType"
+              "https://gematik.de/fhir/erp/StructureDefinition/PrescriptionType"
             ]
           }
         ]
@@ -230,7 +230,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/PackageQuantity"
+              "https://gematik.de/fhir/erp/StructureDefinition/PackageQuantity"
             ]
           }
         ]

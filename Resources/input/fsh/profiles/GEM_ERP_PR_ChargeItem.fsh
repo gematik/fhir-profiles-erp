@@ -21,7 +21,7 @@ Id: GEM-ERP-PR-ChargeItem
 * subject.identifier only $identifier-kvid-10
 * enterer 1.. MS
 * enterer.identifier 1..
-* enterer.identifier only Gem_baseTelematikID
+* enterer.identifier only Gem_baseTelematikId
 * enteredDate 1.. MS
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value
@@ -35,4 +35,4 @@ Id: GEM-ERP-PR-ChargeItem
 * supportingInformation[prescriptionItem].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle" (exactly)
 * supportingInformation[dispenseItem].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" (exactly)
 * supportingInformation[receipt] ^definition = "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652]."
-* supportingInformation[receipt].type = "https://gematik.de/fhir/StructureDefinition/ErxReceipt" (exactly)
+* supportingInformation[receipt].type = "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt" (exactly)

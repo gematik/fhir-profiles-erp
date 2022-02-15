@@ -11,5 +11,5 @@ Description: "This extension should be used in the Task ressource. It stores the
 * ^context.expression = "Task"
 * . ^short = "Date when insurance company excepts the prescription."
 * . ^definition = "Optional Extension Element - found in all resources."
-* url = "https://gematik.de/fhir/StructureDefinition/AcceptDate" (exactly)
+* url = "https://gematik.de/fhir/erp/StructureDefinition/AcceptDate" (exactly)
 * value[x] only date

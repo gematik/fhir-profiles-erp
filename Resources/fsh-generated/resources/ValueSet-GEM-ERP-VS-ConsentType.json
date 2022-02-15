@@ -5,8 +5,8 @@
   "id": "GEM-ERP-VS-ConsentType",
   "title": "ValueSet of Consent Codes",
   "description": "Type of Consents for the ePrescription.",
-  "version": "1.1.1",
-  "url": "https://gematik.de/fhir/ValueSet/Consenttype",
+  "version": "1.2",
+  "url": "https://gematik.de/fhir/erp/ValueSet/ConsentType",
   "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
@@ -25,7 +25,7 @@
     "total": 1,
     "contains": [
       {
-        "system": "https://gematik.de/fhir/CodeSystem/Consenttype",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/ConsentType",
         "code": "CHARGCONS",
         "display": "Consent for saving electronic charge item"
       }

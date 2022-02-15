@@ -22,7 +22,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * type ^short = "Document Type = \"Receipt\""
 * type.coding 1..1 MS
 * type.coding.system 1..
-* type.coding.system = "https://gematik.de/fhir/CodeSystem/Documenttype" (exactly)
+* type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/DocumentType" (exactly)
 * type.coding.code 1..
 * type.coding.code = #3 (exactly)
 * type.coding.display = "Receipt" (exactly)

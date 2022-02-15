@@ -11,8 +11,8 @@ Description: "Definies the Type of a prescription."
 * ^context[+].type = #element
 * ^context[=].expression = "Communication.payload"
 * . ^definition = "Optional Extension Element - found in all resources."
-* url = "https://gematik.de/fhir/StructureDefinition/PrescriptionType" (exactly)
+* url = "https://gematik.de/fhir/erp/StructureDefinition/PrescriptionType" (exactly)
 * value[x] only Coding
-* value[x] from FlowtypeVS (required)
+* value[x] from FlowTypeVS (required)
 * value[x].system 1..
 * value[x].code 1..

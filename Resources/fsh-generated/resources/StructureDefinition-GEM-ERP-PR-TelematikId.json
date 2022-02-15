@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-TelematikId",
-  "url": "https://gematik.de/fhir/StructureDefinition/BaseTelematikID",
-  "version": "1.1.1",
-  "name": "Gem_baseTelematikID",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/BaseTelematikId",
+  "version": "1.2",
+  "name": "Gem_baseTelematikId",
   "title": "Identifier Profile for Telematik ID",
   "status": "draft",
   "contact": [
@@ -45,7 +45,7 @@
         "id": "Identifier.system",
         "path": "Identifier.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/NamingSystem/TelematikID"
+        "fixedUri": "https://gematik.de/fhir/erp/NamingSystem/TelematikId"
       },
       {
         "id": "Identifier.value",

@@ -14,8 +14,8 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxCommunicationReply",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxCommunicationReply",
+  "version": "1.2",
   "name": "Gem_erxCommunicationReply",
   "title": "Reply from Provider to Patient",
   "status": "draft",
@@ -55,7 +55,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/StructureDefinition/ErxTask"
+              "https://gematik.de/fhir/erp/StructureDefinition/ErxTask"
             ],
             "aggregation": [
               "referenced"
@@ -86,7 +86,7 @@
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_FreeText",
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Compounding",
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Ingredient",
-              "https://gematik.de/fhir/StructureDefinition/ErxTask"
+              "https://gematik.de/fhir/erp/StructureDefinition/ErxTask"
             ],
             "aggregation": [
               "contained"
@@ -167,7 +167,7 @@
             "code": "Identifier",
             "profile": [
               "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "https://gematik.de/fhir/StructureDefinition/BaseTelematikID"
+              "https://gematik.de/fhir/erp/StructureDefinition/BaseTelematikId"
             ]
           }
         ],
@@ -205,7 +205,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/SupplyOptionsType"
+              "https://gematik.de/fhir/erp/StructureDefinition/SupplyOptionsType"
             ]
           }
         ]
@@ -221,7 +221,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/AvailabilityStateExtension"
+              "https://gematik.de/fhir/erp/StructureDefinition/AvailabilityStateExtension"
             ]
           }
         ]

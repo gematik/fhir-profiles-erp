@@ -88,7 +88,7 @@
       {
         "id": "NamingSystem.uniqueId.value",
         "path": "NamingSystem.uniqueId.value",
-        "patternString": "https://gematik.de/fhir/NamingSystem/TelematikID"
+        "patternString": "https://gematik.de/fhir/erp/NamingSystem/TelematikID"
       },
       {
         "id": "NamingSystem.uniqueId.preferred",

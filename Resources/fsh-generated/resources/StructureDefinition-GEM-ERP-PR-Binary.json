@@ -11,8 +11,8 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxBinary",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxBinary",
+  "version": "1.2",
   "name": "Gem_erxBinary",
   "title": "PKCS7 signed Bundle envelopig style",
   "status": "draft",

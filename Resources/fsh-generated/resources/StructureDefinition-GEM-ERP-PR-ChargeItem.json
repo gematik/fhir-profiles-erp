@@ -11,8 +11,8 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxChargeItem",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxChargeItem",
+  "version": "1.2",
   "name": "ErxChargeItem",
   "status": "draft",
   "fhirVersion": "4.0.1",
@@ -68,7 +68,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/MarkingFlag"
+              "https://gematik.de/fhir/erp/StructureDefinition/MarkingFlag"
             ]
           }
         ],
@@ -81,7 +81,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID"
+              "https://gematik.de/fhir/erp/StructureDefinition/ErxPrescriptionID"
             ]
           }
         ],
@@ -139,7 +139,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/BaseTelematikID"
+              "https://gematik.de/fhir/erp/StructureDefinition/BaseTelematikId"
             ]
           }
         ]
@@ -203,7 +203,7 @@
         "id": "ChargeItem.supportingInformation:receipt.type",
         "path": "ChargeItem.supportingInformation.type",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/StructureDefinition/ErxReceipt"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt"
       }
     ]
   }

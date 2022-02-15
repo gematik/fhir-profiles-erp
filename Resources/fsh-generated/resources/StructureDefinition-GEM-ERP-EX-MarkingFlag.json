@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-MarkingFlag",
-  "url": "https://gematik.de/fhir/StructureDefinition/MarkingFlag",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/MarkingFlag",
+  "version": "1.2",
   "name": "MarkingFlag",
   "status": "draft",
   "fhirVersion": "4.0.1",
@@ -158,7 +158,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/StructureDefinition/MarkingFlag"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/MarkingFlag"
       },
       {
         "id": "Extension.value[x]",

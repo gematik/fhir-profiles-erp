@@ -2,7 +2,7 @@ CodeSystem: FlowtypeCS
 Id: GEM-ERP-CS-FlowType
 Title: "CodeSystem of Flowtypes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
-* ^url = "https://gematik.de/fhir/erp/CodeSystem/Flowtype"
+* ^url = "https://gematik.de/fhir/erp/CodeSystem/FlowType"
 * ^version = "1.2"
 * ^status = #draft
 * ^experimental = false

@@ -10,4 +10,4 @@ Description: "The beneficiary (e.g. pharmacy) of the erx-receipt that is created
 * . ^short = "The beneficiary of the receipt"
 * . ^definition = "Optional Extension Element - found in all resources."
 * value[x] only Identifier
-* value[x].system = "https://gematik.de/fhir/NamingSystem/TelematikID" (exactly)
+* value[x].system = "https://gematik.de/fhir/erp/NamingSystem/TelematikID" (exactly)

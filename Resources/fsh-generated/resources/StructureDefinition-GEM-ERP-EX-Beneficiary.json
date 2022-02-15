@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-Beneficiary",
-  "url": "https://gematik.de/fhir/StructureDefinition/BeneficiaryExtension",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/BeneficiaryExtension",
+  "version": "1.2",
   "name": "BeneficiaryExtension",
   "status": "draft",
   "description": "The beneficiary (e.g. pharmacy) of the erx-receipt that is created when the ePrescription-workflow finishes",
@@ -42,7 +42,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/StructureDefinition/BeneficiaryExtension"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/BeneficiaryExtension"
       },
       {
         "id": "Extension.value[x]",
@@ -56,7 +56,7 @@
       {
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
-        "fixedUri": "https://gematik.de/fhir/NamingSystem/TelematikID"
+        "fixedUri": "https://gematik.de/fhir/erp/NamingSystem/TelematikID"
       }
     ]
   }

@@ -14,8 +14,8 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxMedicationDispense",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxMedicationDispense",
+  "version": "1.2",
   "name": "Gem_erxMedicationDispense",
   "title": "Dispensation of the Prescription",
   "status": "draft",
@@ -66,7 +66,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID"
+              "https://gematik.de/fhir/erp/StructureDefinition/ErxPrescriptionID"
             ]
           }
         ],
@@ -132,7 +132,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/StructureDefinition/BaseTelematikID"
+              "https://gematik.de/fhir/erp/StructureDefinition/BaseTelematikId"
             ]
           }
         ]

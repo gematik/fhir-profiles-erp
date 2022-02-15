@@ -1,8 +1,8 @@
 {
   "resourceType": "OperationDefinition",
   "id": "CloseOperation",
-  "url": "http://gematik.de/fhir/OperationDefinition/CloseOperationDefinition",
-  "version": "1.1.1",
+  "url": "http://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition",
+  "version": "1.2",
   "name": "Close Operation",
   "status": "draft",
   "kind": "operation",
@@ -15,7 +15,7 @@
   "system": false,
   "type": false,
   "instance": true,
-  "outputProfile": "https://gematik.de/fhir/StructureDefinition/erxReceipt",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt",
   "parameter": [
     {
       "name": "secret",

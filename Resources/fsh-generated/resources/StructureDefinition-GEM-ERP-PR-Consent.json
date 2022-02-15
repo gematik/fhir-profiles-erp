@@ -11,8 +11,8 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/StructureDefinition/ErxConsent",
-  "version": "1.1.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/ErxConsent",
+  "version": "1.2",
   "name": "ErxConsent",
   "status": "draft",
   "fhirVersion": "4.0.1",
@@ -75,13 +75,13 @@
         "path": "Consent.category",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://gematik.de/fhir/ValueSet/Consenttype"
+          "valueSet": "https://gematik.de/fhir/erp/ValueSet/ConsentType"
         }
       },
       {
         "id": "Consent.category.coding.system",
         "path": "Consent.category.coding.system",
-        "fixedUri": "https://gematik.de/fhir/CodeSystem/Consenttype"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/ConsentType"
       },
       {
         "id": "Consent.patient",

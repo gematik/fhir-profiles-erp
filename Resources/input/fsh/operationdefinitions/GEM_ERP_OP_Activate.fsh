@@ -13,14 +13,14 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* outputProfile = "https://gematik.de/fhir/StructureDefinition/ErxTask"
+* outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/ErxTask"
 * parameter[0].name = #ePrescription
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "The qualified signed prescription element to activate the ePrescription workflow."
 * parameter[=].type = #Binary
-* parameter[=].targetProfile = "https://gematik.de/fhir/StructureDefinition/ErxBinary"
+* parameter[=].targetProfile = "https://gematik.de/fhir/erp/StructureDefinition/ErxBinary"
 * parameter[+].name = #return
 * parameter[=].use = #out
 * parameter[=].min = 1

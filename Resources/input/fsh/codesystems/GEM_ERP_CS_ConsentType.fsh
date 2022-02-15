@@ -2,7 +2,7 @@ CodeSystem: ConsenttypeCS
 Id: GEM-ERP-CS-ConsentType
 Title: "CodeSystem of types for a consent"
 Description: "Type of patient consent."
-* ^url = "https://gematik.de/fhir/erp/CodeSystem/Consenttype"
+* ^url = "https://gematik.de/fhir/erp/CodeSystem/ConsentType"
 * ^version = "1.2"
 * ^status = #draft
 * ^experimental = false

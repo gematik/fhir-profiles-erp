@@ -10,5 +10,5 @@ Description: "The prescriptionID is an generated and not changeable sequence of 
 * . ^definition = "An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers."
 * use = #official (exactly)
 * system 1.. MS
-* system = "https://gematik.de/fhir/NamingSystem/PrescriptionID" (exactly)
+* system = "https://gematik.de/fhir/erp/NamingSystem/PrescriptionID" (exactly)
 * value 1.. MS
