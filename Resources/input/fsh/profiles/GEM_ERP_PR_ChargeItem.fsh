@@ -1,8 +1,8 @@
 Profile: ErxChargeItem
 Parent: ChargeItem
 Id: GEM-ERP-PR-ChargeItem
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxChargeItem"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxChargeItem"
+* ^version = "1.2"
 * ^status = #draft
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

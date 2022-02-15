@@ -1,8 +1,8 @@
 Instance: CloseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://gematik.de/fhir/OperationDefinition/CloseOperationDefinition"
-* version = "1.1.1"
+* url = "http://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
+* version = "1.2"
 * name = "Close Operation"
 * status = #draft
 * kind = #operation

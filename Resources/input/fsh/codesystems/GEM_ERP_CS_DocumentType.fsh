@@ -2,8 +2,8 @@ CodeSystem: DocumenttypeCS
 Id: GEM-ERP-CS-DocumentType
 Title: "CodeSystem of Documenttypes"
 Description: "Type of document depending on the recipient of the Bundle."
-* ^url = "https://gematik.de/fhir/CodeSystem/Documenttype"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/CodeSystem/Documenttype"
+* ^version = "1.2"
 * ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"

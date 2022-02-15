@@ -1,8 +1,8 @@
 Instance: ActivateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://gematik.de/fhir/OperationDefinition/ActivateOperationDefinition"
-* version = "1.1.1"
+* url = "http://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition"
+* version = "1.2"
 * name = "Activate Operation"
 * status = #draft
 * kind = #operation

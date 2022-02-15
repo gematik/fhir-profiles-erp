@@ -2,8 +2,8 @@ ValueSet: OrganizationtypeVS
 Id: GEM-ERP-VS-OrganizationType
 Title: "ValueSet of Organizationtype Codes"
 Description: "Type of Organiziation"
-* ^url = "https://gematik.de/fhir/ValueSet/Organizationtype"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/ValueSet/Organizationtype"
+* ^version = "1.2"
 * ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"

@@ -2,8 +2,8 @@ ValueSet: AvailabilityStatusVS
 Id: GEM-ERP-VS-AvailabilityStatus
 Title: "ValueSet of AvailabilityStatus Codes"
 Description: "Type of the availability status for medication availability request"
-* ^url = "https://gematik.de/fhir/ValueSet/AvailabilityStatus"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/ValueSet/AvailabilityStatus"
+* ^version = "1.2"
 * ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"
@@ -17,7 +17,7 @@ Description: "Type of the availability status for medication availability reques
 * ^expansion.contains[=].display = "sofort verfügbar"
 * ^expansion.contains[+].system = "https://gematik.de/fhir/CodeSystem/AvailabilityStatus"
 * ^expansion.contains[=].code = #20
-* ^expansion.contains[=].display = "noch Heute verfügbar"
+* ^expansion.contains[=].display = "noch heute verfügbar"
 * ^expansion.contains[+].system = "https://gematik.de/fhir/CodeSystem/AvailabilityStatus"
 * ^expansion.contains[=].code = #30
 * ^expansion.contains[=].display = "am nächsten Werktag - vormittags"

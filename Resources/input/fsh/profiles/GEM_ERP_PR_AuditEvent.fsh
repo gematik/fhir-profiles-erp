@@ -3,8 +3,8 @@ Parent: AuditEvent
 Id: GEM-ERP-PR-AuditEvent
 Title: "AuditEvent for Logging of ePrescription Access"
 * ^meta.lastUpdated = "2020-04-16T13:41:55.87+00:00"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxAuditEvent"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxAuditEvent"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:41:53.3147244+00:00"
 * type.system 1..

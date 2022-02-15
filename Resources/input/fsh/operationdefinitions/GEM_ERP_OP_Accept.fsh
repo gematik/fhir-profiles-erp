@@ -1,8 +1,8 @@
 Instance: AcceptOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://gematik.de/fhir/OperationDefinition/AcceptOperationDefinition"
-* version = "1.1.1"
+* url = "http://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
+* version = "1.2"
 * name = "Accept Operation"
 * status = #draft
 * kind = #operation

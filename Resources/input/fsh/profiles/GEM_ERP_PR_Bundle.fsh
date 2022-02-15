@@ -4,8 +4,8 @@ Id: GEM-ERP-PR-Bundle
 Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
 * ^meta.lastUpdated = "2020-04-16T13:42:23.761+00:00"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxReceipt"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:42:21.4495435+00:00"
 * identifier 1.. MS

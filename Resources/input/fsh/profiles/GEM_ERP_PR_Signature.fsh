@@ -2,8 +2,8 @@ Profile: Gem_erxSignature
 Parent: Signature
 Id: GEM-ERP-PR-Signature
 Title: "Profile for Signature of Bundles in ePrescription Context"
-* ^url = "https://gematik.de/fhir/StructureDefinition/ErxSignature"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxSignature"
+* ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-06-02"
 * type ..1 MS

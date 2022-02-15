@@ -1,7 +1,7 @@
 Extension: SupplyOptionsType
 Id: GEM-ERP-EX-SupplyOptionsType
-* ^url = "https://gematik.de/fhir/StructureDefinition/SupplyOptionsType"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/SupplyOptionsType"
+* ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Communication.payload"

@@ -1,7 +1,7 @@
 Extension: MarkingFlag
 Id: GEM-ERP-EX-MarkingFlag
-* ^url = "https://gematik.de/fhir/StructureDefinition/MarkingFlag"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/MarkingFlag"
+* ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "ChargeItem"

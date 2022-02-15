@@ -1,8 +1,8 @@
 Extension: BeneficiaryExtension
 Id: GEM-ERP-EX-Beneficiary
 Description: "The beneficiary (e.g. pharmacy) of the erx-receipt that is created when the ePrescription-workflow finishes"
-* ^url = "https://gematik.de/fhir/StructureDefinition/BeneficiaryExtension"
-* ^version = "1.1.1"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/BeneficiaryExtension"
+* ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Composition"
