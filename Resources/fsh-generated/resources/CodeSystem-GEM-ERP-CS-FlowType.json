@@ -2,16 +2,24 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "FlowtypeCS",
+  "name": "GEM_ERP_CS_FlowType",
   "id": "GEM-ERP-CS-FlowType",
   "title": "CodeSystem of Flowtypes",
   "description": "Shows the different types of the ePrescription according to the prescription forms.",
   "version": "1.2",
-  "url": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
   "concept": [
     {
       "code": "160",
       "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
+    },
+    {
+      "code": "165",
+      "display": "Muster 16 (Betäubungsmittel)"
+    },
+    {
+      "code": "166",
+      "display": "Muster 16 (T-Rezepte)"
     },
     {
       "code": "169",
@@ -36,5 +44,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 3
+  "count": 5
 }

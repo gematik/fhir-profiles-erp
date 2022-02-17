@@ -15,7 +15,7 @@
   "system": false,
   "type": true,
   "instance": false,
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/ErxTask",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
   "parameter": [
     {
       "name": "workflowType",

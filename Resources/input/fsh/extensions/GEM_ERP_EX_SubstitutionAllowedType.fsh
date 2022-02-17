@@ -1,6 +1,6 @@
-Extension: SubstitutionAllowedType
+Extension: GEM_ERP_EX_SubstitutionAllowedType
 Id: GEM-ERP-EX-SubstitutionAllowedType
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/SubstitutionAllowedType"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SubstitutionAllowedType"
 * ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element

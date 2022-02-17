@@ -1,8 +1,8 @@
-Profile: Gem_erxSignature
+Profile: GEM_ERP_PR_Signature
 Parent: Signature
 Id: GEM-ERP-PR-Signature
 Title: "Profile for Signature of Bundles in ePrescription Context"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxSignature"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-06-02"
@@ -19,7 +19,7 @@ Title: "Profile for Signature of Bundles in ePrescription Context"
 * type[VerificationSignature].system = "urn:iso-astm:E1762-95:2013" (exactly)
 * type[VerificationSignature].code = #1.2.840.10065.1.12.1.5 (exactly)
 * when MS
-* who only Reference(Gem_erxDevice)
+* who only Reference(GEM_ERP_PR_Device)
 * who MS
 * who.reference 1.. MS
 * sigFormat 1.. MS

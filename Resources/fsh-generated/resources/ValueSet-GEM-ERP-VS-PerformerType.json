@@ -6,7 +6,7 @@
   "title": "ValueSet of DPerformertype Codes",
   "description": "Type of performer",
   "version": "1.2",
-  "url": "https://gematik.de/fhir/erp/ValueSet/PerformerType",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType",
   "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [

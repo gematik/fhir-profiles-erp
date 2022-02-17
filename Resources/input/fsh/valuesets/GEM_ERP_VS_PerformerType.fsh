@@ -2,7 +2,7 @@ ValueSet: PerformerTypeVS
 Id: GEM-ERP-VS-PerformerType
 Title: "ValueSet of DPerformertype Codes"
 Description: "Type of performer"
-* ^url = "https://gematik.de/fhir/erp/ValueSet/PerformerType"
+* ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType"
 * ^version = "1.2"
 * ^status = #draft
 * ^experimental = false

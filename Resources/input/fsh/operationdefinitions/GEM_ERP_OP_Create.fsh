@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/ErxTask"
+* outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 * parameter[0].name = #workflowType
 * parameter[=].use = #in
 * parameter[=].min = 1

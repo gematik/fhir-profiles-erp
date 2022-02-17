@@ -18,12 +18,12 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
     PrescriptionID 1..1 and
     TaskReference 1..1	
 * target[PrescriptionID].identifier.system 1..
-* target[PrescriptionID].identifier.system = "https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID" (exactly)
+* target[PrescriptionID].identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
 * target[PrescriptionID].identifier.value 1..
-* target[PrescriptionID].identifier only https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID
+* target[PrescriptionID].identifier only https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId
 * target[PrescriptionID] ^short = "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
 //* target[TaskReference] only Reference(Task)
-* target[TaskReference] only Reference(Gem_erxTask)
+* target[TaskReference] only Reference(GEM_ERP_PR_Task)
 * target[TaskReference] ^short = "Reference to the ePrescription Task"
 * recorded ?!
 * agent 1..1 SU
@@ -72,7 +72,7 @@ Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
 * target[+].reference = "Task/160.100.000.000.024.67"
-* target[+].identifier.system = "https://gematik.de/fhir/StructureDefinition/ErxPrescriptionID"
+* target[+].identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
 * target[=].identifier.value = "160.100.000.000.024.67"
 * recorded = "2022-02-14T08:39:24+01:00"
 * agent.who.reference = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"

@@ -1,10 +1,10 @@
-Profile: Gem_erxCommunicationInfoReq
+Profile: GEM_ERP_PR_Communication_InfoReq
 Parent: Communication
 Id: GEM-ERP-PR-Communication-InfoReq
 Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxCommunicationInfoReq"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq"
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
@@ -19,7 +19,7 @@ Description: "Ressource used for the communication of informative requests betwe
 * received MS
 * recipient 1..1 MS
 * recipient.identifier 1.. MS
-* recipient.identifier only Gem_baseTelematikId
+* recipient.identifier only GEM_ERP_PR_TelematikId
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1.. MS
@@ -29,11 +29,11 @@ Description: "Ressource used for the communication of informative requests betwe
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #open
 * payload.extension contains
-    InsuranceProvider named InsuranceProvider 1..1 and
-    SupplyOptionsType named PreferredSupplyOptions 0..* and
-    SubstitutionAllowedType named SubstitutionAllowed 1..1 and
-    PrescriptionType named PrescriptionType 1..1 and
-    PackageQuantity named PackageQuantity 0..*
+    GEM_ERP_EX_InsuranceProvider named InsuranceProvider 1..1 and
+    GEM_ERP_EX_SupplyOptionsType named PreferredSupplyOptions 0..* and
+    GEM_ERP_EX_SubstitutionAllowedType named SubstitutionAllowed 1..1 and
+    GEM_ERP_EX_PrescriptionType named PrescriptionType 1..1 and
+    GEM_ERP_EX_PackageQuantity named PackageQuantity 0..*
 * payload.extension[PreferredSupplyOptions] ^short = "Preferred supply options by the patient"
 * payload.extension[PreferredSupplyOptions] ^definition = "In an information request (Anfrage Belieferfähigkeit) to a pharmacy a patient may state its preferred supply options, whether to pick up at the store, getting delivered by messenger or receive parcel shippment"
 * payload.extension[SubstitutionAllowed] ^short = "Aut idem substitution allowed"

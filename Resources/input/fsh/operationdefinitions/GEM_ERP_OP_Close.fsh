@@ -13,7 +13,7 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt"
+* outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
 * parameter[0].name = #secret
 * parameter[=].use = #in
 * parameter[=].min = 1

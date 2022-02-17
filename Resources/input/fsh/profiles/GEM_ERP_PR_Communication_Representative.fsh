@@ -1,16 +1,16 @@
-Profile: Gem_erxCommunicationRepresentative
+Profile: GEM_ERP_PR_Communication_Representative
 Parent: Communication
 Id: GEM-ERP-PR-Communication-Representative
 Title: "Communication between Patient and Representative"
 Description: "Ressource used for the communication between patients and their representative pertaining to an ePrescription"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxCommunicationRepresentative"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative"
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * basedOn 1..1 MS
-* basedOn only Reference(Gem_erxTask)
+* basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1.. MS
 * status = #unknown (exactly)

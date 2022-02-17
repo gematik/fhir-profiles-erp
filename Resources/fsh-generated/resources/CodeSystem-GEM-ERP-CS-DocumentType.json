@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "DocumentTypeCS",
+  "name": "GEM_ERP_CS_DocumentType",
   "id": "GEM-ERP-CS-DocumentType",
   "title": "CodeSystem of Documenttypes",
   "description": "Type of document depending on the recipient of the Bundle.",
   "version": "1.2",
-  "url": "https://gematik.de/fhir/erp/CodeSystem/DocumentType",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
   "concept": [
     {
       "code": "1",

@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "FlowTypeVS",
+  "name": "GEM_ERP_VS_FlowType",
   "id": "GEM-ERP-VS-FlowType",
   "title": "ValueSet of Flowtype Codes",
   "description": "Shows the different types of the ePrescription according to the prescription forms.",
   "version": "1.2",
-  "url": "https://gematik.de/fhir/erp/ValueSet/FlowType",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
   "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
@@ -21,13 +21,23 @@
   ],
   "expansion": {
     "identifier": "fe7e0ee0-f72e-4909-bf48-7c84ff97bac5",
-    "timestamp": "2020-05-07T07:48:29+00:00",
-    "total": 7,
+    "timestamp": "2022-02-07T07:48:29+00:00",
+    "total": 5,
     "contains": [
       {
         "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
         "code": "160",
         "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
+      },
+      {
+        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
+        "code": "165",
+        "display": "Muster 16 (Betäubungsmittel)"
+      },
+      {
+        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
+        "code": "166",
+        "display": "Muster 16 (T-Rezepte)"
       },
       {
         "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
@@ -44,7 +54,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType"
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
       }
     ]
   }

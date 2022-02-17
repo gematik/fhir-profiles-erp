@@ -1,17 +1,17 @@
-Profile: Gem_erxComposition
+Profile: GEM_ERP_PR_Composition
 Parent: Composition
 Id: GEM-ERP-PR-Composition
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
 * ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxComposition"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition"
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:56.0876617+00:00"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains BeneficiaryExtension named Beneficiary 0..*
+* extension contains GEM_ERP_EX_Beneficiary named Beneficiary 0..*
 * extension[Beneficiary] ^short = "The ID of the beneficiary of the erx receipt (e.g. TelematikID of pharmacy)"
 * extension[Beneficiary].value[x].system 1..
 * extension[Beneficiary].value[x].value 1..
@@ -22,12 +22,12 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * type ^short = "Document Type = \"Receipt\""
 * type.coding 1..1 MS
 * type.coding.system 1..
-* type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/DocumentType" (exactly)
+* type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType" (exactly)
 * type.coding.code 1..
 * type.coding.code = #3 (exactly)
 * type.coding.display = "Receipt" (exactly)
 * date MS
-* author only Reference(Gem_erxDevice)
+* author only Reference(GEM_ERP_PR_Device)
 * author MS
 * author ^short = "Reference to verifying service (Device)"
 * author ^type.aggregation[0] = #referenced

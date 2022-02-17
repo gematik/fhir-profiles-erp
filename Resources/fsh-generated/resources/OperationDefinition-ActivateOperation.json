@@ -15,7 +15,7 @@
   "system": false,
   "type": false,
   "instance": true,
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/ErxTask",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
   "parameter": [
     {
       "name": "ePrescription",
@@ -25,7 +25,7 @@
       "documentation": "The qualified signed prescription element to activate the ePrescription workflow.",
       "type": "Binary",
       "targetProfile": [
-        "https://gematik.de/fhir/erp/StructureDefinition/ErxBinary"
+        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
       ]
     },
     {

@@ -1,6 +1,6 @@
-Extension: SupplyOptionsType
+Extension: GEM_ERP_EX_SupplyOptionsType
 Id: GEM-ERP-EX-SupplyOptionsType
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/SupplyOptionsType"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
 * ^version = "1.2"
 * ^status = #draft
 * ^context.type = #element

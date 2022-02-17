@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "AvailabilityStatusVS",
+  "name": "GEM_ERP_VS_AvailabilityStatus",
   "id": "GEM-ERP-VS-AvailabilityStatus",
   "title": "ValueSet of AvailabilityStatus Codes",
   "description": "Type of the availability status for medication availability request",
   "version": "1.2",
-  "url": "https://gematik.de/fhir/erp/ValueSet/AvailabilityStatus",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus",
   "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
@@ -25,32 +25,32 @@
     "total": 6,
     "contains": [
       {
-        "system": ":/https/gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "10",
         "display": "sofort verfügbar"
       },
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "20",
         "display": "noch heute verfügbar"
       },
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "30",
         "display": "am nächsten Werktag - vormittags"
       },
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "40",
         "display": "am nächsten Werktag- nachmittags"
       },
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "50",
         "display": "nicht verfügbar"
       },
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
         "code": "90",
         "display": "unbekannt"
       }
@@ -59,7 +59,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/AvailabilityStatus"
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
       }
     ]
   }

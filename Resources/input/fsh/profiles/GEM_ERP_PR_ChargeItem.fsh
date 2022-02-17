@@ -1,16 +1,16 @@
-Profile: ErxChargeItem
+Profile: GEM_ERP_PR_ChargeItem
 Parent: ChargeItem
 Id: GEM-ERP-PR-ChargeItem
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/ErxChargeItem"
+* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ChargeItem"
 * ^version = "1.2"
 * ^status = #draft
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension ^min = 0
-* extension contains MarkingFlag named markingFlag 0..* MS
+* extension contains GEM_ERP_EX_MarkingFlag named markingFlag 0..* MS
 * extension[markingFlag] ^min = 0
-* identifier only Gem_erxPrescriptionID
+* identifier only GEM_ERP_PR_PrescriptionId
 * identifier MS
 * status MS
 * code MS
@@ -21,7 +21,7 @@ Id: GEM-ERP-PR-ChargeItem
 * subject.identifier only $identifier-kvid-10
 * enterer 1.. MS
 * enterer.identifier 1..
-* enterer.identifier only Gem_baseTelematikId
+* enterer.identifier only GEM_ERP_PR_TelematikId
 * enteredDate 1.. MS
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value
@@ -35,4 +35,4 @@ Id: GEM-ERP-PR-ChargeItem
 * supportingInformation[prescriptionItem].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle" (exactly)
 * supportingInformation[dispenseItem].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" (exactly)
 * supportingInformation[receipt] ^definition = "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652]."
-* supportingInformation[receipt].type = "https://gematik.de/fhir/erp/StructureDefinition/ErxReceipt" (exactly)
+* supportingInformation[receipt].type = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle" (exactly)
