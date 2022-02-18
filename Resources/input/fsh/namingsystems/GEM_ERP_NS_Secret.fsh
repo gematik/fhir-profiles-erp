@@ -1,7 +1,7 @@
-Profile: GEM-ERP-NS-Secret
+Profile: GEM_ERP_NS_Secret
 Parent: NamingSystem
 Id: GEM-ERP-NS-Secret
-* name = "GEM-ERP-NS-Secret"
+* name = "GEM_ERP_NS_Secret"
 * status = #active
 * kind = #identifier
 * date = "2020-04-30"

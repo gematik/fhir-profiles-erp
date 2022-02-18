@@ -27,6 +27,17 @@
       }
     }
   ],
+  "entity": [
+    {
+      "role": "source",
+      "what": {
+        "identifier": {
+          "system": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId",
+          "value": "160.100.000.000.024.67"
+        }
+      }
+    }
+  ],
   "signature": [
     {
       "type": [
@@ -50,12 +61,6 @@
   "target": [
     {
       "reference": "Task/160.100.000.000.024.67"
-    },
-    {
-      "identifier": {
-        "system": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId",
-        "value": "160.100.000.000.024.67"
-      }
     }
   ],
   "recorded": "2022-02-14T08:39:24+01:00"

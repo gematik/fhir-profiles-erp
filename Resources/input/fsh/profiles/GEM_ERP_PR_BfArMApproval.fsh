@@ -9,23 +9,22 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * id 1..
 * meta 1..
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2" (exactly)
-* target 2..2 SU ?!
-* target ^slicing.discriminator.type = #value
-* target ^slicing.discriminator.path = "ofType()"
+* target 1..1 SU ?!
+* target ^slicing.discriminator.type = #type
+* target ^slicing.discriminator.path = "$this"
 * target ^slicing.description = "This Provenance targets the ePrescription workflow item Task and the ePrescroption as a whole"
 * target ^slicing.rules = #closed
 * target contains
-    PrescriptionID 1..1 and
     TaskReference 1..1	
-* target[PrescriptionID].identifier.system 1..
-* target[PrescriptionID].identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
-* target[PrescriptionID].identifier.value 1..
-* target[PrescriptionID].identifier only https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId
-* target[PrescriptionID] ^short = "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
-//* target[TaskReference] only Reference(Task)
 * target[TaskReference] only Reference(GEM_ERP_PR_Task)
 * target[TaskReference] ^short = "Reference to the ePrescription Task"
 * recorded ?!
+* entity 1..1
+* entity.role = #source
+* entity.what.identifier.system 1..
+* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
+* entity.what.identifier.value 1..
+* entity.what ^short = "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
 * agent 1..1 SU
 * agent.type. 1..
 * agent.type.coding 1..1
@@ -64,7 +63,6 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * reason ..0
 * activity ..0
 * agent.role ..0
-* entity ..0
 
 Instance: PractitionersMarcoticsApproval
 InstanceOf: GEM_ERP_PR_BfArMApproval
@@ -72,9 +70,9 @@ Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
 * target[+].reference = "Task/160.100.000.000.024.67"
-* target[+].identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
-* target[=].identifier.value = "160.100.000.000.024.67"
 * recorded = "2022-02-14T08:39:24+01:00"
+* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
+* entity.what.identifier.value = "160.100.000.000.024.67"
 * agent.who.reference = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * agent.onBehalfOf.identifier.system = "https://gematik.de/fhir/NamingSystem/TelematikID"
 * agent.onBehalfOf.identifier.value = "1-HBA-Testkarte-883110000123465"
