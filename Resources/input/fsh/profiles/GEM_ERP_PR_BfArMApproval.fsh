@@ -64,7 +64,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * activity ..0
 * agent.role ..0
 
-Instance: PractitionersMarcoticsApproval
+Instance: PractitionersNarcoticsApproval
 InstanceOf: GEM_ERP_PR_BfArMApproval
 Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
