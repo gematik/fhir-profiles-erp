@@ -28,6 +28,7 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "Information on dispensed Medication(s)"
+* parameter[=].type = #canonical
 * parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
 * parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/Bundle"
 // out
@@ -43,7 +44,7 @@ InstanceOf: Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN"
+* meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.0.2"
 * extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
 * extension[=].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
 * extension[=].valueCoding.code = #00
@@ -58,7 +59,7 @@ Usage: #inline
 * form.coding[=].code = #TAB
 * amount.numerator.value = 20
 * amount.numerator.unit = "St"
-* amount.denominator = #1
+* amount.denominator.value = 1
 
 Instance: GüntherMedicationDispense
 InstanceOf: MedicationDispense
@@ -75,7 +76,7 @@ Usage: #example
 * subject.identifier.value = "X234567890"
 * performer[+].actor.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId"
 * performer[=].actor.identifier.value = "3-abc-1234567890"
-* whenHandedOver = "2022-02-29"
+* whenHandedOver = "2022-02-28"
 * dosageInstruction[+].text = "1-0-1-0"
 
 Instance: WaltraudBundle
@@ -85,6 +86,8 @@ Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20
 Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
 * type = #collection
-* entry[+].resource = GüntherMedicationDispense
-* entry[+].resource = GüntherMedicationDispense
+* entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"
+* entry[=].resource = GüntherMedicationDispense
+* entry[+].fullUrl = "http://waltraud-was-here"
+* entry[=].resource = GüntherMedicationDispense
 

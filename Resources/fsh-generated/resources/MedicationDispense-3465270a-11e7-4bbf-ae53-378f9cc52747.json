@@ -12,7 +12,7 @@
       "id": "001413e4-a5e9-48da-9b07-c17bab476407",
       "meta": {
         "profile": [
-          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN"
+          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.0.2"
         ]
       },
       "extension": [
@@ -55,7 +55,7 @@
           "unit": "St"
         },
         "denominator": {
-          "code": "1"
+          "value": 1
         }
       }
     }
@@ -86,7 +86,7 @@
       }
     }
   ],
-  "whenHandedOver": "2022-02-29",
+  "whenHandedOver": "2022-02-28",
   "dosageInstruction": [
     {
       "text": "1-0-1-0"
