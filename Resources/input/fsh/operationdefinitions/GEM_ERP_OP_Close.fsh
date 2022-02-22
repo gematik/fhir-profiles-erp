@@ -44,6 +44,13 @@ Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
 * meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN"
+* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
+* extension[=].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
+* extension[=].valueCoding.code = #00
+* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
+* extension[=].valueBoolean = false
+* extension[+].url = "http://fhir.de/StructureDefinition/normgroesse"
+* extension[=].valueCode = #N1
 * code.coding[+].system = "http://fhir.de/CodeSystem/ifa/pzn"
 * code.coding[=].code = #06313728
 * code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
