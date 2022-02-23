@@ -3,11 +3,12 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
 * version = "1.2"
-* name = "Abort Operation"
+* name = "AbortOperation"
 * status = #draft
 * kind = #operation
 * date = "2020-07-01"
 * description = "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task."
+* affectsState = true
 * code = #abort
 * resource = #Task
 * system = false

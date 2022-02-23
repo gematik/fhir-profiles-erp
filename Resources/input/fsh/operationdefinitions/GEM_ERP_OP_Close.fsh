@@ -3,11 +3,11 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
 * version = "1.2"
-* name = "Close Operation"
+* name = "Close"
 * status = #draft
 * kind = #operation
 * date = "2022-02-01"
-* description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into 'completed'"
+* description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"
 * affectsState = true
 * code = #close
 * resource = #Task
@@ -36,7 +36,7 @@ Usage: #definition
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "The receipt Bundle containing the MedicationDispense resource and a signature."
+* parameter[=].documentation = "The receipt Bundle containing the signing Device, the pharmacy`s TelematikID and a signature."
 * parameter[=].type = #Bundle
 
 Instance: SumatripanMedication

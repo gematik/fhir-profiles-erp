@@ -3,11 +3,12 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
 * version = "1.2"
-* name = "Accept Operation"
+* name = "AcceptOperation"
 * status = #draft
 * kind = #operation
 * date = "2020-07-01"
 * description = "The accept operation assigns an e-prescription to a healthcare provider (pharmacy). The status of the referenced Task changes into 'in-progres'."
+* affectsState = true
 * code = #accept
 * resource = #Task
 * system = false

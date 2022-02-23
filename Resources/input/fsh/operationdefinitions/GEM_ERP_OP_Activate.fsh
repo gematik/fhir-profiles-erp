@@ -3,11 +3,12 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition"
 * version = "1.2"
-* name = "Activate Operation"
+* name = "ActivateOperation"
 * status = #draft
 * kind = #operation
 * date = "2020-07-01"
 * description = "This operation activates the created Task for the prescription. The input parameter must contain the qualified signed Bundle of the prescription. The prescription server validates the prescription, updates the task ressource and starts the workflow."
+* affectsState = true
 * code = #activate
 * resource = #Task
 * system = false
