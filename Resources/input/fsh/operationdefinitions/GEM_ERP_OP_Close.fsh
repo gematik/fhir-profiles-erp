@@ -61,7 +61,7 @@ Usage: #inline
 * amount.numerator.unit = "St"
 * amount.denominator.value = 1
 
-Instance: GüntherMedicationDispense
+Instance: OperationCloseParametersInputMedicationDispense
 InstanceOf: MedicationDispense
 Title:   "MedicationDispense handed to Günther at a pharmacy"
 Usage: #example
@@ -79,7 +79,7 @@ Usage: #example
 * whenHandedOver = "2022-02-28"
 * dosageInstruction[+].text = "1-0-1-0"
 
-Instance: WaltraudBundle
+Instance: OperationCloseParametersInputBundle
 InstanceOf: Bundle
 Title:   "Bundle of 2 MedicationDispense handed to Waltraud at a pharmacy"
 Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20, then there will be 2 MedicationDispenses for the E-Rezept backend"
@@ -87,7 +87,6 @@ Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"
-* entry[=].resource = GüntherMedicationDispense
+* entry[=].resource = OperationCloseParametersInputMedicationDispense
 * entry[+].fullUrl = "http://waltraud-was-here"
-* entry[=].resource = GüntherMedicationDispense
-
+* entry[=].resource = OperationCloseParametersInputMedicationDispense

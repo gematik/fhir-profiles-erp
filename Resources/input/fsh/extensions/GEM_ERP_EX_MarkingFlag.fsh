@@ -10,7 +10,7 @@ Id: GEM-ERP-EX-MarkingFlag
 * . ^definition = "Optional Extension for ChargeItem-Ressources in eRx workflow"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+* extension ^slicing.rules = #closed
 * extension contains
     insuranceProvider 1..1 and
     subsidy 1..1 and

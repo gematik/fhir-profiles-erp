@@ -3,10 +3,10 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition"
 * version = "1.2"
-* name = "ActivateOperation"
+* name = "Activate"
 * status = #draft
 * kind = #operation
-* date = "2020-07-01"
+* date = "2022-02-01"
 * description = "This operation activates the created Task for the prescription. The input parameter must contain the qualified signed Bundle of the prescription. The prescription server validates the prescription, updates the task ressource and starts the workflow."
 * affectsState = true
 * code = #activate
@@ -15,16 +15,31 @@ Usage: #definition
 * type = false
 * instance = true
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+// in
 * parameter[0].name = #ePrescription
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "The qualified signed prescription element to activate the ePrescription workflow."
 * parameter[=].type = #Binary
-* parameter[=].targetProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+// out
 * parameter[+].name = #return
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "Return the updated and activated Task."
-* parameter[=].type = #Task
+* parameter[=].type = #Resource
+* parameter[=].targetProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+
+Instance: PrescriptionBinary
+InstanceOf: Binary
+Usage: #inline
+* contentType = #application/pkcs7-mime
+* data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
+
+Instance: OperationActivateParametersInput
+InstanceOf: Parameters
+Title: "Ativate operation input parameters"
+Usage: #example
+* parameter[+].name = "ePrescription"
+* parameter[=].resource = PrescriptionBinary

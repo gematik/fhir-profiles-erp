@@ -1,9 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Bundle",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:42:23.761+00:00"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -19,7 +16,6 @@
   "name": "GEM_ERP_PR_Bundle",
   "title": "Document Bundle for Receipt",
   "status": "draft",
-  "date": "2020-04-16T13:42:21.4495435+00:00",
   "description": "A document style representation of the receipt (complete, self-contained, signed)",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -52,6 +48,16 @@
   "differential": {
     "element": [
       {
+        "id": "Bundle.id",
+        "path": "Bundle.id",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta.profile",
+        "path": "Bundle.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2"
+      },
+      {
         "id": "Bundle.identifier",
         "path": "Bundle.identifier",
         "short": "identifier of ePrescription",
@@ -81,10 +87,148 @@
       {
         "id": "Bundle.entry",
         "path": "Bundle.entry",
-        "short": "ePrescription receipt entry",
-        "min": 3,
-        "max": "3",
-        "mustSupport": true
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 3
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation",
+        "path": "Bundle.entry",
+        "sliceName": "DocumentInformation",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.link",
+        "path": "Bundle.entry.link",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.request",
+        "path": "Bundle.entry.request",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.response",
+        "path": "Bundle.entry.response",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:SigningDevice",
+        "path": "Bundle.entry",
+        "sliceName": "SigningDevice",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.link",
+        "path": "Bundle.entry.link",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Device",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.request",
+        "path": "Bundle.entry.request",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:SigningDevice.response",
+        "path": "Bundle.entry.response",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest",
+        "path": "Bundle.entry",
+        "sliceName": "PrescriptionDigest",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.link",
+        "path": "Bundle.entry.link",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.request",
+        "path": "Bundle.entry.request",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:PrescriptionDigest.response",
+        "path": "Bundle.entry.response",
+        "max": "0"
       },
       {
         "id": "Bundle.signature",

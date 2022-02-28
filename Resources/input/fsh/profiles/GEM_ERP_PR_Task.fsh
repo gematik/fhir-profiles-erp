@@ -10,7 +10,7 @@ Description: "This resource manages the ePrescription workflow"
 * ^date = "2020-04-16T14:44:44.4851338+00:00"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+* extension ^slicing.rules = #closed
 * extension contains
     GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
     GEM_ERP_EX_ExpiryDate named expiryDate 0..1 and

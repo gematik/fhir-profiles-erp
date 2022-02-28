@@ -9,7 +9,7 @@ Title: "Profile for Signature of Bundles in ePrescription Context"
 * type ..1 MS
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "code"
-* type ^slicing.rules = #open
+* type ^slicing.rules = #closed
 * type ^binding.strength = #required
 * type contains
     AuthorsSignature 0..1 and

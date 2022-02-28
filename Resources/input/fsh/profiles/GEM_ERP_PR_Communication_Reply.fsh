@@ -32,7 +32,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload 1..1 MS
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
-* payload.extension ^slicing.rules = #open
+* payload.extension ^slicing.rules = #closed
 * payload.extension contains
     GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..* and
     GEM_ERP_EX_AvailabilityState named AvailabilityStatus 0..1

@@ -57,6 +57,20 @@
   "differential": {
     "element": [
       {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
         "id": "Composition.extension:Beneficiary",
         "path": "Composition.extension",
         "sliceName": "Beneficiary",

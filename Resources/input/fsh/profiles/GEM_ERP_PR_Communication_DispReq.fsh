@@ -26,6 +26,6 @@ Description: "Ressource used for the communication of dispense request between p
 * payload 1..1 MS
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
-* payload.extension ^slicing.rules = #open
+* payload.extension ^slicing.rules = #closed
 * payload.extension contains GEM_ERP_EX_InsuranceProvider named InsuranceProvider 0..1
 * payload.content[x] only string

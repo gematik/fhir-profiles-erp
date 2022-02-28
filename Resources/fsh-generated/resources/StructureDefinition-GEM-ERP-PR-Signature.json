@@ -32,7 +32,7 @@
               "path": "code"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
         "max": "1",
         "mustSupport": true,

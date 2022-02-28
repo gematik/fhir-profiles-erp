@@ -6,7 +6,7 @@ Id: GEM-ERP-PR-ChargeItem
 * ^status = #draft
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+* extension ^slicing.rules = #closed
 * extension ^min = 0
 * extension contains GEM_ERP_EX_MarkingFlag named markingFlag 0..* MS
 * extension[markingFlag] ^min = 0
@@ -26,7 +26,7 @@ Id: GEM-ERP-PR-ChargeItem
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value
 * supportingInformation ^slicing.discriminator.path = "type"
-* supportingInformation ^slicing.rules = #open
+* supportingInformation ^slicing.rules = #closed
 * supportingInformation contains
     prescriptionItem 0..* and
     dispenseItem 0..* and

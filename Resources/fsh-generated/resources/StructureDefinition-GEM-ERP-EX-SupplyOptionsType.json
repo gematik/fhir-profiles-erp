@@ -37,6 +37,16 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        },
         "min": 3
       },
       {

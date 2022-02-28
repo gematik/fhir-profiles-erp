@@ -3,10 +3,10 @@
   "id": "CreateOperation",
   "url": "http://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition",
   "version": "1.2",
-  "name": "CreateOperation",
+  "name": "Create",
   "status": "draft",
   "kind": "operation",
-  "date": "2020-07-01",
+  "date": "2022-02-01",
   "description": "This operation creates a Task for the prescription of a specific workflowType.",
   "affectsState": true,
   "code": "create",
@@ -23,16 +23,22 @@
       "use": "in",
       "min": 1,
       "max": "1",
-      "documentation": "This parameter defines the type of a prescription.",
-      "type": "integer"
+      "documentation": "This parameter requests the creation of a Task of a certain ePrescription flowType.",
+      "type": "Coding",
+      "targetProfile": [
+        "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+      ]
     },
     {
       "name": "task",
       "use": "out",
       "min": 1,
       "max": "1",
-      "documentation": "The previously created Task's ID",
-      "type": "Task"
+      "documentation": "The created Task with a flowType-specific prescriptionID",
+      "type": "Resource",
+      "targetProfile": [
+        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      ]
     }
   ]
 }

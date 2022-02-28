@@ -181,6 +181,20 @@
         "mustSupport": true
       },
       {
+        "id": "Communication.payload.extension",
+        "path": "Communication.payload.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
         "id": "Communication.payload.extension:OfferedSupplyOptions",
         "path": "Communication.payload.extension",
         "sliceName": "OfferedSupplyOptions",

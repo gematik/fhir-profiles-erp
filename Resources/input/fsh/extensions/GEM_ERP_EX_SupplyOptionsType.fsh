@@ -11,7 +11,7 @@ Id: GEM-ERP-EX-SupplyOptionsType
 * . ^comment = "Both patient and pharmacy can state their supply options or offers for the dispensation of medication"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+* extension ^slicing.rules = #closed
 * extension contains
     onPremise 1..1 and
     delivery 1..1 and

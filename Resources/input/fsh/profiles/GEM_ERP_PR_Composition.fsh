@@ -10,7 +10,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * ^date = "2020-04-16T13:43:56.0876617+00:00"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
+* extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_Beneficiary named Beneficiary 0..*
 * extension[Beneficiary] ^short = "The ID of the beneficiary of the erx receipt (e.g. TelematikID of pharmacy)"
 * extension[Beneficiary].value[x].system 1..
