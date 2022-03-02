@@ -85,6 +85,7 @@ Title:   "Bundle of 2 MedicationDispense handed to Waltraud at a pharmacy"
 Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20, then there will be 2 MedicationDispenses for the E-Rezept backend"
 Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"
 * entry[=].resource = OperationCloseParametersInputMedicationDispense

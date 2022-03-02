@@ -1,6 +1,11 @@
 {
   "resourceType": "Bundle",
   "id": "9145d0d0-7b77-483f-ad89-cd9d34fc1f08",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+    ]
+  },
   "type": "collection",
   "entry": [
     {
