@@ -24,7 +24,7 @@ Description: "This resource manages the ePrescription workflow"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" wich identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #closed
 * identifier contains
     PrescriptionID 1..1 and
     AccessCode 0..1 and
