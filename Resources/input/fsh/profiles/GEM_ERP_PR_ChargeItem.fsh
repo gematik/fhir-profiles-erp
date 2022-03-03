@@ -16,7 +16,7 @@ Id: GEM-ERP-PR-ChargeItem
 * identifier ^slicing.rules = #closed
 * identifier contains
     PrescriptionID 1..1 and
-    AccessCode 0..1 and
+    AccessCode 0..1
 * identifier[PrescriptionID] only GEM_ERP_PR_PrescriptionId
 * identifier[PrescriptionID] ^short = "Prescription Identifier"
 * identifier[PrescriptionID] ^definition = "The prescription identifier is the main identifier for all the ePrecscription related ressources and the whole prescription workflow. This identifier is genereted by the \"E-Rezept Fachdienst\" and must not be changed manually."
