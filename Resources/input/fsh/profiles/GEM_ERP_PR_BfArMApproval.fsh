@@ -55,7 +55,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * signature.sigFormat = #application/pkcs7-mime (exactly)
 * signature.data 1.. SU ?!
 //
-// unusd fields
+// unusd fields 
 //
 * occurred[x] ..0
 * policy ..0
