@@ -17,3 +17,4 @@ Description: "Shows the different types of the ePrescription according to the pr
 * #166 "Muster 16 (T-Rezepte)"
 * #169 "Muster 16 (Direkte Zuweisung)"
 * #200 "PKV (Apothekenpflichtige Arzneimittel)"
+* #209 "PKV (Direkte Zuweisung)"
