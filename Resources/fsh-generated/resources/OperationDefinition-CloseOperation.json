@@ -35,7 +35,7 @@
       "type": "canonical",
       "targetProfile": [
         "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
-        "http://hl7.org/fhir/StructureDefinition/Bundle"
+        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
       ]
     },
     {

@@ -30,7 +30,7 @@ Usage: #definition
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
 * parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
-* parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/Bundle"
+* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
 // out
 * parameter[+].name = #Receipt
 * parameter[=].use = #out
