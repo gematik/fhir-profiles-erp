@@ -19,38 +19,6 @@
       ]
     }
   ],
-  "expansion": {
-    "identifier": "fe7e0ee0-f72e-4909-bf48-7c84ff97bac5",
-    "timestamp": "2022-02-07T07:48:29+00:00",
-    "total": 5,
-    "contains": [
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-        "code": "160",
-        "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-        "code": "165",
-        "display": "Muster 16 (Betäubungsmittel)"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-        "code": "166",
-        "display": "Muster 16 (T-Rezepte)"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-        "code": "169",
-        "display": "Muster 16 (Direkte Zuweisung)"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-        "code": "200",
-        "display": "PKV (Apothekenpflichtige Arzneimittel)"
-      }
-    ]
-  },
   "compose": {
     "include": [
       {

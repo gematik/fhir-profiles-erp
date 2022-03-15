@@ -28,6 +28,10 @@
     {
       "code": "200",
       "display": "PKV (Apothekenpflichtige Arzneimittel)"
+    },
+    {
+      "code": "209",
+      "display": "PKV (Direkte Zuweisung)"
     }
   ],
   "experimental": false,
@@ -44,5 +48,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 5
+  "count": 6
 }
