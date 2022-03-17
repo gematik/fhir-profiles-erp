@@ -80,8 +80,7 @@
           "description": "This Provenance targets the ePrescription workflow item Task and the ePrescroption as a whole",
           "rules": "closed"
         },
-        "max": "1",
-        "isModifier": true
+        "max": "1"
       },
       {
         "id": "Provenance.target:TaskReference",
@@ -103,11 +102,6 @@
         "id": "Provenance.occurred[x]",
         "path": "Provenance.occurred[x]",
         "max": "0"
-      },
-      {
-        "id": "Provenance.recorded",
-        "path": "Provenance.recorded",
-        "isModifier": true
       },
       {
         "id": "Provenance.policy",
@@ -132,8 +126,7 @@
       {
         "id": "Provenance.agent",
         "path": "Provenance.agent",
-        "max": "1",
-        "isSummary": true
+        "max": "1"
       },
       {
         "id": "Provenance.agent.type",
@@ -183,9 +176,7 @@
       {
         "id": "Provenance.agent.onBehalfOf",
         "path": "Provenance.agent.onBehalfOf",
-        "min": 1,
-        "isModifier": true,
-        "isSummary": true
+        "min": 1
       },
       {
         "id": "Provenance.agent.onBehalfOf.identifier",
@@ -253,11 +244,6 @@
         "patternString": "Consent Signature"
       },
       {
-        "id": "Provenance.signature.when",
-        "path": "Provenance.signature.when",
-        "isModifier": true
-      },
-      {
         "id": "Provenance.signature.who",
         "path": "Provenance.signature.who",
         "short": "Who signed - the Bundesdruckrei narcotics authorization service on behalf of BfArM"
@@ -277,9 +263,7 @@
       {
         "id": "Provenance.signature.data",
         "path": "Provenance.signature.data",
-        "min": 1,
-        "isModifier": true,
-        "isSummary": true
+        "min": 1
       }
     ]
   }
