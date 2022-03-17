@@ -21,7 +21,7 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "This parameter requests the creation of a Task of a certain ePrescription flowType."
-* parameter[=].type = #Coding
+* parameter[=].type = #canonical
 * parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
 // out
 * parameter[+].name = #task
