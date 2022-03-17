@@ -1,13 +1,13 @@
 {
   "resourceType": "OperationDefinition",
   "id": "CloseOperation",
-  "url": "http://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition",
+  "url": "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition",
   "version": "1.2",
   "name": "Close",
   "status": "draft",
   "kind": "operation",
   "date": "2022-02-01",
-  "description": "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed",
+  "description": "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into 'completed'.",
   "affectsState": true,
   "code": "close",
   "resource": [
