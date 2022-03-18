@@ -114,14 +114,14 @@ Usage: #example
 * extension[=].valueDate = "2022-06-02"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
-* identifier[+].system = "https://gematik.de/fhir/NamingSystem/AccessCode"
+* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
 * identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
-* status = #created
+* status = #draft
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
 * performerType[+].coding[+].system = "urn:ietf:rfc:3986"
-* performerType[+].coding[+].code = #urn:oid:1.2.276.0.76.4.54
-* performerType[+].coding[+].display = "Öffentliche Apotheke"
+* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
+* performerType[=].coding[=].display = "Öffentliche Apotheke"
 
 
 //Instance: TaskInReadyState
