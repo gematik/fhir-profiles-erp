@@ -188,8 +188,7 @@
       {
         "id": "Task.intent",
         "path": "Task.intent",
-        "fixedCode": "order",
-        "mustSupport": true
+        "fixedCode": "order"
       },
       {
         "id": "Task.for",
@@ -222,8 +221,7 @@
       {
         "id": "Task.performerType.coding",
         "path": "Task.performerType.coding",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Task.input",
@@ -277,10 +275,6 @@
             "code": "Reference",
             "targetProfile": [
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
-            ],
-            "aggregation": [
-              "referenced",
-              "bundled"
             ]
           }
         ]
@@ -288,13 +282,7 @@
       {
         "id": "Task.input:ePrescription.value[x].reference",
         "path": "Task.input.value[x].reference",
-        "min": 1,
-        "mustSupport": false
-      },
-      {
-        "id": "Task.input:ePrescription.value[x].identifier",
-        "path": "Task.input.value[x].identifier",
-        "mustSupport": false
+        "min": 1
       },
       {
         "id": "Task.input:patientReceipt",
@@ -331,29 +319,13 @@
             "code": "Reference",
             "targetProfile": [
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
-            ],
-            "aggregation": [
-              "referenced",
-              "bundled"
             ]
           }
         ]
       },
       {
-        "id": "Task.input:patientReceipt.value[x].reference",
-        "path": "Task.input.value[x].reference",
-        "min": 1,
-        "mustSupport": false
-      },
-      {
         "id": "Task.output",
         "path": "Task.output",
-        "code": [
-          {
-            "system": "https://gematik.de/fhir/erp/CodeSystem/FlowType",
-            "userSelected": true
-          }
-        ],
         "slicing": {
           "discriminator": [
             {
@@ -403,19 +375,9 @@
             "code": "Reference",
             "targetProfile": [
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-            ],
-            "aggregation": [
-              "referenced",
-              "bundled"
             ]
           }
         ]
-      },
-      {
-        "id": "Task.output:receipt.value[x].reference",
-        "path": "Task.output.value[x].reference",
-        "min": 1,
-        "mustSupport": false
       }
     ]
   }
