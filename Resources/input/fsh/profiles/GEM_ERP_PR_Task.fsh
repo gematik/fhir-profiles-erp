@@ -3,7 +3,6 @@ Parent: Task
 Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
-* ^meta.lastUpdated = "2020-04-16T14:44:47.082+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 * ^version = "1.2"
 * ^status = #draft
@@ -41,17 +40,12 @@ Description: "This resource manages the ePrescription workflow"
 * identifier[Secret].system 1..
 * identifier[Secret].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_Secret" (exactly)
 * identifier[Secret].value 1..
-* status MS
 * intent = #order (exactly)
 * intent MS
 * for MS
 * for ^short = "Identifier of Patient (KVID)"
 * for ^definition = "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation"
-* for.identifier 1.. MS
 * for.identifier only $identifier-kvid-10
-* authoredOn 1.. MS
-* lastModified 1.. MS
-* performerType 1.. MS
 * performerType from GEM_ERP_VS_OrganizationType (required)
 * performerType ^definition = "The Institution in which the patient should redeem his prescription."
 * performerType.coding 1.. MS
@@ -64,38 +58,27 @@ Description: "This resource manages the ePrescription workflow"
 * input contains
     ePrescription 0..1 and
     patientReceipt 0..1
-* input[ePrescription].type MS
 * input[ePrescription].type from GEM_ERP_VS_DocumentType (required)
-* input[ePrescription].type.coding 1..1 MS
 * input[ePrescription].type.coding.system 1..
-* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType" (exactly)
-* input[ePrescription].type.coding.system ^code.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
-* input[ePrescription].type.coding.system ^code.display = "Type of the Bundle"
+* input[ePrescription].type.coding.system = "ttps://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[ePrescription].type.coding.code 1..
 * input[ePrescription].type.coding.code = #1 (exactly)
 * input[ePrescription].value[x] only Reference(GEM_ERP_PR_Binary)
-* input[ePrescription].value[x] MS
 * input[ePrescription].value[x] ^type.aggregation[0] = #referenced
 * input[ePrescription].value[x] ^type.aggregation[+] = #bundled
 * input[ePrescription].value[x].reference 1..
 * input[ePrescription].value[x].reference ^mustSupport = false
 * input[ePrescription].value[x].identifier ^mustSupport = false
-* input[patientReceipt].type MS
-* input[patientReceipt].type from $Documenttype (required)
-* input[patientReceipt].type.coding 1..1 MS
+* input[patientReceipt].type from GEM_ERP_VS_DocumentType (required)
 * input[patientReceipt].type.coding.system 1..
-* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType" (exactly)
-* input[patientReceipt].type.coding.system ^code.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
-* input[patientReceipt].type.coding.system ^code.display = "Type of the Bundle"
+* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
 * input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
-* input[patientReceipt].value[x] MS
 * input[patientReceipt].value[x] ^type.aggregation[0] = #referenced
 * input[patientReceipt].value[x] ^type.aggregation[+] = #bundled
 * input[patientReceipt].value[x].reference 1..
 * input[patientReceipt].value[x].reference ^mustSupport = false
-* input[patientReceipt].value[x].identifier ^mustSupport = false
 * output ..1 MS
 * output ^code.system = "https://gematik.de/fhir/erp/CodeSystem/FlowType"
 * output ^code.userSelected = true
@@ -105,14 +88,12 @@ Description: "This resource manages the ePrescription workflow"
 * output ^short = "Output Bundle"
 * output ^definition = "Referenz to the Bundle wich represent the receipt."
 * output contains receipt 0..1
-* output[receipt].type from $Documenttype (required)
-* output[receipt].type.coding 1..1 MS
+* output[receipt].type from GEM_ERP_VS_DocumentType (required)
 * output[receipt].type.coding.system 1..
-* output[receipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType" (exactly)
+* output[receipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * output[receipt].type.coding.code 1..
 * output[receipt].type.coding.code = #3 (exactly)
 * output[receipt].value[x] only Reference(GEM_ERP_PR_Bundle)
-* output[receipt].value[x] MS
 * output[receipt].value[x] ^type.aggregation[0] = #referenced
 * output[receipt].value[x] ^type.aggregation[+] = #bundled
 * output[receipt].value[x].reference 1..

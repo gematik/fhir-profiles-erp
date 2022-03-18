@@ -19,28 +19,6 @@
       ]
     }
   ],
-  "expansion": {
-    "identifier": "fe7e0ee0-f72e-4909-bf48-7c84ff97bac5",
-    "timestamp": "2020-05-07T07:48:29+00:00",
-    "total": 3,
-    "contains": [
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-        "code": "1",
-        "display": "Health Care Provider Prescription"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-        "code": "2",
-        "display": "Patient Confirmation"
-      },
-      {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-        "code": "3",
-        "display": "Receipt"
-      }
-    ]
-  },
   "compose": {
     "include": [
       {

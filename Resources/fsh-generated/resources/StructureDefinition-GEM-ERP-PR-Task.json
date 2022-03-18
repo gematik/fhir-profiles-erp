@@ -1,9 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Task",
-  "meta": {
-    "lastUpdated": "2020-04-16T14:44:47.082+00:00"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -189,11 +186,6 @@
         "min": 1
       },
       {
-        "id": "Task.status",
-        "path": "Task.status",
-        "mustSupport": true
-      },
-      {
         "id": "Task.intent",
         "path": "Task.intent",
         "fixedCode": "order",
@@ -209,7 +201,6 @@
       {
         "id": "Task.for.identifier",
         "path": "Task.for.identifier",
-        "min": 1,
         "type": [
           {
             "code": "Identifier",
@@ -217,27 +208,12 @@
               "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Task.authoredOn",
-        "path": "Task.authoredOn",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Task.lastModified",
-        "path": "Task.lastModified",
-        "min": 1,
-        "mustSupport": true
+        ]
       },
       {
         "id": "Task.performerType",
         "path": "Task.performerType",
         "definition": "The Institution in which the patient should redeem his prescription.",
-        "min": 1,
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
@@ -276,30 +252,16 @@
       {
         "id": "Task.input:ePrescription.type",
         "path": "Task.input.type",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
       },
       {
-        "id": "Task.input:ePrescription.type.coding",
-        "path": "Task.input.type.coding",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
         "id": "Task.input:ePrescription.type.coding.system",
         "path": "Task.input.type.coding.system",
-        "code": [
-          {
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-            "display": "Type of the Bundle"
-          }
-        ],
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+        "fixedUri": "ttps://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
       },
       {
         "id": "Task.input:ePrescription.type.coding.code",
@@ -321,8 +283,7 @@
               "bundled"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Task.input:ePrescription.value[x].reference",
@@ -345,30 +306,16 @@
       {
         "id": "Task.input:patientReceipt.type",
         "path": "Task.input.type",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/CodeSystem/Documenttype"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
-      },
-      {
-        "id": "Task.input:patientReceipt.type.coding",
-        "path": "Task.input.type.coding",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
       },
       {
         "id": "Task.input:patientReceipt.type.coding.system",
         "path": "Task.input.type.coding.system",
-        "code": [
-          {
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-            "display": "Type of the Bundle"
-          }
-        ],
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
       },
       {
         "id": "Task.input:patientReceipt.type.coding.code",
@@ -390,18 +337,12 @@
               "bundled"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Task.input:patientReceipt.value[x].reference",
         "path": "Task.input.value[x].reference",
         "min": 1,
-        "mustSupport": false
-      },
-      {
-        "id": "Task.input:patientReceipt.value[x].identifier",
-        "path": "Task.input.value[x].identifier",
         "mustSupport": false
       },
       {
@@ -439,21 +380,14 @@
         "path": "Task.output.type",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/CodeSystem/Documenttype"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
-      },
-      {
-        "id": "Task.output:receipt.type.coding",
-        "path": "Task.output.type.coding",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
       },
       {
         "id": "Task.output:receipt.type.coding.system",
         "path": "Task.output.type.coding.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
       },
       {
         "id": "Task.output:receipt.type.coding.code",
@@ -475,8 +409,7 @@
               "bundled"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Task.output:receipt.value[x].reference",
