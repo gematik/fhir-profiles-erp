@@ -28,7 +28,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1.. MS
-* sender.identifier only $identifier-kvid-10 or GEM_ERP_PR_TelematikId
+* sender.identifier only $identifier-kvid-10 or IdentifierTelematikId
 * payload 1..1 MS
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"

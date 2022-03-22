@@ -107,7 +107,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_TelematikId",
+              "http://fhir.de/StructureDefinition/identifier-telematik-id",
               "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }

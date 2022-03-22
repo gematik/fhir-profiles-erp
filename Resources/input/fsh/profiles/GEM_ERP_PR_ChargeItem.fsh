@@ -34,7 +34,7 @@ Id: GEM-ERP-PR-ChargeItem
 * subject.identifier only $identifier-kvid-10
 * enterer 1.. MS
 * enterer.identifier 1..
-* enterer.identifier only GEM_ERP_PR_TelematikId
+* enterer.identifier only IdentifierTelematikId
 * enteredDate 1.. MS
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value

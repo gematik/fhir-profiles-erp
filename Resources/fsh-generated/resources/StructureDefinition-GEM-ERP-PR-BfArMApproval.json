@@ -187,7 +187,7 @@
         "id": "Provenance.agent.onBehalfOf.identifier.system",
         "path": "Provenance.agent.onBehalfOf.identifier.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/NamingSystem/TelematikID"
+        "fixedUri": "IdentifierTelematikId"
       },
       {
         "id": "Provenance.agent.onBehalfOf.identifier.value",
