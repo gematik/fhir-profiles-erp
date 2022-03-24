@@ -80,7 +80,7 @@
     {
       "actor": {
         "identifier": {
-          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId",
+          "system": "http://fhir.de/StructureDefinition/identifier-telematik-id",
           "value": "3-abc-1234567890"
         }
       }
