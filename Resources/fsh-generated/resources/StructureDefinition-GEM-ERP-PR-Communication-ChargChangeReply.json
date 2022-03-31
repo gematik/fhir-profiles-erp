@@ -92,7 +92,15 @@
       {
         "id": "Communication.recipient.identifier",
         "path": "Communication.recipient.identifier",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ]
       },
       {
         "id": "Communication.sender",
@@ -102,7 +110,15 @@
       {
         "id": "Communication.sender.identifier",
         "path": "Communication.sender.identifier",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ]
       },
       {
         "id": "Communication.payload",

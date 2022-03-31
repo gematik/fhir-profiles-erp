@@ -92,7 +92,7 @@
           {
             "actor": {
               "identifier": {
-                "system": "http://fhir.de/StructureDefinition/identifier-telematik-id",
+                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId",
                 "value": "3-abc-1234567890"
               }
             }
@@ -190,7 +190,7 @@
           {
             "actor": {
               "identifier": {
-                "system": "http://fhir.de/StructureDefinition/identifier-telematik-id",
+                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId",
                 "value": "3-abc-1234567890"
               }
             }

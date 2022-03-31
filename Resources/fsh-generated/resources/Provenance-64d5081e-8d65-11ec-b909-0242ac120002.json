@@ -18,7 +18,7 @@
       },
       "onBehalfOf": {
         "identifier": {
-          "system": "http://fhir.de/StructureDefinition/identifier-telematik-id",
+          "system": "IdentifierTelematikId",
           "value": "1-HBA-Testkarte-883110000123465"
         }
       },
