@@ -58,6 +58,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 1
@@ -195,18 +196,6 @@
         "short": "Identifier of Patient (KVID)",
         "definition": "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation",
         "mustSupport": true
-      },
-      {
-        "id": "Task.for.identifier",
-        "path": "Task.for.identifier",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ]
       },
       {
         "id": "Task.performerType",

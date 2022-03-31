@@ -101,6 +101,7 @@ Description: "This resource manages the ePrescription workflow"
 Instance: TaskInCreatedState
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task just created by Fachdienst via $create operation"
+Description:   "Task just created by Fachdienst via $create operation"
 Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"

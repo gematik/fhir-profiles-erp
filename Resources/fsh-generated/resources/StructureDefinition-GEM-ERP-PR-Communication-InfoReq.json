@@ -104,14 +104,6 @@
         "id": "Communication.recipient.identifier",
         "path": "Communication.recipient.identifier",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -124,14 +116,6 @@
         "id": "Communication.sender.identifier",
         "path": "Communication.sender.identifier",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -151,6 +135,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 3

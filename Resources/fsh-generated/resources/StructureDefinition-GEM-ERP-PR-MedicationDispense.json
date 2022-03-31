@@ -107,14 +107,6 @@
         "path": "MedicationDispense.subject.identifier",
         "short": "The patients KVNR",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -127,15 +119,7 @@
       {
         "id": "MedicationDispense.performer.actor.identifier",
         "path": "MedicationDispense.performer.actor.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "MedicationDispense.whenPrepared",

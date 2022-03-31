@@ -55,6 +55,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },
@@ -154,15 +155,7 @@
       {
         "id": "ChargeItem.subject.identifier",
         "path": "ChargeItem.subject.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "ChargeItem.enterer",
@@ -173,15 +166,7 @@
       {
         "id": "ChargeItem.enterer.identifier",
         "path": "ChargeItem.enterer.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "ChargeItem.enteredDate",
