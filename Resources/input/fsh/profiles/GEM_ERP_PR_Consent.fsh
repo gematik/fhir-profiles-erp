@@ -12,6 +12,6 @@ Id: GEM-ERP-PR-Consent
 * category from GEM_ERP_VS_ConsentType (extensible)
 * category.coding.system = "https://gematik.de/fhir/erp/CodeSystem/ConsentType" (exactly)
 * patient 1.. MS
-* patient.identifier only $identifier-kvid-10
+* patient.identifier only IdentifierPkv
 * dateTime 1.. MS
 * policyRule MS
