@@ -108,7 +108,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_TelematikId"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
             ]
           }
         ],
@@ -151,7 +151,6 @@
               "path": "url"
             }
           ],
-          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 3

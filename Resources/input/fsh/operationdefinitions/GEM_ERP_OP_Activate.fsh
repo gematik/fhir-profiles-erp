@@ -28,7 +28,7 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "Return the updated and activated Task."
-* parameter[=].type = #Resource
+* parameter[=].type = #canonical
 * parameter[=].targetProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 
 Instance: PrescriptionBinary

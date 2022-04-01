@@ -19,15 +19,10 @@
       ]
     }
   ],
-  "expansion": {
-    "identifier": "fe7e0ee0-f72e-4909-bf48-7c84ff97bac5",
-    "timestamp": "2020-05-07T07:48:29+00:00",
-    "total": 1,
-    "contains": [
+  "compose": {
+    "include": [
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_ConsentType",
-        "code": "CHARGCONS",
-        "display": "Consent for saving electronic charge item"
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_ConsentType"
       }
     ]
   }

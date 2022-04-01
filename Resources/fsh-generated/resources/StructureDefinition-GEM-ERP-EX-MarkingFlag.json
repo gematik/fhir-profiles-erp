@@ -69,6 +69,16 @@
       },
       {
         "id": "Extension.extension:insuranceProvider.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = submitted to insurance provider",
         "type": [
@@ -98,6 +108,16 @@
       },
       {
         "id": "Extension.extension:subsidy.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = submitted to aid organization",
         "type": [
@@ -127,6 +147,16 @@
       },
       {
         "id": "Extension.extension:taxOffice.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = submitted to tax office",
         "type": [
