@@ -16,7 +16,7 @@
   "system": false,
   "type": false,
   "instance": true,
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle",
   "parameter": [
     {
       "name": "secret",

@@ -55,7 +55,6 @@
               "path": "url"
             }
           ],
-          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },
@@ -160,7 +159,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
         ]
