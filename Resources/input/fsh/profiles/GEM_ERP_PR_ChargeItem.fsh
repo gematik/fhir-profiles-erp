@@ -25,17 +25,13 @@ Id: GEM-ERP-PR-ChargeItem
 * identifier[AccessCode].system 1..
 * identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode" (exactly)
 * identifier[AccessCode].value 1..
-* status MS
-* code MS
+* status = #billable (exactly)
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/data-absent-reason" (exactly)
 * code.coding.code = #not-applicable (exactly)
-* subject MS
 * subject.identifier 1..
 * subject.identifier only $identifier-pkv
-* enterer 1.. MS
 * enterer.identifier 1..
 * enterer.identifier only $identifier-telematik-id
-* enteredDate 1.. MS
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value
 * supportingInformation ^slicing.discriminator.path = "type"
