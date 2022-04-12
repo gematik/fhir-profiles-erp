@@ -86,6 +86,7 @@ Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20
 Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+* meta.tag.display = "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"
 * entry[=].resource = OperationCloseParametersInputMedicationDispense

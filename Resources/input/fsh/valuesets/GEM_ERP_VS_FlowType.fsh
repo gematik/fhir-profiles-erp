@@ -5,7 +5,6 @@ Description: "Shows the different types of the ePrescription according to the pr
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 * ^version = "1.2"
 * ^status = #draft
-* ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

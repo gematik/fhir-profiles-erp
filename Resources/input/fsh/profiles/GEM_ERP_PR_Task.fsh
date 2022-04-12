@@ -53,7 +53,7 @@ Description: "This resource manages the ePrescription workflow"
 * input ^slicing.discriminator.path = "type.coding.code"
 * input ^slicing.rules = #closed
 * input ^short = "Input Bundle"
-* input ^definition = "Referenz to the whole JSON-Bundle of the patient and the Health Care Provider Bundle"
+* input ^definition = "Reference to ePrescription input and outcome during the process"
 * input contains
     ePrescription 0..1 and
     patientReceipt 0..1

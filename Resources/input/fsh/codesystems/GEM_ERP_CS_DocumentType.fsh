@@ -5,7 +5,6 @@ Description: "Type of document depending on the recipient of the Bundle."
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
 * ^version = "1.2"
 * ^status = #draft
-* ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

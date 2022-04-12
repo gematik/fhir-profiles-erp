@@ -5,7 +5,6 @@ Description: "Type of the availability status for medication availability reques
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
 * ^version = "1.2"
 * ^status = #draft
-* ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

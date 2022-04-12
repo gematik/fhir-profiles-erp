@@ -5,7 +5,6 @@ Description: "Type of Consents for the ePrescription."
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_ConsentType"
 * ^version = "1.2"
 * ^status = #draft
-* ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"
