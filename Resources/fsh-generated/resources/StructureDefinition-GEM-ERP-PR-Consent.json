@@ -14,7 +14,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent",
   "version": "1.2",
   "name": "GEM_ERP_PR_Consent",
-  "status": "active",
+  "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

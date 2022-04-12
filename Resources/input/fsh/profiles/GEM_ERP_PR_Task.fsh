@@ -105,6 +105,7 @@ Description:   "Task just created by Fachdienst via $create operation"
 Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
+* meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 * extension[=].valueCoding[=].code = #160

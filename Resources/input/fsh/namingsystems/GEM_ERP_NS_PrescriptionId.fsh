@@ -2,7 +2,7 @@ Profile: GEM_ERP_NS_PrescriptionId
 Parent: NamingSystem
 Id: GEM-ERP-NS-PrescriptionId
 * name = "GEM_ERP_NS_PrescriptionId"
-* status = #active
+* status = #draft
 * kind = #identifier
 * date = "2020-04-30"
 * publisher = "gematik GmbH"

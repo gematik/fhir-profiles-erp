@@ -75,8 +75,7 @@
         "id": "MedicationDispense.status",
         "path": "MedicationDispense.status",
         "short": "completed",
-        "fixedCode": "completed",
-        "mustSupport": true
+        "fixedCode": "completed"
       },
       {
         "id": "MedicationDispense.medication[x]",

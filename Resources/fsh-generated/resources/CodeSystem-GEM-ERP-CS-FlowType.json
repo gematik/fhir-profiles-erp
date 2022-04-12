@@ -30,6 +30,14 @@
       "display": "PKV (Apothekenpflichtige Arzneimittel)"
     },
     {
+      "code": "205",
+      "display": "PKV (Betäubungsmittel)"
+    },
+    {
+      "code": "206",
+      "display": "PKV (T-Rezepte)"
+    },
+    {
       "code": "209",
       "display": "PKV (Direkte Zuweisung)"
     }
@@ -48,5 +56,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 6
+  "count": 8
 }

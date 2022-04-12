@@ -12,7 +12,6 @@ Description: "Handles information about the redeem of the prescription and the s
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"
 * status = #completed (exactly)
-* status MS
 * status ^short = "completed"
 * medication[x] only Reference
 * medication[x] MS

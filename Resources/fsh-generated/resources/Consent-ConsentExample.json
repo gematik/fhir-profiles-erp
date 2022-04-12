@@ -7,22 +7,6 @@
     ]
   },
   "status": "active",
-  "patient": {
-    "identifier": {
-      "type": {
-        "coding": [
-          {
-            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
-            "code": "PKV"
-          }
-        ]
-      },
-      "value": "X234567890",
-      "assigner": {
-        "display": "Name einer privaten Krankenversicherung"
-      }
-    }
-  },
   "scope": {
     "coding": [
       {
@@ -43,6 +27,22 @@
       ]
     }
   ],
+  "patient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code": "PKV"
+          }
+        ]
+      },
+      "value": "X234567890",
+      "assigner": {
+        "display": "Name einer privaten Krankenversicherung"
+      }
+    }
+  },
   "dateTime": "2021-06-01T07:13:00+05:00",
   "policyRule": {
     "coding": [

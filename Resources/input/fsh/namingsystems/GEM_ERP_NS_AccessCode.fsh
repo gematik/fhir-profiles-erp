@@ -2,7 +2,7 @@ Profile: GEM_ERP_NS_AccessCode
 Parent: NamingSystem
 Id: GEM-ERP-NS-AccessCode
 * name = "GEM_ERP_NS_AccessCode"
-* status = #active
+* status = #draft
 * kind = #identifier
 * date = "2020-04-30"
 * publisher = "gematik GmbH"

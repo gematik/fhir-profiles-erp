@@ -4,6 +4,11 @@
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
+    ],
+    "tag": [
+      {
+        "display": "Task in DRAFT state just created by Fachdienst via $create operation"
+      }
     ]
   },
   "intent": "order",
