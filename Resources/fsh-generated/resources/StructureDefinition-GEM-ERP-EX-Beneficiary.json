@@ -49,14 +49,12 @@
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "Identifier"
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
           }
         ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "fixedUri": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId"
       }
     ]
   }

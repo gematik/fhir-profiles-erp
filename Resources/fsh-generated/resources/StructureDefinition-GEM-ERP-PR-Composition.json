@@ -87,16 +87,6 @@
         ]
       },
       {
-        "id": "Composition.extension:Beneficiary.value[x].system",
-        "path": "Composition.extension.value[x].system",
-        "min": 1
-      },
-      {
-        "id": "Composition.extension:Beneficiary.value[x].value",
-        "path": "Composition.extension.value[x].value",
-        "min": 1
-      },
-      {
         "id": "Composition.status",
         "path": "Composition.status",
         "short": "Status = \"final\"",
@@ -120,7 +110,7 @@
         "id": "Composition.type.coding.system",
         "path": "Composition.type.coding.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
       },
       {
         "id": "Composition.type.coding.code",

@@ -49,3 +49,35 @@ Description: "A document style representation of the receipt (complete, self-con
 * signature.type ^slicing.discriminator.type = #value
 * signature.type ^slicing.discriminator.path = "code"
 * signature.type ^slicing.rules = #closed
+
+Instance: ReceiptBundleBinary
+InstanceOf: Binary
+Usage: #inline
+* id = "PrescriptionDigest-160.123.456.789.123.58"
+* meta.profile = "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
+* contentType = #application/octet-stream
+* data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
+
+Instance: ReceiptBundleQuittung
+InstanceOf: GEM_ERP_PR_Bundle
+Title:   "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
+Usage: #example
+* id = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2"
+* meta.tag.display = "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
+* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[=].value = "160.000.033.491.280.78"
+* type = #document
+* timestamp = "2022-03-18T15:28:00+00:00"
+* entry[+].fullUrl = "urn:uuid:c624cf47-e235-4624-af71-0a09dc9254dc"
+* entry[=].resource = ReceiptBundleComposition
+* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
+* entry[=].resource = ReceiptBundleDevice
+* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest"
+* entry[=].resource = ReceiptBundleBinary
+* signature.type[+].system = "urn:iso-astm:E1762-95:2013"
+* signature.type[=].code = #1.2.840.10065.1.12.1.1
+* signature.when = "2022-03-18T15:28:00+00:00"
+* signature.who.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
+* signature.sigFormat = #application/pkcs7-mime
+* signature.data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
