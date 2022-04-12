@@ -129,12 +129,7 @@
       {
         "id": "ChargeItem.status",
         "path": "ChargeItem.status",
-        "mustSupport": true
-      },
-      {
-        "id": "ChargeItem.code",
-        "path": "ChargeItem.code",
-        "mustSupport": true
+        "fixedCode": "billable"
       },
       {
         "id": "ChargeItem.code.coding.system",
@@ -145,11 +140,6 @@
         "id": "ChargeItem.code.coding.code",
         "path": "ChargeItem.code.coding.code",
         "fixedCode": "not-applicable"
-      },
-      {
-        "id": "ChargeItem.subject",
-        "path": "ChargeItem.subject",
-        "mustSupport": true
       },
       {
         "id": "ChargeItem.subject.identifier",
@@ -165,12 +155,6 @@
         ]
       },
       {
-        "id": "ChargeItem.enterer",
-        "path": "ChargeItem.enterer",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "ChargeItem.enterer.identifier",
         "path": "ChargeItem.enterer.identifier",
         "min": 1,
@@ -182,12 +166,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "ChargeItem.enteredDate",
-        "path": "ChargeItem.enteredDate",
-        "min": 1,
-        "mustSupport": true
       },
       {
         "id": "ChargeItem.supportingInformation",
@@ -209,7 +187,7 @@
         "sliceName": "prescriptionItem",
         "definition": "In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format.",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:prescriptionItem.type",
@@ -222,7 +200,7 @@
         "path": "ChargeItem.supportingInformation",
         "sliceName": "dispenseItem",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:dispenseItem.type",
@@ -236,7 +214,7 @@
         "sliceName": "receipt",
         "definition": "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652].",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:receipt.type",

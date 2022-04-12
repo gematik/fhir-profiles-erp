@@ -37,9 +37,9 @@ Id: GEM-ERP-PR-ChargeItem
 * supportingInformation ^slicing.discriminator.path = "type"
 * supportingInformation ^slicing.rules = #closed
 * supportingInformation contains
-    prescriptionItem 0..* and
-    dispenseItem 0..* and
-    receipt 0..*
+    prescriptionItem 0..1 and
+    dispenseItem 0..1 and
+    receipt 0..1
 * supportingInformation[prescriptionItem] ^definition = "In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format."
 * supportingInformation[prescriptionItem].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle" (exactly)
 * supportingInformation[dispenseItem].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" (exactly)
