@@ -4,6 +4,11 @@
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+    ],
+    "tag": [
+      {
+        "display": "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
+      }
     ]
   },
   "type": "collection",

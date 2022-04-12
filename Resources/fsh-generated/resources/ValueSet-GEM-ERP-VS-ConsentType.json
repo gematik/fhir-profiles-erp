@@ -7,7 +7,6 @@
   "description": "Type of Consents for the ePrescription.",
   "version": "1.2",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_ConsentType",
-  "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
     {

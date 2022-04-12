@@ -7,7 +7,6 @@
   "description": "Type of document depending on the recipient.",
   "version": "1.2",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
-  "experimental": false,
   "publisher": "gematik GmbH",
   "contact": [
     {

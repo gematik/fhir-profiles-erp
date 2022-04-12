@@ -237,7 +237,7 @@
           "rules": "closed"
         },
         "short": "Input Bundle",
-        "definition": "Referenz to the whole JSON-Bundle of the patient and the Health Care Provider Bundle",
+        "definition": "Reference to ePrescription input and outcome during the process",
         "max": "2",
         "mustSupport": true
       },
