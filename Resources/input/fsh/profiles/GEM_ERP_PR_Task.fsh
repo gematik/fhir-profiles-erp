@@ -42,9 +42,9 @@ Description: "This resource manages the ePrescription workflow"
 * identifier[Secret].value 1..
 * intent = #order (exactly)
 * for MS
-* for ^short = "Identifier of Patient (KVID)"
+* for ^short = "Identifier of Patient (KVID or PKV-Identifier)"
 * for ^definition = "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation"
-* for.identifier only $identifier-kvid-10
+* for.identifier only $identifier-kvid-10 or $identifier-pkv
 * performerType from GEM_ERP_VS_OrganizationType (required)
 * performerType ^definition = "The Institution in which the patient should redeem his prescription."
 * performerType.coding 1..
@@ -59,7 +59,7 @@ Description: "This resource manages the ePrescription workflow"
     patientReceipt 0..1
 * input[ePrescription].type from GEM_ERP_VS_DocumentType (required)
 * input[ePrescription].type.coding.system 1..
-* input[ePrescription].type.coding.system = "ttps://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
+* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[ePrescription].type.coding.code 1..
 * input[ePrescription].type.coding.code = #1 (exactly)
 * input[ePrescription].value[x] only Reference(GEM_ERP_PR_Binary)
@@ -127,5 +127,15 @@ Usage: #example
 
 //Instance: TaskInReadyState
 //InstanceOf: GEM_ERP_PR_Task
-//Title:   "Task activated by (Z)PVS via $activate operation that carries a dispensable ePrescription"
+//Title:   "Task activated by (Z)PVS/KIS via $activate operation that carries a dispensable ePrescription"
+//Usage: #example
+
+//Instance: TaskInIn-ProgressState
+//InstanceOf: GEM_ERP_PR_Task
+//Title:   "Task claimed by pharmacy via $accept operation"
+//Usage: #example
+
+//Instance: TaskInClosedState
+//InstanceOf: GEM_ERP_PR_Task
+//Title:   "Task finished by pharmacy via $close operation"
 //Usage: #example
