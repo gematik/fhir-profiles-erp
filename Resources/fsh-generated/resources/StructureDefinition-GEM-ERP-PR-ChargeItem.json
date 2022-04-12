@@ -188,7 +188,7 @@
         "sliceName": "prescriptionItem",
         "definition": "In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format.",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:prescriptionItem.type",
@@ -201,7 +201,7 @@
         "path": "ChargeItem.supportingInformation",
         "sliceName": "dispenseItem",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:dispenseItem.type",
@@ -215,7 +215,7 @@
         "sliceName": "receipt",
         "definition": "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652].",
         "min": 0,
-        "max": "*"
+        "max": "1"
       },
       {
         "id": "ChargeItem.supportingInformation:receipt.type",
