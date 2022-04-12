@@ -58,6 +58,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 1
@@ -192,7 +193,7 @@
       {
         "id": "Task.for",
         "path": "Task.for",
-        "short": "Identifier of Patient (KVID)",
+        "short": "Identifier of Patient (KVID or PKV-Identifier)",
         "definition": "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation",
         "mustSupport": true
       },
@@ -203,7 +204,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10",
+              "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
         ]
@@ -258,7 +260,7 @@
         "id": "Task.input:ePrescription.type.coding.system",
         "path": "Task.input.type.coding.system",
         "min": 1,
-        "fixedUri": "ttps://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
       },
       {
         "id": "Task.input:ePrescription.type.coding.code",
