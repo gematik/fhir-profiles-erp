@@ -18,7 +18,7 @@ Description: "Ressource used for the communication to reply to a change request 
 * received MS
 * recipient 1..1
 * recipient.identifier 1..1
-* recipient.identifier only $identifier-kvid-10
+* recipient.identifier only $identifier-kvid-10 or $identifier-pkv
 * sender 1..1
 * sender.identifier 1..1
 * sender.identifier only IdentifierTelematikId

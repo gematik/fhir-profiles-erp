@@ -23,12 +23,12 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * recipient 1..1 MS
 * recipient only Reference(Patient or RelatedPerson)
 * recipient.identifier 1.. MS
-* recipient.identifier only $identifier-kvid-10
+* recipient.identifier only $identifier-kvid-10 or $identifier-pkv
 * sender only Reference(Organization or Practitioner or PractitionerRole or HealthcareService)
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1.. MS
-* sender.identifier only $identifier-kvid-10 or IdentifierTelematikId
+* sender.identifier only $identifier-kvid-10 or $identifier-pkv or IdentifierTelematikId
 * payload 1..1 MS
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"

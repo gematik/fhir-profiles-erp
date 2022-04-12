@@ -69,8 +69,7 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationDispense.status",
@@ -99,8 +98,7 @@
       {
         "id": "MedicationDispense.subject",
         "path": "MedicationDispense.subject",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "MedicationDispense.subject.identifier",
@@ -111,18 +109,17 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10",
+              "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationDispense.performer",
         "path": "MedicationDispense.performer",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "MedicationDispense.performer.actor.identifier",
@@ -145,8 +142,7 @@
       {
         "id": "MedicationDispense.whenHandedOver",
         "path": "MedicationDispense.whenHandedOver",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "MedicationDispense.dosageInstruction",

@@ -8,7 +8,7 @@ Description: "Handles information about the redeem of the prescription and the s
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:44:25.6462885+00:00"
-* identifier 1..1 MS
+* identifier 1..1
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"
 * status = #completed (exactly)
@@ -18,13 +18,13 @@ Description: "Handles information about the redeem of the prescription and the s
 * medication[x] MS
 * medication[x] ^definition = "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN)."
 * medication[x] ^type.aggregation = #contained
-* subject 1.. MS
-* subject.identifier 1.. MS
-* subject.identifier only $identifier-kvid-10
+* subject 1..
+* subject.identifier 1..
+* subject.identifier only $identifier-kvid-10 or $identifier-pkv
 * subject.identifier ^short = "The patients KVNR"
-* performer 1..1 MS
+* performer 1..1
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId
 * whenPrepared ^mustSupport = false
-* whenHandedOver 1.. MS
+* whenHandedOver 1..
 * dosageInstruction MS
