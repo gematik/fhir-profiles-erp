@@ -181,18 +181,15 @@
       {
         "id": "Provenance.agent.onBehalfOf.identifier",
         "path": "Provenance.agent.onBehalfOf.identifier",
-        "min": 1
-      },
-      {
-        "id": "Provenance.agent.onBehalfOf.identifier.system",
-        "path": "Provenance.agent.onBehalfOf.identifier.system",
         "min": 1,
-        "fixedUri": "IdentifierTelematikId"
-      },
-      {
-        "id": "Provenance.agent.onBehalfOf.identifier.value",
-        "path": "Provenance.agent.onBehalfOf.identifier.value",
-        "min": 1
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ]
       },
       {
         "id": "Provenance.entity",

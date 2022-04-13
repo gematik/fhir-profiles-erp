@@ -36,9 +36,10 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * agent.who only Reference(Device)
 * agent.onBehalfOf 1..1
 * agent.onBehalfOf.identifier 1..
-* agent.onBehalfOf.identifier.system 1..
-* agent.onBehalfOf.identifier.system = #IdentifierTelematikId (exactly)
-* agent.onBehalfOf.identifier.value 1..
+//* agent.onBehalfOf.identifier.system 1..
+//* agent.onBehalfOf.identifier.system = #IdentifierTelematikId (exactly)
+//* agent.onBehalfOf.identifier.value 1..
+* agent.onBehalfOf.identifier only IdentifierTelematikId
 * signature MS
 * signature.type.system 1..
 * signature.type.system = "urn:iso-astm:E1762-95:2013" (exactly)
@@ -71,10 +72,10 @@ Usage: #example
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
 * target[+].reference = "Task/160.100.000.000.024.67"
 * recorded = "2022-02-14T08:39:24+01:00"
-* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
+* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
 * entity.what.identifier.value = "160.100.000.000.024.67"
 * agent.who.reference = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
-* agent.onBehalfOf.identifier.system = "IdentifierTelematikId"
+* agent.onBehalfOf.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * agent.onBehalfOf.identifier.value = "1-HBA-Testkarte-883110000123465"
 * signature.type.system = "urn:iso-astm:E1762-95:2013"
 * signature.type.code = #1.2.840.10065.1.12.1.7

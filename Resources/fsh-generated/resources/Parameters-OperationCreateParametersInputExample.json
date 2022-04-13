@@ -1,6 +1,6 @@
 {
   "resourceType": "Parameters",
-  "id": "OperationCreateParametersInput",
+  "id": "OperationCreateParametersInputExample",
   "parameter": [
     {
       "name": "workflowType",
