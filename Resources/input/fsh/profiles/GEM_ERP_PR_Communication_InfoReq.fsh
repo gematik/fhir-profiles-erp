@@ -12,7 +12,8 @@ Description: "Ressource used for the communication of informative requests betwe
 * basedOn 1..1
 * status = #unknown (exactly)
 * about 1.. MS
-* about only Reference($KBV_PR_ERP_Medication_FreeText or $KBV_PR_ERP_Medication_PZN or $KBV_PR_ERP_Medication_Compounding or $KBV_PR_ERP_Medication_Ingredient)
+//* about only Reference($KBV_PR_ERP_Medication_FreeText or $KBV_PR_ERP_Medication_PZN or $KBV_PR_ERP_Medication_Compounding or $KBV_PR_ERP_Medication_Ingredient)
+* about only Reference(Medication)
 * about ^type.aggregation = #contained
 * about.reference 1.. MS
 * sent MS

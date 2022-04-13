@@ -37,7 +37,7 @@ Usage: #inline
 * contentType = #application/pkcs7-mime
 * data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
 
-Instance: OperationActivateParametersInput
+Instance: OperationActivateParametersInputExample
 InstanceOf: Parameters
 Title: "Ativate operation input parameters"
 Usage: #example

@@ -52,7 +52,7 @@ Instance: ChargeItemExample
 InstanceOf: GEM_ERP_PR_ChargeItem
 Title:   "ChargeItem completed by Fachdienst"
 Usage: #example 
-* id = "ChargeItemExample"
+* id = "abc825bc-bc30-45f8-b109-1b343fff5c45"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ChargeItem|1.2"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_MarkingFlag"
 * extension.extension[+].url = "insuranceProvider"

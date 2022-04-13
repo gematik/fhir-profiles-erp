@@ -41,12 +41,9 @@ Description: "This resource manages the ePrescription workflow"
 * identifier[Secret].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_Secret" (exactly)
 * identifier[Secret].value 1..
 * intent = #order (exactly)
-* for MS
 * for ^short = "Identifier of Patient (KVID or PKV-Identifier)"
-* for ^definition = "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation"
 * for.identifier only $identifier-kvid-10 or $identifier-pkv
 * performerType from GEM_ERP_VS_OrganizationType (required)
-* performerType ^definition = "The Institution in which the patient should redeem his prescription."
 * performerType.coding 1..
 * input ..2 MS
 * input ^slicing.discriminator.type = #value
@@ -85,7 +82,7 @@ Description: "This resource manages the ePrescription workflow"
 * output ^slicing.discriminator.path = "type.coding.code"
 * output ^slicing.rules = #closed
 * output ^short = "Output Bundle"
-* output ^definition = "Referenz to the Bundle wich represent the receipt."
+* output ^definition = "Reference to the Bundle wich represent the receipt."
 * output contains receipt 0..1
 * output[receipt].type from GEM_ERP_VS_DocumentType (required)
 * output[receipt].type.coding.system 1..

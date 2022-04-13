@@ -1,6 +1,6 @@
 {
   "resourceType": "Consent",
-  "id": "ConsentExample",
+  "id": "0dcc5d4c-bf24-4c06-b02e-be5bc24587e2",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent"

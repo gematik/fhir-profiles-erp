@@ -82,11 +82,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_FreeText",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Compounding",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Ingredient",
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+              "http://hl7.org/fhir/StructureDefinition/Medication"
             ],
             "aggregation": [
               "contained"

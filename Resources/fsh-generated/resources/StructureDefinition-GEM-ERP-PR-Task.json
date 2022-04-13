@@ -193,9 +193,7 @@
       {
         "id": "Task.for",
         "path": "Task.for",
-        "short": "Identifier of Patient (KVID or PKV-Identifier)",
-        "definition": "The entity who benefits from the performance of the service specified in the task (e.g., the patient). Will be filled upon $activate-operation",
-        "mustSupport": true
+        "short": "Identifier of Patient (KVID or PKV-Identifier)"
       },
       {
         "id": "Task.for.identifier",
@@ -213,7 +211,6 @@
       {
         "id": "Task.performerType",
         "path": "Task.performerType",
-        "definition": "The Institution in which the patient should redeem his prescription.",
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
@@ -337,7 +334,7 @@
           "rules": "closed"
         },
         "short": "Output Bundle",
-        "definition": "Referenz to the Bundle wich represent the receipt.",
+        "definition": "Reference to the Bundle wich represent the receipt.",
         "max": "1",
         "mustSupport": true
       },

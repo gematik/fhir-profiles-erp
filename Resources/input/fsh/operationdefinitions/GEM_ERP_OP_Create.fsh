@@ -32,7 +32,7 @@ Usage: #definition
 * parameter[=].type = #canonical
 * parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 
-Instance: OperationCreateParametersInput
+Instance: OperationCreateParametersInputExample
 InstanceOf: Parameters
 Title: "$create Operation Parameters sample"
 Usage: #example
