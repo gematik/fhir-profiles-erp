@@ -12,7 +12,7 @@ Description: "Definies the Type of a prescription."
 * ^context[=].expression = "Communication.payload"
 * . ^definition = "Optional Extension Element - found in all resources."
 * url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType" (exactly)
-* value[x] only Coding
-* value[x] from GEM_ERP_VS_FlowType (required)
-* value[x].system 1..
-* value[x].code 1..
+* value[x] only code
+* valueCode from GEM_ERP_VS_FlowType (required)
+//* value[x].system 1..
+//* value[x].code 1..

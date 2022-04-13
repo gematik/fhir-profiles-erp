@@ -72,7 +72,7 @@
   },
   "subject": {
     "identifier": {
-      "system": "http://fhir.de/NamingSystem/gkv/kvid-10",
+      "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "X234567890"
     }
   },
@@ -80,7 +80,7 @@
     {
       "actor": {
         "identifier": {
-          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_TelematikId",
+          "system": "https://gematik.de/fhir/sid/telematik-id",
           "value": "3-abc-1234567890"
         }
       }
