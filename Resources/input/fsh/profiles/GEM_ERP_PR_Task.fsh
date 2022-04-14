@@ -90,9 +90,10 @@ Usage: #example
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
-* extension[=].valueCoding[=].code = #160
-* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
+//* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+//* extension[=].valueCoding[=].code = #160
+//* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * extension[=].valueDate = "2022-04-02"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
@@ -107,7 +108,7 @@ Usage: #example
 //* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
 //* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
 //* performerType[=].coding[=].display = "Öffentliche Apotheke"
-* performerType[+].coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
+* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 
 Instance: TaskInReadyState
@@ -135,7 +136,7 @@ Usage: #example
 //* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
 //* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
 //* performerType[=].coding[=].display = "Öffentliche Apotheke"
-* performerType[+].coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
+* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 * for.identifier.system = $identifier-kvid-10
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:27:00+00:00"

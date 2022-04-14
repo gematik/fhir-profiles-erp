@@ -16,8 +16,8 @@
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
       "valueCoding": {
-        "system": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
         "code": "160",
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
         "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
       }
     },
@@ -47,7 +47,7 @@
       "coding": [
         {
           "code": "urn:oid:1.2.276.0.76.4.54",
-          "system": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_PerformerType",
+          "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType",
           "display": "Öffentliche Apotheke"
         }
       ]
