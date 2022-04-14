@@ -105,15 +105,10 @@
       }
     },
     {
-      "fullUrl": "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest",
+      "fullUrl": "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58",
       "resource": {
         "resourceType": "Binary",
         "id": "PrescriptionDigest-160.123.456.789.123.58",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
-          ]
-        },
         "contentType": "application/octet-stream",
         "data": "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
       }

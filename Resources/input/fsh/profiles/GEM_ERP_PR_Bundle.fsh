@@ -54,7 +54,7 @@ Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
 * id = "PrescriptionDigest-160.123.456.789.123.58"
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
+//* meta.profile = "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
 
@@ -73,7 +73,7 @@ Usage: #example
 * entry[=].resource = ReceiptBundleComposition
 * entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * entry[=].resource = ReceiptBundleDevice
-* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest"
+* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58"
 * entry[=].resource = ReceiptBundleBinary
 * signature.type[+].system = "urn:iso-astm:E1762-95:2013"
 * signature.type[=].code = #1.2.840.10065.1.12.1.1
