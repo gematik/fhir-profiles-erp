@@ -36,7 +36,7 @@ Description: "A document style representation of the receipt (complete, self-con
 * entry[SigningDevice].search ..0
 * entry[SigningDevice].request ..0
 * entry[SigningDevice].response ..0
-* entry[PrescriptionDigest].resource only Binary
+* entry[PrescriptionDigest].resource only GEM_ERP_PR_Digest
 * entry[PrescriptionDigest].resource 1.. 
 * entry[PrescriptionDigest].fullUrl 1..
 * entry[PrescriptionDigest].link ..0
@@ -54,7 +54,7 @@ Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
 * id = "PrescriptionDigest-160.123.456.789.123.58"
-//* meta.profile = "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
 

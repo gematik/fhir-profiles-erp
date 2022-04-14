@@ -109,6 +109,11 @@
       "resource": {
         "resourceType": "Binary",
         "id": "PrescriptionDigest-160.123.456.789.123.58",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+          ]
+        },
         "contentType": "application/octet-stream",
         "data": "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
       }
