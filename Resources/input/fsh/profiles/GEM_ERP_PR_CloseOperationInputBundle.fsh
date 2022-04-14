@@ -7,7 +7,7 @@ Title: "Document Bundle for multiple MedicationDispenses on $close Operation"
 * ^status = #draft
 * type = #collection (exactly)
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator.path = "Bundle.entry.resource"
 * entry ^slicing.rules = #closed
 * entry contains
     DispensedMedications 1..

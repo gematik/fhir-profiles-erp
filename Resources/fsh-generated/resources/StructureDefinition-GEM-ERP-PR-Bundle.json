@@ -91,7 +91,7 @@
           "discriminator": [
             {
               "type": "profile",
-              "path": "Bundle.entry"
+              "path": "Bundle.entry.resource"
             }
           ],
           "rules": "closed"
