@@ -16,7 +16,8 @@ Description: "A document style representation of the receipt (complete, self-con
 * timestamp 1.. MS
 * entry SU
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
+//* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator.path = "Bundle.entry"
 * entry ^slicing.rules = #closed
 * entry contains
     DocumentInformation 1..1 and
