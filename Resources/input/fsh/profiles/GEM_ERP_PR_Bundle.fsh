@@ -13,11 +13,10 @@ Description: "A document style representation of the receipt (complete, self-con
 * identifier ^short = "identifier of ePrescription"
 * type = #document (exactly)
 * type MS
-* timestamp 1.. MS
+* timestamp 1..
 * entry SU
 * entry ^slicing.discriminator.type = #profile
-//* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.discriminator.path = "Bundle.entry.resource"
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
     DocumentInformation 1..1 and

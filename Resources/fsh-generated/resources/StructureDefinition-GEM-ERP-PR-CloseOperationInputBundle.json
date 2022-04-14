@@ -58,7 +58,7 @@
           "discriminator": [
             {
               "type": "profile",
-              "path": "Bundle.entry"
+              "path": "resource"
             }
           ],
           "rules": "closed"
