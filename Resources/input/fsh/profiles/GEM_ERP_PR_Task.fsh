@@ -43,7 +43,7 @@ Description: "This resource manages the ePrescription workflow"
 * intent = #order (exactly)
 * for ^short = "Identifier of Patient (KVID or PKV-Identifier)"
 * for.identifier only $identifier-kvid-10 or $identifier-pkv
-* performerType from GEM_ERP_VS_OrganizationType (required)
+* performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
 * input ..2 MS
 * input ^slicing.discriminator.type = #value
@@ -54,46 +54,32 @@ Description: "This resource manages the ePrescription workflow"
 * input contains
     ePrescription 0..1 and
     patientReceipt 0..1
-* input[ePrescription].type from GEM_ERP_VS_DocumentType (required)
+* input[ePrescription].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[ePrescription].type.coding.system 1..
-* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
+//* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[ePrescription].type.coding.code 1..
 * input[ePrescription].type.coding.code = #1 (exactly)
 * input[ePrescription].value[x] only Reference(GEM_ERP_PR_Binary)
-//* input[ePrescription].value[x] ^type.aggregation[0] = #referenced
-//* input[ePrescription].value[x] ^type.aggregation[+] = #bundled
 * input[ePrescription].value[x].reference 1..
-//* input[ePrescription].value[x].reference ^mustSupport = false
-//* input[ePrescription].value[x].identifier ^mustSupport = false
-* input[patientReceipt].type from GEM_ERP_VS_DocumentType (required)
+* input[patientReceipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[patientReceipt].type.coding.system 1..
-* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
+//* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
 * input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
-//* input[patientReceipt].value[x] ^type.aggregation[0] = #referenced
-//* input[patientReceipt].value[x] ^type.aggregation[+] = #bundled
-//* input[patientReceipt].value[x].reference 1..
-//* input[patientReceipt].value[x].reference ^mustSupport = false
 * output ..1 MS
-//* output ^code.system = "https://gematik.de/fhir/erp/CodeSystem/FlowType"
-//* output ^code.userSelected = true
 * output ^slicing.discriminator.type = #value
 * output ^slicing.discriminator.path = "type.coding.code"
 * output ^slicing.rules = #closed
 * output ^short = "Output Bundle"
 * output ^definition = "Reference to the Bundle wich represent the receipt."
 * output contains receipt 0..1
-* output[receipt].type from GEM_ERP_VS_DocumentType (required)
+* output[receipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * output[receipt].type.coding.system 1..
 * output[receipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * output[receipt].type.coding.code 1..
 * output[receipt].type.coding.code = #3 (exactly)
 * output[receipt].value[x] only Reference(GEM_ERP_PR_Bundle)
-//* output[receipt].value[x] ^type.aggregation[0] = #referenced
-//* output[receipt].value[x] ^type.aggregation[+] = #bundled
-//* output[receipt].value[x].reference 1..
-//* output[receipt].value[x].reference ^mustSupport = false
 
 Instance: TaskInCreatedState
 InstanceOf: GEM_ERP_PR_Task
@@ -118,9 +104,10 @@ Usage: #example
 * status = #draft
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
-* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
-* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
-* performerType[=].coding[=].display = "Öffentliche Apotheke"
+//* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
+//* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
+//* performerType[=].coding[=].display = "Öffentliche Apotheke"
+* performerType[+].coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 
 Instance: TaskInReadyState
@@ -145,19 +132,24 @@ Usage: #example
 * status = #ready
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
-* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
-* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
-* performerType[=].coding[=].display = "Öffentliche Apotheke"
+//* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
+//* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
+//* performerType[=].coding[=].display = "Öffentliche Apotheke"
+* performerType[+].coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 * for.identifier.system = $identifier-kvid-10
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:27:00+00:00"
-* input[+].type.coding[+].system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+/* input[+].type.coding[+].system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
 * input[=].type.coding[=].code = #1
 * input[=].type.coding[=].display = "Health Care Provider Prescription"
 * input[=].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
 * input[+].type.coding[+].system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
 * input[=].type.coding[=].code = #2
 * input[=].type.coding[=].display = "Patient Confirmation"
+* input[=].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43" */
+* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[=].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[=].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 
 Instance: TaskInIn-ProgressState

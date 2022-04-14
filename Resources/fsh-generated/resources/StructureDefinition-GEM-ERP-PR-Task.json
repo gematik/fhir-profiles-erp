@@ -209,17 +209,13 @@
         ]
       },
       {
-        "id": "Task.performerType",
-        "path": "Task.performerType",
+        "id": "Task.performerType.coding",
+        "path": "Task.performerType.coding",
+        "min": 1,
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
         }
-      },
-      {
-        "id": "Task.performerType.coding",
-        "path": "Task.performerType.coding",
-        "min": 1
       },
       {
         "id": "Task.input",
@@ -246,8 +242,8 @@
         "max": "1"
       },
       {
-        "id": "Task.input:ePrescription.type",
-        "path": "Task.input.type",
+        "id": "Task.input:ePrescription.type.coding",
+        "path": "Task.input.type.coding",
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
@@ -256,8 +252,7 @@
       {
         "id": "Task.input:ePrescription.type.coding.system",
         "path": "Task.input.type.coding.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        "min": 1
       },
       {
         "id": "Task.input:ePrescription.type.coding.code",
@@ -290,8 +285,8 @@
         "max": "1"
       },
       {
-        "id": "Task.input:patientReceipt.type",
-        "path": "Task.input.type",
+        "id": "Task.input:patientReceipt.type.coding",
+        "path": "Task.input.type.coding",
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
@@ -300,8 +295,7 @@
       {
         "id": "Task.input:patientReceipt.type.coding.system",
         "path": "Task.input.type.coding.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        "min": 1
       },
       {
         "id": "Task.input:patientReceipt.type.coding.code",
@@ -346,8 +340,8 @@
         "max": "1"
       },
       {
-        "id": "Task.output:receipt.type",
-        "path": "Task.output.type",
+        "id": "Task.output:receipt.type.coding",
+        "path": "Task.output.type.coding",
         "binding": {
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
