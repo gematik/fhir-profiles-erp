@@ -47,7 +47,7 @@
       "coding": [
         {
           "code": "urn:oid:1.2.276.0.76.4.54",
-          "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType",
+          "system": "urn:ietf:rfc:3986",
           "display": "Öffentliche Apotheke"
         }
       ]

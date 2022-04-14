@@ -108,7 +108,7 @@ Usage: #example
 //* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
 //* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
 //* performerType[=].coding[=].display = "Öffentliche Apotheke"
-* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
+* performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 
 Instance: TaskInReadyState
@@ -136,7 +136,7 @@ Usage: #example
 //* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
 //* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
 //* performerType[=].coding[=].display = "Öffentliche Apotheke"
-* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_PerformerType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
+* performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 * for.identifier.system = $identifier-kvid-10
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:27:00+00:00"
