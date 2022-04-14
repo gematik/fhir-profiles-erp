@@ -68,15 +68,16 @@
           ],
           "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
-        }
+        },
+        "min": 1
       },
       {
         "id": "Composition.extension:Beneficiary",
         "path": "Composition.extension",
         "sliceName": "Beneficiary",
         "short": "The ID of the beneficiary of the erx receipt (e.g. TelematikID of pharmacy)",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Extension",

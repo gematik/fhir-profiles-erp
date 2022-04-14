@@ -11,7 +11,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
-* extension contains GEM_ERP_EX_Beneficiary named Beneficiary 0..*
+* extension contains GEM_ERP_EX_Beneficiary named Beneficiary 1..1
 * extension[Beneficiary] ^short = "The ID of the beneficiary of the erx receipt (e.g. TelematikID of pharmacy)"
 * extension[Beneficiary].value[x].system 1..
 * extension[Beneficiary].value[x].value 1..
