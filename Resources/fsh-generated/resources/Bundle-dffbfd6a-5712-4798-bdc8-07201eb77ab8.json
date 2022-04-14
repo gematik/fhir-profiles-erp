@@ -25,21 +25,11 @@
         "id": "c624cf47-e235-4624-af71-0a09dc9254dc",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
           ]
         },
         "status": "final",
         "title": "Quittung",
-        "type": {
-          "coding": [
-            {
-              "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
-              "code": "3",
-              "display": "Receipt"
-            }
-          ]
-        },
         "extension": [
           {
             "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary",
@@ -49,6 +39,15 @@
             }
           }
         ],
+        "type": {
+          "coding": [
+            {
+              "code": "3",
+              "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
+              "display": "Receipt"
+            }
+          ]
+        },
         "date": "2022-03-18T15:29:00+00:00",
         "author": [
           {

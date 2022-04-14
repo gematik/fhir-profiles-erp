@@ -20,10 +20,11 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * status ^short = "Status = \"final\""
 * type MS
 * type ^short = "Document Type = \"Receipt\""
-* type.coding 1..1 MS
-* type.coding.system 1..
-* type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
-* type.coding.code 1..
+* type.coding 1..1
+//* type.coding.system 1..
+//* type.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType" (exactly)
+//* type.coding.code 1..
+* type.coding from GEM_ERP_VS_DocumentType (required)
 * type.coding.code = #3 (exactly)
 * type.coding.display = "Receipt" (exactly)
 * date MS
@@ -35,7 +36,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * title = "Quittung" (exactly)
 * title MS
 * title ^short = "Document title = \"Quittung\""
-* event 1..1 MS
+* event 1..1
 * event.period 1.. MS
 * event.period.start 1.. MS
 * event.period.start ^short = "Starting time of dispensation"
@@ -50,14 +51,12 @@ InstanceOf: GEM_ERP_PR_Composition
 Title:   "Composition for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "c624cf47-e235-4624-af71-0a09dc9254dc"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
 * extension[=].valueIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * extension[=].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"
 * status = #final
-* type.coding[+].system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
-* type.coding[=].code = #3
-* type.coding[=].display = "Receipt"
+* type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
 * date = "2022-03-18T15:29:00+00:00"
 * author.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * title = "Quittung"

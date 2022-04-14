@@ -350,8 +350,7 @@
       {
         "id": "Task.output:receipt.type.coding.system",
         "path": "Task.output.type.coding.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        "min": 1
       },
       {
         "id": "Task.output:receipt.type.coding.code",
