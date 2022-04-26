@@ -17,15 +17,15 @@ Description: "Ressource used for the communication of informative requests betwe
 * about 1..
 * about only Reference(Medication)
 * about ^type.aggregation = #contained
-* about.reference 1.. MS
+* about.reference 1..1
 * sent MS
 * received MS
 * recipient 1..1
-* recipient.identifier 1.. MS
+* recipient.identifier 1..1
 * recipient.identifier only IdentifierTelematikId
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
-* sender.identifier 1.. MS
+* sender.identifier 1..1
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value

@@ -101,8 +101,7 @@
               "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.sender",
