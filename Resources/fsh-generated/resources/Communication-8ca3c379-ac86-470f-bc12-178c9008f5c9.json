@@ -87,7 +87,7 @@
   "sender": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "X23456789"
+      "value": "X234567890"
     }
   },
   "sent": "2020-04-29T13:43:30.128+02:00",
