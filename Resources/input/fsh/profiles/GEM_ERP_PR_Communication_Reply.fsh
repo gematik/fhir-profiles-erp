@@ -33,7 +33,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
 * payload.extension contains
-    GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..* and
+    GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..1 and
     GEM_ERP_EX_AvailabilityState named AvailabilityStatus 0..1
 * payload.extension[OfferedSupplyOptions] ^short = "Offered supply options by pharmacy"
 * payload.extension[OfferedSupplyOptions] ^definition = "In a communication reply a pharmacy may state its available supply options, whether to serve customers at the store, send medication by messenger or use parcel shippment"
