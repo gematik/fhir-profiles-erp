@@ -7,9 +7,9 @@ Id: GEM-ERP-PR-ChargeItem
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
-* extension ^min = 0
+//* extension ^min = 0
 * extension contains GEM_ERP_EX_MarkingFlag named markingFlag 0..1 MS
-* extension[markingFlag] ^min = 0
+//* extension[markingFlag] ^min = 0
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" wich identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
@@ -55,12 +55,12 @@ Usage: #example
 * id = "abc825bc-bc30-45f8-b109-1b343fff5c45"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ChargeItem|1.2"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_MarkingFlag"
-* extension.extension[+].url = "insuranceProvider"
-* extension.extension[=].valueBoolean = false
-* extension.extension[+].url = "subsidy"
-* extension.extension[=].valueBoolean = false
-* extension.extension[+].url = "taxOffice"
-* extension.extension[=].valueBoolean = false
+* extension[=].extension[+].url = "insuranceProvider"
+* extension[=].extension[=].valueBoolean = false
+* extension[=].extension[+].url = "subsidy"
+* extension[=].extension[=].valueBoolean = false
+* extension[=].extension[+].url = "taxOffice"
+* extension[=].extension[=].valueBoolean = false
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.123.456.789.123.58"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
