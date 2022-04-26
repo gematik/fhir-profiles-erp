@@ -114,9 +114,9 @@
         },
         {
           "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PackageQuantity",
-          "valueCoding": {
+          "valueQuantity": {
             "system": "http://unitsofmeasure.org",
-            "code": "1"
+            "value": 1
           }
         },
         {

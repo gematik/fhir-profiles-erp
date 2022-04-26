@@ -69,8 +69,8 @@ Usage: #example
 * payload.extension[=].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
 * payload.extension[=].valueCoding.code = #160
 * payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PackageQuantity"
-* payload.extension[=].valueCoding.system = "http://unitsofmeasure.org"
-* payload.extension[=].valueCoding.code = #1
+* payload.extension[=].valueQuantity.system = "http://unitsofmeasure.org"
+* payload.extension[=].valueQuantity.value = 1
 * payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
 * payload.extension[=].extension[+].url = "onPremise"
 * payload.extension[=].extension[=].valueBoolean = true
