@@ -34,10 +34,9 @@ Usage: #example
 * meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous ChargeItem-related message"
 * basedOn.reference = "ChargeItem/a51520ec-0899-404f-bb97-fe7d461f90a8"
 * status = #unknown
-* about.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
 * sender.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * recipient[+].identifier.system = "http://fhir.de/sid/gkv/kvid-10"
-* recipient[=].identifier.value = "X23456789"
+* recipient[=].identifier.value = "X234567890"
 * sent = "2020-04-29T13:46:30.128+02:00"
 * payload.contentString = "Erledigt."
