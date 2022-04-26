@@ -152,7 +152,7 @@
         "short": "Offered supply options by pharmacy",
         "definition": "In a communication reply a pharmacy may state its available supply options, whether to serve customers at the store, send medication by messenger or use parcel shippment",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Extension",
