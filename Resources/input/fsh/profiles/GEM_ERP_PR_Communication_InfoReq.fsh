@@ -10,22 +10,24 @@ Description: "Ressource used for the communication of informative requests betwe
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * basedOn 1..1
+* basedOn only Reference(GEM_ERP_PR_Task)
+* basedOn ^type.aggregation = #referenced
+* basedOn.reference 1..1
 * status = #unknown (exactly)
-* about 1.. MS
-//* about only Reference($KBV_PR_ERP_Medication_FreeText or $KBV_PR_ERP_Medication_PZN or $KBV_PR_ERP_Medication_Compounding or $KBV_PR_ERP_Medication_Ingredient)
+* about 1..
 * about only Reference(Medication)
 * about ^type.aggregation = #contained
 * about.reference 1.. MS
 * sent MS
 * received MS
-* recipient 1..1 MS
+* recipient 1..1
 * recipient.identifier 1.. MS
 * recipient.identifier only IdentifierTelematikId
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1.. MS
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
-* payload 1..1 MS
+* payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
