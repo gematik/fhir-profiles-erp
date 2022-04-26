@@ -149,21 +149,6 @@
         }
       },
       {
-        "id": "Communication.payload.extension:InsuranceProvider",
-        "path": "Communication.payload.extension",
-        "sliceName": "InsuranceProvider",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
         "type": [

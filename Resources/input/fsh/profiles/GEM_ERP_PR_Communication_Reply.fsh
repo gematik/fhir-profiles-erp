@@ -40,3 +40,30 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload.extension[AvailabilityStatus] ^short = "Availability Status of queried medication"
 * payload.content[x] only string
 * payload.content[x] MS
+
+Instance: Communication_Reply
+InstanceOf: GEM_ERP_PR_Communication_Reply
+Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
+Usage: #example
+* id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.2"
+* meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
+* basedOn.reference = "Task/160.000.033.491.280.78"
+* status = #unknown
+* about.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* sender.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
+* recipient[+].identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* recipient[=].identifier.value = "X23456789"
+* sent = "2020-04-29T13:46:30.128+02:00"
+* payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
+* payload.extension[=].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
+* payload.extension[=].valueCoding.code = #20
+* payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
+* payload.extension[=].extension[+].url = "onPremise"
+* payload.extension[=].extension[=].valueBoolean = true
+* payload.extension[=].extension[+].url = "shipment"
+* payload.extension[=].extension[=].valueBoolean = false
+* payload.extension[=].extension[+].url = "delivery"
+* payload.extension[=].extension[=].valueBoolean = true
+* payload.contentString = "Eisern"

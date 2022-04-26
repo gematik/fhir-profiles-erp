@@ -24,3 +24,20 @@ Description: "Ressource used for the communication to reply to a change request 
 * sender.identifier only IdentifierTelematikId
 * payload 0..1
 * payload.content[x] only string
+
+Instance: Communication_ChargChangeReply
+InstanceOf: GEM_ERP_PR_Communication_ChargChangeReply
+Title: "Communication message sent by pharmacy to patient in response to a previous ChargeItem-related message"
+Usage: #example
+* id = "3bbc2209-9c23-4553-986e-a5c9f69a39fb"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_ChargChangeReply|1.2"
+* meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous ChargeItem-related message"
+* basedOn.reference = "ChargeItem/a51520ec-0899-404f-bb97-fe7d461f90a8"
+* status = #unknown
+* about.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* sender.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
+* recipient[+].identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* recipient[=].identifier.value = "X23456789"
+* sent = "2020-04-29T13:46:30.128+02:00"
+* payload.contentString = "Erledigt."
