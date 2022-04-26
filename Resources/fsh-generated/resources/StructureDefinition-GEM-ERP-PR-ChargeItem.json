@@ -64,7 +64,7 @@
         "path": "ChargeItem.extension",
         "sliceName": "markingFlag",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Extension",

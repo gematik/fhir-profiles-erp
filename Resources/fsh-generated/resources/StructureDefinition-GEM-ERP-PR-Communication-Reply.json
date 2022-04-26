@@ -61,41 +61,17 @@
               "referenced"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Communication.status",
         "path": "Communication.status",
         "fixedCode": "unknown"
-      },
-      {
-        "id": "Communication.about",
-        "path": "Communication.about",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Medication"
-            ],
-            "aggregation": [
-              "contained"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Communication.about.reference",
-        "path": "Communication.about.reference",
-        "min": 1,
-        "mustSupport": true
       },
       {
         "id": "Communication.sent",
@@ -111,17 +87,7 @@
         "id": "Communication.recipient",
         "path": "Communication.recipient",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.recipient.identifier",
@@ -142,18 +108,7 @@
         "id": "Communication.sender",
         "path": "Communication.sender",
         "definition": "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication.",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Communication.sender.identifier",
@@ -168,15 +123,13 @@
               "http://fhir.de/StructureDefinition/identifier-telematik-id"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.payload",
         "path": "Communication.payload",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.payload.extension",

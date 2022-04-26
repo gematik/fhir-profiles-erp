@@ -50,7 +50,23 @@
         "id": "Communication.basedOn",
         "path": "Communication.basedOn",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+            ],
+            "aggregation": [
+              "referenced"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Communication.basedOn.reference",
+        "path": "Communication.basedOn.reference",
+        "min": 1
       },
       {
         "id": "Communication.status",
@@ -71,8 +87,7 @@
               "contained"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.about.reference",
@@ -94,8 +109,7 @@
         "id": "Communication.recipient",
         "path": "Communication.recipient",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.recipient.identifier",
@@ -136,8 +150,7 @@
         "id": "Communication.payload",
         "path": "Communication.payload",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.payload.extension",

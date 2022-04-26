@@ -25,7 +25,7 @@ Usage: #definition
 //* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 * parameter[=].type = #ValueSet
 * parameter[=].binding.strength = #required
-* parameter[=].binding.valueSet = GEM_ERP_VS_FlowType
+* parameter[=].binding.valueSet = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 // out
 * parameter[+].name = #task
 * parameter[=].use = #out

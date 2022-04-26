@@ -5,7 +5,7 @@
     {
       "name": "workflowType",
       "valueCoding": {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
+        "system": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
         "code": "160"
       }
     }
