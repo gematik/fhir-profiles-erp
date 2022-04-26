@@ -21,8 +21,11 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "This parameter requests the creation of a Task of a certain ePrescription flowType."
-* parameter[=].type = #canonical
-* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+//* parameter[=].type = #canonical
+//* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+* parameter[=].type = #ValueSet
+* parameter[=].binding.strength = #required
+* parameter[=].binding.valueSet = GEM_ERP_VS_FlowType
 // out
 * parameter[+].name = #task
 * parameter[=].use = #out
@@ -37,5 +40,5 @@ InstanceOf: Parameters
 Title: "$create Operation Parameters sample"
 Usage: #example
 * parameter[+].name = "workflowType"
-* parameter[=].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+* parameter[=].valueCoding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 * parameter[=].valueCoding.code = #160

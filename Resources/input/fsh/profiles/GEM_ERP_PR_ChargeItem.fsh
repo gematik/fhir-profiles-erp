@@ -8,7 +8,7 @@ Id: GEM-ERP-PR-ChargeItem
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
 * extension ^min = 0
-* extension contains GEM_ERP_EX_MarkingFlag named markingFlag 0..* MS
+* extension contains GEM_ERP_EX_MarkingFlag named markingFlag 0..1 MS
 * extension[markingFlag] ^min = 0
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
