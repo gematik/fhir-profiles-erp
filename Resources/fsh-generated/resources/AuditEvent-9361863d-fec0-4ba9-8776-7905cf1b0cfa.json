@@ -48,7 +48,7 @@
       },
       "who": {
         "identifier": {
-          "system": "https://gematik.de/fhir/NamingSystem/TelematikID",
+          "system": "https://gematik.de/fhir/sid/telematik-id",
           "value": "1-SMC-B-Testkarte-883110000095957"
         }
       },
