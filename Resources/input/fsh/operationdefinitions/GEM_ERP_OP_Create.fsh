@@ -40,5 +40,5 @@ InstanceOf: Parameters
 Title: "$create Operation Parameters sample"
 Usage: #example
 * parameter[+].name = "workflowType"
-//* parameter[=].valueCoding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+* parameter[=].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
 * parameter[=].valueCoding.code = #160
