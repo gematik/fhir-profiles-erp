@@ -51,11 +51,6 @@
         "fixedCode": "active"
       },
       {
-        "id": "Consent.scope",
-        "path": "Consent.scope",
-        "mustSupport": true
-      },
-      {
         "id": "Consent.scope.coding.system",
         "path": "Consent.scope.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -80,17 +75,6 @@
         }
       },
       {
-        "id": "Consent.category.coding.system",
-        "path": "Consent.category.coding.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/ConsentType"
-      },
-      {
-        "id": "Consent.category.coding.code",
-        "path": "Consent.category.coding.code",
-        "min": 1
-      },
-      {
         "id": "Consent.patient",
         "path": "Consent.patient",
         "min": 1
@@ -102,8 +86,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
+              "http://fhir.de/StructureDefinition/identifier-pkv",
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
         ]
@@ -116,7 +100,11 @@
       {
         "id": "Consent.policyRule",
         "path": "Consent.policyRule",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActCode"
+        }
       }
     ]
   }

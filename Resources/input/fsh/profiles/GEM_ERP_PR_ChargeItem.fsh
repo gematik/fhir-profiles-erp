@@ -30,6 +30,7 @@ Id: GEM-ERP-PR-ChargeItem
 * code.coding.code = #not-applicable (exactly)
 * subject.identifier 1..
 * subject.identifier only $identifier-pkv
+* enterer ^short = "Pharmacy that initially provided the Abgabedaten in ChargeItem"
 * enterer.identifier 1..
 * enterer.identifier only $identifier-telematik-id
 * supportingInformation MS
@@ -40,11 +41,18 @@ Id: GEM-ERP-PR-ChargeItem
     prescriptionItem 0..1 and
     dispenseItem 0..1 and
     receipt 0..1
-* supportingInformation[prescriptionItem] ^definition = "In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format."
-* supportingInformation[prescriptionItem].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle" (exactly)
-* supportingInformation[dispenseItem].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" (exactly)
-* supportingInformation[receipt] ^definition = "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652]."
-* supportingInformation[receipt].type = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle" (exactly)
+* supportingInformation[prescriptionItem] ^definition = "following definition of Task.input, here the ChargeItem stores the reference to the patient's copy of the ePrescription wwith Bundle.signature holds a JWS-detached signature."
+* supportingInformation[prescriptionItem] only Reference(KBV_PR_ERP_Bundle)
+* supportingInformation[dispenseItem] ^definition = "following definition of Task.input, here the ChargeItem stores the reference to the pharmacy's Abgabedaten"
+//* supportingInformation[dispenseItem] only Reference(DAV_PKV_PR_ERP_AbgabedatenBundle)
+//* supportingInformation[dispenseItem] only Reference(DAV_PR_Base_AbgabedatenBundle)
+// dirty hack in die StructureDefinition hinein, 
+// weil Reference auf abgeleitetes PKV-abgabedatenbundle von Sushi nicht als Reference akzeptiert wird
+// Ursache vermutlich, weil das DAV-PKV-Abgabedatenprofil aus dem Basis-Abgabedatenprofil abgeleitet ist (Sushi-Bug)
+* supportingInformation[dispenseItem] ^type[+].code = "Reference"
+* supportingInformation[dispenseItem] ^type[=].targetProfile[+] = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
+* supportingInformation[receipt] ^definition = "following definition of Task.output, here the ChargeItem stores the reference to the receipt-Bundle, with Bundle.signature in CAdES-enveloping format [RFC 5652]."
+* supportingInformation[receipt] only Reference(GEM_ERP_PR_Bundle)
 
 
 
@@ -65,7 +73,7 @@ Usage: #example
 * identifier[=].value = "160.123.456.789.123.58"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
 * identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
-* status = #billable    
+* status = #billable
 * code = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable
 * subject.identifier.value = "X234567890"
 * subject.identifier.assigner.display = "Name einer privaten Krankenversicherung"
@@ -73,8 +81,8 @@ Usage: #example
 * enterer.identifier.value = "606358757"
 * enteredDate = "2021-06-01T07:13:00+05:00"
 * supportingInformation[0] = Reference(0428d416-149e-48a4-977c-394887b3d85c) "E-Rezept"
-* supportingInformation[=].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+//* supportingInformation[=].type = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
 * supportingInformation[+] = Reference(72bd741c-7ad8-41d8-97c3-9aabbdd0f5b4) "Abgabedatensatz"
-* supportingInformation[=].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
+//* supportingInformation[=].type = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
 * supportingInformation[+] = Reference(160.123.456.789.123.58) "Quittung"
-* supportingInformation[=].type = "https://gematik.de/fhir/StructureDefinition/ErxReceipt"
+//* supportingInformation[=].type = "https://gematik.de/fhir/StructureDefinition/ErxReceipt"

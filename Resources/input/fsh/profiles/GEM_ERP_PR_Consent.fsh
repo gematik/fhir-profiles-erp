@@ -5,19 +5,19 @@ Id: GEM-ERP-PR-Consent
 * ^version = "1.2"
 * ^status = #draft
 * status = #active (exactly)
-* scope MS
 * scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope" (exactly)
 * scope.coding.code = #patient-privacy (exactly)
 * scope.coding.display = "Privacy Consent" (exactly)
 * category 1..1
 * category from GEM_ERP_VS_ConsentType (extensible)
-* category.coding.system = "https://gematik.de/fhir/erp/CodeSystem/ConsentType" (exactly)
-* category.coding.system 1..
-* category.coding.code 1..
+//* category.coding.system = "https://gematik.de/fhir/erp/CodeSystem/ConsentType" (exactly)
+//* category.coding.system 1..
+//* category.coding.code 1..
 * patient 1.. 
-* patient.identifier only $identifier-kvid-10 or $identifier-pkv
+* patient.identifier only IdentifierPkv or IdentifierKvid10
 * dateTime 1..
 * policyRule MS
+* policyRule from http://terminology.hl7.org/ValueSet/v3-ActCode
 
 
 

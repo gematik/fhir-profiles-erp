@@ -2,7 +2,9 @@ Profile: GEM_ERP_NS_Secret
 Parent: NamingSystem
 Id: GEM-ERP-NS-Secret
 * name = "GEM_ERP_NS_Secret"
+* ^version = "1.2"
 * ^status = #draft
+* ^date = "2022-04-16T13:43:27.7930941+00:00"
 * kind = #identifier
 * date = "2020-04-30"
 * publisher = "gematik GmbH"
