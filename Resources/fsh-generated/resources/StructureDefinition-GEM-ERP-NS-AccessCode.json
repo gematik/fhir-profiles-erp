@@ -12,9 +12,10 @@
     }
   ],
   "url": "https://gematik.de/fhir//StructureDefinition/GEM-ERP-NS-AccessCode",
-  "version": "1.2.0",
+  "version": "1.2",
   "name": "GEM_ERP_NS_AccessCode",
-  "status": "active",
+  "status": "draft",
+  "date": "2022-04-16T13:43:27.7930941+00:00",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -49,11 +50,6 @@
         "id": "NamingSystem.name",
         "path": "NamingSystem.name",
         "patternString": "GEM_ERP_NS_AccessCode"
-      },
-      {
-        "id": "NamingSystem.status",
-        "path": "NamingSystem.status",
-        "patternCode": "draft"
       },
       {
         "id": "NamingSystem.kind",

@@ -62,18 +62,15 @@
   "supportingInformation": [
     {
       "reference": "0428d416-149e-48a4-977c-394887b3d85c",
-      "display": "E-Rezept",
-      "type": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+      "display": "E-Rezept"
     },
     {
       "reference": "72bd741c-7ad8-41d8-97c3-9aabbdd0f5b4",
-      "display": "Abgabedatensatz",
-      "type": "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
+      "display": "Abgabedatensatz"
     },
     {
       "reference": "160.123.456.789.123.58",
-      "display": "Quittung",
-      "type": "https://gematik.de/fhir/StructureDefinition/ErxReceipt"
+      "display": "Quittung"
     }
   ]
 }

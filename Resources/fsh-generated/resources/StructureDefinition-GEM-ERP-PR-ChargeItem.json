@@ -156,6 +156,11 @@
         ]
       },
       {
+        "id": "ChargeItem.enterer",
+        "path": "ChargeItem.enterer",
+        "short": "Pharmacy that initially provided the Abgabedaten in ChargeItem"
+      },
+      {
         "id": "ChargeItem.enterer.identifier",
         "path": "ChargeItem.enterer.identifier",
         "min": 1,
@@ -186,42 +191,49 @@
         "id": "ChargeItem.supportingInformation:prescriptionItem",
         "path": "ChargeItem.supportingInformation",
         "sliceName": "prescriptionItem",
-        "definition": "In analogie zu Task.inputwird die Patientenkopie der Verordnung als Bundle gespeichert und trägt in Bundle.signature die Verordnungs-Signatur im JWS-detached Format.",
+        "definition": "following definition of Task.input, here the ChargeItem stores the reference to the patient's copy of the ePrescription wwith Bundle.signature holds a JWS-detached signature.",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "ChargeItem.supportingInformation:prescriptionItem.type",
-        "path": "ChargeItem.supportingInformation.type",
-        "min": 1,
-        "fixedUri": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+            ]
+          }
+        ]
       },
       {
         "id": "ChargeItem.supportingInformation:dispenseItem",
         "path": "ChargeItem.supportingInformation",
         "sliceName": "dispenseItem",
+        "definition": "following definition of Task.input, here the ChargeItem stores the reference to the pharmacy's Abgabedaten",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "ChargeItem.supportingInformation:dispenseItem.type",
-        "path": "ChargeItem.supportingInformation.type",
-        "min": 1,
-        "fixedUri": "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PR-Base-AbgabedatenBundle"
+            ]
+          }
+        ]
       },
       {
         "id": "ChargeItem.supportingInformation:receipt",
         "path": "ChargeItem.supportingInformation",
         "sliceName": "receipt",
-        "definition": "In analogie zu Task.output wird die Quittung als Bundle gespeichert und trägt in Bundle.signature die Quittungs-Signatur im CAdES-enveloping Format [RFC 5652].",
+        "definition": "following definition of Task.output, here the ChargeItem stores the reference to the receipt-Bundle, with Bundle.signature in CAdES-enveloping format [RFC 5652].",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "ChargeItem.supportingInformation:receipt.type",
-        "path": "ChargeItem.supportingInformation.type",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+            ]
+          }
+        ]
       }
     ]
   }
