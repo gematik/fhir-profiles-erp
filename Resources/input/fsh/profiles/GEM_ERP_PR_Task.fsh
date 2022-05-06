@@ -22,7 +22,7 @@ Description: "This resource manages the ePrescription workflow"
 * extension[flowType] ^definition = "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms."
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" wich identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
+* identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
 * identifier ^slicing.rules = #closed
 * identifier contains
     PrescriptionID 1..1 and
@@ -72,7 +72,7 @@ Description: "This resource manages the ePrescription workflow"
 * output ^slicing.discriminator.path = "type.coding.code"
 * output ^slicing.rules = #closed
 * output ^short = "Output Bundle"
-* output ^definition = "Reference to the Bundle wich represent the receipt."
+* output ^definition = "Reference to the Bundle which represent the receipt."
 * output contains receipt 0..1
 * output[receipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * output[receipt].type.coding.system 1..

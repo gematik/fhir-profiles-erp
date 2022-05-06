@@ -85,7 +85,7 @@
               "path": "system"
             }
           ],
-          "description": "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" wich identify each patient by his health insurance company and the other is \"Institutionskennzeichen\".",
+          "description": "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\".",
           "rules": "closed"
         },
         "min": 1
@@ -214,7 +214,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PR-Base-AbgabedatenBundle"
+              "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
             ]
           }
         ]
