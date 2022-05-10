@@ -63,9 +63,39 @@
         "min": 1
       },
       {
+        "id": "Provenance.meta.extension",
+        "path": "Provenance.meta.extension",
+        "max": "0"
+      },
+      {
+        "id": "Provenance.meta.versionId",
+        "path": "Provenance.meta.versionId",
+        "max": "0"
+      },
+      {
+        "id": "Provenance.meta.lastUpdated",
+        "path": "Provenance.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.meta.source",
+        "path": "Provenance.meta.source",
+        "max": "0"
+      },
+      {
         "id": "Provenance.meta.profile",
         "path": "Provenance.meta.profile",
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
+      },
+      {
+        "id": "Provenance.meta.security",
+        "path": "Provenance.meta.security",
+        "max": "0"
+      },
+      {
+        "id": "Provenance.meta.tag",
+        "path": "Provenance.meta.tag",
+        "max": "0"
       },
       {
         "id": "Provenance.target",
@@ -208,15 +238,16 @@
         "short": "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
       },
       {
-        "id": "Provenance.entity.what.identifier.system",
-        "path": "Provenance.entity.what.identifier.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
-      },
-      {
-        "id": "Provenance.entity.what.identifier.value",
-        "path": "Provenance.entity.what.identifier.value",
-        "min": 1
+        "id": "Provenance.entity.what.identifier",
+        "path": "Provenance.entity.what.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+            ]
+          }
+        ]
       },
       {
         "id": "Provenance.signature",

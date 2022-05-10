@@ -9,6 +9,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * id 1..
 * meta 1..
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2" (exactly)
+* meta.lastUpdated MS
 * target 1..1 SU
 * target ^slicing.discriminator.type = #type
 * target ^slicing.discriminator.path = "$this"
@@ -18,12 +19,13 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
     TaskReference 1..1	
 * target[TaskReference] only Reference(GEM_ERP_PR_Task)
 * target[TaskReference] ^short = "Reference to the ePrescription Task"
-* recorded
+* recorded SU
 * entity 1..1
 * entity.role = #source
-* entity.what.identifier.system 1..
-* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
-* entity.what.identifier.value 1..
+//* entity.what.identifier.system 1..
+//* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
+//* entity.what.identifier.value 1..
+* entity.what.identifier only GEM_ERP_PR_PrescriptionId
 * entity.what ^short = "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
 * agent 1..1
 * agent.type. 1..
@@ -56,8 +58,13 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * signature.sigFormat = #application/pkcs7-mime (exactly)
 * signature.data 1..
 //
-// unusd fields 
+// unusd fields  
 //
+* meta.extension ..0
+* meta.security ..0
+* meta.source ..0
+* meta.tag ..0
+* meta.versionId ..0
 * occurred[x] ..0
 * policy ..0
 * location ..0
@@ -72,8 +79,8 @@ Usage: #example
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
 * target[+].reference = "Task/160.100.000.000.024.67"
 * recorded = "2022-02-14T08:39:24+01:00"
-* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
-* entity.what.identifier.value = "160.100.000.000.024.67"
+* entity.what.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* entity.what.identifier.value = "165.100.000.000.024.67"
 * agent.who.reference = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * agent.onBehalfOf.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * agent.onBehalfOf.identifier.value = "1-HBA-Testkarte-883110000123465"
