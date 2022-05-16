@@ -35,7 +35,7 @@ Id: GEM-ERP-PR-ChargeItem
 * enterer.identifier only $identifier-telematik-id
 * supportingInformation MS
 * supportingInformation ^slicing.discriminator.type = #value
-* supportingInformation ^slicing.discriminator.path = "type"
+* supportingInformation ^slicing.discriminator.path = "display"
 * supportingInformation ^slicing.rules = #closed
 * supportingInformation contains
     prescriptionItem 0..1 and
@@ -43,6 +43,7 @@ Id: GEM-ERP-PR-ChargeItem
     receipt 0..1
 * supportingInformation[prescriptionItem] ^definition = "following definition of Task.input, here the ChargeItem stores the reference to the patient's copy of the ePrescription wwith Bundle.signature holds a JWS-detached signature."
 * supportingInformation[prescriptionItem] only Reference(KBV_PR_ERP_Bundle)
+* supportingInformation[prescriptionItem].display = "E-Rezept" (exactly)
 * supportingInformation[dispenseItem] ^definition = "following definition of Task.input, here the ChargeItem stores the reference to the pharmacy's Abgabedaten"
 //* supportingInformation[dispenseItem] only Reference(DAV_PKV_PR_ERP_AbgabedatenBundle)
 //* supportingInformation[dispenseItem] only Reference(DAV_PR_Base_AbgabedatenBundle)
@@ -51,8 +52,10 @@ Id: GEM-ERP-PR-ChargeItem
 // Ursache vermutlich, weil das DAV-PKV-Abgabedatenprofil aus dem Basis-Abgabedatenprofil abgeleitet ist (Sushi-Bug)
 * supportingInformation[dispenseItem] ^type[+].code = "Reference"
 * supportingInformation[dispenseItem] ^type[=].targetProfile[+] = "http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle"
+* supportingInformation[dispenseItem].display = "Abgabedatensatz" (exactly)
 * supportingInformation[receipt] ^definition = "following definition of Task.output, here the ChargeItem stores the reference to the receipt-Bundle, with Bundle.signature in CAdES-enveloping format [RFC 5652]."
 * supportingInformation[receipt] only Reference(GEM_ERP_PR_Bundle)
+* supportingInformation[receipt].display = "Quittung" (exactly)
 
 
 
