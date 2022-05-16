@@ -180,7 +180,7 @@
           "discriminator": [
             {
               "type": "value",
-              "path": "type"
+              "path": "display"
             }
           ],
           "rules": "closed"
@@ -204,6 +204,12 @@
         ]
       },
       {
+        "id": "ChargeItem.supportingInformation:prescriptionItem.display",
+        "path": "ChargeItem.supportingInformation.display",
+        "min": 1,
+        "fixedString": "E-Rezept"
+      },
+      {
         "id": "ChargeItem.supportingInformation:dispenseItem",
         "path": "ChargeItem.supportingInformation",
         "sliceName": "dispenseItem",
@@ -220,6 +226,12 @@
         ]
       },
       {
+        "id": "ChargeItem.supportingInformation:dispenseItem.display",
+        "path": "ChargeItem.supportingInformation.display",
+        "min": 1,
+        "fixedString": "Abgabedatensatz"
+      },
+      {
         "id": "ChargeItem.supportingInformation:receipt",
         "path": "ChargeItem.supportingInformation",
         "sliceName": "receipt",
@@ -234,6 +246,12 @@
             ]
           }
         ]
+      },
+      {
+        "id": "ChargeItem.supportingInformation:receipt.display",
+        "path": "ChargeItem.supportingInformation.display",
+        "min": 1,
+        "fixedString": "Quittung"
       }
     ]
   }
