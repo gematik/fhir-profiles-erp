@@ -55,7 +55,6 @@
               "path": "url"
             }
           ],
-          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },

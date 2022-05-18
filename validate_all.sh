@@ -24,7 +24,7 @@ echo -e "Starting Sushi";
 sushi Resources
 
 # iterate of files
-for filename in $(find ./Resources -name '*.json');
+for filename in $(find ./Resources/fsh-generated/resources/ -name '*.json');
 do
    f="$(basename $filename .json)"
    echo -e "Processing \033[1m $f \033[0m";
