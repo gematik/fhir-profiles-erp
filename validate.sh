@@ -75,7 +75,7 @@ fi
 
 # run sushi
 echo -e "Starting Sushi to process files in '$foldername'";
-#sushi $foldername
+sushi $foldername
 
 # check if validator is installed if not install
 if test -e "$validatorpath"; then
