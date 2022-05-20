@@ -41,5 +41,4 @@ do
    f="$(basename $filename .json)"
    echo -e "Processing \033[1m $f \033[0m";
    java -jar $VALIDATOR -version 4.0.1 $filename -proxy 192.168.110.10:3128 -output $outputfolder"/$f.html";
-   exit 1
 done
