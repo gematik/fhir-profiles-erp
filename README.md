@@ -56,6 +56,15 @@ You can use following script options
 ./validate.sh -i
 ```
 
+### Sort resulting html files into severity folders
+
+
+`-s` sorts resulting html files in folders by the severities of the findings.
+Categories are: `error`, `warning`, `information` and `unknown`
+```bash
+./validate.sh -s
+```
+
 ### Change default folder
 
 `-d foldername` sets foldername for validation. Default is: `./Resources`
