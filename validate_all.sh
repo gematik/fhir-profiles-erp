@@ -1,6 +1,7 @@
 #!/bin/bash
 VALIDATOR=../validator_cli.jar
 
+clear
 # check if validator is installed if not install
 if test -e "$VALIDATOR"; then
   echo "$VALIDATOR found."
@@ -10,14 +11,25 @@ else
 fi
 
 # create Output folder if not existing
-mkdir -p ../val_out
+outputfolder=../val_out/${PWD##*/}
+rm -r $outputfolder
+mkdir -p $outputfolder
+echo 'Outputfolder is' $outputfolder
 
-# create FHIR Snapshots
-fhir bake --package de.abda.eRezeptAbgabedaten
-fhir bake --package de.abda.eRezeptAbgabedatenPKV
-fhir bake --package kbv.basis
-fhir bake --package kbv.ita.erp
-fhir bake --package de.gematik.erezept-workflow.r4
+
+# load dependencies from sushi-config.yaml
+for dependency in `yq -o=props '.dependencies' ./Resources/sushi-config.yaml`;
+do
+  if [[ ${dependency::1} =~ [a-z] ]]
+  then
+    echo "Baking FHIR Snapshot of dependency" $dependency "..."
+    fhir bake --package $dependency;
+  fi
+
+
+done
+# create FHIR Snapshots of dependencies
+
 
 # run sushi
 echo -e "Starting Sushi";
@@ -28,5 +40,6 @@ for filename in $(find ./Resources/fsh-generated/resources/ -name '*.json');
 do
    f="$(basename $filename .json)"
    echo -e "Processing \033[1m $f \033[0m";
-   java -jar $VALIDATOR -version 4.0.1 -ig hl7.fhir.r4.core -ig de.gematik.erezept-workflow.r4#1.2.0-rc1 -ig kbv.ita.erp#1.0.2 -ig de.abda.eRezeptAbgabedatenPKV#1.1.0-rc9 $filename -proxy 192.168.110.10:3128 -output "../val_out/$f.html";
+   java -jar $VALIDATOR -version 4.0.1 $filename -proxy 192.168.110.10:3128 -output $outputfolder"/$f.html";
+   exit 1
 done
