@@ -58,6 +58,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 1
@@ -301,18 +302,6 @@
         "path": "Task.input.type.coding.code",
         "min": 1,
         "fixedCode": "2"
-      },
-      {
-        "id": "Task.input:patientReceipt.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
-            ]
-          }
-        ]
       },
       {
         "id": "Task.output",

@@ -70,16 +70,6 @@
       },
       {
         "id": "Extension.extension:onPremise.value[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
         "path": "Extension.extension.value[x]",
         "short": "true = pick up on premise accepted/offered",
         "type": [
@@ -109,16 +99,6 @@
       },
       {
         "id": "Extension.extension:delivery.value[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
         "path": "Extension.extension.value[x]",
         "short": "true = delivery by messenger accepted/offered",
         "type": [
@@ -148,16 +128,6 @@
       },
       {
         "id": "Extension.extension:shipment.value[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "normative"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.0"
-          }
-        ],
         "path": "Extension.extension.value[x]",
         "short": "true = parcel shipping accepted/offered",
         "type": [
