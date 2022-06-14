@@ -26,7 +26,7 @@
       "id": "001413e4-a5e9-48da-9b07-c17bab476407",
       "meta": {
         "profile": [
-          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.0.2"
+          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.1.0_cc"
         ]
       },
       "extension": [

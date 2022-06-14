@@ -11,11 +11,10 @@
       "valueCode": "anonymous"
     }
   ],
-  "url": "https://gematik.de/fhir//StructureDefinition/GEM-ERP-NS-PrescriptionId",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
   "version": "1.2",
   "name": "GEM_ERP_NS_PrescriptionId",
   "status": "draft",
-  "date": "2022-04-16T13:43:27.7930941+00:00",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -47,19 +46,9 @@
   "differential": {
     "element": [
       {
-        "id": "NamingSystem.name",
-        "path": "NamingSystem.name",
-        "patternString": "GEM_ERP_NS_PrescriptionId"
-      },
-      {
         "id": "NamingSystem.kind",
         "path": "NamingSystem.kind",
         "patternCode": "identifier"
-      },
-      {
-        "id": "NamingSystem.date",
-        "path": "NamingSystem.date",
-        "patternDateTime": "2020-04-30"
       },
       {
         "id": "NamingSystem.publisher",
