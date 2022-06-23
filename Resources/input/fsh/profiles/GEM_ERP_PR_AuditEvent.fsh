@@ -26,7 +26,7 @@ Title: "AuditEvent for Logging of ePrescription Access"
 * source.observer.reference 1..
 * entity 1..1
 * entity.what 1..
-* entity.what only Reference(GEM_ERP_PR_MedicationDispense or GEM_ERP_PR_Task or GEM_ERP_PR_MedicationDispense or GEM_ERPCHRG_PR_Consent or GEM_ERPCHRG_PR_ChargeItem)
+* entity.what only Reference(GEM_ERP_PR_MedicationDispense or GEM_ERP_PR_Task or  GEM_ERPCHRG_PR_Consent or GEM_ERPCHRG_PR_ChargeItem)
 * entity.name 1..
 * entity.name ^short = "KVNR of patient that the auditEvent refers to"
 * entity.name ^definition = "KVNR of patient that the auditEvent refers to, used as filter criteria when patient accesses its data"
