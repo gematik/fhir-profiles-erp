@@ -151,16 +151,7 @@
       {
         "id": "AuditEvent.entity.what",
         "path": "AuditEvent.entity.what",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "AuditEvent.entity.name",
