@@ -18,7 +18,7 @@ Title: "AuditEvent for Logging of ePrescription Access"
 * outcome 1..
 * agent.type 1..
 * agent.who.identifier 1..
-* agent.who.identifier only identifier-kvid-10
+* agent.who.identifier only $identifier-telematik-id or identifier-kvid-10
 * agent.name 1..
 * source.site 1..
 * source.site = "E-Rezept Fachdienst" (exactly)
