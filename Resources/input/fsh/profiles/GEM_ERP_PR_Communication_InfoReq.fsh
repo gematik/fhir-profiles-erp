@@ -26,7 +26,7 @@ Description: "Ressource used for the communication of informative requests betwe
 * sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
-* sender.identifier only $identifier-kvid-10 or $identifier-pkv
+* sender.identifier only $identifier-kvid-10
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"

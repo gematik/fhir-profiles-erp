@@ -19,7 +19,7 @@ Description: "Handles information about the redeem of the prescription and the s
 * medication[x] ^type.aggregation = #contained
 * subject 1..
 * subject.identifier 1..
-* subject.identifier only $identifier-kvid-10 or $identifier-pkv
+* subject.identifier only $identifier-kvid-10
 * subject.identifier ^short = "The patients KVNR"
 * performer 1..1
 * performer.actor.identifier 1..

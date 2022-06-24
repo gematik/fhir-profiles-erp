@@ -22,17 +22,17 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * received MS
 * recipient 1..1
 * recipient.identifier 1..1
-* recipient.identifier only $identifier-kvid-10 or $identifier-pkv
+* recipient.identifier only $identifier-kvid-10
 //* sender only Reference(Organization or Practitioner or PractitionerRole or HealthcareService)
 * sender 1..1
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
-* sender.identifier only $identifier-kvid-10 or $identifier-pkv or IdentifierTelematikId
+* sender.identifier only $identifier-kvid-10  or IdentifierTelematikId
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
-* payload.extension contains 
+* payload.extension contains
     GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..1 and
     GEM_ERP_EX_AvailabilityState named AvailabilityStatus 0..1
 * payload.extension[OfferedSupplyOptions] ^short = "Offered supply options by pharmacy"

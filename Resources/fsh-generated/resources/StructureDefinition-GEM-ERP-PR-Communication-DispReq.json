@@ -120,8 +120,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
         ],
