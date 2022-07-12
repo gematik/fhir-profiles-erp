@@ -52,7 +52,7 @@ Usage: #example
 * status = #unknown
 * sender.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
-* recipient[+].identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* recipient[+].identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * recipient[=].identifier.value = "X234567890"
 * sent = "2020-04-29T13:46:30.128+02:00"
 * payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"

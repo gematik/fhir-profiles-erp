@@ -8,4 +8,5 @@ Description: "IK-number (Instituskennzeichen) of Insurance Provider covering the
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
 * . ^definition = "Optional Extension Element - found in all resources."
-* value[x] only $identifier-kvid-10
+* value[x] only $identifier-iknr
+//* value[x] only $identifier-kvid-10

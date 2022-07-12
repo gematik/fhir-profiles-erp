@@ -135,7 +135,7 @@ Usage: #example
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
 * performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
-* for.identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:27:00+00:00"
 * input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
@@ -167,7 +167,7 @@ Usage: #example
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
 * performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
-* for.identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:28:00+00:00"
 * input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
@@ -199,7 +199,7 @@ Usage: #example
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
 * performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
-* for.identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:29:00+00:00"
 * input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"

@@ -57,7 +57,7 @@ Usage: #example
 * about.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
 * recipient[+].identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
-* sender.identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:43:30.128+02:00"
 * payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
