@@ -72,7 +72,7 @@ Usage: #example
 * identifier[=].value = "160.000.033.491.280.78"
 * status = #completed
 * medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
-* subject.identifier.system = "http://fhir.de/StructureDefinition/identifier-kvid-10"
+* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X234567890"
 * performer[+].actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer[=].actor.identifier.value = "3-abc-1234567890"
