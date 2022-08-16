@@ -95,7 +95,7 @@ then
     resultfile=$outputfolder"/$f.html"
 
     echo -e "\n\nProcessing file \033[1m $f \033[0m";
-    java -jar $validatorpath -version 4.0.1 $filename -proxy 192.168.110.10:3128 -output $resultfile;
+    java -jar $validatorpath -version 4.0.1 -ig $foldername/fsh-generated/resources $filename -proxy 192.168.110.10:3128 -output $resultfile;
     if [ $sort_results == "true" ]
     then
       sortBySeverity "$resultfile"
@@ -104,7 +104,7 @@ then
 else
    echo -e "Processing \033[1m $file \033[0m";
    f="$(basename $file .json)"
-   java -jar $validatorpath -version 4.0.1 $file -proxy 192.168.110.10:3128 -output $outputfolder"/$f.html";
+   java -jar $validatorpath -version 4.0.1 -ig $foldername/fsh-generated/resources $file -proxy 192.168.110.10:3128 -output $outputfolder"/$f.html";
    if [ $sort_results == "true" ]
     then
       sortBySeverity $outputfolder"/$f.html"
