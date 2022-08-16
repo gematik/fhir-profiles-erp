@@ -8,6 +8,7 @@ NC='\033[0m' # No Color
 validatorpath=../validator_cli.jar
 outputfolder=../val_out/${PWD##*/}
 foldername='./Resources'
+fhir_folder_path=~/.fhir/packages
 file=''
 install_dependencies="false"
 sort_results="false"
@@ -78,6 +79,7 @@ fi
 echo -e "Rename all folder name in .fhir folder to lower case";
 for i in `( ls -d $fhir_folder_path/* | grep [A-Z] )`;
 do
+ #TODO Test if folders get renamed
   echo  $i
   rsync -a $i `echo $i | tr 'A-Z' 'a-z'`
 # mv -i $i `echo $i | tr 'A-Z' 'a-z'`;
@@ -95,6 +97,13 @@ else
   wget https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -O $validatorpath
 fi
 
+# Concatenate folders_for_validation in fhir directory
+folders_to_validate=""
+for package in `(ls -d $fhir_folder_path/*/package)`
+    do
+        folders_to_validate+=" -ig ${package}"
+    done
+# Only validating one file?
 if [  -z "$file" ];
 then
   echo "Validating files in folder '$foldername/fsh-generated/resources/' ..."
@@ -105,22 +114,21 @@ then
     resultfile=$outputfolder"/$f.html"
 
     echo -e "\n\nProcessing file \033[1m $f \033[0m";
-    java -jar $validatorpath -version 4.0.1 -ig $foldername/fsh-generated/resources $filename -proxy 192.168.110.10:3128 -output $resultfile;
+    java -jar $validatorpath -version 4.0.1 $folders_to_validate -ig $foldername/fsh-generated/resources $filename -proxy 192.168.110.10:3128 -output $resultfile;
     if [ $sort_results == "true" ]
     then
       sortBySeverity "$resultfile"
     fi
   done
 else
-   echo -e "Processing \033[1m $file \033[0m";
-   f="$(basename $file .json)"
-   # foreach package in -ig ~/.fhir/packages/*
-   #   += "-ig $package/package"
-   java -jar $validatorpath -version 4.0.1 -ig ~/.fhir/packages/de.basisprofil.r4#1.3.2/package  -ig $foldername/fsh-generated/resources $file -proxy 192.168.110.10:3128 -output $outputfolder"/$f.html";
-   if [ $sort_results == "true" ]
-    then
-      sortBySeverity $outputfolder"/$f.html"
-    fi
+  echo -e "Processing \033[1m $file \033[0m";
+  result_filename="$(basename $file .json)"
+  #   += "-ig $package/package"
+  java -jar $validatorpath -version 4.0.1 $folders_for_validation  -ig $foldername/fsh-generated/resources $file -proxy 192.168.110.10:3128 -output $outputfolder"/$result_filename.html";
+  if [ $sort_results == "true" ]
+  then
+    sortBySeverity $outputfolder"/$result_filename.html"
+  fi
 fi
 
 
