@@ -6,20 +6,22 @@ Description: "This resource manages the ePrescription workflow"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 * ^version = "1.2"
 * ^status = #draft
-* ^date = "2020-04-16T14:44:44.4851338+00:00"
+/*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
 * extension contains
+    GEM_ERP_EX_PrescriptionType named flowType 1..1 and
     GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
-    GEM_ERP_EX_ExpiryDate named expiryDate 0..1 and
-    GEM_ERP_EX_PrescriptionType named flowType 1..1
-* extension[acceptDate] ^short = "Accept Date of the prescription"
-* extension[acceptDate] ^definition = "Date when insurance company accepts the prescription."
-* extension[expiryDate] ^short = "Expiry Date of the Prescription"
-* extension[expiryDate] ^definition = "Date when the prescription is expired and can not be redeemed in the pharmacy."
-* extension[flowType] ^short = "Type of the prescription"
-* extension[flowType] ^definition = "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms."
+    GEM_ERP_EX_ExpiryDate named expiryDate 0..1 
+
+
+
+*/
+* extension ^slicing.rules = #closed
+* extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
+* extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
+* extension contains GEM_ERP_EX_ExpiryDate named expiryDate 0..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
@@ -89,15 +91,12 @@ Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-//* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
-//* extension[=].valueCoding[=].code = #160
-//* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
-* extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
-* extension[=].valueDate = "2022-04-02"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[=].valueDate = "2022-06-02"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* extension[acceptDate].valueDate = "2022-04-02"
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* extension[expiryDate].valueDate = "2022-06-02"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
@@ -105,9 +104,6 @@ Usage: #example
 * status = #draft
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
-//* performerType[+].coding[+].system = "urn:ietf:rfc:3986"
-//* performerType[=].coding[=].code = #urn:oid:1.2.276.0.76.4.54
-//* performerType[=].coding[=].display = "Öffentliche Apotheke"
 * performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 
@@ -119,9 +115,6 @@ Usage: #example
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in READY state activated by (Z)PVS/KIS via $activate operation"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-//* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
-//* extension[=].valueCoding[=].code = #160
-//* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * extension[=].valueDate = "2022-04-02"
@@ -151,9 +144,6 @@ Usage: #example
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-//* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
-//* extension[=].valueCoding[=].code = #160
-//* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * extension[=].valueDate = "2022-04-02"
@@ -183,9 +173,6 @@ Usage: #example
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in COMPLETED state dispensed by pharmacy via $closed operation"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-//* extension[=].valueCoding[+].system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
-//* extension[=].valueCoding[=].code = #160
-//* extension[=].valueCoding[=].display = "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * extension[=].valueDate = "2022-04-02"

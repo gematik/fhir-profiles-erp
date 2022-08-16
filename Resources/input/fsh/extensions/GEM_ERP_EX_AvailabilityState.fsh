@@ -5,7 +5,6 @@ Id: GEM-ERP-EX-AvailabilityState
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
-* . ^definition = "Optional Extension Element - found in all resources."
 * value[x] only Coding
 * value[x] from GEM_ERP_VS_AvailabilityStatus (required)
 * value[x] ^binding.description = "Availability of medication"

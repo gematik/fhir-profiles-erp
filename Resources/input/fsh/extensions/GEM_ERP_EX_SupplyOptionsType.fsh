@@ -5,9 +5,7 @@ Id: GEM-ERP-EX-SupplyOptionsType
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
-* . ..1
 * . ^short = "Options for preferred or offered supply channels"
-* . ^definition = "Optional Extension for Communication-Ressources in eRx workflow"
 * . ^comment = "Both patient and pharmacy can state their supply options or offers for the dispensation of medication"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

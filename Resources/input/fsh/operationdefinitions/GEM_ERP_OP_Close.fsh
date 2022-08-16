@@ -44,7 +44,7 @@ InstanceOf: Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.1.0_cc"
+* meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.1.0"
 //* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
 //* extension[=].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
 //* extension[=].valueCoding.code = #00

@@ -4,8 +4,6 @@ Description: "IK-number (Instituskennzeichen) of Insurance Provider covering the
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
 * ^version = "1.2"
 * ^status = #draft
-* ^date = "2020-06-04"
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
-* . ^definition = "Optional Extension Element - found in all resources."
 * value[x] only $identifier-iknr
