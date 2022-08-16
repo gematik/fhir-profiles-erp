@@ -1,5 +1,5 @@
 id: fhir-profiles-erp
-canonical: https://gematik.de/fhir/
+canonical: https://gematik.de/fhir/erp
 name: Die E-Rezept-Spezifikation
 title: ePrescription workflow
 description: German fhir profiles on ePrescription workflow
@@ -16,4 +16,5 @@ publisher:
 dependencies:
   de.basisprofil.r4: 1.3.2
   hl7.fhir.r4.core: 4.0.1
-  kbv.ita.erp: 1.1.0_cc
+#  kbv.ita.erp: 1.1.0-PreRelease
+  kbv.ita.erp: 1.1.0-prerelease
