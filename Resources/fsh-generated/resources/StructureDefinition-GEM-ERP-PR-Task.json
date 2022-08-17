@@ -16,7 +16,6 @@
   "name": "GEM_ERP_PR_Task",
   "title": "Task for Management of ePrescription Workflow",
   "status": "draft",
-  "date": "2020-04-16T14:44:44.4851338+00:00",
   "description": "This resource manages the ePrescription workflow",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -64,11 +63,24 @@
         "min": 1
       },
       {
+        "id": "Task.extension:flowType",
+        "path": "Task.extension",
+        "sliceName": "flowType",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Task.extension:acceptDate",
         "path": "Task.extension",
         "sliceName": "acceptDate",
-        "short": "Accept Date of the prescription",
-        "definition": "Date when insurance company accepts the prescription.",
         "min": 0,
         "max": "1",
         "type": [
@@ -84,8 +96,6 @@
         "id": "Task.extension:expiryDate",
         "path": "Task.extension",
         "sliceName": "expiryDate",
-        "short": "Expiry Date of the Prescription",
-        "definition": "Date when the prescription is expired and can not be redeemed in the pharmacy.",
         "min": 0,
         "max": "1",
         "type": [
@@ -93,23 +103,6 @@
             "code": "Extension",
             "profile": [
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Task.extension:flowType",
-        "path": "Task.extension",
-        "sliceName": "flowType",
-        "short": "Type of the prescription",
-        "definition": "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
             ]
           }
         ]
@@ -302,6 +295,18 @@
         "path": "Task.input.type.coding.code",
         "min": 1,
         "fixedCode": "2"
+      },
+      {
+        "id": "Task.input:patientReceipt.value[x]",
+        "path": "Task.input.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+            ]
+          }
+        ]
       },
       {
         "id": "Task.output",

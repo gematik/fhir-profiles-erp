@@ -1,15 +1,11 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-ExpiryDate",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:47:34.04+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
   "version": "1.2",
   "name": "GEM_ERP_EX_ExpiryDate",
   "title": "Presciption expiry date",
   "status": "draft",
-  "date": "2020-04-16T13:47:31.7332567+00:00",
   "description": "This extension should be used in the Task ressource. It shows the presciption expiry date.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -32,6 +28,12 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Expiry Date of the Prescription",
+        "definition": "Date when the prescription is expired and can not be redeemed in the pharmacy."
+      },
       {
         "id": "Extension.extension",
         "path": "Extension.extension",

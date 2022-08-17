@@ -30,9 +30,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Options for preferred or offered supply channels",
-        "definition": "Optional Extension for Communication-Ressources in eRx workflow",
-        "comment": "Both patient and pharmacy can state their supply options or offers for the dispensation of medication",
-        "max": "1"
+        "comment": "Both patient and pharmacy can state their supply options or offers for the dispensation of medication"
       },
       {
         "id": "Extension.extension",
@@ -70,6 +68,16 @@
       },
       {
         "id": "Extension.extension:onPremise.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = pick up on premise accepted/offered",
         "type": [
@@ -99,6 +107,16 @@
       },
       {
         "id": "Extension.extension:delivery.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = delivery by messenger accepted/offered",
         "type": [
@@ -128,6 +146,16 @@
       },
       {
         "id": "Extension.extension:shipment.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension.extension.value[x]",
         "short": "true = parcel shipping accepted/offered",
         "type": [
