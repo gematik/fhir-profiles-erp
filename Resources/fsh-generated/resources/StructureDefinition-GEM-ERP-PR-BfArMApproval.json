@@ -173,13 +173,13 @@
         "id": "Provenance.agent.type.coding.system",
         "path": "Provenance.agent.type.coding.system",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/contractsignertypecodes"
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
       },
       {
         "id": "Provenance.agent.type.coding.code",
         "path": "Provenance.agent.type.coding.code",
         "min": 1,
-        "fixedCode": "VERF"
+        "fixedCode": "verifier"
       },
       {
         "id": "Provenance.agent.type.coding.display",

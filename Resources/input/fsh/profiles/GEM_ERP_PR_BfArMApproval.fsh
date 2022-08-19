@@ -31,9 +31,11 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * agent.type. 1..
 * agent.type.coding 1..1
 * agent.type.coding.system 1..
-* agent.type.coding.system = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" (exactly)
+//* agent.type.coding.system = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" (exactly)
+* agent.type.coding.system = "http://terminology.hl7.org/CodeSystem/provenance-participant-type" (exactly)
 * agent.type.coding.code 1..
-* agent.type.coding.code = #VERF (exactly)
+//* agent.type.coding.code = #VERF (exactly)
+* agent.type.coding.code = #verifier (exactly)
 * agent.type.coding.display = "Verifier" (exactly)
 * agent.who only Reference(Device)
 * agent.onBehalfOf 1..1
@@ -91,4 +93,4 @@ Usage: #example
 * signature.who.reference = "https://www.bundesdruckerei.de/"
 * signature.onBehalfOf.reference = "https://www.bfarm.de/"
 * signature.sigFormat = #application/pkcs7-mime
-* signature.data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
+* signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="

@@ -80,4 +80,4 @@ Usage: #example
 * signature.when = "2022-03-18T15:28:00+00:00"
 * signature.who.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * signature.sigFormat = #application/pkcs7-mime
-* signature.data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
+* signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="

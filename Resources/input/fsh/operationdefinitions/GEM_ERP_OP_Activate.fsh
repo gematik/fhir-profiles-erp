@@ -35,7 +35,7 @@ Instance: PrescriptionBinary
 InstanceOf: Binary
 Usage: #inline
 * contentType = #application/pkcs7-mime
-* data = "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
+* data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
 
 Instance: OperationActivateParametersInputExample
 InstanceOf: Parameters

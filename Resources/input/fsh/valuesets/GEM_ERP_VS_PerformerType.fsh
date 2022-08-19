@@ -19,3 +19,4 @@ Description: "Type of performer"
 * ^expansion.contains.code = #urn:oid:1.2.276.0.76.4.32
 * ^expansion.contains.display = "Apotheker"
 * urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.32 "Apotheker"
+//* include codes from system GEM_ERP_CS_PerformerType

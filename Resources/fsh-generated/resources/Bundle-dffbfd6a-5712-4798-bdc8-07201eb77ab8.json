@@ -131,6 +131,6 @@
       "reference": "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
     },
     "sigFormat": "application/pkcs7-mime",
-    "data": "MIII FQYJ KoZI hvcN AQcC oIII BjCC CAIC AQEx DzAN Bglg hkgB ZQME AgEF ADAL"
+    "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
   }
 }
