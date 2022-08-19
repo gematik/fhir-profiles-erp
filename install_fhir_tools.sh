@@ -19,3 +19,6 @@ sudo dotnet tool install --global firely.terminal --version 2.5.0-beta-7
 
 echo "##### Installing yq yaml-parser"
 sudo snap install yq
+
+echo "##### Installing rename"
+sudo apt install rename
