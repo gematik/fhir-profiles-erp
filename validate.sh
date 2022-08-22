@@ -8,17 +8,18 @@ NC='\033[0m' # No Color
 validatorpath=../validator_cli.jar
 outputfolder=../val_out/${PWD##*/}
 foldername='./Resources'
+external_dependency_folder="./ExternalDependencies"
 fhir_folder_path=~/.fhir/packages
 file=''
 install_dependencies="false"
 sort_results="false"
 
 print_usage() {
-  printf "Usage:\n
-  [-d foldername] sets foldername for validation. Default is: './Resources'\n
-  [-f filename] sets filename for single validation.\n
-  [-i] installs dpendencies with firely.terminal from './Resources/sushi-config.yaml' file\n
-  [-s] sorts resulting html files in folders by the severities of the findings. Categories are: error, warning, information and unknown"
+  printf "Usage:
+  [-d foldername] sets foldername for validation. Default is: './Resources'
+  [-f filename] sets filename for single validation.
+  [-i] installs dpendencies with firely.terminal from './Resources/sushi-config.yaml' file
+  [-s] sorts resulting html files in folders by the severities of the findings. Categories are: error, warning, information and unknown\n"
 }
 
 sortBySeverity () {
@@ -41,6 +42,92 @@ sortBySeverity () {
   fi
 }
 
+installDependencies () {
+  if [ $install_dependencies == "true" ]
+  then
+    readarray identityMappings < <(yq '.dependencies' $foldername/sushi-config.yaml)
+    echo  -e "${GREEN}[INFO] Installation of depencencies from '$foldername/sushi-config.yaml' has started...${NC}";
+    for dependency in "${identityMappings[@]}";
+    do
+      IFS=: read -r package version <<< $dependency
+      if [[ ${package:0:1} != "#" ]]
+      then
+        echo "[INFO] Installing $package with version $version"
+        fhir install $package $version
+      fi
+    done
+  fi
+}
+
+renameFhirFolderToLowerCase () {
+  echo -e "[INFO] Rename all folder names in .fhir folder to lower case";
+  for i in `( ls -d $fhir_folder_path/* | grep [A-Z] )`;
+  do
+    rename -v 'y/A-Z/a-z/' $i
+  done
+}
+
+checkAndDownloadHapiValidator () {
+  if test -e "$validatorpath"; then
+    echo "[INFO] HAPI Validator found at '$validatorpath'"
+  else
+    echo "[INFO] HAPI Validator not found. Starting to download HAPI Validator..."
+    wget https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -O $validatorpath
+  fi
+}
+
+runSushi () {
+  echo -e "Starting Sushi to process files in '$foldername'";
+  sushi $foldername
+}
+
+moveExternalDependencies () {
+  if [ -d "$external_dependency_folder" ]; then
+    echo "[INFO] copying external dependecies to $fhir_folder_path"
+    cp -a $external_dependency_folder/. $fhir_folder_path/
+  else
+    echo  -e "${RED}[Error] $external_dependency_folder missing. No external dependencies will be copied!${NC}";
+  fi
+}
+
+runHapiValidator () {
+  # Concatenate folders_for_validation in fhir directory
+  folders_to_validate=""
+  for package in `(ls -d $fhir_folder_path/*/package)`
+      do
+          folders_to_validate+=" -ig ${package}"
+      done
+  # Only validating one file?
+  if [  -z "$file" ];
+  then
+    echo "[INFO] Validating files in folder '$foldername/fsh-generated/resources/' ..."
+    # Run Validator on all *.json files in given directory
+    for filename in $(find $foldername/fsh-generated/resources/ -name '*.json');
+    do
+      f="$(basename $filename .json)"
+      resultfile=$outputfolder"/$f.html"
+
+      echo -e "[INFO] \n\nProcessing file \033[1m $f \033[0m";
+      java -jar $validatorpath -version 4.0.1 $folders_to_validate -ig $foldername/fsh-generated/resources $filename -proxy 192.168.110.10:3128 -output $resultfile;
+      if [ $sort_results == "true" ]
+      then
+        sortBySeverity "$resultfile"
+      fi
+    done
+  else
+    echo -e "Processing \033[1m $file \033[0m";
+    echo -e "\n\nProfiles to load for validation:  $folders_to_validate";
+    result_filename="$(basename $file .json)"
+    #   += "-ig $package/package"
+    java -jar $validatorpath -version 4.0.1 $folders_to_validate  -ig $foldername/fsh-generated/resources $file -proxy 192.168.110.10:3128 -output $outputfolder"/$result_filename.html";
+    if [ $sort_results == "true" ]
+    then
+      sortBySeverity $outputfolder"/$result_filename.html"
+    fi
+  fi
+
+}
+
 while getopts 'd:f:is' flag; do
   case "${flag}" in
     d) foldername="${OPTARG}" ;;
@@ -56,80 +143,11 @@ clear
 # create new output folder
 rm -rf $outputfolder
 mkdir -p $outputfolder
-echo "Validation output is written to '$outputfolder'"
+echo "[INFO] Validation output is written to '$outputfolder'"
 
-if [ $install_dependencies == "true" ]
-then
-  echo "Trying to install depencencies from '$foldername/sushi-config.yaml'"
-  # load dependencies from sushi-config.yaml
-  for dependency in `yq -o=props '.dependencies' $foldername/sushi-config.yaml`;
-  do
-    # TODO dont load LATEST -> get by file version
-    if [[ ${dependency::1} =~ [a-z] ]]
-    then
-      # create FHIR Snapshots of dependencies
-      echo "Installing FHIR dependency" $dependency "..."
-      # fhir bake --package $dependency;
-      fhir install $dependency
-    fi
-  done
-fi
-
-# rename all folders to lower case
-echo -e "Rename all folder name in .fhir folder to lower case";
-for i in `( ls -d $fhir_folder_path/* | grep [A-Z] )`;
-do
- #TODO Test if folders get renamed
-  echo  $i
-  rsync -a $i `echo $i | tr 'A-Z' 'a-z'`
-# mv -i $i `echo $i | tr 'A-Z' 'a-z'`;
-done
-
-# run sushi
-echo -e "Starting Sushi to process files in '$foldername'";
-sushi $foldername
-
-# check if validator is installed if not install
-if test -e "$validatorpath"; then
-  echo "HAPI Validator found at '$validatorpath'"
-else
-  echo "HAPI Validator not found. Starting to download HAPI Validator..."
-  wget https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -O $validatorpath
-fi
-
-# Concatenate folders_for_validation in fhir directory
-folders_to_validate=""
-for package in `(ls -d $fhir_folder_path/*/package)`
-    do
-        folders_to_validate+=" -ig ${package}"
-    done
-# Only validating one file?
-if [  -z "$file" ];
-then
-  echo "Validating files in folder '$foldername/fsh-generated/resources/' ..."
-  # Run Validator on all *.json files in given directory
-  for filename in $(find $foldername/fsh-generated/resources/ -name '*.json');
-  do
-    f="$(basename $filename .json)"
-    resultfile=$outputfolder"/$f.html"
-
-    echo -e "\n\nProcessing file \033[1m $f \033[0m";
-    java -jar $validatorpath -version 4.0.1 $folders_to_validate -ig $foldername/fsh-generated/resources $filename -proxy 192.168.110.10:3128 -output $resultfile;
-    if [ $sort_results == "true" ]
-    then
-      sortBySeverity "$resultfile"
-    fi
-  done
-else
-  echo -e "Processing \033[1m $file \033[0m";
-  echo -e "\n\nProfiles to load for validation:  $folders_to_validate";
-  result_filename="$(basename $file .json)"
-  #   += "-ig $package/package"
-  java -jar $validatorpath -version 4.0.1 $folders_to_validate  -ig $foldername/fsh-generated/resources $file -proxy 192.168.110.10:3128 -output $outputfolder"/$result_filename.html";
-  if [ $sort_results == "true" ]
-  then
-    sortBySeverity $outputfolder"/$result_filename.html"
-  fi
-fi
-
-
+installDependencies
+renameFhirFolderToLowerCase
+checkAndDownloadHapiValidator
+runSushi
+moveExternalDependencies
+runHapiValidator
