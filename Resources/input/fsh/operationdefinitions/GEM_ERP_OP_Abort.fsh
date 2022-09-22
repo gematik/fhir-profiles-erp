@@ -1,7 +1,7 @@
 Instance: AbortOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
+* url = "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
 * version = "1.2"
 * name = "Abort"
 * status = #draft
