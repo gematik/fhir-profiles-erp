@@ -7,7 +7,8 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * ^version = "1.2"
 * ^status = #draft
 * id 1..
-* meta 1..
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2" (exactly)
 * meta.lastUpdated MS
 * target 1..1 SU

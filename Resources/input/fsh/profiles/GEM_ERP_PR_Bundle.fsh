@@ -7,6 +7,8 @@ Description: "A document style representation of the receipt (complete, self-con
 * ^version = "1.2"
 * ^status = #draft
 * id 1..1
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2" (exactly)
 * identifier 1.. MS
 * identifier only GEM_ERP_PR_PrescriptionId
@@ -54,7 +56,7 @@ Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
 * id = "PrescriptionDigest-160.123.456.789.123.58"
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.2"
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
 

@@ -111,7 +111,7 @@
         "id": "PrescriptionDigest-160.123.456.789.123.58",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.2"
           ]
         },
         "contentType": "application/octet-stream",

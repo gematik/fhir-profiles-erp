@@ -8,6 +8,9 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:43:56.0876617+00:00"
+* meta 1..1
+* meta.profile 1..1
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2" (exactly)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed

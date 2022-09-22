@@ -9,6 +9,9 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
+* meta 1..1
+* meta.profile 1..1
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.2" (exactly)
 * basedOn 1..1
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced

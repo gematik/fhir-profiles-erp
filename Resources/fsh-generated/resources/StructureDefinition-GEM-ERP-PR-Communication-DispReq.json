@@ -47,6 +47,18 @@
   "differential": {
     "element": [
       {
+        "id": "Communication.meta",
+        "path": "Communication.meta",
+        "min": 1
+      },
+      {
+        "id": "Communication.meta.profile",
+        "path": "Communication.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.2"
+      },
+      {
         "id": "Communication.basedOn",
         "path": "Communication.basedOn",
         "min": 1,
@@ -121,7 +133,7 @@
             "code": "Identifier",
             "profile": [
               "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
             ]
           }
         ],
