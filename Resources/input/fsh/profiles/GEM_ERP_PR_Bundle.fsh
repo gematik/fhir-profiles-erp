@@ -7,6 +7,8 @@ Description: "A document style representation of the receipt (complete, self-con
 * ^version = "1.2"
 * ^status = #draft
 * id 1..1
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2" (exactly)
 * identifier 1.. MS
 * identifier only GEM_ERP_PR_PrescriptionId

@@ -7,6 +7,8 @@ Title: "AuditEvent for Logging of ePrescription Access"
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:41:53.3147244+00:00"
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.2" (exactly)
 * type.system 1..
 * type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type" (exactly)

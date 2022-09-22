@@ -8,6 +8,8 @@ Description: "Handles information about the redeem of the prescription and the s
 * ^version = "1.2"
 * ^status = #draft
 * ^date = "2020-04-16T13:44:25.6462885+00:00"
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2" (exactly)
 * identifier 1..1
 * identifier only GEM_ERP_PR_PrescriptionId

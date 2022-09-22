@@ -57,8 +57,15 @@
   "differential": {
     "element": [
       {
+        "id": "Composition.meta",
+        "path": "Composition.meta",
+        "min": 1
+      },
+      {
         "id": "Composition.meta.profile",
         "path": "Composition.meta.profile",
+        "min": 1,
+        "max": "1",
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
       },
       {

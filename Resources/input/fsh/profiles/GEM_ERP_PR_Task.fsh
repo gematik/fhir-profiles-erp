@@ -18,6 +18,8 @@ Description: "This resource manages the ePrescription workflow"
 
 
 */
+* meta 1..1
+* meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2" (exactly)
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1

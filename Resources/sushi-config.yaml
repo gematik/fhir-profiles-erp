@@ -17,4 +17,5 @@ dependencies:
   de.basisprofil.r4: 1.3.2
   hl7.fhir.r4.core: 4.0.1
 #  kbv.ita.erp: 1.1.0-PreRelease
+  kbv.ita.for: 1.1.0-prerelease
   kbv.ita.erp: 1.1.0-prerelease
