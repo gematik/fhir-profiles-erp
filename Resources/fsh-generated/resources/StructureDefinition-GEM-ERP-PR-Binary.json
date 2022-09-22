@@ -33,6 +33,11 @@
   "differential": {
     "element": [
       {
+        "id": "Binary.meta.profile",
+        "path": "Binary.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.2"
+      },
+      {
         "id": "Binary.contentType",
         "path": "Binary.contentType",
         "fixedCode": "application/pkcs7-mime"

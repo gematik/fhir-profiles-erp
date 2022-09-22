@@ -5,6 +5,7 @@ Description: "static information on the ePrescription backend server"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
 * ^version = "1.2"
 * ^status = #draft
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2" (exactly)
 * status 1..
 * serialNumber MS
 * deviceName 1..1

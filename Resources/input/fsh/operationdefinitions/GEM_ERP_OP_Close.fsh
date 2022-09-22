@@ -75,7 +75,7 @@ InstanceOf: MedicationDispense
 Title:   "MedicationDispense handed to Günther at a pharmacy"
 Usage: #example
 * id = "3465270a-11e7-4bbf-ae53-378f9cc52747"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2"
 * contained[+] = SumatripanMedication
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
@@ -94,7 +94,7 @@ Title:   "Bundle of 2 MedicationDispense handed to Waltraud at a pharmacy"
 Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20, then there will be 2 MedicationDispenses for the E-Rezept backend"
 Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2"
 * meta.tag.display = "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"

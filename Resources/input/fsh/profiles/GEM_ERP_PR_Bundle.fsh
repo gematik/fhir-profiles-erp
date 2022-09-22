@@ -54,7 +54,7 @@ Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
 * id = "PrescriptionDigest-160.123.456.789.123.58"
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.2"
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
 

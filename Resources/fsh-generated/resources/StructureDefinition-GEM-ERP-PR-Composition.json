@@ -57,6 +57,11 @@
   "differential": {
     "element": [
       {
+        "id": "Composition.meta.profile",
+        "path": "Composition.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
+      },
+      {
         "id": "Composition.extension",
         "path": "Composition.extension",
         "slicing": {

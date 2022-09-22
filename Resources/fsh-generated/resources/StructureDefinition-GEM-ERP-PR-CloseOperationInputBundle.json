@@ -47,6 +47,11 @@
   "differential": {
     "element": [
       {
+        "id": "Bundle.meta.profile",
+        "path": "Bundle.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2"
+      },
+      {
         "id": "Bundle.type",
         "path": "Bundle.type",
         "fixedCode": "collection"

@@ -48,6 +48,11 @@
   "differential": {
     "element": [
       {
+        "id": "Task.meta.profile",
+        "path": "Task.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
+      },
+      {
         "id": "Task.extension",
         "path": "Task.extension",
         "slicing": {
@@ -187,19 +192,6 @@
         "id": "Task.for",
         "path": "Task.for",
         "short": "Identifier of Patient (KVID or PKV-Identifier)"
-      },
-      {
-        "id": "Task.for.identifier",
-        "path": "Task.for.identifier",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
-            ]
-          }
-        ]
       },
       {
         "id": "Task.performerType.coding",

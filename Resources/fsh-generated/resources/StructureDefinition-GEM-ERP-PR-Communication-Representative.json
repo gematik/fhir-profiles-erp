@@ -47,6 +47,11 @@
   "differential": {
     "element": [
       {
+        "id": "Communication.meta.profile",
+        "path": "Communication.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative|1.2"
+      },
+      {
         "id": "Communication.basedOn",
         "path": "Communication.basedOn",
         "min": 1,
@@ -96,15 +101,6 @@
         "id": "Communication.recipient.identifier",
         "path": "Communication.recipient.identifier",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -117,15 +113,6 @@
         "id": "Communication.sender.identifier",
         "path": "Communication.sender.identifier",
         "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "http://fhir.de/StructureDefinition/identifier-pkv"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

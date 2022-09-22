@@ -42,6 +42,11 @@
   "differential": {
     "element": [
       {
+        "id": "Device.meta.profile",
+        "path": "Device.meta.profile",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
+      },
+      {
         "id": "Device.status",
         "path": "Device.status",
         "min": 1

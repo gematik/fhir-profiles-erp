@@ -9,6 +9,7 @@ Description: "Ressource used for the communication between patients and their re
 * ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative|1.2" (exactly)
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
