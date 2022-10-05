@@ -5,7 +5,7 @@ Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * id 1..1
 * meta 1..1
 * meta.profile 1..1

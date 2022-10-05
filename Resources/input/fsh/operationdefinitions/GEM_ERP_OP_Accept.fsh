@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
 * version = "1.2"
 * name = "Accept"
-* status = #draft
+* status = #active
 * kind = #operation
 * date = "2022-04-01"
 * description = "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'."

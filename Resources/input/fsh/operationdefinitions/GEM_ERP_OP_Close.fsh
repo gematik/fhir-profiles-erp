@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
 * version = "1.2"
 * name = "Close"
-* status = #draft
+* status = #active
 * kind = #operation
 * date = "2022-02-01"
 * description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"
@@ -29,8 +29,8 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
-* parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
-* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+* parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense|1.2"
+* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2"
 // out
 * parameter[+].name = #Receipt
 * parameter[=].use = #out
@@ -66,8 +66,10 @@ Usage: #inline
 * code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
 * form.coding[+].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
 * form.coding[=].code = #TAB
-* amount.numerator.value = 20
+//* amount.numerator.value = 20
 * amount.numerator.unit = "St"
+* amount.numerator.extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
+* amount.numerator.extension[=].valueString = "20 St."
 * amount.denominator.value = 1
 
 Instance: OperationCloseParametersInputMedicationDispense

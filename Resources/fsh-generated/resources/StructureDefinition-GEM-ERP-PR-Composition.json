@@ -18,7 +18,7 @@
   "version": "1.2",
   "name": "GEM_ERP_PR_Composition",
   "title": "Receipt for Fulfillment of ePrescription",
-  "status": "draft",
+  "status": "active",
   "date": "2020-04-16T13:43:56.0876617+00:00",
   "description": "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes.",
   "fhirVersion": "4.0.1",

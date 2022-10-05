@@ -78,8 +78,13 @@
       },
       "amount": {
         "numerator": {
-          "value": 20,
-          "unit": "St"
+          "unit": "St",
+          "extension": [
+            {
+              "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize",
+              "valueString": "20 St."
+            }
+          ]
         },
         "denominator": {
           "value": 1

@@ -4,7 +4,7 @@ Title: "ValueSet of Organizationtype Codes"
 Description: "Type of Organiziation"
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

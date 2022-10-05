@@ -14,7 +14,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device",
   "version": "1.2",
   "name": "GEM_ERP_PR_Device",
-  "status": "draft",
+  "status": "active",
   "description": "static information on the ePrescription backend server",
   "fhirVersion": "4.0.1",
   "mapping": [
