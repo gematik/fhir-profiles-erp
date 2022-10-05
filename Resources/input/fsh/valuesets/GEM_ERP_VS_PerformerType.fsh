@@ -8,7 +8,7 @@ Title: "ValueSet of Performertype Codes"
 Description: "Type of performer"
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

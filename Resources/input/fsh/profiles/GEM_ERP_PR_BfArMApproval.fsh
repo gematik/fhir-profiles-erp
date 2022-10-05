@@ -5,7 +5,7 @@ Title: "BfArM Approval of admissibility for doctor s prescription of narcotics"
 Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) the eprescription server requests authorization for narcotics within the doctor s quota. If approved, the server returns a signed Provenance for documentation purpose"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * id 1..
 * meta 1..1
 * meta.profile 1..1

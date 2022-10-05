@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition",
   "version": "1.2",
   "name": "Create",
-  "status": "draft",
+  "status": "active",
   "kind": "operation",
   "date": "2022-02-01",
   "description": "This operation creates a Task for the prescription of a specific workflowType.",

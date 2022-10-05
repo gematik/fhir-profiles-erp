@@ -4,7 +4,7 @@ Title: "ValueSet of Flowtype Codes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

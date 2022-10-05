@@ -18,7 +18,7 @@
   "version": "1.2",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensation of the Prescription",
-  "status": "draft",
+  "status": "active",
   "date": "2020-04-16T13:44:25.6462885+00:00",
   "description": "Handles information about the redeem of the prescription and the submited medication.",
   "fhirVersion": "4.0.1",

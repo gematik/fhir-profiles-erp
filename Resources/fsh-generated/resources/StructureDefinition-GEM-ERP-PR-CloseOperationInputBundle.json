@@ -15,7 +15,7 @@
   "version": "1.2",
   "name": "GEM_ERP_PR_CloseOperationInputBundle",
   "title": "Document Bundle for multiple MedicationDispenses on $close Operation",
-  "status": "draft",
+  "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

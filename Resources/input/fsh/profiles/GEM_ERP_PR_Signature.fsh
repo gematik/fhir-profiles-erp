@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-Signature
 Title: "Profile for Signature of Bundles in ePrescription Context"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
 * ^version = "1.2"
-* ^status = #draft
+* ^status = #active
 * ^date = "2020-06-02"
 * type ..1 MS
 * type ^slicing.discriminator.type = #value
