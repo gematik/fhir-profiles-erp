@@ -80,3 +80,11 @@ validate.sh -d ./Testresources
 ```bash
 validate.sh -f ./Resources/fsh-generated/resources/myProfile.json
 ```
+
+### Work with specific version of Hapi Validator
+
+`-v version` defines a version od the used Hapi Validator. If the specified version of the hapi validator is not present it will be downloaded to ~/.fhir/validators/
+
+```bash
+validate.sh -v 5.6.70
+```
