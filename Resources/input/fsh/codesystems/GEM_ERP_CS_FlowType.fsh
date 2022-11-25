@@ -19,3 +19,4 @@ Description: "Shows the different types of the ePrescription according to the pr
 * #205 "PKV (Betäubungsmittel)"
 * #206 "PKV (T-Rezepte)"
 * #209 "PKV (Direkte Zuweisung)"
+* #9xx "reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker"
