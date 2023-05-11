@@ -47,4 +47,4 @@ Usage: #example
 * sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:44:30.128+02:00"
-* payload.contentString = "{ \"version\": \"1\", \"supplyOptionsType\": \"delivery\", \"name\": \"Dr. Maximilian von Muster\", \"address\": [ \"wohnhaft bei Emilia Fischer\", \"Bundesallee 312\", \"123. OG\", \"12345 Berlin\" ], \"hint\": \"Bitte im Morsecode klingeln: -.-.\", \"phone\": \"004916094858168\" }"
+* payload.contentString = "{\"version\": 2,\"supplyOptionsType\": \"onPremise\",\"name\": \"Dr. Peter Lustig\",\"address\": \"Am Löwenzahn 4, 14482 Potsdam\",\"hint\": \"Kontakt gerne via E-Rezept App\",\"text\": \"Folgendes Medikament möchte ich gerne abholen\",\"phone\": \"0179 123456\",\"mail\": \"peter.lustig@mail.de\",\"transactionID\": \"0091a0b6-15e8-4110-acde-21b6bd50b54a\",\"taskID\": \"160.123.456.789.123.58\",\"accessCode\": \"777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea\"}"

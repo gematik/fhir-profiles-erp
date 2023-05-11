@@ -35,7 +35,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
-* payload.extension contains 
+* payload.extension contains
     GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..1 and
     GEM_ERP_EX_AvailabilityState named AvailabilityStatus 0..1
 * payload.extension[OfferedSupplyOptions] ^short = "Offered supply options by pharmacy"
@@ -69,3 +69,29 @@ Usage: #example
 * payload.extension[=].extension[+].url = "delivery"
 * payload.extension[=].extension[=].valueBoolean = true
 * payload.contentString = "Eisern"
+
+Instance: Communication_Reply_For_DispReq
+InstanceOf: GEM_ERP_PR_Communication_Reply
+Title: "Communication message sent by pharmacy to patient in response to a DispReq"
+Usage: #example
+* id = "e72fee9b-75c7-4292-8ffc-cd81c151df8f"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.2"
+* meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
+* basedOn.reference = "Task/160.000.033.491.280.78"
+* status = #unknown
+* sender.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
+* recipient[+].identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* recipient[=].identifier.value = "X234567890"
+* sent = "2020-04-29T13:46:30.128+02:00"
+* payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
+* payload.extension[=].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
+* payload.extension[=].valueCoding.code = #20
+* payload.extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
+* payload.extension[=].extension[+].url = "onPremise"
+* payload.extension[=].extension[=].valueBoolean = true
+* payload.extension[=].extension[+].url = "shipment"
+* payload.extension[=].extension[=].valueBoolean = false
+* payload.extension[=].extension[+].url = "delivery"
+* payload.extension[=].extension[=].valueBoolean = true
+* payload.contentString = "{\"version\": 2,\"supplyOptionsType\": \"onPremise\",\"info_text\": \"Ihre Bestellung steht zur Abholung bereit.\",\"url\": \"https://meine-apotheke.de/pickup/a9afa068\",\"pickUpCodeHR\": \"a9afa068\",\"pickUpCodeDMC\": {  \"pickUpCode\": \"a9afa068\",  \"interpretation\": \"data-matrix\"}}"
