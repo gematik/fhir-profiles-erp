@@ -3,13 +3,8 @@ Parent: Bundle
 Id: GEM-ERP-PR-Bundle
 Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-* ^version = "1.2"
-* ^status = #active
+* insert Meta(GEM_ERP_PR_Bundle)
 * id 1..1
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2" (exactly)
 * identifier 1.. MS
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "identifier of ePrescription"
@@ -65,7 +60,6 @@ InstanceOf: GEM_ERP_PR_Bundle
 Title:   "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
 Usage: #example
 * id = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2"
 * meta.tag.display = "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"

@@ -3,13 +3,8 @@ Parent: Bundle
 Id: GEM-ERP-PR-Bundle-BfArMApproval
 Title: "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 Description: "A document containing resources for BfArM Approval of admissibility for doctor s prescription of narcotics"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval"
-* ^version = "1.2"
-* ^status = #active
+* insert Meta(GEM_ERP_PR_Bundle_BfArMApproval)
 * id 1..1
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval|1.2" (exactly)
 * identifier 1..1 MS
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "identifier of ePrescription"
@@ -52,7 +47,6 @@ InstanceOf: GEM_ERP_PR_Bundle_BfArMApproval
 Title:   "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 Usage: #example
 * id = "78d1dc47-5a2a-49d3-85de-960ab84b4d58"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval|1.2"
 * meta.tag.display = "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"

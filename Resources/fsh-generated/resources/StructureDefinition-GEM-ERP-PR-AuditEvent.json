@@ -1,15 +1,24 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-AuditEvent",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:41:55.87+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
-  "version": "1.2",
+  "version": "1.3",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent for Logging of ePrescription Access",
-  "status": "active",
-  "date": "2020-04-16T13:41:53.3147244+00:00",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -60,7 +69,7 @@
         "path": "AuditEvent.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.2"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.3"
       },
       {
         "id": "AuditEvent.type.system",

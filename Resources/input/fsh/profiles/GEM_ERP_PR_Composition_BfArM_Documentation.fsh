@@ -1,19 +1,9 @@
-// TODO: Metainformationen via RuleSet
-// TODO: Version auf 1.3 heben
-
 Profile: GEM_ERP_PR_Composition_BfArM_Documentation
 Parent: Composition
 Id: GEM-ERP-PR-Composition-BfArM-Documentation
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
-* ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_BfArM_Documentation"
-* ^version = "1.2"
-* ^status = #active
-* ^date = "2020-04-16T13:43:56.0876617+00:00"
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_BfArM_Documentation|1.2" (exactly)
+* insert Meta(GEM_ERP_PR_Composition_BfArM_Documentation)
 
 * status = #final (exactly)
 * status MS

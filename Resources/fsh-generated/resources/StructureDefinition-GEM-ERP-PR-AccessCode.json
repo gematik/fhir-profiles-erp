@@ -2,11 +2,24 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-AccessCode",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AccessCode",
-  "version": "1.2",
+  "version": "1.3",
   "name": "GEM_ERP_PR_AccessCode",
   "title": "Identifier Profile for Prescription IDs",
-  "status": "active",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
   "description": "The AccessCode is a generated secret, that grants access to an ePrescription resource, eg. Task",
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

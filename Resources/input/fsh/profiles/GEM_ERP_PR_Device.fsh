@@ -2,12 +2,7 @@ Profile: GEM_ERP_PR_Device
 Parent: Device
 Id: GEM-ERP-PR-Device
 Description: "static information on the ePrescription backend server"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
-* ^version = "1.2"
-* ^status = #active
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2" (exactly)
+* insert Meta(GEM_ERP_PR_Device)
 * status 1..
 * serialNumber MS
 * deviceName 1..1
@@ -19,7 +14,6 @@ InstanceOf: GEM_ERP_PR_Device
 Title:   "Device for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "1"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
 * status = #active
 * serialNumber = "1.4.0"
 * deviceName.name = "E-Rezept-Fachdienst"

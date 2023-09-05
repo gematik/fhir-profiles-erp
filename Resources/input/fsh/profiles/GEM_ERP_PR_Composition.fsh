@@ -3,14 +3,7 @@ Parent: Composition
 Id: GEM-ERP-PR-Composition
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
-* ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition"
-* ^version = "1.2"
-* ^status = #active
-* ^date = "2020-04-16T13:43:56.0876617+00:00"
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2" (exactly)
+* insert Meta(GEM_ERP_PR_Composition)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
@@ -54,7 +47,6 @@ InstanceOf: GEM_ERP_PR_Composition
 Title:   "Composition for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "c624cf47-e235-4624-af71-0a09dc9254dc"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
 * extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
 * extension[=].valueIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * extension[=].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"

@@ -3,24 +3,7 @@ Parent: Task
 Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-* ^version = "1.2"
-* ^status = #active
-/*
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #closed
-* extension contains
-    GEM_ERP_EX_PrescriptionType named flowType 1..1 and
-    GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
-    GEM_ERP_EX_ExpiryDate named expiryDate 0..1 
-
-
-
-*/
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2" (exactly)
+* insert Meta(GEM_ERP_PR_Task)
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
@@ -92,7 +75,6 @@ Title:   "Task just created by Fachdienst via $create operation"
 Description:   "Task just created by Fachdienst via $create operation"
 Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
@@ -100,10 +82,10 @@ Usage: #example
 * extension[acceptDate].valueDate = "2022-04-02"
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
 * extension[expiryDate].valueDate = "2022-06-02"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[=].value = "160.000.033.491.280.78"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
-* identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "160.000.033.491.280.78"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
 * status = #draft
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
@@ -115,18 +97,17 @@ InstanceOf: GEM_ERP_PR_Task
 Title:   "Task activated by (Z)PVS/KIS via $activate operation that carries a dispensable ePrescription"
 Usage: #example
 * id = "607255ed-ce41-47fc-aad3-cfce1c39963f"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in READY state activated by (Z)PVS/KIS via $activate operation"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-* extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
-* extension[=].valueDate = "2022-04-02"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[=].valueDate = "2022-06-02"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[=].value = "160.000.033.491.280.78"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
-* identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* extension[acceptDate].valueDate = "2022-04-02"
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* extension[expiryDate].valueDate = "2022-06-02"
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "160.000.033.491.280.78"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
 * status = #ready
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
@@ -134,28 +115,27 @@ Usage: #example
 * for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:27:00+00:00"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[=].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[=].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
+* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 
 Instance: TaskInIn-ProgressState
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy via $accept operation"
 Usage: #example
 * id = "d70932d1-9e1c-483c-b2d4-b7dced09b35e"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-* extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
-* extension[=].valueDate = "2022-04-02"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[=].valueDate = "2022-06-02"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[=].value = "160.000.033.491.280.78"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
-* identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* extension[acceptDate].valueDate = "2022-04-02"
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* extension[expiryDate].valueDate = "2022-06-02"
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "160.000.033.491.280.78"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
 * status = #in-progress
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
@@ -163,28 +143,27 @@ Usage: #example
 * for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:28:00+00:00"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[=].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[=].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
+* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 
 Instance: TaskInClosedState
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task finished by pharmacy via $close operation"
 Usage: #example
 * id = "09330307-16ce-4cdc-810a-ca24ef80dde3"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
 * meta.tag.display = "Task in COMPLETED state dispensed by pharmacy via $closed operation"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-* extension[=].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
-* extension[=].valueDate = "2022-04-02"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[=].valueDate = "2022-06-02"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[=].value = "160.000.033.491.280.78"
-* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
-* identifier[=].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* extension[acceptDate].valueDate = "2022-04-02"
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* extension[expiryDate].valueDate = "2022-06-02"
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "160.000.033.491.280.78"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
 * status = #completed
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
@@ -192,9 +171,9 @@ Usage: #example
 * for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:29:00+00:00"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[=].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
-* input[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[=].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
-* output[+].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
-* output[=].valueReference.reference = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
+* input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
+* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* output[receipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
+* output[receipt].valueReference.reference = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"

@@ -2,11 +2,24 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Bundle-BfArMApproval",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval",
-  "version": "1.2",
+  "version": "1.3",
   "name": "GEM_ERP_PR_Bundle_BfArMApproval",
   "title": "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics",
-  "status": "active",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
   "description": "A document containing resources for BfArM Approval of admissibility for doctor s prescription of narcotics",
+  "copyright": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -52,7 +65,7 @@
         "path": "Bundle.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval|1.2"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_BfArMApproval|1.3"
       },
       {
         "id": "Bundle.identifier",

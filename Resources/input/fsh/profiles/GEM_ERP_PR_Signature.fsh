@@ -2,10 +2,7 @@ Profile: GEM_ERP_PR_Signature
 Parent: Signature
 Id: GEM-ERP-PR-Signature
 Title: "Profile for Signature of Bundles in ePrescription Context"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
-* ^version = "1.2"
-* ^status = #active
-* ^date = "2020-06-02"
+* insert MetaIdentifier(GEM_ERP_PR_Signature)
 * type ..1 MS
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "code"
