@@ -36,11 +36,6 @@ Description: "A document containing resources for BfArM Approval of admissibilit
 * signature only GEM_ERP_PR_Signature
 * signature MS
 * signature.type 1..1
-* signature.type ^slicing.discriminator.type = #value
-* signature.type ^slicing.discriminator.path = "code"
-* signature.type ^slicing.rules = #closed
-
-
 
 Instance: BfArMApprovalBundle
 InstanceOf: GEM_ERP_PR_Bundle_BfArMApproval
@@ -61,8 +56,8 @@ Usage: #example
 * entry[BfArM_Approval].fullUrl = "urn:uuid:64d5081e-8d65-11ec-b909-0242ac120002"
 * entry[BfArM_Approval].resource = PractitionersNarcoticsApproval
 
-* signature.type[+].system = "urn:iso-astm:E1762-95:2013"
-* signature.type[=].code = #1.2.840.10065.1.12.1.1
+* signature.type[AuthorsSignature].system = "urn:iso-astm:E1762-95:2013"
+* signature.type[AuthorsSignature].code = #1.2.840.10065.1.12.1.1
 * signature.when = "2023-08-18T15:28:00+00:00"
 * signature.who.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * signature.sigFormat = #application/pkcs7-mime
