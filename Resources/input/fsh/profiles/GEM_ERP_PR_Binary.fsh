@@ -11,3 +11,11 @@ Description: "PCKS7 signed ePrescription Bundle or Receipt"
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.2" (exactly)
 * contentType = #application/pkcs7-mime (exactly)
 * data 1..
+
+Instance: EBtM-Prescription-Binary
+InstanceOf: Binary
+Usage: #inline
+* id = "34fdbc14-3fae-4626-b600-9ccddeef55e9"
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.2"
+* contentType = #application/octet-stream
+* data = "SGllciBrw7ZubnRlIElocmUgUUVTIGVpbmVzIEUtQnRNLVJlemVwdGVzIHN0ZWhlbi4="
