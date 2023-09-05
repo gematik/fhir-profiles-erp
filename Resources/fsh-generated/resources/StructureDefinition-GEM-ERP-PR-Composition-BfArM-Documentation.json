@@ -1,0 +1,273 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-Composition-BfArM-Documentation",
+  "meta": {
+    "lastUpdated": "2020-04-16T13:43:58.4+00:00"
+  },
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_BfArM_Documentation",
+  "version": "1.2",
+  "name": "GEM_ERP_PR_Composition_BfArM_Documentation",
+  "title": "Receipt for Fulfillment of ePrescription",
+  "status": "active",
+  "date": "2020-04-16T13:43:56.0876617+00:00",
+  "description": "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.meta",
+        "path": "Composition.meta",
+        "min": 1
+      },
+      {
+        "id": "Composition.meta.profile",
+        "path": "Composition.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_BfArM_Documentation|1.2"
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "Status = \"final\"",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Document Type = \"Documentation of Narcotics Approval\"",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        }
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "fixedCode": "5"
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "fixedString": "Documentation of Narcotics Approval"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Reference to verifying service (Device)",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+            ],
+            "aggregation": [
+              "referenced",
+              "bundled"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Document title = \"Dokumentation zur Ausstellung von E-BtM Rezepten\"",
+        "fixedString": "Dokumentation zur Ausstellung von E-BtM Rezepten",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code.coding.code"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription",
+        "path": "Composition.section",
+        "sliceName": "ePrescription",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "fixedCode": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.code.coding.display",
+        "path": "Composition.section.code.coding.display",
+        "fixedString": "Health Care Provider Prescription"
+      },
+      {
+        "id": "Composition.section:ePrescription.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:ePrescription.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:BfArM_Approval",
+        "path": "Composition.section",
+        "sliceName": "BfArM_Approval",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "fixedCode": "4",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.code.coding.display",
+        "path": "Composition.section.code.coding.display",
+        "fixedString": "Approval to prescribe Narcotics"
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.entry.reference",
+        "path": "Composition.section.entry.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:BfArM_Approval.section",
+        "path": "Composition.section.section",
+        "max": "0"
+      }
+    ]
+  }
+}
