@@ -1,3 +1,5 @@
+//TODO: add Document type #4 "Approval to prescribe Narcotics"
+
 Profile: GEM_ERP_PR_BfArMApproval
 Parent: Provenance
 Id: GEM-ERP-PR-BfArMApproval
@@ -18,7 +20,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * target ^slicing.rules = #closed
 * target contains
     TaskReference 1..1	
-* target[TaskReference] only Reference(GEM_ERP_PR_Task)
+* target[TaskReference] only Reference(GEM_ERP_PR_Task) //TODO: Logische Referenzen spezifizieren
 * target[TaskReference] ^short = "Reference to the ePrescription Task"
 * recorded SU
 * entity 1..1
