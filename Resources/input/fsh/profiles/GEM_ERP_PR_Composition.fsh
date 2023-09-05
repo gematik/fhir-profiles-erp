@@ -17,9 +17,6 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * type MS
 * type ^short = "Document Type = \"Receipt\""
 * type.coding 1..1
-//* type.coding.system 1..
-//* type.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType" (exactly)
-//* type.coding.code 1..
 * type.coding from GEM_ERP_VS_DocumentType (required)
 * type.coding.code = #3 (exactly)
 * type.coding.display = "Receipt" (exactly)

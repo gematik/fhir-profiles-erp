@@ -11,9 +11,6 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * type MS
 * type ^short = "Document Type = \"Documentation of Narcotics Approval\""
 * type.coding 1..1
-//* type.coding.system 1..
-//* type.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType" (exactly)
-//* type.coding.code 1..
 * type.coding from GEM_ERP_VS_DocumentType (required)
 * type.coding.code = #5 (exactly)
 * type.coding.display = "Documentation of Narcotics Approval" (exactly)
@@ -40,7 +37,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * section[ePrescription].code 1..1 MS
 * section[ePrescription].code.coding 1..1 MS
 * section[ePrescription].code.coding.system 1..1 MS
-* section[ePrescription].code.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType" (exactly)
+* section[ePrescription].code.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType" (exactly)
 * section[ePrescription].code.coding.code 1.. MS
 * section[ePrescription].code.coding.code = #1 (exactly)
 * section[ePrescription].code.coding.display = "Health Care Provider Prescription" (exactly)
@@ -53,7 +50,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * section[BfArM_Approval].code 1..1 MS
 * section[BfArM_Approval].code.coding 1..1 MS
 * section[BfArM_Approval].code.coding.system 1..1 MS
-* section[BfArM_Approval].code.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType" (exactly)
+* section[BfArM_Approval].code.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType" (exactly)
 * section[BfArM_Approval].code.coding.code 1.. MS
 * section[BfArM_Approval].code.coding.code = #4 (exactly)
 * section[BfArM_Approval].code.coding.display = "Approval to prescribe Narcotics" (exactly)
@@ -75,6 +72,6 @@ Usage: #inline
 * event.period.start = "2022-03-18T15:28:00+00:00"
 * event.period.end = "2022-03-18T15:29:00+00:00"
 * section[ePrescription].entry.reference = "281a985c-f25b-4aae-91a6-41ad744080b0" // TODO: Neue Verordnung mit WF 200
-* section[ePrescription].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType#1 "Health Care Provider Prescription"
+* section[ePrescription].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
 * section[BfArM_Approval].entry.reference = "PractitionersNarcoticsApproval"
-* section[BfArM_Approval].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType#4 "Approval to prescribe Narcotics"
+* section[BfArM_Approval].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#4 "Approval to prescribe Narcotics"

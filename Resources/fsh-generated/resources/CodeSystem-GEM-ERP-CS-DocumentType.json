@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "GEM_ERP_CS_DocumentType",
   "id": "GEM-ERP-CS-DocumentType",
@@ -29,8 +29,9 @@
       "display": "Documentation of Narcotics Approval"
     }
   ],
-  "version": "1.2",
+  "experimental": false,
   "publisher": "gematik GmbH",
+  "version": "1.3",
   "contact": [
     {
       "telecom": [
