@@ -126,8 +126,8 @@
       {
         "id": "Composition.title",
         "path": "Composition.title",
-        "short": "Document title = \"Dokumentation zur Ausstellung von E-BtM Rezepten\"",
-        "fixedString": "Dokumentation zur Ausstellung von E-BtM Rezepten",
+        "short": "Document title = \"Dokumentation zur Belieferung von E-BtM Rezepten\"",
+        "fixedString": "Dokumentation zur Belieferung von E-BtM Rezepten",
         "mustSupport": true
       },
       {
