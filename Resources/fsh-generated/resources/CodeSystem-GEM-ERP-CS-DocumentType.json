@@ -27,6 +27,14 @@
     {
       "code": "5",
       "display": "Documentation of Narcotics Approval"
+    },
+    {
+      "code": "6",
+      "display": "Documentation of Narcotics Dispense"
+    },
+    {
+      "code": "7",
+      "display": "Dispense Information"
     }
   ],
   "experimental": false,
@@ -44,5 +52,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 5
+  "count": 7
 }

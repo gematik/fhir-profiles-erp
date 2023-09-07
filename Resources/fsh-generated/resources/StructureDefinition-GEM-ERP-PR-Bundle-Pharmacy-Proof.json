@@ -1,0 +1,233 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-Bundle-Pharmacy-Proof",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Pharmacy_Proof",
+  "version": "1.3",
+  "name": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
+  "title": "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "description": "A document containing resources for BfArM Approval of admissibility for doctor s prescription of narcotics",
+  "copyright": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.id",
+        "path": "Bundle.id",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta",
+        "path": "Bundle.meta",
+        "min": 1
+      },
+      {
+        "id": "Bundle.meta.profile",
+        "path": "Bundle.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Pharmacy_Proof|1.3"
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "short": "identifier of ePrescription",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "document",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "resource.meta.profile"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 4
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation",
+        "path": "Bundle.entry",
+        "sliceName": "DocumentInformation",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:DocumentInformation.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Proof"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:ePrescription",
+        "path": "Bundle.entry",
+        "sliceName": "ePrescription",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:ePrescription.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:ePrescription.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Binary",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:receipt",
+        "path": "Bundle.entry",
+        "sliceName": "receipt",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:receipt.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:receipt.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Bundle",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:dispense_information",
+        "path": "Bundle.entry",
+        "sliceName": "dispense_information",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:dispense_information.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:dispense_information.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MedicationDispense",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+            ]
+          },
+          {
+            "code": "Bundle",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.signature",
+        "path": "Bundle.signature",
+        "type": [
+          {
+            "code": "Signature",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
