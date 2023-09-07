@@ -34,7 +34,7 @@ Description: "A document containing resources for BfArM Approval of admissibilit
 * entry[receipt].resource 1..1
 * entry[receipt].fullUrl 1..1
 
-* entry[dispense_information].resource only GEM_ERP_PR_MedicationDispense or GEM_ERP_PR_CloseOperationInputBundle
+* entry[dispense_information].resource only $DAV-PR-ERP-AbgabedatenBundle or $DAV-PKV-PR-ERP-AbgabedatenBundle
 * entry[dispense_information].resource 1..1
 * entry[dispense_information].fullUrl 1..1
 

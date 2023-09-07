@@ -199,21 +199,7 @@
       {
         "id": "Bundle.entry:dispense_information.resource",
         "path": "Bundle.entry.resource",
-        "min": 1,
-        "type": [
-          {
-            "code": "MedicationDispense",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
-            ]
-          },
-          {
-            "code": "Bundle",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "Bundle.signature",
