@@ -1,0 +1,520 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "e-btm-abgabenachweis-logical-model",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/e-btm-abgabenachweis-logical-model",
+  "name": "EBtMAbgabenachweis",
+  "title": "E-BtM-Abgabenachweis",
+  "status": "draft",
+  "description": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "name": "RIM Mapping",
+      "uri": "http://hl7.org/v3"
+    },
+    {
+      "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+      "name": "Abgabe Nachweis zu Bundle Mapping",
+      "uri": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
+      "comment": "Mapping für Abgabenachweis zum Bundle GEM_ERP_PR_Bundle_Pharmacy_Proof"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/e-btm-abgabenachweis-logical-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "e-btm-abgabenachweis-logical-model",
+        "path": "e-btm-abgabenachweis-logical-model",
+        "short": "E-BtM-Abgabenachweis",
+        "definition": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
+            "comment": "Das Modell mapt auf das E-BtM-AbgabeNachweis Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
+        "path": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
+        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
+        "short": "DAV-AbgabeDatensatz signiert als PKCS7",
+        "definition": "GKV: https://simplifier.net/erezeptabgabedaten und PKV: https://simplifier.net/erezeptabgabedatenpkv",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://simplifier.net/erezeptabgabedaten"
+          },
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://simplifier.net/erezeptabgabedatenpkv"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
+        "short": "Zeitpunkt der Abgabe",
+        "definition": "Zeitpunkt der Abgabe",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_AbgabedatenComposition.date"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
+        "short": "Ersteller des Abgabedatensatzes",
+        "definition": "Ersteller des Abgabedatensatzes",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_AbgabedatenComposition.author"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
+        "short": "Arzneimittel, welches abgegeben wurde",
+        "definition": "Arzneimittel, welches abgegeben wurde",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Medication"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_Abgabeinformationen.medication"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung",
+        "path": "e-btm-abgabenachweis-logical-model.quittung",
+        "short": "Quittung vom Fachdienst nach Aufruf der $close-Operation",
+        "definition": "Definition der Quittung",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.quittung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
+        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
+        "short": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
+        "definition": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "Composition.event.period.start"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
+        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
+        "short": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
+        "definition": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "Composition.event.period.end"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "e-btm-abgabenachweis-logical-model",
+        "path": "e-btm-abgabenachweis-logical-model",
+        "short": "E-BtM-Abgabenachweis",
+        "definition": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM",
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
+            "comment": "Das Modell mapt auf das E-BtM-AbgabeNachweis Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
+        "path": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
+        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
+        "short": "DAV-AbgabeDatensatz signiert als PKCS7",
+        "definition": "GKV: https://simplifier.net/erezeptabgabedaten und PKV: https://simplifier.net/erezeptabgabedatenpkv",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://simplifier.net/erezeptabgabedaten"
+          },
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://simplifier.net/erezeptabgabedatenpkv"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
+        "short": "Zeitpunkt der Abgabe",
+        "definition": "Zeitpunkt der Abgabe",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_AbgabedatenComposition.date"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
+        "short": "Ersteller des Abgabedatensatzes",
+        "definition": "Ersteller des Abgabedatensatzes",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_AbgabedatenComposition.author"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
+        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
+        "short": "Arzneimittel, welches abgegeben wurde",
+        "definition": "Arzneimittel, welches abgegeben wurde",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Medication"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "DAV_PR_ERP_Abgabeinformationen.medication"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung",
+        "path": "e-btm-abgabenachweis-logical-model.quittung",
+        "short": "Quittung vom Fachdienst nach Aufruf der $close-Operation",
+        "definition": "Definition der Quittung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
+        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
+        "short": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
+        "definition": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "Composition.event.period.start"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
+        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
+        "short": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
+        "definition": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "map": "Composition.event.period.end"
+          }
+        ]
+      }
+    ]
+  }
+}

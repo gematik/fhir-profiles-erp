@@ -1,0 +1,353 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "e-btm-verschreibungsnachweis-logical-model",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/e-btm-verschreibungsnachweis-logical-model",
+  "name": "EBtMVerschreibungsnachweis",
+  "title": "E-BtM-Verschreibungsnachweis",
+  "status": "draft",
+  "description": "Darstellung eines Dokumentes für den Verordnenden zur Verschreibung eines E-BtM",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "name": "RIM Mapping",
+      "uri": "http://hl7.org/v3"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/e-btm-verschreibungsnachweis-logical-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model",
+        "path": "e-btm-verschreibungsnachweis-logical-model",
+        "short": "E-BtM-Verschreibungsnachweis",
+        "definition": "Darstellung eines Dokumentes für den Verordnenden zur Verschreibung eines E-BtM",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
+        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung",
+        "short": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM",
+        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Provenance"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.telematikIdVerordnender",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.telematikIdVerordnender",
+        "short": "Telematik-ID des Verordnenden LE",
+        "definition": "Telematik-ID des Verordnenden LE",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.telematikIdVerordnender",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.informationFachdienst",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.informationFachdienst",
+        "short": "Informationen zum Fachdienst",
+        "definition": "Informationen zum Fachdienst",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.informationFachdienst",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature",
+        "short": "Signatur des BfArM",
+        "definition": "Signatur des BfArM",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.date",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.date",
+        "short": "Datum der Signatur",
+        "definition": "Datum der Signatur",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.date",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.testFeld",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.testFeld",
+        "short": "Test Feld",
+        "definition": "Test Feld",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.testFeld",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model",
+        "path": "e-btm-verschreibungsnachweis-logical-model",
+        "short": "E-BtM-Verschreibungsnachweis",
+        "definition": "Darstellung eines Dokumentes für den Verordnenden zur Verschreibung eines E-BtM"
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
+        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Binary"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung",
+        "short": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM",
+        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Provenance"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.telematikIdVerordnender",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.telematikIdVerordnender",
+        "short": "Telematik-ID des Verordnenden LE",
+        "definition": "Telematik-ID des Verordnenden LE",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.informationFachdienst",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.informationFachdienst",
+        "short": "Informationen zum Fachdienst",
+        "definition": "Informationen zum Fachdienst",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature",
+        "short": "Signatur des BfArM",
+        "definition": "Signatur des BfArM",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.date",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.date",
+        "short": "Datum der Signatur",
+        "definition": "Datum der Signatur",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.testFeld",
+        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigung.signature.testFeld",
+        "short": "Test Feld",
+        "definition": "Test Feld",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      }
+    ]
+  }
+}
