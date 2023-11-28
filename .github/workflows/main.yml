@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set rights
-        run: sudo chown -R $USER "/Users/runner/.npm"
+        run: sudo chown -R 501:20 "/Users/runner/.npm"
         
       # Java and .NET are already installed on ubuntu-latest
         
