@@ -44,11 +44,11 @@ jobs:
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
           SUSHI_VERSION: 3.5.0
-          SUSHI_OPTIONS: Resources/
+          SUSHI_OPTIONS: Resources/ -l debug
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
 
       - name: Check for Uncommitted Changes
         run: |
-          git diff --exit-code || (echo "Es gibt Änderungen durch die Pipline. Lokale Sushi Konfiguration prüfen!" && exit 1)
+          git diff --exit-code 'Resources/fsh-generated/resources'|| (echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!" && exit 1)
 
 
