@@ -27,6 +27,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
+
+      - name: Install or update apt-get
+        run: |
+          sudo apt-get update
+          sudo apt-get install libcurl4-openssl-dev
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
