@@ -1,12 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PAR-OUT-OP-Accept",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Foundation.Other"
-    }
-  ],
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PAR_OUT_OP_Accept",
   "version": "1.2",
   "name": "GEM_ERP_PAR_OUT_OP_Accept",
