@@ -19,19 +19,14 @@ jobs:
   # Validate all resources using Firely Terminal 
   CI_FHIR_VALIDATION:
     # The type of runner that the job will run on
-    runs-on: macos-13
+    runs-on: ubuntu-latest
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
-
-      - name: Install or update apt-get
-        run: |
-          sudo apt-get update
-          sudo apt-get install libcurl4-openssl-dev
+          node-version: '20'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
