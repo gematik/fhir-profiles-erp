@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set rights
+        run: sudo chown -R $USER "/Users/runner/.npm"
         
       # Java and .NET are already installed on ubuntu-latest
         
