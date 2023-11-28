@@ -19,7 +19,7 @@ jobs:
   # Validate all resources using Firely Terminal 
   CI_FHIR_VALIDATION:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -43,7 +43,7 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
-          SUSHI_VERSION: 3.0.0
+          SUSHI_VERSION: 3.5.0
           SUSHI_OPTIONS: Resources/
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
 
