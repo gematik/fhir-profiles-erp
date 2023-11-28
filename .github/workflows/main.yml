@@ -47,6 +47,6 @@ jobs:
 
       - name: Check for Uncommitted Changes
         run: |
-          git diff --exit-code || (echo "Es gibt Änderungen durch die Pipline. Lokale Sushi Konfiguration prüfen!" && exit 1)
+          git diff --quiet || (echo "Es gibt Änderungen durch die Pipline. Lokale Sushi Konfiguration prüfen!" && exit 1)
 
 
