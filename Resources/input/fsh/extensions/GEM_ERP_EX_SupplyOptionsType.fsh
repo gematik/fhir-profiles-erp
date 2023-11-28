@@ -11,8 +11,8 @@ Id: GEM-ERP-EX-SupplyOptionsType
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
 * extension contains
-    onPremise 1..1 and
     delivery 1..1 and
+    onPremise 1..1 and
     shipment 1..1
 * extension[onPremise] ^short = "dispensation is offered/preferred on premise"
 * extension[onPremise] ^definition = "Patient or pharmacy may state their preferred or offered supply option to pick up medications on Premise"
