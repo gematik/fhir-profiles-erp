@@ -7,8 +7,7 @@ fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
 
-status: draft
-version: "1.2.1"
+version: "1.2"
 publisher:
   name: Gematik GmbH
   url: https://www.gematik.de/
