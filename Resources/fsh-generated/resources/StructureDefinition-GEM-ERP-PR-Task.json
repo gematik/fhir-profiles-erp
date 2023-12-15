@@ -53,6 +53,13 @@
         "id": "Task.extension",
         "path": "Task.extension",
         "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 1
