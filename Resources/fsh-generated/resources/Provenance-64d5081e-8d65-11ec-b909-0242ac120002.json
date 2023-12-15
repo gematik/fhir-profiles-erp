@@ -27,12 +27,6 @@
           }
         ]
       },
-      "onBehalfOf": {
-        "identifier": {
-          "system": "https://gematik.de/fhir/sid/telematik-id",
-          "value": "1-HBA-Testkarte-883110000123465"
-        }
-      },
       "who": {
         "reference": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
       }
