@@ -4,16 +4,6 @@
   "meta": {
     "lastUpdated": "2020-04-16T13:43:30.128+00:00"
   },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Request &amp; Response"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply",
   "version": "1.2",
   "name": "GEM_ERP_PR_Communication_Reply",
