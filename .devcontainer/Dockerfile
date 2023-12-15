@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
 # Setzen der Umgebungsvariablen
 ENV FIRELY_TERMINAL_VERSION=3.1.0
