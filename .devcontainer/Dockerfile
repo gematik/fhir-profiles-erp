@@ -13,14 +13,29 @@ RUN wget https://dot.net/v1/dotnet-install.sh \
     && ln -s /usr/share/dotnet/dotnet /usr/local/bin \
     && rm dotnet-install.sh
 
+# clean slate
+RUN apt-get update \
+    && apt-get clean \
+    && apt-get autoremove
+
+# install nodejs
+RUN apt-get update \
+ && DEBIAN_FRONTEND=noninteractive \
+ && apt-get -y install curl xz-utils \
+ && apt-get clean
+
+ARG node_version=v20.10.0
+WORKDIR /opt \
+RUN curl -LO https://nodejs.org/dist/${node_version}/node-${node_version}-linux-x64.tar.xz \
+ && tar xJf node-${node_version}-linux-x64.tar.xz \
+ && rm node-${node_version}-linux-x64.tar.xz
+ENV PATH=/opt/node-${node_version}-linux-x64/bin:${PATH}
+
 # Install libraries
 RUN apt-get update \
-  && apt-get -y install openjdk-17-jre \
-  && apt-get -y install nodejs \
   && apt-get -y install npm \
+  && apt-get -y install openjdk-17-jre \
   && apt-get -y install findutils \
-  && apt-get -y install curl \
-  && apt-get -y install ca-certificates \
   && apt-get clean
 
 # Install Firely Terminal as vscode user
