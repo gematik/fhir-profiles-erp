@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:alpine-3.18
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 # Setzen der Umgebungsvariablen
 ENV FIRELY_TERMINAL_VERSION=3.1.0
@@ -13,14 +13,15 @@ RUN wget https://dot.net/v1/dotnet-install.sh \
     && ln -s /usr/share/dotnet/dotnet /usr/local/bin \
     && rm dotnet-install.sh
 
-# Install ICU libraries
-RUN apk add --no-cache icu-libs
-
-# Install Node.js and npm
-RUN apk add --no-cache nodejs npm
-
-# Install Java (OpenJDK)
-RUN apk add --no-cache openjdk11
+# Install libraries
+RUN apt-get update \
+  && apt-get -y install openjdk-17-jre \
+  && apt-get -y install nodejs \
+  && apt-get -y install npm \
+  && apt-get -y install findutils \
+  && apt-get -y install curl \
+  && apt-get -y install ca-certificates \
+  && apt-get clean
 
 # Install Firely Terminal as vscode user
 # Switch to the vscode user
@@ -36,9 +37,6 @@ ENV PATH="/home/vscode/.dotnet/tools:${PATH}"
 USER root
 
 RUN npm install -g fsh-sushi@$SUSHI_VERSION
-
-# Installieren der zusätzliche Abhängigkeiten
-RUN apk update && apk add --no-cache jq findutils curl ca-certificates
 
 # Setup for FHIR Validator
 RUN mkdir -p /home/vscode/.fhir/validators/
