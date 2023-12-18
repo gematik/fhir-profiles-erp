@@ -1,8 +1,10 @@
 {
-  "updated": "2023-11-28T08:57:44.285755+01:00",
+  "updated": "2023-12-18T16:14:28.93914+01:00",
   "dependencies": {
     "de.basisprofil.r4": "1.3.2",
-    "hl7.fhir.r4.core": "4.0.1"
+    "hl7.fhir.r4.core": "4.0.1",
+    "kbv.ita.for": "1.1.0",
+    "KBV.Basis": "1.3.0"
   },
   "missing": {}
 }

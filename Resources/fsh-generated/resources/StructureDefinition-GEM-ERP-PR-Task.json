@@ -191,6 +191,19 @@
         "short": "Identifier of Patient (KVID or PKV-Identifier)"
       },
       {
+        "id": "Task.for.identifier",
+        "path": "Task.for.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10",
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Task.performerType.coding",
         "path": "Task.performerType.coding",
         "min": 1,
@@ -284,6 +297,18 @@
         "path": "Task.input.type.coding.code",
         "min": 1,
         "fixedCode": "2"
+      },
+      {
+        "id": "Task.input:patientReceipt.value[x]",
+        "path": "Task.input.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Bundle"
+            ]
+          }
+        ]
       },
       {
         "id": "Task.output",

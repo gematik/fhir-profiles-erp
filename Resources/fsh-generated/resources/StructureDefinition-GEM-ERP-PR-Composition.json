@@ -88,8 +88,107 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "Status = \"final\"",
+        "fixedCode": "final",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "short": "Document Type = \"Receipt\"",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        }
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "fixedCode": "3"
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
+        "fixedString": "Receipt"
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Reference to verifying service (Device)",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+            ],
+            "aggregation": [
+              "referenced",
+              "bundled"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Document title = \"Quittung\"",
+        "fixedString": "Quittung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Composition.event.period",
+        "path": "Composition.event.period",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.event.period.start",
+        "path": "Composition.event.period.start",
+        "short": "Starting time of dispensation",
+        "definition": "Time the prescription was submitted to the dispensing organization",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.event.period.end",
+        "path": "Composition.event.period.end",
+        "definition": "The end of the period. Time when the dispensation finished, i.e. when server creates the receipt.",
+        "min": 1
+      },
+      {
+        "id": "Composition.event.detail",
+        "path": "Composition.event.detail",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.event.detail.reference",
+        "path": "Composition.event.detail.reference",
+        "min": 1,
+        "mustSupport": true
       }
     ]
-  },
-  "inProgress": true
+  }
 }
