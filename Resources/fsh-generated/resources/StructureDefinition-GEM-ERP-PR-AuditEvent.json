@@ -104,17 +104,7 @@
       {
         "id": "AuditEvent.agent.who.identifier",
         "path": "AuditEvent.agent.who.identifier",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id",
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "AuditEvent.agent.name",

@@ -28,8 +28,6 @@
             "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.2"
           ]
         },
-        "status": "final",
-        "title": "Quittung",
         "extension": [
           {
             "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary",
@@ -39,6 +37,7 @@
             }
           }
         ],
+        "status": "final",
         "type": {
           "coding": [
             {
@@ -54,6 +53,7 @@
             "reference": "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
           }
         ],
+        "title": "Quittung",
         "event": [
           {
             "period": {
