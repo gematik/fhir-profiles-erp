@@ -6,6 +6,17 @@
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
     ]
   },
+  "entity": [
+    {
+      "role": "source",
+      "what": {
+        "identifier": {
+          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+          "value": "165.100.000.000.024.67"
+        }
+      }
+    }
+  ],
   "agent": [
     {
       "type": {
@@ -24,17 +35,6 @@
       },
       "who": {
         "reference": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
-      }
-    }
-  ],
-  "entity": [
-    {
-      "role": "source",
-      "what": {
-        "identifier": {
-          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-          "value": "165.100.000.000.024.67"
-        }
       }
     }
   ],
