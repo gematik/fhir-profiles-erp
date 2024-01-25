@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
 * version = "1.3.0"
 * name = "Abort"
-* status = #active
+* status = #draft
 * kind = #operation
 * date = "2022-04-01"
 * description = "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task."

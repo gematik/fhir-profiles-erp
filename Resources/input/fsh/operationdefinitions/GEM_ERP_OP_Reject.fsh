@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition"
 * version = "1.3.0"
 * name = "Reject"
-* status = #active
+* status = #draft
 * kind = #operation
 * date = "2022-04-01"
 * description = "Rejects the dispense of a ePrescription. The Task will be reset to an active state, the secret will be deleted, and the Task will be accessible by any other pharmacist or it can be deleted by the patient."

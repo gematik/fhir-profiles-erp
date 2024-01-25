@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
 * version = "1.3.0"
 * name = "Close"
-* status = #active
+* status = #draft
 * kind = #operation
 * date = "2022-02-01"
 * description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"

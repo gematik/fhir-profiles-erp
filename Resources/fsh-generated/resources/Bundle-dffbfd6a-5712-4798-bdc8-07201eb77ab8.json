@@ -83,7 +83,7 @@
             "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
           ]
         },
-        "status": "active",
+        "status": "draft",
         "serialNumber": "1.4.0",
         "deviceName": [
           {

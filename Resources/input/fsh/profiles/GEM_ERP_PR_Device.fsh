@@ -20,7 +20,7 @@ Title:   "Device for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "1"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device|1.2"
-* status = #active
+* status = #draft
 * serialNumber = "1.4.0"
 * deviceName.name = "E-Rezept-Fachdienst"
 * deviceName.type = #user-friendly-name
