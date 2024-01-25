@@ -2,7 +2,7 @@ Instance: AcceptOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
-* version = "1.2"
+* version = "1.3.0"
 * name = "Accept"
 * status = #active
 * kind = #operation

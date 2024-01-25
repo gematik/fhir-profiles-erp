@@ -2,7 +2,7 @@ Instance: RejectOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition"
-* version = "1.2"
+* version = "1.3.0"
 * name = "Reject"
 * status = #active
 * kind = #operation
