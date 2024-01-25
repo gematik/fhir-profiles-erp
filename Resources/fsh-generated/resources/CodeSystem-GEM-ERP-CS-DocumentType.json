@@ -19,6 +19,10 @@
     {
       "code": "3",
       "display": "Receipt"
+    },
+    {
+      "code": "4",
+      "display": "Medication Dispense"
     }
   ],
   "version": "1.2",
@@ -35,5 +39,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 3
+  "count": 4
 }
