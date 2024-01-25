@@ -241,7 +241,7 @@
         },
         "short": "Input Bundle",
         "definition": "Reference to ePrescription input and outcome during the process",
-        "max": "2",
+        "max": "3",
         "mustSupport": true
       },
       {

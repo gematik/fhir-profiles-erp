@@ -51,7 +51,7 @@ Description: "This resource manages the ePrescription workflow"
 * for.identifier only $identifier-kvid-10 or $identifier-pkv
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
-* input ..2 MS
+* input ..3 MS
 * input ^slicing.discriminator.type = #value
 * input ^slicing.discriminator.path = "type.coding.code"
 * input ^slicing.rules = #closed
