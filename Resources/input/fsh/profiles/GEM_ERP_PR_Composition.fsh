@@ -65,4 +65,4 @@ Usage: #inline
 * title = "Quittung"
 * event.period.start = "2022-03-18T15:28:00+00:00"
 * event.period.end = "2022-03-18T15:29:00+00:00"
-* section[+].entry.reference = "Binary/PrescriptionDigest-160.123.456.789.123.58"
+* section[+].entry.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58"
