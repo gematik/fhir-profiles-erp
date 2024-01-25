@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-Digest
 Title: "QES-Digest in Binary"
 Description: "QES-Digest in Binary"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * meta 1..1
 * meta.profile 1..1

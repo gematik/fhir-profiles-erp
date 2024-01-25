@@ -3,7 +3,7 @@ Id: GEM-ERP-VS-OrganizationType
 Title: "ValueSet of Organizationtype Codes"
 Description: "Type of Organiziation"
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url

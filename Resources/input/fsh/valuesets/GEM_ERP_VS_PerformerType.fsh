@@ -7,7 +7,7 @@ Id: GEM-ERP-VS-PerformerType
 Title: "ValueSet of Performertype Codes"
 Description: "Type of performer"
 * ^url = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url

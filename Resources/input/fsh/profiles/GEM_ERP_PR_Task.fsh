@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 /*
 * extension ^slicing.discriminator.type = #value

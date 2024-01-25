@@ -3,7 +3,7 @@ Id: GEM-ERP-CS-AvailabilityStatus
 Title: "CodeSystem of AvailabilityStatus"
 Description: "Type of the availability status for medication availability request."
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url

@@ -5,7 +5,7 @@ Title: "Communication between Patient and Representative"
 Description: "Ressource used for the communication between patients and their representative pertaining to an ePrescription"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true

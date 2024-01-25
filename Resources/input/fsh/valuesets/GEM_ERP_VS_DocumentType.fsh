@@ -3,7 +3,7 @@ Id: GEM-ERP-VS-DocumentType
 Title: "ValueSet of Documenttype Codes"
 Description: "Type of document depending on the recipient."
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
-* ^version = "1.2"
+* ^version = "1.3.0"
 * ^status = #active
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
