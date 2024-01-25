@@ -12,6 +12,37 @@
     ]
   },
   "status": "unknown",
+  "payload": [
+    {
+      "extension": [
+        {
+          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState",
+          "valueCoding": {
+            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
+            "code": "20"
+          }
+        },
+        {
+          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType",
+          "extension": [
+            {
+              "url": "delivery",
+              "valueBoolean": true
+            },
+            {
+              "url": "onPremise",
+              "valueBoolean": true
+            },
+            {
+              "url": "shipment",
+              "valueBoolean": false
+            }
+          ]
+        }
+      ],
+      "contentString": "Eisern"
+    }
+  ],
   "basedOn": [
     {
       "reference": "Task/160.000.033.491.280.78"
@@ -31,36 +62,5 @@
       }
     }
   ],
-  "sent": "2020-04-29T13:46:30.128+02:00",
-  "payload": [
-    {
-      "extension": [
-        {
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState",
-          "valueCoding": {
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
-            "code": "20"
-          }
-        },
-        {
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType",
-          "extension": [
-            {
-              "url": "onPremise",
-              "valueBoolean": true
-            },
-            {
-              "url": "shipment",
-              "valueBoolean": false
-            },
-            {
-              "url": "delivery",
-              "valueBoolean": true
-            }
-          ]
-        }
-      ],
-      "contentString": "Eisern"
-    }
-  ]
+  "sent": "2020-04-29T13:46:30.128+02:00"
 }

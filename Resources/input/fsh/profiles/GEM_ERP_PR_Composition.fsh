@@ -55,9 +55,9 @@ Title:   "Composition for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "c624cf47-e235-4624-af71-0a09dc9254dc"
 * meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.3"
-* extension[+].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
-* extension[=].valueIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* extension[=].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"
+* extension[Beneficiary].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
+* extension[Beneficiary].valueIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* extension[Beneficiary].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"
 * status = #final
 * type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
 * date = "2022-03-18T15:29:00+00:00"
