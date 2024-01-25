@@ -9,7 +9,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * id 1..
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2" (exactly)
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.3" (exactly)
 * meta.lastUpdated MS
 * target 1..1 SU
 * target ^slicing.discriminator.type = #type
@@ -79,7 +79,7 @@ Instance: PractitionersNarcoticsApproval
 InstanceOf: GEM_ERP_PR_BfArMApproval
 Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.2"
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.3"
 * target[+].reference = "Task/160.100.000.000.024.67"
 * recorded = "2022-02-14T08:39:24+01:00"
 * entity.what.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"

@@ -7,7 +7,7 @@ Title: "Document Bundle for multiple MedicationDispenses on $close Operation"
 * ^status = #draft
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2" (exactly)
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.3" (exactly)
 * type = #collection (exactly)
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"

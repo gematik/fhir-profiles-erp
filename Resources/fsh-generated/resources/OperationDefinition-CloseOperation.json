@@ -34,8 +34,8 @@
       "documentation": "Information on dispensed Medication(s)",
       "type": "canonical",
       "targetProfile": [
-        "http://hl7.org/fhir/StructureDefinition/MedicationDispense|1.2",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2"
+        "http://hl7.org/fhir/StructureDefinition/MedicationDispense|1.3",
+        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.3"
       ]
     },
     {

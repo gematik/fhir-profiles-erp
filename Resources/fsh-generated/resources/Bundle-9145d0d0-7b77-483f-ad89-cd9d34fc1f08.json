@@ -3,7 +3,7 @@
   "id": "9145d0d0-7b77-483f-ad89-cd9d34fc1f08",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.3"
     ],
     "tag": [
       {
@@ -20,7 +20,7 @@
         "id": "3465270a-11e7-4bbf-ae53-378f9cc52747",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.3"
           ]
         },
         "contained": [
@@ -136,7 +136,7 @@
         "id": "3465270a-11e7-4bbf-ae53-378f9cc52747",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.3"
           ]
         },
         "contained": [

@@ -11,7 +11,7 @@ Description: "Ressource used for the communication of informative requests betwe
 * ^abstract = true
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.2" (exactly)
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.3" (exactly)
 * basedOn 1..1
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
@@ -52,7 +52,7 @@ InstanceOf: GEM_ERP_PR_Communication_InfoReq
 Title: "Communication message sent by patient to pharmacy to ask for availybility of medicine WITHOUT providing the AccessCode"
 Usage: #example
 * id = "8ca3c379-ac86-470f-bc12-178c9008f5c9"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.2"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.3"
 * meta.tag.display = "Communication message sent by patient to pharmacy to ask for availybility of medicine WITHOUT providing the AccessCode"
 * contained[+] = SumatripanMedication
 * basedOn.reference = "Task/160.000.033.491.280.78"
