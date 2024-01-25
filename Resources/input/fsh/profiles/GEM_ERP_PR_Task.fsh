@@ -59,7 +59,8 @@ Description: "This resource manages the ePrescription workflow"
 * input ^definition = "Reference to ePrescription input and outcome during the process"
 * input contains
     ePrescription 0..1 and
-    patientReceipt 0..1
+    patientReceipt 0..1 and
+    MedicationDispense 0..1
 * input[ePrescription].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[ePrescription].type.coding.system 1..
 //* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
@@ -73,6 +74,12 @@ Description: "This resource manages the ePrescription workflow"
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
 * input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
+* input[MedicationDispense].type.coding from GEM_ERP_VS_DocumentType (required)
+* input[MedicationDispense].type.coding.system 1..
+//* input[MedicationDispense].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
+* input[MedicationDispense].type.coding.code 1..
+* input[MedicationDispense].type.coding.code = #4 (exactly)
+* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense)
 * output ..1 MS
 * output ^slicing.discriminator.type = #value
 * output ^slicing.discriminator.path = "type.coding.code"
