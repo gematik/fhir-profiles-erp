@@ -5,7 +5,7 @@ Title: "QES-Digest in Binary"
 Description: "QES-Digest in Binary"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
 * ^version = "1.3.0"
-* ^status = #active
+* ^status = #draft
 * meta 1..1
 * meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.2" (exactly)

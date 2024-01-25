@@ -4,7 +4,7 @@ Title: "CodeSystem of Organizationtype Codes"
 Description: "Type of Organiziation where to get e-prescriptions dispensed"
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType"
 * ^version = "1.3.0"
-* ^status = #active
+* ^status = #draft
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

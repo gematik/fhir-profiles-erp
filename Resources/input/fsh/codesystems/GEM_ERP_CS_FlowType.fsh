@@ -4,7 +4,7 @@ Title: "CodeSystem of Flowtypes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
 * ^version = "1.3.0"
-* ^status = #active
+* ^status = #draft
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-CloseOperationInputBundle
 Title: "Document Bundle for multiple MedicationDispenses on $close Operation"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle"
 * ^version = "1.3.0"
-* ^status = #active
+* ^status = #draft
 * meta 1..1
 * meta.profile 1..1
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.2" (exactly)

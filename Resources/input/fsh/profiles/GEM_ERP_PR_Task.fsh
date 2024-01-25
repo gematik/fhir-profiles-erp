@@ -5,7 +5,7 @@ Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
 * ^version = "1.3.0"
-* ^status = #active
+* ^status = #draft
 /*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
