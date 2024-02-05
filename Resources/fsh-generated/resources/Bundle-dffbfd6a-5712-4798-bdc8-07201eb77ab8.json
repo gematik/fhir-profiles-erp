@@ -25,7 +25,7 @@
     ],
     "when": "2022-03-18T15:28:00+00:00",
     "who": {
-      "reference": "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
+      "reference": "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
     },
     "sigFormat": "application/pkcs7-mime",
     "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
@@ -65,7 +65,7 @@
         "date": "2022-03-18T15:29:00+00:00",
         "author": [
           {
-            "reference": "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
+            "reference": "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
           }
         ],
         "event": [
@@ -80,7 +80,7 @@
           {
             "entry": [
               {
-                "reference": "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58"
+                "reference": "urn:uuid:b939a82a-9c23-4b6d-a139-f468d1b9d652"
               }
             ]
           }
@@ -88,7 +88,7 @@
       }
     },
     {
-      "fullUrl": "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1",
+      "fullUrl": "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b",
       "resource": {
         "resourceType": "Device",
         "id": "1",
@@ -119,10 +119,10 @@
       }
     },
     {
-      "fullUrl": "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58",
+      "fullUrl": "urn:uuid:b939a82a-9c23-4b6d-a139-f468d1b9d652",
       "resource": {
         "resourceType": "Binary",
-        "id": "PrescriptionDigest-160.123.456.789.123.58",
+        "id": "b939a82a-9c23-4b6d-a139-f468d1b9d652",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.3"
