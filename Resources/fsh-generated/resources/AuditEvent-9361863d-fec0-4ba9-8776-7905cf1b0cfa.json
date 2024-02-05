@@ -23,7 +23,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Praxis Dr. Müller, Bahnhofstr. 78 hat ein E-Rezept 160.123.456.789.123.58 eingestellt</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"de\" xml:lang=\"de\">Praxis Dr. Müller, Bahnhofstr. 78 hat ein E-Rezept 160.123.456.789.123.58 eingestellt</div>"
   },
   "subtype": [
     {

@@ -55,7 +55,7 @@ Description: "A document style representation of the receipt (complete, self-con
 Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
-* id = "PrescriptionDigest-160.123.456.789.123.58"
+* id = "b939a82a-9c23-4b6d-a139-f468d1b9d652"
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest|1.3"
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
@@ -71,15 +71,15 @@ Usage: #example
 * identifier[=].value = "160.000.033.491.280.78"
 * type = #document
 * timestamp = "2022-03-18T15:28:00+00:00"
-* entry[+].fullUrl = "urn:uuid:c624cf47-e235-4624-af71-0a09dc9254dc"
-* entry[=].resource = ReceiptBundleComposition
-* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
-* entry[=].resource = ReceiptBundleDevice
-* entry[+].fullUrl = "https://erp.zentral.erp.splitdns.ti-dienste.de/Task/160.000.080.761.527.39/PrescriptionDigest-160.123.456.789.123.58"
-* entry[=].resource = ReceiptBundleBinary
-* signature.type[+].system = "urn:iso-astm:E1762-95:2013"
-* signature.type[=].code = #1.2.840.10065.1.12.1.1
+* entry[DocumentInformation].fullUrl = "urn:uuid:c624cf47-e235-4624-af71-0a09dc9254dc"
+* entry[DocumentInformation].resource = ReceiptBundleComposition
+* entry[SigningDevice].fullUrl = "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
+* entry[SigningDevice].resource = ReceiptBundleDevice
+* entry[PrescriptionDigest].fullUrl = "urn:uuid:b939a82a-9c23-4b6d-a139-f468d1b9d652"
+* entry[PrescriptionDigest].resource = ReceiptBundleBinary
+* signature.type[AuthorsSignature].system = "urn:iso-astm:E1762-95:2013"
+* signature.type[AuthorsSignature].code = #1.2.840.10065.1.12.1.1
 * signature.when = "2022-03-18T15:28:00+00:00"
-* signature.who.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
+* signature.who.reference = "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
 * signature.sigFormat = #application/pkcs7-mime
 * signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
