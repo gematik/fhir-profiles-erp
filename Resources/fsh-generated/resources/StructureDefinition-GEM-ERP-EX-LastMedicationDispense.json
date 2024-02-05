@@ -32,7 +32,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Timestamp which is set when a medication for this task has been dispensed.",
-        "definition": "This field allows the frontend to display to the user that a medication has been dispensed before it was closed by the pharmacy."
+        "definition": "This field allows the E-Rezept-FdV to display to the user that a medication has been dispensed before it was closed by the pharmacy."
       },
       {
         "id": "Extension.extension",
@@ -50,6 +50,15 @@
         "type": [
           {
             "code": "instant"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "lastmedicationdispense-ex-1",
+            "severity": "error",
+            "human": "The 'value' field must match the datetime format YYYY-MM-DDTHH:MM:SSZ",
+            "expression": "value.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$')",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
           }
         ]
       }
