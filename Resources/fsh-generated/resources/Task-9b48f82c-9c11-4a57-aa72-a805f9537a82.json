@@ -31,7 +31,7 @@
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense",
-      "valueInstant": "2022-05-20T13:28:17.239+02:00"
+      "valueInstant": "2022-05-20T13:28:17+02:00"
     }
   ],
   "identifier": [
