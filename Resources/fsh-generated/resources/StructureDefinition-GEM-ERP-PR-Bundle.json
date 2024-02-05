@@ -2,10 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Bundle",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle",
-  "version": "1.2",
+  "version": "1.3.0",
   "name": "GEM_ERP_PR_Bundle",
   "title": "Document Bundle for Receipt",
-  "status": "active",
+  "status": "draft",
   "description": "A document style representation of the receipt (complete, self-contained, signed)",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -52,7 +52,7 @@
         "path": "Bundle.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.2"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle|1.3"
       },
       {
         "id": "Bundle.identifier",

@@ -5,13 +5,13 @@ Title: "Reply from Provider to Patient"
 Description: "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative"
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply"
-* ^version = "1.2"
-* ^status = #active
+* ^version = "1.3.0"
+* ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.2" (exactly)
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3" (exactly)
 * basedOn 1..1
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
@@ -49,7 +49,7 @@ InstanceOf: GEM_ERP_PR_Communication_Reply
 Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.2"
+* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3"
 * meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown

@@ -2,10 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Task",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
-  "version": "1.2",
+  "version": "1.3.0",
   "name": "GEM_ERP_PR_Task",
   "title": "Task for Management of ePrescription Workflow",
-  "status": "active",
+  "status": "draft",
   "description": "This resource manages the ePrescription workflow",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -47,7 +47,7 @@
         "path": "Task.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.2"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
       },
       {
         "id": "Task.extension",
@@ -105,6 +105,21 @@
             "code": "Extension",
             "profile": [
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.extension:lastMedicationDispense",
+        "path": "Task.extension",
+        "sliceName": "lastMedicationDispense",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
             ]
           }
         ]
@@ -226,7 +241,7 @@
         },
         "short": "Input Bundle",
         "definition": "Reference to ePrescription input and outcome during the process",
-        "max": "2",
+        "max": "3",
         "mustSupport": true
       },
       {
@@ -306,6 +321,44 @@
             "code": "Reference",
             "targetProfile": [
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Task.input:MedicationDispense",
+        "path": "Task.input",
+        "sliceName": "MedicationDispense",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Task.input:MedicationDispense.type.coding",
+        "path": "Task.input.type.coding",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+        }
+      },
+      {
+        "id": "Task.input:MedicationDispense.type.coding.system",
+        "path": "Task.input.type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Task.input:MedicationDispense.type.coding.code",
+        "path": "Task.input.type.coding.code",
+        "min": 1,
+        "fixedCode": "4"
+      },
+      {
+        "id": "Task.input:MedicationDispense.value[x]",
+        "path": "Task.input.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
             ]
           }
         ]

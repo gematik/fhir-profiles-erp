@@ -1,8 +1,8 @@
 Extension: GEM_ERP_EX_SupplyOptionsType
 Id: GEM-ERP-EX-SupplyOptionsType
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
-* ^version = "1.2"
-* ^status = #active
+* ^version = "1.3.0"
+* ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
 * . ^short = "Options for preferred or offered supply channels"

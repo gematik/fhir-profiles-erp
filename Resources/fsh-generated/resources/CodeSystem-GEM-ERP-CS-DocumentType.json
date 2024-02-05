@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "GEM_ERP_CS_DocumentType",
   "id": "GEM-ERP-CS-DocumentType",
@@ -19,9 +19,13 @@
     {
       "code": "3",
       "display": "Receipt"
+    },
+    {
+      "code": "4",
+      "display": "Medication Dispense"
     }
   ],
-  "version": "1.2",
+  "version": "1.3.0",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -35,5 +39,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 3
+  "count": 4
 }

@@ -5,12 +5,12 @@ Title: "Dispensation of the Prescription"
 Description: "Handles information about the redeem of the prescription and the submited medication."
 * ^meta.lastUpdated = "2020-04-16T13:44:27.957+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
-* ^version = "1.2"
-* ^status = #active
+* ^version = "1.3.0"
+* ^status = #draft
 * ^date = "2020-04-16T13:44:25.6462885+00:00"
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2" (exactly)
+* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.3" (exactly)
 * identifier 1..1
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"

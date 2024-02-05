@@ -2,9 +2,9 @@ Instance: CreateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition"
-* version = "1.2"
+* version = "1.3.0"
 * name = "Create"
-* status = #active
+* status = #draft
 * kind = #operation
 * date = "2022-02-01"
 * description = "This operation creates a Task for the prescription of a specific workflowType."
