@@ -190,7 +190,7 @@ Usage: #example
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
 * extension[expiryDate].valueDate = "2022-06-02"
 * extension[lastMedicationDispense].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
-* extension[lastMedicationDispense].valueInstant = "2022-05-20T13:28:17.239+02:00"
+* extension[lastMedicationDispense].valueInstant = "2022-05-20T13:28:17+02:00"
 * identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[PrescriptionID].value = "160.000.033.491.280.78"
 * identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
