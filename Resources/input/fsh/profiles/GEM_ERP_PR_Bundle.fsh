@@ -3,12 +3,8 @@ Parent: Bundle
 Id: GEM-ERP-PR-Bundle
 Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-* insert Versioning
+* insert Profile(GEM_ERP_PR_Bundle)
 * id 1..1
-* meta 1..1
-* meta.profile 1..1
-* insert PackageProfileExactly(StructureDefinition/GEM_ERP_PR_Bundle)
 * identifier 1.. MS
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "identifier of ePrescription"
@@ -55,7 +51,7 @@ Instance: ReceiptBundleBinary
 InstanceOf: Binary
 Usage: #inline
 * id = "b939a82a-9c23-4b6d-a139-f468d1b9d652"
-* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Digest)
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Digest)
 * contentType = #application/octet-stream
 * data = "tJg8c5ZtdhzEEhJ0ZpAsUVFx5dKuYgQFs5oKgthi17M="
 
@@ -64,7 +60,7 @@ InstanceOf: GEM_ERP_PR_Bundle
 Title:   "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
 Usage: #example
 * id = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
-* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Bundle)
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Bundle)
 * meta.tag.display = "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
