@@ -2,13 +2,7 @@ CodeSystem: GEM_ERP_CS_FlowType
 Id: GEM-ERP-CS-FlowType
 Title: "CodeSystem of Flowtypes"
 Description: "Shows the different types of the ePrescription according to the prescription forms."
-* ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
-* insert Versioning
-* ^publisher = "gematik GmbH"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.gematik.de"
-* ^copyright = "gematik GmbH"
-* ^caseSensitive = true
+* insert CodeSystem(GEM_ERP_CS_FlowType)
 * ^content = #complete
 * #160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * #165 "Muster 16 (Betäubungsmittel)"
