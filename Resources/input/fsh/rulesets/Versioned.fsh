@@ -1,3 +1,10 @@
+// General rule for to handle versions for all structure definitions
+RuleSet: Versioning
+* ^status = #draft
+* ^version = "1.3.0"
+
+
+// Rules to set meta.profile in profiles and instances
 RuleSet: PackageMetaProfileExactly(profile)
 * insert MetaProfileExactly(https://gematik.de/fhir/erp/{profile}, 1.3)
 
@@ -10,6 +17,8 @@ RuleSet: PackageMetaProfile(profile)
 RuleSet: MetaProfile(profile, version)
 * meta.profile[+] = "{profile}|{version}"
 
+
+// Rules to set targetProfiles for operations parameters
 RuleSet: PackageTargetProfile(profile)
 * insert TargetProfile(https://gematik.de/fhir/erp/{profile}, 1.3)
 
