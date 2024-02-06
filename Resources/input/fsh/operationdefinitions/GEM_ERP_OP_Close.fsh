@@ -21,7 +21,7 @@ Usage: #definition
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
 * parameter[=]
-  * insert ProfileTarget(http://hl7.org/fhir/StructureDefinition/MedicationDispense, 1.3)
+  * insert ProfileTargetMedicationDispense
   * insert PackageProfileTarget(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 // out
 * parameter[+].name = #Receipt
@@ -36,7 +36,7 @@ InstanceOf: Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* insert Profile(https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN, 1.1.0)
+* insert ProfileKbvMedicationPzn
 //Kategorie
 * extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
 * extension[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
