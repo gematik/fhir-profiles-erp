@@ -10,7 +10,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * ^abstract = true
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3" (exactly)
+* insert PackageProfileExactly(StructureDefinition/GEM_ERP_PR_Communication_Reply)
 * basedOn 1..1
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
@@ -48,7 +48,7 @@ InstanceOf: GEM_ERP_PR_Communication_Reply
 Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Communication_Reply)
 * meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown

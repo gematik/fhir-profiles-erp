@@ -20,8 +20,9 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
-* parameter[=].targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense|1.3"
-* parameter[=].targetProfile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.3"
+* parameter[=]
+  * insert ProfileTarget(http://hl7.org/fhir/StructureDefinition/MedicationDispense, 1.3)
+  * insert PackageProfileTarget(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 // out
 * parameter[+].name = #Receipt
 * parameter[=].use = #out
@@ -35,7 +36,7 @@ InstanceOf: Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* meta.profile[+] = "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.1.0"
+* insert Profile(https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN, 1.1.0)
 //Kategorie
 * extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
 * extension[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
@@ -68,7 +69,7 @@ InstanceOf: MedicationDispense
 Title:   "MedicationDispense handed to Günther at a pharmacy"
 Usage: #example
 * id = "3465270a-11e7-4bbf-ae53-378f9cc52747"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
 * contained[+] = SumatripanMedication
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
@@ -87,7 +88,7 @@ Title:   "Bundle of 2 MedicationDispense handed to Waltraud at a pharmacy"
 Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20, then there will be 2 MedicationDispenses for the E-Rezept backend"
 Usage: #example
 * id = "9145d0d0-7b77-483f-ad89-cd9d34fc1f08"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 * meta.tag.display = "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"

@@ -19,7 +19,7 @@ Description: "This resource manages the ePrescription workflow"
 */
 * meta 1..1
 * meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3" (exactly)
+* insert PackageProfileExactly(StructureDefinition/GEM_ERP_PR_Task)
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
@@ -99,7 +99,7 @@ Title:   "Task just created by Fachdienst via $create operation"
 Description:   "Task just created by Fachdienst via $create operation"
 Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Task)
 * meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
@@ -122,7 +122,7 @@ InstanceOf: GEM_ERP_PR_Task
 Title:   "Task activated by (Z)PVS/KIS via $activate operation that carries a dispensable ePrescription"
 Usage: #example
 * id = "607255ed-ce41-47fc-aad3-cfce1c39963f"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Task)
 * meta.tag.display = "Task in READY state activated by (Z)PVS/KIS via $activate operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
@@ -151,7 +151,7 @@ InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy via $accept operation"
 Usage: #example
 * id = "d70932d1-9e1c-483c-b2d4-b7dced09b35e"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Task)
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
@@ -180,7 +180,7 @@ InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
 Usage: #example
 * id = "9b48f82c-9c11-4a57-aa72-a805f9537a82"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Task)
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
@@ -213,7 +213,7 @@ InstanceOf: GEM_ERP_PR_Task
 Title:   "Task finished by pharmacy via $close operation"
 Usage: #example
 * id = "09330307-16ce-4cdc-810a-ca24ef80dde3"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.3"
+* insert PackageProfile(StructureDefinition/GEM_ERP_PR_Task)
 * meta.tag.display = "Task in COMPLETED state dispensed by pharmacy via $closed operation"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
