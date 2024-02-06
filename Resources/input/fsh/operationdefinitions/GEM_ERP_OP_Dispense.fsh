@@ -1,19 +1,10 @@
 Instance: DispenseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition"
-* version = "1.3.0"
-* name = "Dispense"
-* status = #draft
-* kind = #operation
+* insert Operation(Dispense)
 * date = "2022-02-01"
 * description = "The operation $dispense lets the pharmacy perform a dispense for a medication without changing the status of the task. This actions lets a frontend display that a medication has been dispensed before it is closed by the pharmacy."
-* affectsState = true
 * code = #dispense
-* resource = #Task
-* system = false
-* type = false
-* instance = true
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
 // in
 * parameter[0].name = #secret
@@ -22,7 +13,7 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This paramter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
 * parameter[=].type = #string
-// in 
+// in
 * parameter[+].name = #MedicationDispense
 * parameter[=].use = #in
 * parameter[=].min = 1

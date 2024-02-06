@@ -4,8 +4,7 @@ Id: GEM-ERP-PR-BfArMApproval
 Title: "BfArM Approval of admissibility for doctor s prescription of narcotics"
 Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) the eprescription server requests authorization for narcotics within the doctor s quota. If approved, the server returns a signed Provenance for documentation purpose"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 * id 1..
 * meta 1..1
 * meta.profile 1..1
@@ -17,7 +16,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * target ^slicing.description = "This Provenance targets the ePrescription workflow item Task and the ePrescroption as a whole"
 * target ^slicing.rules = #closed
 * target contains
-    TaskReference 1..1	
+    TaskReference 1..1
 * target[TaskReference] only Reference(GEM_ERP_PR_Task)
 * target[TaskReference] ^short = "Reference to the ePrescription Task"
 * recorded SU
@@ -61,7 +60,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * signature.sigFormat = #application/pkcs7-mime (exactly)
 * signature.data 1..
 //
-// unusd fields  
+// unusd fields
 //
 * meta.extension ..0
 * meta.security ..0

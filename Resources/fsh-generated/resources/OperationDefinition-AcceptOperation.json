@@ -6,16 +6,16 @@
   "name": "Accept",
   "status": "draft",
   "kind": "operation",
-  "date": "2022-04-01",
-  "description": "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'.",
   "affectsState": true,
-  "code": "accept",
   "resource": [
     "Task"
   ],
   "system": false,
   "type": false,
   "instance": true,
+  "date": "2022-04-01",
+  "description": "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'.",
+  "code": "accept",
   "outputProfile": "http://hl7.org/fhir/StructureDefinition/Bundle",
   "parameter": [
     {

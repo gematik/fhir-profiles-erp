@@ -5,8 +5,7 @@ Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * meta 1..1

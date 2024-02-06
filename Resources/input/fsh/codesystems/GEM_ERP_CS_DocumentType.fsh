@@ -3,8 +3,7 @@ Id: GEM-ERP-CS-DocumentType
 Title: "CodeSystem of Documenttypes"
 Description: "Type of document depending on the recipient of the Bundle."
 * ^url = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"

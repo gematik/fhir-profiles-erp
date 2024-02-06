@@ -4,8 +4,7 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 /*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -13,7 +12,7 @@ Description: "This resource manages the ePrescription workflow"
 * extension contains
     GEM_ERP_EX_PrescriptionType named flowType 1..1 and
     GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
-    GEM_ERP_EX_ExpiryDate named expiryDate 0..1 
+    GEM_ERP_EX_ExpiryDate named expiryDate 0..1
 
 
 

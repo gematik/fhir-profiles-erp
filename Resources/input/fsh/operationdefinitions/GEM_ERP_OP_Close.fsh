@@ -1,19 +1,10 @@
 Instance: CloseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
-* version = "1.3.0"
-* name = "Close"
-* status = #draft
-* kind = #operation
+* insert Operation(Close)
 * date = "2022-02-01"
 * description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"
-* affectsState = true
 * code = #close
-* resource = #Task
-* system = false
-* type = false
-* instance = true
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
 // in
 * parameter[0].name = #secret
@@ -22,7 +13,7 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This paramter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
 * parameter[=].type = #string
-// in 
+// in
 * parameter[+].name = #MedicationDispense
 * parameter[=].use = #in
 * parameter[=].min = 1

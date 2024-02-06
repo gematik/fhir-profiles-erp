@@ -4,8 +4,7 @@ Id: GEM-ERP-PR-AuditEvent
 Title: "AuditEvent for Logging of ePrescription Access"
 * ^meta.lastUpdated = "2020-04-16T13:41:55.87+00:00"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 * ^date = "2020-04-16T13:41:53.3147244+00:00"
 * meta 1..1
 * meta.profile 1..1

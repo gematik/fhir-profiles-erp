@@ -6,16 +6,16 @@
   "name": "Create",
   "status": "draft",
   "kind": "operation",
-  "date": "2022-02-01",
-  "description": "This operation creates a Task for the prescription of a specific workflowType.",
   "affectsState": true,
-  "code": "create",
   "resource": [
     "Task"
   ],
   "system": false,
   "type": true,
   "instance": false,
+  "date": "2022-02-01",
+  "description": "This operation creates a Task for the prescription of a specific workflowType.",
+  "code": "create",
   "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
   "parameter": [
     {

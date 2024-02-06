@@ -4,8 +4,7 @@ Id: GEM-ERP-PR-Bundle
 Title: "Document Bundle for Receipt"
 Description: "A document style representation of the receipt (complete, self-contained, signed)"
 * ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert Versioning
 * id 1..1
 * meta 1..1
 * meta.profile 1..1
@@ -25,21 +24,21 @@ Description: "A document style representation of the receipt (complete, self-con
     SigningDevice 1..1 and
     PrescriptionDigest 1..1
 * entry[DocumentInformation].resource only GEM_ERP_PR_Composition
-* entry[DocumentInformation].resource 1.. 
+* entry[DocumentInformation].resource 1..
 * entry[DocumentInformation].fullUrl 1..
 * entry[DocumentInformation].link ..0
 * entry[DocumentInformation].search ..0
 * entry[DocumentInformation].request ..0
 * entry[DocumentInformation].response ..0
 * entry[SigningDevice].resource only GEM_ERP_PR_Device
-* entry[SigningDevice].resource 1.. 
+* entry[SigningDevice].resource 1..
 * entry[SigningDevice].fullUrl 1..
 * entry[SigningDevice].link ..0
 * entry[SigningDevice].search ..0
 * entry[SigningDevice].request ..0
 * entry[SigningDevice].response ..0
 * entry[PrescriptionDigest].resource only GEM_ERP_PR_Digest
-* entry[PrescriptionDigest].resource 1.. 
+* entry[PrescriptionDigest].resource 1..
 * entry[PrescriptionDigest].fullUrl 1..
 * entry[PrescriptionDigest].link ..0
 * entry[PrescriptionDigest].search ..0
