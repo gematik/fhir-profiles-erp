@@ -256,7 +256,7 @@
         "path": "Task.input.type.coding",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
       },
       {
@@ -299,7 +299,7 @@
         "path": "Task.input.type.coding",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
       },
       {
@@ -337,7 +337,7 @@
         "path": "Task.input.type.coding",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
       },
       {
@@ -392,7 +392,7 @@
         "path": "Task.output.type.coding",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_DocumentType"
+          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
         }
       },
       {
