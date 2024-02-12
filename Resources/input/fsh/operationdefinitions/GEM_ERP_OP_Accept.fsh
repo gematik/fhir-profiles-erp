@@ -1,19 +1,10 @@
 Instance: AcceptOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
-* version = "1.3.0"
-* name = "Accept"
-* status = #draft
-* kind = #operation
+* insert Operation(Accept)
 * date = "2022-04-01"
 * description = "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'."
-* affectsState = true
 * code = #accept
-* resource = #Task
-* system = false
-* type = false
-* instance = true
 * outputProfile = "http://hl7.org/fhir/StructureDefinition/Bundle"
 // in
 * parameter[0].name = #ac

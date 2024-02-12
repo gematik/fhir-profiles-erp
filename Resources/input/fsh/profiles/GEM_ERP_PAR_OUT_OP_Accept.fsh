@@ -1,9 +1,7 @@
 Profile: GEM_ERP_PAR_OUT_OP_Accept
 Parent: Parameters
 Id: GEM-ERP-PAR-OUT-OP-Accept
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PAR_OUT_OP_Accept"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert StructureDefinition(GEM_ERP_PAR_OUT_OP_Accept)
 * parameter ..2
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"

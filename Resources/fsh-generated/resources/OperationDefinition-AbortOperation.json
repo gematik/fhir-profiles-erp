@@ -6,16 +6,16 @@
   "name": "Abort",
   "status": "draft",
   "kind": "operation",
-  "date": "2022-04-01",
-  "description": "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task.",
   "affectsState": true,
-  "code": "abort",
   "resource": [
     "Task"
   ],
   "system": false,
   "type": false,
   "instance": true,
+  "date": "2022-04-01",
+  "description": "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task.",
+  "code": "abort",
   "parameter": [
     {
       "name": "ac",

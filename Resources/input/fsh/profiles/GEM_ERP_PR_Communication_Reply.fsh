@@ -3,15 +3,10 @@ Parent: Communication
 Id: GEM-ERP-PR-Communication-Reply
 Title: "Reply from Provider to Patient"
 Description: "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative"
+* insert Profile(GEM_ERP_PR_Communication_Reply)
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply"
-* ^version = "1.3.0"
-* ^status = #draft
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
-* meta 1..1
-* meta.profile 1..1
-* meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3" (exactly)
 * basedOn 1..1
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
@@ -35,7 +30,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
-* payload.extension contains 
+* payload.extension contains
     GEM_ERP_EX_SupplyOptionsType named OfferedSupplyOptions 0..1 and
     GEM_ERP_EX_AvailabilityState named AvailabilityStatus 0..1
 * payload.extension[OfferedSupplyOptions] ^short = "Offered supply options by pharmacy"
@@ -49,7 +44,7 @@ InstanceOf: GEM_ERP_PR_Communication_Reply
 Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
-* meta.profile[+] = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.3"
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Communication_Reply)
 * meta.tag.display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown

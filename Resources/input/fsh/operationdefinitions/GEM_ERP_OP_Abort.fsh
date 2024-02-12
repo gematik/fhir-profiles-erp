@@ -1,19 +1,10 @@
 Instance: AbortOperation
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
-* version = "1.3.0"
-* name = "Abort"
-* status = #draft
-* kind = #operation
+* insert Operation(Abort)
 * date = "2022-04-01"
 * description = "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task."
-* affectsState = true
 * code = #abort
-* resource = #Task
-* system = false
-* type = false
-* instance = true
 // in
 * parameter[0].name = #ac
 * parameter[=].use = #in

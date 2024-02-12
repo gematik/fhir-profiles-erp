@@ -1,9 +1,7 @@
 Extension: GEM_ERP_EX_PrescriptionType
 Id: GEM-ERP-EX-PrescriptionType
 Description: "Definies the Type of a prescription."
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert StructureDefinition(GEM_ERP_EX_PrescriptionType)
 * . ^short = "Type of the prescription"
 * . ^definition = "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms."
 * ^context[0].type = #element

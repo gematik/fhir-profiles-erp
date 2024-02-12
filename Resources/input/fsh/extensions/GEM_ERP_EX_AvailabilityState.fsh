@@ -1,8 +1,6 @@
 Extension: GEM_ERP_EX_AvailabilityState
 Id: GEM-ERP-EX-AvailabilityState
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert StructureDefinition(GEM_ERP_EX_AvailabilityState)
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
 * value[x] only Coding

@@ -1,8 +1,6 @@
 Extension: GEM_ERP_EX_SubstitutionAllowedType
 Id: GEM-ERP-EX-SubstitutionAllowedType
-* ^url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SubstitutionAllowedType"
-* ^version = "1.3.0"
-* ^status = #draft
+* insert StructureDefinition(GEM_ERP_EX_SubstitutionAllowedType)
 * ^context.type = #element
 * ^context.expression = "Communication.payload"
 * . ^short = "Extension for aut idem substitution allowed"
