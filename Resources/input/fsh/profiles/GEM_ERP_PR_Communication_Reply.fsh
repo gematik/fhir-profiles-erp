@@ -22,7 +22,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * recipient.identifier 1..1
 * recipient.identifier only $identifier-kvid-10 or $identifier-pkv
 //* sender only Reference(Organization or Practitioner or PractitionerRole or HealthcareService)
-* sender 1..1
+* sender MS
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv or IdentifierTelematikId

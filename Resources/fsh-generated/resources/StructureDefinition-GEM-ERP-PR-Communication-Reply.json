@@ -109,7 +109,7 @@
         "id": "Communication.sender",
         "path": "Communication.sender",
         "definition": "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication.",
-        "min": 1
+        "mustSupport": true
       },
       {
         "id": "Communication.sender.identifier",
