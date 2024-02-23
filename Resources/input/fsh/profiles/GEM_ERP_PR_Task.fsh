@@ -46,7 +46,7 @@ Description: "This resource manages the ePrescription workflow"
 * for.identifier only $identifier-kvid-10 or $identifier-pkv
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
-* input ..3 MS
+* input ..* MS
 * input ^slicing.discriminator.type = #value
 * input ^slicing.discriminator.path = "type.coding.code"
 * input ^slicing.rules = #closed
@@ -55,7 +55,7 @@ Description: "This resource manages the ePrescription workflow"
 * input contains
     ePrescription 0..1 and
     patientReceipt 0..1 and
-    MedicationDispense 0..1
+    MedicationDispense 0..*
 * input[ePrescription].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[ePrescription].type.coding.system 1..
 //* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
@@ -202,7 +202,48 @@ Usage: #example
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 * input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "0b9ed877-006f-41ff-81df-813109915c81"
+* input[MedicationDispense].valueReference.reference = "c211a765-9559-4def-a819-14a41f54ccc5"
+
+Instance: TaskInIn-ProgressState-Dispensed-Multiple-MedicationDispenses
+InstanceOf: GEM_ERP_PR_Task
+Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
+Usage: #example
+* id = "f5c21409-b84b-4125-8649-5630a00906b1"
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Task)
+* meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* extension[acceptDate].valueDate = "2022-04-02"
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* extension[expiryDate].valueDate = "2022-06-02"
+* extension[lastMedicationDispense].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
+* extension[lastMedicationDispense].valueInstant = "2022-05-20T13:28:17+02:00"
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "160.000.033.491.280.78"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* status = #in-progress
+* intent = #order
+* authoredOn = "2022-03-18T15:26:00+00:00"
+* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
+* for.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* for.identifier.value = "X123456789"
+* lastModified = "2022-03-18T15:28:00+00:00"
+* input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
+* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
+* input[MedicationDispense].valueReference.reference = "e93b04e7-b0f8-4860-b74d-dae07aebe910"
+* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
+* input[MedicationDispense].valueReference.reference = "e71276da-0cd2-488e-87de-054e6763acf1"
+* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
+* input[MedicationDispense].valueReference.reference = "0aa0ae88-0b03-4e69-b9e1-ebfb13dc27da"
+* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
+* input[MedicationDispense].valueReference.reference = "6c2dc20d-0daf-4c4c-81df-3b356b4137ef"
+* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
+* input[MedicationDispense].valueReference.reference = "bc135c7a-b3e1-46de-898e-c189316e0ea4"
 
 Instance: TaskInClosedState
 InstanceOf: GEM_ERP_PR_Task
