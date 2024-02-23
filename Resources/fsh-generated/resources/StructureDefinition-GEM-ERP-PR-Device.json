@@ -68,6 +68,7 @@
       {
         "id": "Device.contact",
         "path": "Device.contact",
+        "short": "Contact details of the ePrescription backend server.",
         "mustSupport": true
       }
     ]

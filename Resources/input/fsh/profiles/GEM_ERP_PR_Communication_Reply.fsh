@@ -11,18 +11,28 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1
+  * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
+  * ^comment = "Has the form 'Task/<PrescriptionID>'"
 * status = #unknown (exactly)
 //* about only Reference(Medication)
 //* about MS
 //* about ^type.aggregation = #contained
 //* about.reference 1.. MS
 * sent MS
+  * ^short = "The time when this communication was sent."
+  * ^comment = " Set by the eprescription server."
 * received MS
+  * ^short = "The time when this communication was received."
+  * ^comment = " Set by the eprescription server."
 * recipient 1..1
+  * ^short = "The entity (e.g. person, organization) which was the target of the communication."
+  * ^comment = " This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1..1
 * recipient.identifier only $identifier-kvid-10 or $identifier-pkv
 //* sender only Reference(Organization or Practitioner or PractitionerRole or HealthcareService)
 * sender MS
+  * ^short = "The entity (e.g. person, organization) which was the source of the communication."
+  * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv or IdentifierTelematikId
@@ -38,6 +48,8 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * payload.extension[AvailabilityStatus] ^short = "Availability Status of queried medication"
 * payload.content[x] only string
 * payload.content[x] MS
+  * ^short = "The actual content of the message"
+  * ^comment = "This content needs to be a JSON according to gemSpec_DM_eRp."
 
 Instance: Communication_Reply
 InstanceOf: GEM_ERP_PR_Communication_Reply

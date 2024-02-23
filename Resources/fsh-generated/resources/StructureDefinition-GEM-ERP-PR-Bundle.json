@@ -232,6 +232,7 @@
       {
         "id": "Bundle.signature",
         "path": "Bundle.signature",
+        "short": "Enveloping signature applied to the receipt",
         "type": [
           {
             "code": "Signature",

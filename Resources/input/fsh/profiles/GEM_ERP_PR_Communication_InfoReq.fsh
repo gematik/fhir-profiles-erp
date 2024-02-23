@@ -8,6 +8,8 @@ Description: "Ressource used for the communication of informative requests betwe
 * ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * basedOn 1..1
+  * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
+  * ^comment = "Has the form 'Task/<PrescriptionID>'"
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1
@@ -17,11 +19,19 @@ Description: "Ressource used for the communication of informative requests betwe
 * about ^type.aggregation = #contained
 * about.reference 1..1
 * sent MS
+  * ^short = "The time when this communication was sent."
+  * ^comment = " Set by the eprescription server."
 * received MS
+  * ^short = "The time when this communication was received."
+  * ^comment = " Set by the eprescription server."
 * recipient 1..1
+  * ^short = "The entity (e.g. person, organization) which was the target of the communication."
+  * ^comment = " This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1..1
 * recipient.identifier only IdentifierTelematikId
 * sender MS
+  * ^short = "The entity (e.g. person, organization) which was the source of the communication."
+  * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
@@ -41,6 +51,8 @@ Description: "Ressource used for the communication of informative requests betwe
 * payload.extension[PrescriptionType] ^short = "PrescriptionType for ePrescription workflow"
 * payload.extension[PrescriptionType] ^definition = "PrescriptionType for ePrescription workflow as stated in Task-Ressource for an ePrescription"
 * payload.content[x] only string
+  * ^short = "The actual content of the message"
+  * ^comment = "This content needs to be a JSON according to gemSpec_DM_eRp."
 
 Instance: Communication_InformationRequest
 InstanceOf: GEM_ERP_PR_Communication_InfoReq

@@ -10,3 +10,5 @@ Description: "The prescriptionID is an generated and not changeable sequence of 
 * system 1.. MS
 * system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId" (exactly)
 * value 1.. MS
+  * ^short = "The identifier for an ePrescription."
+  * ^comment = "Datamodel according to gemSpec_DM_eRp"

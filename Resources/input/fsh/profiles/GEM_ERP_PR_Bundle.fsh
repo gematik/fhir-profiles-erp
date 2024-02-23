@@ -42,6 +42,7 @@ Description: "A document style representation of the receipt (complete, self-con
 * entry[PrescriptionDigest].response ..0
 * signature only GEM_ERP_PR_Signature
 * signature MS
+  * ^short = "Enveloping signature applied to the receipt"
 * signature.type 1..
 * signature.type ^slicing.discriminator.type = #value
 * signature.type ^slicing.discriminator.path = "code"

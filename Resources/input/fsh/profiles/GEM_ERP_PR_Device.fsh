@@ -8,6 +8,7 @@ Description: "static information on the ePrescription backend server"
 * deviceName 1..1
 * version 1..1
 * contact MS
+  * ^short = "Contact details of the ePrescription backend server."
 
 Instance: ReceiptBundleDevice
 InstanceOf: GEM_ERP_PR_Device

@@ -11,14 +11,23 @@ Description: "Ressource used for the communication of dispense request between p
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1.. MS
+  * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
+  * ^comment = "Has the form 'Task/<PrescriptionID>'"
 * status = #unknown (exactly)
 * sent MS
+  * ^short = "The time when this communication was sent."
+  * ^comment = " Set by the eprescription server."
 * received MS
+  * ^short = "The time when this communication was received."
+  * ^comment = " Set by the eprescription server."
 * recipient 1..1 MS
+  * ^short = "The entity (e.g. person, organization) which was the target of the communication."
+  * ^comment = " This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1.. MS
 * recipient.identifier only IdentifierTelematikId
 * sender MS
-* sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
+  * ^short = "The entity (e.g. person, organization) which was the source of the communication."
+  * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender.identifier 1.. MS
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
 * payload 1..1 MS
@@ -27,6 +36,8 @@ Description: "Ressource used for the communication of dispense request between p
 * payload.extension ^slicing.rules = #closed
 //* payload.extension contains GEM_ERP_EX_InsuranceProvider named InsuranceProvider 0..1
 * payload.content[x] only string
+  * ^short = "The actual content of the message"
+  * ^comment = "This content needs to be a JSON according to gemSpec_DM_eRp."
 
 Instance: Communication_DispenseRequest
 InstanceOf: GEM_ERP_PR_Communication_DispReq
