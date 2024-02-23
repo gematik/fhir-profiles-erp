@@ -70,7 +70,7 @@
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
         "short": "States the E-Rezept-Token according to gemSpec_DM_eRp.",
-        "comment": "Has the form 'Task/<PrescriptionID>'",
+        "comment": "Has the form \"Task/{{PrescriptionID}}\"",
         "min": 1,
         "mustSupport": true
       },

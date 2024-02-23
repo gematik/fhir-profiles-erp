@@ -9,7 +9,7 @@ Description: "Ressource used for the communication of informative requests betwe
 * ^abstract = true
 * basedOn 1..1
   * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
-  * ^comment = "Has the form 'Task/<PrescriptionID>'"
+  * ^comment = "Has the form 'Task/{{PrescriptionID}}'"
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1

@@ -12,7 +12,7 @@ Description: "Ressource used for the communication of the reply to dispense/info
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1
   * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
-  * ^comment = "Has the form 'Task/<PrescriptionID>'"
+  * ^comment = "Has the form 'Task/{{PrescriptionID}}'"
 * status = #unknown (exactly)
 //* about only Reference(Medication)
 //* about MS

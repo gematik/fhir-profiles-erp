@@ -12,7 +12,7 @@ Description: "Ressource used for the communication between patients and their re
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1.. MS
   * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
-  * ^comment = "Has the form 'Task/<PrescriptionID>'"
+  * ^comment = "Has the form 'Task/{{PrescriptionID}}'"
 * status = #unknown (exactly)
 * sent MS
   * ^short = "The time when this communication was sent."
