@@ -77,7 +77,6 @@ Title:   "Bundle of 2 MedicationDispense handed to Waltraud at a pharmacy"
 Description: "Lets asume, Waltraud needs 40 TABs and the pharmacy hands out 2*20, then there will be 2 MedicationDispenses for the E-Rezept backend"
 Usage: #example
 * id = "558c2f69-62f6-4a74-8d13-70e945d28b71"
-* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 * meta.tag.display = "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
 * type = #collection
 * entry[+].fullUrl = "http://hier-koennte-ihre-werbung-stehen"
