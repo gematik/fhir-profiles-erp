@@ -21,8 +21,8 @@ Usage: #definition
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
 * parameter[=]
-  * targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
-  * targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/Bundle"
+  * targetProfile[+] = $fhir-core-medicationdispense
+  * targetProfile[+] = $fhir-core-bundle
   
 // out
 * parameter[+].name = #Receipt
