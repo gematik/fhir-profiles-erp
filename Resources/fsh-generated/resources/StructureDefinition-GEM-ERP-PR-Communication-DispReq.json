@@ -69,6 +69,8 @@
       {
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
+        "short": "States the E-Rezept-Token according to gemSpec_DM_eRp.",
+        "comment": "Has the form \"Task/{{PrescriptionID}}\"",
         "min": 1,
         "mustSupport": true
       },
@@ -80,16 +82,22 @@
       {
         "id": "Communication.sent",
         "path": "Communication.sent",
+        "short": "The time when this communication was sent.",
+        "comment": "Set by the eprescription server.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
+        "short": "The time when this communication was received.",
+        "comment": "Set by the eprescription server.",
         "mustSupport": true
       },
       {
         "id": "Communication.recipient",
         "path": "Communication.recipient",
+        "short": "The entity (e.g. person, organization) which was the target of the communication.",
+        "comment": "This needs to be set by the sender of the communication to define the target.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -111,7 +119,8 @@
       {
         "id": "Communication.sender",
         "path": "Communication.sender",
-        "definition": "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication.",
+        "short": "The entity (e.g. person, organization) which was the source of the communication.",
+        "comment": "Set by ePrescription server using client AuthN-Credential",
         "mustSupport": true
       },
       {
@@ -123,7 +132,7 @@
             "code": "Identifier",
             "profile": [
               "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
+              "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
         ],
@@ -153,6 +162,8 @@
       {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
+        "short": "The actual content of the message",
+        "comment": "This content needs to be a JSON according to gemSpec_DM_eRp.",
         "type": [
           {
             "code": "string"

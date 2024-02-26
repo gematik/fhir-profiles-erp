@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-CloseOperationInputBundle
 Title: "Document Bundle for multiple MedicationDispenses on $close Operation"
 * insert Profile(GEM_ERP_PR_CloseOperationInputBundle)
 * type = #collection (exactly)
-* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains

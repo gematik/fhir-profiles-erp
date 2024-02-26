@@ -48,6 +48,8 @@
       {
         "id": "Identifier.value",
         "path": "Identifier.value",
+        "short": "The identifier for an ePrescription.",
+        "comment": "Datamodel according to gemSpec_DM_eRp",
         "min": 1,
         "mustSupport": true
       }

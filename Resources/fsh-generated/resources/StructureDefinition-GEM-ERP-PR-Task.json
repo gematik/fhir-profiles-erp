@@ -213,7 +213,7 @@
             "code": "Identifier",
             "profile": [
               "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
+              "http://fhir.de/StructureDefinition/identifier-pkv"
             ]
           }
         ]
@@ -248,6 +248,7 @@
         "id": "Task.input:ePrescription",
         "path": "Task.input",
         "sliceName": "ePrescription",
+        "short": "QES-Binary of the ePrescription",
         "min": 0,
         "max": "1"
       },
@@ -291,6 +292,7 @@
         "id": "Task.input:patientReceipt",
         "path": "Task.input",
         "sliceName": "patientReceipt",
+        "short": "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV",
         "min": 0,
         "max": "1"
       },
@@ -320,7 +322,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
+              "http://hl7.org/fhir/StructureDefinition/Bundle"
             ]
           }
         ]
@@ -329,6 +331,7 @@
         "id": "Task.input:MedicationDispense",
         "path": "Task.input",
         "sliceName": "MedicationDispense",
+        "short": "Reference to the MedicationDispenses of a task",
         "min": 0,
         "max": "1"
       },
@@ -358,7 +361,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+              "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
             ]
           }
         ]

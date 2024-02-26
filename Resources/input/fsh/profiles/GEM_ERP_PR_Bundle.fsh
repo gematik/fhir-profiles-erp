@@ -12,7 +12,7 @@ Description: "A document style representation of the receipt (complete, self-con
 * type MS
 * timestamp 1..
 * entry SU
-* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.type = #type // Da es verschiedene Resource-Typen gibt, wird hier nach dem Typ unterschieden
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
@@ -42,6 +42,7 @@ Description: "A document style representation of the receipt (complete, self-con
 * entry[PrescriptionDigest].response ..0
 * signature only GEM_ERP_PR_Signature
 * signature MS
+  * ^short = "Enveloping signature applied to the receipt"
 * signature.type 1..
 * signature.type ^slicing.discriminator.type = #value
 * signature.type ^slicing.discriminator.path = "code"

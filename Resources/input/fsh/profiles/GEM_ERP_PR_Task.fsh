@@ -63,18 +63,21 @@ Description: "This resource manages the ePrescription workflow"
 * input[ePrescription].type.coding.code = #1 (exactly)
 * input[ePrescription].value[x] only Reference(GEM_ERP_PR_Binary)
 * input[ePrescription].value[x].reference 1..
+* input[ePrescription] ^short = "QES-Binary of the ePrescription"
 * input[patientReceipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[patientReceipt].type.coding.system 1..
 //* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
-* input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
+* input[patientReceipt].value[x] only Reference(Bundle)
+* input[patientReceipt] ^short = "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV"
 * input[MedicationDispense].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[MedicationDispense].type.coding.system 1..
 //* input[MedicationDispense].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[MedicationDispense].type.coding.code 1..
 * input[MedicationDispense].type.coding.code = #4 (exactly)
-* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense)
+* input[MedicationDispense].value[x] only Reference(MedicationDispense)
+* input[MedicationDispense] ^short = "Reference to the MedicationDispenses of a task"
 * output ..1 MS
 * output ^slicing.discriminator.type = #value
 * output ^slicing.discriminator.path = "type.coding.code"
