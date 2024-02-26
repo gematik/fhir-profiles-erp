@@ -16,13 +16,13 @@ Description: "Ressource used for the communication between patients and their re
 * status = #unknown (exactly)
 * sent MS
   * ^short = "The time when this communication was sent."
-  * ^comment = " Set by the eprescription server."
+  * ^comment = "Set by the eprescription server."
 * received MS
   * ^short = "The time when this communication was received."
-  * ^comment = " Set by the eprescription server."
+  * ^comment = "Set by the eprescription server."
 * recipient 1..1 MS
   * ^short = "The entity (e.g. person, organization) which was the target of the communication."
-  * ^comment = " This needs to be set by the sender of the communication to define the target."
+  * ^comment = "This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1.. MS
 * recipient.identifier only $identifier-kvid-10 or $identifier-pkv
 * sender MS
