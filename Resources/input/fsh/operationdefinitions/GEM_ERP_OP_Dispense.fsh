@@ -21,8 +21,9 @@ Usage: #definition
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
 * parameter[=]
-  * insert TargetProfileMedicationDispense
-  * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
+  * targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
+  * targetProfile[+] = "http://hl7.org/fhir/StructureDefinition/Bundle"
+  
 // out
 * parameter[+].name = #MedicationDispense
 * parameter[=].use = #out
