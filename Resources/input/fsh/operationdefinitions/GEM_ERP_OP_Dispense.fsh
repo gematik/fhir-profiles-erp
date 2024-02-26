@@ -32,8 +32,8 @@ Usage: #definition
 * parameter[=].documentation = "The MedicationDispense that has been transmitted by the pharmacy as a confirmation, that it has been successfully uploaded."
 * parameter[=].type = #canonical
 * parameter[=]
-  * insert TargetProfileMedicationDispense
-  * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
+  * targetProfile[+] = $fhir-core-medicationdispense
+  * targetProfile[+] = $fhir-core-bundle
 
 Instance: OperationDispenseParametersInputMedicationDispense
 InstanceOf: MedicationDispense
