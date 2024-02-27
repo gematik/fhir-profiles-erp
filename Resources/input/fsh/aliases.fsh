@@ -14,3 +14,5 @@ Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-
 Alias: $identifier-pkv = http://fhir.de/StructureDefinition/identifier-pkv
 Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $fhir-core-medicationdispense = http://hl7.org/fhir/StructureDefinition/MedicationDispense
+Alias: $fhir-core-bundle = http://hl7.org/fhir/StructureDefinition/Bundle
