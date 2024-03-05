@@ -21,6 +21,7 @@ Usage: #definition
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical
 * parameter[=]
+  * targetProfile[+] = $epa-medicationdispense
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
   

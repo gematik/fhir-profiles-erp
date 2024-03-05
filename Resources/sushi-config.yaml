@@ -9,3 +9,4 @@ dependencies:
   hl7.fhir.r4.core: 4.0.1
   kbv.ita.for: 1.1.0
   kbv.ita.erp: 1.1.x
+  de.gematik.fhir.epa.medication: 3.0.x

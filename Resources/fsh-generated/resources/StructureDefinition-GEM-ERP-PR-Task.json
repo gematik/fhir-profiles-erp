@@ -360,7 +360,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
+              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense"
             ]
           }
         ]
