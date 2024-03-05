@@ -67,7 +67,7 @@ Description: "This resource manages the ePrescription workflow"
 * input[MedicationDispense].type.coding.system 1..
 * input[MedicationDispense].type.coding.code 1..
 * input[MedicationDispense].type.coding.code = #4 (exactly)
-* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense or $epa-medicationdispense)
+* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense)
 * input[MedicationDispense] ^short = "Reference to the MedicationDispenses of a task"
 
 * output ..1 MS
