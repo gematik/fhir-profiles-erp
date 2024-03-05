@@ -321,7 +321,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Bundle"
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
             ]
           }
         ]
