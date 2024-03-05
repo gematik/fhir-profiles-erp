@@ -4,18 +4,6 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * insert Profile(GEM_ERP_PR_Task)
-/*
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #closed
-* extension contains
-    GEM_ERP_EX_PrescriptionType named flowType 1..1 and
-    GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
-    GEM_ERP_EX_ExpiryDate named expiryDate 0..1
-
-
-
-*/
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
