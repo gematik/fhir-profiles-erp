@@ -78,7 +78,7 @@ Usage: #example
 * medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X234567890"
-* performer[+].actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* performer[+].actor.identifier.system = $identifier-telematik-id
 * performer[=].actor.identifier.value = "3-abc-1234567890"
 * whenHandedOver = "2022-02-28"
 * dosageInstruction[+].text = "1-0-1-0"
