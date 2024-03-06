@@ -48,7 +48,7 @@ Usage: #example
 * meta.tag.display = "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
 * basedOn.reference = "Task/160.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
 * status = #unknown
-* recipient[+].identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * sender.identifier.value = "X234567890"

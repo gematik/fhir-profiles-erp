@@ -4,18 +4,6 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * insert Profile(GEM_ERP_PR_Task)
-/*
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #closed
-* extension contains
-    GEM_ERP_EX_PrescriptionType named flowType 1..1 and
-    GEM_ERP_EX_AcceptDate named acceptDate 0..1 and
-    GEM_ERP_EX_ExpiryDate named expiryDate 0..1
-
-
-
-*/
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
@@ -56,28 +44,32 @@ Description: "This resource manages the ePrescription workflow"
     ePrescription 0..1 and
     patientReceipt 0..1 and
     MedicationDispense 0..*
+
+// QES Binary ePrescription
 * input[ePrescription].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[ePrescription].type.coding.system 1..
-//* input[ePrescription].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[ePrescription].type.coding.code 1..
 * input[ePrescription].type.coding.code = #1 (exactly)
 * input[ePrescription].value[x] only Reference(GEM_ERP_PR_Binary)
 * input[ePrescription].value[x].reference 1..
 * input[ePrescription] ^short = "QES-Binary of the ePrescription"
+
+// ePriscription for the patient
 * input[patientReceipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[patientReceipt].type.coding.system 1..
-//* input[patientReceipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
-* input[patientReceipt].value[x] only Reference(Bundle)
+* input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
 * input[patientReceipt] ^short = "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV"
+
+// References to MedicationDispenses that are part of the task
 * input[MedicationDispense].type.coding from GEM_ERP_VS_DocumentType (required)
 * input[MedicationDispense].type.coding.system 1..
-//* input[MedicationDispense].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * input[MedicationDispense].type.coding.code 1..
 * input[MedicationDispense].type.coding.code = #4 (exactly)
-* input[MedicationDispense].value[x] only Reference(MedicationDispense)
+* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense)
 * input[MedicationDispense] ^short = "Reference to the MedicationDispenses of a task"
+
 * output ..1 MS
 * output ^slicing.discriminator.type = #value
 * output ^slicing.discriminator.path = "type.coding.code"
@@ -85,9 +77,10 @@ Description: "This resource manages the ePrescription workflow"
 * output ^short = "Output Bundle"
 * output ^definition = "Reference to the Bundle which represent the receipt."
 * output contains receipt 0..1
+
+// Receipt
 * output[receipt].type.coding from GEM_ERP_VS_DocumentType (required)
 * output[receipt].type.coding.system 1..
-//* output[receipt].type.coding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType" (exactly)
 * output[receipt].type.coding.code 1..
 * output[receipt].type.coding.code = #3 (exactly)
 * output[receipt].value[x] only Reference(GEM_ERP_PR_Bundle)

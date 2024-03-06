@@ -52,7 +52,7 @@ Usage: #example
 * agent[+].type.coding[+].system = "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
 * agent[=].type.coding[=].code = #humanuser
 * agent[=].type.coding[=].display = "Human User"
-* agent[=].who.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* agent[=].who.identifier.system = $identifier-telematik-id
 * agent[=].who.identifier.value = "1-SMC-B-Testkarte-883110000095957"
 * agent[=].name = "Praxis Dr. Müller"
 * agent[=].requestor = false
