@@ -45,7 +45,7 @@ Usage: #example
 * meta.tag.display = "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[=].value = "160.000.033.491.280.78"
+* identifier[=].value = "165.000.033.491.280.78"
 * type = #document
 * timestamp = "2023-08-18T15:28:00+00:00"
 

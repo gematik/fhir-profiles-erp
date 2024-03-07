@@ -66,11 +66,11 @@ Usage: #inline
 * id = "12267efe-5e89-460c-90fa-380ef61c3e8a"
 * status = #final
 * type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#5 "Documentation of Narcotics Approval"
-* date = "2022-03-18T15:29:00+00:00"
+* date = "2025-03-18T15:29:00+00:00"
 * author.reference = "https://erp.zentral.erp.splitdns.ti-dienste.de/Device/1"
 * title = "Dokumentation zur Ausstellung von E-BtM Rezepten"
-* event.period.start = "2022-03-18T15:28:00+00:00"
-* event.period.end = "2022-03-18T15:29:00+00:00"
+* event.period.start = "2025-03-18T15:28:00+00:00"
+* event.period.end = "2025-03-18T15:29:00+00:00"
 * section[ePrescription].entry.reference = "281a985c-f25b-4aae-91a6-41ad744080b0" // TODO: Neue Verordnung mit WF 200
 * section[ePrescription].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
 * section[BfArM_Approval].entry.reference = "PractitionersNarcoticsApproval"
