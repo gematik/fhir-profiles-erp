@@ -1,5 +1,3 @@
-//TODO: add Document type #4 "Approval to prescribe Narcotics"
-
 Profile: GEM_ERP_PR_BfArMApproval
 Parent: Provenance
 Id: GEM-ERP-PR-BfArMApproval
@@ -8,58 +6,78 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * insert Profile(GEM_ERP_PR_BfArMApproval)
 * meta.lastUpdated MS
 * id 1..
+
+// Rezept-ID
 * target 1..1 SU
-* target ^slicing.discriminator.type = #type
-* target ^slicing.discriminator.path = "$this"
-* target ^slicing.description = "This Provenance targets the ePrescription workflow item Task and the ePrescroption as a whole"
-* target ^slicing.rules = #closed
-* target contains
-    TaskReference 1..1	
-* target[TaskReference] only Reference(GEM_ERP_PR_Task) //TODO: Logische Referenzen spezifizieren
-* target[TaskReference] ^short = "Reference to the ePrescription Task"
+* target.reference 0..0
+* target.type = #Task
+* target.identifier only GEM_ERP_PR_PrescriptionId
+
+// Zeitstempel des Operationsaufrufs
 * recorded SU
-* entity 1..1
-* entity.role = #source
-//* entity.what.identifier.system 1..
-//* entity.what.identifier.system = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId" (exactly)
-//* entity.what.identifier.value 1..
-* entity.what.identifier only GEM_ERP_PR_PrescriptionId
-* entity.what ^short = "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
-* agent 1..1
-* agent.type. 1..
-* agent.type.coding 1..1
-* agent.type.coding.system 1..
-//* agent.type.coding.system = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" (exactly)
-* agent.type.coding.system = "http://terminology.hl7.org/CodeSystem/provenance-participant-type" (exactly)
-* agent.type.coding.code 1..
-//* agent.type.coding.code = #VERF (exactly)
-* agent.type.coding.code = #verifier (exactly)
-* agent.type.coding.display = "Verifier" (exactly)
-* agent.who only Reference(Device)
-* agent.onBehalfOf 1..1
-* agent.onBehalfOf.identifier 1..
-//* agent.onBehalfOf.identifier.system 1..
-//* agent.onBehalfOf.identifier.system = #IdentifierTelematikId (exactly)
-//* agent.onBehalfOf.identifier.value 1..
-* agent.onBehalfOf.identifier only IdentifierTelematikId
+
+//Aktivität der Provenance
+* activity 1..1
+* activity.coding 1..1
+* activity.coding.system = "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion" (exactly)
+* activity.coding.code = #LA (exactly) //TODO: Klären ob dieser Wert rechtmäßig ist
+* activity.coding.display = "legally authenticated"
+
+// Agents
+* agent ^slicing.discriminator.type = #value
+* agent ^slicing.discriminator.path = "role.coding.code"
+* agent ^slicing.rules = #closed
+* agent ^slicing.ordered = false
+* agent ^slicing.description = "Participating Agents in the Provenance"
+
+* agent 3..3
+* agent contains eprescription-server 1..1 and practitioner 1..1 and bfarm-server 1..1
+
+* agent[eprescription-server].role.coding.system = "http://terminology.hl7.org/CodeSystem/extra-security-role-type" (exactly)
+* agent[eprescription-server].role.coding.code = #dataprocessor (exactly)
+* agent[eprescription-server].role.coding.display =  "Data Processor"
+* agent[eprescription-server].who.display 1..1
+* agent[eprescription-server].who.display = "E-Rezept-Fachdienst"
+
+
+* agent[practitioner].role.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" (exactly)
+* agent[practitioner].role.coding.code = #AUT (exactly)
+* agent[practitioner].role.coding.display = "author (originator)"
+// TelematikID des zu autorisierenden LE
+* agent[practitioner].who.identifier 1..1
+* agent[practitioner].who.identifier only $identifier-telematik-id
+
+* agent[bfarm-server].role.coding.system = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" (exactly)
+* agent[bfarm-server].role.coding.code = #VERF (exactly)
+* agent[bfarm-server].who.display 1..1
+* agent[bfarm-server].who.display = "BfArM-Prüfdienst"
+
+// Signatur
 * signature MS
-* signature.type.system 1..
+* signature.type.system 1..1
 * signature.type.system = "urn:iso-astm:E1762-95:2013" (exactly)
-* signature.type.code 1..
+* signature.type.code 1..1
 * signature.type.code = #1.2.840.10065.1.12.1.7 (exactly)
 * signature.type.display = "Consent Signature"
-* signature.who only Reference
-* signature.who ^short = "Who signed - the Bundesdruckrei narcotics authorization service on behalf of BfArM"
+
 * signature.when SU
-* signature.onBehalfOf 1..
-* signature.onBehalfOf only Reference
+
+// Bundesdruckerei als Signierende Instanz
+* signature.who.display 1..1 //TODO: Gibt es einen eindeutigen Identifier?
+* signature.who.display = "Bundesdruckerei"
+* signature.who ^short = "Who signed - the Bundesdruckrei narcotics authorization service on behalf of BfArM"
+
+// Verweis zu BfArM
+* signature.onBehalfOf 1..1
 * signature.onBehalfOf ^short = "Signature was authorized on behalf of BfArM"
-* signature.sigFormat 1..
+* signature.onBehalfOf.display 1..1
+* signature.onBehalfOf.display = "Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
+
+* signature.sigFormat 1..1
 * signature.sigFormat = #application/pkcs7-mime (exactly)
-* signature.data 1..
-//
-// unusd fields  
-//
+* signature.data 1..1
+
+// unused fields  
 * meta.extension ..0
 * meta.security ..0
 * meta.source ..0
@@ -69,20 +87,17 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 * policy ..0
 * location ..0
 * reason ..0
-* activity ..0
-* agent.role ..0
 
 Instance: PractitionersNarcoticsApproval
 InstanceOf: GEM_ERP_PR_BfArMApproval
 Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
-* target[TaskReference].reference = "Task/165.100.000.000.024.67"
+* target.identifier.value = "165.100.000.000.024.67"
 * recorded = "2025-02-14T08:39:24+01:00"
-* entity.what.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* entity.what.identifier.value = "165.100.000.000.024.67"
-* agent.who.reference = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Device/1"
-* agent.onBehalfOf.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* agent.onBehalfOf.identifier.value = "1-HBA-Testkarte-883110000123465"
+
+* activity.coding.code = #LA
+* agent[practitioner].who.identifier.value = "1-HBA-Testkarte-883110000123465"
+
 * signature.type.system = "urn:iso-astm:E1762-95:2013"
 * signature.type.code = #1.2.840.10065.1.12.1.7
 * signature.type.display = "Consent Signature"

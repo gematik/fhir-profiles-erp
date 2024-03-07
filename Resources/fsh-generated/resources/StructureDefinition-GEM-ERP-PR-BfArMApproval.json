@@ -92,30 +92,26 @@
       {
         "id": "Provenance.target",
         "path": "Provenance.target",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "description": "This Provenance targets the ePrescription workflow item Task and the ePrescroption as a whole",
-          "rules": "closed"
-        },
         "max": "1"
       },
       {
-        "id": "Provenance.target:TaskReference",
-        "path": "Provenance.target",
-        "sliceName": "TaskReference",
-        "short": "Reference to the ePrescription Task",
-        "min": 1,
-        "max": "1",
+        "id": "Provenance.target.reference",
+        "path": "Provenance.target.reference",
+        "max": "0"
+      },
+      {
+        "id": "Provenance.target.type",
+        "path": "Provenance.target.type",
+        "patternUri": "Task"
+      },
+      {
+        "id": "Provenance.target.identifier",
+        "path": "Provenance.target.identifier",
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
             ]
           }
         ]
@@ -143,66 +139,101 @@
       {
         "id": "Provenance.activity",
         "path": "Provenance.activity",
-        "max": "0"
+        "min": 1
+      },
+      {
+        "id": "Provenance.activity.coding",
+        "path": "Provenance.activity.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Provenance.activity.coding.system",
+        "path": "Provenance.activity.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+      },
+      {
+        "id": "Provenance.activity.coding.code",
+        "path": "Provenance.activity.coding.code",
+        "fixedCode": "LA"
+      },
+      {
+        "id": "Provenance.activity.coding.display",
+        "path": "Provenance.activity.coding.display",
+        "patternString": "legally authenticated"
       },
       {
         "id": "Provenance.agent",
         "path": "Provenance.agent",
-        "max": "1"
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "role.coding.code"
+            }
+          ],
+          "rules": "closed",
+          "ordered": false,
+          "description": "Participating Agents in the Provenance"
+        },
+        "min": 3,
+        "max": "3"
       },
       {
-        "id": "Provenance.agent.type",
-        "path": "Provenance.agent.type",
-        "min": 1
-      },
-      {
-        "id": "Provenance.agent.type.coding",
-        "path": "Provenance.agent.type.coding",
+        "id": "Provenance.agent:eprescription-server",
+        "path": "Provenance.agent",
+        "sliceName": "eprescription-server",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Provenance.agent.type.coding.system",
-        "path": "Provenance.agent.type.coding.system",
+        "id": "Provenance.agent:eprescription-server.role.coding.system",
+        "path": "Provenance.agent.role.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+      },
+      {
+        "id": "Provenance.agent:eprescription-server.role.coding.code",
+        "path": "Provenance.agent.role.coding.code",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+        "fixedCode": "dataprocessor"
       },
       {
-        "id": "Provenance.agent.type.coding.code",
-        "path": "Provenance.agent.type.coding.code",
+        "id": "Provenance.agent:eprescription-server.role.coding.display",
+        "path": "Provenance.agent.role.coding.display",
+        "patternString": "Data Processor"
+      },
+      {
+        "id": "Provenance.agent:eprescription-server.who.display",
+        "path": "Provenance.agent.who.display",
         "min": 1,
-        "fixedCode": "verifier"
+        "patternString": "E-Rezept-Fachdienst"
       },
       {
-        "id": "Provenance.agent.type.coding.display",
-        "path": "Provenance.agent.type.coding.display",
-        "fixedString": "Verifier"
+        "id": "Provenance.agent:practitioner",
+        "path": "Provenance.agent",
+        "sliceName": "practitioner",
+        "min": 1,
+        "max": "1"
       },
       {
-        "id": "Provenance.agent.role",
-        "path": "Provenance.agent.role",
-        "max": "0"
+        "id": "Provenance.agent:practitioner.role.coding.system",
+        "path": "Provenance.agent.role.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
       },
       {
-        "id": "Provenance.agent.who",
-        "path": "Provenance.agent.who",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ]
-          }
-        ]
+        "id": "Provenance.agent:practitioner.role.coding.code",
+        "path": "Provenance.agent.role.coding.code",
+        "min": 1,
+        "fixedCode": "AUT"
       },
       {
-        "id": "Provenance.agent.onBehalfOf",
-        "path": "Provenance.agent.onBehalfOf",
-        "min": 1
+        "id": "Provenance.agent:practitioner.role.coding.display",
+        "path": "Provenance.agent.role.coding.display",
+        "patternString": "author (originator)"
       },
       {
-        "id": "Provenance.agent.onBehalfOf.identifier",
-        "path": "Provenance.agent.onBehalfOf.identifier",
+        "id": "Provenance.agent:practitioner.who.identifier",
+        "path": "Provenance.agent.who.identifier",
         "min": 1,
         "type": [
           {
@@ -214,32 +245,28 @@
         ]
       },
       {
-        "id": "Provenance.entity",
-        "path": "Provenance.entity",
+        "id": "Provenance.agent:bfarm-server",
+        "path": "Provenance.agent",
+        "sliceName": "bfarm-server",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Provenance.entity.role",
-        "path": "Provenance.entity.role",
-        "patternCode": "source"
+        "id": "Provenance.agent:bfarm-server.role.coding.system",
+        "path": "Provenance.agent.role.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/contractsignertypecodes"
       },
       {
-        "id": "Provenance.entity.what",
-        "path": "Provenance.entity.what",
-        "short": "ePrescription Identifier bindng all related documents together (prescription,dispensato data receipt, etc.)"
+        "id": "Provenance.agent:bfarm-server.role.coding.code",
+        "path": "Provenance.agent.role.coding.code",
+        "min": 1,
+        "fixedCode": "VERF"
       },
       {
-        "id": "Provenance.entity.what.identifier",
-        "path": "Provenance.entity.what.identifier",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
-            ]
-          }
-        ]
+        "id": "Provenance.agent:bfarm-server.who.display",
+        "path": "Provenance.agent.who.display",
+        "min": 1,
+        "patternString": "BfArM-Prüfdienst"
       },
       {
         "id": "Provenance.signature",
@@ -269,10 +296,22 @@
         "short": "Who signed - the Bundesdruckrei narcotics authorization service on behalf of BfArM"
       },
       {
+        "id": "Provenance.signature.who.display",
+        "path": "Provenance.signature.who.display",
+        "min": 1,
+        "patternString": "Bundesdruckerei"
+      },
+      {
         "id": "Provenance.signature.onBehalfOf",
         "path": "Provenance.signature.onBehalfOf",
         "short": "Signature was authorized on behalf of BfArM",
         "min": 1
+      },
+      {
+        "id": "Provenance.signature.onBehalfOf.display",
+        "path": "Provenance.signature.onBehalfOf.display",
+        "min": 1,
+        "patternString": "Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
       },
       {
         "id": "Provenance.signature.sigFormat",
