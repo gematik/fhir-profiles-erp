@@ -98,7 +98,7 @@
     {
       "actor": {
         "identifier": {
-          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "system": "http://fhir.de/StructureDefinition/identifier-telematik-id",
           "value": "3-abc-1234567890"
         }
       }

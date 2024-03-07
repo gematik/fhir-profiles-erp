@@ -65,8 +65,7 @@ Usage: #example
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown
 * about.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
-* recipient[+].identifier.system = $identifier-telematik-id
-* recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
+* recipient[+].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:43:30.128+02:00"
