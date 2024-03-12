@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Bundle_PractitionerDocumentation
 Parent: Bundle
-Id: GEM-ERP-PR-Bundle-BfArMApproval
-Title: "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
-Description: "A document containing resources for BfArM Approval of admissibility for doctor s prescription of narcotics"
+Id: GEM-ERP-PR-Bundle-Practitioner-Documentation
+Title: "Document Bundle for BfArM Approval of admissibility for doctors prescription of narcotics"
+Description: "A document containing resources for BfArM Approval of admissibility for doctors prescription of narcotics"
 * insert Profile(GEM_ERP_PR_Bundle_PractitionerDocumentation)
 * id 1..1
 * identifier 1..1 MS
@@ -20,7 +20,7 @@ Description: "A document containing resources for BfArM Approval of admissibilit
     DocumentInformation 1..1 and
     ePrescription 1..1 and
     BfArM_Approval 1..1
-* entry[DocumentInformation].resource only GEM_ERP_PR_Composition_BfArM_Documentation
+* entry[DocumentInformation].resource only GEM_ERP_PR_Composition_Practitioner_Documentation
 * entry[DocumentInformation].resource 1..1
 * entry[DocumentInformation].fullUrl 1..1
 

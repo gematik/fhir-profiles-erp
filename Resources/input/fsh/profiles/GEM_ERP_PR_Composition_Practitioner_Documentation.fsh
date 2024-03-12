@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_Composition_BfArM_Documentation
+Profile: GEM_ERP_PR_Composition_Practitioner_Documentation
 Parent: Composition
-Id: GEM-ERP-PR-Composition-BfArM-Documentation
+Id: GEM-ERP-PR-Composition-Practitioner-Documentation
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
-* insert Profile(GEM_ERP_PR_Composition_BfArM_Documentation)
+* insert Profile(GEM_ERP_PR_Composition_Practitioner_Documentation)
 
 * status = #final (exactly)
 * status MS
@@ -52,7 +52,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * section[BfArM_Approval].code.coding.system 1..1 MS
 * section[BfArM_Approval].code.coding.system = "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType" (exactly)
 * section[BfArM_Approval].code.coding.code 1.. MS
-* section[BfArM_Approval].code.coding.code = #4 (exactly)
+* section[BfArM_Approval].code.coding.code = #5 (exactly)
 * section[BfArM_Approval].code.coding.display = "Approval to prescribe Narcotics" (exactly)
 * section[BfArM_Approval].entry 1..1 MS
 * section[BfArM_Approval].entry only Reference(GEM_ERP_PR_BfArMApproval)
@@ -60,7 +60,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * section[BfArM_Approval].section 0..0
 
 Instance: BfArMApprovalBundleComposition
-InstanceOf: GEM_ERP_PR_Composition_BfArM_Documentation
+InstanceOf: GEM_ERP_PR_Composition_Practitioner_Documentation
 Title:   "Composition for documentation purposes of a narcotics prescription for a practitioner"
 Usage: #inline
 * id = "12267efe-5e89-460c-90fa-380ef61c3e8a"
@@ -74,4 +74,4 @@ Usage: #inline
 * section[ePrescription].entry.reference = "281a985c-f25b-4aae-91a6-41ad744080b0" // TODO: Neue Verordnung mit WF 200
 * section[ePrescription].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
 * section[BfArM_Approval].entry.reference = "PractitionersNarcoticsApproval"
-* section[BfArM_Approval].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#4 "Approval to prescribe Narcotics"
+* section[BfArM_Approval].code.coding = https://gematik.de/fhir/erp/ValueSet/GEM_ERP_CS_DocumentType#5 "Approval to prescribe Narcotics"
