@@ -25,7 +25,7 @@ Usage: #definition
 Instance: ActivateEBtMOperationResponseExample
 InstanceOf: Bundle
 Usage: #example
-Title: "Activate EBt MOperation Response Example"
+Title: "Activate EBt Operation Response Example"
 Description: "Example response for e-BtM activation response"
 * type = #collection
 //Task

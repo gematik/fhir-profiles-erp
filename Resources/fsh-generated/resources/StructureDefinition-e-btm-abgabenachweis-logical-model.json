@@ -2,10 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "e-btm-abgabenachweis-logical-model",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/e-btm-abgabenachweis-logical-model",
-  "name": "EBtMAbgabenachweis",
-  "title": "E-BtM-Abgabenachweis",
+  "name": "EBtMAbgabenachweisFachmodell",
+  "title": "E-BtM-Abgabenachweis Fachmodell",
   "status": "draft",
-  "description": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM",
+  "description": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM. Dieses Dokument wird im AVS erstellt und für Dokumentationszwecke aufbewahrt.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -14,10 +14,10 @@
       "name": "RIM Mapping"
     },
     {
-      "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+      "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
       "name": "Abgabe Nachweis zu Bundle Mapping",
       "uri": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
-      "comment": "Mapping für Abgabenachweis zum Bundle GEM_ERP_PR_Bundle_Pharmacy_Proof"
+      "comment": "Mapping für Abgabenachweis zum Bundle GEM_ERP_PR_Bundle_Pharmacy_Documentation"
     }
   ],
   "kind": "logical",
@@ -30,13 +30,26 @@
       {
         "id": "e-btm-abgabenachweis-logical-model",
         "path": "e-btm-abgabenachweis-logical-model",
-        "short": "E-BtM-Abgabenachweis",
-        "definition": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM",
+        "short": "E-BtM-Abgabenachweis Fachmodell",
+        "definition": "Darstellung eines Dokumentes für den Abgebenden zur Dokumentation der Abgabe eines BtM. Dieses Dokument wird im AVS erstellt und für Dokumentationszwecke aufbewahrt.",
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "GEM_ERP_PR_Bundle_Pharmacy_Proof",
             "comment": "Das Modell mapt auf das E-BtM-AbgabeNachweis Bundle"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.abgabenachweisComposition",
+        "path": "e-btm-abgabenachweis-logical-model.abgabenachweisComposition",
+        "short": "Zusammensetzung des Abgabenachweises als Inhaltsverzeichnis. Enthält Verweise zu den einzelnen FHIR-Ressourcen.",
+        "definition": "Zusammensetzung des Abgabenachweises als Inhaltsverzeichnis. Enthält Verweise zu den einzelnen FHIR-Ressourcen.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Composition"
           }
         ]
       },
@@ -54,7 +67,7 @@
         ],
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
           }
         ]
@@ -62,7 +75,7 @@
       {
         "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
         "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
-        "short": "DAV-AbgabeDatensatz signiert als PKCS7",
+        "short": "DAV-AbgabeDatensatz (GKV oder PKV) signiert als PKCS7",
         "definition": "GKV: https://simplifier.net/erezeptabgabedaten und PKV: https://simplifier.net/erezeptabgabedatenpkv",
         "min": 1,
         "max": "1",
@@ -73,81 +86,20 @@
         ],
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "https://simplifier.net/erezeptabgabedaten"
           },
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "https://simplifier.net/erezeptabgabedatenpkv"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
-        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgabezeitpunkt",
-        "short": "Zeitpunkt der Abgabe",
-        "definition": "Zeitpunkt der Abgabe",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
-            "map": "DAV_PR_ERP_AbgabedatenComposition.date"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
-        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.aussteller",
-        "short": "Ersteller des Abgabedatensatzes",
-        "definition": "Ersteller des Abgabedatensatzes",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
-            "map": "DAV_PR_ERP_AbgabedatenComposition.author"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
-        "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz.abgegebenesMedikament",
-        "short": "Arzneimittel, welches abgegeben wurde",
-        "definition": "Arzneimittel, welches abgegeben wurde",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Medication"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
-            "map": "DAV_PR_ERP_Abgabeinformationen.medication"
           }
         ]
       },
       {
         "id": "e-btm-abgabenachweis-logical-model.quittung",
         "path": "e-btm-abgabenachweis-logical-model.quittung",
-        "short": "Quittung vom Fachdienst nach Aufruf der $close-Operation",
-        "definition": "Definition der Quittung",
+        "short": "Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
+        "definition": "Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
         "min": 1,
         "max": "1",
         "type": [
@@ -157,7 +109,7 @@
         ],
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
           }
         ]
@@ -176,7 +128,7 @@
         ],
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "Composition.event.period.start"
           }
         ]
@@ -195,8 +147,27 @@
         ],
         "mapping": [
           {
-            "identity": "mapping-abgabenachweis-to-pharmacy-proof-bundle",
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "Composition.event.period.end"
+          }
+        ]
+      },
+      {
+        "id": "e-btm-abgabenachweis-logical-model.quittung.signature",
+        "path": "e-btm-abgabenachweis-logical-model.quittung.signature",
+        "short": "Signatur des E-Rezept-Fachdienstes",
+        "definition": "Signatur des E-Rezept-Fachdienstes",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
+            "map": "Composition.signature"
           }
         ]
       }

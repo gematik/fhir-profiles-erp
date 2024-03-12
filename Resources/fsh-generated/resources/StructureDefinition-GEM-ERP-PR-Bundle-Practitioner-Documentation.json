@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Bundle-Practitioner-Documentation",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_PractitionerDocumentation",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Practitioner_Documentation",
   "version": "1.3.0",
-  "name": "GEM_ERP_PR_Bundle_PractitionerDocumentation",
+  "name": "GEM_ERP_PR_Bundle_Practitioner_Documentation",
   "title": "Document Bundle for BfArM Approval of admissibility for doctors prescription of narcotics",
   "status": "draft",
   "description": "A document containing resources for BfArM Approval of admissibility for doctors prescription of narcotics",
@@ -52,7 +52,7 @@
         "path": "Bundle.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_PractitionerDocumentation|1.3"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Practitioner_Documentation|1.3"
       },
       {
         "id": "Bundle.identifier",

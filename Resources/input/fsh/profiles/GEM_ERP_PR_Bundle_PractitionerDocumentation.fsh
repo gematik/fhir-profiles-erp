@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_Bundle_PractitionerDocumentation
+Profile: GEM_ERP_PR_Bundle_Practitioner_Documentation
 Parent: Bundle
 Id: GEM-ERP-PR-Bundle-Practitioner-Documentation
 Title: "Document Bundle for BfArM Approval of admissibility for doctors prescription of narcotics"
 Description: "A document containing resources for BfArM Approval of admissibility for doctors prescription of narcotics"
-* insert Profile(GEM_ERP_PR_Bundle_PractitionerDocumentation)
+* insert Profile(GEM_ERP_PR_Bundle_Practitioner_Documentation)
 * id 1..1
 * identifier 1..1 MS
 * identifier only GEM_ERP_PR_PrescriptionId
@@ -38,7 +38,7 @@ Description: "A document containing resources for BfArM Approval of admissibilit
 * signature.type 1..1
 
 Instance: EBtMPractitionerDocumentationBundle
-InstanceOf: GEM_ERP_PR_Bundle_PractitionerDocumentation
+InstanceOf: GEM_ERP_PR_Bundle_Practitioner_Documentation
 Title:   "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 Usage: #example
 * id = "78d1dc47-5a2a-49d3-85de-960ab84b4d58"
