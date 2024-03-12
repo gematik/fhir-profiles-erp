@@ -1,12 +1,12 @@
-Profile: GEM_ERP_PR_Bundle_Pharmacy_Proof
+Profile: GEM_ERP_PR_Bundle_Pharmacy_Documentation
 Parent: Bundle
-Id: GEM-ERP-PR-Bundle-Pharmacy-Proof
+Id: GEM-ERP-PR-Bundle-Pharmacy-Documentation
 Title: "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 Description: "A document containing resources for BfArM Approval of admissibility for doctor s prescription of narcotics"
-* insert Profile(GEM_ERP_PR_Bundle_Pharmacy_Proof)
+* insert Profile(GEM_ERP_PR_Bundle_Pharmacy_Documentation)
 
 //Constraints
-* obeys gem-pharmacy-proof-1
+* obeys gem-pharmacy-documentation-1
 
 * id 1..1
 * identifier 1..1 MS
@@ -17,7 +17,7 @@ Description: "A document containing resources for BfArM Approval of admissibilit
 * timestamp 1..1
 
 * entry SU
-* entry ^slicing.discriminator.type = #value //TODO: 
+* entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = "link.url"
 * entry ^slicing.rules = #closed
 * entry contains
@@ -28,12 +28,12 @@ Description: "A document containing resources for BfArM Approval of admissibilit
     dispense_information_pkv 0..1 MS
 
 //Composition des Dokuments
-* entry[DocumentInformation].resource only GEM_ERP_PR_Composition_Pharmacy_Proof
+* entry[DocumentInformation].resource only GEM_ERP_PR_Composition_Pharmacy_Documentation
 * entry[DocumentInformation].resource 1..1
 * entry[DocumentInformation].fullUrl 1..1
 * entry[DocumentInformation].link 1..1
 * entry[DocumentInformation].link.relation = "canonical" (exactly)
-* entry[DocumentInformation].link.url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Proof" (exactly)
+* entry[DocumentInformation].link.url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Documentation" (exactly)
 
 // Verordnung als QES Binary
 * entry[ePrescription].resource only GEM_ERP_PR_Binary
@@ -72,14 +72,14 @@ Description: "A document containing resources for BfArM Approval of admissibilit
 * signature MS
 * signature.type 1..1
 
-Invariant: gem-pharmacy-proof-1
+Invariant: gem-pharmacy-documentation-1
 Description: "Es muss genau ein Abgabedatensatz angegeben werden"
 Expression: "entry.where(link.url='http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PR-ERP-AbgabedatenBundle').exists() xor entry.where(link.url='http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle').exists()"
 Severity: #error
 
 
-Instance: EBtMPharmacyProofBundle
-InstanceOf: GEM_ERP_PR_Bundle_Pharmacy_Proof
+Instance: EBtMPharmacyDocumentationBundle
+InstanceOf: GEM_ERP_PR_Bundle_Pharmacy_Documentation
 Title:   "Document Bundle for BfArM Approval of admissibility for doctor s prescription of narcotics"
 Usage: #example
 * id = "45716f92-3c94-4a5b-8226-e23bf51af7ed"
@@ -91,7 +91,7 @@ Usage: #example
 * timestamp = "2023-08-18T15:28:00+00:00"
 
 * entry[DocumentInformation].fullUrl = "urn:uuid:c68de631-7faf-4c66-92df-8176a3ba9a20"
-* entry[DocumentInformation].resource = PharmacyProofComposition
+* entry[DocumentInformation].resource = PharmacyDocumentationComposition
 * entry[ePrescription].fullUrl = "urn:uuid:281a985c-f25b-4aae-91a6-41ad744080b0"
 * entry[ePrescription].resource = Example-Binary
 * entry[ePrescription].link.relation = "canonical"

@@ -3,7 +3,7 @@
   "id": "45716f92-3c94-4a5b-8226-e23bf51af7ed",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Pharmacy_Proof|1.3"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_Pharmacy_Documentation|1.3"
     ],
     "tag": [
       {
@@ -21,7 +21,7 @@
       "link": [
         {
           "relation": "canonical",
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Proof"
+          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Documentation"
         }
       ],
       "fullUrl": "urn:uuid:c68de631-7faf-4c66-92df-8176a3ba9a20",
@@ -30,7 +30,7 @@
         "id": "c68de631-7faf-4c66-92df-8176a3ba9a20",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Proof|1.3"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition_Pharmacy_Documentation|1.3"
           ]
         },
         "status": "final",

@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_Composition_Pharmacy_Proof
+Profile: GEM_ERP_PR_Composition_Pharmacy_Documentation
 Parent: Composition
-Id: GEM-ERP-PR-Composition-Pharmacy-Proof
+Id: GEM-ERP-PR-Composition-Pharmacy-Documentation
 Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
-* insert Profile(GEM_ERP_PR_Composition_Pharmacy_Proof)
+* insert Profile(GEM_ERP_PR_Composition_Pharmacy_Documentation)
 
 * status = #final (exactly)
 * status MS
@@ -73,8 +73,8 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 * section[dispense_information].entry.reference 1..1 MS
 * section[dispense_information].section 0..0
 
-Instance: PharmacyProofComposition
-InstanceOf: GEM_ERP_PR_Composition_Pharmacy_Proof
+Instance: PharmacyDocumentationComposition
+InstanceOf: GEM_ERP_PR_Composition_Pharmacy_Documentation
 Title:   "Composition for documentation purposes of a narcotics dispense for a pharmacy"
 Usage: #inline
 * id = "c68de631-7faf-4c66-92df-8176a3ba9a20"
