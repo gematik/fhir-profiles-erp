@@ -12,6 +12,12 @@
       "identity": "rim",
       "uri": "http://hl7.org/v3",
       "name": "RIM Mapping"
+    },
+    {
+      "identity": "mapping-fachmodell-to-bfarm-approval",
+      "name": "Mappgin für BfArM-Prüfung",
+      "uri": "GEM_ERP_PR_BfArMApproval",
+      "comment": "Mapping für des Fachmodells der BfArM Prüfung zum Profil GEM_ERP_PR_BfArMApproval"
     }
   ],
   "kind": "logical",
@@ -25,7 +31,14 @@
         "id": "verordnungs-bestaetigung-bfarm-fachmodell",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell",
         "short": "Fachmodell BfArM-Verordnungsbestätigung",
-        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde."
+        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde.",
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval",
+            "comment": "Das Modell mapt auf das BfArM Approval"
+          }
+        ]
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur",
@@ -38,57 +51,11 @@
           {
             "code": "BackboneElement"
           }
-        ]
-      },
-      {
-        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle",
-        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle",
-        "short": "Rolle des Akteurs",
-        "definition": "Rolle des Akteurs",
-        "min": 1,
-        "max": "1",
-        "type": [
+        ],
+        "mapping": [
           {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding",
-        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding",
-        "short": "Rolle des Akteurs",
-        "definition": "Rolle des Akteurs",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.code",
-        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.code",
-        "short": "Rollenkennung",
-        "definition": "Rollenkennung",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ]
-      },
-      {
-        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.display",
-        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.display",
-        "short": "Rollenbezeichnung",
-        "definition": "Rollenbezeichnung",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.agent"
           }
         ]
       },
@@ -102,6 +69,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.agent[eprescription-server]"
           }
         ]
       },
@@ -139,6 +112,12 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.agent[bfarm-server]"
+          }
         ]
       },
       {
@@ -174,6 +153,12 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.agent[practitioner]"
           }
         ]
       },
@@ -219,6 +204,12 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.target.identifier"
+          }
         ]
       },
       {
@@ -231,6 +222,12 @@
         "type": [
           {
             "code": "instant"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.recorded"
           }
         ]
       },
@@ -248,11 +245,17 @@
               "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
             ]
           }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.signature"
+          }
         ]
       },
       {
-        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.date",
-        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.date",
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.datumDerSignatur",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.datumDerSignatur",
         "short": "Datum der Signatur",
         "definition": "Datum der Signatur",
         "min": 1,
@@ -260,6 +263,12 @@
         "type": [
           {
             "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.signature.when"
           }
         ]
       },
@@ -274,6 +283,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.signature.who"
+          }
         ]
       },
       {
@@ -287,6 +302,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.signature.onBehalfOf"
+          }
         ]
       },
       {
@@ -299,6 +320,12 @@
         "type": [
           {
             "code": "base64Binary"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mapping-fachmodell-to-bfarm-approval",
+            "map": "GEM_ERP_PR_BfArMApproval.signature.data"
           }
         ]
       }
