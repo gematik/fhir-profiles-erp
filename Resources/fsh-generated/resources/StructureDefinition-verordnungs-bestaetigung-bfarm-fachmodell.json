@@ -94,12 +94,12 @@
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.code",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.code",
-        "patternCode": "dataprocessor"
+        "fixedCode": "dataprocessor"
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.display",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.display",
-        "patternString": "Data Processor"
+        "fixedString": "Data Processor"
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst",
@@ -136,12 +136,12 @@
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.code",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.code",
-        "patternCode": "VERF"
+        "fixedCode": "VERF"
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.display",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.display",
-        "patternString": "Verifier"
+        "fixedString": "Verifier"
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender",
@@ -178,7 +178,7 @@
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle.coding.display",
         "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle.coding.display",
-        "patternString": "author (originator)"
+        "fixedString": "author (originator)"
       },
       {
         "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.telematikIdVerordnender",

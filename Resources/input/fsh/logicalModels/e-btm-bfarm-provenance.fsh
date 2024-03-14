@@ -8,17 +8,17 @@ Description: "Provenance Ressource als Bestätigung des BfArMs zur Verordnung de
 
 * akteurFachdienst 1..1 BackboneElement "E-Rezept-Fachdienst"
   * rolle 1..1 CodeableConcept "Rolle des Akteurs"
-  * rolle.coding.display = "Data Processor"
-  * rolle.coding.code = #dataprocessor
+  * rolle.coding.display = "Data Processor" (exactly)
+  * rolle.coding.code = #dataprocessor (exactly)
 
 * akteurPruefdienst 1..1 BackboneElement "BfArM-Prüfdienst"
   * rolle 1..1 CodeableConcept "Rolle des Akteurs"
-  * rolle.coding..display = "Verifier"
-  * rolle.coding.code = #VERF
+  * rolle.coding..display = "Verifier" (exactly)
+  * rolle.coding.code = #VERF (exactly)
 
 * akteurVerordnender 1..1 BackboneElement "Verordnender"
   * rolle 1..1 CodeableConcept "Rolle des Akteurs"
-  * rolle.coding..display = "author (originator)"
+  * rolle.coding..display = "author (originator)" (exactly)
   * telematikIdVerordnender 1..1 Identifier "Telematik-ID des Verordnenden LE"
 
 
