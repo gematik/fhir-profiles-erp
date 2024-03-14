@@ -1,0 +1,307 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "verordnungs-bestaetigung-bfarm-fachmodell",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/verordnungs-bestaetigung-bfarm-fachmodell",
+  "name": "VerordnungsBestaetigungBfArMFachmodell",
+  "title": "Fachmodell BfArM-Verordnungsbestätigung",
+  "status": "draft",
+  "description": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/verordnungs-bestaetigung-bfarm-fachmodell",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell",
+        "short": "Fachmodell BfArM-Verordnungsbestätigung",
+        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde."
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur",
+        "short": "Akteure",
+        "definition": "Akteure",
+        "min": 3,
+        "max": "3",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle",
+        "short": "Rolle des Akteurs",
+        "definition": "Rolle des Akteurs",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding",
+        "short": "Rolle des Akteurs",
+        "definition": "Rolle des Akteurs",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.code",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.code",
+        "short": "Rollenkennung",
+        "definition": "Rollenkennung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.display",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteur.rolle.coding.display",
+        "short": "Rollenbezeichnung",
+        "definition": "Rollenbezeichnung",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst",
+        "short": "E-Rezept-Fachdienst",
+        "definition": "E-Rezept-Fachdienst",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle",
+        "short": "Rolle des Akteurs",
+        "definition": "Rolle des Akteurs",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.code",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.code",
+        "patternCode": "dataprocessor"
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.display",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurFachdienst.rolle.coding.display",
+        "patternString": "Data Processor"
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst",
+        "short": "BfArM-Prüfdienst",
+        "definition": "BfArM-Prüfdienst",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle",
+        "short": "Rolle des Akteurs",
+        "definition": "Rolle des Akteurs",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.code",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.code",
+        "patternCode": "VERF"
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.display",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurPruefdienst.rolle.coding.display",
+        "patternString": "Verifier"
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender",
+        "short": "Verordnender",
+        "definition": "Verordnender",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle",
+        "short": "Rolle des Akteurs",
+        "definition": "Rolle des Akteurs",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle.coding.display",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.rolle.coding.display",
+        "patternString": "author (originator)"
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.telematikIdVerordnender",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.akteurVerordnender.telematikIdVerordnender",
+        "short": "Telematik-ID des Verordnenden LE",
+        "definition": "Telematik-ID des Verordnenden LE",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.rezeptId",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.rezeptId",
+        "short": "Rezept-ID",
+        "definition": "Rezept-ID",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.zeitstempelDesOperationsaufrufs",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.zeitstempelDesOperationsaufrufs",
+        "short": "Zeitstempel des Operationsaufrufs $activate-ebtm",
+        "definition": "Zeitstempel des Operationsaufrufs $activate-ebtm",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur",
+        "short": "Signatur des BfArM",
+        "definition": "Signatur des BfArM",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.date",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.date",
+        "short": "Datum der Signatur",
+        "definition": "Datum der Signatur",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.signierender",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.signierender",
+        "short": "Bundesdruckerei",
+        "definition": "Bundesdruckerei",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.autorisierendeEinrichtung",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.autorisierendeEinrichtung",
+        "short": "BfArM",
+        "definition": "BfArM",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.signaturdaten",
+        "path": "verordnungs-bestaetigung-bfarm-fachmodell.signatur.signaturdaten",
+        "short": "Signaturdaten als PKCS7 Datensatz",
+        "definition": "Signaturdaten als PKCS7 Datensatz",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ]
+      }
+    ]
+  }
+}

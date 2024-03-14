@@ -9,6 +9,3 @@ Description: "Mapping für Abgabenachweis zum Bundle GEM_ERP_PR_Bundle_Pharmacy_
 * abgabedatensatz -> "https://simplifier.net/erezeptabgabedaten"
 * abgabedatensatz -> "https://simplifier.net/erezeptabgabedatenpkv"
 * quittung -> "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-* quittung.abgabeStart -> "Composition.event.period.start"
-* quittung.abgabeEnde -> "Composition.event.period.end"
-* quittung.signature -> "Composition.signature"

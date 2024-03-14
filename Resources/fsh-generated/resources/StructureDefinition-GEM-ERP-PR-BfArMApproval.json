@@ -263,6 +263,11 @@
         "fixedCode": "VERF"
       },
       {
+        "id": "Provenance.agent:bfarm-server.role.coding.display",
+        "path": "Provenance.agent.role.coding.display",
+        "patternString": "Verifier"
+      },
+      {
         "id": "Provenance.agent:bfarm-server.who.display",
         "path": "Provenance.agent.who.display",
         "min": 1,

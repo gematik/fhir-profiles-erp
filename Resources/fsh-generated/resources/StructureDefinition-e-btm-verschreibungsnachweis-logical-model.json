@@ -43,8 +43,8 @@
       {
         "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
         "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsdatensatz",
-        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
-        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "short": "Base64 codierter und signierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter und signierter PKCS7 Datensatz der Verordnung mit QES",
         "min": 1,
         "max": "1",
         "type": [
@@ -62,174 +62,19 @@
       {
         "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM",
         "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM",
-        "short": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde.",
-        "definition": "Provenance Ressource als Bestätigung des BfArMs zur Verordnung des E-BtM, welche vom BfArM Prüfdienst signiert wurde.",
+        "short": "Base64 codierter und signierter PKCS7 Datensatz der BfArM-Verordnungsbestätigung mit nonQES des BfArM Prüfdienstes.",
+        "definition": "Base64 codierter und signierter PKCS7 Datensatz der BfArM-Verordnungsbestätigung mit nonQES des BfArM Prüfdienstes.",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "Provenance"
+            "code": "Binary"
           }
         ],
         "mapping": [
           {
             "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
             "map": "GEM_ERP_PR_BfArMApproval"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.telematikIdVerordnender",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.telematikIdVerordnender",
-        "short": "Telematik-ID des Verordnenden LE",
-        "definition": "Telematik-ID des Verordnenden LE",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.agent[practitioner].who.identifier.value"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.rezeptId",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.rezeptId",
-        "short": "Rezept-ID",
-        "definition": "Rezept-ID",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.target.identifier.value"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.zeitstempelDesOperationsaufrufs",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.zeitstempelDesOperationsaufrufs",
-        "short": "Zeitstempel des Operationsaufrufs $activate-ebtm",
-        "definition": "Zeitstempel des Operationsaufrufs $activate-ebtm",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "instant"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.recorded"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur",
-        "short": "Signatur des BfArM",
-        "definition": "Signatur des BfArM",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.signature"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.date",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.date",
-        "short": "Datum der Signatur",
-        "definition": "Datum der Signatur",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.signature.when"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.signierender",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.signierender",
-        "short": "Bundesdruckerei",
-        "definition": "Bundesdruckerei",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.signature.who"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.autorisierendeEinrichtung",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.autorisierendeEinrichtung",
-        "short": "BfArM",
-        "definition": "BfArM",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.signature.onBehalfOf"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.signaturdaten",
-        "path": "e-btm-verschreibungsnachweis-logical-model.verordnungsBestaetigungBfArM.signatur.signaturdaten",
-        "short": "Signaturdaten als PKCS7 Datensatz",
-        "definition": "Signaturdaten als PKCS7 Datensatz",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "base64Binary"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-verschreibungsnachweis-to-practitioner-documentation",
-            "map": "Provenance.signature.data"
           }
         ]
       }

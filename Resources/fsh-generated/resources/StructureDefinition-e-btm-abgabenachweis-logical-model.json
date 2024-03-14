@@ -56,8 +56,8 @@
       {
         "id": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
         "path": "e-btm-abgabenachweis-logical-model.verordnungsdatensatz",
-        "short": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
-        "definition": "Base64 codierter PKCS7 Datensatz der Verordnung mit QES",
+        "short": "Base64 codierter und signierter PKCS7 Datensatz der Verordnung mit QES",
+        "definition": "Base64 codierter und signierter PKCS7 Datensatz der Verordnung mit QES",
         "min": 1,
         "max": "1",
         "type": [
@@ -75,7 +75,7 @@
       {
         "id": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
         "path": "e-btm-abgabenachweis-logical-model.abgabedatensatz",
-        "short": "DAV-AbgabeDatensatz (GKV oder PKV) signiert als PKCS7",
+        "short": "Base64 codierter und signierter PKCS7 Datensatz des DAV-AbgabeDatensatz (GKV oder PKV)",
         "definition": "GKV: https://simplifier.net/erezeptabgabedaten und PKV: https://simplifier.net/erezeptabgabedatenpkv",
         "min": 1,
         "max": "1",
@@ -98,76 +98,19 @@
       {
         "id": "e-btm-abgabenachweis-logical-model.quittung",
         "path": "e-btm-abgabenachweis-logical-model.quittung",
-        "short": "Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
-        "definition": "Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
+        "short": "Base64 codierter und signierter PKCS7 Datensatz der Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
+        "definition": "Base64 codierter und signierter PKCS7 Datensatz der Quittung vom Fachdienst nach Aufruf der $close-Operation, welche die Signatur des E-Rezept-Fachdienst enthält.",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "Element"
+            "code": "Binary"
           }
         ],
         "mapping": [
           {
             "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
             "map": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
-        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeStart",
-        "short": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
-        "definition": "Zeitpunkt des Starts der Belieferung = Aufruf der $accept-Operation",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
-            "map": "Composition.event.period.start"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
-        "path": "e-btm-abgabenachweis-logical-model.quittung.abgabeEnde",
-        "short": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
-        "definition": "Zeitpunkt des Beendens der Belieferung seitens des Abgebenden = Aufruf der $close-Operation",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
-            "map": "Composition.event.period.end"
-          }
-        ]
-      },
-      {
-        "id": "e-btm-abgabenachweis-logical-model.quittung.signature",
-        "path": "e-btm-abgabenachweis-logical-model.quittung.signature",
-        "short": "Signatur des E-Rezept-Fachdienstes",
-        "definition": "Signatur des E-Rezept-Fachdienstes",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Element"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mapping-abgabenachweis-to-pharmacy-documentation",
-            "map": "Composition.signature"
           }
         ]
       }

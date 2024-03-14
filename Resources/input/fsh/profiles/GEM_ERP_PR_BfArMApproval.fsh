@@ -49,6 +49,7 @@ Description: "On serverside validton of prescription (QES, FHIR-validity, etc.) 
 
 * agent[bfarm-server].role.coding.system = "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" (exactly)
 * agent[bfarm-server].role.coding.code = #VERF (exactly)
+* agent[bfarm-server].role.coding.display =  "Verifier"
 * agent[bfarm-server].who.display 1..1
 * agent[bfarm-server].who.display = "BfArM-Prüfdienst"
 
