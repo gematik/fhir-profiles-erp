@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-BfArMApproval",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval",
-  "version": "1.3.0-rc1",
+  "version": "1.3",
   "name": "GEM_ERP_PR_BfArMApproval",
   "title": "BfArM Approval of admissibility for doctor s prescription of narcotics",
   "status": "draft",

@@ -3,7 +3,7 @@
   "id": "AcceptOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition",
   "status": "draft",
-  "version": "1.3.0-rc1",
+  "version": "1.3",
   "date": "2024-03-19",
   "name": "Accept",
   "kind": "operation",

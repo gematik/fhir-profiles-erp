@@ -3,7 +3,7 @@
   "id": "DispenseOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition",
   "status": "draft",
-  "version": "1.3.0-rc1",
+  "version": "1.3",
   "date": "2024-03-19",
   "name": "Dispense",
   "kind": "operation",

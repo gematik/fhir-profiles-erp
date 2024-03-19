@@ -3,7 +3,7 @@
   "id": "AbortOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition",
   "status": "draft",
-  "version": "1.3.0-rc1",
+  "version": "1.3",
   "date": "2024-03-19",
   "name": "Abort",
   "kind": "operation",
