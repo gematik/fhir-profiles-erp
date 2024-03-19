@@ -5,11 +5,11 @@
     "lastUpdated": "2020-04-16T13:43:30.128+00:00"
   },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq",
-  "version": "1.3.0",
+  "version": "1.3.0-rc1",
   "name": "GEM_ERP_PR_Communication_InfoReq",
   "title": "Informative request from Patient to Provider",
   "status": "draft",
-  "date": "2020-04-16T13:43:27.7930941+00:00",
+  "date": "2024-03-19",
   "description": "Ressource used for the communication of informative requests between patient and provider.",
   "fhirVersion": "4.0.1",
   "mapping": [

@@ -33,7 +33,8 @@
       "display": "unbekannt"
     }
   ],
-  "version": "1.3.0",
+  "version": "1.3.0-rc1",
+  "date": "2024-03-19",
   "publisher": "gematik GmbH",
   "contact": [
     {

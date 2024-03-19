@@ -5,7 +5,6 @@ Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
 * ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
-* ^date = "2020-04-16T13:43:27.7930941+00:00"
 * ^abstract = true
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)

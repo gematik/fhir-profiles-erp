@@ -2,10 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Digest",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest",
-  "version": "1.3.0",
+  "version": "1.3.0-rc1",
   "name": "GEM_ERP_PR_Digest",
   "title": "QES-Digest in Binary",
   "status": "draft",
+  "date": "2024-03-19",
   "description": "QES-Digest in Binary",
   "fhirVersion": "4.0.1",
   "mapping": [

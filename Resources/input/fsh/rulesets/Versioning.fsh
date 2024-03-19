@@ -1,7 +1,8 @@
 // General rule for to handle versions for all structure definitions
 RuleSet: Versioning
 * ^status = #draft
-* ^version = "1.3.0"
+* ^version = "1.3.0-rc1"
+* ^date = "2024-03-19"
 
 
 // Rules to set meta.profile in profiles and instances

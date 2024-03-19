@@ -4,7 +4,6 @@ Id: GEM-ERP-PR-AuditEvent
 Title: "AuditEvent for Logging of ePrescription Access"
 * insert Profile(GEM_ERP_PR_AuditEvent)
 * ^meta.lastUpdated = "2020-04-16T13:41:55.87+00:00"
-* ^date = "2020-04-16T13:41:53.3147244+00:00"
 * type.system 1..
 * type.system = "http://terminology.hl7.org/CodeSystem/audit-event-type" (exactly)
 * type.system ^code.system = "http://terminology.hl7.org/CodeSystem/audit-event-type"

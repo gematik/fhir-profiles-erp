@@ -5,7 +5,6 @@ Title: "Receipt for Fulfillment of ePrescription"
 Description: "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes."
 * insert Profile(GEM_ERP_PR_Composition)
 * ^meta.lastUpdated = "2020-04-16T13:43:58.4+00:00"
-* ^date = "2020-04-16T13:43:56.0876617+00:00"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed

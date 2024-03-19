@@ -5,11 +5,11 @@
     "lastUpdated": "2020-04-16T13:44:27.957+00:00"
   },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-  "version": "1.3.0",
+  "version": "1.3.0-rc1",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensation of the Prescription",
   "status": "draft",
-  "date": "2020-04-16T13:44:25.6462885+00:00",
+  "date": "2024-03-19",
   "description": "Handles information about the redeem of the prescription and the submited medication.",
   "fhirVersion": "4.0.1",
   "mapping": [
