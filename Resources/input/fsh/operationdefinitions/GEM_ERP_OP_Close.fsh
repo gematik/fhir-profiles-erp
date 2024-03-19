@@ -16,7 +16,7 @@ Usage: #definition
 // in
 * parameter[+].name = #MedicationDispense
 * parameter[=].use = #in
-* parameter[=].min = 1
+* parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "Information on dispensed Medication(s)"
 * parameter[=].type = #canonical

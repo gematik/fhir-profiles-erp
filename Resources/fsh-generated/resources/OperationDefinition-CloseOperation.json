@@ -29,7 +29,7 @@
     {
       "name": "MedicationDispense",
       "use": "in",
-      "min": 1,
+      "min": 0,
       "max": "1",
       "documentation": "Information on dispensed Medication(s)",
       "type": "canonical",
