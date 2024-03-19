@@ -5,11 +5,11 @@
     "lastUpdated": "2020-04-16T13:41:55.87+00:00"
   },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
-  "version": "1.3.0",
+  "version": "1.3",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent for Logging of ePrescription Access",
   "status": "draft",
-  "date": "2020-04-16T13:41:53.3147244+00:00",
+  "date": "2024-03-19",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

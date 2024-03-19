@@ -1,8 +1,7 @@
 RuleSet: Operation(name)
+* insert OperationVersioning
 * url = "https://gematik.de/fhir/erp/OperationDefinition/{name}OperationDefinition"
-* version = "1.3.0"
 * name = "{name}"
-* status = #draft
 * kind = #operation
 * affectsState = true
 * resource = #Task

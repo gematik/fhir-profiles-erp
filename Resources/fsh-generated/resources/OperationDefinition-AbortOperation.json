@@ -2,9 +2,10 @@
   "resourceType": "OperationDefinition",
   "id": "AbortOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition",
-  "version": "1.3.0",
-  "name": "Abort",
   "status": "draft",
+  "version": "1.3",
+  "date": "2024-03-19",
+  "name": "Abort",
   "kind": "operation",
   "affectsState": true,
   "resource": [
@@ -13,7 +14,6 @@
   "system": false,
   "type": false,
   "instance": true,
-  "date": "2022-04-01",
   "description": "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task.",
   "code": "abort",
   "parameter": [

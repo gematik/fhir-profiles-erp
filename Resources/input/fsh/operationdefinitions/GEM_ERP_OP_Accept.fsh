@@ -2,7 +2,6 @@ Instance: AcceptOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Accept)
-* date = "2022-04-01"
 * description = "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'."
 * code = #accept
 * outputProfile = "http://hl7.org/fhir/StructureDefinition/Bundle"

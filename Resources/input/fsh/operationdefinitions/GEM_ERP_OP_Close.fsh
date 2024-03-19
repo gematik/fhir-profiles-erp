@@ -2,7 +2,6 @@ Instance: CloseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Close)
-* date = "2022-02-01"
 * description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"
 * code = #close
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
