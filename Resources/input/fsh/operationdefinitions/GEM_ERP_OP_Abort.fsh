@@ -2,7 +2,6 @@ Instance: AbortOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Abort)
-* date = "2022-04-01"
 * description = "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task."
 * code = #abort
 // in

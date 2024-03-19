@@ -2,7 +2,6 @@ Instance: DispenseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Dispense)
-* date = "2022-02-01"
 * description = "The operation $dispense lets the pharmacy perform a dispense for a medication without changing the status of the task. This actions lets a frontend display that a medication has been dispensed before it is closed by the pharmacy."
 * code = #dispense
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"

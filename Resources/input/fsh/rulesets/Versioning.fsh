@@ -4,6 +4,10 @@ RuleSet: Versioning
 * ^version = "1.3.0-rc1"
 * ^date = "2024-03-19"
 
+RuleSet: OperationVersioning
+* status = #draft
+* version = "1.3.0-rc1"
+* date = "2024-03-19"
 
 // Rules to set meta.profile in profiles and instances
 RuleSet: PackageMetaProfileExactly(profile)

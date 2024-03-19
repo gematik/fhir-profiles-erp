@@ -2,9 +2,10 @@
   "resourceType": "OperationDefinition",
   "id": "RejectOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition",
-  "version": "1.3.0",
-  "name": "Reject",
   "status": "draft",
+  "version": "1.3.0-rc1",
+  "date": "2024-03-19",
+  "name": "Reject",
   "kind": "operation",
   "affectsState": true,
   "resource": [
@@ -13,7 +14,6 @@
   "system": false,
   "type": false,
   "instance": true,
-  "date": "2022-04-01",
   "description": "Rejects the dispense of a ePrescription. The Task will be reset to an active state, the secret will be deleted, and the Task will be accessible by any other pharmacist or it can be deleted by the patient.",
   "code": "reject",
   "parameter": [

@@ -2,7 +2,6 @@ Instance: ActivateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Activate)
-* date = "2022-02-01"
 * description = "This operation activates the created Task for the prescription. The input parameter must contain the qualified signed Bundle of the prescription. The prescription server validates the prescription, updates the task ressource and starts the workflow."
 * code = #activate
 * outputProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"

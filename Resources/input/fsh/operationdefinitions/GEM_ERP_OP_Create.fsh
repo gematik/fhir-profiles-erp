@@ -2,7 +2,6 @@ Instance: CreateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Create)
-* date = "2022-02-01"
 * description = "This operation creates a Task for the prescription of a specific workflowType."
 * code = #create
 * type = true
