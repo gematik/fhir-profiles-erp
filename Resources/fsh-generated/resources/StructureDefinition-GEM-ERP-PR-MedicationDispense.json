@@ -144,7 +144,7 @@
             "human": "Wert muss ein Datum in der Form: YYYY-MM-DD sein.",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
             "severity": "error",
-            "expression": "toString().matches('^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?$')"
+            "expression": "toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$')"
           }
         ],
         "mustSupport": false
@@ -159,7 +159,7 @@
             "human": "Wert muss ein Datum in der Form: YYYY-MM-DD sein.",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
             "severity": "error",
-            "expression": "toString().matches('^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?$')"
+            "expression": "toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$')"
           }
         ]
       },
