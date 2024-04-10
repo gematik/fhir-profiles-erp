@@ -22,5 +22,13 @@ Description: "Handles information about the redeem of the prescription and the s
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId
 * whenPrepared ^mustSupport = false
+* whenPrepared obeys workflow-abgabeDatumsFormat
 * whenHandedOver 1..
+* whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
+
+Invariant: workflow-abgabeDatumsFormat
+Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
+* severity = #error
+* expression = "toString().matches('^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?$')"
+
