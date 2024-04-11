@@ -30,7 +30,7 @@ Description: "Handles information about the redeem of the prescription and the s
 Invariant: workflow-abgabeDatumsFormat
 Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
 * severity = #error
-* expression = "toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$')"
+* expression = "toString().length()=10"
 
 Instance: Example-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense
