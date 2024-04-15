@@ -242,6 +242,7 @@
         },
         "short": "Input Bundle",
         "definition": "Reference to ePrescription input and outcome during the process",
+        "max": "2",
         "mustSupport": true
       },
       {
@@ -323,45 +324,6 @@
             "code": "Reference",
             "targetProfile": [
               "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Task.input:MedicationDispense",
-        "path": "Task.input",
-        "sliceName": "MedicationDispense",
-        "short": "Reference to the MedicationDispenses of a task",
-        "min": 0,
-        "max": "*"
-      },
-      {
-        "id": "Task.input:MedicationDispense.type.coding",
-        "path": "Task.input.type.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
-        }
-      },
-      {
-        "id": "Task.input:MedicationDispense.type.coding.system",
-        "path": "Task.input.type.coding.system",
-        "min": 1
-      },
-      {
-        "id": "Task.input:MedicationDispense.type.coding.code",
-        "path": "Task.input.type.coding.code",
-        "min": 1,
-        "fixedCode": "4"
-      },
-      {
-        "id": "Task.input:MedicationDispense.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
             ]
           }
         ]

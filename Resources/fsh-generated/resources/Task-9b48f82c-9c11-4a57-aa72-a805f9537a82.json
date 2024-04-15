@@ -72,20 +72,6 @@
       "valueReference": {
         "reference": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
       }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "4",
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-            "display": "Medication Dispense"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "c211a765-9559-4def-a819-14a41f54ccc5"
-      }
     }
   ],
   "status": "in-progress",

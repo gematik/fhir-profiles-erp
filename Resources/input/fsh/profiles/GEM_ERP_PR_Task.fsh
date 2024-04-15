@@ -34,7 +34,7 @@ Description: "This resource manages the ePrescription workflow"
 * for.identifier only $identifier-kvid-10 or $identifier-pkv
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
-* input ..* MS
+* input ..2 MS
 * input ^slicing.discriminator.type = #value
 * input ^slicing.discriminator.path = "type.coding.code"
 * input ^slicing.rules = #closed
@@ -42,8 +42,7 @@ Description: "This resource manages the ePrescription workflow"
 * input ^definition = "Reference to ePrescription input and outcome during the process"
 * input contains
     ePrescription 0..1 and
-    patientReceipt 0..1 and
-    MedicationDispense 0..*
+    patientReceipt 0..1
 
 // QES Binary ePrescription
 * input[ePrescription].type.coding from GEM_ERP_VS_DocumentType (required)
@@ -61,14 +60,6 @@ Description: "This resource manages the ePrescription workflow"
 * input[patientReceipt].type.coding.code = #2 (exactly)
 * input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
 * input[patientReceipt] ^short = "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV"
-
-// References to MedicationDispenses that are part of the task
-* input[MedicationDispense].type.coding from GEM_ERP_VS_DocumentType (required)
-* input[MedicationDispense].type.coding.system 1..
-* input[MedicationDispense].type.coding.code 1..
-* input[MedicationDispense].type.coding.code = #4 (exactly)
-* input[MedicationDispense].value[x] only Reference(GEM_ERP_PR_MedicationDispense)
-* input[MedicationDispense] ^short = "Reference to the MedicationDispenses of a task"
 
 * output ..1 MS
 * output ^slicing.discriminator.type = #value
@@ -197,8 +188,6 @@ Usage: #example
 * input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "c211a765-9559-4def-a819-14a41f54ccc5"
 
 Instance: TaskInIn-ProgressState-Dispensed-Multiple-MedicationDispenses
 InstanceOf: GEM_ERP_PR_Task
@@ -230,16 +219,6 @@ Usage: #example
 * input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "e93b04e7-b0f8-4860-b74d-dae07aebe910"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "e71276da-0cd2-488e-87de-054e6763acf1"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "0aa0ae88-0b03-4e69-b9e1-ebfb13dc27da"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "6c2dc20d-0daf-4c4c-81df-3b356b4137ef"
-* input[MedicationDispense].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#4 "Medication Dispense"
-* input[MedicationDispense].valueReference.reference = "bc135c7a-b3e1-46de-898e-c189316e0ea4"
 
 Instance: TaskInClosedState
 InstanceOf: GEM_ERP_PR_Task
