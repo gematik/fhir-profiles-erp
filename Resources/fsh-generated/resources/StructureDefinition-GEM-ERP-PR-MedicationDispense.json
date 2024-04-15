@@ -138,12 +138,30 @@
       {
         "id": "MedicationDispense.whenPrepared",
         "path": "MedicationDispense.whenPrepared",
+        "constraint": [
+          {
+            "key": "workflow-abgabeDatumsFormat",
+            "human": "Wert muss ein Datum in der Form: YYYY-MM-DD sein.",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
+            "severity": "error",
+            "expression": "toString().length()=10"
+          }
+        ],
         "mustSupport": false
       },
       {
         "id": "MedicationDispense.whenHandedOver",
         "path": "MedicationDispense.whenHandedOver",
-        "min": 1
+        "min": 1,
+        "constraint": [
+          {
+            "key": "workflow-abgabeDatumsFormat",
+            "human": "Wert muss ein Datum in der Form: YYYY-MM-DD sein.",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
+            "severity": "error",
+            "expression": "toString().length()=10"
+          }
+        ]
       },
       {
         "id": "MedicationDispense.dosageInstruction",
