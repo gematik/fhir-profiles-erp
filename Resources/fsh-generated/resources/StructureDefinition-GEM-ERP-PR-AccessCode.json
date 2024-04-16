@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_AccessCode",
   "title": "Identifier Profile for Prescription IDs",
   "status": "draft",
-  "date": "2024-03-19",
+  "date": "2024-04-16",
   "description": "The AccessCode is a generated secret, that grants access to an ePrescription resource, eg. Task",
   "fhirVersion": "4.0.1",
   "mapping": [

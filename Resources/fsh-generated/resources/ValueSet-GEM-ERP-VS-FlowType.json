@@ -7,7 +7,7 @@
   "description": "Shows the different types of the ePrescription according to the prescription forms.",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
   "version": "1.3",
-  "date": "2024-03-19",
+  "date": "2024-04-16",
   "publisher": "gematik GmbH",
   "contact": [
     {

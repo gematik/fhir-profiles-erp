@@ -9,7 +9,7 @@
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensation of the Prescription",
   "status": "draft",
-  "date": "2024-03-19",
+  "date": "2024-04-16",
   "description": "Handles information about the redeem of the prescription and the submited medication.",
   "fhirVersion": "4.0.1",
   "mapping": [

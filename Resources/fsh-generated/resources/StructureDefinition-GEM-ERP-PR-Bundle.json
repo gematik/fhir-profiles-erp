@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Bundle",
   "title": "Document Bundle for Receipt",
   "status": "draft",
-  "date": "2024-03-19",
+  "date": "2024-04-16",
   "description": "A document style representation of the receipt (complete, self-contained, signed)",
   "fhirVersion": "4.0.1",
   "mapping": [
