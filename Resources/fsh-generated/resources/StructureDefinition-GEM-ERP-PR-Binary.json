@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Binary",
   "title": "PKCS7 signed Bundle envelopig style",
   "status": "draft",
-  "date": "2024-03-19",
+  "date": "2024-04-16",
   "description": "PCKS7 signed ePrescription Bundle or Receipt",
   "fhirVersion": "4.0.1",
   "mapping": [
