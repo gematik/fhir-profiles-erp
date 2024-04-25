@@ -22,7 +22,6 @@ Description: "Handles information about the redeem of the prescription and the s
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId
 * whenPrepared ^mustSupport = false
-* whenPrepared obeys workflow-abgabeDatumsFormat
 * whenHandedOver 1..
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
