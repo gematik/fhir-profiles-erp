@@ -5,7 +5,7 @@
   "version": "1.3",
   "name": "GEM_ERP_PR_Task",
   "title": "Task for Management of ePrescription Workflow",
-  "status": "draft",
+  "status": "active",
   "date": "2024-04-16",
   "description": "This resource manages the ePrescription workflow",
   "fhirVersion": "4.0.1",

@@ -8,7 +8,7 @@
   "version": "1.3",
   "name": "GEM_ERP_PR_Communication_Reply",
   "title": "Reply from Provider to Patient",
-  "status": "draft",
+  "status": "active",
   "date": "2024-04-16",
   "description": "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative",
   "fhirVersion": "4.0.1",
