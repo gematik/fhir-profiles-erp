@@ -11,6 +11,8 @@ Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $clo
     * extension 0..* BackboneElement "Erweiterungen"
       * impfung 1..1 boolean "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine"
       * arzneimittelkategorie 1..1 code "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category"
+      * Kategorie 0..1 string "Angabe zur Kategorie"
+        * ^comment = "Muss angegeben werden, wenn vorhanden"
       * normgroesse 0..1 code "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE"
         * ^comment = "Muss angegeben werden, wenn vorhanden"
       * herstellungsanweisung 0..1 string "Herstellungsanweisung"

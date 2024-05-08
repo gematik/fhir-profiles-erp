@@ -132,6 +132,20 @@
         ]
       },
       {
+        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.Kategorie",
+        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.Kategorie",
+        "short": "Angabe zur Kategorie",
+        "definition": "Angabe zur Kategorie",
+        "comment": "Muss angegeben werden, wenn vorhanden",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.normgroesse",
         "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.normgroesse",
         "short": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
