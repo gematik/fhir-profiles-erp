@@ -52,9 +52,6 @@ Description: "Handles medical information about the redeemed prescription"
 * extension[Normgroesse] ^short = "Packungsgröße nach N-Bezeichnung"
 * extension[Normgroesse] ^definition = "Beschreibung der therapiegerechten Packungsgröße (z. B. N1)"
 * extension[Normgroesse].value[x] 1.. MS
-* extension[Normgroesse].value[x] ^slicing.discriminator.type = #type
-* extension[Normgroesse].value[x] ^slicing.discriminator.path = "$this"
-* extension[Normgroesse].value[x] ^slicing.rules = #closed
 * extension[Normgroesse].valueCode MS
 * extension[Normgroesse].valueCode ^sliceName = "valueCode"
 
