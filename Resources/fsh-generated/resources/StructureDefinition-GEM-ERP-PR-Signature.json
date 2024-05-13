@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Signature",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature",
-  "version": "1.3",
+  "version": "1.4",
   "name": "GEM_ERP_PR_Signature",
   "title": "Profile for Signature of Bundles in ePrescription Context",
-  "status": "active",
-  "date": "2024-04-16",
+  "status": "draft",
+  "date": "2024-05",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

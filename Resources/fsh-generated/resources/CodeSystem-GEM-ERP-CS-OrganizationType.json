@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "GEM_ERP_CS_OrganizationType",
   "id": "GEM-ERP-CS-OrganizationType",
@@ -13,8 +13,8 @@
       "display": "Öffentliche Apotheke"
     }
   ],
-  "version": "1.3",
-  "date": "2024-04-16",
+  "version": "1.4",
+  "date": "2024-05",
   "publisher": "gematik GmbH",
   "contact": [
     {
