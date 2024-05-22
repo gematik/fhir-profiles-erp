@@ -79,22 +79,9 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "definition": "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN).",
         "type": [
           {
-            "code": "CodeableConcept"
-          },
-          {
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Medication"
@@ -104,81 +91,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationReference",
-        "path": "MedicationDispense.medication[x]",
-        "sliceName": "medicationReference",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Medication"
-            ],
-            "aggregation": [
-              "contained"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept",
-        "path": "MedicationDispense.medication[x]",
-        "sliceName": "medicationCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept.coding",
-        "path": "MedicationDispense.medication[x].coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept.coding:pznCode",
-        "path": "MedicationDispense.medication[x].coding",
-        "sliceName": "pznCode",
-        "short": "ID des Produktes (PZN)",
-        "definition": "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V.",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept.coding:pznCode.system",
-        "path": "MedicationDispense.medication[x].coding.system",
-        "patternUri": "http://fhir.de/CodeSystem/ifa/pzn",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept.coding:pznCode.code",
-        "path": "MedicationDispense.medication[x].coding.code",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x]:medicationCodeableConcept.text",
-        "path": "MedicationDispense.medication[x].text",
-        "short": "Handelsname",
-        "definition": "Handelsname der verordneten DiGA, aus der PZN abgeleitet",
-        "min": 1,
         "mustSupport": true
       },
       {
