@@ -1,6 +1,6 @@
 {
   "resourceType": "Communication",
-  "id": "a218a36e-f2fd-4603-ba67-c827acfef01b",
+  "id": "2be1c6ac-5d10-47f6-84ee-8318b2c22c76",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.4"
@@ -16,9 +16,9 @@
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
       "valueCoding": {
-        "code": "160",
+        "code": "162",
         "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
-        "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
+        "display": "Muster 16 (Digitale Gesundheitsanwendungen)"
       }
     }
   ],
@@ -26,13 +26,13 @@
     {
       "identifier": {
         "system": "https://gematik.de/fhir/sid/telematik-id",
-        "value": "3-SMC-B-Testkarte-883110000123465"
+        "value": "8-SMC-B-Testkarte-883110000123465"
       }
     }
   ],
   "basedOn": [
     {
-      "reference": "Task/160.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+      "reference": "Task/162.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
     }
   ],
   "sender": {
@@ -41,10 +41,5 @@
       "value": "X234567890"
     }
   },
-  "sent": "2020-04-29T13:44:30.128+02:00",
-  "payload": [
-    {
-      "contentString": "{ \"version\": \"1\", \"supplyOptionsType\": \"delivery\", \"name\": \"Dr. Maximilian von Muster\", \"address\": [ \"wohnhaft bei Emilia Fischer\", \"Bundesallee 312\", \"123. OG\", \"12345 Berlin\" ], \"hint\": \"Bitte im Morsecode klingeln: -.-.\", \"phone\": \"004916094858168\" }"
-    }
-  ]
+  "sent": "2020-04-29T13:44:30.128+02:00"
 }

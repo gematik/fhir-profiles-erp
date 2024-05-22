@@ -46,6 +46,26 @@
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.4"
       },
       {
+        "id": "Communication.extension",
+        "path": "Communication.extension",
+        "min": 1
+      },
+      {
+        "id": "Communication.extension:flowType",
+        "path": "Communication.extension",
+        "sliceName": "flowType",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Communication.basedOn",
         "path": "Communication.basedOn",
         "min": 1,
@@ -145,7 +165,7 @@
             "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
             "severity": "error",
-            "expression": "(iif(basedOn.reference.startsWith('Task/162'), true, payload.exists()))"
+            "expression": "(iif(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162', payload.empty(), payload.exists()))"
           }
         ],
         "mustSupport": true
