@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-AcceptDate",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
-  "version": "1.3",
+  "version": "1.4",
   "name": "GEM_ERP_EX_AcceptDate",
   "title": "Date of confirmation of the prescription",
   "status": "active",
-  "date": "2024-05-21",
+  "date": "2024-07-01",
   "description": "This extension should be used in the Task ressource. It stores the Date till when an insurance company will accept and pay the prescription.",
   "fhirVersion": "4.0.1",
   "mapping": [
