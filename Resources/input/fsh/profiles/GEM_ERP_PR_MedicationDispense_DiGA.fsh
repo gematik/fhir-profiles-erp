@@ -18,23 +18,40 @@ Description: "Handles information about the dispensed DiGA"
 
 // medicationCodeableConcept für die Angabe von DiGAs
 * medicationCodeableConcept MS
-* medicationCodeableConcept.coding ..1 MS
+* medicationCodeableConcept.coding 1..1
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
 * medicationCodeableConcept.coding ^slicing.rules = #closed
 * medicationCodeableConcept.coding contains pznCode 1..1
 * medicationCodeableConcept.coding[pznCode] ^short = "ID des Produktes (PZN)"
 * medicationCodeableConcept.coding[pznCode] ^definition = "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V."
-* medicationCodeableConcept.coding[pznCode].system MS
 * medicationCodeableConcept.coding[pznCode].system = $PZN
-* medicationCodeableConcept.coding[pznCode].code MS
-* medicationCodeableConcept.text 1..1 MS
+* medicationCodeableConcept.coding[pznCode].code 1..1
+* medicationCodeableConcept.text 1..1
 * medicationCodeableConcept.text ^short = "Handelsname"
 * medicationCodeableConcept.text ^definition = "Handelsname der verordneten DiGA, aus der PZN abgeleitet"
 
+// supportingInformation für die Angabe des Freischaltcodes
+* supportingInformation ^slicing.discriminator.type = #value
+* supportingInformation ^slicing.discriminator.path = identifier.value
+* supportingInformation ^slicing.rules = #open
+* supportingInformation ^slicing.ordered = false
+* supportingInformation ^slicing.description = "Zusatzinformationen zur DiGA"
+* supportingInformation contains 
+    redeemCode 1..1
+    and deepLink 0..1
+
+* supportingInformation[redeemCode].identifier.value = "redeemCode" (exactly)
+* supportingInformation[redeemCode].display 1..1
+* supportingInformation[redeemCode].display ^short = "Freischaltcode für die DiGA"
+
+* supportingInformation[deepLink].identifier.value = "deepLink" (exactly)
+* supportingInformation[deepLink].display 1..1
+* supportingInformation[deepLink].display ^short = "DeepLink für die DiGA"
+
 * subject 1..
 * subject.identifier 1..
-* subject.identifier only $identifier-kvid-10
+* subject.identifier only $identifier-kvid-10 // Hier nur die KVNR der GKV, da für PKV kein DiGA angedacht ist
 * subject.identifier ^short = "The patients KVNR"
 * performer 1..1
 * performer.actor.identifier 1..
@@ -61,3 +78,5 @@ Description: "Example of a Medication Dispense."
 * medicationCodeableConcept.coding[pznCode].system = $PZN
 * medicationCodeableConcept.coding[pznCode].code = #17946626
 * medicationCodeableConcept.text = "glucura Diabetestherapie"
+* supportingInformation[redeemCode].display = "DE12345678901234"
+* supportingInformation[redeemCode].identifier.value = "redeemCode"

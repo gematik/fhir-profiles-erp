@@ -28,6 +28,14 @@
       "value": "X123456789"
     }
   },
+  "supportingInformation": [
+    {
+      "identifier": {
+        "value": "redeemCode"
+      },
+      "display": "DE12345678901234"
+    }
+  ],
   "performer": [
     {
       "actor": {

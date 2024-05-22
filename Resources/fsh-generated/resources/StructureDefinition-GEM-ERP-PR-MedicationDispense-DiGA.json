@@ -101,8 +101,7 @@
           "rules": "closed"
         },
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "MedicationDispense.medication[x].coding:pznCode",
@@ -116,21 +115,19 @@
       {
         "id": "MedicationDispense.medication[x].coding:pznCode.system",
         "path": "MedicationDispense.medication[x].coding.system",
-        "patternUri": "http://fhir.de/CodeSystem/ifa/pzn",
-        "mustSupport": true
+        "patternUri": "http://fhir.de/CodeSystem/ifa/pzn"
       },
       {
         "id": "MedicationDispense.medication[x].coding:pznCode.code",
         "path": "MedicationDispense.medication[x].coding.code",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "MedicationDispense.medication[x].text",
         "path": "MedicationDispense.medication[x].text",
         "short": "Handelsname",
         "definition": "Handelsname der verordneten DiGA, aus der PZN abgeleitet",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "MedicationDispense.subject",
@@ -150,6 +147,54 @@
             ]
           }
         ]
+      },
+      {
+        "id": "MedicationDispense.supportingInformation",
+        "path": "MedicationDispense.supportingInformation",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "identifier.value"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Zusatzinformationen zur DiGA"
+        },
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:redeemCode",
+        "path": "MedicationDispense.supportingInformation",
+        "sliceName": "redeemCode",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:redeemCode.identifier.value",
+        "path": "MedicationDispense.supportingInformation.identifier.value",
+        "min": 1,
+        "fixedString": "redeemCode"
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:redeemCode.display",
+        "path": "MedicationDispense.supportingInformation.display",
+        "short": "DeepLink für die DiGA",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:deepLink",
+        "path": "MedicationDispense.supportingInformation",
+        "sliceName": "deepLink",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:deepLink.identifier.value",
+        "path": "MedicationDispense.supportingInformation.identifier.value",
+        "min": 1,
+        "fixedString": "deepLink"
       },
       {
         "id": "MedicationDispense.performer",
