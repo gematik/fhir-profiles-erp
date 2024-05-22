@@ -1,0 +1,199 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-MedicationDispense-DiGA",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA",
+  "version": "1.4",
+  "name": "GEM_ERP_PR_MedicationDispense_DiGA",
+  "title": "Dispensation of a DiGA-Prescription",
+  "status": "active",
+  "date": "2024-07-01",
+  "description": "Handles information about the dispensed DiGA",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "rx-dispense-rmim",
+      "uri": "http://www.hl7.org/v3/PORX_RM020070UV",
+      "name": "V3 Pharmacy Dispense RMIM"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense.meta",
+        "path": "MedicationDispense.meta",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.meta.profile",
+        "path": "MedicationDispense.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
+      },
+      {
+        "id": "MedicationDispense.identifier",
+        "path": "MedicationDispense.identifier",
+        "short": "ePrescription identifier",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.status",
+        "path": "MedicationDispense.status",
+        "short": "completed",
+        "fixedCode": "completed"
+      },
+      {
+        "id": "MedicationDispense.medication[x]",
+        "path": "MedicationDispense.medication[x]",
+        "short": "Information concerning the dispensed medication",
+        "definition": "This profile supports two ways of medication information. The first way is to use the medicationReference element to reference a medication resource which is issued . The second way is to use the medicationCodeableConcept element to provide the medication information directly.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medication[x].coding",
+        "path": "MedicationDispense.medication[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medication[x].coding:pznCode",
+        "path": "MedicationDispense.medication[x].coding",
+        "sliceName": "pznCode",
+        "short": "ID des Produktes (PZN)",
+        "definition": "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.medication[x].coding:pznCode.system",
+        "path": "MedicationDispense.medication[x].coding.system",
+        "patternUri": "http://fhir.de/CodeSystem/ifa/pzn",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medication[x].coding:pznCode.code",
+        "path": "MedicationDispense.medication[x].coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medication[x].text",
+        "path": "MedicationDispense.medication[x].text",
+        "short": "Handelsname",
+        "definition": "Handelsname der verordneten DiGA, aus der PZN abgeleitet",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.subject",
+        "path": "MedicationDispense.subject",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.subject.identifier",
+        "path": "MedicationDispense.subject.identifier",
+        "short": "The patients KVNR",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.performer",
+        "path": "MedicationDispense.performer",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.performer.actor.identifier",
+        "path": "MedicationDispense.performer.actor.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.whenPrepared",
+        "path": "MedicationDispense.whenPrepared",
+        "mustSupport": false
+      },
+      {
+        "id": "MedicationDispense.whenHandedOver",
+        "path": "MedicationDispense.whenHandedOver",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "workflow-abgabeDatumsFormat",
+            "human": "Wert muss ein Datum in der Form: YYYY-MM-DD sein.",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA",
+            "severity": "error",
+            "expression": "toString().length()=10"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction",
+        "path": "MedicationDispense.dosageInstruction",
+        "mustSupport": true
+      }
+    ]
+  }
+}
