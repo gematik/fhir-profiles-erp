@@ -4,16 +4,36 @@ Id: GEM-ERP-PR-MedicationDispense
 Title: "Dispensation of the Prescription"
 Description: "Handles information about the redeem of the prescription and the submited medication."
 * insert Profile(GEM_ERP_PR_MedicationDispense)
-* ^meta.lastUpdated = "2020-04-16T13:44:27.957+00:00"
+
 * identifier 1..1
 * identifier only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"
 * status = #completed (exactly)
 * status ^short = "completed"
-* medication[x] only Reference
+
 * medication[x] MS
+//TODO: Beschreibungen für die Entwickler einfügen
 * medication[x] ^definition = "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN)."
-* medication[x] ^type.aggregation = #contained
+
+// medicationReference für die Angabe von Arzneimitteln
+* medicationReference ^type.aggregation = #contained
+
+// medicationCodeableConcept für die Angabe von DiGAs
+* medicationCodeableConcept MS
+* medicationCodeableConcept.coding ..1 MS
+* medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
+* medicationCodeableConcept.coding ^slicing.rules = #closed
+* medicationCodeableConcept.coding contains pznCode 1..1
+* medicationCodeableConcept.coding[pznCode] ^short = "ID des Produktes (PZN)"
+* medicationCodeableConcept.coding[pznCode] ^definition = "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V."
+* medicationCodeableConcept.coding[pznCode].system MS
+* medicationCodeableConcept.coding[pznCode].system = $PZN
+* medicationCodeableConcept.coding[pznCode].code MS
+* medicationCodeableConcept.text 1..1 MS
+* medicationCodeableConcept.text ^short = "Handelsname"
+* medicationCodeableConcept.text ^definition = "Handelsname der verordneten DiGA, aus der PZN abgeleitet"
+
 * subject 1..
 * subject.identifier 1..
 * subject.identifier only $identifier-kvid-10 or $identifier-pkv
@@ -30,6 +50,16 @@ Invariant: workflow-abgabeDatumsFormat
 Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
 * severity = #error
 * expression = "toString().length()=10"
+
+Invariant: workflow-dispense-medicationInformation
+Description: "Wenn eine Dispense zu einer DiGA erfolgt müssen die Angaben zur DiGA in medicationCodeableConcept angegeben werden. Andernfalls muss medicationReference angegeben werden."
+* severity = #error
+* expression = "(iif(identifier.value.startsWith('162'), medicationCodeableConcept.exists() and medicationReference.empty(), medicationReference.exists() and medicationCodeableConcept.empty()))"
+
+Invariant: workflow-dispense-redeemCode
+Description: "Wenn eine Dispense zu einer DiGA erfolgt muss der Freischaltcode angegeben werden."
+* severity = #error
+* expression = "(iif(identifier.value.startsWith('162'), supportingInformation.where(sliceName = 'redeemCode').exists(), true))"
 
 Instance: Example-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense
