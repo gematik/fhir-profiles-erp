@@ -5,7 +5,7 @@
   "version": "1.4",
   "name": "GEM_ERP_PR_MedicationDispense_DiGA",
   "title": "Dispensation of a DiGA-Prescription",
-  "status": "active",
+  "status": "draft",
   "date": "2024-07-01",
   "description": "Handles information about the dispensed DiGA",
   "fhirVersion": "4.0.1",
@@ -180,7 +180,7 @@
       {
         "id": "MedicationDispense.supportingInformation:redeemCode.display",
         "path": "MedicationDispense.supportingInformation.display",
-        "short": "DeepLink für die DiGA",
+        "short": "Freischaltcode für die DiGA",
         "min": 1
       },
       {
@@ -195,6 +195,12 @@
         "path": "MedicationDispense.supportingInformation.identifier.value",
         "min": 1,
         "fixedString": "deepLink"
+      },
+      {
+        "id": "MedicationDispense.supportingInformation:deepLink.display",
+        "path": "MedicationDispense.supportingInformation.display",
+        "short": "DeepLink für die DiGA",
+        "min": 1
       },
       {
         "id": "MedicationDispense.performer",

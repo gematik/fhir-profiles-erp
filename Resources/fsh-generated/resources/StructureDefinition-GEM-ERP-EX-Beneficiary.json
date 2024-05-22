@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary",
   "version": "1.4",
   "name": "GEM_ERP_EX_Beneficiary",
-  "status": "active",
+  "status": "draft",
   "date": "2024-07-01",
   "description": "The beneficiary (e.g. pharmacy) of the erx-receipt that is created when the ePrescription-workflow finishes",
   "fhirVersion": "4.0.1",
