@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
-Parent: MedicationDispense
+Parent: MedicationDispense //TODO: Erben von E-PA MedicationDispense
 Id: GEM-ERP-PR-MedicationDispense-DiGA
 Title: "Dispensation of a DiGA-Prescription"
 Description: "Handles information about the dispensed DiGA"
@@ -53,6 +53,7 @@ Description: "Handles information about the dispensed DiGA"
 * subject.identifier 1..
 * subject.identifier only $identifier-kvid-10 // Hier nur die KVNR der GKV, da für PKV kein DiGA angedacht ist
 * subject.identifier ^short = "The patients KVNR"
+* subject.identifier ^comment = "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
 * performer 1..1
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId

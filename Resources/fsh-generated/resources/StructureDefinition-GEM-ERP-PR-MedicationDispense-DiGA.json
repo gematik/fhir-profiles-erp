@@ -138,6 +138,7 @@
         "id": "MedicationDispense.subject.identifier",
         "path": "MedicationDispense.subject.identifier",
         "short": "The patients KVNR",
+        "comment": "There is no PKV identifier available since it is not in the scope for DiGA prescriptions.",
         "min": 1,
         "type": [
           {
