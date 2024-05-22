@@ -4,7 +4,7 @@ Id: GEM-ERP-PR-Communication-DispReq
 Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
-* ^meta.lastUpdated = "2020-04-16T13:43:30.128+00:00"
+//TODO: Klären ob payload nach basedOn startsWith "Task/162" umgesetzt werden soll oder anderes Profil. Neue verpflichtende Extension wäre bc
 * ^abstract = true
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)
@@ -29,7 +29,8 @@ Description: "Ressource used for the communication of dispense request between p
   * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender.identifier 1.. MS
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
-* payload 1..1 MS
+* payload 0..1 MS
+* payload obeys workflow-communication-payload-1
 //* payload.extension ^slicing.discriminator.type = #value
 //* payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
@@ -37,6 +38,11 @@ Description: "Ressource used for the communication of dispense request between p
 * payload.content[x] only string
   * ^short = "The actual content of the message"
   * ^comment = "This content needs to be a JSON according to gemSpec_DM_eRp."
+
+Invariant: workflow-communication-payload-1
+Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird"
+* severity = #error
+* expression = "(iif(basedOn.reference.startsWith('Task/162'), true, payload.exists()))"
 
 Instance: Communication_DispenseRequest
 InstanceOf: GEM_ERP_PR_Communication_DispReq
