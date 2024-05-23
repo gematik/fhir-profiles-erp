@@ -21,6 +21,7 @@ Usage: #definition
 * parameter[=].type = #canonical
 * parameter[=]
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
+  * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA)
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 
 // out
@@ -32,6 +33,7 @@ Usage: #definition
 * parameter[=].type = #canonical
 * parameter[=]
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
+  * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA)
   * insert PackageTargetProfile(StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle)
 
 Instance: OperationDispenseParametersInputMedicationDispense
