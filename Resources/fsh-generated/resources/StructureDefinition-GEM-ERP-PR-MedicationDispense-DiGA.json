@@ -107,8 +107,8 @@
         "id": "MedicationDispense.medication[x].coding:pznCode",
         "path": "MedicationDispense.medication[x].coding",
         "sliceName": "pznCode",
-        "short": "ID des Produktes (PZN)",
-        "definition": "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V.",
+        "short": "ID of the product (PZN)",
+        "definition": "Pharmaceutical Central Number (PZN), which is used by the Information Office for Pharmaceutical Specialties (IFA) in relation to products and is agreed upon with the pharmaceutical industry according to § 131 SGB V and with the German Pharmacists' Association according to § 300 for statutory health insurance funds. The information such as trade name, dosage form, package size, etc. is derived from the price and product information according to § 131 Abs. 4 SGB V.",
         "min": 1,
         "max": "1"
       },
@@ -125,8 +125,8 @@
       {
         "id": "MedicationDispense.medication[x].text",
         "path": "MedicationDispense.medication[x].text",
-        "short": "Handelsname",
-        "definition": "Handelsname der verordneten DiGA, aus der PZN abgeleitet",
+        "short": "Trade name",
+        "definition": "Trade name of the prescribed DiGA, derived from the PZN",
         "min": 1
       },
       {
@@ -161,7 +161,7 @@
           ],
           "rules": "open",
           "ordered": false,
-          "description": "Zusatzinformationen zur DiGA"
+          "description": "Additional Information for using the product"
         },
         "min": 1
       },
@@ -181,7 +181,7 @@
       {
         "id": "MedicationDispense.supportingInformation:redeemCode.display",
         "path": "MedicationDispense.supportingInformation.display",
-        "short": "Freischaltcode für die DiGA",
+        "short": "Redeem Code",
         "min": 1
       },
       {
@@ -200,7 +200,7 @@
       {
         "id": "MedicationDispense.supportingInformation:deepLink.display",
         "path": "MedicationDispense.supportingInformation.display",
-        "short": "DeepLink für die DiGA",
+        "short": "Deep Link",
         "min": 1
       },
       {

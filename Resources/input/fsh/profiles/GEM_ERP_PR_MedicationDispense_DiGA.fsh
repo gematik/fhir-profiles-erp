@@ -23,31 +23,31 @@ Description: "Handles information about the dispensed DiGA"
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
 * medicationCodeableConcept.coding ^slicing.rules = #closed
 * medicationCodeableConcept.coding contains pznCode 1..1
-* medicationCodeableConcept.coding[pznCode] ^short = "ID des Produktes (PZN)"
-* medicationCodeableConcept.coding[pznCode] ^definition = "Pharmazentralnummer (PZN), die von der Informationsstelle für Arzneispezialitäten (IFA) produktbezogen verwendet wird und für die gesetzlichen Krankenkassen gemäß Vereinbarung nach § 131 SGB V mit der pharmazeutischen Industrie und nach § 300 dem Deutschen Apothekerverband vereinbart ist.\r\nDie Angaben Handelsname, Darreichungsform, Packungsgröße usw. entstammen dem Preis- und Produktangaben nach §131 Abs. 4 SGB V."
+* medicationCodeableConcept.coding[pznCode] ^short = "ID of the product (PZN)"
+* medicationCodeableConcept.coding[pznCode] ^definition = "Pharmaceutical Central Number (PZN), which is used by the Information Office for Pharmaceutical Specialties (IFA) in relation to products and is agreed upon with the pharmaceutical industry according to § 131 SGB V and with the German Pharmacists' Association according to § 300 for statutory health insurance funds. The information such as trade name, dosage form, package size, etc. is derived from the price and product information according to § 131 Abs. 4 SGB V."
 * medicationCodeableConcept.coding[pznCode].system = $PZN
 * medicationCodeableConcept.coding[pznCode].code 1..1
 * medicationCodeableConcept.text 1..1
-* medicationCodeableConcept.text ^short = "Handelsname"
-* medicationCodeableConcept.text ^definition = "Handelsname der verordneten DiGA, aus der PZN abgeleitet"
+* medicationCodeableConcept.text ^short = "Trade name"
+* medicationCodeableConcept.text ^definition = "Trade name of the prescribed DiGA, derived from the PZN"
 
 // supportingInformation für die Angabe des Freischaltcodes
 * supportingInformation ^slicing.discriminator.type = #value
 * supportingInformation ^slicing.discriminator.path = identifier.value
 * supportingInformation ^slicing.rules = #open
 * supportingInformation ^slicing.ordered = false
-* supportingInformation ^slicing.description = "Zusatzinformationen zur DiGA"
+* supportingInformation ^slicing.description = "Additional Information for using the product"
 * supportingInformation contains 
     redeemCode 1..1
     and deepLink 0..1
 
 * supportingInformation[redeemCode].identifier.value = "redeemCode" (exactly)
 * supportingInformation[redeemCode].display 1..1
-* supportingInformation[redeemCode].display ^short = "Freischaltcode für die DiGA"
+* supportingInformation[redeemCode].display ^short = "Redeem Code"
 
 * supportingInformation[deepLink].identifier.value = "deepLink" (exactly)
 * supportingInformation[deepLink].display 1..1
-* supportingInformation[deepLink].display ^short = "DeepLink für die DiGA"
+* supportingInformation[deepLink].display ^short = "Deep Link"
 
 * subject 1..
 * subject.identifier 1..
