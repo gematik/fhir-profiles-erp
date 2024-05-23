@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense-DiGA",
+  "id": "Example-MedicationDispense-DiGA-DeepLink",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -20,7 +20,7 @@
         "code": "17946626"
       }
     ],
-    "text": "glucura Diabetestherapie"
+    "text": "diabetico Diabetestherapie"
   },
   "subject": {
     "identifier": {
@@ -34,6 +34,12 @@
         "value": "redeemCode"
       },
       "display": "DE12345678901234"
+    },
+    {
+      "identifier": {
+        "value": "deepLink"
+      },
+      "display": "https://www.diabetico.app?redeemCode=DE12345678901234"
     }
   ],
   "performer": [
