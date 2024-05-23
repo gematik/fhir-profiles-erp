@@ -9,4 +9,4 @@ Title: "Document Bundle for multiple MedicationDispenses on $close Operation"
 * entry ^slicing.rules = #closed
 * entry contains
     DispensedMedications 1..
-* entry[DispensedMedications].resource only GEM_ERP_PR_MedicationDispense
+* entry[DispensedMedications].resource only GEM_ERP_PR_MedicationDispense //Keine DiGA MedicationDispense, da es nur eine gibt
