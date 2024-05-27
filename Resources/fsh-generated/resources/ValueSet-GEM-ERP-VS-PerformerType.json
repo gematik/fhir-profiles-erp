@@ -7,7 +7,7 @@
   "description": "Type of performer",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType",
   "version": "1.4",
-  "date": "2024-05",
+  "date": "2024-07-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
