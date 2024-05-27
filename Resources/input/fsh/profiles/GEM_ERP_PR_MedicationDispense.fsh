@@ -10,10 +10,12 @@ Description: "Handles information about the redeem of the prescription and the s
 * identifier ^short = "ePrescription identifier"
 * status = #completed (exactly)
 * status ^short = "completed"
-* medication[x] only Reference
+
+* medication[x] only Reference(GEM_ERP_PR_Medication)
 * medication[x] MS
-* medication[x] ^definition = "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN)."
+* medication[x] ^definition = "The MedicationDispense shows a contained medication which was dispensed"
 * medication[x] ^type.aggregation = #contained
+
 * performer 1..1
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId

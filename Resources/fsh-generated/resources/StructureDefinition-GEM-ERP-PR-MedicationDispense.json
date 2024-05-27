@@ -61,12 +61,12 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN).",
+        "definition": "The MedicationDispense shows a contained medication which was dispensed",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Medication"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication"
             ],
             "aggregation": [
               "contained"
