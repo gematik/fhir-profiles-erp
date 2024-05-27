@@ -3,7 +3,7 @@
   "id": "9361863d-fec0-4ba9-8776-7905cf1b0cfa",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.3"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.4"
     ],
     "tag": [
       {
