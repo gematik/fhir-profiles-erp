@@ -4,7 +4,6 @@ Id: GEM-ERP-PR-MedicationDispense
 Title: "Dispensation of the Prescription"
 Description: "Handles information about the redeem of the prescription and the submited medication."
 * insert Profile(GEM_ERP_PR_MedicationDispense)
-* ^meta.lastUpdated = "2020-04-16T13:44:27.957+00:00"
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"
