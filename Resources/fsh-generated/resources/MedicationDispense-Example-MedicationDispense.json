@@ -7,12 +7,12 @@
     ]
   },
   "status": "completed",
-  "identifier": [
-    {
-      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.000.033.491.280.78"
+  "subject": {
+    "identifier": {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "X123456789"
     }
-  ],
+  },
   "performer": [
     {
       "actor": {
@@ -23,12 +23,12 @@
       }
     }
   ],
-  "subject": {
-    "identifier": {
-      "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "X123456789"
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+      "value": "160.000.033.491.280.78"
     }
-  },
+  ],
   "whenHandedOver": "2024-04-03",
   "whenPrepared": "2024-04-03",
   "contained": [
