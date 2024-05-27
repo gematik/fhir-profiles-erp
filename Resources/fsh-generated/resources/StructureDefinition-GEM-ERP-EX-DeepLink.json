@@ -5,7 +5,7 @@
   "name": "GEM_ERP_EX_DeepLink",
   "title": "DiGA-DeepLink",
   "status": "draft",
-  "description": "States the redeem code for a DiGA.",
+  "description": "Contains information regarding a deep link for a DiGA.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -30,7 +30,31 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
-        "max": "0"
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:GEM_ERP_EX_DeepLink_plattform",
+        "path": "Extension.extension",
+        "sliceName": "GEM_ERP_EX_DeepLink_plattform",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:GEM_ERP_EX_DeepLink_plattform.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "GEM_ERP_EX_DeepLink_plattform"
+      },
+      {
+        "id": "Extension.extension:GEM_ERP_EX_DeepLink_link",
+        "path": "Extension.extension",
+        "sliceName": "GEM_ERP_EX_DeepLink_link",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:GEM_ERP_EX_DeepLink_link.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "GEM_ERP_EX_DeepLink_link"
       },
       {
         "id": "Extension.url",
@@ -40,12 +64,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "States a deep link for a DiGA.",
-        "type": [
-          {
-            "code": "uri"
-          }
-        ]
+        "max": "0"
       }
     ]
   }

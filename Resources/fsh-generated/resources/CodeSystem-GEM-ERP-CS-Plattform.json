@@ -1,0 +1,40 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "GEM_ERP_CS_Plattform",
+  "id": "GEM-ERP-CS-Plattform",
+  "title": "GEM ERP CS Plattform",
+  "description": "Supported Plattforms for Deep Links",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_Plattform",
+  "concept": [
+    {
+      "code": "ios",
+      "display": "iOS"
+    },
+    {
+      "code": "android",
+      "display": "Android"
+    },
+    {
+      "code": "huawei",
+      "display": "Huawei"
+    }
+  ],
+  "version": "1.4",
+  "date": "2024-07-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "copyright": "gematik GmbH",
+  "caseSensitive": true,
+  "count": 3
+}

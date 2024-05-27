@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "GEM_ERP_VS_Plattform",
+  "id": "GEM-ERP-VS-Plattform",
+  "title": "GEM ERP VS Plattform",
+  "description": "Supported Plattforms for Deep Links",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_Plattform",
+  "version": "1.4",
+  "date": "2024-07-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_Plattform"
+      }
+    ]
+  }
+}
