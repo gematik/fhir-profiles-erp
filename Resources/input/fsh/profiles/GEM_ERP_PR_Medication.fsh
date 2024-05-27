@@ -16,26 +16,7 @@ Description: "Handles medical information about the redeemed prescription"
     $KBV_EX_ERP_Medication_CompoundingInstruction named Herstellungsanweisung 0..1 MS and
     $KBV_EX_ERP_Medication_Packaging named Verpackung 0..1 MS and
     $KBV_EX_ERP_Medication_Normgroesse named Normgroesse 0..1 MS
-    //TODO: Entscheiden ob wir die Abhängigkeit zur KBV Basis für die Extension "Kategorie" wollen
-/*
-* extension[Kategorie].value[x] MS
-* extension[Kategorie].value[x] ^slicing.discriminator.type = #type
-* extension[Kategorie].value[x] ^slicing.discriminator.path = "$this"
-* extension[Kategorie].value[x] ^slicing.rules = #closed
-* extension[Kategorie].valueCodeableConcept MS
-* extension[Kategorie].valueCodeableConcept ^sliceName = "valueCodeableConcept"
-* extension[Kategorie].valueCodeableConcept.coding 1.. MS
-* extension[Kategorie].valueCodeableConcept.coding.system = "http://snomed.info/sct" (exactly)
-* extension[Kategorie].valueCodeableConcept.coding.system MS
-* extension[Kategorie].valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008/version/20220331" (exactly)
-* extension[Kategorie].valueCodeableConcept.coding.version MS
-* extension[Kategorie].valueCodeableConcept.coding.code = #373873005:860781008=362943005 (exactly)
-* extension[Kategorie].valueCodeableConcept.coding.code MS
-* extension[Kategorie].valueCodeableConcept.coding.display = "Pharmaceutical / biologic product (product) : Has product characteristic (attribute) = Manual method (qualifier value)" (exactly)
-* extension[Kategorie].valueCodeableConcept.coding.display MS
-* extension[Kategorie].valueCodeableConcept.coding.userSelected ..0
-* extension[Kategorie].valueCodeableConcept.text ..0
-*/
+
 * extension[Arzneimittelkategorie].value[x] MS
 * extension[Arzneimittelkategorie].valueCoding MS
 * extension[Arzneimittelkategorie].valueCoding ^sliceName = "valueCoding"
@@ -77,6 +58,11 @@ Description: "Handles medical information about the redeemed prescription"
 * ingredient.strength.extension[MengeFreitext].valueString MS
 * ingredient.strength.extension[MengeFreitext].valueString ^sliceName = "valueString"
 
+* ingredient.strength.numerator.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.numerator.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.denominator.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.denominator.extension[dataAbsentReason].value[x] = #unknown
+
 // Add amount.numerator Extensions
 * amount.numerator.extension ^slicing.discriminator.type = #value
 * amount.numerator.extension ^slicing.discriminator.path = "url"
@@ -98,16 +84,3 @@ $KBV_EX_ERP_Medication_PackagingSize named Packungsgroesse 0..1 MS
 * amount.numerator.extension[Packungsgroesse].valueString MS
 * amount.numerator.extension[Packungsgroesse].valueString ^sliceName = "valueString"
 
-// Add code Extensions
-* code.coding contains
-    verordnungskategorieCode 0..1 MS
-* code.coding[verordnungskategorieCode] ^patternCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"
-* code.coding[verordnungskategorieCode].system 1.. MS
-* code.coding[verordnungskategorieCode].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" (exactly)
-* code.coding[verordnungskategorieCode].version ..0
-* code.coding[verordnungskategorieCode].code 1.. MS
-* code.coding[verordnungskategorieCode].code = #wirkstoff (exactly)
-* code.coding[verordnungskategorieCode].code ^short = "Kennzeichnung Wirkstoffverordnung"
-* code.coding[verordnungskategorieCode].code ^definition = "Anhand des \"Fixed value\" kann die Medication als Wirkstoffverordnung identifiziert werden."
-* code.coding[verordnungskategorieCode].display ..0
-* code.coding[verordnungskategorieCode].userSelected ..0

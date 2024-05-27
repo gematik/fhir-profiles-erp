@@ -241,48 +241,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.code.coding:verordnungskategorieCode",
-        "path": "Medication.code.coding",
-        "sliceName": "verordnungskategorieCode",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.version",
-        "path": "Medication.code.coding.version",
-        "max": "0"
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.code",
-        "path": "Medication.code.coding.code",
-        "short": "Kennzeichnung Wirkstoffverordnung",
-        "definition": "Anhand des \"Fixed value\" kann die Medication als Wirkstoffverordnung identifiziert werden.",
-        "min": 1,
-        "fixedCode": "wirkstoff",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.display",
-        "path": "Medication.code.coding.display",
-        "max": "0"
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.userSelected",
-        "path": "Medication.code.coding.userSelected",
-        "max": "0"
-      },
-      {
         "id": "Medication.amount.numerator.extension",
         "path": "Medication.amount.numerator.extension",
         "slicing": {
@@ -479,6 +437,48 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.numerator.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.numerator.extension.value[x]",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.denominator.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.denominator.extension.value[x]",
+        "patternCode": "unknown"
       }
     ]
   }

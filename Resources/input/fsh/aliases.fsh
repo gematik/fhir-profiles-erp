@@ -1,3 +1,6 @@
+// FHIR
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
 // KBV
 Alias: $KBV_PR_ERP_Bundle = https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle
 Alias: $KBV_EX_ERP_Medication_Category = https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category
