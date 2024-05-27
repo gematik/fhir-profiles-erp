@@ -16,9 +16,9 @@ Description: "Handles information about the dispensed DiGA"
 * status = #completed (exactly)
 * status ^short = "completed"
 
+* medication[x] only Reference(GEM_ERP_PR_Medication)
 * medication[x] MS
-* medication[x] ^short = "Information concerning the dispensed medication"
-* medication[x] ^definition = "The MedicationDispense shows a contained medication which states the PZN of the dispensed DiGA."
+* medication[x] ^definition = "The MedicationDispense shows a contained medication which was dispensed. The medication should state the pzn of the DiGA."
 * medication[x] ^type.aggregation = #contained
 
 * subject 1..

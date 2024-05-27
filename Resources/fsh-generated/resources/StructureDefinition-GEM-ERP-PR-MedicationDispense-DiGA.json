@@ -88,13 +88,12 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "short": "Information concerning the dispensed medication",
-        "definition": "The MedicationDispense shows a contained medication which states the PZN of the dispensed DiGA.",
+        "definition": "The MedicationDispense shows a contained medication which was dispensed. The medication should state the pzn of the DiGA.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Medication"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication"
             ],
             "aggregation": [
               "contained"
