@@ -33,28 +33,34 @@
         "min": 2
       },
       {
-        "id": "Extension.extension:GEM_ERP_EX_DeepLink_plattform",
+        "id": "Extension.extension:plattform",
         "path": "Extension.extension",
-        "sliceName": "GEM_ERP_EX_DeepLink_plattform",
+        "sliceName": "plattform",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-plattform"
+            ]
+          }
+        ]
       },
       {
-        "id": "Extension.extension:GEM_ERP_EX_DeepLink_plattform.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "GEM_ERP_EX_DeepLink_plattform"
-      },
-      {
-        "id": "Extension.extension:GEM_ERP_EX_DeepLink_link",
+        "id": "Extension.extension:link",
         "path": "Extension.extension",
-        "sliceName": "GEM_ERP_EX_DeepLink_link",
+        "sliceName": "link",
         "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:GEM_ERP_EX_DeepLink_link.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "GEM_ERP_EX_DeepLink_link"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-link"
+            ]
+          }
+        ]
       },
       {
         "id": "Extension.url",
