@@ -1,36 +1,21 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
-Parent: MedicationDispense //TODO: Erben von E-PA MedicationDispense
+Parent: $ePAMedicationDispense
 Id: GEM-ERP-PR-MedicationDispense-DiGA
 Title: "Dispensation of a DiGA-Prescription"
 Description: "Handles information about the dispensed DiGA"
 * insert Profile(GEM_ERP_PR_MedicationDispense_DiGA)
 
-* identifier 1..1
-* identifier only GEM_ERP_PR_PrescriptionId
+* identifier contains prescriptionID 1..1
+* identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
 * identifier ^short = "ePrescription identifier"
+
 * status = #completed (exactly)
 * status ^short = "completed"
 
 * medication[x] MS
-* medication[x] only CodeableConcept
 * medication[x] ^short = "Information concerning the dispensed medication"
-
-// medicationCodeableConcept für die Angabe von DiGAs
-* medicationCodeableConcept MS
-* medicationCodeableConcept ^short = "Medical and administrative information about the dispensed DiGA"
-* medicationCodeableConcept.coding 1..1
-* medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
-* medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
-* medicationCodeableConcept.coding ^slicing.rules = #closed
-* medicationCodeableConcept.coding contains 
-    pznCode 1..1
-* medicationCodeableConcept.coding[pznCode] ^short = "ID of the product (PZN)"
-* medicationCodeableConcept.coding[pznCode] ^definition = "Pharmaceutical Central Number (PZN), which is used by the Information Office for Pharmaceutical Specialties (IFA) in relation to products and is agreed upon with the pharmaceutical industry according to § 131 SGB V and with the German Pharmacists' Association according to § 300 for statutory health insurance funds. The information such as trade name, dosage form, package size, etc. is derived from the price and product information according to § 131 Abs. 4 SGB V."
-* medicationCodeableConcept.coding[pznCode].system = $PZN
-* medicationCodeableConcept.coding[pznCode].code 1..1
-* medicationCodeableConcept.text 1..1
-* medicationCodeableConcept.text ^short = "Trade name"
-* medicationCodeableConcept.text ^definition = "Trade name of the prescribed DiGA, derived from the PZN"
+* medication[x] ^definition = "The MedicationDispense shows a contained medication which states the PZN of the dispensed DiGA."
+* medication[x] ^type.aggregation = #contained
 
 // supportingInformation für die Angabe des Freischaltcodes
 * supportingInformation ^slicing.discriminator.type = #value
@@ -42,6 +27,7 @@ Description: "Handles information about the dispensed DiGA"
     redeemCode 1..1
     and deepLink 0..1
 
+//TODO: redeemCode und deepLink in Extensions packen
 * supportingInformation[redeemCode].identifier.value = "redeemCode" (exactly)
 * supportingInformation[redeemCode].display 1..1
 * supportingInformation[redeemCode].display ^short = "Redeem Code"
@@ -65,7 +51,7 @@ Description: "Handles information about the dispensed DiGA"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
 
-
+/*
 Instance: Example-MedicationDispense-DiGA
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
@@ -103,3 +89,4 @@ Description: "Example of a Medication Dispense."
 * supportingInformation[redeemCode].identifier.value = "redeemCode"
 * supportingInformation[deepLink].display = "https://www.diabetico.app?redeemCode=DE12345678901234"
 * supportingInformation[deepLink].identifier.value = "deepLink"
+*/

@@ -9,37 +9,10 @@
   "date": "2024-07-01",
   "description": "Handles information about the dispensed DiGA",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "rx-dispense-rmim",
-      "uri": "http://www.hl7.org/v3/PORX_RM020070UV",
-      "name": "V3 Pharmacy Dispense RMIM"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -59,6 +32,12 @@
         "id": "MedicationDispense.identifier",
         "path": "MedicationDispense.identifier",
         "short": "ePrescription identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.identifier:prescriptionID",
+        "path": "MedicationDispense.identifier",
+        "sliceName": "prescriptionID",
         "min": 1,
         "max": "1",
         "type": [
@@ -79,74 +58,26 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "short": "Medical and administrative information about the dispensed DiGA",
+        "short": "Information concerning the dispensed medication",
+        "definition": "The MedicationDispense shows a contained medication which states the PZN of the dispensed DiGA.",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ],
+            "aggregation": [
+              "contained"
+            ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.medication[x].coding",
-        "path": "MedicationDispense.medication[x].coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "MedicationDispense.medication[x].coding:pznCode",
-        "path": "MedicationDispense.medication[x].coding",
-        "sliceName": "pznCode",
-        "short": "ID of the product (PZN)",
-        "definition": "Pharmaceutical Central Number (PZN), which is used by the Information Office for Pharmaceutical Specialties (IFA) in relation to products and is agreed upon with the pharmaceutical industry according to § 131 SGB V and with the German Pharmacists' Association according to § 300 for statutory health insurance funds. The information such as trade name, dosage form, package size, etc. is derived from the price and product information according to § 131 Abs. 4 SGB V.",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "MedicationDispense.medication[x].coding:pznCode.system",
-        "path": "MedicationDispense.medication[x].coding.system",
-        "patternUri": "http://fhir.de/CodeSystem/ifa/pzn"
-      },
-      {
-        "id": "MedicationDispense.medication[x].coding:pznCode.code",
-        "path": "MedicationDispense.medication[x].coding.code",
-        "min": 1
-      },
-      {
-        "id": "MedicationDispense.medication[x].text",
-        "path": "MedicationDispense.medication[x].text",
-        "short": "Trade name",
-        "definition": "Trade name of the prescribed DiGA, derived from the PZN",
-        "min": 1
-      },
-      {
-        "id": "MedicationDispense.subject",
-        "path": "MedicationDispense.subject",
-        "min": 1
+        ]
       },
       {
         "id": "MedicationDispense.subject.identifier",
         "path": "MedicationDispense.subject.identifier",
         "short": "The patients KVNR",
         "comment": "There is no PKV identifier available since it is not in the scope for DiGA prescriptions.",
-        "min": 1,
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "MedicationDispense.supportingInformation",
@@ -205,12 +136,6 @@
         "min": 1
       },
       {
-        "id": "MedicationDispense.performer",
-        "path": "MedicationDispense.performer",
-        "min": 1,
-        "max": "1"
-      },
-      {
         "id": "MedicationDispense.performer.actor.identifier",
         "path": "MedicationDispense.performer.actor.identifier",
         "min": 1,
@@ -227,7 +152,6 @@
         "id": "MedicationDispense.whenHandedOver",
         "path": "MedicationDispense.whenHandedOver",
         "short": "Date of dispensation",
-        "min": 1,
         "constraint": [
           {
             "key": "workflow-abgabeDatumsFormat",
@@ -237,11 +161,6 @@
             "expression": "toString().length()=10"
           }
         ]
-      },
-      {
-        "id": "MedicationDispense.dosageInstruction",
-        "path": "MedicationDispense.dosageInstruction",
-        "mustSupport": true
       }
     ]
   }
