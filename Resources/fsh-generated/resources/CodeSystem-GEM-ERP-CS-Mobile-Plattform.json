@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "GEM_ERP_CS_Plattform",
-  "id": "GEM-ERP-CS-Plattform",
-  "title": "GEM ERP CS Plattform",
+  "name": "GEM_ERP_CS_Mobile_Plattform",
+  "id": "GEM-ERP-CS-Mobile-Plattform",
+  "title": "GEM ERP CS Mobile Plattform",
   "description": "Supported Plattforms for Deep Links",
-  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_Plattform",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_Mobile_Plattform",
   "concept": [
     {
       "code": "ios",

@@ -48,7 +48,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_Plattform"
+          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_Mobile_Plattform"
         }
       }
     ]
