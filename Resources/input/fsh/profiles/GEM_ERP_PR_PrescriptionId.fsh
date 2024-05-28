@@ -7,7 +7,7 @@ Description: "The prescriptionID is an generated and not changeable sequence of 
 * . ^definition = "An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers."
 * use = #official (exactly)
 * system 1.. MS
-* system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId" (exactly)
+* system = $prescription-id-ns
 * value 1.. MS
   * ^short = "The identifier for an ePrescription."
   * ^comment = "Datamodel according to gemSpec_DM_eRp"

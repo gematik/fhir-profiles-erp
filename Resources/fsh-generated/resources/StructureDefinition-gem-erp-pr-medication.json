@@ -15,23 +15,6 @@
   "differential": {
     "element": [
       {
-        "id": "Medication.extension",
-        "path": "Medication.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "ordered": false,
-          "rules": "closed"
-        },
-        "min": 2,
-        "max": "4"
-      },
-      {
         "id": "Medication.extension:Kategorie",
         "path": "Medication.extension",
         "sliceName": "Kategorie",
@@ -51,7 +34,7 @@
         "id": "Medication.extension:Arzneimittelkategorie",
         "path": "Medication.extension",
         "sliceName": "Arzneimittelkategorie",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -98,7 +81,7 @@
         "id": "Medication.extension:Impfstoff",
         "path": "Medication.extension",
         "sliceName": "Impfstoff",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -232,7 +215,6 @@
         "id": "Medication.extension:Normgroesse.value[x]",
         "path": "Medication.extension.value[x]",
         "sliceName": "valueCode",
-        "min": 1,
         "type": [
           {
             "code": "code"
@@ -258,8 +240,8 @@
         "id": "Medication.amount.numerator.extension:Gesamtmenge",
         "path": "Medication.amount.numerator.extension",
         "sliceName": "Gesamtmenge",
-        "short": "Gesamtmenge der Rezeptur",
-        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit)",
+        "short": "Gesamtmenge der Rezeptur oder Packungsgröße",
+        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit) oder Angabe der Packungsgröße",
         "min": 0,
         "max": "1",
         "type": [
@@ -287,48 +269,8 @@
         "id": "Medication.amount.numerator.extension:Gesamtmenge.value[x]:valueString",
         "path": "Medication.amount.numerator.extension.value[x]",
         "sliceName": "valueString",
-        "short": "Gesamtmenge der Rezeptur",
-        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit)",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse",
-        "path": "Medication.amount.numerator.extension",
-        "sliceName": "Packungsgroesse",
-        "short": "Packungsgröße nach abgeteilter Menge",
-        "definition": "Angabe zur Packungsgröße nach abgeteilter Menge (z.B. 100, 2x25), tritt nur in Verbindung mit „Einheit“ auf (z.B. 100 Stück).",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.extension",
-        "path": "Medication.amount.numerator.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.value[x]",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.value[x]:valueString",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "sliceName": "valueString",
+        "short": "Gesamtmenge der Rezeptur oder Packungsgröße",
+        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit) oder Angabe der Packungsgröße",
         "type": [
           {
             "code": "string"
