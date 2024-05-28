@@ -42,7 +42,7 @@
         "id": "Identifier.system",
         "path": "Identifier.system",
         "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+        "patternUri": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
         "mustSupport": true
       },
       {

@@ -1,10 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Medication",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
+  "version": "1.4",
   "name": "GEM_ERP_PR_Medication",
   "title": "Medication for the Dispensation of the Prescription",
   "status": "draft",
+  "date": "2024-07-01",
   "description": "Handles medical information about the redeemed prescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -15,21 +17,16 @@
   "differential": {
     "element": [
       {
-        "id": "Medication.extension",
-        "path": "Medication.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "ordered": false,
-          "rules": "closed"
-        },
-        "min": 2,
-        "max": "4"
+        "id": "Medication.meta",
+        "path": "Medication.meta",
+        "min": 1
+      },
+      {
+        "id": "Medication.meta.profile",
+        "path": "Medication.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
       },
       {
         "id": "Medication.extension:Kategorie",
@@ -51,7 +48,7 @@
         "id": "Medication.extension:Arzneimittelkategorie",
         "path": "Medication.extension",
         "sliceName": "Arzneimittelkategorie",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -98,7 +95,7 @@
         "id": "Medication.extension:Impfstoff",
         "path": "Medication.extension",
         "sliceName": "Impfstoff",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -209,8 +206,6 @@
         "id": "Medication.extension:Normgroesse",
         "path": "Medication.extension",
         "sliceName": "Normgroesse",
-        "short": "Packungsgröße nach N-Bezeichnung",
-        "definition": "Beschreibung der therapiegerechten Packungsgröße (z. B. N1)",
         "min": 0,
         "max": "1",
         "type": [
@@ -222,65 +217,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:Normgroesse.extension",
-        "path": "Medication.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Medication.extension:Normgroesse.value[x]",
-        "path": "Medication.extension.value[x]",
-        "sliceName": "valueCode",
-        "min": 1,
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode",
-        "path": "Medication.code.coding",
-        "sliceName": "verordnungskategorieCode",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "fixedUri": "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.version",
-        "path": "Medication.code.coding.version",
-        "max": "0"
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.code",
-        "path": "Medication.code.coding.code",
-        "short": "Kennzeichnung Wirkstoffverordnung",
-        "definition": "Anhand des \"Fixed value\" kann die Medication als Wirkstoffverordnung identifiziert werden.",
-        "min": 1,
-        "fixedCode": "wirkstoff",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.display",
-        "path": "Medication.code.coding.display",
-        "max": "0"
-      },
-      {
-        "id": "Medication.code.coding:verordnungskategorieCode.userSelected",
-        "path": "Medication.code.coding.userSelected",
-        "max": "0"
       },
       {
         "id": "Medication.amount.numerator.extension",
@@ -300,8 +236,8 @@
         "id": "Medication.amount.numerator.extension:Gesamtmenge",
         "path": "Medication.amount.numerator.extension",
         "sliceName": "Gesamtmenge",
-        "short": "Gesamtmenge der Rezeptur",
-        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit)",
+        "short": "Gesamtmenge der Rezeptur oder Packungsgröße",
+        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit) oder Angabe der Packungsgröße",
         "min": 0,
         "max": "1",
         "type": [
@@ -329,48 +265,8 @@
         "id": "Medication.amount.numerator.extension:Gesamtmenge.value[x]:valueString",
         "path": "Medication.amount.numerator.extension.value[x]",
         "sliceName": "valueString",
-        "short": "Gesamtmenge der Rezeptur",
-        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit)",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse",
-        "path": "Medication.amount.numerator.extension",
-        "sliceName": "Packungsgroesse",
-        "short": "Packungsgröße nach abgeteilter Menge",
-        "definition": "Angabe zur Packungsgröße nach abgeteilter Menge (z.B. 100, 2x25), tritt nur in Verbindung mit „Einheit“ auf (z.B. 100 Stück).",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.extension",
-        "path": "Medication.amount.numerator.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.value[x]",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:Packungsgroesse.value[x]:valueString",
-        "path": "Medication.amount.numerator.extension.value[x]",
-        "sliceName": "valueString",
+        "short": "Gesamtmenge der Rezeptur oder Packungsgröße",
+        "definition": "Gesamtmenge der Rezeptur (ohne die Einheit) oder Angabe der Packungsgröße",
         "type": [
           {
             "code": "string"
@@ -479,6 +375,48 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.numerator.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.numerator.extension.value[x]",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.denominator.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.denominator.extension.value[x]",
+        "patternCode": "unknown"
       }
     ]
   }

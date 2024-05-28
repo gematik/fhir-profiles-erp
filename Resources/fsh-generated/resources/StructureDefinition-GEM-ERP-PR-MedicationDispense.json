@@ -1,9 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:44:27.957+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
   "version": "1.4",
   "name": "GEM_ERP_PR_MedicationDispense",
@@ -50,7 +47,10 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
             ]
           }
-        ]
+        ],
+        "patternIdentifier": {
+          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+        }
       },
       {
         "id": "MedicationDispense.status",
@@ -61,12 +61,12 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "The MedicationDispense shows a contained medication based on the four KBV Medication-Profiles (KBV_PR_ERP_Medication_Compounding, KBV_PR_ERP_Medication_FreeText, KBV_PR_ERP_Medication_Ingredient, KBV_PR_ERP_Medication_PZN).",
+        "definition": "The MedicationDispense shows a contained medication which was dispensed",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Medication"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
             ],
             "aggregation": [
               "contained"

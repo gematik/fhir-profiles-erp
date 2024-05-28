@@ -30,7 +30,3 @@ RuleSet: PackageTargetProfile(profile)
 RuleSet: TargetProfile(profile, version)
 * targetProfile[+] = "{profile}|{version}"
 
-
-// External Profiles
-RuleSet: ProfileKbvMedicationPzn
-* insert MetaProfile(https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN, 1.1.0)
