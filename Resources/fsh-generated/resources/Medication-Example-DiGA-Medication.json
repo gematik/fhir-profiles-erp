@@ -1,0 +1,20 @@
+{
+  "resourceType": "Medication",
+  "id": "Example-DiGA-Medication",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
+    },
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
+    }
+  ],
+  "code": {
+    "text": "gematico Diabetestherapie"
+  }
+}

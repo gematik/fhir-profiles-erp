@@ -35,12 +35,20 @@ Description: "Handles information about the dispensed DiGA"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
 
-/*
+Instance: Example-DiGA-Medication
+InstanceOf: GEM_ERP_PR_Medication
+Usage: #example
+Title: "Example-Medication for DiGA Diapense"
+Description: "Example of a Medication for DiGA Dispense."
+* code.coding[pznCode].code = #17946626
+* code.text = "gematico Diabetestherapie"
+
 Instance: Example-MedicationDispense-DiGA
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
+* extension[redeemCode].valueString = "DE12345678901234"
 * identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier.value = "162.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
@@ -48,12 +56,9 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* medicationCodeableConcept.coding[pznCode].system = $PZN
-* medicationCodeableConcept.coding[pznCode].code = #17946626
-* medicationCodeableConcept.text = "glucura Diabetestherapie"
-* supportingInformation[redeemCode].display = "DE12345678901234"
-* supportingInformation[redeemCode].identifier.value = "redeemCode"
+* contained[+] = Example-DiGA-Medication
 
+/*
 Instance: Example-MedicationDispense-DiGA-DeepLink
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
