@@ -3,6 +3,7 @@ Parent: $ePAMedication
 Id: GEM-ERP-PR-Medication
 Title: "Medication for the Dispensation of the Prescription"
 Description: "Handles medical information about the redeemed prescription"
+* insert Profile(GEM_ERP_PR_Medication)
 
 // Add KBV Extensions
 * extension ^slicing.discriminator.type = #value

@@ -12,7 +12,7 @@
       "id": "001413e4-a5e9-48da-9b07-c17bab476407",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication"
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
         ]
       },
       "extension": [
