@@ -22,3 +22,6 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
 Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
+
+// Workflow
+Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId
