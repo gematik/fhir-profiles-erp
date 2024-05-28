@@ -40,7 +40,7 @@ InstanceOf: GEM_ERP_PR_Medication
 Usage: #example
 Title: "Example-Medication for DiGA Diapense"
 Description: "Example of a Medication for DiGA Dispense."
-* code.coding[pznCode].code = #17946626
+* code.coding[pzn].code = #17946626
 * code.text = "gematico Diabetestherapie"
 
 Instance: Example-MedicationDispense-DiGA
@@ -57,6 +57,7 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * contained[+] = Example-DiGA-Medication
+* medicationReference.reference = "#Example-DiGA-Medication"
 
 /*
 Instance: Example-MedicationDispense-DiGA-DeepLink
