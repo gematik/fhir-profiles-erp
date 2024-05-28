@@ -32,27 +32,27 @@ Usage: #definition
 * parameter[=].type = #Bundle
 
 Instance: SumatripanMedication
-InstanceOf: Medication
+InstanceOf: GEM_ERP_PR_Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #inline
 * id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* insert ProfileKbvMedicationPzn
+* insert ProfileGEMMedication
 //Kategorie
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
-* extension[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* extension[=].valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008/version/20220331"
-* extension[=].valueCodeableConcept.coding.code = #763158003
-* extension[=].valueCodeableConcept.coding.display = "Medicinal product (product)"
+* extension[Kategorie].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
+* extension[Kategorie].valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* extension[Kategorie].valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008/version/20220331"
+* extension[Kategorie].valueCodeableConcept.coding.code = #763158003
+* extension[Kategorie].valueCodeableConcept.coding.display = "Medicinal product (product)"
 // Arzneimittelkategorie
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
-* extension[=].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
-* extension[=].valueCoding.code = #00
+* extension[Arzneimittelkategorie].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
+* extension[Arzneimittelkategorie].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
+* extension[Arzneimittelkategorie].valueCoding.code = #00
 // Impfstoff
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
-* extension[=].valueBoolean = false
+* extension[Impfstoff].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
+* extension[Impfstoff].valueBoolean = false
 // normgroesse
-* extension[+].url = "http://fhir.de/StructureDefinition/normgroesse"
-* extension[=].valueCode = #N1
+//* extension[Normgroesse].url = "http://fhir.de/StructureDefinition/normgroesse"
+* extension[Normgroesse].valueCode = #N1
 * code.coding[+].system = "http://fhir.de/CodeSystem/ifa/pzn"
 * code.coding[=].code = #06313728
 * code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
@@ -60,8 +60,8 @@ Usage: #inline
 * form.coding[=].code = #TAB
 //* amount.numerator.value = 20
 * amount.numerator.unit = "St"
-* amount.numerator.extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
-* amount.numerator.extension[=].valueString = "20 St."
+* amount.numerator.extension[Gesamtmenge].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
+* amount.numerator.extension[Gesamtmenge].valueString = "20 St."
 * amount.denominator.value = 1
 
 Instance: OperationCloseParametersInputMedicationDispense
