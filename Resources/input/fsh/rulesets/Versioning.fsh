@@ -30,7 +30,3 @@ RuleSet: PackageTargetProfile(profile)
 RuleSet: TargetProfile(profile, version)
 * targetProfile[+] = "{profile}|{version}"
 
-
-// External Profiles
-RuleSet: ProfileGEMMedication
-* insert MetaProfile(https://fhir.kbv.de/StructureDefinition/GEM_ERP_PR_Medication, 1.4)

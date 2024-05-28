@@ -77,3 +77,35 @@ Description: "Handles medical information about the redeemed prescription"
 * amount.numerator.extension[Gesamtmenge].valueString ^short = "Gesamtmenge der Rezeptur oder Packungsgröße"
 * amount.numerator.extension[Gesamtmenge].valueString ^definition = "Gesamtmenge der Rezeptur (ohne die Einheit) oder Angabe der Packungsgröße"
 
+
+Instance: SumatripanMedication
+InstanceOf: GEM_ERP_PR_Medication
+Title:   "Sample Medication Sumatripan"
+Usage: #example
+* id = "001413e4-a5e9-48da-9b07-c17bab476407"
+//Kategorie
+* extension[Kategorie].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
+* extension[Kategorie].valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* extension[Kategorie].valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008/version/20220331"
+* extension[Kategorie].valueCodeableConcept.coding.code = #763158003
+* extension[Kategorie].valueCodeableConcept.coding.display = "Medicinal product (product)"
+// Arzneimittelkategorie
+* extension[Arzneimittelkategorie].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
+* extension[Arzneimittelkategorie].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
+* extension[Arzneimittelkategorie].valueCoding.code = #00
+// Impfstoff
+* extension[Impfstoff].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
+* extension[Impfstoff].valueBoolean = false
+// normgroesse
+//* extension[Normgroesse].url = "http://fhir.de/StructureDefinition/normgroesse"
+* extension[Normgroesse].valueCode = #N1
+* code.coding[+].system = "http://fhir.de/CodeSystem/ifa/pzn"
+* code.coding[=].code = #06313728
+* code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
+* form.coding[+].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[=].code = #TAB
+//* amount.numerator.value = 20
+* amount.numerator.unit = "St"
+* amount.numerator.extension[Gesamtmenge].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
+* amount.numerator.extension[Gesamtmenge].valueString = "20 St."
+* amount.denominator.value = 1
