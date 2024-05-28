@@ -27,10 +27,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
-
-      - name: Log generated files
-        run: |
-          ls -l 'Resources/fsh-generated/resources'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
@@ -63,10 +59,6 @@ jobs:
           SUSHI_VERSION: 3.5.0
           SUSHI_OPTIONS: Resources/
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
-
-      - name: Log generated files
-        run: |
-          ls -l 'Resources/fsh-generated/resources'
 
       - name: Check for Uncommitted Changes
         run: |
