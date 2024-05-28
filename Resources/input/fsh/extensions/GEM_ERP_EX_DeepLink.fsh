@@ -1,9 +1,28 @@
+Extension: GEM_ERP_EX_DeepLinks
+Id: GEM-ERP-EX-DeepLinks
+Title: "DiGA-DeepLinks"
+Description: "Contains information regarding deep links for a DiGA."
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationDispense"
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = extension.valueCoding.code
+* extension ^slicing.rules = #openAtEnd
+* extension ^slicing.ordered = false
+* extension ^slicing.description = "Slicing for different deep links of various mobile plattforms."
+* extension contains 
+  GEM_ERP_EX_DeepLink named apple 0..1
+  and GEM_ERP_EX_DeepLink named android 0..1
+  and GEM_ERP_EX_DeepLink named huawei 0..1
+* extension[apple].extension[plattform].valueCoding.code = #ios
+* extension[android].extension[plattform].valueCoding.code = #android
+* extension[huawei].extension[plattform].valueCoding.code = #huawei
+
 Extension: GEM_ERP_EX_DeepLink
 Id: GEM-ERP-EX-DeepLink
 Title: "DiGA-DeepLink"
 Description: "Contains information regarding a deep link for a DiGA."
 * ^context[0].type = #element
-* ^context[=].expression = "MedicationDispense"
+* ^context[=].expression = "Extension"
 * extension contains 
   GEM_ERP_EX_DeepLink_plattform named plattform 1..1
   and GEM_ERP_EX_DeepLink_link named link 1..1

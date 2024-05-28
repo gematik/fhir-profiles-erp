@@ -8,7 +8,7 @@ Description: "Handles information about the dispensed DiGA"
 * extension 1..*
 * extension contains 
     GEM_ERP_EX_RedeemCode named redeemCode 1..1
-    and GEM_ERP_EX_DeepLink named deepLink 0..*
+    and GEM_ERP_EX_DeepLinks named deepLinks 0..*
 
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
@@ -59,12 +59,17 @@ Description: "Example of a Medication Dispense."
 * contained[+] = Example-DiGA-Medication
 * medicationReference.reference = "#Example-DiGA-Medication"
 
-/*
+
 Instance: Example-MedicationDispense-DiGA-DeepLink
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
+* extension[redeemCode].valueString = "DE12345678901234"
+* extension[deepLinks].extension[apple].extension[plattform].valueCoding.code = #ios
+* extension[deepLinks].extension[apple].extension[link].valueUrl = "https://apple.gematico.de?redeemCode=DE12345678901234"
+* extension[deepLinks].extension[android].extension[plattform].valueCoding.code = #android
+* extension[deepLinks].extension[android].extension[link].valueUrl = "https://google-play.gematico.de?redeemCode=DE12345678901234"
 * identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier.value = "162.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
@@ -72,11 +77,5 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* medicationCodeableConcept.coding[pznCode].system = $PZN
-* medicationCodeableConcept.coding[pznCode].code = #17946626
-* medicationCodeableConcept.text = "diabetico Diabetestherapie"
-* supportingInformation[redeemCode].display = "DE12345678901234"
-* supportingInformation[redeemCode].identifier.value = "redeemCode"
-* supportingInformation[deepLink].display = "https://www.diabetico.app?redeemCode=DE12345678901234"
-* supportingInformation[deepLink].identifier.value = "deepLink"
-*/
+* contained[+] = Example-DiGA-Medication
+* medicationReference.reference = "#Example-DiGA-Medication"

@@ -1,0 +1,132 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-EX-DeepLinks",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks",
+  "name": "GEM_ERP_EX_DeepLinks",
+  "title": "DiGA-DeepLinks",
+  "status": "draft",
+  "description": "Contains information regarding deep links for a DiGA.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MedicationDispense"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "extension.valueCoding.code"
+            }
+          ],
+          "description": "Slicing for different deep links of various mobile plattforms.",
+          "rules": "openAtEnd",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Extension.extension:apple",
+        "path": "Extension.extension",
+        "sliceName": "apple",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:apple.extension:plattform",
+        "path": "Extension.extension.extension",
+        "sliceName": "plattform"
+      },
+      {
+        "id": "Extension.extension:apple.extension:plattform.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "patternCode": "ios"
+      },
+      {
+        "id": "Extension.extension:android",
+        "path": "Extension.extension",
+        "sliceName": "android",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:android.extension:plattform",
+        "path": "Extension.extension.extension",
+        "sliceName": "plattform"
+      },
+      {
+        "id": "Extension.extension:android.extension:plattform.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "patternCode": "android"
+      },
+      {
+        "id": "Extension.extension:huawei",
+        "path": "Extension.extension",
+        "sliceName": "huawei",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:huawei.extension:plattform",
+        "path": "Extension.extension.extension",
+        "sliceName": "plattform"
+      },
+      {
+        "id": "Extension.extension:huawei.extension:plattform.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
+        "patternCode": "huawei"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

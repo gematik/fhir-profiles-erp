@@ -19,7 +19,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "MedicationDispense"
+      "expression": "Extension"
     }
   ],
   "type": "Extension",
