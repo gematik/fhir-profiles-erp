@@ -28,44 +28,31 @@
   "differential": {
     "element": [
       {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "extension.valueCoding.code"
-            }
-          ],
-          "description": "Slicing for different deep links of various mobile plattforms.",
-          "rules": "openAtEnd",
-          "ordered": false
-        }
-      },
-      {
         "id": "Extension.extension:apple",
         "path": "Extension.extension",
         "sliceName": "apple",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:apple.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:apple.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "apple"
+      },
+      {
+        "id": "Extension.extension:apple.value[x]",
+        "path": "Extension.extension.value[x]",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
-            ]
+            "code": "url"
           }
         ]
-      },
-      {
-        "id": "Extension.extension:apple.extension:plattform",
-        "path": "Extension.extension.extension",
-        "sliceName": "plattform"
-      },
-      {
-        "id": "Extension.extension:apple.extension:plattform.value[x].code",
-        "path": "Extension.extension.extension.value[x].code",
-        "patternCode": "ios"
       },
       {
         "id": "Extension.extension:android",
@@ -73,24 +60,26 @@
         "sliceName": "android",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:android.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:android.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "android"
+      },
+      {
+        "id": "Extension.extension:android.value[x]",
+        "path": "Extension.extension.value[x]",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
-            ]
+            "code": "url"
           }
         ]
-      },
-      {
-        "id": "Extension.extension:android.extension:plattform",
-        "path": "Extension.extension.extension",
-        "sliceName": "plattform"
-      },
-      {
-        "id": "Extension.extension:android.extension:plattform.value[x].code",
-        "path": "Extension.extension.extension.value[x].code",
-        "patternCode": "android"
       },
       {
         "id": "Extension.extension:web",
@@ -98,24 +87,26 @@
         "sliceName": "web",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:web.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:web.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "web"
+      },
+      {
+        "id": "Extension.extension:web.value[x]",
+        "path": "Extension.extension.value[x]",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
-            ]
+            "code": "url"
           }
         ]
-      },
-      {
-        "id": "Extension.extension:web.extension:plattform",
-        "path": "Extension.extension.extension",
-        "sliceName": "plattform"
-      },
-      {
-        "id": "Extension.extension:web.extension:plattform.value[x].code",
-        "path": "Extension.extension.extension.value[x].code",
-        "patternCode": "web"
       },
       {
         "id": "Extension.url",

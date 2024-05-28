@@ -15,49 +15,16 @@
     {
       "extension": [
         {
-          "extension": [
-            {
-              "valueCoding": {
-                "code": "ios"
-              },
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-plattform"
-            },
-            {
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-link",
-              "valueUrl": "https://apple.gematico.de?redeemCode=DE12345678901234"
-            }
-          ],
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+          "url": "apple",
+          "valueUrl": "https://apple.gematico.de?redeemCode=DE12345678901234"
         },
         {
-          "extension": [
-            {
-              "valueCoding": {
-                "code": "android"
-              },
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-plattform"
-            },
-            {
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-link",
-              "valueUrl": "https://google-play.gematico.de?redeemCode=DE12345678901234"
-            }
-          ],
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+          "url": "android",
+          "valueUrl": "https://google-play.gematico.de?redeemCode=DE12345678901234"
         },
         {
-          "extension": [
-            {
-              "valueCoding": {
-                "code": "web"
-              },
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-plattform"
-            },
-            {
-              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-link",
-              "valueUrl": "https://www.gematico.de?redeemCode=DE12345678901234"
-            }
-          ],
-          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+          "url": "web",
+          "valueUrl": "https://www.gematico.de?redeemCode=DE12345678901234"
         }
       ],
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
