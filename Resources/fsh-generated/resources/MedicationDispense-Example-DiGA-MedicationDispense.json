@@ -6,6 +6,12 @@
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+      "value": "160.000.033.491.280.78"
+    }
+  ],
   "status": "completed",
   "subject": {
     "identifier": {
@@ -21,12 +27,6 @@
           "value": "1-SMC-B-Testkarte-883110000095957"
         }
       }
-    }
-  ],
-  "identifier": [
-    {
-      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.000.033.491.280.78"
     }
   ],
   "whenHandedOver": "2024-04-03",

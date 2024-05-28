@@ -32,39 +32,6 @@ Usage: #definition
 * parameter[=].documentation = "The receipt Bundle containing the signing Device, the pharmacy`s TelematikID and a signature."
 * parameter[=].type = #Bundle
 
-Instance: SumatripanMedication
-InstanceOf: Medication
-Title:   "Sample Medication Sumatripan"
-Usage: #inline
-* id = "001413e4-a5e9-48da-9b07-c17bab476407"
-* insert ProfileKbvMedicationPzn
-//Kategorie
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type"
-* extension[=].valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* extension[=].valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008/version/20220331"
-* extension[=].valueCodeableConcept.coding.code = #763158003
-* extension[=].valueCodeableConcept.coding.display = "Medicinal product (product)"
-// Arzneimittelkategorie
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category"
-* extension[=].valueCoding.system = "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category"
-* extension[=].valueCoding.code = #00
-// Impfstoff
-* extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine"
-* extension[=].valueBoolean = false
-// normgroesse
-* extension[+].url = "http://fhir.de/StructureDefinition/normgroesse"
-* extension[=].valueCode = #N1
-* code.coding[+].system = "http://fhir.de/CodeSystem/ifa/pzn"
-* code.coding[=].code = #06313728
-* code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
-* form.coding[+].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
-* form.coding[=].code = #TAB
-//* amount.numerator.value = 20
-* amount.numerator.unit = "St"
-* amount.numerator.extension[+].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
-* amount.numerator.extension[=].valueString = "20 St."
-* amount.denominator.value = 1
-
 Instance: OperationCloseParametersInputMedicationDispense
 InstanceOf: MedicationDispense
 Title:   "MedicationDispense handed to Günther at a pharmacy"

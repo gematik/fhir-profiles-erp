@@ -9,7 +9,7 @@
   "dependencies": {
     "kbv.ita.erp": "1.1.x",
     "kbv.ita.for": "1.1.x",
-    "de.basisprofil.r4": "1.3.2",
+    "de.basisprofil.r4": "1.4.0",
     "hl7.fhir.r4.core": "4.0.1",
     "de.gematik.epa.medication": "1.0.0"
   }

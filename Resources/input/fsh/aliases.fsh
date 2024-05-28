@@ -1,3 +1,6 @@
+// FHIR
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
 // KBV
 Alias: $KBV_PR_ERP_Bundle = https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle
 Alias: $KBV_EX_ERP_Medication_Category = https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category
@@ -21,3 +24,6 @@ Alias: $PZN = http://fhir.de/CodeSystem/ifa/pzn
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
 Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
+
+// Workflow
+Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId

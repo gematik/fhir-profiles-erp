@@ -6,7 +6,9 @@ Description: "Handles information about the redeem of the prescription and the s
 * insert Profile(GEM_ERP_PR_MedicationDispense)
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
+* identifier[prescriptionID] ^patternIdentifier.system = $prescription-id-ns
 * identifier ^short = "ePrescription identifier"
+
 * status = #completed (exactly)
 * status ^short = "completed"
 
@@ -33,8 +35,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -49,8 +51,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -66,8 +68,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -82,8 +84,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -98,8 +100,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -114,8 +116,8 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
-* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier.value = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"

@@ -47,7 +47,10 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
             ]
           }
-        ]
+        ],
+        "patternIdentifier": {
+          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+        }
       },
       {
         "id": "MedicationDispense.status",
@@ -63,7 +66,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Medication"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
             ],
             "aggregation": [
               "contained"

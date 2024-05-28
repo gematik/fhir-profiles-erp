@@ -6,6 +6,12 @@
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+      "value": "160.000.033.491.280.78"
+    }
+  ],
   "status": "completed",
   "subject": {
     "identifier": {
@@ -23,12 +29,6 @@
       }
     }
   ],
-  "identifier": [
-    {
-      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.000.033.491.280.78"
-    }
-  ],
   "whenHandedOver": "2024-04-03",
   "whenPrepared": "2024-04-03",
   "contained": [
@@ -37,7 +37,7 @@
       "id": "001413e4-a5e9-48da-9b07-c17bab476407",
       "meta": {
         "profile": [
-          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN|1.1.0"
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
         ]
       },
       "extension": [
@@ -70,6 +70,20 @@
           "valueCode": "N1"
         }
       ],
+      "amount": {
+        "numerator": {
+          "extension": [
+            {
+              "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize",
+              "valueString": "20 St."
+            }
+          ],
+          "unit": "St"
+        },
+        "denominator": {
+          "value": 1
+        }
+      },
       "code": {
         "coding": [
           {
@@ -86,20 +100,6 @@
             "code": "TAB"
           }
         ]
-      },
-      "amount": {
-        "numerator": {
-          "unit": "St",
-          "extension": [
-            {
-              "url": "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize",
-              "valueString": "20 St."
-            }
-          ]
-        },
-        "denominator": {
-          "value": 1
-        }
       }
     }
   ],
