@@ -27,6 +27,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
+
+      - name: Log generated files
+        run: |
+          ls -l 'Resources/fsh-generated/resources'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
@@ -63,7 +67,7 @@ jobs:
       - name: Log generated files
         run: |
           ls -l 'Resources/fsh-generated/resources'
-          
+
       - name: Check for Uncommitted Changes
         run: |
           git diff --exit-code 'Resources/fsh-generated/resources'|| (echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!" && exit 1)
