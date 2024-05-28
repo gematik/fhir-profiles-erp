@@ -192,8 +192,6 @@
         "id": "Medication.extension:Normgroesse",
         "path": "Medication.extension",
         "sliceName": "Normgroesse",
-        "short": "Packungsgröße nach N-Bezeichnung",
-        "definition": "Beschreibung der therapiegerechten Packungsgröße (z. B. N1)",
         "min": 0,
         "max": "1",
         "type": [
@@ -202,22 +200,6 @@
             "profile": [
               "http://fhir.de/StructureDefinition/normgroesse"
             ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:Normgroesse.extension",
-        "path": "Medication.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Medication.extension:Normgroesse.value[x]",
-        "path": "Medication.extension.value[x]",
-        "sliceName": "valueCode",
-        "type": [
-          {
-            "code": "code"
           }
         ],
         "mustSupport": true

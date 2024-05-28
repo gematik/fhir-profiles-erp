@@ -28,15 +28,11 @@ Description: "Handles medical information about the redeemed prescription"
 * extension[Herstellungsanweisung].value[x] MS
 * extension[Herstellungsanweisung].valueString MS
 * extension[Herstellungsanweisung].valueString ^sliceName = "valueString"
+
 * extension[Verpackung].value[x] MS
 * extension[Verpackung].value[x] only string
 * extension[Verpackung].valueString MS
 * extension[Verpackung].valueString ^sliceName = "valueString"
-* extension[Normgroesse] ^short = "Packungsgröße nach N-Bezeichnung"
-* extension[Normgroesse] ^definition = "Beschreibung der therapiegerechten Packungsgröße (z. B. N1)"
-* extension[Normgroesse].value[x] only code
-* extension[Normgroesse].valueCode MS
-* extension[Normgroesse].valueCode ^sliceName = "valueCode"
 
 // Add KBV Darreichungsform to ingredient for Medication_Compunding
 * ingredient.extension ^slicing.discriminator.type = #value
