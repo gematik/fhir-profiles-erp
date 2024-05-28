@@ -93,9 +93,9 @@
         "patternCode": "android"
       },
       {
-        "id": "Extension.extension:huawei",
+        "id": "Extension.extension:web",
         "path": "Extension.extension",
-        "sliceName": "huawei",
+        "sliceName": "web",
         "min": 0,
         "max": "1",
         "type": [
@@ -108,14 +108,14 @@
         ]
       },
       {
-        "id": "Extension.extension:huawei.extension:plattform",
+        "id": "Extension.extension:web.extension:plattform",
         "path": "Extension.extension.extension",
         "sliceName": "plattform"
       },
       {
-        "id": "Extension.extension:huawei.extension:plattform.value[x].code",
+        "id": "Extension.extension:web.extension:plattform.value[x].code",
         "path": "Extension.extension.extension.value[x].code",
-        "patternCode": "huawei"
+        "patternCode": "web"
       },
       {
         "id": "Extension.url",

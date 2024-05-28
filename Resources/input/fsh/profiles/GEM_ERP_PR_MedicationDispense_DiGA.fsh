@@ -70,6 +70,8 @@ Description: "Example of a Medication Dispense."
 * extension[deepLinks].extension[apple].extension[link].valueUrl = "https://apple.gematico.de?redeemCode=DE12345678901234"
 * extension[deepLinks].extension[android].extension[plattform].valueCoding.code = #android
 * extension[deepLinks].extension[android].extension[link].valueUrl = "https://google-play.gematico.de?redeemCode=DE12345678901234"
+* extension[deepLinks].extension[web].extension[plattform].valueCoding.code = #web
+* extension[deepLinks].extension[web].extension[link].valueUrl = "https://www.gematico.de?redeemCode=DE12345678901234"
 * identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier.value = "162.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"

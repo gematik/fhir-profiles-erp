@@ -12,10 +12,10 @@ Description: "Contains information regarding deep links for a DiGA."
 * extension contains 
   GEM_ERP_EX_DeepLink named apple 0..1
   and GEM_ERP_EX_DeepLink named android 0..1
-  and GEM_ERP_EX_DeepLink named huawei 0..1
+  and GEM_ERP_EX_DeepLink named web 0..1
 * extension[apple].extension[plattform].valueCoding.code = #ios
 * extension[android].extension[plattform].valueCoding.code = #android
-* extension[huawei].extension[plattform].valueCoding.code = #huawei
+* extension[web].extension[plattform].valueCoding.code = #web
 
 Extension: GEM_ERP_EX_DeepLink
 Id: GEM-ERP-EX-DeepLink

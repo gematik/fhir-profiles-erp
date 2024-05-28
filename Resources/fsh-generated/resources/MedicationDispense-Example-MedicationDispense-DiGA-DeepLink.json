@@ -43,6 +43,21 @@
             }
           ],
           "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+        },
+        {
+          "extension": [
+            {
+              "valueCoding": {
+                "code": "web"
+              },
+              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-plattform"
+            },
+            {
+              "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink-link",
+              "valueUrl": "https://www.gematico.de?redeemCode=DE12345678901234"
+            }
+          ],
+          "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
         }
       ],
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"

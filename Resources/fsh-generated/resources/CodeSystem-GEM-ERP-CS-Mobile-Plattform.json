@@ -17,8 +17,8 @@
       "display": "Android"
     },
     {
-      "code": "huawei",
-      "display": "Huawei"
+      "code": "web",
+      "display": "Web"
     }
   ],
   "version": "1.4",
