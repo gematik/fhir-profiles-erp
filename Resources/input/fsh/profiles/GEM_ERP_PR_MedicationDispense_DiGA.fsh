@@ -5,8 +5,9 @@ Title: "Dispensation of a DiGA-Prescription"
 Description: "Handles information about the dispensed DiGA"
 * insert Profile(GEM_ERP_PR_MedicationDispense_DiGA)
 
+* extension 1..*
 * extension contains 
-    GEM_ERP_EX_RedeemCode named redeemCode 0..1
+    GEM_ERP_EX_RedeemCode named redeemCode 1..1
     and GEM_ERP_EX_DeepLink named deepLink 0..*
 
 * identifier contains prescriptionID 1..1
