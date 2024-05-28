@@ -1,0 +1,38 @@
+{
+  "resourceType": "Medication",
+  "id": "DAVNumeratorExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+    ]
+  },
+  "ingredient": [
+    {
+      "strength": {
+        "numerator": {
+          "value": 10,
+          "unit": "Stück",
+          "_system": {
+            "extension": [
+              {
+                "valueCode": "unknown",
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+              }
+            ]
+          },
+          "_code": {
+            "extension": [
+              {
+                "valueCode": "unknown",
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+              }
+            ]
+          }
+        }
+      },
+      "itemReference": {
+        "display": "Gematico Medikation"
+      }
+    }
+  ]
+}

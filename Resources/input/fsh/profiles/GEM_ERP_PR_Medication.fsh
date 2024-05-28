@@ -55,10 +55,15 @@ Description: "Handles medical information about the redeemed prescription"
 * ingredient.strength.extension[MengeFreitext].valueString MS
 * ingredient.strength.extension[MengeFreitext].valueString ^sliceName = "valueString"
 
-* ingredient.strength.numerator.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-* ingredient.strength.numerator.extension[dataAbsentReason].value[x] = #unknown
-* ingredient.strength.denominator.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-* ingredient.strength.denominator.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.numerator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.numerator.system.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.numerator.code.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.numerator.code.extension[dataAbsentReason].value[x] = #unknown
+
+* ingredient.strength.denominator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.denominator.system.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.denominator.code.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+* ingredient.strength.denominator.code.extension[dataAbsentReason].value[x] = #unknown
 
 // Add amount.numerator Extensions
 * amount.numerator.extension ^slicing.discriminator.type = #value
@@ -106,3 +111,15 @@ Usage: #example
 * amount.numerator.extension[Gesamtmenge].url = "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize"
 * amount.numerator.extension[Gesamtmenge].valueString = "20 St."
 * amount.denominator.value = 1
+
+
+Instance: DAVNumeratorExample
+InstanceOf: GEM_ERP_PR_Medication
+Title:   "DAV Example"
+Usage: #example
+* ingredient.itemReference.display = "Gematico Medikation"
+* ingredient.strength.numerator.value = 10
+* ingredient.strength.numerator.unit = "Stück"
+* ingredient.strength.numerator
+* ingredient.strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
+* ingredient.strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
