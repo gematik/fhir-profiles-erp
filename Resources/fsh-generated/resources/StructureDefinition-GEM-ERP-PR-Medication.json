@@ -377,8 +377,8 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.numerator.extension",
+        "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.numerator.system.extension",
         "sliceName": "dataAbsentReason",
         "min": 0,
         "max": "1",
@@ -393,13 +393,13 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.strength.numerator.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.numerator.extension.value[x]",
+        "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.numerator.system.extension.value[x]",
         "patternCode": "unknown"
       },
       {
-        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.denominator.extension",
+        "id": "Medication.ingredient.strength.numerator.code.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.numerator.code.extension",
         "sliceName": "dataAbsentReason",
         "min": 0,
         "max": "1",
@@ -414,8 +414,50 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.strength.denominator.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.denominator.extension.value[x]",
+        "id": "Medication.ingredient.strength.numerator.code.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.numerator.code.extension.value[x]",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.system.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.denominator.system.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.system.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.denominator.system.extension.value[x]",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.code.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.denominator.code.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.code.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.denominator.code.extension.value[x]",
         "patternCode": "unknown"
       }
     ]
