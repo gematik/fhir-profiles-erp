@@ -35,14 +35,6 @@ Description: "Handles information about the dispensed DiGA"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
 
-Instance: Example-DiGA-Medication
-InstanceOf: GEM_ERP_PR_Medication
-Usage: #example
-Title: "Example-Medication for DiGA Diapense"
-Description: "Example of a Medication for DiGA Dispense."
-* code.coding[pzn].code = #17946626
-* code.text = "gematico Diabetestherapie"
-
 Instance: Example-MedicationDispense-DiGA
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
@@ -56,8 +48,7 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* contained[+] = Example-DiGA-Medication
-* medicationReference.reference = "#Example-DiGA-Medication"
+* medicationReference.display = "Gematico Diabetestherapie"
 
 
 Instance: Example-MedicationDispense-DiGA-DeepLink
@@ -76,5 +67,4 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* contained[+] = Example-DiGA-Medication
-* medicationReference.reference = "#Example-DiGA-Medication"
+* medicationReference.display = "Gematico Diabetestherapie"

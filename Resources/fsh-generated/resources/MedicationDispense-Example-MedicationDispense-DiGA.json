@@ -36,27 +36,7 @@
     }
   ],
   "whenHandedOver": "2024-04-03",
-  "contained": [
-    {
-      "resourceType": "Medication",
-      "id": "Example-DiGA-Medication",
-      "meta": {
-        "profile": [
-          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "system": "http://fhir.de/CodeSystem/ifa/pzn",
-            "code": "17946626"
-          }
-        ],
-        "text": "gematico Diabetestherapie"
-      }
-    }
-  ],
   "medicationReference": {
-    "reference": "#Example-DiGA-Medication"
+    "display": "Gematico Diabetestherapie"
   }
 }
