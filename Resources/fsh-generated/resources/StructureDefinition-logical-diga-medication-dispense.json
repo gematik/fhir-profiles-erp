@@ -1,0 +1,175 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "logical-diga-medication-dispense",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/logical-diga-medication-dispense",
+  "name": "LogicalDiGAMedicationDispense",
+  "title": "Logical DiGA Medication Dispense",
+  "status": "draft",
+  "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/logical-diga-medication-dispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "logical-diga-medication-dispense",
+        "path": "logical-diga-medication-dispense",
+        "short": "Logical DiGA Medication Dispense",
+        "definition": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden."
+      },
+      {
+        "id": "logical-diga-medication-dispense.prescriptionId",
+        "path": "logical-diga-medication-dispense.prescriptionId",
+        "short": "ID des E-Rezepts",
+        "definition": "ID des E-Rezepts",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.status",
+        "path": "logical-diga-medication-dispense.status",
+        "short": "Status fixedValue: #completed",
+        "definition": "Status fixedValue: #completed",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.patientKVNR",
+        "path": "logical-diga-medication-dispense.patientKVNR",
+        "short": "KVNR des Patienten",
+        "definition": "KVNR des Patienten",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.angabeAbgebendeInstutition",
+        "path": "logical-diga-medication-dispense.angabeAbgebendeInstutition",
+        "short": "Telematik-ID der abgebenden Institution",
+        "definition": "Telematik-ID der abgebenden Institution",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.freischaltCode",
+        "path": "logical-diga-medication-dispense.freischaltCode",
+        "short": "Freischaltcode für die DiGA",
+        "definition": "Freischaltcode für die DiGA",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.deepLinks",
+        "path": "logical-diga-medication-dispense.deepLinks",
+        "short": "Deep Links für die DiGA zu den jeweiligen Plattformen Apple, Android und Web",
+        "definition": "Deep Links für die DiGA zu den jeweiligen Plattformen Apple, Android und Web",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.angabenZurDiGA",
+        "path": "logical-diga-medication-dispense.angabenZurDiGA",
+        "short": "Angaben zur DiGA",
+        "definition": "Angaben zur DiGA",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.angabenZurDiGA.name",
+        "path": "logical-diga-medication-dispense.angabenZurDiGA.name",
+        "short": "Name der DiGA",
+        "definition": "Name der DiGA",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.angabenZurDiGA.pzn",
+        "path": "logical-diga-medication-dispense.angabenZurDiGA.pzn",
+        "short": "PZN der DiGA",
+        "definition": "PZN der DiGA",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.abgabeDatum",
+        "path": "logical-diga-medication-dispense.abgabeDatum",
+        "short": "Abgabedatum im Format YYYY-MM-DD",
+        "definition": "Abgabedatum im Format YYYY-MM-DD",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.abgabeHinweise",
+        "path": "logical-diga-medication-dispense.abgabeHinweise",
+        "short": "Hinweise zur Abgabe, wenn vorhanden",
+        "definition": "Hinweise zur Abgabe, wenn vorhanden",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ]
+      }
+    ]
+  }
+}
