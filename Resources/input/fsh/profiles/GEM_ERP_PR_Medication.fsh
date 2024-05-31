@@ -117,13 +117,6 @@ Instance: Medication-Without-Strength-Code
 InstanceOf: GEM_ERP_PR_Medication
 Title:   "Medication Without code or system for Strength"
 Usage: #example
-* extension.valueIdentifier.system = "https://gematik.de/fhir/epa-medication/sid/rx-prescription-process-identifier"
-* extension.valueIdentifier.value = "160.153.303.257.459_20240122"
-* extension.url = "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension"
-* identifier[0].system = "https://gematik.de/fhir/epa-medication/sid/epa-medication-unique-identifier"
-* identifier[=].value = "F5559CCEBF31CDCC373F75B8FA9398B8AD6532134B231A15A25F353961BDD761"
-* identifier[+].system = "https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier"
-* identifier[=].value = "6ae6a7ca-c9b5-46bf-9411-2ba49d96f988_160.153.303.257.459"
 * code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
 * status = #active
 * form = http://standardterms.edqm.eu#11210000 "Solution for infusion"
