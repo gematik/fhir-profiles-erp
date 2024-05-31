@@ -113,13 +113,12 @@ Usage: #example
 * amount.denominator.value = 1
 
 
-Instance: DAVNumeratorExample
+Instance: Medication-Without-Strength-Code
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "DAV Example"
+Title:   "Medication Without code or system for Strength"
 Usage: #example
 * ingredient.itemReference.display = "Gematico Medikation"
 * ingredient.strength.numerator.value = 10
 * ingredient.strength.numerator.unit = "Stück"
-* ingredient.strength.numerator
 * ingredient.strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
 * ingredient.strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
