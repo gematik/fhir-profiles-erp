@@ -10,8 +10,28 @@
     {
       "strength": {
         "numerator": {
-          "value": 10,
-          "unit": "Stück",
+          "value": 85,
+          "unit": "mg",
+          "_system": {
+            "extension": [
+              {
+                "valueCode": "unknown",
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+              }
+            ]
+          },
+          "_code": {
+            "extension": [
+              {
+                "valueCode": "unknown",
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+              }
+            ]
+          }
+        },
+        "denominator": {
+          "value": 250,
+          "unit": "Milliliter",
           "_system": {
             "extension": [
               {
@@ -30,9 +50,48 @@
           }
         }
       },
-      "itemReference": {
-        "display": "Gematico Medikation"
-      }
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "L01DB01",
+            "system": "http://fhir.de/CodeSystem/bfarm/atc",
+            "display": "Doxorubicin"
+          }
+        ]
+      },
+      "isActive": true
     }
-  ]
+  ],
+  "extension": [
+    {
+      "valueIdentifier": {
+        "system": "https://gematik.de/fhir/epa-medication/sid/rx-prescription-process-identifier",
+        "value": "160.153.303.257.459_20240122"
+      },
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/epa-medication/sid/epa-medication-unique-identifier",
+      "value": "F5559CCEBF31CDCC373F75B8FA9398B8AD6532134B231A15A25F353961BDD761"
+    },
+    {
+      "system": "https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier",
+      "value": "6ae6a7ca-c9b5-46bf-9411-2ba49d96f988_160.153.303.257.459"
+    }
+  ],
+  "code": {
+    "text": "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
+  },
+  "status": "active",
+  "form": {
+    "coding": [
+      {
+        "code": "11210000",
+        "system": "http://standardterms.edqm.eu",
+        "display": "Solution for infusion"
+      }
+    ]
+  }
 }

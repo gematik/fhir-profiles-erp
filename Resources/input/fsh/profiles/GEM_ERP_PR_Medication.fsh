@@ -117,8 +117,24 @@ Instance: Medication-Without-Strength-Code
 InstanceOf: GEM_ERP_PR_Medication
 Title:   "Medication Without code or system for Strength"
 Usage: #example
-* ingredient.itemReference.display = "Gematico Medikation"
-* ingredient.strength.numerator.value = 10
-* ingredient.strength.numerator.unit = "Stück"
+* extension.valueIdentifier.system = "https://gematik.de/fhir/epa-medication/sid/rx-prescription-process-identifier"
+* extension.valueIdentifier.value = "160.153.303.257.459_20240122"
+* extension.url = "https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension"
+* identifier[0].system = "https://gematik.de/fhir/epa-medication/sid/epa-medication-unique-identifier"
+* identifier[=].value = "F5559CCEBF31CDCC373F75B8FA9398B8AD6532134B231A15A25F353961BDD761"
+* identifier[+].system = "https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier"
+* identifier[=].value = "6ae6a7ca-c9b5-46bf-9411-2ba49d96f988_160.153.303.257.459"
+* code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
+* status = #active
+* form = http://standardterms.edqm.eu#11210000 "Solution for infusion"
+* ingredient.itemCodeableConcept = http://fhir.de/CodeSystem/bfarm/atc#L01DB01 "Doxorubicin"
+* ingredient.isActive = true
+* ingredient.strength.numerator.value = 85
+* ingredient.strength.numerator.unit = "mg"
 * ingredient.strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
 * ingredient.strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
+
+* ingredient.strength.denominator.value = 250
+* ingredient.strength.denominator.unit = "Milliliter"
+* ingredient.strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
+* ingredient.strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
