@@ -68,7 +68,6 @@ Description: "Example of a Medication Dispense."
 * medicationReference.identifier.value = "12345678"
 
 
-
 Instance: Example-DiGA-Medication
 InstanceOf: GEM_ERP_PR_Medication
 Usage: #example

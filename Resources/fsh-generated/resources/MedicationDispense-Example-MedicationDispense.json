@@ -24,7 +24,7 @@
       "actor": {
         "identifier": {
           "system": "https://gematik.de/fhir/sid/telematik-id",
-          "value": "1-SMC-B-Testkarte-883110000095957"
+          "value": "3-SMC-B-Testkarte-883110000095957"
         }
       }
     }
