@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense-DiGA",
+  "id": "Example-MedicationDispense-DiGA-Name-And-PZN",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -37,6 +37,10 @@
   ],
   "whenHandedOver": "2024-04-03",
   "medicationReference": {
-    "display": "Gematico Diabetestherapie"
+    "display": "Gematico Diabetestherapie",
+    "identifier": {
+      "system": "http://fhir.de/CodeSystem/ifa/pzn",
+      "value": "12345678"
+    }
   }
 }
