@@ -22,8 +22,12 @@ Description: "Handles information about the dispensed DiGA"
 * medication[x] MS
 * medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and DiGA-VE-ID."
 * medicationReference.display 1..1 MS
+  * ^short = "Name of the DiGA"
+* medicationReference.identifier 1..1 MS
+* medicationReference.identifier.system 1..1 MS
 * medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value 1..1 MS
+  * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-VE)."
 
 * subject 1..
 * subject.identifier 1..
@@ -37,6 +41,8 @@ Description: "Handles information about the dispensed DiGA"
 * whenHandedOver ^short = "Date of dispensation"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 * dosageInstruction MS
+
+* substitution 0..0
 
 Instance: Example-MedicationDispense-DiGA-Name
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
@@ -89,3 +95,5 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.value = "12345678"

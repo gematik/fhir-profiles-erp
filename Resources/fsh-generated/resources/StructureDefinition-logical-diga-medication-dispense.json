@@ -83,8 +83,8 @@
         "id": "logical-diga-medication-dispense.freischaltCode",
         "path": "logical-diga-medication-dispense.freischaltCode",
         "short": "Freischaltcode für die DiGA",
-        "definition": "Freischaltcode für die DiGA",
-        "min": 1,
+        "definition": "Optional, da die Kasse die Bereitstellung eines Freischaltcodes ablehnen kann.",
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -93,12 +93,12 @@
         ]
       },
       {
-        "id": "logical-diga-medication-dispense.deepLinks",
-        "path": "logical-diga-medication-dispense.deepLinks",
-        "short": "Deep Links für die DiGA zu den jeweiligen Plattformen Apple, Android und Web",
-        "definition": "Deep Links für die DiGA zu den jeweiligen Plattformen Apple, Android und Web",
+        "id": "logical-diga-medication-dispense.deepLink",
+        "path": "logical-diga-medication-dispense.deepLink",
+        "short": "Universeller Deep Link, der vom DiGA Hersteller bereitgestellt wird",
+        "definition": "Universeller Deep Link, der vom DiGA Hersteller bereitgestellt wird",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "string"
@@ -132,10 +132,10 @@
         ]
       },
       {
-        "id": "logical-diga-medication-dispense.angabenZurDiGA.pzn",
-        "path": "logical-diga-medication-dispense.angabenZurDiGA.pzn",
-        "short": "PZN der DiGA",
-        "definition": "PZN der DiGA",
+        "id": "logical-diga-medication-dispense.angabenZurDiGA.digaVeId",
+        "path": "logical-diga-medication-dispense.angabenZurDiGA.digaVeId",
+        "short": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE).",
+        "definition": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE).",
         "min": 0,
         "max": "0",
         "type": [

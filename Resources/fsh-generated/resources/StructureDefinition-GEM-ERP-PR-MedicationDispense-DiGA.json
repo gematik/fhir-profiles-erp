@@ -99,19 +99,29 @@
         "definition": "Information about the medication that is being dispensed. To include are name and DiGA-VE-ID."
       },
       {
+        "id": "MedicationDispense.medication[x].identifier",
+        "path": "MedicationDispense.medication[x].identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
-        "patternUri": "https://fhir.bfarm.de/Identifier/DigaVeId"
+        "min": 1,
+        "patternUri": "https://fhir.bfarm.de/Identifier/DigaVeId",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
+        "short": "Unique identification number for a prescription unit of a DiGA (DiGA-VE).",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].display",
         "path": "MedicationDispense.medication[x].display",
+        "short": "Name of the DiGA",
         "min": 1,
         "mustSupport": true
       },
@@ -148,6 +158,11 @@
             "expression": "toString().length()=10"
           }
         ]
+      },
+      {
+        "id": "MedicationDispense.substitution",
+        "path": "MedicationDispense.substitution",
+        "max": "0"
       }
     ]
   }

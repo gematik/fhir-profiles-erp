@@ -13,6 +13,13 @@
     }
   ],
   "status": "completed",
+  "medicationReference": {
+    "identifier": {
+      "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
+      "value": "12345678"
+    },
+    "display": "Gematico Diabetestherapie"
+  },
   "subject": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
@@ -35,12 +42,5 @@
       "valueString": "DE12345678901234"
     }
   ],
-  "medicationReference": {
-    "identifier": {
-      "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
-      "value": "12345678"
-    },
-    "display": "Gematico Diabetestherapie"
-  },
   "whenHandedOver": "2024-04-03"
 }
