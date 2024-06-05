@@ -59,6 +59,9 @@
           ],
           "value": 20,
           "unit": "St"
+        },
+        "denominator": {
+          "value": 1
         }
       }
     }
@@ -71,7 +74,7 @@
   ],
   "status": "completed",
   "medicationReference": {
-    "reference": "#001413e4-a5e9-48da-9b07-c17bab476407"
+    "reference": "#SumatripanMedication"
   },
   "subject": {
     "identifier": {

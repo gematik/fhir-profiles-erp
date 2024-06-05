@@ -122,6 +122,9 @@
           ],
           "value": 20,
           "unit": "St"
+        },
+        "denominator": {
+          "value": 1
         }
       }
     }
@@ -133,7 +136,7 @@
   ],
   "about": [
     {
-      "reference": "#001413e4-a5e9-48da-9b07-c17bab476407"
+      "reference": "#SumatripanMedication"
     }
   ],
   "sender": {

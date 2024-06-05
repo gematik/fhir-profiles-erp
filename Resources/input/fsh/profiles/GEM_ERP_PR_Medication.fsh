@@ -40,6 +40,7 @@ Usage: #example
 * amount.numerator.unit = "St"
 * amount.numerator.extension[totalQuantity].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
 * amount.numerator.extension[totalQuantity].valueString = "20 St."
+* amount.denominator.value = 1
 
 
 Instance: Medication-Without-Strength-Code

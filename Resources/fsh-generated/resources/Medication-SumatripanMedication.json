@@ -50,6 +50,9 @@
       ],
       "value": 20,
       "unit": "St"
+    },
+    "denominator": {
+      "value": 1
     }
   }
 }

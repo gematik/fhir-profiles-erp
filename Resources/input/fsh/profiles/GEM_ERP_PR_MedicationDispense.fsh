@@ -45,7 +45,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03"
 * whenPrepared = "2024-04-03"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* medicationReference.reference = "#SumatripanMedication"
 
 Instance: Example-DiGA-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -80,7 +80,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024"
 * whenPrepared = "2024"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* medicationReference.reference = "#SumatripanMedication"
 
 Instance: INVALID-DATE-Example-MedicationDispense-2
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -96,7 +96,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04"
 * whenPrepared = "2024-04"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* medicationReference.reference = "#SumatripanMedication"
 
 Instance: INVALID-DATE-Example-MedicationDispense-3
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -112,7 +112,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03T15:28:00+00:00"
 * whenPrepared = "2024-04-03T15:28:00+00:00"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* medicationReference.reference = "#SumatripanMedication"
 
 Instance: INVALID-DATE-Example-MedicationDispense-4
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -128,6 +128,6 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03T00:00:00.000Z"
 * whenPrepared = "2024-04-03T00:00:00.000Z"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#001413e4-a5e9-48da-9b07-c17bab476407"
+* medicationReference.reference = "#SumatripanMedication"
 
 */
