@@ -82,7 +82,10 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
             ]
           }
-        ]
+        ],
+        "patternIdentifier": {
+          "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+        }
       },
       {
         "id": "MedicationDispense.status",

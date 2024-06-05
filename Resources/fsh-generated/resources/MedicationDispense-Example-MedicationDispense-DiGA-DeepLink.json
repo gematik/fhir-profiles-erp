@@ -6,6 +6,12 @@
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+      "value": "162.000.033.491.280.78"
+    }
+  ],
   "status": "completed",
   "subject": {
     "identifier": {
@@ -44,12 +50,6 @@
         }
       ],
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
-    }
-  ],
-  "identifier": [
-    {
-      "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "162.000.033.491.280.78"
     }
   ],
   "whenHandedOver": "2024-04-03",
