@@ -49,16 +49,16 @@
         ]
       },
       {
-        "id": "MedicationDispense.extension:deepLinks",
+        "id": "MedicationDispense.extension:deepLink",
         "path": "MedicationDispense.extension",
-        "sliceName": "deepLinks",
+        "sliceName": "deepLink",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
             ]
           }
         ]

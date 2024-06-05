@@ -8,7 +8,7 @@ Description: "Handles information about the dispensed DiGA"
 * extension 1..*
 * extension contains 
     GEM_ERP_EX_RedeemCode named redeemCode 0..1
-    and GEM_ERP_EX_DeepLinks named deepLinks 0..*
+    and GEM_ERP_EX_DeepLink named deepLink 0..1
 
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
@@ -80,9 +80,7 @@ Usage: #example
 Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
 * extension[redeemCode].valueString = "DE12345678901234"
-* extension[deepLinks].extension[apple].valueUrl = "https://apple.gematico.de?redeemCode=DE12345678901234"
-* extension[deepLinks].extension[android].valueUrl = "https://google-play.gematico.de?redeemCode=DE12345678901234"
-* extension[deepLinks].extension[web].valueUrl = "https://www.gematico.de?redeemCode=DE12345678901234"
+* extension[deepLink].valueUrl = "https://gematico.de?redeemCode=DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
 * subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"

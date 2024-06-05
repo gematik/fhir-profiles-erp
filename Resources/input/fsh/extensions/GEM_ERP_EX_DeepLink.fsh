@@ -1,16 +1,7 @@
-Extension: GEM_ERP_EX_DeepLinks
-Id: GEM-ERP-EX-DeepLinks
-Title: "DiGA-DeepLinks"
-Description: "Contains information regarding deep links for a DiGA."
-* ^context[0].type = #element
-* ^context[=].expression = "MedicationDispense"
-* extension contains
-    apple 0..1 MS and
-    android 0..1 MS and
-    web 0..1 MS
-* extension[apple]
-  * value[x] only url
-* extension[android]
-  * value[x] only url
-* extension[web]
-  * value[x] only url
+Extension: GEM_ERP_EX_DeepLink
+Id: GEM-ERP-EX-DeepLink
+Title: "DiGA-DeepLink"
+Description: "Contains information regarding deep link for a DiGA."
+Context: MedicationDispense
+* . ^short = "Statement of a deep link which can be used to open the DiGA."
+* value[x] only url

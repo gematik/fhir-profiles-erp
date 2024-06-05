@@ -35,21 +35,8 @@
       "valueString": "DE12345678901234"
     },
     {
-      "extension": [
-        {
-          "url": "apple",
-          "valueUrl": "https://apple.gematico.de?redeemCode=DE12345678901234"
-        },
-        {
-          "url": "android",
-          "valueUrl": "https://google-play.gematico.de?redeemCode=DE12345678901234"
-        },
-        {
-          "url": "web",
-          "valueUrl": "https://www.gematico.de?redeemCode=DE12345678901234"
-        }
-      ],
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink",
+      "valueUrl": "https://gematico.de?redeemCode=DE12345678901234"
     }
   ],
   "whenHandedOver": "2024-04-03",
