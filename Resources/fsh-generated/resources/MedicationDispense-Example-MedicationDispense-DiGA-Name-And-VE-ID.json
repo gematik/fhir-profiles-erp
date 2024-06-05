@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense-DiGA-Medication-Object",
+  "id": "Example-MedicationDispense-DiGA-Name-And-VE-ID",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -35,28 +35,12 @@
       "valueString": "DE12345678901234"
     }
   ],
-  "whenHandedOver": "2024-04-03",
-  "contained": [
-    {
-      "resourceType": "Medication",
-      "id": "Example-DiGA-Medication",
-      "meta": {
-        "profile": [
-          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "system": "http://fhir.de/CodeSystem/ifa/pzn",
-            "code": "17946626"
-          }
-        ],
-        "text": "gematico Diabetestherapie"
-      }
-    }
-  ],
   "medicationReference": {
-    "reference": "#Example-DiGA-Medication"
-  }
+    "identifier": {
+      "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
+      "value": "12345678"
+    },
+    "display": "Gematico Diabetestherapie"
+  },
+  "whenHandedOver": "2024-04-03"
 }

@@ -18,10 +18,12 @@ Description: "Handles information about the dispensed DiGA"
 * status = #completed (exactly)
 * status ^short = "completed"
 
-* medication[x] only Reference(GEM_ERP_PR_Medication)
+* medication[x] only Reference
 * medication[x] MS
-* medication[x] ^definition = "The MedicationDispense shows a contained medication which was dispensed. The medication should state the pzn of the DiGA."
-* medication[x] ^type.aggregation = #contained
+* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and DiGA-VE-ID."
+* medicationReference.display 1..1 MS
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.value 1..1 MS
 
 * subject 1..
 * subject.identifier 1..
@@ -50,8 +52,10 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.value = "12345678"
 
-Instance: Example-MedicationDispense-DiGA-Name-And-PZN
+Instance: Example-MedicationDispense-DiGA-Name-And-VE-ID
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
 Title: "Example-Medication Dispense"
@@ -65,33 +69,8 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = $PZN
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
-
-
-Instance: Example-DiGA-Medication
-InstanceOf: GEM_ERP_PR_Medication
-Usage: #example
-Title: "Example-Medication for DiGA Diapense"
-Description: "Example of a Medication for DiGA Dispense."
-* code.coding[pzn].code = #17946626
-* code.text = "gematico Diabetestherapie"
-
-Instance: Example-MedicationDispense-DiGA-Medication-Object
-InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
-Usage: #example
-Title: "Example-Medication Dispense"
-Description: "Example of a Medication Dispense."
-* extension[redeemCode].valueString = "DE12345678901234"
-* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
-* subject.identifier.value = "X123456789"
-* performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
-* contained[+] = Example-DiGA-Medication
-* medicationReference.reference = "#Example-DiGA-Medication"
 
 
 
