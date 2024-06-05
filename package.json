@@ -3,7 +3,7 @@
     "4.0.1"
   ],
   "name": "de.gematik.erezept-workflow.r4",
-  "version": "1.4.0-beta",
+  "version": "1.4.0-rc1",
   "description": "ePrescription workflow specification.",
   "author": "gematik",
   "dependencies": {

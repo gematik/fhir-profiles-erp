@@ -5,7 +5,7 @@
   "version": "1.4",
   "name": "GEM_ERP_EX_PrescriptionType",
   "status": "draft",
-  "date": "2024-07-01",
+  "date": "2024-07-15",
   "description": "Definies the Type of a prescription.",
   "fhirVersion": "4.0.1",
   "mapping": [
