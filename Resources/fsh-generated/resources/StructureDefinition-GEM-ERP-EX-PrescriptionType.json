@@ -25,6 +25,10 @@
     {
       "type": "element",
       "expression": "Communication.payload"
+    },
+    {
+      "type": "element",
+      "expression": "Communication"
     }
   ],
   "type": "Extension",
