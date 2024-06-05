@@ -7,12 +7,6 @@
     ]
   },
   "status": "completed",
-  "extension": [
-    {
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
-      "valueString": "DE12345678901234"
-    }
-  ],
   "subject": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
@@ -27,6 +21,12 @@
           "value": "8-SMC-B-Testkarte-883110000095957"
         }
       }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+      "valueString": "DE12345678901234"
     }
   ],
   "identifier": [

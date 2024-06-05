@@ -7,7 +7,7 @@ Description: "Handles information about the dispensed DiGA"
 
 * extension 1..*
 * extension contains 
-    GEM_ERP_EX_RedeemCode named redeemCode 1..1
+    GEM_ERP_EX_RedeemCode named redeemCode 0..1
     and GEM_ERP_EX_DeepLinks named deepLinks 0..*
 
 * identifier contains prescriptionID 1..1

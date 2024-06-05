@@ -7,6 +7,22 @@
     ]
   },
   "status": "completed",
+  "subject": {
+    "identifier": {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "X123456789"
+    }
+  },
+  "performer": [
+    {
+      "actor": {
+        "identifier": {
+          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "value": "8-SMC-B-Testkarte-883110000095957"
+        }
+      }
+    }
+  ],
   "extension": [
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
@@ -28,22 +44,6 @@
         }
       ],
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLinks"
-    }
-  ],
-  "subject": {
-    "identifier": {
-      "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "X123456789"
-    }
-  },
-  "performer": [
-    {
-      "actor": {
-        "identifier": {
-          "system": "https://gematik.de/fhir/sid/telematik-id",
-          "value": "8-SMC-B-Testkarte-883110000095957"
-        }
-      }
     }
   ],
   "identifier": [
