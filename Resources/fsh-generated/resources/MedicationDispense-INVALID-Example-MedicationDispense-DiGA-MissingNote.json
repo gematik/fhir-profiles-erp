@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense-DiGA-NoRedeemCode",
+  "id": "INVALID-Example-MedicationDispense-DiGA-MissingNote",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -37,10 +37,5 @@
       }
     ]
   },
-  "whenHandedOver": "2024-04-03",
-  "note": [
-    {
-      "text": "Freischaltcode für DiGA konnte nicht erstellt werden"
-    }
-  ]
+  "whenHandedOver": "2024-04-03"
 }

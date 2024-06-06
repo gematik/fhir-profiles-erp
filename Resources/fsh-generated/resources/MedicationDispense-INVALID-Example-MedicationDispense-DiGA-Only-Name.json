@@ -1,15 +1,15 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-DiGA-MedicationDispense",
+  "id": "INVALID-Example-MedicationDispense-DiGA-Only-Name",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
     ]
   },
   "identifier": [
     {
       "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.000.033.491.280.78"
+      "value": "162.000.033.491.280.78"
     }
   ],
   "status": "completed",
@@ -24,14 +24,19 @@
       "actor": {
         "identifier": {
           "system": "https://gematik.de/fhir/sid/telematik-id",
-          "value": "1-SMC-B-Testkarte-883110000095957"
+          "value": "8-SMC-B-Testkarte-883110000095957"
         }
       }
     }
   ],
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+      "valueString": "DE12345678901234"
+    }
+  ],
   "whenHandedOver": "2024-04-03",
-  "whenPrepared": "2024-04-03",
   "medicationReference": {
-    "display": "Beispiel App für Diabetestherapie"
+    "display": "Gematico Diabetestherapie"
   }
 }
