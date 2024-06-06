@@ -28,28 +28,33 @@ Description: "Handles information about the dispensed DiGA"
   * ^short = "Name of the DiGA"
 * medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId" (exactly)
 * medicationReference.identifier.value 1..1 MS
-  * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-VE)."
+  * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-ID)."
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
 * medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
+// KVNR des Versicherten
 * subject 1..
 * subject.identifier 1..
 * subject.identifier only $identifier-kvid-10 // Hier nur die KVNR der GKV, da für PKV kein DiGA angedacht ist
 * subject.identifier ^short = "The patients KVNR"
 * subject.identifier ^comment = "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
+
+// Kostenträger 
 * performer 1..1
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId
+
+// Abgabedatum
 * whenHandedOver 1..1
 * whenHandedOver ^short = "Date of dispensation"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
-* dosageInstruction MS
 
 * substitution 0..0
+  * ^comment = "According to BAS the substitution for DiGAs is not allowed"
 
 Invariant: workflow-medicationdispense-redeemcode-1
 Description: "A note was not found, but is mandatory if no redeem code is provided."
@@ -62,7 +67,7 @@ Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinit
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
-Description: "Name of the DiGA and DiGA-VE-ID was not found, but is mandatory if a redeem code is provided."
+Description: "Name of the DiGA and DiGA-ID was not found, but is mandatory if a redeem code is provided."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
 Severity: #error
 
@@ -80,7 +85,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-DeepLink
@@ -98,7 +103,7 @@ Description: "Example of a Medication Dispense for DiGAs which states a deep lin
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-NoRedeemCode
@@ -173,7 +178,7 @@ Description: "When a redeem code is provided, the name of the DiGA is mandatory.
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: INVALID-Example-MedicationDispense-Missing-DiGA-VE-ID

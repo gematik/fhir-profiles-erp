@@ -15,7 +15,7 @@
   "status": "completed",
   "medicationReference": {
     "identifier": {
-      "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
+      "system": "https://fhir.bfarm.de/Identifier/DigaId",
       "value": "12345678"
     }
   },

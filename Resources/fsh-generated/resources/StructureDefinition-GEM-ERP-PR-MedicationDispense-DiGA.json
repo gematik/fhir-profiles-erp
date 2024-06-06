@@ -37,7 +37,7 @@
           {
             "key": "workflow-medicationdispense-redeemcode-3",
             "severity": "error",
-            "human": "Name of the DiGA and DiGA-VE-ID was not found, but is mandatory if a redeem code is provided.",
+            "human": "Name of the DiGA and DiGA-ID was not found, but is mandatory if a redeem code is provided.",
             "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
           }
@@ -149,13 +149,13 @@
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
         "min": 1,
-        "patternUri": "https://fhir.bfarm.de/Identifier/DigaVeId",
+        "fixedUri": "https://fhir.bfarm.de/Identifier/DigaId",
         "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
-        "short": "Unique identification number for a prescription unit of a DiGA (DiGA-VE).",
+        "short": "Unique identification number for a prescription unit of a DiGA (DiGA-ID).",
         "min": 1,
         "mustSupport": true
       },
@@ -202,6 +202,7 @@
       {
         "id": "MedicationDispense.substitution",
         "path": "MedicationDispense.substitution",
+        "comment": "According to BAS the substitution for DiGAs is not allowed",
         "max": "0"
       }
     ]
