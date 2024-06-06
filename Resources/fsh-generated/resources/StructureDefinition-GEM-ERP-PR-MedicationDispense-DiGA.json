@@ -99,9 +99,28 @@
         "definition": "Information about the medication that is being dispensed. To include are name and DiGA-VE-ID."
       },
       {
+        "id": "MedicationDispense.medication[x].extension:data-absent-reason",
+        "path": "MedicationDispense.medication[x].extension",
+        "sliceName": "data-absent-reason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.medication[x].extension:data-absent-reason.value[x]",
+        "path": "MedicationDispense.medication[x].extension.value[x]",
+        "patternCode": "asked-declined"
+      },
+      {
         "id": "MedicationDispense.medication[x].identifier",
         "path": "MedicationDispense.medication[x].identifier",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -122,7 +141,6 @@
         "id": "MedicationDispense.medication[x].display",
         "path": "MedicationDispense.medication[x].display",
         "short": "Name of the DiGA",
-        "min": 1,
         "mustSupport": true
       },
       {

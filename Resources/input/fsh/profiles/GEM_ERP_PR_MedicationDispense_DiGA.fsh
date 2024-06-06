@@ -21,13 +21,17 @@ Description: "Handles information about the dispensed DiGA"
 * medication[x] only Reference
 * medication[x] MS
 * medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and DiGA-VE-ID."
-* medicationReference.display 1..1 MS
+* medicationReference.display 0..1 MS
   * ^short = "Name of the DiGA"
-* medicationReference.identifier 1..1 MS
+* medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
 * medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value 1..1 MS
   * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-VE)."
+
+// Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
+* medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
+* medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
 * subject 1..
 * subject.identifier 1..
@@ -44,11 +48,26 @@ Description: "Handles information about the dispensed DiGA"
 
 * substitution 0..0
 
+Invariant: workflow-medicationdispense-redeemcode-1
+Description: "A note was not found, but is mandatory if no redeem code is provided."
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies note.exists()"
+Severity: #error
+
+Invariant: workflow-medicationdispense-redeemcode-2
+Description: "The data absent reason was not found, but is mandatory if no redeem code is provided."
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+Severity: #error
+
+Invariant: workflow-medicationdispense-redeemcode-3
+Description: "Name of the DiGA and DiGA-VE-ID was not found, but is mandatory if a redeem code is provided."
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').exists() implies (medicationReference.display.exists() AND medicationReference.identifier.exists())"
+Severity: #error
+
 Instance: Example-MedicationDispense-DiGA-Name
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
-Title: "Example-Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Medication Dispense DiGA, Name only"
+Description: "Example of a Medication Dispense for DiGAs only stating the name of the DiGA."
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
@@ -58,14 +77,12 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
-* medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-Name-And-VE-ID
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
-Title: "Example-Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Medication Dispense DiGA, Name and DiGA-VE-ID"
+Description: "Example of a Medication Dispense for DiGAs only stating the name of the DiGA."
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
@@ -78,13 +95,11 @@ Description: "Example of a Medication Dispense."
 * medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
 
-
-
 Instance: Example-MedicationDispense-DiGA-DeepLink
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
-Title: "Example-Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Medication Dispense DiGA with a deep link."
+Description: "Example of a Medication Dispense for DiGAs which states a deep link."
 * extension[redeemCode].valueString = "DE12345678901234"
 * extension[deepLink].valueUrl = "https://gematico.de?redeemCode=DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
@@ -97,3 +112,17 @@ Description: "Example of a Medication Dispense."
 * medicationReference.display = "Gematico Diabetestherapie"
 * medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
+
+Instance: Example-MedicationDispense-DiGA-NoRedeemCode
+InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
+Usage: #example
+Title: "Medication Dispense DiGA without a redeem code"
+Description: "Example of a Medication Dispense for DiGAs which has no redeem code."
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "162.000.033.491.280.78"
+* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.value = "X123456789"
+* performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
+* whenHandedOver = "2024-04-03"
+* medicationReference.extension[data-absent-reason].valueCode = #asked-declined

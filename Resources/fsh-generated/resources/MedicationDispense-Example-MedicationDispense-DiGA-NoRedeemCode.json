@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense-DiGA-Name",
+  "id": "Example-MedicationDispense-DiGA-NoRedeemCode",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -29,14 +29,13 @@
       }
     }
   ],
-  "extension": [
-    {
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
-      "valueString": "DE12345678901234"
-    }
-  ],
-  "whenHandedOver": "2024-04-03",
   "medicationReference": {
-    "display": "Gematico Diabetestherapie"
-  }
+    "extension": [
+      {
+        "valueCode": "asked-declined",
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+      }
+    ]
+  },
+  "whenHandedOver": "2024-04-03"
 }
