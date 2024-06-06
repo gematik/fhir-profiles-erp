@@ -108,9 +108,9 @@
       {
         "id": "logical-diga-medication-dispense.angabenZurDiGA",
         "path": "logical-diga-medication-dispense.angabenZurDiGA",
-        "short": "Angaben zur DiGA",
-        "definition": "Angaben zur DiGA",
-        "min": 1,
+        "short": "Angaben zur DiGA. Zwingend anzugeben, wenn ein Freischaltcode bereitgestellt wird.",
+        "definition": "Angaben zur DiGA. Zwingend anzugeben, wenn ein Freischaltcode bereitgestellt wird.",
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -136,8 +136,8 @@
         "path": "logical-diga-medication-dispense.angabenZurDiGA.digaVeId",
         "short": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE).",
         "definition": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE).",
-        "min": 0,
-        "max": "0",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "string"
@@ -145,8 +145,21 @@
         ]
       },
       {
-        "id": "logical-diga-medication-dispense.abgabeDatum",
-        "path": "logical-diga-medication-dispense.abgabeDatum",
+        "id": "logical-diga-medication-dispense.angabenZurDiGA.dataAbsentReason",
+        "path": "logical-diga-medication-dispense.angabenZurDiGA.dataAbsentReason",
+        "short": "Wird angegeben, wenn kein Freischaltcode bereitgestellt wird. fixedValue: #unknown",
+        "definition": "Wird angegeben, wenn kein Freischaltcode bereitgestellt wird. fixedValue: #unknown",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.datum",
+        "path": "logical-diga-medication-dispense.datum",
         "short": "Abgabedatum im Format YYYY-MM-DD",
         "definition": "Abgabedatum im Format YYYY-MM-DD",
         "min": 1,
@@ -158,15 +171,28 @@
         ]
       },
       {
-        "id": "logical-diga-medication-dispense.abgabeHinweise",
-        "path": "logical-diga-medication-dispense.abgabeHinweise",
-        "short": "Hinweise zur Abgabe, wenn vorhanden",
-        "definition": "Hinweise zur Abgabe, wenn vorhanden",
+        "id": "logical-diga-medication-dispense.note",
+        "path": "logical-diga-medication-dispense.note",
+        "short": "Wenn der Workflow abgeschlossen wird, ohne dass ein Freischaltcode bereitgestellt wird, muss dieser Wert angegeben werden.",
+        "definition": "Wenn der Workflow abgeschlossen wird, ohne dass ein Freischaltcode bereitgestellt wird, muss dieser Wert angegeben werden.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Annotation"
+          }
+        ]
+      },
+      {
+        "id": "logical-diga-medication-dispense.substitution",
+        "path": "logical-diga-medication-dispense.substitution",
+        "short": "Substitution darf lt. BAS nicht erfolgen.",
+        "definition": "Substitution darf lt. BAS nicht erfolgen.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "BackboneElement"
           }
         ]
       }
