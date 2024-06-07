@@ -15,7 +15,7 @@
   "status": "completed",
   "medicationReference": {
     "identifier": {
-      "system": "https://fhir.bfarm.de/Identifier/DigaId",
+      "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
       "value": "12345678"
     },
     "display": "Gematico Diabetestherapie"

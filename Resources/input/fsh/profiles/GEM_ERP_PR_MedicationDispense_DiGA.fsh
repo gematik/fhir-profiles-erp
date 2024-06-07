@@ -28,9 +28,9 @@ Description: "Handles information about the dispensed DiGA"
   * ^short = "Name of the DiGA"
 * medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId" (exactly)
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId" (exactly)
 * medicationReference.identifier.value 1..1 MS
-  * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-ID)."
+  * ^short = "Unique identification number for a prescription unit of a DiGA (DiGA-VE-ID)."
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
@@ -85,7 +85,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-DeepLink
@@ -103,7 +103,7 @@ Description: "Example of a Medication Dispense for DiGAs which states a deep lin
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-NoRedeemCode
@@ -178,7 +178,7 @@ Description: "When a redeem code is provided, the name of the DiGA is mandatory.
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaId"
+* medicationReference.identifier.system = "https://fhir.bfarm.de/Identifier/DigaVeId"
 * medicationReference.identifier.value = "12345678"
 
 Instance: INVALID-Example-MedicationDispense-Missing-DiGA-VE-ID
