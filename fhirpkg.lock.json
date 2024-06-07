@@ -1,12 +1,12 @@
 {
-  "updated": "2024-06-05T16:16:05.822927+02:00",
+  "updated": "2024-06-07T12:57:23.405634+02:00",
   "dependencies": {
     "kbv.ita.erp": "1.1.2",
     "KBV.Basis": "1.3.0",
     "hl7.fhir.r4.core": "4.0.1",
     "kbv.ita.for": "1.1.0",
     "de.basisprofil.r4": "1.5.0-ballot2",
-    "de.gematik.epa.medication": "1.0.1",
+    "de.gematik.epa.medication": "1.0.2-rc1",
     "de.gematik.fhir.directory": "0.11.7",
     "de.ihe-d.terminology": "3.0.0"
   },
