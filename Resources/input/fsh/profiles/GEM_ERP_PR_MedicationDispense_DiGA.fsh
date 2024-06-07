@@ -121,6 +121,7 @@ Description: "Example of a Medication Dispense for DiGAs which has no redeem cod
 * note.text = "Freischaltcode für DiGA konnte nicht erstellt werden"
 * medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
+/*
 Instance: INVALID-Example-MedicationDispense-DiGA-Only-Name
 InstanceOf: GEM_ERP_PR_MedicationDispense_DiGA
 Usage: #example
@@ -210,3 +211,5 @@ Description: "When a redeem code is provided, the Name and DiGA-VE-ID are mandat
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "whitespace"
+
+*/
