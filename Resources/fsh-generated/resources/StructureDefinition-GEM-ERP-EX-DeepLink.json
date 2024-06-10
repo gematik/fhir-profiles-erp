@@ -1,12 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-InsuranceProvider",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider",
-  "version": "1.4",
-  "name": "GEM_ERP_EX_InsuranceProvider",
+  "id": "GEM-ERP-EX-DeepLink",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink",
+  "name": "GEM_ERP_EX_DeepLink",
+  "title": "DiGA-DeepLink",
   "status": "draft",
-  "date": "2024-07-15",
-  "description": "IK-number (Instituskennzeichen) of Insurance Provider covering the requested medication",
+  "description": "Contains information regarding deep link for a DiGA.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -19,8 +18,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Communication.payload"
+      "expression": "MedicationDispense",
+      "type": "element"
     }
   ],
   "type": "Extension",
@@ -29,6 +28,11 @@
   "differential": {
     "element": [
       {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Statement of a deep link which can be used to open the DiGA."
+      },
+      {
         "id": "Extension.extension",
         "path": "Extension.extension",
         "max": "0"
@@ -36,17 +40,14 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
+            "code": "url"
           }
         ]
       }

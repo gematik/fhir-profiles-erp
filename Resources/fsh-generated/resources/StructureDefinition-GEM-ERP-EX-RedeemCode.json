@@ -1,12 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-InsuranceProvider",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider",
-  "version": "1.4",
-  "name": "GEM_ERP_EX_InsuranceProvider",
+  "id": "GEM-ERP-EX-RedeemCode",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+  "name": "GEM_ERP_EX_RedeemCode",
+  "title": "DiGA-RedeemCode",
   "status": "draft",
-  "date": "2024-07-15",
-  "description": "IK-number (Instituskennzeichen) of Insurance Provider covering the requested medication",
+  "description": "States the redeem code for a DiGA.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -20,7 +19,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Communication.payload"
+      "expression": "MedicationDispense"
     }
   ],
   "type": "Extension",
@@ -36,17 +35,15 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "short": "States the redeem code for a DiGA.",
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
+            "code": "string"
           }
         ]
       }

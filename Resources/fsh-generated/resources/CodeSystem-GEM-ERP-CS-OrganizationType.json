@@ -11,10 +11,14 @@
     {
       "code": "urn:oid:1.2.276.0.76.4.54",
       "display": "Öffentliche Apotheke"
+    },
+    {
+      "code": "urn:oid:1.2.276.0.76.4.59",
+      "display": "Kostenträger"
     }
   ],
   "version": "1.4",
-  "date": "2024-07-01",
+  "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -28,5 +32,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 1
+  "count": 2
 }

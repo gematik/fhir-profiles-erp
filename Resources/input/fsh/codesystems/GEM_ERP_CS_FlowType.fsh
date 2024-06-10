@@ -5,6 +5,7 @@ Description: "Shows the different types of the ePrescription according to the pr
 * insert CodeSystem(GEM_ERP_CS_FlowType)
 * ^content = #complete
 * #160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
+* #162 "Muster 16 (Digitale Gesundheitsanwendungen)"
 * #165 "Muster 16 (Betäubungsmittel)"
 * #166 "Muster 16 (T-Rezepte)"
 * #169 "Muster 16 (Direkte Zuweisung)"

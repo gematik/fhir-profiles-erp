@@ -13,6 +13,10 @@
       "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
     },
     {
+      "code": "162",
+      "display": "Muster 16 (Digitale Gesundheitsanwendungen)"
+    },
+    {
       "code": "165",
       "display": "Muster 16 (Betäubungsmittel)"
     },
@@ -46,7 +50,7 @@
     }
   ],
   "version": "1.4",
-  "date": "2024-07-01",
+  "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -60,5 +64,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 9
+  "count": 10
 }

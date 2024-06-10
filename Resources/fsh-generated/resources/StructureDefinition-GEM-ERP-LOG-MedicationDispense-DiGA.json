@@ -1,0 +1,291 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-LOG-MedicationDispense-DiGA",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense-DiGA",
+  "name": "GEM_ERP_LOG_MedicationDispense_DiGA",
+  "title": "Logical DiGA Medication Dispense",
+  "status": "draft",
+  "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+      "name": "Mapping for MedicationDispense DiGA",
+      "uri": "GEM_ERP_PR_MedicationDispense_DiGA",
+      "comment": "This mapping maps the logical units of the DiGA MedicationDispense to the profile"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense-DiGA",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA",
+        "short": "Logical DiGA Medication Dispense",
+        "definition": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden.",
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "GEM_ERP_PR_MedicationDispense_DiGA"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.prescriptionId",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.prescriptionId",
+        "short": "ID des E-Rezepts",
+        "definition": "ID des E-Rezepts",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "identifier[prescriptionID].value"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.status",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.status",
+        "short": "Status fixedValue: #completed",
+        "definition": "Status fixedValue: #completed",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "status"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.patientKVNR",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.patientKVNR",
+        "short": "KVNR des Patienten",
+        "definition": "KVNR des Patienten",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "subject.identifier.value"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabeAbgebendeInstutition",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabeAbgebendeInstutition",
+        "short": "Telematik-ID der abgebenden Institution",
+        "definition": "Telematik-ID der abgebenden Institution",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "performer.actor.identifier.value"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.freischaltCode",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.freischaltCode",
+        "short": "Freischaltcode für die DiGA",
+        "definition": "Optional, da die Kasse die Bereitstellung eines Freischaltcodes ablehnen kann.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "extension[redeemCode].valueString"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.deepLink",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.deepLink",
+        "short": "Universeller Deep Link, der vom DiGA Hersteller bereitgestellt wird",
+        "definition": "Universeller Deep Link, der vom DiGA Hersteller bereitgestellt wird",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "extension[deepLink].valueUrl"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA",
+        "short": "Angaben zur DiGA. Zwingend anzugeben, wenn ein Freischaltcode bereitgestellt wird.",
+        "definition": "Angaben zur DiGA. Zwingend anzugeben, wenn ein Freischaltcode bereitgestellt wird.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "medicationReference"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.name",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.name",
+        "short": "Name der DiGA",
+        "definition": "Name der DiGA",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "medicationReference.display"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.digaVeId",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.digaVeId",
+        "short": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE-ID).",
+        "definition": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE-ID).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "medicationReference.identifier.value"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.dataAbsentReason",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.dataAbsentReason",
+        "short": "Wird angegeben, wenn kein Freischaltcode bereitgestellt wird. fixedValue: #unknown",
+        "definition": "Wird angegeben, wenn kein Freischaltcode bereitgestellt wird. fixedValue: #unknown",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "medicationReference.extension[data-absent-reason].valueCode"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.datum",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.datum",
+        "short": "Abgabedatum im Format YYYY-MM-DD",
+        "definition": "Abgabedatum im Format YYYY-MM-DD",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "whenHandedOver"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.note",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.note",
+        "short": "Wenn der Workflow abgeschlossen wird, ohne dass ein Freischaltcode bereitgestellt wird, muss dieser Wert angegeben werden.",
+        "definition": "Wenn der Workflow abgeschlossen wird, ohne dass ein Freischaltcode bereitgestellt wird, muss dieser Wert angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "note"
+          }
+        ]
+      },
+      {
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.substitution",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.substitution",
+        "short": "Substitution darf lt. BAS nicht erfolgen.",
+        "definition": "Substitution darf lt. BAS nicht erfolgen.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
+            "map": "substitution"
+          }
+        ]
+      }
+    ]
+  }
+}

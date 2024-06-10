@@ -1,15 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-DispReq",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:43:30.128+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
   "version": "1.4",
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Request for Dispense of ePrescription",
   "status": "draft",
-  "date": "2024-07-01",
+  "date": "2024-07-15",
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -47,6 +44,26 @@
         "min": 1,
         "max": "1",
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.4"
+      },
+      {
+        "id": "Communication.extension",
+        "path": "Communication.extension",
+        "min": 1
+      },
+      {
+        "id": "Communication.extension:flowType",
+        "path": "Communication.extension",
+        "sliceName": "flowType",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+            ]
+          }
+        ]
       },
       {
         "id": "Communication.basedOn",
@@ -141,8 +158,16 @@
       {
         "id": "Communication.payload",
         "path": "Communication.payload",
-        "min": 1,
         "max": "1",
+        "constraint": [
+          {
+            "key": "workflow-communication-payload-1",
+            "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
+            "severity": "error",
+            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty() or payload.exists()"
+          }
+        ],
         "mustSupport": true
       },
       {

@@ -6,7 +6,7 @@
   "name": "GEM_ERP_EX_LastMedicationDispense",
   "title": "Last Medication Dispense",
   "status": "draft",
-  "date": "2024-07-01",
+  "date": "2024-07-15",
   "description": "This extension should be used in the Task ressource. It shows the timestamp of the last dispense.",
   "fhirVersion": "4.0.1",
   "mapping": [
