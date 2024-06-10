@@ -37,7 +37,7 @@
           {
             "key": "workflow-medicationdispense-redeemcode-3",
             "severity": "error",
-            "human": "Name of the DiGA and DiGA-ID was not found, but is mandatory if a redeem code is provided.",
+            "human": "Name of the DiGA and DiGA-VE-ID was not found, but is mandatory if a redeem code is provided.",
             "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
           }

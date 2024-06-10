@@ -67,7 +67,7 @@ Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinit
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
-Description: "Name of the DiGA and DiGA-ID was not found, but is mandatory if a redeem code is provided."
+Description: "Name of the DiGA and DiGA-VE-ID was not found, but is mandatory if a redeem code is provided."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
 Severity: #error
 
