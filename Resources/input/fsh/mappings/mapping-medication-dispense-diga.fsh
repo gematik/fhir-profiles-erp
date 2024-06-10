@@ -1,0 +1,20 @@
+Mapping: GEM_ERP_MAP_MedicationDispense_DiGA
+Source: GEM_ERP_LOG_MedicationDispense_DiGA
+Target: "GEM_ERP_PR_MedicationDispense_DiGA"
+Id: GEM-ERP-MAP-MedicationDispense-DiGA
+Title: "Mapping for MedicationDispense DiGA"
+Description: "This mapping maps the logical units of the DiGA MedicationDispense to the profile"
+* -> "GEM_ERP_PR_MedicationDispense_DiGA"
+* prescriptionId -> "identifier[prescriptionID].value"
+* status -> "status"
+* patientKVNR -> "subject.identifier.value"
+* angabeAbgebendeInstutition -> "performer.actor.identifier.value"
+* freischaltCode -> "extension[redeemCode].valueString"
+* deepLink -> "extension[deepLink].valueUrl"
+* angabenZurDiGA -> "medicationReference"
+  * name -> "medicationReference.display"
+  * digaVeId -> "medicationReference.identifier.value"
+  * dataAbsentReason -> "medicationReference.extension[data-absent-reason].valueCode"
+* datum -> "whenHandedOver"
+* note -> "note"
+* substitution -> "substitution"

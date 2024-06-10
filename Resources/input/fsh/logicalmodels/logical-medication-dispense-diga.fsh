@@ -1,6 +1,6 @@
-Logical: LogicalDiGAMedicationDispense
+Logical: GEM_ERP_LOG_MedicationDispense_DiGA
 Parent: Base
-Id: logical-diga-medication-dispense
+Id: GEM-ERP-LOG-MedicationDispense-DiGA
 Title: "Logical DiGA Medication Dispense"
 Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden."
 * prescriptionId 1..1 string "ID des E-Rezepts"
@@ -12,7 +12,7 @@ Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $clo
 * deepLink 0..1 string "Universeller Deep Link, der vom DiGA Hersteller bereitgestellt wird"
 * angabenZurDiGA 0..1 BackboneElement "Angaben zur DiGA. Zwingend anzugeben, wenn ein Freischaltcode bereitgestellt wird."
   * name 1..1 string "Name der DiGA"
-  * digaVeId 1..1 string "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE)."
+  * digaVeId 1..1 string "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE-ID)."
   * dataAbsentReason 0..1 code "Wird angegeben, wenn kein Freischaltcode bereitgestellt wird. fixedValue: #unknown"
 * datum 1..1 dateTime "Abgabedatum im Format YYYY-MM-DD"
 * note 0..1 Annotation "Wenn der Workflow abgeschlossen wird, ohne dass ein Freischaltcode bereitgestellt wird, muss dieser Wert angegeben werden."
