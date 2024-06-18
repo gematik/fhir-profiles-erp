@@ -60,3 +60,97 @@ Usage: #example
 * ingredient.strength.denominator.unit = "Milliliter"
 * ingredient.strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
 * ingredient.strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
+
+Instance: CortisonDexpantenolMedicationOld
+InstanceOf: GEM_ERP_PR_Medication
+Title: "CortisonDexpantenolMedicationOld"
+Usage: #example
+// Arzneimittelkategorie
+* extension[drugCategory].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
+* extension[drugCategory].valueCoding.system = "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
+* extension[drugCategory].valueCoding.code = #00
+
+// Impfstoff
+* extension[isVaccine].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension"
+* extension[isVaccine].valueBoolean = false
+
+// normgroesse
+* code.text = "Hydrocortison-Dexpanthenol-Salbe"
+* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].code = #SAL
+* amount.numerator.value = 20
+* amount.numerator.unit = "ml"
+* amount.numerator.extension[totalQuantity].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
+* amount.numerator.extension[totalQuantity].valueString = "100 ml"
+* amount.denominator.value = 1
+* ingredient[+].itemCodeableConcept.coding[pzn][+]
+  * code = #12345678
+  * display = "Hydrocortison 1% Creme"
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator.value = 50
+* ingredient[=].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.numerator.code = #g
+* ingredient[=].strength.denominator.value = 100
+* ingredient[=].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.denominator.code = #g
+* ingredient[+].itemCodeableConcept.coding[pzn][+]
+  * code = #87654321
+  * display = "Dexpanthenol 5% Creme"
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator.value = 50
+* ingredient[=].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.numerator.code = #g
+* ingredient[=].strength.denominator.value = 100
+* ingredient[=].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.denominator.code = #g
+
+Instance: CortisonDexpantenolMedicationNew
+InstanceOf: GEM_ERP_PR_Medication
+Title: "CortisonDexpantenolMedicationNew"
+Usage: #example
+// Arzneimittelkategorie
+* extension[drugCategory].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
+* extension[drugCategory].valueCoding.system = "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
+* extension[drugCategory].valueCoding.code = #00
+
+// Impfstoff
+* extension[isVaccine].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension"
+* extension[isVaccine].valueBoolean = false
+
+// normgroesse
+* code.text = "Hydrocortison-Dexpanthenol-Salbe"
+* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].code = #SAL
+* amount.numerator.value = 20
+* amount.numerator.unit = "ml"
+* amount.numerator.extension[totalQuantity].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
+* amount.numerator.extension[totalQuantity].valueString = "100 ml"
+* amount.denominator.value = 1
+* ingredient[+].itemReference = Reference(MedicationHydrocortison)
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator.value = 50
+* ingredient[=].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.numerator.code = #g
+* ingredient[=].strength.denominator.value = 100
+* ingredient[=].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.denominator.code = #g
+* ingredient[+].itemReference = Reference(MedicationDexpanthenol)
+* ingredient[=].isActive = true
+* ingredient[=].strength.numerator.value = 50
+* ingredient[=].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.numerator.code = #g
+* ingredient[=].strength.denominator.value = 100
+* ingredient[=].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[=].strength.denominator.code = #g
+
+Instance: MedicationHydrocortison
+InstanceOf: Medication
+* code.coding.system = "http://fhir.de/CodeSystem/ifa/pzn"
+* code.coding.code = #12345678
+* code.coding.display = "Hydrocortison 1% Creme"
+
+Instance: MedicationDexpanthenol
+InstanceOf: Medication
+* code.coding.system = "http://fhir.de/CodeSystem/ifa/pzn"
+* code.coding.code = #87654321
+* code.coding.display = "Dexpanthenol 5% Creme"

@@ -2,18 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "logical-medication-dispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/logical-medication-dispense",
+  "version": "1.4.0-rc1",
   "name": "LogicalMedicationDispense",
   "title": "Logical Medication Dispense",
   "status": "draft",
   "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://gematik.de/fhir/erp/StructureDefinition/logical-medication-dispense",

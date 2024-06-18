@@ -1,0 +1,13 @@
+{
+  "resourceType": "Medication",
+  "id": "MedicationDexpanthenol",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/ifa/pzn",
+        "code": "87654321",
+        "display": "Dexpanthenol 5% Creme"
+      }
+    ]
+  }
+}

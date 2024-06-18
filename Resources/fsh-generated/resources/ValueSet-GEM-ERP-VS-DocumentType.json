@@ -5,8 +5,8 @@
   "id": "GEM-ERP-VS-DocumentType",
   "title": "ValueSet of Documenttype Codes",
   "description": "Type of document depending on the recipient.",
-  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
   "version": "1.4",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
   "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [

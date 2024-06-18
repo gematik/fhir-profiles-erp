@@ -85,3 +85,40 @@ Usage: #example
 * entry[=].resource = OperationDispenseParametersInputMedicationDispense
 * entry[+].fullUrl = "http://waltraud-was-here"
 * entry[=].resource = OperationDispenseParametersInputMedicationDispense
+
+
+Instance: OperationDispenseParametersInputMedicationDispenseCompoundingExampleOld
+InstanceOf: MedicationDispense
+Title:   "MedicationDispense handed to Günther at a pharmacy"
+Usage: #example
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
+* contained[+] = CortisonDexpantenolMedicationOld
+* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[=].value = "160.000.033.491.280.78"
+* status = #completed
+* medicationReference = Reference(CortisonDexpantenolMedicationOld)
+* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.value = "X234567890"
+* performer[+].actor.identifier.system = $identifier-telematik-id
+* performer[=].actor.identifier.value = "3-abc-1234567890"
+* whenHandedOver = "2022-02-28"
+* dosageInstruction[+].text = "1-0-1-0"
+
+Instance: OperationDispenseParametersInputMedicationDispenseCompoundingExampleNew
+InstanceOf: MedicationDispense
+Title:   "MedicationDispense handed to Günther at a pharmacy"
+Usage: #example
+* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_MedicationDispense)
+* contained[+] = CortisonDexpantenolMedicationNew
+* contained[+] = MedicationDexpanthenol
+* contained[+] = MedicationHydrocortison
+* identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[=].value = "160.000.033.491.280.78"
+* status = #completed
+* medicationReference = Reference(CortisonDexpantenolMedicationNew)
+* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.value = "X234567890"
+* performer[+].actor.identifier.system = $identifier-telematik-id
+* performer[=].actor.identifier.value = "3-abc-1234567890"
+* whenHandedOver = "2022-02-28"
+* dosageInstruction[+].text = "1-0-1-0"

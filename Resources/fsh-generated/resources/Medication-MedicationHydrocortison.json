@@ -1,0 +1,13 @@
+{
+  "resourceType": "Medication",
+  "id": "MedicationHydrocortison",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/ifa/pzn",
+        "code": "12345678",
+        "display": "Hydrocortison 1% Creme"
+      }
+    ]
+  }
+}
