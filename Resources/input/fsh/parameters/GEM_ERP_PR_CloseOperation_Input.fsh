@@ -23,7 +23,7 @@ Description: "This profile defines the parameters for closing a workflow for a p
     * ^slicing.rules = #open
   * part contains
     medicationDispense 1..1 and
-    medication 1..1
+    medication 0..1
   * part[medicationDispense]
     * name MS
     * name = "medicationDispense"

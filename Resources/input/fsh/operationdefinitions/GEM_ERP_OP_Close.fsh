@@ -38,7 +38,7 @@ Usage: #definition
     * name = #medication
     * type = #Medication
     * use = #in
-    * min = 1
+    * min = 0
     * max = "1"
 
 // out

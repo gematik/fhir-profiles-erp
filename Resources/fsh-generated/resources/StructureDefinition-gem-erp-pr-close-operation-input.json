@@ -138,7 +138,7 @@
         "id": "Parameters.parameter:rxDispensation.part:medication",
         "path": "Parameters.parameter.part",
         "sliceName": "medication",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
