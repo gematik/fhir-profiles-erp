@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_Medication
-Parent: $ePAMedication
+Parent: EPAMedication
 Id: GEM-ERP-PR-Medication
 Title: "Medication for the Dispensation of the Prescription"
 Description: "Handles medical information about the redeemed prescription"

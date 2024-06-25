@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
-Parent: $ePAMedicationDispense
+Parent: EPAMedicationDispense
 Id: GEM-ERP-PR-MedicationDispense-DiGA
 Title: "Dispensation of a DiGA-Prescription"
 Description: "Handles information about the dispensed DiGA"

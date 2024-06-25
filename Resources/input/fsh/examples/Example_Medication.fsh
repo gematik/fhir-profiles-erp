@@ -4,12 +4,10 @@ InstanceOf: GEM_ERP_PR_Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #example
 // Arzneimittelkategorie
-* extension[drugCategory].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension"
 * extension[drugCategory].valueCoding.system = "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
 * extension[drugCategory].valueCoding.code = #00
 
 // Impfstoff
-* extension[isVaccine].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension"
 * extension[isVaccine].valueBoolean = false
 
 // normgroesse
@@ -22,7 +20,6 @@ Usage: #example
 * form.coding[kbvDarreichungsform].code = #TAB
 * amount.numerator.value = 20
 * amount.numerator.unit = "St"
-* amount.numerator.extension[totalQuantity].url = "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension"
 * amount.numerator.extension[totalQuantity].valueString = "20 St."
 * amount.denominator.value = 1
 

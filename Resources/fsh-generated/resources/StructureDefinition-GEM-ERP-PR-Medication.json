@@ -12,7 +12,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication",
+  "baseDefinition": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication",
   "derivation": "constraint",
   "differential": {
     "element": [

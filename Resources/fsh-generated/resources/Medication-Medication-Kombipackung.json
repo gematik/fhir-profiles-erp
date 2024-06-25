@@ -8,11 +8,11 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     },
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
         "display": "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
