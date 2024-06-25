@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationDispense",
-  "id": "Example-MedicationDispense",
+  "id": "Example-MedicationDispense-Kombipackung",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
@@ -9,7 +9,7 @@
   "identifier": [
     {
       "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.000.033.491.280.78"
+      "value": "160.153.303.257.459"
     }
   ],
   "status": "completed",
@@ -32,6 +32,6 @@
   "whenHandedOver": "2024-04-03",
   "whenPrepared": "2024-04-03",
   "medicationReference": {
-    "reference": "SumatripanMedication"
+    "reference": "Medication-Kombipackung"
   }
 }
