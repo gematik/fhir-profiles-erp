@@ -16,7 +16,8 @@
   "instance": true,
   "description": "The operation $dispense lets the pharmacy perform a dispense for a medication without changing the status of the task. This actions lets a frontend display that a medication has been dispensed before it is closed by the pharmacy.",
   "code": "dispense",
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
+  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_DispenseOperation_Input",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_DispenseOperation_Output",
   "parameter": [
     {
       "name": "secret",
@@ -27,30 +28,58 @@
       "type": "string"
     },
     {
-      "name": "MedicationDispense",
+      "name": "rxDispensation",
       "use": "in",
       "min": 1,
-      "max": "1",
+      "max": "*",
       "documentation": "Information on dispensed Medication(s)",
-      "type": "canonical",
-      "targetProfile": [
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.4"
+      "part": [
+        {
+          "name": "medicationDispense",
+          "type": "MedicationDispense",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        },
+        {
+          "name": "medication",
+          "type": "Medication",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        }
       ]
     },
     {
-      "name": "MedicationDispense",
+      "name": "medicationDispense",
       "use": "out",
-      "min": 1,
+      "min": 0,
       "max": "1",
       "documentation": "The MedicationDispense that has been transmitted by the pharmacy as a confirmation, that it has been successfully uploaded.",
-      "type": "canonical",
-      "targetProfile": [
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.4"
+      "part": [
+        {
+          "name": "medicationDispense",
+          "type": "MedicationDispense",
+          "use": "out",
+          "min": 1,
+          "max": "1"
+        },
+        {
+          "name": "medication",
+          "type": "Medication",
+          "use": "out",
+          "min": 1,
+          "max": "1"
+        }
       ]
+    },
+    {
+      "name": "operationOutcome",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome.",
+      "type": "OperationOutcome"
     }
   ]
 }

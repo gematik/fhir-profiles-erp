@@ -1,0 +1,124 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "gem-erp-pr-close-operation-output",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output",
+  "version": "1.4",
+  "name": "GEM_ERP_PR_CloseOperation_Output",
+  "title": "GEM ERP PR CloseOperation Output",
+  "status": "draft",
+  "date": "2024-07-15",
+  "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $close-operation.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.meta",
+        "path": "Parameters.meta",
+        "min": 1
+      },
+      {
+        "id": "Parameters.meta.profile",
+        "path": "Parameters.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output|1.4"
+      },
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:receipt",
+        "path": "Parameters.parameter",
+        "sliceName": "receipt",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:receipt.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "receipt",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:receipt.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:receipt.resource",
+        "path": "Parameters.parameter.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Bundle",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:operationOutcome",
+        "path": "Parameters.parameter",
+        "sliceName": "operationOutcome",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:operationOutcome.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "operationOutcome",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:operationOutcome.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:operationOutcome.resource",
+        "path": "Parameters.parameter.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "OperationOutcome"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:operationOutcome.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      }
+    ]
+  }
+}

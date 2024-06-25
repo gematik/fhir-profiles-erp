@@ -16,7 +16,8 @@
   "instance": true,
   "description": "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed",
   "code": "close",
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle",
+  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Input",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output",
   "parameter": [
     {
       "name": "secret",
@@ -27,25 +28,43 @@
       "type": "string"
     },
     {
-      "name": "MedicationDispense",
+      "name": "rxDispensation",
       "use": "in",
       "min": 0,
-      "max": "1",
+      "max": "*",
       "documentation": "Information on dispensed Medication(s)",
-      "type": "canonical",
-      "targetProfile": [
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4",
-        "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.4"
+      "part": [
+        {
+          "name": "medicationDispense",
+          "type": "MedicationDispense",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        },
+        {
+          "name": "medication",
+          "type": "Medication",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        }
       ]
     },
     {
-      "name": "Receipt",
+      "name": "receipt",
       "use": "out",
-      "min": 1,
+      "min": 0,
       "max": "1",
       "documentation": "The receipt Bundle containing the signing Device, the pharmacy`s TelematikID and a signature.",
       "type": "Bundle"
+    },
+    {
+      "name": "operationOutcome",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome.",
+      "type": "OperationOutcome"
     }
   ]
 }
