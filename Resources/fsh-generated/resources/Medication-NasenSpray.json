@@ -1,0 +1,39 @@
+{
+  "resourceType": "Medication",
+  "id": "NasenSpray",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+    ]
+  },
+  "ingredient": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/bfarm/atc",
+            "code": "R01AC01",
+            "display": "Natriumcromoglicat"
+          }
+        ]
+      },
+      "strength": {
+        "numerator": {
+          "value": 2.8,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        },
+        "denominator": {
+          "value": 1,
+          "unit": "Sprühstoß",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        }
+      }
+    }
+  ],
+  "batch": {
+    "lotNumber": "56498416854"
+  }
+}

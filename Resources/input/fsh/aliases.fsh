@@ -19,11 +19,19 @@ Alias: $identifier-pkv = https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Iden
 Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 
-// Codings
+// National Codings
 Alias: $PZN = http://fhir.de/CodeSystem/ifa/pzn
+Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
+//TODO: URL mit bfarm//abdata? abstimmen
+Alias: $cs-product-key = http://fhir.de/CodeSystem/abdata/Komponentennummer
+
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
 Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
 
 // Workflow
 Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId
+
+// International
+Alias: $sct = http://snomed.info/sct
+Alias: $cs-ucum = http://unitsofmeasure.org
