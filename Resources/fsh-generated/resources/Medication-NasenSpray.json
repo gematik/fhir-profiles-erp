@@ -3,7 +3,26 @@
   "id": "NasenSpray",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+      "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "valueCoding": {
+        "code": "373873005",
+        "system": "http://snomed.info/sct",
+        "display": "Pharmaceutical / biologic product (product)"
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/abdata/Komponentennummer",
+        "code": "01746517-2",
+        "display": "Nasenspray, Lösung"
+      }
     ]
   },
   "ingredient": [

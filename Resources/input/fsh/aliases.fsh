@@ -30,4 +30,5 @@ Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS
 
 // International
 Alias: $sct = http://snomed.info/sct
+Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org

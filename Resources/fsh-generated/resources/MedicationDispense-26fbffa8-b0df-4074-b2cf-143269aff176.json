@@ -19,7 +19,6 @@
         {
           "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
           "valueCoding": {
-            "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs",
             "code": "00"
           }
         },
