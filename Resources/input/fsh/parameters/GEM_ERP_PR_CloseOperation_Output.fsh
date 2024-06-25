@@ -26,3 +26,4 @@ Description: "This profile defines the parameters for dispensing a medication fr
   * value[x] 0..0
   * resource 1..1
   * resource only GEM_ERP_PR_Bundle
+  * part 0..0

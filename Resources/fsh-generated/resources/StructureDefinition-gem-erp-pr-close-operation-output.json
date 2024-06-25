@@ -87,6 +87,11 @@
         ]
       },
       {
+        "id": "Parameters.parameter:receipt.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
         "id": "Parameters.parameter:operationOutcome",
         "path": "Parameters.parameter",
         "sliceName": "operationOutcome",

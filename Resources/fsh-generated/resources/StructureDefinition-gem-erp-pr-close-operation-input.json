@@ -124,7 +124,8 @@
           {
             "code": "MedicationDispense",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
             ]
           }
         ]

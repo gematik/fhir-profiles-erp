@@ -15,7 +15,6 @@ Description: "Handles information about the redeem of the prescription and the s
 * medication[x] only Reference(GEM_ERP_PR_Medication)
 * medication[x] MS
 * medication[x] ^definition = "The MedicationDispense shows a contained medication which was dispensed"
-* medication[x] ^type.aggregation = #contained
 
 * performer 1..1
 * performer.actor.identifier 1..

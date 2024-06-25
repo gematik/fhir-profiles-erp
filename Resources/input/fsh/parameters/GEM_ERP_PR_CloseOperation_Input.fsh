@@ -29,7 +29,7 @@ Description: "This profile defines the parameters for closing a workflow for a p
     * name = "medicationDispense"
     * value[x] 0..0
     * resource 1..1
-    * resource only GEM_ERP_PR_MedicationDispense
+    * resource only GEM_ERP_PR_MedicationDispense or GEM_ERP_PR_MedicationDispense_DiGA
     * part 0..0
   * part[medication]
     * name MS
