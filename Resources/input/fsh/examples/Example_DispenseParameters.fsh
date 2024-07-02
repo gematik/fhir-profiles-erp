@@ -15,7 +15,7 @@ Instance: ExampleDispenseInputParametersMultipleMedicationDispenses
 InstanceOf: GEM_ERP_PR_DispenseOperation_Input
 Usage: #example
 Title: "Example Dispense Parameters"
-* parameter[rxDispensation]
+* parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
@@ -23,7 +23,7 @@ Title: "Example Dispense Parameters"
   * part[medication]
     * name = "medication"
     * resource = SumatripanMedication
-* parameter[rxDispensation]
+* parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"

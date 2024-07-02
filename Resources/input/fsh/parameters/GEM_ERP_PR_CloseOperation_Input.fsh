@@ -18,7 +18,7 @@ Description: "This profile defines the parameters for closing a workflow for a p
   * value[x] 0..0
   * resource 0..0
   * part 1..2 MS
-    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "name"
     * ^slicing.rules = #open
   * part contains
