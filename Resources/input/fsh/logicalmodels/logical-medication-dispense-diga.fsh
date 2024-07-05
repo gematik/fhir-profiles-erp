@@ -1,6 +1,6 @@
 Logical: GEM_ERP_LOG_MedicationDispense_DiGA
 Parent: Base
-Id: GEM-ERP-LOG-MedicationDispense-DiGA
+Id: logMedDispenseDiGA
 Title: "Logical DiGA Medication Dispense"
 Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden."
 * prescriptionId 1..1 string "ID des E-Rezepts"
