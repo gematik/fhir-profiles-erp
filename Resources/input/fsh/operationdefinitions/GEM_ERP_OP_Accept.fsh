@@ -4,7 +4,8 @@ Usage: #definition
 * insert Operation(Accept)
 * description = "With the accept operation a pharmacy claims an e-prescription. The status of the referenced Task changes into 'in-progres'."
 * code = #accept
-* outputProfile = "http://hl7.org/fhir/StructureDefinition/Bundle"
+* outputProfile = Canonical(GEM_ERP_OUT_OP_Accept_Bundle)
+
 // in
 * parameter[0].name = #ac
 * parameter[=].use = #in
