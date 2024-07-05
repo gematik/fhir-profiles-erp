@@ -11,6 +11,8 @@ Usage: #definition
 
 * inputProfile = Canonical(GEM_ERP_PR_DispenseOperation_Input)
 * outputProfile = Canonical(GEM_ERP_PR_DispenseOperation_Output)
+* outputProfile = Canonical(GEM_ERP_PR_MedicationDispense)
+// TODO: Which output profile?
 
 // in
 * parameter[0]

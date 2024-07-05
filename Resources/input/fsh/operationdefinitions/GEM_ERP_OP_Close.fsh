@@ -11,6 +11,8 @@ Usage: #definition
 
 * inputProfile = Canonical(GEM_ERP_PR_CloseOperation_Input)
 * outputProfile = Canonical(GEM_ERP_PR_CloseOperation_Output)
+* outputProfile = Canonical(GEM_ERP_PR_Bundle)
+// TODO: Which output profile?
 
 // in
 * parameter[0]

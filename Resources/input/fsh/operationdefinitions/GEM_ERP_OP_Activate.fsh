@@ -24,7 +24,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Return the updated and activated Task."
   * type = #canonical
-  * targetProfile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+  * targetProfile = Canonical(GEM_ERP_PR_Task)
 
 
 Instance: OperationActivateParametersInputExample

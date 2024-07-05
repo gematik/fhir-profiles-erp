@@ -1,6 +1,11 @@
 {
   "resourceType": "Parameters",
   "id": "OperationCreateParametersInputExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CreateOperation_Input|1.4"
+    ]
+  },
   "parameter": [
     {
       "name": "workflowType",
