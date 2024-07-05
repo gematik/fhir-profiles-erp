@@ -13,7 +13,7 @@ Description: "This mapping maps the logical units of the DiGA MedicationDispense
 * deepLink -> "extension[deepLink].valueUrl"
 * angabenZurDiGA -> "medicationReference"
   * name -> "medicationReference.display"
-  * digaVeId -> "medicationReference.identifier.value"
+  * pzn -> "medicationReference.identifier.value"
   * dataAbsentReason -> "medicationReference.extension[data-absent-reason].valueCode"
 * datum -> "whenHandedOver"
 * note -> "note"

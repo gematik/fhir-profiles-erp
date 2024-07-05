@@ -20,7 +20,7 @@ Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 
 // Codings
-Alias: $PZN = http://fhir.de/CodeSystem/ifa/pzn
+Alias: $pzn = http://fhir.de/CodeSystem/ifa/pzn
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
 Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication
