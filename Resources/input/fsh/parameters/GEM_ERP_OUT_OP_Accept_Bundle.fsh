@@ -6,7 +6,7 @@ Id: GEM-ERP-PAR-OUT-OP-Accept
 * type = #collection (exactly)
 * entry 2..2
 * entry ^slicing.discriminator.type = #type
-* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
 * entry ^slicing.ordered = false
 * entry ^slicing.description = "The Task and the QES-Prescription signed Bundle."

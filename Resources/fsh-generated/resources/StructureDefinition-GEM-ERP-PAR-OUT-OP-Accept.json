@@ -48,7 +48,7 @@
           "discriminator": [
             {
               "type": "type",
-              "path": "$this"
+              "path": "resource"
             }
           ],
           "rules": "closed",

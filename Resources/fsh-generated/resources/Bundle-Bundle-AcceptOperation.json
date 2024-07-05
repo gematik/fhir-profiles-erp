@@ -69,21 +69,7 @@
               ]
             },
             "valueReference": {
-              "reference": "281a985c-f25b-4aae-91a6-41ad744080b0"
-            }
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "code": "2",
-                  "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-                  "display": "Patient Confirmation"
-                }
-              ]
-            },
-            "valueReference": {
-              "reference": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+              "reference": "Binary/PrescriptionBinary"
             }
           }
         ],
@@ -107,15 +93,22 @@
           }
         },
         "lastModified": "2022-03-18T15:28:00+00:00"
-      }
+      },
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
     },
     {
       "resource": {
         "resourceType": "Binary",
         "id": "PrescriptionBinary",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.4"
+          ]
+        },
         "contentType": "application/pkcs7-mime",
         "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
-      }
+      },
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinary"
     }
   ]
 }
