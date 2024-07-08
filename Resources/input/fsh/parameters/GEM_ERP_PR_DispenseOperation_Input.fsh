@@ -12,13 +12,13 @@ Description: "This profile defines the parameters for dispensing a medication fr
 * parameter ^slicing.rules = #closed
 
 * parameter contains rxDispensation 1..*
-//TODO: überall #pattern mit ohne (exactly) einführen
+
 * parameter[rxDispensation]
   * name MS
   * name = "rxDispensation"
   * value[x] 0..0
   * resource 0..0
-  * part 2..2 MS
+  * part MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"
     * ^slicing.rules = #closed

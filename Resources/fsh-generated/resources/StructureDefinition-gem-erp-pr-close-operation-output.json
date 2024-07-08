@@ -46,7 +46,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
@@ -56,25 +56,25 @@
         "max": "1"
       },
       {
-        "id": "Parameters.parameter:receipt",
+        "id": "Parameters.parameter:return",
         "path": "Parameters.parameter",
-        "sliceName": "receipt",
-        "min": 0,
+        "sliceName": "return",
+        "min": 1,
         "max": "1"
       },
       {
-        "id": "Parameters.parameter:receipt.name",
+        "id": "Parameters.parameter:return.name",
         "path": "Parameters.parameter.name",
-        "fixedString": "receipt",
+        "patternString": "return",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:receipt.value[x]",
+        "id": "Parameters.parameter:return.value[x]",
         "path": "Parameters.parameter.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:receipt.resource",
+        "id": "Parameters.parameter:return.resource",
         "path": "Parameters.parameter.resource",
         "min": 1,
         "type": [
@@ -87,40 +87,7 @@
         ]
       },
       {
-        "id": "Parameters.parameter:receipt.part",
-        "path": "Parameters.parameter.part",
-        "max": "0"
-      },
-      {
-        "id": "Parameters.parameter:operationOutcome",
-        "path": "Parameters.parameter",
-        "sliceName": "operationOutcome",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Parameters.parameter:operationOutcome.name",
-        "path": "Parameters.parameter.name",
-        "patternString": "operationOutcome",
-        "mustSupport": true
-      },
-      {
-        "id": "Parameters.parameter:operationOutcome.value[x]",
-        "path": "Parameters.parameter.value[x]",
-        "max": "0"
-      },
-      {
-        "id": "Parameters.parameter:operationOutcome.resource",
-        "path": "Parameters.parameter.resource",
-        "min": 1,
-        "type": [
-          {
-            "code": "OperationOutcome"
-          }
-        ]
-      },
-      {
-        "id": "Parameters.parameter:operationOutcome.part",
+        "id": "Parameters.parameter:return.part",
         "path": "Parameters.parameter.part",
         "max": "0"
       }

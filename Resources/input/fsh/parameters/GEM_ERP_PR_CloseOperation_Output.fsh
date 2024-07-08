@@ -7,7 +7,7 @@ Description: "This profile defines the parameters for dispensing a medication fr
 
 * parameter 1..1
 
-* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
@@ -15,7 +15,7 @@ Description: "This profile defines the parameters for dispensing a medication fr
 
 * parameter[return]
   * name MS
-  * name = "return" (exactly)
+  * name = "return"
   * value[x] 0..0
   * resource 1..1
   * resource only GEM_ERP_PR_Bundle

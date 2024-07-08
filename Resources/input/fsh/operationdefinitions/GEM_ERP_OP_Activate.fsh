@@ -5,8 +5,7 @@ Usage: #definition
 * description = "This operation activates the created Task for the prescription. The input parameter must contain the qualified signed Bundle of the prescription. The prescription server validates the prescription, updates the task ressource and starts the workflow."
 * code = #activate
 * inputProfile = Canonical(GEM_ERP_PR_ActivateOperation_Input)
-* outputProfile = Canonical(GEM_ERP_PR_Task)
-//TODO Parameters Profil anlegen mit name #return
+* outputProfile = Canonical(GEM_ERP_PR_ActivateOperation_Output)
 
 // in
 * parameter[+]
@@ -26,10 +25,3 @@ Usage: #definition
   * documentation = "Return the updated and activated Task."
   * type = #Task
 
-
-Instance: OperationActivateParametersInputExample
-InstanceOf: GEM_ERP_PR_ActivateOperation_Input
-Title: "Example Activate operation input parameters"
-Usage: #example
-* parameter[ePrescription].name = "ePrescription"
-* parameter[ePrescription].resource = PrescriptionBinary

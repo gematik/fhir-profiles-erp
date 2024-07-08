@@ -11,5 +11,5 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively." //TODO: ergänzen URL Parameter
+  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as an URL Parameter ?secret."
   * type = #string

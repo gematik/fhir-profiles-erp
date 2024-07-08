@@ -46,25 +46,24 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
           "rules": "closed"
-        },
-        "min": 1
+        }
       },
       {
         "id": "Parameters.parameter:rxDispensation",
         "path": "Parameters.parameter",
         "sliceName": "rxDispensation",
-        "min": 1,
+        "min": 0,
         "max": "*"
       },
       {
         "id": "Parameters.parameter:rxDispensation.name",
         "path": "Parameters.parameter.name",
-        "fixedString": "rxDispensation",
+        "patternString": "rxDispensation",
         "mustSupport": true
       },
       {
@@ -83,14 +82,13 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
         "min": 1,
-        "max": "2",
         "mustSupport": true
       },
       {

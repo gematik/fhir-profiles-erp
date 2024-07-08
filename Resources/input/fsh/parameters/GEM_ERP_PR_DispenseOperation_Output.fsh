@@ -17,7 +17,7 @@ Description: "This profile defines the parameters for dispensing a medication fr
   * name = "medicationDispense"
   * value[x] 0..0
   * resource 0..0
-  * part MS //TODO überall 1..x rausnehmen
+  * part MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"
     * ^slicing.rules = #closed

@@ -6,7 +6,7 @@ Description: "This profile defines the parameters for activating a workflow for 
 * insert Profile(GEM_ERP_PR_ActivateOperation_Input)
 
 * parameter 1..1
-* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
@@ -14,7 +14,7 @@ Description: "This profile defines the parameters for activating a workflow for 
   
 * parameter[ePrescription]
   * name MS
-  * name = "ePrescription" (exactly)
+  * name = "ePrescription"
   * value[x] 0..0
   * resource 1..1 
   * resource only GEM_ERP_PR_Binary

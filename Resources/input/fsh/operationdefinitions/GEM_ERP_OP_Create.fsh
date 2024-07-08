@@ -7,7 +7,7 @@ Usage: #definition
 * type = true
 * instance = false
 * inputProfile = Canonical(GEM_ERP_PR_CreateOperation_Input)
-* outputProfile = Canonical(GEM_ERP_PR_Task) //TODO Parameters Profil anlegen mit name #return
+* outputProfile = Canonical(GEM_ERP_PR_CreateOperation_Output)
 // in
 * parameter[+]
   * name = #workflowType

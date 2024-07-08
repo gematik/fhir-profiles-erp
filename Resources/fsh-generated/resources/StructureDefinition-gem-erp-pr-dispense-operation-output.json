@@ -46,7 +46,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
@@ -58,13 +58,13 @@
         "id": "Parameters.parameter:medicationDispense",
         "path": "Parameters.parameter",
         "sliceName": "medicationDispense",
-        "min": 0,
+        "min": 1,
         "max": "*"
       },
       {
         "id": "Parameters.parameter:medicationDispense.name",
         "path": "Parameters.parameter.name",
-        "fixedString": "medicationDispense",
+        "patternString": "medicationDispense",
         "mustSupport": true
       },
       {
@@ -87,17 +87,15 @@
               "path": "name"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
-        "min": 2,
-        "max": "2",
         "mustSupport": true
       },
       {
         "id": "Parameters.parameter:medicationDispense.part:medicationDispense",
         "path": "Parameters.parameter.part",
         "sliceName": "medicationDispense",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -138,7 +136,7 @@
         "id": "Parameters.parameter:medicationDispense.part:medication",
         "path": "Parameters.parameter.part",
         "sliceName": "medication",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -176,26 +174,31 @@
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:operationOutcome",
-        "path": "Parameters.parameter",
+        "id": "Parameters.parameter:medicationDispense.part:operationOutcome",
+        "path": "Parameters.parameter.part",
         "sliceName": "operationOutcome",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
       },
       {
-        "id": "Parameters.parameter:operationOutcome.name",
-        "path": "Parameters.parameter.name",
+        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.name",
+        "path": "Parameters.parameter.part.name",
         "patternString": "operationOutcome",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:operationOutcome.value[x]",
-        "path": "Parameters.parameter.value[x]",
+        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:operationOutcome.resource",
-        "path": "Parameters.parameter.resource",
+        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.resource",
+        "path": "Parameters.parameter.part.resource",
         "min": 1,
         "type": [
           {
@@ -204,8 +207,8 @@
         ]
       },
       {
-        "id": "Parameters.parameter:operationOutcome.part",
-        "path": "Parameters.parameter.part",
+        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.part",
+        "path": "Parameters.parameter.part.part",
         "max": "0"
       }
     ]

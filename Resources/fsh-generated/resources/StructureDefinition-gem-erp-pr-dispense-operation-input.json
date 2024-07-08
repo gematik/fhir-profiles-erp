@@ -46,7 +46,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
@@ -64,7 +64,7 @@
       {
         "id": "Parameters.parameter:rxDispensation.name",
         "path": "Parameters.parameter.name",
-        "fixedString": "rxDispensation",
+        "patternString": "rxDispensation",
         "mustSupport": true
       },
       {
@@ -87,10 +87,9 @@
               "path": "name"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
         "min": 2,
-        "max": "2",
         "mustSupport": true
       },
       {

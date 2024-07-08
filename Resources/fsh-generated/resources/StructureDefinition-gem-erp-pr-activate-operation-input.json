@@ -46,7 +46,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "pattern",
               "path": "name"
             }
           ],
@@ -65,7 +65,7 @@
       {
         "id": "Parameters.parameter:ePrescription.name",
         "path": "Parameters.parameter.name",
-        "fixedString": "ePrescription",
+        "patternString": "ePrescription",
         "mustSupport": true
       },
       {
