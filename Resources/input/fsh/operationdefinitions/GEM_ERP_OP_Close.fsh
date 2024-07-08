@@ -10,7 +10,7 @@ Usage: #definition
 * resource = #Task
 
 * inputProfile = Canonical(GEM_ERP_PR_CloseOperation_Input)
-* outputProfile = Canonical(GEM_ERP_PR_CloseOperation_Output) //TODO "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+* outputProfile = Canonical(GEM_ERP_PR_CloseOperation_Output)
 
 // in
 * parameter[0]
