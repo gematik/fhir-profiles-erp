@@ -5,12 +5,13 @@ Title: "GEM ERP PR CloseOperation Input"
 Description: "This profile defines the parameters for closing a workflow for a prescription from AVS to the E-Rezept-Fachdienst. This can be used for the Operations $close and $dispense."
 * insert Profile(GEM_ERP_PR_CloseOperation_Input)
 
-* parameter 0..*
+* parameter 0..* // optional durch $dispense Operation
+
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
-* parameter contains rxDispensation 1..*
+* parameter contains rxDispensation 0..*
   
 * parameter[rxDispensation]
   * name MS
@@ -20,7 +21,7 @@ Description: "This profile defines the parameters for closing a workflow for a p
   * part 1..2 MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "name"
-    * ^slicing.rules = #open
+    * ^slicing.rules = #closed
   * part contains
     medicationDispense 1..1 and
     medication 0..1

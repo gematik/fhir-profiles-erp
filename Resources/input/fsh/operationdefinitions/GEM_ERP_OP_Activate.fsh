@@ -6,6 +6,7 @@ Usage: #definition
 * code = #activate
 * inputProfile = Canonical(GEM_ERP_PR_ActivateOperation_Input)
 * outputProfile = Canonical(GEM_ERP_PR_Task)
+//TODO Parameters Profil anlegen mit name #return
 
 // in
 * parameter[+]
@@ -23,8 +24,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Return the updated and activated Task."
-  * type = #canonical
-  * targetProfile = Canonical(GEM_ERP_PR_Task)
+  * type = #Task
 
 
 Instance: OperationActivateParametersInputExample

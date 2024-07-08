@@ -6,21 +6,22 @@ Description: "This profile defines the parameters for dispensing a medication fr
 * insert Profile(GEM_ERP_PR_DispenseOperation_Input)
 
 * parameter 1..*
-* parameter ^slicing.discriminator.type = #value
+
+* parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
 * parameter contains rxDispensation 1..*
-
+//TODO: überall #pattern mit ohne (exactly) einführen
 * parameter[rxDispensation]
   * name MS
-  * name = "rxDispensation" (exactly)
+  * name = "rxDispensation"
   * value[x] 0..0
   * resource 0..0
   * part 2..2 MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"
-    * ^slicing.rules = #open
+    * ^slicing.rules = #closed
   * part contains
     medicationDispense 1..1 and
     medication 1..1

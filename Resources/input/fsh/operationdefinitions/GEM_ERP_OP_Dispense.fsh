@@ -11,8 +11,6 @@ Usage: #definition
 
 * inputProfile = Canonical(GEM_ERP_PR_DispenseOperation_Input)
 * outputProfile = Canonical(GEM_ERP_PR_DispenseOperation_Output)
-* outputProfile = Canonical(GEM_ERP_PR_MedicationDispense)
-// TODO: Which output profile?
 
 // in
 * parameter[0]
@@ -22,7 +20,6 @@ Usage: #definition
   * max = "1"
   * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This paramter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
   * type = #string
-
 
 // in
 * parameter[+]
@@ -48,26 +45,25 @@ Usage: #definition
 * parameter[+]
   * name = #medicationDispense
   * use = #out
-  * min = 0
-  * max = "1"
+  * min = 1
+  * max = "*"
   * documentation = "The MedicationDispense that has been transmitted by the pharmacy as a confirmation, that it has been successfully uploaded."
   * part[+]
     * name = #medicationDispense
     * type = #MedicationDispense
     * use = #out
-    * min = 1
+    * min = 0
     * max = "1"
   * part[+]
     * name = #medication
     * type = #Medication
     * use = #out
-    * min = 1
+    * min = 0
     * max = "1"
-
-* parameter[+]
-  * name = #operationOutcome
-  * use = #out
-  * min = 0
-  * max = "1"
-  * documentation = "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome."
-  * type = #OperationOutcome
+  * part[+]
+    * name = #operationOutcome
+    * use = #out
+    * min = 0
+    * max = "1"
+    * documentation = "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome."
+    * type = #OperationOutcome

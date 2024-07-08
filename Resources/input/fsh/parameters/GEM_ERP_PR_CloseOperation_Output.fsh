@@ -6,23 +6,16 @@ Description: "This profile defines the parameters for dispensing a medication fr
 * insert Profile(GEM_ERP_PR_CloseOperation_Output)
 
 * parameter 1..1
+
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
-* parameter contains receipt 0..1 and operationOutcome 0..1
+* parameter contains return 1..1
 
-* parameter[operationOutcome]
+* parameter[return]
   * name MS
-  * name = "operationOutcome"
-  * value[x] 0..0
-  * resource 1..1
-  * resource only OperationOutcome
-  * part 0..0
-
-* parameter[receipt]
-  * name MS
-  * name = "receipt" (exactly)
+  * name = "return" (exactly)
   * value[x] 0..0
   * resource 1..1
   * resource only GEM_ERP_PR_Bundle

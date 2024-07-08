@@ -6,7 +6,7 @@ Description: "This profile defines the parameters for creating a workflow for a 
 * insert Profile(GEM_ERP_PR_CreateOperation_Input)
 
 * parameter 1..1
-* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
@@ -14,7 +14,7 @@ Description: "This profile defines the parameters for creating a workflow for a 
   
 * parameter[workflowType]
   * name MS
-  * name = "workflowType" (exactly)
+  * name = "workflowType"
   * value[x] 1..1
   * value[x] only Coding
   * valueCoding from GEM_ERP_VS_FlowType (required)
