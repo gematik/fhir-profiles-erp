@@ -20,7 +20,7 @@ Usage: #example
 * amount.numerator.value = 20
 * amount.numerator.unit = "ml"
 * amount.denominator.value = 1
-* ingredient[+].itemReference = Reference(MedicationHydrocortison)
+* ingredient[+].itemReference = Reference(MedicationHydrocortison-FD)
 * ingredient[=].extension[darreichungsform].valueString = "Salbe"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
@@ -32,7 +32,7 @@ Usage: #example
 * ingredient[=].strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
 * ingredient[=].strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
-* ingredient[+].itemReference = Reference(MedicationDexpanthenol)
+* ingredient[+].itemReference = Reference(MedicationDexpanthenol-FD)
 * ingredient[=].extension[darreichungsform].valueString = "Salbe"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
