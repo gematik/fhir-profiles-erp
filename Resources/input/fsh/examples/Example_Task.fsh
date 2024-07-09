@@ -77,7 +77,7 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:28:00+00:00"
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "Binary/PrescriptionBinary"
+* input[ePrescription].valueReference = Reference(PrescriptionBinary)
 
 Instance: TaskInIn-ProgressState-Dispensed
 InstanceOf: GEM_ERP_PR_Task

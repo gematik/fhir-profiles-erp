@@ -52,7 +52,6 @@
             }
           ],
           "rules": "closed",
-          "ordered": false,
           "description": "The Task and the QES-Prescription signed Bundle."
         },
         "min": 2,
