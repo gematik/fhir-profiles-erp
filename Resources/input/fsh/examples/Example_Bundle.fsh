@@ -39,7 +39,7 @@ Description: "This Bundle contains the Task and the qualified signed ePrescripti
 * type = #collection
 * link[+].relation = "self"
 * link[=].url = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/160.000.033.491.280.78/$accept/"
-* entry[erxTask].resource = TaskInIn-ProgressState
+* entry[erxTask].resource = TaskIn-ProgressState
 * entry[erxTask].fullUrl = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
 * entry[erxBinary].resource = PrescriptionBinary
 * entry[erxBinary].fullUrl = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinary"
