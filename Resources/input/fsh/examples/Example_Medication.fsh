@@ -4,7 +4,7 @@ InstanceOf: GEM_ERP_PR_Medication
 Title:   "Sample Medication Sumatripan"
 Usage: #example
 // Arzneimittelkategorie
-* extension[drugCategory].valueCoding.code = #00
+* extension[drugCategory].valueCoding = EPADrugCategoryCS#00
 
 // Impfstoff
 * extension[isVaccine].valueBoolean = false

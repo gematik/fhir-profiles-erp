@@ -38,21 +38,14 @@ Usage: #definition
     * name = #medication
     * type = #Medication
     * use = #in
-    * min = 0
+    * min = 0 // optional durch DiGA
     * max = "1"
 
 // out
 * parameter[+]
-  * name = #receipt
+  * name = #return
   * use = #out
-  * min = 0
+  * min = 1
   * max = "1"
   * documentation = "The receipt Bundle containing the signing Device, the pharmacy`s TelematikID and a signature."
   * type = #Bundle
-* parameter[+]
-  * name = #operationOutcome
-  * use = #out
-  * min = 0
-  * max = "1"
-  * documentation = "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome."
-  * type = #OperationOutcome

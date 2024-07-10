@@ -2,9 +2,6 @@
   "resourceType": "Bundle",
   "id": "558c2f69-62f6-4a74-8d13-70e945d28b71",
   "meta": {
-    "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperationInputBundle|1.4"
-    ],
     "tag": [
       {
         "display": "MedicationDispense Bundle for $close-Operation on dispensation of multiple medications"
@@ -36,7 +33,8 @@
               {
                 "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
                 "valueCoding": {
-                  "code": "00"
+                  "code": "00",
+                  "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs"
                 }
               },
               {
@@ -139,7 +137,8 @@
               {
                 "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
                 "valueCoding": {
-                  "code": "00"
+                  "code": "00",
+                  "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs"
                 }
               },
               {

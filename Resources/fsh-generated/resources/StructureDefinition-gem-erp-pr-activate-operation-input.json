@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "gem-erp-pr-close-operation-output",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output",
+  "id": "gem-erp-pr-activate-operation-input",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Input",
   "version": "1.4",
-  "name": "GEM_ERP_PR_CloseOperation_Output",
-  "title": "GEM ERP PR CloseOperation Output",
+  "name": "GEM_ERP_PR_ActivateOperation_Input",
+  "title": "GEM ERP PR ActivateOperation Input",
   "status": "draft",
   "date": "2024-07-15",
-  "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $close-operation.",
+  "description": "This profile defines the parameters for activating a workflow for a prescription from PVS to the E-Rezept-Fachdienst.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -38,7 +38,7 @@
         "path": "Parameters.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Input|1.4"
       },
       {
         "id": "Parameters.parameter",
@@ -56,40 +56,35 @@
         "max": "1"
       },
       {
-        "id": "Parameters.parameter:return",
+        "id": "Parameters.parameter:ePrescription",
         "path": "Parameters.parameter",
-        "sliceName": "return",
+        "sliceName": "ePrescription",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Parameters.parameter:return.name",
+        "id": "Parameters.parameter:ePrescription.name",
         "path": "Parameters.parameter.name",
-        "patternString": "return",
+        "patternString": "ePrescription",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:return.value[x]",
+        "id": "Parameters.parameter:ePrescription.value[x]",
         "path": "Parameters.parameter.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:return.resource",
+        "id": "Parameters.parameter:ePrescription.resource",
         "path": "Parameters.parameter.resource",
         "min": 1,
         "type": [
           {
-            "code": "Bundle",
+            "code": "Binary",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
             ]
           }
         ]
-      },
-      {
-        "id": "Parameters.parameter:return.part",
-        "path": "Parameters.parameter.part",
-        "max": "0"
       }
     ]
   }

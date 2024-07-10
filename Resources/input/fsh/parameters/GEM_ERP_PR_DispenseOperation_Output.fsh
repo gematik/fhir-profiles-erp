@@ -6,32 +6,25 @@ Description: "This profile defines the parameters for dispensing a medication fr
 * insert Profile(GEM_ERP_PR_DispenseOperation_Output)
 
 * parameter 1..*
-* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
-* parameter contains medicationDispense 0..* and operationOutcome 0..1
-
-* parameter[operationOutcome]
-  * name MS
-  * name = "operationOutcome"
-  * value[x] 0..0
-  * resource 1..1
-  * resource only OperationOutcome
-  * part 0..0
+* parameter contains medicationDispense 1..*
 
 * parameter[medicationDispense]
   * name MS
-  * name = "medicationDispense" (exactly)
+  * name = "medicationDispense"
   * value[x] 0..0
   * resource 0..0
-  * part 2..2 MS
+  * part 1..* MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"
-    * ^slicing.rules = #open
+    * ^slicing.rules = #closed
   * part contains
-    medicationDispense 1..1 and
-    medication 1..1
+    medicationDispense 0..1 and
+    medication 0..1 and
+    operationOutcome 0..1
   * part[medicationDispense]
     * name MS
     * name = "medicationDispense"
@@ -45,4 +38,11 @@ Description: "This profile defines the parameters for dispensing a medication fr
     * value[x] 0..0
     * resource 1..1
     * resource only GEM_ERP_PR_Medication
+    * part 0..0
+  * part[operationOutcome]
+    * name MS
+    * name = "operationOutcome"
+    * value[x] 0..0
+    * resource 1..1
+    * resource only OperationOutcome
     * part 0..0

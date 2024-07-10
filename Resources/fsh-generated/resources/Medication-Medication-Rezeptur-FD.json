@@ -102,7 +102,7 @@
         }
       },
       "itemReference": {
-        "reference": "Medication/MedicationHydrocortison"
+        "reference": "#MedicationHydrocortison-FD"
       },
       "isActive": true
     },
@@ -156,7 +156,7 @@
         }
       },
       "itemReference": {
-        "reference": "Medication/MedicationDexpanthenol"
+        "reference": "#MedicationDexpanthenol-FD"
       },
       "isActive": true
     }

@@ -52,7 +52,7 @@ Usage: #example
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 
-Instance: TaskInIn-ProgressState
+Instance: TaskIn-ProgressState
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy via $accept operation"
 Usage: #example
@@ -77,11 +77,9 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * lastModified = "2022-03-18T15:28:00+00:00"
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
-* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[ePrescription].valueReference = Reference(PrescriptionBinary)
 
-Instance: TaskInIn-ProgressState-Dispensed
+Instance: TaskIn-ProgressState-Dispensed
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
 Usage: #example
@@ -112,7 +110,7 @@ Usage: #example
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
 * input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
 
-Instance: TaskInIn-ProgressState-Dispensed-Multiple-MedicationDispenses
+Instance: TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses
 InstanceOf: GEM_ERP_PR_Task
 Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
 Usage: #example
