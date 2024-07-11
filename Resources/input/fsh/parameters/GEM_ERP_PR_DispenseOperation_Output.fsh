@@ -10,11 +10,11 @@ Description: "This profile defines the parameters for dispensing a medication fr
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #closed
 
-* parameter contains medicationDispense 1..*
+* parameter contains rxDispensation 1..*
 
-* parameter[medicationDispense]
+* parameter[rxDispensation]
   * name MS
-  * name = "medicationDispense"
+  * name = "rxDispensation"
   * value[x] 0..0
   * resource 0..0
   * part 1..* MS

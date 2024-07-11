@@ -55,30 +55,30 @@
         "min": 1
       },
       {
-        "id": "Parameters.parameter:medicationDispense",
+        "id": "Parameters.parameter:rxDispensation",
         "path": "Parameters.parameter",
-        "sliceName": "medicationDispense",
+        "sliceName": "rxDispensation",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.name",
+        "id": "Parameters.parameter:rxDispensation.name",
         "path": "Parameters.parameter.name",
-        "patternString": "medicationDispense",
+        "patternString": "rxDispensation",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:medicationDispense.value[x]",
+        "id": "Parameters.parameter:rxDispensation.value[x]",
         "path": "Parameters.parameter.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.resource",
+        "id": "Parameters.parameter:rxDispensation.resource",
         "path": "Parameters.parameter.resource",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part",
+        "id": "Parameters.parameter:rxDispensation.part",
         "path": "Parameters.parameter.part",
         "slicing": {
           "discriminator": [
@@ -93,7 +93,7 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medicationDispense",
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense",
         "path": "Parameters.parameter.part",
         "sliceName": "medicationDispense",
         "min": 0,
@@ -105,18 +105,18 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medicationDispense.name",
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.name",
         "path": "Parameters.parameter.part.name",
         "patternString": "medicationDispense",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medicationDispense.value[x]",
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.value[x]",
         "path": "Parameters.parameter.part.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medicationDispense.resource",
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.resource",
         "path": "Parameters.parameter.part.resource",
         "min": 1,
         "type": [
@@ -129,12 +129,12 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medicationDispense.part",
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medication",
+        "id": "Parameters.parameter:rxDispensation.part:medication",
         "path": "Parameters.parameter.part",
         "sliceName": "medication",
         "min": 0,
@@ -146,18 +146,18 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medication.name",
+        "id": "Parameters.parameter:rxDispensation.part:medication.name",
         "path": "Parameters.parameter.part.name",
         "patternString": "medication",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medication.value[x]",
+        "id": "Parameters.parameter:rxDispensation.part:medication.value[x]",
         "path": "Parameters.parameter.part.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medication.resource",
+        "id": "Parameters.parameter:rxDispensation.part:medication.resource",
         "path": "Parameters.parameter.part.resource",
         "min": 1,
         "type": [
@@ -170,12 +170,12 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:medication.part",
+        "id": "Parameters.parameter:rxDispensation.part:medication.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:operationOutcome",
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome",
         "path": "Parameters.parameter.part",
         "sliceName": "operationOutcome",
         "min": 0,
@@ -187,18 +187,18 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.name",
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.name",
         "path": "Parameters.parameter.part.name",
         "patternString": "operationOutcome",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.value[x]",
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.value[x]",
         "path": "Parameters.parameter.part.value[x]",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.resource",
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.resource",
         "path": "Parameters.parameter.part.resource",
         "min": 1,
         "type": [
@@ -208,7 +208,7 @@
         ]
       },
       {
-        "id": "Parameters.parameter:medicationDispense.part:operationOutcome.part",
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
       }

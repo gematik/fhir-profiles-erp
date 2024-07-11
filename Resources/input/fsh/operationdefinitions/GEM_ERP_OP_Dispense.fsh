@@ -43,7 +43,7 @@ Usage: #definition
 
 // out
 * parameter[+]
-  * name = #medicationDispense
+  * name = #rxDispensation
   * use = #out
   * min = 1
   * max = "*"
