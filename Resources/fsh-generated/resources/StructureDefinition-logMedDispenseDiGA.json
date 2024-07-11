@@ -173,10 +173,10 @@
         ]
       },
       {
-        "id": "logMedDispenseDiGA.angabenZurDiGA.name",
-        "path": "logMedDispenseDiGA.angabenZurDiGA.name",
-        "short": "Name der DiGA",
-        "definition": "Name der DiGA",
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.name",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.name",
+        "short": "Name der DiGA-Verordnungseinheit",
+        "definition": "Name der DiGA-Verordnungseinheit",
         "min": 1,
         "max": "1",
         "type": [
@@ -192,10 +192,10 @@
         ]
       },
       {
-        "id": "logMedDispenseDiGA.angabenZurDiGA.digaVeId",
-        "path": "logMedDispenseDiGA.angabenZurDiGA.digaVeId",
-        "short": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE-ID).",
-        "definition": "Eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (DiGA-VE-ID).",
+        "id": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.pzn",
+        "path": "GEM-ERP-LOG-MedicationDispense-DiGA.angabenZurDiGA.pzn",
+        "short": "Pharmazentralnummer als eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (PZN).",
+        "definition": "Pharmazentralnummer als eindeutige Identifikationsnummer zu einer Verordnungseinheit einer digitalen Gesundheitsanwendung (PZN).",
         "min": 1,
         "max": "1",
         "type": [
