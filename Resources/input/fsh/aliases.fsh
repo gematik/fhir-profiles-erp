@@ -22,6 +22,7 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 // National Codings
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-product-key = http://fhir.de/CodeSystem/abdata/Komponentennummer
+//Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-Produkt
 
 // Codings
 Alias: $pzn = http://fhir.de/CodeSystem/ifa/pzn
