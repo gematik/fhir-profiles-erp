@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-RedeemCode",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
-  "version": "1.4.0-rc2",
+  "version": "1.4.0-rc3",
   "name": "GEM_ERP_EX_RedeemCode",
   "title": "DiGA-RedeemCode",
   "status": "draft",
