@@ -9,7 +9,7 @@ Usage: #example
 * extension[isVaccine].valueBoolean = false
 * extension[drugCategory].valueCoding = EPADrugCategoryCS#00
 * extension[drugCategory].valueCoding.display = "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
-* code.coding[pzn] = $PZN#1746517 "CROMO-RATIOPHARM Kombipackung"
+* code.coding[pzn] = $pzn#1746517 "CROMO-RATIOPHARM Kombipackung"
 * status = #active
 * form.coding[kbvDarreichungsform].code = #KPG
 * form.text = "Kombipackung"

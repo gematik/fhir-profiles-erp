@@ -76,7 +76,7 @@ Title: "Example Close Parameters"
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
-    * resource = Example-MedicationDispense-DiGA-Name-And-VE-ID
+    * resource = Example-MedicationDispense-DiGA-Name-And-PZN
 
 Instance: ExampleOperationCloseError
 InstanceOf: OperationOutcome

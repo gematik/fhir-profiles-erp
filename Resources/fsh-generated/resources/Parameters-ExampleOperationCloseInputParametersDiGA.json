@@ -14,7 +14,7 @@
           "name": "medicationDispense",
           "resource": {
             "resourceType": "MedicationDispense",
-            "id": "Example-MedicationDispense-DiGA-Name-And-VE-ID",
+            "id": "Example-MedicationDispense-DiGA-Name-And-PZN",
             "meta": {
               "profile": [
                 "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
@@ -29,7 +29,7 @@
             "status": "completed",
             "medicationReference": {
               "identifier": {
-                "system": "https://fhir.bfarm.de/Identifier/DigaVeId",
+                "system": "http://fhir.de/CodeSystem/ifa/pzn",
                 "value": "12345678"
               },
               "display": "Gematico Diabetestherapie"
