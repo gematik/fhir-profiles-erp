@@ -13,3 +13,5 @@ Usage: #definition
   * max = "1"
   * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as an URL Parameter ?secret."
   * type = #string
+
+//TODO Return OperationOutcome definieren und Parameters Profil erstellen
