@@ -1,9 +1,9 @@
 {
   "resourceType": "Parameters",
-  "id": "ExampleCloseInputParameters",
+  "id": "ExampleDispenseOutputParametersSuccess",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Input|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_DispenseOperation_Output|1.4"
     ]
   },
   "parameter": [
