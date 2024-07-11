@@ -12,7 +12,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense",
+  "baseDefinition": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-dispense",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -67,9 +67,6 @@
             "code": "Reference",
             "targetProfile": [
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
-            ],
-            "aggregation": [
-              "contained"
             ]
           }
         ]

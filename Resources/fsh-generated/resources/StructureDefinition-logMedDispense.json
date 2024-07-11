@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "logical-medication-dispense",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/logical-medication-dispense",
-  "name": "LogicalMedicationDispense",
+  "id": "logMedDispense",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
+  "name": "GEM_ERP_LOG_MedicationDispense",
   "title": "Logical Medication Dispense",
   "status": "draft",
   "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden.",
@@ -16,20 +16,20 @@
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://gematik.de/fhir/erp/StructureDefinition/logical-medication-dispense",
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "logical-medication-dispense",
-        "path": "logical-medication-dispense",
+        "id": "logMedDispense",
+        "path": "logMedDispense",
         "short": "Logical Medication Dispense",
         "definition": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden."
       },
       {
-        "id": "logical-medication-dispense.prescriptionId",
-        "path": "logical-medication-dispense.prescriptionId",
+        "id": "logMedDispense.prescriptionId",
+        "path": "logMedDispense.prescriptionId",
         "short": "ID des Rezepts",
         "definition": "ID des Rezepts",
         "min": 1,
@@ -41,8 +41,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.status",
-        "path": "logical-medication-dispense.status",
+        "id": "logMedDispense.status",
+        "path": "logMedDispense.status",
         "short": "Status fixedValue: #completed",
         "definition": "Status fixedValue: #completed",
         "min": 1,
@@ -54,8 +54,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication",
-        "path": "logical-medication-dispense.medication",
+        "id": "logMedDispense.medication",
+        "path": "logMedDispense.medication",
         "short": "Medikation",
         "definition": "Medikation",
         "min": 1,
@@ -67,8 +67,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel",
+        "id": "logMedDispense.medication.medicationArzneimittel",
+        "path": "logMedDispense.medication.medicationArzneimittel",
         "short": "Medikation als contained Element",
         "definition": "Medikation als contained Element",
         "min": 0,
@@ -80,8 +80,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.profilInformation",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.profilInformation",
+        "id": "logMedDispense.medication.medicationArzneimittel.profilInformation",
+        "path": "logMedDispense.medication.medicationArzneimittel.profilInformation",
         "short": "Profilinformationen aus meta.profile",
         "definition": "Profilinformationen aus meta.profile",
         "min": 1,
@@ -93,21 +93,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension",
         "short": "Erweiterungen",
         "definition": "Erweiterungen",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "BackboneElement"
+            "code": "Extension"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.impfung",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.impfung",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.impfung",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.impfung",
         "short": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "definition": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "min": 1,
@@ -119,8 +119,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
         "short": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "definition": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "min": 1,
@@ -132,8 +132,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.Kategorie",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.Kategorie",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.kategorie",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.kategorie",
         "short": "Angabe zur Kategorie",
         "definition": "Angabe zur Kategorie",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -146,8 +146,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.normgroesse",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.normgroesse",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.normgroesse",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.normgroesse",
         "short": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "definition": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -160,8 +160,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
         "short": "Herstellungsanweisung",
         "definition": "Herstellungsanweisung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -174,8 +174,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.extension.verpackung",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.extension.verpackung",
+        "id": "logMedDispense.medication.medicationArzneimittel.extension.verpackung",
+        "path": "logMedDispense.medication.medicationArzneimittel.extension.verpackung",
         "short": "Angabe zur Verpackung",
         "definition": "Angabe zur Verpackung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -188,8 +188,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code",
         "short": "Information und Identifizierung zum Arzneimittel",
         "definition": "Information und Identifizierung zum Arzneimittel",
         "min": 1,
@@ -201,8 +201,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn",
         "short": "PZN",
         "definition": "PZN",
         "min": 0,
@@ -214,21 +214,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn.code",
         "short": "PZN-Code",
         "definition": "PZN-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.pzn.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn.display",
         "short": "PZN-Name",
         "definition": "PZN-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -241,8 +241,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe",
         "short": "atc-de",
         "definition": "atc-de",
         "min": 0,
@@ -254,21 +254,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe.code",
         "short": "atc-de-Code",
         "definition": "atc-de-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.atcDe.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe.display",
         "short": "atc-de-Name",
         "definition": "atc-de-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -281,8 +281,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.ask",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.ask",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.ask",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.ask",
         "short": "ask",
         "definition": "ask",
         "min": 0,
@@ -294,21 +294,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.ask.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.ask.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.ask.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.ask.code",
         "short": "ask-Code",
         "definition": "ask-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.ask.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.ask.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.ask.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.ask.display",
         "short": "ask-Name",
         "definition": "ask-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -321,8 +321,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14",
         "short": "wg14",
         "definition": "wg14",
         "min": 0,
@@ -334,21 +334,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14.code",
         "short": "wg14-Code",
         "definition": "wg14-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.wg14.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14.display",
         "short": "wg14-Name",
         "definition": "wg14-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -361,8 +361,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -374,21 +374,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.snomed.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -401,8 +401,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.code.text",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.code.text",
+        "id": "logMedDispense.medication.medicationArzneimittel.code.text",
+        "path": "logMedDispense.medication.medicationArzneimittel.code.text",
         "short": "Name des Arzneimittels",
         "definition": "Name des Arzneimittels",
         "min": 0,
@@ -414,8 +414,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form",
+        "id": "logMedDispense.medication.medicationArzneimittel.form",
+        "path": "logMedDispense.medication.medicationArzneimittel.form",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -427,8 +427,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm",
         "short": "edqm",
         "definition": "edqm",
         "min": 0,
@@ -440,21 +440,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm.code",
         "short": "edqm-Code",
         "definition": "edqm-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.edqm.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm.display",
         "short": "edqm-Name",
         "definition": "edqm-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -467,8 +467,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -480,21 +480,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.snomed.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -507,8 +507,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
         "short": "kbvDarreichungsform",
         "definition": "kbvDarreichungsform",
         "min": 0,
@@ -520,21 +520,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
         "short": "kbvDarreichungsform-Code",
         "definition": "kbvDarreichungsform-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
         "short": "kbvDarreichungsform-Name",
         "definition": "kbvDarreichungsform-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -547,8 +547,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.form.text",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.form.text",
+        "id": "logMedDispense.medication.medicationArzneimittel.form.text",
+        "path": "logMedDispense.medication.medicationArzneimittel.form.text",
         "short": "Name der Darreichungsform",
         "definition": "Name der Darreichungsform",
         "min": 0,
@@ -560,8 +560,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.menge",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.menge",
+        "id": "logMedDispense.medication.medicationArzneimittel.menge",
+        "path": "logMedDispense.medication.medicationArzneimittel.menge",
         "short": "Verordnete Menge des Arzneimittels",
         "definition": "Verordnete Menge des Arzneimittels",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -574,8 +574,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe",
         "short": "Inhaltsstoffe",
         "definition": "Inhaltsstoffe",
         "min": 0,
@@ -587,8 +587,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
         "short": "Erweiterungen",
         "definition": "Erweiterungen",
         "min": 0,
@@ -600,8 +600,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -613,8 +613,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
         "short": "Inhaltsstoff",
         "definition": "Inhaltsstoff",
         "min": 0,
@@ -626,8 +626,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
         "short": "Kodierung des Inhaltsstoffs",
         "definition": "Kodierung des Inhaltsstoffs",
         "min": 0,
@@ -639,8 +639,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
         "short": "PZN",
         "definition": "PZN",
         "min": 0,
@@ -652,21 +652,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
         "short": "PZN-Code",
         "definition": "PZN-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
         "short": "PZN-Name",
         "definition": "PZN-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -679,8 +679,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
         "short": "atc-de",
         "definition": "atc-de",
         "min": 0,
@@ -692,21 +692,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
         "short": "atc-de-Code",
         "definition": "atc-de-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
         "short": "atc-de-Name",
         "definition": "atc-de-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -719,8 +719,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
         "short": "ask",
         "definition": "ask",
         "min": 0,
@@ -732,21 +732,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
         "short": "ask-Code",
         "definition": "ask-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
         "short": "ask-Name",
         "definition": "ask-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -759,8 +759,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
         "short": "wg14",
         "definition": "wg14",
         "min": 0,
@@ -772,21 +772,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
         "short": "wg14-Code",
         "definition": "wg14-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
         "short": "wg14-Name",
         "definition": "wg14-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -799,8 +799,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -812,21 +812,21 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "code"
           }
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -839,8 +839,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
         "short": "Referenz zum Inhaltsstoff",
         "definition": "Referenz zum Inhaltsstoff",
         "min": 0,
@@ -852,8 +852,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
         "short": "Wirkstärke des Inhaltsstoffes",
         "definition": "Wirkstärke des Inhaltsstoffes",
         "min": 0,
@@ -865,8 +865,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
         "short": "Menge des Inhaltsstoffes",
         "definition": "Menge des Inhaltsstoffes",
         "min": 0,
@@ -878,8 +878,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
+        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
+        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
         "short": "Einheit der Menge des Inhaltsstoffes",
         "definition": "Einheit der Menge des Inhaltsstoffes",
         "min": 0,
@@ -891,8 +891,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation",
+        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation",
+        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation",
         "short": "Chargeninformation",
         "definition": "Chargeninformation",
         "comment": "Da die ePA Medication nur bei der Abgabe verwendet wird ist die Angabe der Chargeninformation verpflichtend.",
@@ -905,8 +905,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
+        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
+        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
         "short": "Chargennummer",
         "definition": "Chargennummer",
         "min": 0,
@@ -918,8 +918,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
+        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
+        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
         "short": "Ablaufdatum der Charge",
         "definition": "Ablaufdatum der Charge",
         "min": 0,
@@ -931,8 +931,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationArzneimittel.darreichungsform",
-        "path": "logical-medication-dispense.medication.medicationArzneimittel.darreichungsform",
+        "id": "logMedDispense.medication.medicationArzneimittel.darreichungsform",
+        "path": "logMedDispense.medication.medicationArzneimittel.darreichungsform",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -944,8 +944,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationDiGA",
-        "path": "logical-medication-dispense.medication.medicationDiGA",
+        "id": "logMedDispense.medication.medicationDiGA",
+        "path": "logMedDispense.medication.medicationDiGA",
         "short": "Angabe der Medikation bei DiGA Verordnung",
         "definition": "Angabe der Medikation bei DiGA Verordnung",
         "min": 0,
@@ -957,8 +957,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.medication.medicationDiGA.display",
-        "path": "logical-medication-dispense.medication.medicationDiGA.display",
+        "id": "logMedDispense.medication.medicationDiGA.display",
+        "path": "logMedDispense.medication.medicationDiGA.display",
         "short": "Name der verordneten DiGA",
         "definition": "Name der verordneten DiGA",
         "min": 1,
@@ -970,8 +970,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.patientKVNR",
-        "path": "logical-medication-dispense.patientKVNR",
+        "id": "logMedDispense.patientKVNR",
+        "path": "logMedDispense.patientKVNR",
         "short": "KVNR des Patienten",
         "definition": "KVNR des Patienten",
         "min": 1,
@@ -983,8 +983,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.angabeAbgebendeInstutition",
-        "path": "logical-medication-dispense.angabeAbgebendeInstutition",
+        "id": "logMedDispense.angabeAbgebendeInstutition",
+        "path": "logMedDispense.angabeAbgebendeInstutition",
         "short": "Telematik-ID der abgebenden Institution",
         "definition": "Telematik-ID der abgebenden Institution",
         "min": 1,
@@ -999,8 +999,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.menge",
-        "path": "logical-medication-dispense.menge",
+        "id": "logMedDispense.menge",
+        "path": "logMedDispense.menge",
         "short": "Abgegebene Menge des Arzneimittels.",
         "definition": "Abgegebene Menge des Arzneimittels.",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -1013,8 +1013,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.abgabeDatum",
-        "path": "logical-medication-dispense.abgabeDatum",
+        "id": "logMedDispense.abgabeDatum",
+        "path": "logMedDispense.abgabeDatum",
         "short": "Abgabedatum im Format YYYY-MM-DD",
         "definition": "Abgabedatum im Format YYYY-MM-DD",
         "min": 1,
@@ -1026,8 +1026,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.dosieranweisung",
-        "path": "logical-medication-dispense.dosieranweisung",
+        "id": "logMedDispense.dosieranweisung",
+        "path": "logMedDispense.dosieranweisung",
         "short": "Dosieranweisung,",
         "definition": "Dosieranweisung,",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -1040,8 +1040,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.verweisZumTask",
-        "path": "logical-medication-dispense.verweisZumTask",
+        "id": "logMedDispense.verweisZumTask",
+        "path": "logMedDispense.verweisZumTask",
         "short": "Verweis auf den Task, der die Abgabe enthält. Wird vom E-Rezept-Fachdienst gesetzt.",
         "definition": "Verweis auf den Task, der die Abgabe enthält. Wird vom E-Rezept-Fachdienst gesetzt.",
         "min": 0,
@@ -1053,8 +1053,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.substituierung",
-        "path": "logical-medication-dispense.substituierung",
+        "id": "logMedDispense.substituierung",
+        "path": "logMedDispense.substituierung",
         "short": "Substituierung",
         "definition": "Substituierung",
         "min": 0,
@@ -1066,8 +1066,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.substituierung.wurdeSubstituiert",
-        "path": "logical-medication-dispense.substituierung.wurdeSubstituiert",
+        "id": "logMedDispense.substituierung.wurdeSubstituiert",
+        "path": "logMedDispense.substituierung.wurdeSubstituiert",
         "short": "Angabe, ob substituiert wurde",
         "definition": "Angabe, ob substituiert wurde",
         "min": 1,
@@ -1079,8 +1079,8 @@
         ]
       },
       {
-        "id": "logical-medication-dispense.abgabeHinweise",
-        "path": "logical-medication-dispense.abgabeHinweise",
+        "id": "logMedDispense.abgabeHinweise",
+        "path": "logMedDispense.abgabeHinweise",
         "short": "Hinweise zur Abgabe, wenn vorhanden",
         "definition": "Hinweise zur Abgabe, wenn vorhanden",
         "min": 0,

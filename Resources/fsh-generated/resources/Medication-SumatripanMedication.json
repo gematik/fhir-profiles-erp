@@ -8,14 +8,14 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
-        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs",
-        "code": "00"
+        "code": "00",
+        "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs"
       }
     },
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     },
     {
@@ -44,7 +44,7 @@
     "numerator": {
       "extension": [
         {
-          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
+          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
           "valueString": "20 St."
         }
       ],

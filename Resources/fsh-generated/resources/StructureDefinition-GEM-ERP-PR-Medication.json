@@ -12,7 +12,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication",
+  "baseDefinition": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -27,6 +27,33 @@
         "min": 1,
         "max": "1",
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+      },
+      {
+        "id": "Medication.contained",
+        "path": "Medication.contained",
+        "type": [
+          {
+            "code": "Medication",
+            "profile": [
+              "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
+              "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemReference",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
+              "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+            ]
+          }
+        ]
       },
       {
         "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason",

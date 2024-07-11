@@ -1,0 +1,91 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "gem-erp-pr-activate-operation-input",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Input",
+  "version": "1.4",
+  "name": "GEM_ERP_PR_ActivateOperation_Input",
+  "title": "GEM ERP PR ActivateOperation Input",
+  "status": "draft",
+  "date": "2024-07-15",
+  "description": "This profile defines the parameters for activating a workflow for a prescription from PVS to the E-Rezept-Fachdienst.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.meta",
+        "path": "Parameters.meta",
+        "min": 1
+      },
+      {
+        "id": "Parameters.meta.profile",
+        "path": "Parameters.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Input|1.4"
+      },
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:ePrescription",
+        "path": "Parameters.parameter",
+        "sliceName": "ePrescription",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:ePrescription.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "ePrescription",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:ePrescription.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:ePrescription.resource",
+        "path": "Parameters.parameter.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Binary",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
