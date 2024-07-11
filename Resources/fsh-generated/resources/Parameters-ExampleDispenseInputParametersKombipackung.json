@@ -119,15 +119,6 @@
                     }
                   }
                 ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "http://fhir.de/CodeSystem/abdata/Komponentennummer",
-                      "code": "01746517-1",
-                      "display": "Augentropfen"
-                    }
-                  ]
-                },
                 "ingredient": [
                   {
                     "itemCodeableConcept": {
@@ -177,15 +168,6 @@
                     }
                   }
                 ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "http://fhir.de/CodeSystem/abdata/Komponentennummer",
-                      "code": "01746517-2",
-                      "display": "Nasenspray, Lösung"
-                    }
-                  ]
-                },
                 "ingredient": [
                   {
                     "itemCodeableConcept": {
