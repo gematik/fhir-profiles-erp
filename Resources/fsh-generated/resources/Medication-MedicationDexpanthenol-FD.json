@@ -3,12 +3,12 @@
   "id": "MedicationDexpanthenol-FD",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+      "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
     ]
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
       "valueCoding": {
         "code": "781405001",
         "system": "http://snomed.info/sct",

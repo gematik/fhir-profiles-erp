@@ -3,12 +3,12 @@
   "id": "Augentropfen",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+      "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
     ]
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
       "valueCoding": {
         "code": "373873005",
         "system": "http://snomed.info/sct",
@@ -16,6 +16,15 @@
       }
     }
   ],
+  "code": {
+    "coding": [
+      {
+        "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
+        "code": "01746517-1",
+        "display": "Augentropfen"
+      }
+    ]
+  },
   "ingredient": [
     {
       "itemCodeableConcept": {

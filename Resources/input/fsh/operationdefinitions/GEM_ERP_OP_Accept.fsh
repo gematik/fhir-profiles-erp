@@ -12,7 +12,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets users access the Task exclusively as the URL an Paramter ?ac."
+  * documentation = "The secret parameter that lets users access the Task exclusively as the URL an Parameter ?ac."
   * type = #string
 
 // out

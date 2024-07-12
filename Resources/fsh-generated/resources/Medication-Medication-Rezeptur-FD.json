@@ -8,26 +8,26 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
-        "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs"
+        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
       }
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-manufacturing-instructions-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-manufacturing-instructions-extension",
       "valueString": "Bitte kühl zubereiten und lagern."
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-formulation-packaging-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-formulation-packaging-extension",
       "valueString": "Tube"
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
       "valueCoding": {
         "code": "1208954007",
         "system": "http://snomed.info/sct",
@@ -40,7 +40,7 @@
     "numerator": {
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
           "valueString": "100 ml"
         }
       ],
@@ -55,7 +55,7 @@
     {
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension",
           "valueString": "Salbe"
         }
       ],
@@ -109,7 +109,7 @@
     {
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-ingredient-darreichungsform-extension",
           "valueString": "Salbe"
         }
       ],
@@ -167,12 +167,12 @@
       "id": "MedicationHydrocortison-FD",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
@@ -197,12 +197,12 @@
       "id": "MedicationDexpanthenol-FD",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
