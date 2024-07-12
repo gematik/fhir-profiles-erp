@@ -29,20 +29,6 @@
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
       },
       {
-        "id": "Medication.ingredient.item[x]:itemReference",
-        "path": "Medication.ingredient.item[x]",
-        "sliceName": "itemReference",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason",
         "path": "Medication.ingredient.strength.numerator.system.extension",
         "sliceName": "dataAbsentReason",

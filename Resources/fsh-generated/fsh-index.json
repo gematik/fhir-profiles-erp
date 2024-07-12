@@ -125,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 26,
-    "endLine": 42
+    "endLine": 43
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
@@ -661,7 +661,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
