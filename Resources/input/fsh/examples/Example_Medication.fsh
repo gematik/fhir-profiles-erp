@@ -29,14 +29,15 @@ Title:   "Medication Without code or system for Strength"
 Usage: #example
 * code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
 * form = http://standardterms.edqm.eu#11210000 "Solution for infusion"
-* ingredient.itemCodeableConcept = http://fhir.de/CodeSystem/bfarm/atc#L01DB01 "Doxorubicin"
-* ingredient.isActive = true
-* ingredient.strength.numerator.value = 85
-* ingredient.strength.numerator.unit = "mg"
-* ingredient.strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient.strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
+* ingredient[+]
+  * itemCodeableConcept = http://fhir.de/CodeSystem/bfarm/atc#L01DB01 "Doxorubicin"
+  * isActive = true
+  * strength.numerator.value = 85
+  * strength.numerator.unit = "mg"
+  * strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
+  * strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 
-* ingredient.strength.denominator.value = 250
-* ingredient.strength.denominator.unit = "Milliliter"
-* ingredient.strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient.strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
+  * strength.denominator.value = 250
+  * strength.denominator.unit = "Milliliter"
+  * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
+  * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
