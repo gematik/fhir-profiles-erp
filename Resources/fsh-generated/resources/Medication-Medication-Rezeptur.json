@@ -8,14 +8,14 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
-        "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs"
+        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
       }
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
       "valueCoding": {
         "code": "1208954007",
         "system": "http://snomed.info/sct",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     }
   ],
@@ -40,7 +40,7 @@
     "numerator": {
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
           "valueString": "100 ml"
         }
       ],
@@ -57,12 +57,12 @@
       "id": "MedicationHydrocortison",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
@@ -89,12 +89,12 @@
       "id": "MedicationDexpanthenol",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",

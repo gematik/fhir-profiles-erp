@@ -9,13 +9,6 @@
   "date": "2024-07-15",
   "description": "This extension should be used in the Task ressource. It shows the presciption expiry date.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [

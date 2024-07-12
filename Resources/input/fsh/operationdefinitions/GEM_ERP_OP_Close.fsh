@@ -18,7 +18,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This paramter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
+  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This parameter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
   * type = #string
 
 // in

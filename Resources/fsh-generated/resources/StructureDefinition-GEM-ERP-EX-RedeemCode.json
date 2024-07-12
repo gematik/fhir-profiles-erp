@@ -2,18 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-RedeemCode",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+  "version": "1.4.0-rc3",
   "name": "GEM_ERP_EX_RedeemCode",
   "title": "DiGA-RedeemCode",
   "status": "draft",
   "description": "States the redeem code for a DiGA.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [

@@ -8,7 +8,7 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
       "valueCoding": {
         "code": "781405001",
         "system": "http://snomed.info/sct",
@@ -16,14 +16,14 @@
       }
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     },
     {
-      "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/drug-category-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
-        "system": "https://gematik.de/fhir/dev-epa-medication/CodeSystem/epa-drug-category-cs",
+        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs",
         "display": "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
       }
     }
@@ -52,12 +52,12 @@
       "id": "Augentropfen",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "373873005",
             "system": "http://snomed.info/sct",
@@ -68,7 +68,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://fhir.de/CodeSystem/abdata/Komponentennummer",
+            "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
             "code": "01746517-1",
             "display": "Augentropfen"
           }
@@ -110,12 +110,12 @@
       "id": "NasenSpray",
       "meta": {
         "profile": [
-          "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+          "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
         ]
       },
       "extension": [
         {
-          "url": "https://gematik.de/fhir/dev-epa-medication/StructureDefinition/epa-medication-type-extension",
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
           "valueCoding": {
             "code": "373873005",
             "system": "http://snomed.info/sct",
@@ -126,7 +126,7 @@
       "code": {
         "coding": [
           {
-            "system": "http://fhir.de/CodeSystem/abdata/Komponentennummer",
+            "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
             "code": "01746517-2",
             "display": "Nasenspray, Lösung"
           }
