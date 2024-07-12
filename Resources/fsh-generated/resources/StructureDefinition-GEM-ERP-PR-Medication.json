@@ -29,6 +29,22 @@
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
       },
       {
+        "id": "Medication.ingredient.item[x]:itemReference",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason",
         "path": "Medication.ingredient.strength.numerator.system.extension",
         "sliceName": "dataAbsentReason",
