@@ -17,6 +17,19 @@
   "differential": {
     "element": [
       {
+        "id": "Communication",
+        "path": "Communication",
+        "constraint": [
+          {
+            "key": "workflow-communication-payload-1",
+            "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
+            "severity": "error",
+            "expression": "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty()) and\n(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code != '162' implies payload.exists())"
+          }
+        ]
+      },
+      {
         "id": "Communication.meta",
         "path": "Communication.meta",
         "min": 1
@@ -142,15 +155,6 @@
         "id": "Communication.payload",
         "path": "Communication.payload",
         "max": "1",
-        "constraint": [
-          {
-            "key": "workflow-communication-payload-1",
-            "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
-            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
-            "severity": "error",
-            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty() or payload.exists()"
-          }
-        ],
         "mustSupport": true
       },
       {

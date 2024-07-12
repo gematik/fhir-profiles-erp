@@ -4,6 +4,7 @@ Id: GEM-ERP-PR-Communication-DispReq
 Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
+* obeys workflow-communication-payload-1
 * ^abstract = true
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * basedOn 1..1 MS
@@ -30,7 +31,6 @@ Description: "Ressource used for the communication of dispense request between p
 * sender.identifier 1.. MS
 * sender.identifier only $identifier-kvid-10 or $identifier-pkv
 * payload 0..1 MS
-* payload obeys workflow-communication-payload-1
 //* payload.extension ^slicing.discriminator.type = #value
 //* payload.extension ^slicing.discriminator.path = "url"
 * payload.extension ^slicing.rules = #closed
@@ -42,4 +42,5 @@ Description: "Ressource used for the communication of dispense request between p
 Invariant: workflow-communication-payload-1
 Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird"
 * severity = #error
-* expression = "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty() or payload.exists()"
+* expression = "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty()) and
+(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code != '162' implies payload.exists())"
