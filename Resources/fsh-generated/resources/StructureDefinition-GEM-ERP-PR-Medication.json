@@ -29,6 +29,17 @@
         "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
       },
       {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemCodeableConcept",
+        "short": "Component in coded form",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
         "id": "Medication.ingredient.item[x]:itemReference",
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemReference",
