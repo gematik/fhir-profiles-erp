@@ -7,7 +7,7 @@ Description: "Handles medical information about the redeemed prescription"
  
 * contained MS
 * ingredient MS
-  //TODO fix* itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
+  * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
  
 * ingredient.strength.numerator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.numerator.system.extension[dataAbsentReason].value[x] = #unknown
