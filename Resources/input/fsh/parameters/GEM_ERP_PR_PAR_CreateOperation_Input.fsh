@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_CreateOperation_Input
+Profile: GEM_ERP_PR_PAR_CreateOperation_Input
 Parent: Parameters
-Id: gem-erp-pr-create-operation-input
+Id: GEM-ERP-PR-PAR-Create-Operation-Input
 Title: "GEM ERP PR CreateOperation Input Parameter"
 Description: "This profile defines the parameters for creating a workflow for a prescription from PVS to the E-Rezept-Fachdienst."
-* insert Profile(GEM_ERP_PR_CreateOperation_Input)
+* insert Profile(GEM_ERP_PR_PAR_CreateOperation_Input)
 
 * parameter 1..1
 * parameter ^slicing.discriminator.type = #pattern

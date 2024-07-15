@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "gem-erp-pr-close-operation-input",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Input",
+  "id": "GEM-ERP-PR-PAR-Dispense-Operation-Output",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output",
   "version": "1.4",
-  "name": "GEM_ERP_PR_CloseOperation_Input",
-  "title": "GEM ERP PR CloseOperation Input",
+  "name": "GEM_ERP_PR_PAR_DispenseOperation_Output",
+  "title": "GEM ERP PR DispenseOperation Output",
   "status": "draft",
   "date": "2024-07-15",
-  "description": "This profile defines the parameters for closing a workflow for a prescription from AVS to the E-Rezept-Fachdienst. This can be used for the Operations $close and $dispense.",
+  "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $dispense-operation.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -26,7 +26,7 @@
         "path": "Parameters.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Input|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.4"
       },
       {
         "id": "Parameters.parameter",
@@ -39,13 +39,14 @@
             }
           ],
           "rules": "closed"
-        }
+        },
+        "min": 1
       },
       {
         "id": "Parameters.parameter:rxDispensation",
         "path": "Parameters.parameter",
         "sliceName": "rxDispensation",
-        "min": 0,
+        "min": 1,
         "max": "*"
       },
       {
@@ -83,7 +84,7 @@
         "id": "Parameters.parameter:rxDispensation.part:medicationDispense",
         "path": "Parameters.parameter.part",
         "sliceName": "medicationDispense",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -110,8 +111,7 @@
           {
             "code": "MedicationDispense",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
             ]
           }
         ]
@@ -159,6 +159,44 @@
       },
       {
         "id": "Parameters.parameter:rxDispensation.part:medication.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome",
+        "path": "Parameters.parameter.part",
+        "sliceName": "operationOutcome",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "operationOutcome",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "OperationOutcome"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:operationOutcome.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
       }

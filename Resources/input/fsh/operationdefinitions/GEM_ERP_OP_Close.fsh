@@ -9,8 +9,8 @@ Usage: #definition
 * instance = true
 * resource = #Task
 
-* inputProfile = Canonical(GEM_ERP_PR_CloseOperation_Input)
-* outputProfile = Canonical(GEM_ERP_PR_CloseOperation_Output)
+* inputProfile = Canonical(GEM_ERP_PR_PAR_CloseOperation_Input)
+* outputProfile = Canonical(GEM_ERP_PR_PAR_CloseOperation_Output)
 
 // in
 * parameter[0]

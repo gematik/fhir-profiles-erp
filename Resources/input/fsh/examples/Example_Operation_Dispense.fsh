@@ -1,5 +1,5 @@
 Instance: ExampleDispenseInputParameters
-InstanceOf: GEM_ERP_PR_DispenseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
 Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
@@ -12,7 +12,7 @@ Title: "Example Dispense Parameters"
     * resource = SumatripanMedication
 
 Instance: ExampleDispenseInputParametersMultipleMedicationDispenses
-InstanceOf: GEM_ERP_PR_DispenseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
 Title: "Example Dispense Parameters"
 * parameter[rxDispensation][+]
@@ -33,7 +33,7 @@ Title: "Example Dispense Parameters"
     * resource = Medication-Without-Strength-Code
 
 Instance: ExampleDispenseInputParametersKombipackung
-InstanceOf: GEM_ERP_PR_DispenseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
 Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
@@ -46,7 +46,7 @@ Title: "Example Dispense Parameters"
     * resource = Medication-Kombipackung
 
 Instance: ExampleDispenseOutputParametersSuccess
-InstanceOf: GEM_ERP_PR_DispenseOperation_Output
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
 Usage: #example
 Title: "Example Dispense Parameters Response on Success"
 * parameter[rxDispensation]
@@ -59,7 +59,7 @@ Title: "Example Dispense Parameters Response on Success"
     * resource = SumatripanMedication
 
 Instance: ExampleDispenseOutputParametersError
-InstanceOf: GEM_ERP_PR_DispenseOperation_Output
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
 Usage: #example
 Title: "Example Dispense Parameters Response on Error"
 * parameter[rxDispensation]

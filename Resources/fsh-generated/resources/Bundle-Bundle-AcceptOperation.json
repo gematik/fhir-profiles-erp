@@ -3,7 +3,7 @@
   "id": "Bundle-AcceptOperation",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_OUT_OP_Accept_Bundle"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept"
     ]
   },
   "type": "collection",

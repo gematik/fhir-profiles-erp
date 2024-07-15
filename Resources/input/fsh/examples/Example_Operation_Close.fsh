@@ -1,5 +1,5 @@
 Instance: ExampleOperationCloseInputParameters
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]
@@ -12,7 +12,7 @@ Title: "Example Close Parameters"
     * resource = SumatripanMedication
 
 Instance: ExampleOperationCloseInputParametersWithoutMedication
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]
@@ -22,7 +22,7 @@ Title: "Example Close Parameters"
     * resource = Example-MedicationDispense
 
 Instance: ExampleOperationCloseInputParametersMultipleMedicationDispenses
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]
@@ -43,7 +43,7 @@ Title: "Example Close Parameters"
     * resource = Medication-Without-Strength-Code
 
 Instance: ExampleOperationCloseInputParametersKombipackung
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]
@@ -56,7 +56,7 @@ Title: "Example Close Parameters"
     * resource = Medication-Kombipackung
 
 Instance: ExampleOperationCloseInputParametersRezeptur
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]
@@ -69,7 +69,7 @@ Title: "Example Close Parameters"
     * resource = Medication-Rezeptur
 
 Instance: ExampleOperationCloseInputParametersDiGA
-InstanceOf: GEM_ERP_PR_CloseOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
 * parameter[rxDispensation]

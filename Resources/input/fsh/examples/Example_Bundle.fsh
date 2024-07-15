@@ -32,7 +32,7 @@ Usage: #example
 * signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
 
 Instance: Bundle-AcceptOperation
-InstanceOf: GEM_ERP_OUT_OP_Accept_Bundle
+InstanceOf: GEM_ERP_PR_Bundle_OP_Accept
 Usage: #example
 Title: "Example Accept Bundle"
 Description: "This Bundle contains the Task and the qualified signed ePrescription."

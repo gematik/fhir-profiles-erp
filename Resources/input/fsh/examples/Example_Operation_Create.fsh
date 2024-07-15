@@ -1,5 +1,5 @@
 Instance: OperationCreateParametersInputExample
-InstanceOf: GEM_ERP_PR_CreateOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_CreateOperation_Input
 Title: "$create Operation Parameters sample"
 Usage: #example
 * parameter[workflowType].name = "workflowType"

@@ -16,8 +16,8 @@
   "instance": true,
   "description": "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed",
   "code": "close",
-  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Input",
-  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_CloseOperation_Output",
+  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input",
+  "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Output",
   "parameter": [
     {
       "name": "secret",

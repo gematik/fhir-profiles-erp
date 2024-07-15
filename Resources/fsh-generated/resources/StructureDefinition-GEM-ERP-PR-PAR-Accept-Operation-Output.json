@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "gem-erp-pr-activate-operation-output",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Output",
+  "id": "GEM-ERP-PR-PAR-Accept-Operation-Output",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output",
   "version": "1.4",
-  "name": "GEM_ERP_PR_ActivateOperation_Output",
-  "title": "GEM ERP PR ActivateOperation Output",
+  "name": "GEM_ERP_PR_PAR_AcceptOperation_Output",
+  "title": "GEM ERP PR AcceptOperation Output",
   "status": "draft",
   "date": "2024-07-15",
-  "description": "This profile defines the parameters for activating a Task from PVS to the E-Rezept-Fachdienst. This can be used for the $activate-operation.",
+  "description": "This profile defines the parameters for accepting a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $accept-operation.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -26,7 +26,7 @@
         "path": "Parameters.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_ActivateOperation_Output|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output|1.4"
       },
       {
         "id": "Parameters.parameter",
@@ -67,9 +67,9 @@
         "min": 1,
         "type": [
           {
-            "code": "Task",
+            "code": "Bundle",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept"
             ]
           }
         ]

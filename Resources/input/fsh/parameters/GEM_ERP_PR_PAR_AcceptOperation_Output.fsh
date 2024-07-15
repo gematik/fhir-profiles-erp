@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_AcceptOperation_Output
+Profile: GEM_ERP_PR_PAR_AcceptOperation_Output
 Parent: Parameters
-Id: gem-erp-pr-accept-operation-output
+Id: GEM-ERP-PR-PAR-Accept-Operation-Output
 Title: "GEM ERP PR AcceptOperation Output"
 Description: "This profile defines the parameters for accepting a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $accept-operation."
-* insert Profile(GEM_ERP_PR_AcceptOperation_Output)
+* insert Profile(GEM_ERP_PR_PAR_AcceptOperation_Output)
 
 * parameter 1..1
 
@@ -18,5 +18,5 @@ Description: "This profile defines the parameters for accepting a medication fro
   * name = "return"
   * value[x] 0..0
   * resource 1..1
-  * resource only GEM_ERP_OUT_OP_Accept_Bundle
+  * resource only GEM_ERP_PR_Bundle_OP_Accept
   * part 0..0

@@ -552,14 +552,6 @@
     "endLine": 26
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PAR-OUT-OP-Accept.json",
-    "fshName": "GEM_ERP_OUT_OP_Accept_Bundle",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_OUT_OP_Accept_Bundle.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode.json",
     "fshName": "GEM_ERP_PR_AccessCode",
     "fshType": "Profile",
@@ -590,6 +582,14 @@
     "fshFile": "profiles/GEM_ERP_PR_Binary.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Bundle-OP-Accept.json",
+    "fshName": "GEM_ERP_PR_Bundle_OP_Accept",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Bundle_OP_Accept.fsh",
+    "startLine": 1,
+    "endLine": 16
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Bundle.json",
@@ -680,6 +680,78 @@
     "endLine": 26
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
+    "fshName": "GEM_ERP_PR_PAR_AcceptOperation_Output",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_AcceptOperation_Output.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_ActivateOperation_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_ActivateOperation_Input.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Output.json",
+    "fshName": "GEM_ERP_PR_PAR_ActivateOperation_Output",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_ActivateOperation_Output.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_CloseOperation_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_CloseOperation_Input.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Output.json",
+    "fshName": "GEM_ERP_PR_PAR_CloseOperation_Output",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_CloseOperation_Output.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_CreateOperation_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_CreateOperation_Input.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.json",
+    "fshName": "GEM_ERP_PR_PAR_CreateOperation_Output",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_CreateOperation_Output.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_DispenseOperation_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_DispenseOperation_Input.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Output.json",
+    "fshName": "GEM_ERP_PR_PAR_DispenseOperation_Output",
+    "fshType": "Profile",
+    "fshFile": "parameters/GEM_ERP_PR_PAR_DispenseOperation_Output.fsh",
+    "startLine": 1,
+    "endLine": 48
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
     "fshName": "GEM_ERP_PR_PrescriptionId",
     "fshType": "Profile",
@@ -710,78 +782,6 @@
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
     "endLine": 77
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-accept-operation-output.json",
-    "fshName": "GEM_ERP_PR_AcceptOperation_Output",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_AcceptOperation_Output.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-activate-operation-input.json",
-    "fshName": "GEM_ERP_PR_ActivateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_ActivateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-activate-operation-output.json",
-    "fshName": "GEM_ERP_PR_ActivateOperation_Output",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_ActivateOperation_Output.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-close-operation-input.json",
-    "fshName": "GEM_ERP_PR_CloseOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_CloseOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 41
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-close-operation-output.json",
-    "fshName": "GEM_ERP_PR_CloseOperation_Output",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_CloseOperation_Output.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-create-operation-input.json",
-    "fshName": "GEM_ERP_PR_CreateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_CreateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-create-operation-output.json",
-    "fshName": "GEM_ERP_PR_CreateOperation_Output",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_CreateOperation_Output.fsh",
-    "startLine": 1,
-    "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-dispense-operation-input.json",
-    "fshName": "GEM_ERP_PR_DispenseOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_DispenseOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 41
-  },
-  {
-    "outputFile": "StructureDefinition-gem-erp-pr-dispense-operation-output.json",
-    "fshName": "GEM_ERP_PR_DispenseOperation_Output",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_DispenseOperation_Output.fsh",
-    "startLine": 1,
-    "endLine": 48
   },
   {
     "outputFile": "StructureDefinition-logMedDispense.json",

@@ -1,7 +1,7 @@
-Profile: GEM_ERP_OUT_OP_Accept_Bundle
+Profile: GEM_ERP_PR_Bundle_OP_Accept
 Parent: Bundle
-Id: GEM-ERP-PAR-OUT-OP-Accept
-* insert StructureDefinition(GEM_ERP_OUT_OP_Accept_Bundle)
+Id: GEM-ERP-PR-Bundle-OP-Accept
+* insert StructureDefinition(GEM_ERP_PR_Bundle_OP_Accept)
 
 * type = #collection (exactly)
 * entry 2..2

@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_CreateOperation_Output
+Profile: GEM_ERP_PR_PAR_CreateOperation_Output
 Parent: Parameters
-Id: gem-erp-pr-create-operation-output
+Id: GEM-ERP-PR-PAR-Create-Operation-Output
 Title: "GEM ERP PR CreateOperation Output"
 Description: "This profile defines the parameters for creating a Task from PVS to the E-Rezept-Fachdienst. This can be used for the $create-operation."
-* insert Profile(GEM_ERP_PR_CreateOperation_Output)
+* insert Profile(GEM_ERP_PR_PAR_CreateOperation_Output)
 
 * parameter 1..1
 

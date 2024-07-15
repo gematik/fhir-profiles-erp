@@ -1,5 +1,5 @@
 Instance: ExampleOperationActivateParametersInput
-InstanceOf: GEM_ERP_PR_ActivateOperation_Input
+InstanceOf: GEM_ERP_PR_PAR_ActivateOperation_Input
 Title: "Example Activate operation input parameters"
 Usage: #example
 * parameter[ePrescription].name = "ePrescription"

@@ -3,7 +3,7 @@
   "id": "ExampleDispenseOutputParametersError",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_DispenseOperation_Output|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.4"
     ]
   },
   "parameter": [
