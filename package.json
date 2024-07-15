@@ -11,6 +11,7 @@
     "kbv.ita.for": "1.1.x",
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.0",
-    "de.gematik.dev.epa.medication": "1.1.0-alpha.4"
+    "de.gematik.epa.medication": "1.0.2",
+    "de.gematik.fhir.directory": "0.11.8"
   }
 }
