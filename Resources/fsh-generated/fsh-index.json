@@ -128,6 +128,14 @@
     "endLine": 43
   },
   {
+    "outputFile": "Medication-Medication-Without-Strength-Numerator.json",
+    "fshName": "Medication-Without-Strength-Numerator",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Medication.fsh",
+    "startLine": 45,
+    "endLine": 59
+  },
+  {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
     "fshName": "MedicationDexpanthenol-FD",
     "fshType": "Instance",

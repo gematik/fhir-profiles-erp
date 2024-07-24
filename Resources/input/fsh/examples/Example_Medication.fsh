@@ -41,3 +41,26 @@ Usage: #example
   * strength.denominator.unit = "Milliliter"
   * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
   * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
+
+Instance: Medication-Without-Strength-Numerator
+InstanceOf: GEM_ERP_PR_Medication
+Title:   "Medication Without code or system for Strength"
+Usage: #example
+* code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
+* form = http://standardterms.edqm.eu#11210000 "Solution for infusion"
+* ingredient[+]
+  * itemCodeableConcept = http://fhir.de/CodeSystem/bfarm/atc#L01DB01 "Doxorubicin"
+  * isActive = true
+  * strength.numerator.value.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+  * strength.numerator.value.extension.valueCode = #unknown
+  * strength.numerator.system.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+  * strength.numerator.system.extension.valueCode = #unknown
+  * strength.numerator.code.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+  * strength.numerator.code.extension.valueCode = #unknown
+
+  
+  
+  
+  
+  
+  
