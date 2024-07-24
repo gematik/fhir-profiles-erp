@@ -3,6 +3,7 @@ Parent: Base
 Id: logMedDispense
 Title: "Logical Medication Dispense"
 Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden."
+* insert Versioning
 * prescriptionId 1..1 string "ID des Rezepts"
 * status 1..1 code "Status fixedValue: #completed"
 * medication 1..1 BackboneElement "Medikation"

@@ -797,7 +797,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-medication-dispense.fsh",
     "startLine": 1,
-    "endLine": 113
+    "endLine": 114
   },
   {
     "outputFile": "StructureDefinition-logMedDispenseDiGA.json",
@@ -805,7 +805,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
