@@ -58,6 +58,10 @@ Usage: #example
   * strength.numerator.code.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
   * strength.numerator.code.extension.valueCode = #unknown
 
+  * strength.denominator.value = 1
+  * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
+  * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
+
   
   
   

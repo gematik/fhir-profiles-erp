@@ -133,7 +133,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 45,
-    "endLine": 59
+    "endLine": 63
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
