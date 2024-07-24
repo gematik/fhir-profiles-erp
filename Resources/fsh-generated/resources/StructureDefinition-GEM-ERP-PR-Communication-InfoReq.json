@@ -8,7 +8,7 @@
   "version": "1.4",
   "name": "GEM_ERP_PR_Communication_InfoReq",
   "title": "Informative request from Patient to Provider",
-  "status": "draft",
+  "status": "active",
   "date": "2024-07-15",
   "description": "Ressource used for the communication of informative requests between patient and provider.",
   "fhirVersion": "4.0.1",

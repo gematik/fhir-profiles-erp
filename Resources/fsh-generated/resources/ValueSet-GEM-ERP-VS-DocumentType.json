@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "GEM_ERP_VS_DocumentType",
   "id": "GEM-ERP-VS-DocumentType",
   "title": "ValueSet of Documenttype Codes",
