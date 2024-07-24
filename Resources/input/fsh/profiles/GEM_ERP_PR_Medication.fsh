@@ -10,6 +10,7 @@ Description: "Handles medical information about the redeemed prescription"
   * itemCodeableConcept ^short = "Component in coded form" // This line is necessary to avoid the HAPI Validator Error bug
   * itemReference MS
   * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
+  * itemReference ^type.aggregation = #contained
  
 * ingredient.strength.numerator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.numerator.system.extension[dataAbsentReason].value[x] = #unknown

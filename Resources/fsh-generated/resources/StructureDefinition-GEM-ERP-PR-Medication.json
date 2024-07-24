@@ -49,6 +49,9 @@
             "targetProfile": [
               "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
               "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+            ],
+            "aggregation": [
+              "contained"
             ]
           }
         ]
