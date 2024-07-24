@@ -8,7 +8,7 @@ Usage: #example
 * contained[+] = SumatripanMedication
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown
-* about.reference = "#SumatripanMedication"
+* about = Reference(SumatripanMedication)
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"

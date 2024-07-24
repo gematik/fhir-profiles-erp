@@ -24,7 +24,7 @@ Usage: #example
 * agent[=].name = "Praxis Dr. Müller"
 * agent[=].requestor = false
 * source.site = "E-Rezept Fachdienst"
-* source.observer.reference = "Device/1"
+* source.observer = Reference(ReceiptBundleDevice)
 * entity[+].what.reference = "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58"
 * entity[=].what.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * entity[=].what.identifier.value = "160.123.456.789.123.58"

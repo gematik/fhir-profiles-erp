@@ -12,7 +12,7 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * whenPrepared = "2024-04-03"
-* medicationReference.reference = "SumatripanMedication"
+* medicationReference = Reference(SumatripanMedication)
 
 Instance: Example-MedicationDispense-2
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -27,7 +27,7 @@ Description: "Example of another Medication Dispense."
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * whenPrepared = "2024-04-03"
-* medicationReference.reference = "Medication-Without-Strength-Code"
+* medicationReference = Reference(Medication-Without-Strength-Code)
 
 Instance: Example-MedicationDispense-Kombipackung
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -42,7 +42,7 @@ Description: "Example of a Kombipackung Medication Dispense."
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * whenPrepared = "2024-04-03"
-* medicationReference.reference = "Medication-Kombipackung"
+* medicationReference = Reference(Medication-Kombipackung)
 
 Instance: Example-MedicationDispense-Rezeptur
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -57,7 +57,7 @@ Description: "Example of a Rezeptur Medication Dispense."
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * whenPrepared = "2024-04-03"
-* medicationReference.reference = "Medication-Rezeptur"
+* medicationReference = Reference(Medication-Rezeptur)
 
 /*
 
@@ -75,7 +75,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024"
 * whenPrepared = "2024"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#SumatripanMedication"
+* medicationReference = Reference(SumatripanMedication)
 
 Instance: INVALID-DATE-Example-MedicationDispense-2
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -91,7 +91,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04"
 * whenPrepared = "2024-04"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#SumatripanMedication"
+* medicationReference = Reference(SumatripanMedication)
 
 Instance: INVALID-DATE-Example-MedicationDispense-3
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -107,7 +107,7 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03T15:28:00+00:00"
 * whenPrepared = "2024-04-03T15:28:00+00:00"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#SumatripanMedication"
+* medicationReference = Reference(SumatripanMedication)
 
 Instance: INVALID-DATE-Example-MedicationDispense-4
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -123,6 +123,6 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03T00:00:00.000Z"
 * whenPrepared = "2024-04-03T00:00:00.000Z"
 * contained[+] = SumatripanMedication
-* medicationReference.reference = "#SumatripanMedication"
+* medicationReference = Reference(SumatripanMedication)
 
 */

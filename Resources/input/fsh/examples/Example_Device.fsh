@@ -1,4 +1,3 @@
-
 Instance: ReceiptBundleDevice
 InstanceOf: GEM_ERP_PR_Device
 Title:   "Device for Receipt Bundle 'Quittung'"

@@ -46,7 +46,7 @@
             "whenHandedOver": "2024-04-03",
             "whenPrepared": "2024-04-03",
             "medicationReference": {
-              "reference": "Medication-Without-Strength-Code"
+              "reference": "Medication/Medication-Without-Strength-Code"
             }
           }
         },
