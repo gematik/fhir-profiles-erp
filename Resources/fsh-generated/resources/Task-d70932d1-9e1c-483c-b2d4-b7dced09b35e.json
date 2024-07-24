@@ -52,21 +52,7 @@
         ]
       },
       "valueReference": {
-        "reference": "281a985c-f25b-4aae-91a6-41ad744080b0"
-      }
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "2",
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
-            "display": "Patient Confirmation"
-          }
-        ]
-      },
-      "valueReference": {
-        "reference": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+        "reference": "Binary/PrescriptionBinary"
       }
     }
   ],

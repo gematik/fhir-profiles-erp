@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "PerformerTypeVS",
   "id": "GEM-ERP-VS-PerformerType",
   "title": "ValueSet of Performertype Codes",
   "description": "Type of performer",
-  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType",
   "version": "1.4",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PerformerType",
   "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [

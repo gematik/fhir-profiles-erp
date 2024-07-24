@@ -4,17 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
   "version": "1.4",
   "name": "GEM_ERP_EX_PrescriptionType",
-  "status": "draft",
+  "status": "active",
   "date": "2024-07-15",
   "description": "Definies the Type of a prescription.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [

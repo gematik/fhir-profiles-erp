@@ -5,17 +5,10 @@
   "version": "1.4",
   "name": "GEM_ERP_PR_Binary",
   "title": "PKCS7 signed Bundle envelopig style",
-  "status": "draft",
+  "status": "active",
   "date": "2024-07-15",
   "description": "PCKS7 signed ePrescription Bundle or Receipt",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "Binary",

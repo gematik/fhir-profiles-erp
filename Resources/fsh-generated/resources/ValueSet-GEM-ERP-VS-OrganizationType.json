@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "GEM_ERP_VS_OrganizationType",
   "id": "GEM-ERP-VS-OrganizationType",
   "title": "ValueSet of Organizationtype Codes",
   "description": "Type of Organiziation",
-  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType",
   "version": "1.4",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType",
   "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [

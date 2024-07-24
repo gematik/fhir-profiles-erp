@@ -1,11 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "GEM_ERP_CS_OrganizationType",
   "id": "GEM-ERP-CS-OrganizationType",
   "title": "CodeSystem of Organizationtype Codes",
   "description": "Type of Organiziation where to get e-prescriptions dispensed",
+  "version": "1.4",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType",
   "concept": [
     {
@@ -17,7 +18,6 @@
       "display": "Kostenträger"
     }
   ],
-  "version": "1.4",
   "date": "2024-07-15",
   "publisher": "gematik GmbH",
   "contact": [

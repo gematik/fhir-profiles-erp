@@ -5,27 +5,10 @@
   "version": "1.4",
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Request for Dispense of ePrescription",
-  "status": "draft",
+  "status": "active",
   "date": "2024-07-15",
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": true,
   "type": "Communication",
@@ -33,6 +16,19 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Communication",
+        "path": "Communication",
+        "constraint": [
+          {
+            "key": "workflow-communication-payload-1",
+            "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
+            "severity": "error",
+            "expression": "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code != '162' implies payload.exists() and payload.empty().not())"
+          }
+        ]
+      },
       {
         "id": "Communication.meta",
         "path": "Communication.meta",
@@ -159,15 +155,6 @@
         "id": "Communication.payload",
         "path": "Communication.payload",
         "max": "1",
-        "constraint": [
-          {
-            "key": "workflow-communication-payload-1",
-            "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
-            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
-            "severity": "error",
-            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.empty() or payload.exists()"
-          }
-        ],
         "mustSupport": true
       },
       {
