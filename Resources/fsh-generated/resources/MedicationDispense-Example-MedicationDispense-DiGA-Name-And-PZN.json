@@ -13,13 +13,6 @@
     }
   ],
   "status": "completed",
-  "medicationReference": {
-    "identifier": {
-      "system": "http://fhir.de/CodeSystem/ifa/pzn",
-      "value": "12345678"
-    },
-    "display": "Gematico Diabetestherapie"
-  },
   "subject": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
@@ -42,5 +35,12 @@
       "valueString": "DE12345678901234"
     }
   ],
-  "whenHandedOver": "2024-04-03"
+  "whenHandedOver": "2024-04-03",
+  "medicationReference": {
+    "display": "Gematico Diabetestherapie",
+    "identifier": {
+      "system": "https://example.de/fhir/identifier-for-diga",
+      "value": "12345678"
+    }
+  }
 }

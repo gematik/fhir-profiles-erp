@@ -23,14 +23,14 @@ Description: "Handles information about the dispensed DiGA"
 
 * medication[x] only Reference
 * medication[x] MS
-* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and PZN of a DiGA prescription unit."
+* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the identifier of a DiGA prescription unit." //TODO: Identifier benennen
 * medicationReference.display 0..1 MS
   * ^short = "Name of the DiGA prescription unit."
 * medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
-* medicationReference.identifier.system = $pzn (exactly)
+// * medicationReference.identifier.system = $pzn (exactly) //TODO: Festlegen, welches System genutzt werden soll
 * medicationReference.identifier.value 1..1 MS
-  * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
+ // * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
@@ -67,6 +67,6 @@ Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinit
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
-Description: "Name of the DiGA and PZN was not found, but is mandatory if a redeem code is provided."
+Description: "Name and identifier of the DiGA was not found, but is mandatory if a redeem code is provided."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
 Severity: #error
