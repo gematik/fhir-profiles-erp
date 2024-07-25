@@ -31,7 +31,7 @@ Description: "This resource manages the ePrescription workflow"
 * identifier[Secret].value 1..
 * intent = #order (exactly)
 * for ^short = "Identifier of Patient (KVID or PKV-Identifier)"
-* for.identifier only $identifier-kvid-10 or $identifier-pkv
+* for.identifier only $identifier-kvid-10
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
 * input ..2 MS

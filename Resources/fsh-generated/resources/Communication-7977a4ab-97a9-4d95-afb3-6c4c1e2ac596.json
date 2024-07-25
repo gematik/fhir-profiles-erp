@@ -12,6 +12,14 @@
     ]
   },
   "status": "unknown",
+  "recipient": [
+    {
+      "identifier": {
+        "system": "http://fhir.de/sid/gkv/kvid-10",
+        "value": "X234567890"
+      }
+    }
+  ],
   "payload": [
     {
       "extension": [
@@ -54,13 +62,5 @@
       "value": "3-SMC-B-Testkarte-883110000123465"
     }
   },
-  "recipient": [
-    {
-      "identifier": {
-        "system": "http://fhir.de/sid/gkv/kvid-10",
-        "value": "X234567890"
-      }
-    }
-  ],
   "sent": "2020-04-29T13:46:30.128+02:00"
 }

@@ -78,8 +78,7 @@
             "code": "Identifier",
             "profile": [
               "http://fhir.de/StructureDefinition/identifier-telematik-id",
-              "http://fhir.de/StructureDefinition/identifier-kvid-10",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
         ]

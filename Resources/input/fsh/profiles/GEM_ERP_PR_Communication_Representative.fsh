@@ -23,12 +23,12 @@ Description: "Ressource used for the communication between patients and their re
   * ^short = "The entity (e.g. person, organization) which was the target of the communication."
   * ^comment = "This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1.. MS
-* recipient.identifier only $identifier-kvid-10 or $identifier-pkv
+* recipient.identifier only $identifier-kvid-10
 * sender MS
   * ^short = "The entity (e.g. person, organization) which was the source of the communication."
   * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1.. MS
-* sender.identifier only $identifier-kvid-10 or $identifier-pkv
+* sender.identifier only $identifier-kvid-10
 * payload 1..1 MS
 * payload.content[x] only string

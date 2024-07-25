@@ -39,7 +39,7 @@ Description: "Handles information about the dispensed DiGA"
 // KVNR des Versicherten
 * subject 1..
 * subject.identifier 1..
-* subject.identifier only $identifier-kvid-10 // Hier nur die KVNR der GKV, da für PKV kein DiGA angedacht ist
+* subject.identifier only $identifier-kvid-10
 * subject.identifier ^short = "The patients KVNR"
 * subject.identifier ^comment = "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
 
