@@ -493,7 +493,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/GEM_ERP_EX_DeepLink.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 8
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-EX-ExpiryDate.json",
@@ -541,7 +541,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/GEM_ERP_EX_RedeemCode.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 9
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-EX-SubstitutionAllowedType.json",

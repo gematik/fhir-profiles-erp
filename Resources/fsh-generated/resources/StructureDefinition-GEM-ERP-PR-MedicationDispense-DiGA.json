@@ -65,7 +65,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode"
             ]
           }
         ]
@@ -80,7 +80,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
             ]
           }
         ]

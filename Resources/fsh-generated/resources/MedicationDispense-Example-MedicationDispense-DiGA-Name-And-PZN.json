@@ -31,7 +31,7 @@
   ],
   "extension": [
     {
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
       "valueString": "DE12345678901234"
     }
   ],

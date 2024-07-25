@@ -1,11 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-RedeemCode",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
-  "version": "1.4.1",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
+  "version": "1.4",
   "name": "GEM_ERP_EX_RedeemCode",
   "title": "DiGA-RedeemCode",
-  "status": "draft",
+  "status": "active",
+  "date": "2024-07-15",
   "description": "States the redeem code for a DiGA.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
@@ -29,7 +30,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode"
       },
       {
         "id": "Extension.value[x]",

@@ -31,11 +31,11 @@
   ],
   "extension": [
     {
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode",
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
       "valueString": "DE12345678901234"
     },
     {
-      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink",
+      "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink",
       "valueUrl": "https://gematico.de?redeemCode=DE12345678901234"
     }
   ],
