@@ -25,7 +25,7 @@ Instance: ExampleOperationCloseInputParametersMultipleMedicationDispenses
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
 Title: "Example Close Parameters"
-* parameter[rxDispensation]
+* parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
@@ -33,7 +33,7 @@ Title: "Example Close Parameters"
   * part[medication]
     * name = "medication"
     * resource = SumatripanMedication
-* parameter[rxDispensation]
+* parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
