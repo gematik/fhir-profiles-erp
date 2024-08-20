@@ -12,7 +12,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://example.de/fhir/identifier-for-diga" //TODO: Set correct system
+* medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-DeepLink
@@ -30,7 +30,7 @@ Description: "Example of a Medication Dispense for DiGAs which states a deep lin
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
 * medicationReference.display = "Gematico Diabetestherapie"
-* medicationReference.identifier.system = "https://example.de/fhir/identifier-for-diga" //TODO: Set correct system
+* medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
 
 Instance: Example-MedicationDispense-DiGA-NoRedeemCode
@@ -106,7 +106,7 @@ Description: "When a redeem code is provided, the name of the DiGA is mandatory.
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* medicationReference.identifier.system = $pzn //TODO: Set correct system
+* medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
 
 Instance: INVALID-Example-MedicationDispense-Missing-DiGA-PZN

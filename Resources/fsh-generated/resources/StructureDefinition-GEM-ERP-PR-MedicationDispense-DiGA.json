@@ -118,7 +118,7 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "Information about the medication that is being dispensed. To include are name and the identifier of a DiGA prescription unit."
+        "definition": "Information about the medication that is being dispensed. To include are name and the PZN-identifier of a DiGA prescription unit."
       },
       {
         "id": "MedicationDispense.medication[x].extension:data-absent-reason",
@@ -149,11 +149,13 @@
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
         "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn",
         "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
+        "short": "Unique identification number for a prescription unit of a DiGA (PZN).",
         "min": 1,
         "mustSupport": true
       },

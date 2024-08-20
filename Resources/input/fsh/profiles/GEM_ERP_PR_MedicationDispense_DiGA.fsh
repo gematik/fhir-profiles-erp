@@ -23,14 +23,14 @@ Description: "Handles information about the dispensed DiGA"
 
 * medication[x] only Reference
 * medication[x] MS
-* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the identifier of a DiGA prescription unit." //TODO: Identifier benennen
+* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the PZN-identifier of a DiGA prescription unit."
 * medicationReference.display 0..1 MS
   * ^short = "Name of the DiGA prescription unit."
 * medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
-// * medicationReference.identifier.system = $pzn (exactly) //TODO: Festlegen, welches System genutzt werden soll
+* medicationReference.identifier.system = $cs-pzn (exactly)
 * medicationReference.identifier.value 1..1 MS
- // * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
+  * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
