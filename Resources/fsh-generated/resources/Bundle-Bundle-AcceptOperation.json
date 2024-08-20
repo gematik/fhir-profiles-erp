@@ -75,7 +75,7 @@
               ]
             },
             "valueReference": {
-              "reference": "Binary/PrescriptionBinary" 
+              "reference": "Binary/PrescriptionBinary"
             }
           }
         ],
@@ -94,7 +94,7 @@
         ],
         "lastModified": "2022-03-18T15:28:00+00:00"
       },
-      "fullUrl": "[base-url]/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
     },
     {
       "resource": {
@@ -108,7 +108,7 @@
         "contentType": "application/pkcs7-mime",
         "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
       },
-      "fullUrl": "[base-url]/Binary/PrescriptionBinary"
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinary"
     }
   ]
 }

@@ -29,7 +29,7 @@ Description: "Ressource used for the communication of dispense request between p
   * ^short = "The entity (e.g. person, organization) which was the source of the communication."
   * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender.identifier 1.. MS
-* sender.identifier only $identifier-kvid-10
+* sender.identifier only IdentifierKvid10
 * payload 0..1 MS
 //* payload.extension ^slicing.discriminator.type = #value
 //* payload.extension ^slicing.discriminator.path = "url"

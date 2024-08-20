@@ -27,14 +27,14 @@ Description: "Ressource used for the communication of the reply to dispense/info
   * ^short = "The entity (e.g. person, organization) which was the target of the communication."
   * ^comment = "This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1..1
-* recipient.identifier only $identifier-kvid-10
+* recipient.identifier only IdentifierKvid10
 //* sender only Reference(Organization or Practitioner or PractitionerRole or HealthcareService)
 * sender MS
   * ^short = "The entity (e.g. person, organization) which was the source of the communication."
   * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
-* sender.identifier only $identifier-kvid-10 or IdentifierTelematikId
+* sender.identifier only IdentifierKvid10 or IdentifierTelematikId
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"

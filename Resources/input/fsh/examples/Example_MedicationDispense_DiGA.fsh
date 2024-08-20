@@ -6,7 +6,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -24,7 +24,7 @@ Description: "Example of a Medication Dispense for DiGAs which states a deep lin
 * extension[deepLink].valueUrl = "https://gematico.de?redeemCode=DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -40,7 +40,7 @@ Title: "Medication Dispense DiGA without a redeem code"
 Description: "Example of a Medication Dispense for DiGAs which has no redeem code."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -57,7 +57,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -71,7 +71,7 @@ Title: "Invalid MedicationDispense for missing Note"
 Description: "A Note needs to be provided if no redeem code is provided."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -85,7 +85,7 @@ Title: "Invalid MedicationDispense for missing DataAbsentReason"
 Description: "A DataAbsentReason needs to be provided if no redeem code is provided."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -101,7 +101,7 @@ Description: "When a redeem code is provided, the name of the DiGA is mandatory.
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -117,7 +117,7 @@ Description: "When a redeem code is provided, the DiGA-PZN is mandatory."
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
@@ -132,7 +132,7 @@ Description: "When a redeem code is provided, the Name and DiGA-PZN are mandator
 * extension[redeemCode].valueString = "DE12345678901234"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "162.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
