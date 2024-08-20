@@ -58,15 +58,15 @@ Description: "Handles information about the dispensed DiGA"
 
 Invariant: workflow-medicationdispense-redeemcode-1
 Description: "A note was not found, but is mandatory if no redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies note.exists()"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies note.exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-2
 Description: "The data absent reason was not found, but is mandatory if no redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
 Description: "Name and identifier of the DiGA was not found, but is mandatory if a redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
 Severity: #error
