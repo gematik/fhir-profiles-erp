@@ -13,7 +13,6 @@ Description: "Ressource used for the communication of informative requests betwe
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1
 * status = #unknown (exactly)
-* about 1..
 * about only Reference(Medication)
 * about ^type.aggregation = #contained
 * about.reference 1..1
