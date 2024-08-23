@@ -14,8 +14,7 @@ Alias: $KBV_EX_Base_Medication_Type = https://fhir.kbv.de/StructureDefinition/KB
 Alias: $KBV_EX_ERP_Medication_Normgroesse = http://fhir.de/StructureDefinition/normgroesse
 
 // DE-Basisprofile
-Alias: $identifier-kvid-10 = http://fhir.de/StructureDefinition/identifier-kvid-10
-Alias: $identifier-pkv = https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Identifier_PkvID_10
+Alias: $identifier-kvid-10 = http://fhir.de/sid/gkv/kvid-10
 Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 
@@ -24,7 +23,8 @@ Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt
 
 // Codings
-Alias: $pzn = http://fhir.de/CodeSystem/ifa/pzn
+Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
+
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
 Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication

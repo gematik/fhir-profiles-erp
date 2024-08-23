@@ -57,6 +57,12 @@
             "value": "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
           }
         ],
+        "for": {
+          "identifier": {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "X123456789"
+          }
+        },
         "input": [
           {
             "type": {
@@ -86,12 +92,6 @@
             ]
           }
         ],
-        "for": {
-          "identifier": {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "X123456789"
-          }
-        },
         "lastModified": "2022-03-18T15:28:00+00:00"
       },
       "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"

@@ -6,7 +6,7 @@ Title: "Example Medication Dispense"
 Description: "Example of a Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -21,7 +21,7 @@ Title: "Example another Medication Dispense"
 Description: "Example of another Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.153.303.257.459"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -36,7 +36,7 @@ Title: "Example Kombipackung Medication Dispense"
 Description: "Example of a Kombipackung Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.153.303.257.459"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -51,7 +51,7 @@ Title: "Example Rezeptur Medication Dispense"
 Description: "Example of a Rezeptur Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.153.303.257.459"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -68,7 +68,7 @@ Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -84,7 +84,7 @@ Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
@@ -100,7 +100,7 @@ Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "1-SMC-B-Testkarte-883110000095957"
@@ -116,7 +116,7 @@ Title: "Example-Medication Dispense"
 Description: "Example of a Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
-* subject.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"

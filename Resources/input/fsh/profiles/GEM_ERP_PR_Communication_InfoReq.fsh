@@ -13,7 +13,6 @@ Description: "Ressource used for the communication of informative requests betwe
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1..1
 * status = #unknown (exactly)
-* about 1..
 * about only Reference(Medication)
 * about ^type.aggregation = #contained
 * about.reference 1..1
@@ -33,7 +32,7 @@ Description: "Ressource used for the communication of informative requests betwe
   * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
 * sender.identifier 1..1
-* sender.identifier only $identifier-kvid-10 or $identifier-pkv
+* sender.identifier only IdentifierKvid10
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"

@@ -30,16 +30,16 @@
       }
     }
   ],
-  "basedOn": [
-    {
-      "reference": "Task/162.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
-    }
-  ],
   "sender": {
     "identifier": {
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "X234567890"
     }
   },
+  "basedOn": [
+    {
+      "reference": "Task/162.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+    }
+  ],
   "sent": "2020-04-29T13:44:30.128+02:00"
 }

@@ -1,11 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-DeepLink",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink",
-  "version": "1.4.0",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink",
+  "version": "1.4",
   "name": "GEM_ERP_EX_DeepLink",
   "title": "DiGA-DeepLink",
-  "status": "draft",
+  "status": "active",
+  "date": "2024-07-15",
   "description": "Contains information regarding deep link for a DiGA.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
@@ -34,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
       },
       {
         "id": "Extension.value[x]",

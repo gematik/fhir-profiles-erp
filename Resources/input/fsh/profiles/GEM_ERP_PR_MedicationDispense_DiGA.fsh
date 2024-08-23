@@ -23,14 +23,14 @@ Description: "Handles information about the dispensed DiGA"
 
 * medication[x] only Reference
 * medication[x] MS
-* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the identifier of a DiGA prescription unit." //TODO: Identifier benennen
+* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the PZN-identifier of a DiGA prescription unit."
 * medicationReference.display 0..1 MS
   * ^short = "Name of the DiGA prescription unit."
 * medicationReference.identifier 0..1 MS
 * medicationReference.identifier.system 1..1 MS
-// * medicationReference.identifier.system = $pzn (exactly) //TODO: Festlegen, welches System genutzt werden soll
+* medicationReference.identifier.system = $cs-pzn (exactly)
 * medicationReference.identifier.value 1..1 MS
- // * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
+  * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
@@ -39,7 +39,7 @@ Description: "Handles information about the dispensed DiGA"
 // KVNR des Versicherten
 * subject 1..
 * subject.identifier 1..
-* subject.identifier only $identifier-kvid-10 // Hier nur die KVNR der GKV, da für PKV kein DiGA angedacht ist
+* subject.identifier only IdentifierKvid10
 * subject.identifier ^short = "The patients KVNR"
 * subject.identifier ^comment = "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
 
@@ -58,15 +58,15 @@ Description: "Handles information about the dispensed DiGA"
 
 Invariant: workflow-medicationdispense-redeemcode-1
 Description: "A note was not found, but is mandatory if no redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies note.exists()"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies note.exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-2
 Description: "The data absent reason was not found, but is mandatory if no redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
 Description: "Name and identifier of the DiGA was not found, but is mandatory if a redeem code is provided."
-Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
+Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())"
 Severity: #error

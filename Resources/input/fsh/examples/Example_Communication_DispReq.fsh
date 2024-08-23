@@ -12,7 +12,7 @@ Usage: #example
 * status = #unknown
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
-* sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:44:30.128+02:00"
 * payload.contentString = "{ \"version\": \"1\", \"supplyOptionsType\": \"delivery\", \"name\": \"Dr. Maximilian von Muster\", \"address\": [ \"wohnhaft bei Emilia Fischer\", \"Bundesallee 312\", \"123. OG\", \"12345 Berlin\" ], \"hint\": \"Bitte im Morsecode klingeln: -.-.\", \"phone\": \"004916094858168\" }"
@@ -30,7 +30,7 @@ Usage: #example
 * status = #unknown
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "8-SMC-B-Testkarte-883110000123465"
-* sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:44:30.128+02:00"
 
@@ -47,7 +47,7 @@ Usage: #example
 * status = #unknown
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "8-SMC-B-Testkarte-883110000123465"
-* sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:44:30.128+02:00"
 * payload.contentString = "U.N.V.E.U"
@@ -64,7 +64,7 @@ Usage: #example
 * status = #unknown
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
-* sender.identifier.system = "http://fhir.de/sid/gkv/kvid-10"
+* sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
 * sent = "2020-04-29T13:44:30.128+02:00"
 */

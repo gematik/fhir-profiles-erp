@@ -24,21 +24,21 @@
             "key": "workflow-medicationdispense-redeemcode-1",
             "severity": "error",
             "human": "A note was not found, but is mandatory if no redeem code is provided.",
-            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies note.exists()",
+            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies note.exists()",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
           },
           {
             "key": "workflow-medicationdispense-redeemcode-2",
             "severity": "error",
             "human": "The data absent reason was not found, but is mandatory if no redeem code is provided.",
-            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies medicationReference.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
           },
           {
             "key": "workflow-medicationdispense-redeemcode-3",
             "severity": "error",
             "human": "Name and identifier of the DiGA was not found, but is mandatory if a redeem code is provided.",
-            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())",
+            "expression": "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').exists() implies (medicationReference.display.exists() and medicationReference.identifier.exists())",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-RedeemCode"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode"
             ]
           }
         ]
@@ -80,7 +80,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-EX-DeepLink"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
             ]
           }
         ]
@@ -118,7 +118,7 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "Information about the medication that is being dispensed. To include are name and the identifier of a DiGA prescription unit."
+        "definition": "Information about the medication that is being dispensed. To include are name and the PZN-identifier of a DiGA prescription unit."
       },
       {
         "id": "MedicationDispense.medication[x].extension:data-absent-reason",
@@ -149,11 +149,13 @@
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
         "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn",
         "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
+        "short": "Unique identification number for a prescription unit of a DiGA (PZN).",
         "min": 1,
         "mustSupport": true
       },
