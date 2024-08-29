@@ -188,8 +188,8 @@
     "fshName": "Example-MedicationDispense-2",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 17,
-    "endLine": 30
+    "startLine": 16,
+    "endLine": 28
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-DiGA-DeepLink.json",
@@ -220,16 +220,16 @@
     "fshName": "Example-MedicationDispense-Kombipackung",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 32,
-    "endLine": 45
+    "startLine": 30,
+    "endLine": 42
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Rezeptur.json",
     "fshName": "Example-MedicationDispense-Rezeptur",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 47,
-    "endLine": 60
+    "startLine": 44,
+    "endLine": 56
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense.json",
@@ -237,7 +237,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
     "startLine": 2,
-    "endLine": 15
+    "endLine": 14
   },
   {
     "outputFile": "OperationDefinition-AbortOperation.json",

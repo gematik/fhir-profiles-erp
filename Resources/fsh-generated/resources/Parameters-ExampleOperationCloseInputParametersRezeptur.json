@@ -44,7 +44,6 @@
               }
             ],
             "whenHandedOver": "2024-04-03",
-            "whenPrepared": "2024-04-03",
             "medicationReference": {
               "reference": "Medication/Medication-Rezeptur"
             }

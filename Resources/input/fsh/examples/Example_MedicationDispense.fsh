@@ -11,7 +11,6 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* whenPrepared = "2024-04-03"
 * medicationReference = Reference(SumatripanMedication)
 
 Instance: Example-MedicationDispense-2
@@ -26,7 +25,6 @@ Description: "Example of another Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* whenPrepared = "2024-04-03"
 * medicationReference = Reference(Medication-Without-Strength-Code)
 
 Instance: Example-MedicationDispense-Kombipackung
@@ -41,7 +39,6 @@ Description: "Example of a Kombipackung Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* whenPrepared = "2024-04-03"
 * medicationReference = Reference(Medication-Kombipackung)
 
 Instance: Example-MedicationDispense-Rezeptur
@@ -56,7 +53,6 @@ Description: "Example of a Rezeptur Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03"
-* whenPrepared = "2024-04-03"
 * medicationReference = Reference(Medication-Rezeptur)
 
 /*
@@ -73,7 +69,6 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024"
-* whenPrepared = "2024"
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -89,7 +84,6 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04"
-* whenPrepared = "2024-04"
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -105,7 +99,6 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "1-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03T15:28:00+00:00"
-* whenPrepared = "2024-04-03T15:28:00+00:00"
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -121,7 +114,6 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2024-04-03T00:00:00.000Z"
-* whenPrepared = "2024-04-03T00:00:00.000Z"
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
