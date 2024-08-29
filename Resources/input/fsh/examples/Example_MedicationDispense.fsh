@@ -20,7 +20,7 @@ Usage: #example
 Title: "Example another Medication Dispense"
 Description: "Example of another Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[prescriptionID].value = "160.153.303.257.459"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
@@ -35,7 +35,7 @@ Usage: #example
 Title: "Example Kombipackung Medication Dispense"
 Description: "Example of a Kombipackung Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[prescriptionID].value = "160.153.303.257.459"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
@@ -50,7 +50,7 @@ Usage: #example
 Title: "Example Rezeptur Medication Dispense"
 Description: "Example of a Rezeptur Medication Dispense."
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
-* identifier[prescriptionID].value = "160.153.303.257.459"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
