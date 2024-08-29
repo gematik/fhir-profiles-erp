@@ -9,7 +9,7 @@
   "identifier": [
     {
       "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-      "value": "160.153.303.257.459"
+      "value": "160.000.033.491.280.78"
     }
   ],
   "status": "completed",
@@ -30,7 +30,6 @@
     }
   ],
   "whenHandedOver": "2024-04-03",
-  "whenPrepared": "2024-04-03",
   "medicationReference": {
     "reference": "Medication/Medication-Kombipackung"
   }
