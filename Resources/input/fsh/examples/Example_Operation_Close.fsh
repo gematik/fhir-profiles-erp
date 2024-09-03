@@ -11,16 +11,6 @@ Title: "Example Close Parameters"
     * name = "medication"
     * resource = SumatripanMedication
 
-Instance: ExampleOperationCloseInputParametersWithoutMedication
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
-Usage: #example
-Title: "Example Close Parameters"
-* parameter[rxDispensation]
-  * name = "rxDispensation"
-  * part[medicationDispense]
-    * name = "medicationDispense"
-    * resource = Example-MedicationDispense
-
 Instance: ExampleOperationCloseInputParametersMultipleMedicationDispenses
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
@@ -77,6 +67,16 @@ Title: "Example Close Parameters"
   * part[medicationDispense]
     * name = "medicationDispense"
     * resource = Example-MedicationDispense-DiGA-Name-And-PZN
+
+Instance: INVALID-ExampleOperationCloseInputParametersWithoutMedication
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Usage: #example
+Title: "Example Close Parameters"
+* parameter[rxDispensation]
+  * name = "rxDispensation"
+  * part[medicationDispense]
+    * name = "medicationDispense"
+    * resource = Example-MedicationDispense-Without-Medication
 
 Instance: ExampleOperationCloseError
 InstanceOf: OperationOutcome

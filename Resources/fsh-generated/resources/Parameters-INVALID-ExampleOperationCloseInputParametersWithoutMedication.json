@@ -1,6 +1,6 @@
 {
   "resourceType": "Parameters",
-  "id": "ExampleOperationCloseInputParametersWithoutMedication",
+  "id": "INVALID-ExampleOperationCloseInputParametersWithoutMedication",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.4"
@@ -14,7 +14,7 @@
           "name": "medicationDispense",
           "resource": {
             "resourceType": "MedicationDispense",
-            "id": "Example-MedicationDispense",
+            "id": "Example-MedicationDispense-Without-Medication",
             "meta": {
               "profile": [
                 "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"

@@ -46,7 +46,16 @@
         "path": "Parameters.parameter",
         "sliceName": "rxDispensation",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "constraint": [
+          {
+            "key": "workflow-parameters-close-medication-exists",
+            "severity": "error",
+            "human": "If a reference from a MedicationDispense to a Medication exists, a Medication resource must exist.",
+            "expression": "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies part.where(name = 'medication').exists()",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+          }
+        ]
       },
       {
         "id": "Parameters.parameter:rxDispensation.name",

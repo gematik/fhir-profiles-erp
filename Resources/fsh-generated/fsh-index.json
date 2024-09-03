@@ -188,8 +188,8 @@
     "fshName": "Example-MedicationDispense-2",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 16,
-    "endLine": 28
+    "startLine": 29,
+    "endLine": 41
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-DiGA-DeepLink.json",
@@ -220,24 +220,32 @@
     "fshName": "Example-MedicationDispense-Kombipackung",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 30,
-    "endLine": 42
+    "startLine": 43,
+    "endLine": 55
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Rezeptur.json",
     "fshName": "Example-MedicationDispense-Rezeptur",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 44,
-    "endLine": 56
+    "startLine": 57,
+    "endLine": 69
+  },
+  {
+    "outputFile": "MedicationDispense-Example-MedicationDispense-Without-Medication.json",
+    "fshName": "Example-MedicationDispense-Without-Medication",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_MedicationDispense.fsh",
+    "startLine": 15,
+    "endLine": 27
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense.json",
     "fshName": "Example-MedicationDispense",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 2,
-    "endLine": 14
+    "startLine": 1,
+    "endLine": 13
   },
   {
     "outputFile": "OperationDefinition-AbortOperation.json",
@@ -412,40 +420,40 @@
     "fshName": "ExampleOperationCloseInputParametersDiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Close.fsh",
-    "startLine": 71,
-    "endLine": 79
+    "startLine": 61,
+    "endLine": 69
   },
   {
     "outputFile": "Parameters-ExampleOperationCloseInputParametersKombipackung.json",
     "fshName": "ExampleOperationCloseInputParametersKombipackung",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Close.fsh",
-    "startLine": 45,
-    "endLine": 56
+    "startLine": 35,
+    "endLine": 46
   },
   {
     "outputFile": "Parameters-ExampleOperationCloseInputParametersMultipleMedicationDispenses.json",
     "fshName": "ExampleOperationCloseInputParametersMultipleMedicationDispenses",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Close.fsh",
-    "startLine": 24,
-    "endLine": 43
+    "startLine": 14,
+    "endLine": 33
   },
   {
     "outputFile": "Parameters-ExampleOperationCloseInputParametersRezeptur.json",
     "fshName": "ExampleOperationCloseInputParametersRezeptur",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Close.fsh",
-    "startLine": 58,
-    "endLine": 69
+    "startLine": 48,
+    "endLine": 59
   },
   {
-    "outputFile": "Parameters-ExampleOperationCloseInputParametersWithoutMedication.json",
-    "fshName": "ExampleOperationCloseInputParametersWithoutMedication",
+    "outputFile": "Parameters-INVALID-ExampleOperationCloseInputParametersWithoutMedication.json",
+    "fshName": "INVALID-ExampleOperationCloseInputParametersWithoutMedication",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Close.fsh",
-    "startLine": 14,
-    "endLine": 22
+    "startLine": 71,
+    "endLine": 79
   },
   {
     "outputFile": "Parameters-OperationCreateParametersInputExample.json",
@@ -717,7 +725,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/GEM_ERP_PR_PAR_CloseOperation_Input.fsh",
     "startLine": 1,
-    "endLine": 41
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Output.json",
