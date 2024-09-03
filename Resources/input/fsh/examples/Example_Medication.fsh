@@ -22,6 +22,13 @@ Usage: #example
 * amount.numerator.extension[totalQuantity].valueString = "20 St."
 * amount.denominator.value = 1
 
+Instance: SimpleMedication
+InstanceOf: GEM_ERP_PR_Medication
+Title:   "Sample Simple Medication"
+Usage: #example
+* code.coding[pzn].system = "http://fhir.de/CodeSystem/ifa/pzn"
+* code.coding[pzn].code = #06313728
+
 // Medication without system and code for ingredient.strengh.numerator/denominator
 Instance: Medication-Without-Strength-Code
 InstanceOf: GEM_ERP_PR_Medication
@@ -61,10 +68,3 @@ Usage: #example
   * strength.denominator.value = 1
   * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
   * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
-
-  
-  
-  
-  
-  
-  
