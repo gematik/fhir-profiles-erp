@@ -19,6 +19,7 @@ Description: "This profile defines the parameters for closing a workflow for a p
   * value[x] 0..0
   * resource 0..0
   * obeys workflow-parameters-close-medication-exists
+  * obeys workflow-parameters-close-medication-references
   * part MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"
@@ -48,6 +49,6 @@ Severity: #error
 
 Invariant: workflow-parameters-close-medication-references
 Description: "If a reference from a MedicationDispense to a Medication exists, the reference must resolve to the Medication."
-Expression: "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies part.where(name = 'medicationDispense').resource.medication.reference.endsWith(part.where(name = 'medication').resource.id)"
+Expression: "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))"
 Severity: #error
 
