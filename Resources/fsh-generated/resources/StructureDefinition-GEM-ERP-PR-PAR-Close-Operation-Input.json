@@ -52,14 +52,14 @@
             "key": "workflow-parameters-close-medication-exists",
             "severity": "error",
             "human": "If a reference from a MedicationDispense to a Medication exists, a Medication resource must exist.",
-            "expression": "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies part.where(name = 'medication').exists()",
+            "expression": "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).exists() implies part.where(name = 'medication').exists()",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
           },
           {
             "key": "workflow-parameters-close-medication-references",
             "severity": "error",
             "human": "If a reference from a MedicationDispense to a Medication exists, the reference must resolve to the Medication.",
-            "expression": "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))",
+            "expression": "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
           }
         ]

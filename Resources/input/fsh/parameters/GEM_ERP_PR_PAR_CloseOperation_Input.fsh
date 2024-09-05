@@ -44,11 +44,11 @@ Description: "This profile defines the parameters for closing a workflow for a p
 
 Invariant: workflow-parameters-close-medication-exists
 Description: "If a reference from a MedicationDispense to a Medication exists, a Medication resource must exist."
-Expression: "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies part.where(name = 'medication').exists()"
+Expression: "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).exists() implies part.where(name = 'medication').exists()"
 Severity: #error
 
 Invariant: workflow-parameters-close-medication-references
 Description: "If a reference from a MedicationDispense to a Medication exists, the reference must resolve to the Medication."
-Expression: "part.where(name = 'medicationDispense').resource.medication.reference.exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))"
+Expression: "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))"
 Severity: #error
 
