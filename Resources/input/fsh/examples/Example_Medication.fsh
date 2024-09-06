@@ -19,7 +19,7 @@ Usage: #example
 * form.coding[kbvDarreichungsform].code = #TAB
 * amount.numerator.value = 20
 * amount.numerator.unit = "St"
-* amount.numerator.extension[totalQuantity].valueString = "20 St."
+* amount.numerator.extension[totalQuantity].valueString = "20"
 * amount.denominator.value = 1
 
 Instance: SimpleMedication

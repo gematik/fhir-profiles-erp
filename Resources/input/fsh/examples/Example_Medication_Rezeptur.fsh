@@ -21,7 +21,7 @@ Usage: #example
 * form.coding[kbvDarreichungsform].code = #SAL
 * amount.numerator.value = 20
 * amount.numerator.unit = "ml"
-* amount.numerator.extension[totalQuantity].valueString = "100 ml"
+* amount.numerator.extension[totalQuantity].valueString = "100"
 * amount.denominator.value = 1
 * ingredient[+].itemReference = Reference(MedicationHydrocortison)
 * ingredient[=].isActive = true
