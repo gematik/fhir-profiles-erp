@@ -16,7 +16,7 @@ Usage: #example
 
 * code.text = "Hydrocortison-Dexpanthenol-Salbe"
 * form.text = "Salbe"
-* amount.numerator.extension[totalQuantity].valueString = "100 ml"
+* amount.numerator.extension[totalQuantity].valueString = "100"
 * amount.numerator.value = 20
 * amount.numerator.unit = "ml"
 * amount.denominator.value = 1
