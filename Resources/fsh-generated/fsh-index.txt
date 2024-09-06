@@ -1,6 +1,10 @@
 Output File                                                                Name                                                         Type        FSH File                                                      Lines
 AuditEvent-9361863d-fec0-4ba9-8776-7905cf1b0cfa.json                       AuditEventSample                                             Instance    examples/Example_AuditEvent.fsh                               2 - 32
 Bundle-Bundle-AcceptOperation.json                                         Bundle-AcceptOperation                                       Instance    examples/Example_Bundle.fsh                                   34 - 45
+Bundle-KomplexMedicationDispenseBundle.json                                KomplexMedicationDispenseBundle                              Instance    examples/Example_For_MedicationDispense_Reference.fsh         27 - 35
+Bundle-MultipleMedicationDispenseBundle.json                               MultipleMedicationDispenseBundle                             Instance    examples/Example_For_MedicationDispense_Reference.fsh         12 - 24
+Bundle-SearchSetMultipleMedicationDispenseBundle.json                      SearchSetMultipleMedicationDispenseBundle                    Instance    examples/Example_For_MedicationDispense_Reference.fsh         38 - 56
+Bundle-SimpleMedicationDispenseBundle.json                                 SimpleMedicationDispenseBundle                               Instance    examples/Example_For_MedicationDispense_Reference.fsh         1 - 9
 Bundle-dffbfd6a-5712-4798-bdc8-07201eb77ab8.json                           ReceiptBundleQuittung                                        Instance    examples/Example_Bundle.fsh                                   10 - 32
 CodeSystem-GEM-ERP-CS-AvailabilityStatus.json                              GEM_ERP_CS_AvailabilityStatus                                CodeSystem  codesystems/GEM_ERP_CS_AvailabilityStatus.fsh                 1 - 12
 CodeSystem-GEM-ERP-CS-DocumentType.json                                    GEM_ERP_CS_DocumentType                                      CodeSystem  codesystems/GEM_ERP_CS_DocumentType.fsh                       1 - 10
