@@ -127,7 +127,7 @@ Usage: #inline
 * extension[type].valueCoding = $sct#1208954007 "Extemporaneous preparation (product)"
   * version = $sct_20240201
 * ingredient[+].itemReference = Reference(Medication-Hydrocortison-FD)
-* ingredient[+].itemReference = Reference(Medication-Hydrocortison-FD)
+* ingredient[+].itemReference = Reference(Medication-Dexpanthenol-FD)
 
 
 Instance: Medication-Hydrocortison-FD
@@ -173,7 +173,7 @@ Usage: #inline
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.2"
 * performer.actor.identifier.value = "3-abc-1234567890"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* whenHandedOver = "2024-07-02T09:29:09+02:00"
+* whenHandedOver = "2024-07-02"
 * identifier.value = "160.000.000.000.000.04"
 * identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 
@@ -213,7 +213,7 @@ Usage: #inline
 * meta.profile = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.3"
 * performer.actor.identifier.value = "3-abc-1234567890"
 * performer.actor.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* whenHandedOver = "2024-07-02T09:29:09+02:00"
+* whenHandedOver = "2024-07-02"
 * identifier.value = "160.000.000.000.000.05"
 * identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 
