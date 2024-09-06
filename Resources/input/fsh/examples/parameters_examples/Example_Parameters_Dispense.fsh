@@ -1,7 +1,7 @@
-Instance: ExampleCloseInputParameters
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: ExampleDispenseInputParameters
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]
@@ -11,10 +11,10 @@ Title: "Example Close Parameters"
     * name = "medication"
     * resource = SumatripanMedication
 
-Instance: ExampleCloseInputParametersMultipleMedicationDispenses
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: ExampleDispenseInputParametersMultipleMedicationDispenses
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters"
 * parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
@@ -32,10 +32,10 @@ Title: "Example Close Parameters"
     * name = "medication"
     * resource = Medication-Without-Strength-Code
 
-Instance: ExampleCloseInputParametersKombipackung
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: ExampleDispenseInputParametersKombipackung
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]
@@ -45,44 +45,44 @@ Title: "Example Close Parameters"
     * name = "medication"
     * resource = Medication-Kombipackung
 
-Instance: ExampleCloseInputParametersRezeptur
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: ExampleDispenseOutputParametersSuccess
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters Response on Success"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
-    * resource = Example-MedicationDispense-Rezeptur
+    * resource = Example-MedicationDispense
   * part[medication]
     * name = "medication"
-    * resource = Medication-Rezeptur
+    * resource = SumatripanMedication
 
-Instance: ExampleCloseInputParametersDiGA
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: ExampleDispenseOutputParametersError
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters Response on Error"
 * parameter[rxDispensation]
   * name = "rxDispensation"
-  * part[medicationDispense]
-    * name = "medicationDispense"
-    * resource = Example-MedicationDispense-DiGA-Name-And-PZN
+  * part[operationOutcome]
+    * name = "operationOutcome"
+    * resource = ExampleOperationDispenseError
 
-/* 
-Instance: INVALID-ExampleCloseInputParametersWithoutMedication
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+/*
+Instance: INVALID-ExampleDispenseInputParametersWithoutMedication
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
     * resource = Example-MedicationDispense-Without-Medication
 
-Instance: INVALID-ExampleCloseInputParametersReferenceWrong
-InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Instance: INVALID-ExampleDispenseInputParametersReferenceWrong
+InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Example Dispense Parameters"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]

@@ -53,7 +53,7 @@
             "key": "workflow-parameters-close-dispense-medication-references",
             "severity": "error",
             "human": "If a reference from a MedicationDispense to a Medication exists, the reference must resolve to the Medication.",
-            "expression": "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))",
+            "expression": "part.where(name = 'medicationDispense').resource.medication.ofType(Reference).reference.exists() implies ((part.where(name = 'medicationDispense').resource.medication.reference.split('/').last().split(':').last()) = (part.where(name = 'medication').resource.id))",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
           }
         ]

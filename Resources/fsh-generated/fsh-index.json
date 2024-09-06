@@ -371,7 +371,7 @@
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
     "fshName": "ExampleCloseInputParameters",
     "fshType": "Instance",
-    "fshFile": "examples/parameters_examples/Example_Parameters_CloseInput.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Close.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -379,7 +379,7 @@
     "outputFile": "Parameters-ExampleCloseInputParametersDiGA.json",
     "fshName": "ExampleCloseInputParametersDiGA",
     "fshType": "Instance",
-    "fshFile": "examples/parameters_examples/Example_Parameters_CloseInput.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Close.fsh",
     "startLine": 61,
     "endLine": 69
   },
@@ -387,7 +387,7 @@
     "outputFile": "Parameters-ExampleCloseInputParametersKombipackung.json",
     "fshName": "ExampleCloseInputParametersKombipackung",
     "fshType": "Instance",
-    "fshFile": "examples/parameters_examples/Example_Parameters_CloseInput.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Close.fsh",
     "startLine": 35,
     "endLine": 46
   },
@@ -395,7 +395,7 @@
     "outputFile": "Parameters-ExampleCloseInputParametersMultipleMedicationDispenses.json",
     "fshName": "ExampleCloseInputParametersMultipleMedicationDispenses",
     "fshType": "Instance",
-    "fshFile": "examples/parameters_examples/Example_Parameters_CloseInput.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Close.fsh",
     "startLine": 14,
     "endLine": 33
   },
@@ -403,7 +403,7 @@
     "outputFile": "Parameters-ExampleCloseInputParametersRezeptur.json",
     "fshName": "ExampleCloseInputParametersRezeptur",
     "fshType": "Instance",
-    "fshFile": "examples/parameters_examples/Example_Parameters_CloseInput.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Close.fsh",
     "startLine": 48,
     "endLine": 59
   },
@@ -411,7 +411,7 @@
     "outputFile": "Parameters-ExampleDispenseInputParameters.json",
     "fshName": "ExampleDispenseInputParameters",
     "fshType": "Instance",
-    "fshFile": "examples/Example_Operation_Dispense.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -419,7 +419,7 @@
     "outputFile": "Parameters-ExampleDispenseInputParametersKombipackung.json",
     "fshName": "ExampleDispenseInputParametersKombipackung",
     "fshType": "Instance",
-    "fshFile": "examples/Example_Operation_Dispense.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 35,
     "endLine": 46
   },
@@ -427,7 +427,7 @@
     "outputFile": "Parameters-ExampleDispenseInputParametersMultipleMedicationDispenses.json",
     "fshName": "ExampleDispenseInputParametersMultipleMedicationDispenses",
     "fshType": "Instance",
-    "fshFile": "examples/Example_Operation_Dispense.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 14,
     "endLine": 33
   },
@@ -435,7 +435,7 @@
     "outputFile": "Parameters-ExampleDispenseOutputParametersError.json",
     "fshName": "ExampleDispenseOutputParametersError",
     "fshType": "Instance",
-    "fshFile": "examples/Example_Operation_Dispense.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 61,
     "endLine": 69
   },
@@ -443,7 +443,7 @@
     "outputFile": "Parameters-ExampleDispenseOutputParametersSuccess.json",
     "fshName": "ExampleDispenseOutputParametersSuccess",
     "fshType": "Instance",
-    "fshFile": "examples/Example_Operation_Dispense.fsh",
+    "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 48,
     "endLine": 59
   },
