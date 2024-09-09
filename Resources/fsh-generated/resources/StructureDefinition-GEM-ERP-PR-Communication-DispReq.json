@@ -96,14 +96,14 @@
         "id": "Communication.sent",
         "path": "Communication.sent",
         "short": "The time when this communication was sent.",
-        "comment": "Set by the eprescription server.",
+        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
         "short": "The time when this communication was received.",
-        "comment": "Set by the eprescription server.",
+        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
