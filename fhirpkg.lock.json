@@ -1,13 +1,13 @@
 {
-  "updated": "2024-07-24T08:02:31.596949+02:00",
+  "updated": "2024-09-10T09:47:53.155598+02:00",
   "dependencies": {
     "kbv.ita.erp": "1.1.2",
     "KBV.Basis": "1.3.0",
     "hl7.fhir.r4.core": "4.0.1",
     "kbv.ita.for": "1.1.0",
     "de.basisprofil.r4": "1.5.0",
-    "de.gematik.epa.medication": "1.0.2",
-    "de.gematik.fhir.directory": "0.11.8",
+    "de.gematik.epa.medication": "1.0.3",
+    "de.gematik.fhir.directory": "0.11.12",
     "de.ihe-d.terminology": "3.0.0"
   },
   "missing": {}
