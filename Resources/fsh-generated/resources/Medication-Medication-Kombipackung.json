@@ -100,10 +100,7 @@
             }
           }
         }
-      ],
-      "batch": {
-        "lotNumber": "0132456"
-      }
+      ]
     },
     {
       "resourceType": "Medication",
@@ -158,12 +155,12 @@
             }
           }
         }
-      ],
-      "batch": {
-        "lotNumber": "56498416854"
-      }
+      ]
     }
   ],
+  "batch": {
+    "lotNumber": "56498416854"
+  },
   "status": "active",
   "ingredient": [
     {
