@@ -38,7 +38,7 @@
         ],
         "whenHandedOver": "2025-09-06",
         "medicationReference": {
-          "reference": "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67"
+          "reference": "Medication/627e0f0c-1e11-4985-901a-033bffd9ac67"
         }
       }
     },
