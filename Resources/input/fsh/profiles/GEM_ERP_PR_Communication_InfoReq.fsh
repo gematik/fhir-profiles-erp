@@ -18,10 +18,10 @@ Description: "Ressource used for the communication of informative requests betwe
 * about.reference 1..1
 * sent MS
   * ^short = "The time when this communication was sent."
-  * ^comment = "Set by the eprescription server."
+  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
 * received MS
   * ^short = "The time when this communication was received."
-  * ^comment = "Set by the eprescription server."
+  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
 * recipient 1..1
   * ^short = "The entity (e.g. person, organization) which was the target of the communication."
   * ^comment = "This needs to be set by the sender of the communication to define the target."

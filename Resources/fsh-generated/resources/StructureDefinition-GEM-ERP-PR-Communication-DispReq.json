@@ -25,7 +25,7 @@
             "human": "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
             "severity": "error",
-            "expression": "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code != '162' implies payload.exists() and payload.empty().not())"
+            "expression": "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code != '162' implies payload.exists() and payload.empty().not())"
           }
         ]
       },
@@ -96,14 +96,14 @@
         "id": "Communication.sent",
         "path": "Communication.sent",
         "short": "The time when this communication was sent.",
-        "comment": "Set by the eprescription server.",
+        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
         "short": "The time when this communication was received.",
-        "comment": "Set by the eprescription server.",
+        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {

@@ -79,6 +79,23 @@ Title: "Example Close Parameters"
     * name = "medicationDispense"
     * resource = Example-MedicationDispense-Without-Medication
 
+Instance: INVALID-ExampleCloseInputParametersWithoutMedicationDispense
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Usage: #example
+Title: "Example Close Parameters"
+* parameter[rxDispensation]
+  * name = "rxDispensation"
+  * part[medication]
+    * name = "medication"
+    * resource = SimpleMedication
+
+Instance: INVALID-ExampleCloseInputParametersNoParts
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Usage: #example
+Title: "Example Close Parameters"
+* parameter[rxDispensation]
+  * name = "rxDispensation"
+
 Instance: INVALID-ExampleCloseInputParametersReferenceWrong
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
@@ -91,4 +108,25 @@ Title: "Example Close Parameters"
   * part[medication]
     * name = "medication"
     * resource = SimpleMedication
+
+Instance: INVALID-ExampleCloseInputParametersReferenceWrongMultiple
+InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Usage: #example
+Title: "Example Close Parameters"
+* parameter[rxDispensation][+]
+  * name = "rxDispensation"
+  * part[medicationDispense]
+    * name = "medicationDispense"
+    * resource = Example-MedicationDispense
+  * part[medication]
+    * name = "medication"
+    * resource = Medication-Without-Strength-Code
+* parameter[rxDispensation][+]
+  * name = "rxDispensation"
+  * part[medicationDispense]
+    * name = "medicationDispense"
+    * resource = Example-MedicationDispense-2
+  * part[medication]
+    * name = "medication"
+    * resource = SumatripanMedication
 */

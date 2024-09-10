@@ -16,10 +16,10 @@ Description: "Ressource used for the communication of dispense request between p
 * status = #unknown (exactly)
 * sent MS
   * ^short = "The time when this communication was sent."
-  * ^comment = "Set by the eprescription server."
+  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
 * received MS
   * ^short = "The time when this communication was received."
-  * ^comment = "Set by the eprescription server."
+  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
 * recipient 1..1 MS
   * ^short = "The entity (e.g. person, organization) which was the target of the communication."
   * ^comment = "This needs to be set by the sender of the communication to define the target."
@@ -42,4 +42,4 @@ Description: "Ressource used for the communication of dispense request between p
 Invariant: workflow-communication-payload-1
 Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird"
 * severity = #error
-* expression = "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').valueCoding.code != '162' implies payload.exists() and payload.empty().not())"
+* expression = "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code != '162' implies payload.exists() and payload.empty().not())"

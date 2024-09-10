@@ -124,7 +124,7 @@
     "fshName": "Augentropfen",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 19,
+    "startLine": 20,
     "endLine": 37
   },
   {
@@ -133,7 +133,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
     "startLine": 2,
-    "endLine": 17
+    "endLine": 18
   },
   {
     "outputFile": "Medication-Medication-Rezeptur-FD.json",
@@ -205,7 +205,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
     "startLine": 39,
-    "endLine": 57
+    "endLine": 56
   },
   {
     "outputFile": "Medication-SimpleMedication.json",
