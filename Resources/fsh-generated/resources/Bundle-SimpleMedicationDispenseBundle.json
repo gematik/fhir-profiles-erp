@@ -4,10 +4,10 @@
   "type": "searchset",
   "entry": [
     {
-      "fullUrl": "urn:uuid:09796bf6-e84b-487c-878c-736affcd0a1f",
+      "fullUrl": "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01",
       "resource": {
         "resourceType": "MedicationDispense",
-        "id": "09796bf6-e84b-487c-878c-736affcd0a1f",
+        "id": "160.000.000.000.000.01",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
@@ -43,7 +43,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b",
+      "fullUrl": "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b",
       "resource": {
         "resourceType": "Medication",
         "id": "86ce7563-9819-4dfa-9944-d307f7cfec9b",

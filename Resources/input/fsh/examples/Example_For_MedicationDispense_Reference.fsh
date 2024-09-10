@@ -3,9 +3,9 @@ InstanceOf: Bundle
 Title:   "Example for Simple MedicationDispense with Medication"
 Usage: #example
 * type = #searchset
-* entry[+].fullUrl = "urn:uuid:09796bf6-e84b-487c-878c-736affcd0a1f"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
 
 
@@ -14,13 +14,13 @@ InstanceOf: Bundle
 Title:   "Example for Multiple MedicationDispense with Medication for a Task"
 Usage: #example
 * type = #searchset
-* entry[+].fullUrl = "urn:uuid:09796bf6-e84b-487c-878c-736affcd0a1f"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
-* entry[+].fullUrl = "urn:uuid:f428f616-4c97-45c9-845d-65c90277c8f5"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
-* entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
 
 
@@ -29,9 +29,9 @@ InstanceOf: Bundle
 Title:   "Example for MedicationDispense with a complex Medication"
 Usage: #example
 * type = #searchset
-* entry[+].fullUrl = "urn:uuid:09796bf6-e84b-487c-878c-736affcd0a1f"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.03"
 * entry[=].resource = Complex-MedicationDispense
-* entry[+].fullUrl = "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/627e0f0c-1e11-4985-901a-033bffd9ac67"
 * entry[=].resource = Medication-Complex-FD
 
 
@@ -40,19 +40,19 @@ InstanceOf: Bundle
 Title:   "Example for MedicationDispense with a complex Medication"
 Usage: #example
 * type = #searchset
-* entry[+].fullUrl = "urn:uuid:09796bf6-e84b-487c-878c-736affcd0a1f"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
-* entry[+].fullUrl = "urn:uuid:f428f616-4c97-45c9-845d-65c90277c8f5"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
-* entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
 //1.2
-* entry[+].fullUrl = "urn:uuid:e546e4a6-c041-461a-b498-49d7d86c2059"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.04"
 * entry[=].resource =  MedicationDispense-1-2
 //1.3
-* entry[+].fullUrl = "urn:uuid:7601c8d7-fd58-4043-b5f6-3a4591e2a742"
+* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.05"
 * entry[=].resource =  MedicationDispense-1-3
 
 Instance: Simple-MedicationDispense
@@ -60,7 +60,7 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #inline
 Title: "Example Medication Dispense"
 Description: "Example of a Medication Dispense."
-* id = "09796bf6-e84b-487c-878c-736affcd0a1f"
+* id = "160.000.000.000.000.01"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.000.000.000.01"
 * subject.identifier.system = $identifier-kvid-10
@@ -83,7 +83,7 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #inline
 Title: "Example Medication Dispense 2"
 Description: "Example of a Medication Dispense 2."
-* id = "f428f616-4c97-45c9-845d-65c90277c8f5"
+* id = "160.000.000.000.000.02"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.000.000.000.02"
 * subject.identifier.system = $identifier-kvid-10
@@ -98,7 +98,7 @@ InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #inline
 Title: "Example Medication Dispense 2"
 Description: "Example of a Medication Dispense 2."
-* id = "f428f616-4c97-45c9-845d-65c90277c8f5"
+* id = "160.000.000.000.000.03"
 * identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[prescriptionID].value = "160.000.000.000.000.03"
 * subject.identifier.system = $identifier-kvid-10
@@ -163,7 +163,7 @@ Alias: $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/CodeSystem/KBV_C
 Instance: MedicationDispense-1-2
 InstanceOf: MedicationDispense
 Usage: #inline
-* id = "e546e4a6-c041-461a-b498-49d7d86c2059"
+* id = "160.000.000.000.000.04"
 * medicationReference = Reference(Medication-1-2)
 * contained = Medication-1-2
 * dosageInstruction.text = "1-0-1-0"
@@ -203,7 +203,7 @@ Usage: #inline
 Instance: MedicationDispense-1-3
 InstanceOf: MedicationDispense
 Usage: #inline
-* id = "7601c8d7-fd58-4043-b5f6-3a4591e2a742"
+* id = "160.000.000.000.000.05"
 * medicationReference = Reference(Medication-1-3)
 * contained = Medication-1-3
 * dosageInstruction.text = "1-0-1-0"
