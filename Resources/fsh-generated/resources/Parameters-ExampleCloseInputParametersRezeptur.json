@@ -1,6 +1,6 @@
 {
   "resourceType": "Parameters",
-  "id": "ExampleOperationCloseInputParametersRezeptur",
+  "id": "ExampleCloseInputParametersRezeptur",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.4"
@@ -94,7 +94,7 @@
                 "extension": [
                   {
                     "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-total-quantity-formulation-extension",
-                    "valueString": "100 ml"
+                    "valueString": "100"
                   }
                 ],
                 "value": 20,

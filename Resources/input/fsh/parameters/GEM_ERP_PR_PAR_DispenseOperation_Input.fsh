@@ -18,6 +18,7 @@ Description: "This profile defines the parameters for dispensing a medication fr
   * name = "rxDispensation"
   * value[x] 0..0
   * resource 0..0
+  * obeys workflow-parameters-close-dispense-medication-references
   * part MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "name"

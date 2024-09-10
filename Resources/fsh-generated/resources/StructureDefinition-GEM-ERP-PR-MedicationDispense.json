@@ -61,7 +61,7 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "The MedicationDispense shows a contained medication which was dispensed",
+        "definition": "The MedicationDispense references a medication which was dispensed",
         "type": [
           {
             "code": "Reference",
