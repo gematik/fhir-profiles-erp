@@ -22,6 +22,31 @@ Usage: #example
 * amount.numerator.extension[totalQuantity].valueString = "20"
 * amount.denominator.value = 1
 
+// Single Medication
+Instance: SumatripanMedicationWithID
+InstanceOf: GEM_ERP_PR_Medication
+Title:   "Sample Medication Sumatripan"
+Usage: #inline
+* id = "30e0e53f-275c-46f5-9e59-04d55735dabb"
+// Arzneimittelkategorie
+* extension[drugCategory].valueCoding = EPADrugCategoryCS#00
+
+// Impfstoff
+* extension[isVaccine].valueBoolean = false
+
+// normgroesse
+* extension[normSizeCode].url = "http://fhir.de/StructureDefinition/normgroesse"
+* extension[normSizeCode].valueCode = #N1
+* code.coding[pzn].system = "http://fhir.de/CodeSystem/ifa/pzn"
+* code.coding[pzn].code = #06313728
+* code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
+* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].code = #TAB
+* amount.numerator.value = 20
+* amount.numerator.unit = "St"
+* amount.numerator.extension[totalQuantity].valueString = "20"
+* amount.denominator.value = 1
+
 Instance: SimpleMedication
 InstanceOf: GEM_ERP_PR_Medication
 Title:   "Sample Simple Medication"

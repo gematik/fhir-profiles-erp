@@ -14,7 +14,7 @@
           "name": "medicationDispense",
           "resource": {
             "resourceType": "MedicationDispense",
-            "id": "Example-MedicationDispense",
+            "id": "160.000.033.491.280.78",
             "meta": {
               "profile": [
                 "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
@@ -45,7 +45,7 @@
             ],
             "whenHandedOver": "2024-04-03",
             "medicationReference": {
-              "reference": "Medication/SumatripanMedication"
+              "reference": "Medication/30e0e53f-275c-46f5-9e59-04d55735dabb"
             }
           }
         },
@@ -53,7 +53,7 @@
           "name": "medication",
           "resource": {
             "resourceType": "Medication",
-            "id": "SumatripanMedication",
+            "id": "30e0e53f-275c-46f5-9e59-04d55735dabb",
             "meta": {
               "profile": [
                 "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"

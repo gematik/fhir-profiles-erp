@@ -12,6 +12,21 @@ Description: "Example of a Medication Dispense."
 * whenHandedOver = "2024-04-03"
 * medicationReference = Reference(SumatripanMedication)
 
+Instance: Example-MedicationDispense-ToID
+InstanceOf: GEM_ERP_PR_MedicationDispense
+Usage: #inline
+Title: "Example Medication Dispense"
+Description: "Example of a Medication Dispense."
+* id = "160.000.033.491.280.78"
+* identifier[prescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
+* subject.identifier.system = $identifier-kvid-10
+* subject.identifier.value = "X123456789"
+* performer.actor.identifier.system = $identifier-telematik-id
+* performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
+* whenHandedOver = "2024-04-03"
+* medicationReference = Reference(30e0e53f-275c-46f5-9e59-04d55735dabb)
+
 Instance: Example-MedicationDispense-Without-Medication
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example

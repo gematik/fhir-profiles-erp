@@ -53,10 +53,10 @@ Title: "Example Dispense Parameters Response on Success"
   * name = "rxDispensation"
   * part[medicationDispense]
     * name = "medicationDispense"
-    * resource = Example-MedicationDispense
+    * resource = Example-MedicationDispense-ToID
   * part[medication]
     * name = "medication"
-    * resource = SumatripanMedication
+    * resource = SumatripanMedicationWithID
 
 Instance: ExampleDispenseOutputParametersError
 InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
