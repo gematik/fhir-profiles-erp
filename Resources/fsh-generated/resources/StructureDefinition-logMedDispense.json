@@ -12,7 +12,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [

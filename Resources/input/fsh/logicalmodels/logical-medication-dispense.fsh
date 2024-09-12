@@ -1,5 +1,5 @@
 Logical: GEM_ERP_LOG_MedicationDispense
-Parent: Base
+Parent: Element
 Id: logMedDispense
 Title: "Logical Medication Dispense"
 Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden."
