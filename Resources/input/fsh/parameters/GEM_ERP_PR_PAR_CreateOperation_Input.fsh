@@ -3,7 +3,8 @@ Parent: Parameters
 Id: GEM-ERP-PR-PAR-Create-Operation-Input
 Title: "GEM ERP PR CreateOperation Input Parameter"
 Description: "This profile defines the parameters for creating a workflow for a prescription from PVS to the E-Rezept-Fachdienst."
-* insert Profile(GEM_ERP_PR_PAR_CreateOperation_Input)
+// Das muss bleiben, damit PVS für $create kein meta.profile angeben müssen
+* insert StructureDefinition(GEM_ERP_PR_PAR_CreateOperation_Input)
 
 * parameter 1..1
 * parameter ^slicing.discriminator.type = #pattern
