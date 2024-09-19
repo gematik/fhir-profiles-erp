@@ -38,12 +38,12 @@
         ],
         "whenHandedOver": "2025-09-06",
         "medicationReference": {
-          "reference": "Medication/627e0f0c-1e11-4985-901a-033bffd9ac67"
+          "reference": "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67"
         }
       }
     },
     {
-      "fullUrl": "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/627e0f0c-1e11-4985-901a-033bffd9ac67",
+      "fullUrl": "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67",
       "resource": {
         "resourceType": "Medication",
         "id": "627e0f0c-1e11-4985-901a-033bffd9ac67",

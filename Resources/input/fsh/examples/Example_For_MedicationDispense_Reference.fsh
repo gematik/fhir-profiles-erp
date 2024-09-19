@@ -5,7 +5,7 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
 
 
@@ -16,11 +16,11 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/56c61db7-0a94-4b7b-832a-b8ac3752035d"
+* entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
 
 
@@ -31,7 +31,7 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.03"
 * entry[=].resource = Complex-MedicationDispense
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/627e0f0c-1e11-4985-901a-033bffd9ac67"
+* entry[+].fullUrl = "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67"
 * entry[=].resource = Medication-Complex-FD
 
 
@@ -42,11 +42,11 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b"
+* entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
-* entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Medication/56c61db7-0a94-4b7b-832a-b8ac3752035d"
+* entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
 //1.2
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.04"
@@ -68,7 +68,7 @@ Description: "Example of a Medication Dispense."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2025-09-06"
-* medicationReference = Reference(Medication/86ce7563-9819-4dfa-9944-d307f7cfec9b)
+* medicationReference = Reference(urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b)
 
 Instance: Simple-Medication
 InstanceOf: GEM_ERP_PR_Medication
@@ -91,7 +91,7 @@ Description: "Example of a Medication Dispense 2."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2025-09-06"
-* medicationReference = Reference(Medication/56c61db7-0a94-4b7b-832a-b8ac3752035d)
+* medicationReference = Reference(urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d)
 
 Instance: Complex-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense
@@ -106,7 +106,7 @@ Description: "Example of a Medication Dispense 2."
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * whenHandedOver = "2025-09-06"
-* medicationReference = Reference(Medication/627e0f0c-1e11-4985-901a-033bffd9ac67)
+* medicationReference = Reference(urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67)
 
 Instance: Simple-Medication-2
 InstanceOf: GEM_ERP_PR_Medication
