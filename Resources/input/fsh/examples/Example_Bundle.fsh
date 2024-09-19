@@ -17,7 +17,7 @@ Usage: #example
 * identifier[+].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[=].value = "160.000.033.491.280.78"
 * type = #document
-* timestamp = "2022-03-18T15:28:00+00:00"
+* insert DateTime(timestamp)
 * entry[DocumentInformation].fullUrl = "urn:uuid:c624cf47-e235-4624-af71-0a09dc9254dc"
 * entry[DocumentInformation].resource = ReceiptBundleComposition
 * entry[SigningDevice].fullUrl = "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
@@ -26,7 +26,7 @@ Usage: #example
 * entry[PrescriptionDigest].resource = ReceiptBundleBinary
 * signature.type[AuthorsSignature].system = "urn:iso-astm:E1762-95:2013"
 * signature.type[AuthorsSignature].code = #1.2.840.10065.1.12.1.1
-* signature.when = "2022-03-18T15:28:00+00:00"
+* insert DateTime(signature.when)
 * signature.who.reference = "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
 * signature.sigFormat = #application/pkcs7-mime
 * signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="

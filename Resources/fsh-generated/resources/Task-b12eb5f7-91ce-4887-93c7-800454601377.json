@@ -23,7 +23,7 @@
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
-      "valueDate": "2022-04-02"
+      "valueDate": "2025-01-15"
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",

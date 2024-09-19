@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_AuditEvent.fsh",
     "startLine": 2,
-    "endLine": 32
+    "endLine": 33
   },
   {
     "outputFile": "Bundle-Bundle-AcceptOperation.json",
@@ -60,8 +60,8 @@
     "fshName": "Communication_DispenseRequest_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
-    "startLine": 20,
-    "endLine": 35
+    "startLine": 19,
+    "endLine": 34
   },
   {
     "outputFile": "Communication-7977a4ab-97a9-4d95-afb3-6c4c1e2ac596.json",
@@ -84,8 +84,8 @@
     "fshName": "Communication_DispenseRequest",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
-    "startLine": 2,
-    "endLine": 18
+    "startLine": 1,
+    "endLine": 17
   },
   {
     "outputFile": "Medication-Augentropfen.json",
@@ -820,24 +820,24 @@
     "fshName": "TaskInClosedState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 144,
-    "endLine": 173
+    "startLine": 146,
+    "endLine": 175
   },
   {
     "outputFile": "Task-607255ed-ce41-47fc-aad3-cfce1c39963f.json",
     "fshName": "TaskInReadyState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 26,
-    "endLine": 53
+    "startLine": 28,
+    "endLine": 55
   },
   {
     "outputFile": "Task-9b48f82c-9c11-4a57-aa72-a805f9537a82.json",
     "fshName": "TaskIn-ProgressState-Dispensed",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 82,
-    "endLine": 111
+    "startLine": 84,
+    "endLine": 113
   },
   {
     "outputFile": "Task-b12eb5f7-91ce-4887-93c7-800454601377.json",
@@ -845,23 +845,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
     "startLine": 2,
-    "endLine": 24
+    "endLine": 26
   },
   {
     "outputFile": "Task-d70932d1-9e1c-483c-b2d4-b7dced09b35e.json",
     "fshName": "TaskIn-ProgressState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 55,
-    "endLine": 80
+    "startLine": 57,
+    "endLine": 82
   },
   {
     "outputFile": "Task-f5c21409-b84b-4125-8649-5630a00906b1.json",
     "fshName": "TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 113,
-    "endLine": 142
+    "startLine": 115,
+    "endLine": 144
   },
   {
     "outputFile": "ValueSet-GEM-ERP-VS-AvailabilityStatus.json",

@@ -13,7 +13,7 @@ Usage: #example
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
-* sent = "2020-04-29T13:43:30.128+02:00"
+* insert DateTimeStamp(sent)
 * payload.extension[InsuranceProvider].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
 * payload.extension[InsuranceProvider].valueIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * payload.extension[InsuranceProvider].valueIdentifier.value = "109500969"

@@ -1,4 +1,3 @@
-
 Instance: Communication_DispenseRequest
 InstanceOf: GEM_ERP_PR_Communication_DispReq
 Title: "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
@@ -14,7 +13,7 @@ Usage: #example
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
-* sent = "2020-04-29T13:44:30.128+02:00"
+* insert DateTimeStamp(sent)
 * payload.contentString = "{ \"version\": \"1\", \"supplyOptionsType\": \"delivery\", \"name\": \"Dr. Maximilian von Muster\", \"address\": [ \"wohnhaft bei Emilia Fischer\", \"Bundesallee 312\", \"123. OG\", \"12345 Berlin\" ], \"hint\": \"Bitte im Morsecode klingeln: -.-.\", \"phone\": \"004916094858168\" }"
 
 Instance: Communication_DispenseRequest_DiGA
@@ -32,7 +31,7 @@ Usage: #example
 * recipient[=].identifier.value = "8-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
-* sent = "2020-04-29T13:44:30.128+02:00"
+* insert DateTimeStamp(sent)
 
 /*
 Instance: INVALID-Communication-DispenseRequest-DiGA
@@ -49,7 +48,7 @@ Usage: #example
 * recipient[=].identifier.value = "8-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
-* sent = "2020-04-29T13:44:30.128+02:00"
+* insert DateTimeStamp(sent)
 * payload.contentString = "U.N.V.E.U"
 
 Instance: INVALID-Communication-DispenseRequest
@@ -66,5 +65,5 @@ Usage: #example
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
 * sender.identifier.value = "X234567890"
-* sent = "2020-04-29T13:44:30.128+02:00"
+* insert DateTimeStamp(sent)
 */
