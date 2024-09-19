@@ -14,7 +14,8 @@ Usage: #example
 * subtype[=].code = #create
 * language = #de
 * action = #C
-* recorded = "2022-04-27T08:04:27.434+00:00"
+* insert DateTimeStamp(recorded)
+* recorded = "2025-01-15T08:01:02.434+00:00"
 * outcome = #0
 * agent[+].type.coding[+].system = "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
 * agent[=].type.coding[=].code = #humanuser

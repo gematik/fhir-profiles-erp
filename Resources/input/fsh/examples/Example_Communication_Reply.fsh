@@ -12,7 +12,7 @@ Usage: #example
 * sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * recipient[+].identifier.system = $identifier-kvid-10
 * recipient[=].identifier.value = "X234567890"
-* sent = "2020-04-29T13:46:30.128+02:00"
+* insert DateTimeStamp(sent)
 * payload.extension[AvailabilityStatus].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
 * payload.extension[AvailabilityStatus].valueCoding.system = "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
 * payload.extension[AvailabilityStatus].valueCoding.code = #20

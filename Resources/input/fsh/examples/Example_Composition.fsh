@@ -10,9 +10,9 @@ Usage: #inline
 * extension[Beneficiary].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"
 * status = #final
 * type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
-* date = "2022-03-18T15:29:00+00:00"
+* insert DateTime(date)
+* insert DateTime(event.period.start)
+* insert DateTime(event.period.end)
 * author.reference = "urn:uuid:1413b38d-81a6-432a-a801-98d7307a422b"
 * title = "Quittung"
-* event.period.start = "2022-03-18T15:28:00+00:00"
-* event.period.end = "2022-03-18T15:29:00+00:00"
 * section[+].entry.reference = "urn:uuid:b939a82a-9c23-4b6d-a139-f468d1b9d652"

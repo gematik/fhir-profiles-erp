@@ -9,6 +9,16 @@ RuleSet: OperationVersioning
 * version = "1.4"
 * date = "2024-07-15"
 
+// Dates for Examples (Date of actual release)
+RuleSet: Date(field)
+* {field} = "2025-01-15"
+
+RuleSet: DateTime(field)
+* {field} = "2025-01-15T15:29:00+00:00"
+
+RuleSet: DateTimeStamp(field)
+* {field} = "2025-01-15T15:29:00.434+00:00"
+
 // Rules to set meta.profile in profiles and instances
 RuleSet: PackageMetaProfileExactly(profile)
 * insert MetaProfileExactly(https://gematik.de/fhir/erp/{profile}, 1.4)

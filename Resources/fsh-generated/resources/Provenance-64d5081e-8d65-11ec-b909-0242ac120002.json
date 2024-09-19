@@ -48,7 +48,7 @@
         }
       ],
       "sigFormat": "application/pkcs7-mime",
-      "when": "2022-02-14T08:39:25+01:00",
+      "when": "2025-01-15T15:29:00+00:00",
       "who": {
         "reference": "https://www.bundesdruckerei.de/"
       },
@@ -63,5 +63,5 @@
       "reference": "Task/160.100.000.000.024.67"
     }
   ],
-  "recorded": "2022-02-14T08:39:24+01:00"
+  "recorded": "2025-01-15T15:29:00.434+00:00"
 }
