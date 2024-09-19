@@ -40,6 +40,9 @@
         "medicationReference": {
           "reference": "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
         }
+      },
+      "search": {
+        "mode": "match"
       }
     },
     {
@@ -60,6 +63,9 @@
             }
           ]
         }
+      },
+      "search": {
+        "mode": "include"
       }
     }
   ]

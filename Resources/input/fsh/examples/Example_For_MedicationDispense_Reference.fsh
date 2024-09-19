@@ -5,8 +5,10 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
+* entry[=].search.mode = #include
 
 
 Instance: MultipleMedicationDispenseBundle
@@ -16,12 +18,16 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
+* entry[=].search.mode = #include
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
+* entry[=].search.mode = #include
 
 
 Instance: KomplexMedicationDispenseBundle
@@ -31,8 +37,10 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.03"
 * entry[=].resource = Complex-MedicationDispense
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:627e0f0c-1e11-4985-901a-033bffd9ac67"
 * entry[=].resource = Medication-Complex-FD
+* entry[=].search.mode = #include
 
 
 Instance: SearchSetMultipleMedicationDispenseBundle
@@ -42,18 +50,24 @@ Usage: #example
 * type = #searchset
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.01"
 * entry[=].resource = Simple-MedicationDispense
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
 * entry[=].resource = Simple-Medication
+* entry[=].search.mode = #include
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.02"
 * entry[=].resource = Simple-MedicationDispense-2
+* entry[=].search.mode = #match
 * entry[+].fullUrl = "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
 * entry[=].resource = Simple-Medication-2
+* entry[=].search.mode = #include
 //1.2
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.04"
 * entry[=].resource =  MedicationDispense-1-2
+* entry[=].search.mode = #match
 //1.3
 * entry[+].fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/MedicationDispense/160.000.000.000.000.05"
 * entry[=].resource =  MedicationDispense-1-3
+* entry[=].search.mode = #match
 
 Instance: Simple-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense

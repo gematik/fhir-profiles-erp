@@ -40,6 +40,9 @@
         "medicationReference": {
           "reference": "urn:uuid:86ce7563-9819-4dfa-9944-d307f7cfec9b"
         }
+      },
+      "search": {
+        "mode": "match"
       }
     },
     {
@@ -60,6 +63,9 @@
             }
           ]
         }
+      },
+      "search": {
+        "mode": "include"
       }
     },
     {
@@ -99,6 +105,9 @@
         "medicationReference": {
           "reference": "urn:uuid:56c61db7-0a94-4b7b-832a-b8ac3752035d"
         }
+      },
+      "search": {
+        "mode": "match"
       }
     },
     {
@@ -119,6 +128,9 @@
             }
           ]
         }
+      },
+      "search": {
+        "mode": "include"
       }
     },
     {
@@ -235,6 +247,9 @@
             "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
           }
         ]
+      },
+      "search": {
+        "mode": "match"
       }
     },
     {
@@ -351,6 +366,9 @@
             "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
           }
         ]
+      },
+      "search": {
+        "mode": "match"
       }
     }
   ]
