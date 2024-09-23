@@ -653,7 +653,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_DispReq.fsh",
     "startLine": 1,
-    "endLine": 40
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-InfoReq.json",

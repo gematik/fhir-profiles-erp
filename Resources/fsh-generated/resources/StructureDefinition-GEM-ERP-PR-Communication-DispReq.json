@@ -10,7 +10,7 @@
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
-  "abstract": true,
+  "abstract": false,
   "type": "Communication",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
   "derivation": "constraint",
