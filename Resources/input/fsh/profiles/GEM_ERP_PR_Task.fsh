@@ -58,7 +58,7 @@ Description: "This resource manages the ePrescription workflow"
 * input[patientReceipt].type.coding.system 1..
 * input[patientReceipt].type.coding.code 1..
 * input[patientReceipt].type.coding.code = #2 (exactly)
-* input[patientReceipt].value[x] only Reference($KBV_PR_ERP_Bundle)
+* input[patientReceipt].value[x] only Reference(KBV_PR_ERP_Bundle)
 * input[patientReceipt] ^short = "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV"
 
 * output ..1 MS
