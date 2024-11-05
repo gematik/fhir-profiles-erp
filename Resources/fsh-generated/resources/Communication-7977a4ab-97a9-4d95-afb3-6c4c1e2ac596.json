@@ -7,6 +7,9 @@
     ],
     "tag": [
       {
+        "display": "Reply from Pharmacy to Patient"
+      },
+      {
         "display": "Communication message sent by pharmacy to patient in response to a previous Task-related message"
       }
     ]
