@@ -7,6 +7,9 @@
     ],
     "tag": [
       {
+        "display": "Dispense Request from Patient to Pharmacy"
+      },
+      {
         "display": "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
       }
     ]

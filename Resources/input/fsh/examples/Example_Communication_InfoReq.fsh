@@ -1,3 +1,4 @@
+/*
 Instance: Communication_InformationRequest
 InstanceOf: GEM_ERP_PR_Communication_InfoReq
 Title: "Communication message sent by patient to pharmacy to ask for availybility of medicine WITHOUT providing the AccessCode"
@@ -33,3 +34,4 @@ Usage: #example
 * payload.extension[PreferredSupplyOptions].extension[delivery].url = "delivery"
 * payload.extension[PreferredSupplyOptions].extension[delivery].valueBoolean = true
 * payload.contentString = "U.N.V.E.U."
+*/

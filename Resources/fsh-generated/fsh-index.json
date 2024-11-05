@@ -88,28 +88,28 @@
     "endLine": 8
   },
   {
+    "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
+    "fshName": "Communication_Reply_KTR",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Communication_Diga.fsh",
+    "startLine": 2,
+    "endLine": 17
+  },
+  {
     "outputFile": "Communication-2be1c6ac-5d10-47f6-84ee-8318b2c22c76.json",
     "fshName": "Communication_DispenseRequest_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
-    "startLine": 19,
-    "endLine": 34
+    "startLine": 20,
+    "endLine": 36
   },
   {
     "outputFile": "Communication-7977a4ab-97a9-4d95-afb3-6c4c1e2ac596.json",
-    "fshName": "Communication_Reply",
+    "fshName": "Communication_Reply_Pharmacy",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Reply.fsh",
-    "startLine": 2,
-    "endLine": 26
-  },
-  {
-    "outputFile": "Communication-8ca3c379-ac86-470f-bc12-178c9008f5c9.json",
-    "fshName": "Communication_InformationRequest",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Communication_InfoReq.fsh",
     "startLine": 1,
-    "endLine": 35
+    "endLine": 25
   },
   {
     "outputFile": "Communication-a218a36e-f2fd-4603-ba67-c827acfef01b.json",
@@ -117,7 +117,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 18
   },
   {
     "outputFile": "Medication-Augentropfen.json",
