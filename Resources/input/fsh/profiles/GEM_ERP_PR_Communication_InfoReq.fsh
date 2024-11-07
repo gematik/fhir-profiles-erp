@@ -4,6 +4,7 @@ Id: GEM-ERP-PR-Communication-InfoReq
 Title: "Informative request from Patient to Provider"
 Description: "Ressource used for the communication of informative requests between patient and provider."
 * insert Profile(GEM_ERP_PR_Communication_InfoReq)
+* ^status = #retired
 * basedOn 1..1
   * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
   * ^comment = "Has the form 'Task/{{PrescriptionID}}'"
