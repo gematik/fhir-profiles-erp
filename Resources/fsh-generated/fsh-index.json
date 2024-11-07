@@ -645,7 +645,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Bundle.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 50
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DispReq.json",
