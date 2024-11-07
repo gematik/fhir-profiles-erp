@@ -12,12 +12,8 @@ Description: "Handles medical information about the redeemed prescription"
   * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
   * itemReference ^type.aggregation = #contained
  
-* ingredient.strength.numerator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.numerator.system.extension[dataAbsentReason].value[x] = #unknown
-* ingredient.strength.numerator.code.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.numerator.code.extension[dataAbsentReason].value[x] = #unknown
  
-* ingredient.strength.denominator.system.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.denominator.system.extension[dataAbsentReason].value[x] = #unknown
-* ingredient.strength.denominator.code.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
 * ingredient.strength.denominator.code.extension[dataAbsentReason].value[x] = #unknown

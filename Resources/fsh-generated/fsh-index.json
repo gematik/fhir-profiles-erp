@@ -709,7 +709,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
@@ -829,7 +829,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
-    "endLine": 77
+    "endLine": 83
   },
   {
     "outputFile": "StructureDefinition-logMedDispense.json",
