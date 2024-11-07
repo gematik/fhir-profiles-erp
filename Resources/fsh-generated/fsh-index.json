@@ -661,7 +661,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_InfoReq.fsh",
     "startLine": 1,
-    "endLine": 53
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Reply.json",
@@ -669,7 +669,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Reply.fsh",
     "startLine": 1,
-    "endLine": 51
+    "endLine": 49
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Representative.json",
@@ -677,7 +677,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Representative.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 32
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Composition.json",
