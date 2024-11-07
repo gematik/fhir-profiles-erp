@@ -685,7 +685,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Composition.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 45
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
@@ -717,7 +717,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_DiGA.fsh",
     "startLine": 1,
-    "endLine": 57
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",

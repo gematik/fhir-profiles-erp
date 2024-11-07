@@ -143,6 +143,7 @@
       {
         "id": "MedicationDispense.medication[x].identifier",
         "path": "MedicationDispense.medication[x].identifier",
+        "short": "Unique identification number for a prescription unit of a DiGA (PZN).",
         "mustSupport": true
       },
       {
@@ -155,7 +156,6 @@
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
-        "short": "Unique identification number for a prescription unit of a DiGA (PZN).",
         "min": 1,
         "mustSupport": true
       },
@@ -166,10 +166,9 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationDispense.subject.identifier",
-        "path": "MedicationDispense.subject.identifier",
-        "short": "The patients KVNR",
-        "comment": "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
+        "id": "MedicationDispense.performer.actor",
+        "path": "MedicationDispense.performer.actor",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.performer.actor.identifier",
