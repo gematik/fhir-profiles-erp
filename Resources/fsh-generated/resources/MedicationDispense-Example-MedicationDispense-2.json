@@ -31,6 +31,6 @@
   ],
   "whenHandedOver": "2024-04-03",
   "medicationReference": {
-    "reference": "Medication/Medication-Without-Strength-Code"
+    "reference": "Medication/SimpleMedication"
   }
 }

@@ -30,7 +30,7 @@ Title: "Example Dispense Parameters"
     * resource = Example-MedicationDispense-2
   * part[medication]
     * name = "medication"
-    * resource = Medication-Without-Strength-Code
+    * resource = SimpleMedication
 
 Instance: ExampleDispenseInputParametersKombipackung
 InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Input

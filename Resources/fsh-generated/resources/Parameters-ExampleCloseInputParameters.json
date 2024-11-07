@@ -107,6 +107,9 @@
               "denominator": {
                 "value": 1
               }
+            },
+            "batch": {
+              "lotNumber": "1234567890"
             }
           }
         }

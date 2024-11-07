@@ -9,7 +9,7 @@ Usage: #example
 * contained[+] = SumatripanMedication
 * basedOn.reference = "Task/160.000.033.491.280.78"
 * status = #unknown
-* about = Reference(SumatripanMedication)
+* about = Reference(SumatripanMedication) //ACHTUNG: wenn das wieder aktiviert wird muss eine Medication ohne ChargenNUmmer verwendet werden
 * recipient[+].identifier.system = $identifier-telematik-id
 * recipient[=].identifier.value = "3-SMC-B-Testkarte-883110000123465"
 * sender.identifier.system = $identifier-kvid-10
