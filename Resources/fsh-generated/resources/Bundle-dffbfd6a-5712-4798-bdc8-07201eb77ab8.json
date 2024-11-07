@@ -56,8 +56,8 @@
         "type": {
           "coding": [
             {
-              "code": "3",
               "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
+              "code": "3",
               "display": "Receipt"
             }
           ]

@@ -1,9 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Composition",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:43:58.4+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
   "version": "1.4",
   "name": "GEM_ERP_PR_Composition",
@@ -86,8 +83,15 @@
         }
       },
       {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+      },
+      {
         "id": "Composition.type.coding.code",
         "path": "Composition.type.coding.code",
+        "min": 1,
         "fixedCode": "3"
       },
       {
