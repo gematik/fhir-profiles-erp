@@ -613,7 +613,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_AuditEvent.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-BfArMApproval.json",
