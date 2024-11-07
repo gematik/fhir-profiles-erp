@@ -156,16 +156,16 @@
     "fshName": "Medication-Without-Strength-Code",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 58,
-    "endLine": 75
+    "startLine": 68,
+    "endLine": 85
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Numerator.json",
     "fshName": "Medication-Without-Strength-Numerator",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 77,
-    "endLine": 95
+    "startLine": 87,
+    "endLine": 105
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
@@ -212,8 +212,8 @@
     "fshName": "SimpleMedication",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 50,
-    "endLine": 55
+    "startLine": 56,
+    "endLine": 65
   },
   {
     "outputFile": "Medication-SumatripanMedication.json",
@@ -221,15 +221,15 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 2,
-    "endLine": 23
+    "endLine": 26
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-2.json",
     "fshName": "Example-MedicationDispense-2",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 44,
-    "endLine": 56
+    "startLine": 41,
+    "endLine": 52
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-DiGA-DeepLink.json",
@@ -260,24 +260,24 @@
     "fshName": "Example-MedicationDispense-Kombipackung",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 58,
-    "endLine": 70
+    "startLine": 54,
+    "endLine": 65
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Rezeptur.json",
     "fshName": "Example-MedicationDispense-Rezeptur",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 72,
-    "endLine": 84
+    "startLine": 67,
+    "endLine": 78
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Without-Medication.json",
     "fshName": "Example-MedicationDispense-Without-Medication",
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
-    "startLine": 30,
-    "endLine": 42
+    "startLine": 28,
+    "endLine": 39
   },
   {
     "outputFile": "MedicationDispense-Example-MedicationDispense.json",
@@ -285,7 +285,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_MedicationDispense.fsh",
     "startLine": 1,
-    "endLine": 13
+    "endLine": 12
   },
   {
     "outputFile": "OperationDefinition-AbortOperation.json",

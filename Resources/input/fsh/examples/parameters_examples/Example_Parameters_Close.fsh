@@ -30,7 +30,7 @@ Title: "Example Close Parameters"
     * resource = Example-MedicationDispense-2
   * part[medication]
     * name = "medication"
-    * resource = Medication-Without-Strength-Code
+    * resource = SimpleMedication
 
 Instance: ExampleCloseInputParametersKombipackung
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input

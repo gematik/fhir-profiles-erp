@@ -9,6 +9,9 @@ Usage: #example
 // Impfstoff
 * extension[isVaccine].valueBoolean = false
 
+// ChargenInformation
+* batch.lotNumber = "1234567890"
+
 // normgroesse
 * extension[normSizeCode].url = "http://fhir.de/StructureDefinition/normgroesse"
 * extension[normSizeCode].valueCode = #N1
@@ -34,6 +37,9 @@ Usage: #inline
 // Impfstoff
 * extension[isVaccine].valueBoolean = false
 
+// ChargenInformation
+* batch.lotNumber = "1234567890"
+
 // normgroesse
 * extension[normSizeCode].url = "http://fhir.de/StructureDefinition/normgroesse"
 * extension[normSizeCode].valueCode = #N1
@@ -51,6 +57,10 @@ Instance: SimpleMedication
 InstanceOf: GEM_ERP_PR_Medication
 Title:   "Sample Simple Medication"
 Usage: #example
+
+// ChargenInformation
+* batch.lotNumber = "1234567890"
+
 * code.coding[pzn].system = "http://fhir.de/CodeSystem/ifa/pzn"
 * code.coding[pzn].code = #06313728
 

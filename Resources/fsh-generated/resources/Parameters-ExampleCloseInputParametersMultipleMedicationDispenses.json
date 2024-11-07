@@ -107,6 +107,9 @@
               "denominator": {
                 "value": 1
               }
+            },
+            "batch": {
+              "lotNumber": "1234567890"
             }
           }
         }
@@ -150,7 +153,7 @@
             ],
             "whenHandedOver": "2024-04-03",
             "medicationReference": {
-              "reference": "Medication/Medication-Without-Strength-Code"
+              "reference": "Medication/SimpleMedication"
             }
           }
         },
@@ -158,79 +161,22 @@
           "name": "medication",
           "resource": {
             "resourceType": "Medication",
-            "id": "Medication-Without-Strength-Code",
+            "id": "SimpleMedication",
             "meta": {
               "profile": [
                 "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
               ]
             },
-            "ingredient": [
-              {
-                "strength": {
-                  "numerator": {
-                    "value": 85,
-                    "unit": "mg",
-                    "_system": {
-                      "extension": [
-                        {
-                          "valueCode": "unknown",
-                          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-                        }
-                      ]
-                    },
-                    "_code": {
-                      "extension": [
-                        {
-                          "valueCode": "unknown",
-                          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-                        }
-                      ]
-                    }
-                  },
-                  "denominator": {
-                    "value": 250,
-                    "unit": "Milliliter",
-                    "_system": {
-                      "extension": [
-                        {
-                          "valueCode": "unknown",
-                          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-                        }
-                      ]
-                    },
-                    "_code": {
-                      "extension": [
-                        {
-                          "valueCode": "unknown",
-                          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-                        }
-                      ]
-                    }
-                  }
-                },
-                "itemCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "L01DB01",
-                      "system": "http://fhir.de/CodeSystem/bfarm/atc",
-                      "display": "Doxorubicin"
-                    }
-                  ]
-                },
-                "isActive": true
-              }
-            ],
             "code": {
-              "text": "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
-            },
-            "form": {
               "coding": [
                 {
-                  "code": "11210000",
-                  "system": "http://standardterms.edqm.eu",
-                  "display": "Solution for infusion"
+                  "system": "http://fhir.de/CodeSystem/ifa/pzn",
+                  "code": "06313728"
                 }
               ]
+            },
+            "batch": {
+              "lotNumber": "1234567890"
             }
           }
         }
