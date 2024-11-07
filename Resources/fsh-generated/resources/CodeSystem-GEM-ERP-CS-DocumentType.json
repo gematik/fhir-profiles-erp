@@ -20,10 +20,6 @@
     {
       "code": "3",
       "display": "Receipt"
-    },
-    {
-      "code": "4",
-      "display": "Medication Dispense"
     }
   ],
   "date": "2024-07-15",
@@ -40,5 +36,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 4
+  "count": 3
 }

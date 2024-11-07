@@ -69,7 +69,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_DocumentType.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 9
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-FlowType.json",
