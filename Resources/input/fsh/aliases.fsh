@@ -30,8 +30,10 @@ Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefiniti
 
 // Workflow
 Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId
+Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode
 
 // International
 Alias: $sct = http://snomed.info/sct
 Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org
+Alias: $vs-country = http://hl7.org/fhir/ValueSet/country
