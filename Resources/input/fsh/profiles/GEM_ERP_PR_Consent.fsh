@@ -1,6 +1,8 @@
 Profile: GEM_ERP_PR_Consent
 Parent: Consent
 Id: GEM-ERP-PR-Consent
+Title: "Consent for ePrescriptions"
+Description: "Records the consent of the patient for an operation in the context of ePrescription."
 * insert ProfileNoMetaProfileFixed(GEM_ERP_PR_Consent)
 * status = #active (exactly)
 * scope.coding 1..1
