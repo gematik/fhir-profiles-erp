@@ -701,7 +701,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Consent.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
