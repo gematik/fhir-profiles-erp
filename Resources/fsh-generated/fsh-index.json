@@ -16,6 +16,14 @@
     "endLine": 45
   },
   {
+    "outputFile": "Bundle-ExampleGetConsent.json",
+    "fshName": "ExampleGetConsent",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Consent.fsh",
+    "startLine": 16,
+    "endLine": 24
+  },
+  {
     "outputFile": "Bundle-KomplexMedicationDispenseBundle.json",
     "fshName": "KomplexMedicationDispenseBundle",
     "fshType": "Instance",

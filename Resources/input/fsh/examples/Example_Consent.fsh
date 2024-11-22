@@ -12,3 +12,13 @@ Usage: #example
 * patient.identifier.assigner.identifier.value = "98765543"
 * dateTime = "2025-10-01T12:03:23Z"
 * policyRule = v3-ActCode#OPTIN
+
+Instance: ExampleGetConsent
+InstanceOf: Bundle
+Title: "Example for a Bundle with a Consent"
+Usage: #example
+* type = #searchset
+* timestamp = "2025-10-01T12:03:23Z"
+* total = 1
+* entry.fullUrl = "https://erp-dev.zentral.erp.splitdns.ti-dienste.de/Consent/f97a0772-c99f-4159-90c6-2a41c7d96779"
+* entry.resource = ExampleEUConsent
