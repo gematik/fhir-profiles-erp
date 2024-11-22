@@ -5,7 +5,7 @@
   "version": "1.5",
   "name": "GEM_ERP_PR_Signature",
   "title": "Profile for Signature of Bundles in ePrescription Context",
-  "status": "active",
+  "status": "draft",
   "date": "2025-01-01",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

@@ -3,20 +3,7 @@ Parent: Consent
 Id: GEM-ERP-PR-Consent
 Title: "Consent for ePrescriptions"
 Description: "Records the consent of the patient for an operation in the context of ePrescription."
-//* insert ProfileNoMetaProfileFixed(GEM_ERP_PR_Consent)
-
-* insert StructureDefinition({name})
-* meta 1..1
-  * profile 1..*
-    * ^slicing.discriminator.type = #value
-    * ^slicing.discriminator.path = "value"
-    * ^slicing.rules = #open
-    * ^slicing.description = "Slicing for profiles"
-    * ^slicing.ordered = false
-
-  * profile contains consent 1..1
-  * profile[consent] = "https://gematik.de/fhir/erp/GEM_ERP_PR_Consent|1.5" (exactly)
-  
+* insert ProfileMetaSliced(GEM_ERP_PR_Consent) 
 
 * status = #active (exactly)
 * scope.coding 1..1

@@ -5,7 +5,7 @@
   "version": "1.5",
   "name": "GEM_ERP_PR_MedicationDispense_DiGA",
   "title": "Dispensation of a DiGA-Prescription",
-  "status": "active",
+  "status": "draft",
   "date": "2025-01-01",
   "description": "Handles information about the dispensed DiGA",
   "fhirVersion": "4.0.1",

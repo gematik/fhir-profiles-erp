@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "GEM_ERP_VS_ConsentType",
   "id": "GEM-ERP-VS-ConsentType",
   "title": "ValueSet of Consent Codes",
