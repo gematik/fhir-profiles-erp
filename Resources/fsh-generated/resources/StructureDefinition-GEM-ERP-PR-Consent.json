@@ -80,6 +80,24 @@
         ]
       },
       {
+        "id": "Consent.patient.identifier.assigner",
+        "path": "Consent.patient.identifier.assigner",
+        "mustSupport": true
+      },
+      {
+        "id": "Consent.patient.identifier.assigner.identifier",
+        "path": "Consent.patient.identifier.assigner.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-iknr"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Consent.dateTime",
         "path": "Consent.dateTime",
         "min": 1

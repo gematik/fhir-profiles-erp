@@ -13,6 +13,9 @@ Id: GEM-ERP-PR-Consent
 * patient 1..1
   * identifier 1..1
   * identifier only IdentifierKvid10
+    * assigner MS
+    * assigner.identifier MS
+    * assigner.identifier only IdentifierIknr
 * dateTime 1..1
 
 * policyRule MS
