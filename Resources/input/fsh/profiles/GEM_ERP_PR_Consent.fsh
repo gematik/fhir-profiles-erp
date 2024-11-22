@@ -1,7 +1,7 @@
 Profile: GEM_ERP_PR_Consent
 Parent: Consent
 Id: GEM-ERP-PR-Consent
-* insert Profile(GEM_ERP_PR_Consent)
+* insert ProfileNoMetaProfileFixed(GEM_ERP_PR_Consent)
 * status = #active (exactly)
 * scope.coding 1..1
   * system = "http://terminology.hl7.org/CodeSystem/consentscope" (exactly)
