@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Consent",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/{name}",
   "version": "1.5",
   "name": "GEM_ERP_PR_Consent",
   "title": "Consent for ePrescriptions",
@@ -24,8 +24,26 @@
       {
         "id": "Consent.meta.profile",
         "path": "Consent.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "value"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing for profiles",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Consent.meta.profile:consent",
+        "path": "Consent.meta.profile",
+        "sliceName": "consent",
         "min": 1,
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent|1.5"
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/GEM_ERP_PR_Consent|1.5"
       },
       {
         "id": "Consent.status",

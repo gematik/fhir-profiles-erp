@@ -8,4 +8,4 @@ RuleSet: ProfileNoMetaProfileFixed(name)
 * insert StructureDefinition({name})
 * meta 1..1
 * meta.profile 1..*
-* insert PackageMetaProfileExactly(StructureDefinition/{name})
+* insert PackageMetaProfile(StructureDefinition/{name})
