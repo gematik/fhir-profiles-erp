@@ -17,8 +17,14 @@
   "differential": {
     "element": [
       {
+        "id": "Parameters.meta",
+        "path": "Parameters.meta",
+        "min": 1
+      },
+      {
         "id": "Parameters.meta.versionId",
         "path": "Parameters.meta.versionId",
+        "min": 1,
         "patternId": "1"
       },
       {
@@ -63,6 +69,12 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/country"
         }
+      },
+      {
+        "id": "Parameters.parameter:countryCode.value[x].system",
+        "path": "Parameters.parameter.value[x].system",
+        "min": 1,
+        "patternUri": "urn:iso:std:iso:3166"
       },
       {
         "id": "Parameters.parameter:countryCode.resource",
@@ -121,7 +133,7 @@
         "min": 1,
         "type": [
           {
-            "code": "dateTime"
+            "code": "instant"
           }
         ]
       },
@@ -150,7 +162,7 @@
         "min": 1,
         "type": [
           {
-            "code": "dateTime"
+            "code": "instant"
           }
         ]
       },

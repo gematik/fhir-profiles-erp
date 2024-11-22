@@ -1,0 +1,34 @@
+{
+  "resourceType": "Parameters",
+  "id": "Example-EU-PermissionResponse",
+  "meta": {
+    "versionId": "1",
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_Access_Authorization_Response"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "countryCode",
+      "valueCoding": {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BE"
+      }
+    },
+    {
+      "name": "accessCode",
+      "valueIdentifier": {
+        "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode",
+        "value": "123456"
+      }
+    },
+    {
+      "name": "validUntil",
+      "valueInstant": "2025-10-01T13:12:32+02:00"
+    },
+    {
+      "name": "createdAt",
+      "valueInstant": "2025-10-01T12:12:32+02:00"
+    }
+  ]
+}

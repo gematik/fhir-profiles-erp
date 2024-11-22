@@ -408,6 +408,22 @@
     "endLine": 8
   },
   {
+    "outputFile": "Parameters-Example-EU-PermissionRequest.json",
+    "fshName": "Example-EU-PermissionRequest",
+    "fshType": "Instance",
+    "fshFile": "examples/parameters_examples/Example-EU-Permission.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "Parameters-Example-EU-PermissionResponse.json",
+    "fshName": "Example-EU-PermissionResponse",
+    "fshType": "Instance",
+    "fshFile": "examples/parameters_examples/Example-EU-Permission.fsh",
+    "startLine": 9,
+    "endLine": 16
+  },
+  {
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
     "fshName": "ExampleCloseInputParameters",
     "fshType": "Instance",
@@ -829,7 +845,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/GEM_ERP_PR_PAR_EU_Access_Authorization_Request.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 32
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Response.json",
@@ -837,7 +853,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/GEM_ERP_PR_PAR_EU_Access_Authorization_Response.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
