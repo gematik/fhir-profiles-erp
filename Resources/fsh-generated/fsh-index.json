@@ -64,6 +64,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "CodeSystem-GEM-ERP-CS-ConsentType.json",
+    "fshName": "GEM_ERP_CS_ConsentType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/GEM_ERP_CS_ConsentType.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
     "outputFile": "CodeSystem-GEM-ERP-CS-DocumentType.json",
     "fshName": "GEM_ERP_CS_DocumentType",
     "fshType": "CodeSystem",
@@ -688,6 +696,14 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Consent.json",
+    "fshName": "GEM_ERP_PR_Consent",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Consent.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
     "fshName": "GEM_ERP_PR_Device",
     "fshType": "Profile",
@@ -900,6 +916,22 @@
     "fshName": "GEM_ERP_VS_AvailabilityStatus",
     "fshType": "ValueSet",
     "fshFile": "valuesets/GEM_ERP_VS_AvailabilityStatus.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-GEM-ERP-VS-Consent-PolicyRule.json",
+    "fshName": "GEM_ERP_VS_Consent_PolicyRule",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/GEM_ERP_VS_Consent_PolicyRule.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-GEM-ERP-VS-ConsentType.json",
+    "fshName": "GEM_ERP_VS_ConsentType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/GEM_ERP_VS_ConsentType.fsh",
     "startLine": 1,
     "endLine": 6
   },
