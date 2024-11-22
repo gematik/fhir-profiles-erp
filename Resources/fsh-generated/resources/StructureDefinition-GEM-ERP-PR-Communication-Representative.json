@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-Representative",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_Communication_Representative",
   "title": "Communication between Patient and Representative",
   "status": "active",
-  "date": "2024-07-15",
+  "date": "2025-01-01",
   "description": "Ressource used for the communication between patients and their representative pertaining to an ePrescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -26,7 +26,7 @@
         "path": "Communication.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative|1.5"
       },
       {
         "id": "Communication.basedOn",

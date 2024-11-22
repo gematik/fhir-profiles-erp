@@ -14,7 +14,7 @@
         "id": "PrescriptionBinary",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.4"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.5"
           ]
         },
         "contentType": "application/pkcs7-mime",

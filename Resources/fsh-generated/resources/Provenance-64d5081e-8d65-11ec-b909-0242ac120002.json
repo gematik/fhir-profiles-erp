@@ -3,7 +3,7 @@
   "id": "64d5081e-8d65-11ec-b909-0242ac120002",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.5"
     ]
   },
   "entity": [
@@ -48,7 +48,7 @@
         }
       ],
       "sigFormat": "application/pkcs7-mime",
-      "when": "2025-01-15T15:29:00+00:00",
+      "when": "2025-10-01T15:29:00+00:00",
       "who": {
         "reference": "https://www.bundesdruckerei.de/"
       },
@@ -63,5 +63,5 @@
       "reference": "Task/160.100.000.000.024.67"
     }
   ],
-  "recorded": "2025-01-15T15:29:00.434+00:00"
+  "recorded": "2025-10-01T15:29:00.434+00:00"
 }

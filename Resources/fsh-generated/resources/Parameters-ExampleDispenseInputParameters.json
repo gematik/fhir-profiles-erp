@@ -3,7 +3,7 @@
   "id": "ExampleDispenseInputParameters",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input|1.5"
     ]
   },
   "parameter": [
@@ -17,7 +17,7 @@
             "id": "Example-MedicationDispense",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
               ]
             },
             "identifier": [
@@ -56,7 +56,7 @@
             "id": "SumatripanMedication",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
               ]
             },
             "extension": [

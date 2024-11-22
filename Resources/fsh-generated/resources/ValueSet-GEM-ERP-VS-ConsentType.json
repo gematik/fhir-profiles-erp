@@ -5,9 +5,9 @@
   "id": "GEM-ERP-VS-ConsentType",
   "title": "ValueSet of Consent Codes",
   "description": "Type of Consents for the ePrescription.",
-  "version": "1.4",
+  "version": "1.5",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_ConsentType",
-  "date": "2024-07-15",
+  "date": "2025-01-01",
   "publisher": "gematik GmbH",
   "contact": [
     {

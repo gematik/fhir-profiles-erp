@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-Reply",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_Communication_Reply",
   "title": "Reply from Provider to Patient",
   "status": "active",
-  "date": "2024-07-15",
+  "date": "2025-01-01",
   "description": "Ressource used for the communication of the reply to dispense/info request from provider to patient/representative",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -26,7 +26,7 @@
         "path": "Communication.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.5"
       },
       {
         "id": "Communication.basedOn",

@@ -2,10 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Consent",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_Consent",
   "status": "active",
-  "date": "2024-07-15",
+  "date": "2025-01-01",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -23,7 +23,7 @@
         "id": "Consent.meta.profile",
         "path": "Consent.meta.profile",
         "min": 1,
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent|1.5"
       },
       {
         "id": "Consent.status",

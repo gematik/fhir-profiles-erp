@@ -3,7 +3,7 @@
   "id": "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply|1.5"
     ],
     "tag": [
       {
@@ -65,5 +65,5 @@
       "value": "3-SMC-B-Testkarte-883110000123465"
     }
   },
-  "sent": "2025-01-15T15:29:00.434+00:00"
+  "sent": "2025-10-01T15:29:00.434+00:00"
 }
