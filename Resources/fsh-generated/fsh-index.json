@@ -128,6 +128,14 @@
     "endLine": 18
   },
   {
+    "outputFile": "Consent-f97a0772-c99f-4159-90c6-2a41c7d96779.json",
+    "fshName": "ExampleEUConsent",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Consent.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
     "outputFile": "Medication-Augentropfen.json",
     "fshName": "Augentropfen",
     "fshType": "Instance",

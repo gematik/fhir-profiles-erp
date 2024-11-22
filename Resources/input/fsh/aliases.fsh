@@ -38,3 +38,4 @@ Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/2024020
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $vs-country = http://hl7.org/fhir/ValueSet/country
 Alias: $cs-iso-3166 = urn:iso:std:iso:3166
+Alias: $cs-consent-scope = http://terminology.hl7.org/CodeSystem/consentscope

@@ -7,7 +7,7 @@ Description: "Records the consent of the patient for an operation in the context
 
 * status = #active (exactly)
 * scope.coding 1..1
-  * system = "http://terminology.hl7.org/CodeSystem/consentscope" (exactly)
+  * system = $cs-consent-scope (exactly)
   * code = #patient-privacy (exactly)
   * display = "Privacy Consent" (exactly)
 
