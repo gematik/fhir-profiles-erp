@@ -13,7 +13,9 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * ^slicing.description = "Identifier for the practitioner"
   * ^slicing.ordered = false
   
-* identifier contains ehdsi 0..1
+* identifier contains 
+  ehdsi 0..1
+  and facilityId 0..1
 
 * identifier[ehdsi]
   * system MS
@@ -21,4 +23,17 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * use = #official (exactly)
   * value MS
 
+* identifier[facilityId]
+  * system MS
+  * system = "facilityId" (exactly) //TODO: Check if this is the correct system
+  * use = #official (exactly)
+  * value MS
+
 * name 1..1 MS
+
+* address 0..1 MS
+  * line MS
+  * city MS
+  * postalCode MS
+  * state MS
+  * country MS

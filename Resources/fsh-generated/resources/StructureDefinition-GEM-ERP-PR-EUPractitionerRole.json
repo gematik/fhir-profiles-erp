@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-EUPractitionerRole",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole",
+  "version": "1.5",
+  "name": "GEM_ERP_PR_EUPractitionerRole",
+  "title": "PractitionerRole Information Received from the EU",
+  "status": "draft",
+  "date": "2025-01-01",
+  "description": "This PractitionerRole Profile is sent by the NCPeH when redeeming a Prescription in the EU",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole.meta",
+        "path": "PractitionerRole.meta",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.meta.profile",
+        "path": "PractitionerRole.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole|1.5"
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

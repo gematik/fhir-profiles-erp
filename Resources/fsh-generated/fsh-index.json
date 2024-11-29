@@ -725,7 +725,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_EUOrganization.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitioner.json",
@@ -733,7 +733,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_EUPractitioner.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitionerRole.json",
+    "fshName": "GEM_ERP_PR_EUPractitionerRole",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_EUPractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 9
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
@@ -750,6 +758,14 @@
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_DiGA.fsh",
     "startLine": 1,
     "endLine": 51
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-EU.json",
+    "fshName": "GEM_ERP_PR_MedicationDispense_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_EU.fsh",
+    "startLine": 1,
+    "endLine": 70
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
@@ -837,7 +853,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
     "startLine": 1,
-    "endLine": 59
+    "endLine": 66
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
@@ -893,7 +909,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 172
+    "endLine": 173
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",

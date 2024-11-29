@@ -81,37 +81,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address",
-        "path": "Practitioner.address",
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address.line",
-        "path": "Practitioner.address.line",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address.city",
-        "path": "Practitioner.address.city",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address.state",
-        "path": "Practitioner.address.state",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address.postalCode",
-        "path": "Practitioner.address.postalCode",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.address.country",
-        "path": "Practitioner.address.country",
-        "mustSupport": true
       }
     ]
   }

@@ -1,5 +1,5 @@
 Logical: GEM_ERP_LOG_EU_DispenseData
-Parent: Base
+Parent: Element
 Id: logical-eu-dispense-data
 Title: "Dispense Data from EU"
 Description: "Logical Information that is Provided by the NCPeH for Dispensing Medication"
@@ -41,6 +41,7 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
     * ^definition = "Der Nachname der die Medikation abgebenden Person wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils NEUES PROFIL - NAME ANPASSEN eingetragen. (Achtung: Da aus der EU nur ein Datenfeld kommt, entfallen Sonderfelder für Präfixe und Suffixe)"
     * ^comment = "ehdsi-dataelement-299 Family Name/Surname\nPractitioner.name.family"
 
+* OrganizationData 1..1 BackboneElement "Organization Data"
   * FacilityIdentifier 0..1 string "The identification of the facility (pharmacy) from where the HP is dispensing the medicine."
     * ^short = "Facility (Pharmacy) Identifier"
     * ^definition = "Der Identifier des abgebenden Unternehmens wird aus dem angegebenen CDA Feld in die angegebenen Element Id des Profils NEUES PROFIL - NAME ANPASSEN übermittelt. (Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu - Kardinalität Identifier 0..*)"

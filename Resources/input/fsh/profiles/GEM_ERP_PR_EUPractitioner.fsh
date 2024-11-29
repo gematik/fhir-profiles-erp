@@ -23,10 +23,3 @@ Description: "This Practitioner Profile is sent by the NCPeH when redeeming a Pr
 
 * name 1..1 MS
 * name only HumannameDeBasis
-
-* address 0..1 MS
-  * line MS
-  * city MS
-  * postalCode MS
-  * state MS
-  * country MS

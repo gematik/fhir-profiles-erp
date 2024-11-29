@@ -15,6 +15,7 @@ Description: "This profile defines the parameters for receiving dispense informa
   rxDispensation 1..*
   and practitionerData 1..1
   and organizationData 1..1
+  and practitionerRoleData 1..1
 
 // Generic Data that applys to all dispensations
 * parameter[practitionerData]
@@ -28,6 +29,12 @@ Description: "This profile defines the parameters for receiving dispense informa
   * name = "organizationData"
   * value[x] 0..0
   * resource only GEM_ERP_PR_EUOrganization
+  * part 0..0
+* parameter[practitionerRoleData]
+  * name MS
+  * name = "practitionerRoleData"
+  * value[x] 0..0
+  * resource only GEM_ERP_PR_EUPractitionerRole
   * part 0..0
 
 * parameter[rxDispensation]
