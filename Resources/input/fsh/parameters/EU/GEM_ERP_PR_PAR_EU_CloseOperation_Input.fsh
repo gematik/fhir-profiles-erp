@@ -5,7 +5,7 @@ Title: "GEM ERP PR EU CloseOperation Input"
 Description: "This profile defines the parameters for receiving dispense information for a prescription that was redeemed in the EU"
 * insert Profile(GEM_ERP_PR_PAR_EU_CloseOperation_Input)
 
-* parameter 3..*
+* parameter MS
 
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"

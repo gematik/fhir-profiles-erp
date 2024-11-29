@@ -40,7 +40,8 @@
           ],
           "rules": "closed"
         },
-        "min": 4
+        "min": 4,
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:rxDispensation",
