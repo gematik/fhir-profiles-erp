@@ -24,8 +24,7 @@ Description: "Displays Parameters for EU Access Authorization"
   * value[x] only Coding
   * valueCoding.system 1..1
   * valueCoding.system = $cs-iso-3166
-  * valueCoding from $vs-country (required)
-  
+  * valueCoding from Iso3166-1-2 (required) // Nach VZD Profil NCPeHCountryEx
 * parameter[accessCode]
   * name MS
   * name = "accessCode"

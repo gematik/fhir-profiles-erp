@@ -36,6 +36,5 @@ Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_
 Alias: $sct = http://snomed.info/sct
 Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org
-Alias: $vs-country = http://hl7.org/fhir/ValueSet/country
 Alias: $cs-iso-3166 = urn:iso:std:iso:3166
 Alias: $cs-consent-scope = http://terminology.hl7.org/CodeSystem/consentscope

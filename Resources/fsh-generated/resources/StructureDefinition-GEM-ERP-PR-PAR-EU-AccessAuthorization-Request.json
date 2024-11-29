@@ -67,7 +67,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/country"
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
         }
       },
       {
