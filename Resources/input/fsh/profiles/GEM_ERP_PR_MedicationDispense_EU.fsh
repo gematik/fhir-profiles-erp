@@ -63,8 +63,9 @@ Description: "Handles information about the redeem of the prescription and the s
 * performer 1..1
 * performer.actor only Reference(GEM_ERP_PR_EUPractitionerRole)
 
-* whenPrepared 1..1 MS
-* whenPrepared obeys workflow-abgabeDatumsFormat
+* whenHandedOver 1..1 MS
 * whenHandedOver obeys workflow-abgabeDatumsFormat
+* whenPrepared obeys workflow-abgabeDatumsFormat
 
+* substitution MS
 * dosageInstruction MS

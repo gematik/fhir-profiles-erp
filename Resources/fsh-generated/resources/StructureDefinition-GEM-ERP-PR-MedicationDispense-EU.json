@@ -204,7 +204,6 @@
       {
         "id": "MedicationDispense.whenPrepared",
         "path": "MedicationDispense.whenPrepared",
-        "min": 1,
         "constraint": [
           {
             "key": "workflow-abgabeDatumsFormat",
@@ -213,8 +212,7 @@
             "severity": "error",
             "expression": "toString().length()=10"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationDispense.whenHandedOver",

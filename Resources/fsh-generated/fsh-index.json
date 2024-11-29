@@ -264,6 +264,14 @@
     "endLine": 49
   },
   {
+    "outputFile": "MedicationDispense-Example-MedicationDispense-EU.json",
+    "fshName": "Example-MedicationDispense-EU",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example_EU-MedicationDispense.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Kombipackung.json",
     "fshName": "Example-MedicationDispense-Kombipackung",
     "fshType": "Instance",
@@ -416,6 +424,14 @@
     "endLine": 8
   },
   {
+    "outputFile": "Organization-Example-EU-Organization.json",
+    "fshName": "Example-EU-Organization",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example-EU-Entities.fsh",
+    "startLine": 10,
+    "endLine": 21
+  },
+  {
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
     "fshName": "ExampleCloseInputParameters",
     "fshType": "Instance",
@@ -496,6 +512,14 @@
     "endLine": 59
   },
   {
+    "outputFile": "Parameters-ExampleEUCloseInputParameters.json",
+    "fshName": "ExampleEUCloseInputParameters",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example_Parameters_Close_EU.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
     "outputFile": "Parameters-ExampleOperationActivateParametersInput.json",
     "fshName": "ExampleOperationActivateParametersInput",
     "fshType": "Instance",
@@ -510,6 +534,22 @@
     "fshFile": "examples/Example_Operation_Create.fsh",
     "startLine": 1,
     "endLine": 6
+  },
+  {
+    "outputFile": "Practitioner-Example-EU-Practitioner.json",
+    "fshName": "Example-EU-Practitioner",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example-EU-Entities.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "PractitionerRole-Example-EU-PractitionerRole.json",
+    "fshName": "Example-EU-PractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example-EU-Entities.fsh",
+    "startLine": 23,
+    "endLine": 29
   },
   {
     "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
@@ -773,7 +813,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_EU.fsh",
     "startLine": 1,
-    "endLine": 70
+    "endLine": 71
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
