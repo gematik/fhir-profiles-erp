@@ -3,10 +3,7 @@ Parent: Parameters
 Id: GEM-ERP-PR-PAR-EU-AccessAuthorization-Response
 Title: "Response Access Authorization for EU ePrescriptions"
 Description: "Displays Response Parameters for EU Access Authorization"
-* insert StructureDefinition(GEM_ERP_PR_PAR_EU_Access_Authorization_Response)
-* meta 1..1
-* meta.versionId 1..1
-* meta.versionId = "1"
+* insert Profile(GEM_ERP_PR_PAR_EU_Access_Authorization_Response)
 
 * parameter 4..4
 * parameter ^slicing.discriminator.type = #pattern

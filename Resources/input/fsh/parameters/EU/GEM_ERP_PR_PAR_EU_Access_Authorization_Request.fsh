@@ -3,10 +3,7 @@ Parent: Parameters
 Id: GEM-ERP-PR-PAR-EU-AccessAuthorization-Request
 Title: "Access Authorization for EU ePrescriptions"
 Description: "Displays Parameters for EU Access Authorization"
-* insert StructureDefinition(GEM_ERP_PR_PAR_EU_Access_Authorization_Request)
-* meta 1..1
-* meta.versionId 1..1
-* meta.versionId = "1"
+* insert Profile(GEM_ERP_PR_PAR_EU_Access_Authorization_Request)
 
 * parameter 2..2
 * parameter ^slicing.discriminator.type = #pattern
