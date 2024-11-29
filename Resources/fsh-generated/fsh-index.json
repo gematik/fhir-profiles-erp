@@ -16,6 +16,14 @@
     "endLine": 45
   },
   {
+    "outputFile": "Bundle-ExampleGetConsent.json",
+    "fshName": "ExampleGetConsent",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Consent.fsh",
+    "startLine": 16,
+    "endLine": 24
+  },
+  {
     "outputFile": "Bundle-KomplexMedicationDispenseBundle.json",
     "fshName": "KomplexMedicationDispenseBundle",
     "fshType": "Instance",
@@ -126,6 +134,14 @@
     "fshFile": "examples/Example_Communication_DispReq.fsh",
     "startLine": 1,
     "endLine": 18
+  },
+  {
+    "outputFile": "Consent-f97a0772-c99f-4159-90c6-2a41c7d96779.json",
+    "fshName": "ExampleEUConsent",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Consent.fsh",
+    "startLine": 2,
+    "endLine": 14
   },
   {
     "outputFile": "Medication-Augentropfen.json",
@@ -352,6 +368,22 @@
     "endLine": 69
   },
   {
+    "outputFile": "OperationDefinition-Grant-EU-Access-Permission.json",
+    "fshName": "Grant-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Grant_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 64
+  },
+  {
+    "outputFile": "OperationDefinition-Read-EU-Access-Permission.json",
+    "fshName": "Read-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Read_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
     "outputFile": "OperationDefinition-EUCloseOperation.json",
     "fshName": "EUCloseOperation",
     "fshType": "Instance",
@@ -366,6 +398,14 @@
     "fshFile": "operationdefinitions/GEM_ERP_OP_Reject.fsh",
     "startLine": 1,
     "endLine": 15
+  },
+  {
+    "outputFile": "OperationDefinition-Revoke-EU-Access-Permission.json",
+    "fshName": "Revoke-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Revoke_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 10
   },
   {
     "outputFile": "OperationOutcome-ExampleOperationAbortErrorAVS.json",
@@ -422,14 +462,6 @@
     "fshFile": "examples/Example_Operation_Reject.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "Organization-Example-EU-Organization.json",
-    "fshName": "Example-EU-Organization",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 10,
-    "endLine": 21
   },
   {
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
@@ -768,30 +800,6 @@
     "endLine": 8
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUOrganization.json",
-    "fshName": "GEM_ERP_PR_EUOrganization",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUOrganization.fsh",
-    "startLine": 1,
-    "endLine": 39
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitioner.json",
-    "fshName": "GEM_ERP_PR_EUPractitioner",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUPractitioner.fsh",
-    "startLine": 1,
-    "endLine": 25
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitionerRole.json",
-    "fshName": "GEM_ERP_PR_EUPractitionerRole",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUPractitionerRole.fsh",
-    "startLine": 1,
-    "endLine": 9
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
     "fshName": "GEM_ERP_PR_Medication",
     "fshType": "Profile",
@@ -894,14 +902,6 @@
     "fshFile": "parameters/GEM_ERP_PR_PAR_DispenseOperation_Output.fsh",
     "startLine": 1,
     "endLine": 48
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-Close-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_EU_CloseOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 66
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
