@@ -360,12 +360,36 @@
     "endLine": 69
   },
   {
+    "outputFile": "OperationDefinition-Grant-EU-Access-Permission.json",
+    "fshName": "Grant-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Grant_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 64
+  },
+  {
+    "outputFile": "OperationDefinition-Read-EU-Access-Permission.json",
+    "fshName": "Read-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Read_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
     "outputFile": "OperationDefinition-RejectOperation.json",
     "fshName": "RejectOperation",
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Reject.fsh",
     "startLine": 1,
     "endLine": 15
+  },
+  {
+    "outputFile": "OperationDefinition-Revoke-EU-Access-Permission.json",
+    "fshName": "Revoke-EU-Access-Permission",
+    "fshType": "Instance",
+    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Revoke_EU_Access_Permission.fsh",
+    "startLine": 1,
+    "endLine": 10
   },
   {
     "outputFile": "OperationOutcome-ExampleOperationAbortErrorAVS.json",
