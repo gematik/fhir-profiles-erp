@@ -720,6 +720,22 @@
     "endLine": 8
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-EUOrganization.json",
+    "fshName": "GEM_ERP_PR_EUOrganization",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_EUOrganization.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitioner.json",
+    "fshName": "GEM_ERP_PR_EUPractitioner",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_EUPractitioner.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
     "fshName": "GEM_ERP_PR_Medication",
     "fshType": "Profile",
@@ -814,6 +830,14 @@
     "fshFile": "parameters/GEM_ERP_PR_PAR_DispenseOperation_Output.fsh",
     "startLine": 1,
     "endLine": 48
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-Close-Operation-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_EUCloseOperation_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
+    "startLine": 1,
+    "endLine": 59
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",

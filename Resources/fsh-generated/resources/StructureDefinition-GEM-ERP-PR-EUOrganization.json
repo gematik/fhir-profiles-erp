@@ -1,0 +1,78 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-EUOrganization",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization",
+  "version": "1.5",
+  "name": "GEM_ERP_PR_EUOrganization",
+  "title": "Organization Information Received from the EU",
+  "status": "draft",
+  "date": "2025-01-01",
+  "description": "This Organization Profile is sent by the NCPeH when redeeming a Prescription in the EU",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.meta",
+        "path": "Organization.meta",
+        "min": 1
+      },
+      {
+        "id": "Organization.meta.profile",
+        "path": "Organization.meta.profile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization|1.5"
+      },
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Identifier for the practitioner",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Organization.identifier:ehdsi",
+        "path": "Organization.identifier",
+        "sliceName": "ehdsi",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier:ehdsi.use",
+        "path": "Organization.identifier.use",
+        "fixedCode": "official"
+      },
+      {
+        "id": "Organization.identifier:ehdsi.system",
+        "path": "Organization.identifier.system",
+        "min": 1,
+        "fixedUri": "ehdsi-dataelement-285",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:ehdsi.value",
+        "path": "Organization.identifier.value",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}
