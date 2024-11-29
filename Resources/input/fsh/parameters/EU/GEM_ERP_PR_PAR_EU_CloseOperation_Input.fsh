@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_PAR_EUCloseOperation_Input
+Profile: GEM_ERP_PR_PAR_EU_CloseOperation_Input
 Parent: Parameters
 Id: GEM-ERP-PR-PAR-EU-Close-Operation-Input
 Title: "GEM ERP PR EU CloseOperation Input"
 Description: "This profile defines the parameters for receiving dispense information for a prescription that was redeemed in the EU"
-* insert Profile(GEM_ERP_PR_PAR_EUCloseOperation_Input)
+* insert Profile(GEM_ERP_PR_PAR_EU_CloseOperation_Input)
 
 * parameter 3..*
 
