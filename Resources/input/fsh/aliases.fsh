@@ -35,3 +35,7 @@ Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS
 Alias: $sct = http://snomed.info/sct
 Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org
+
+// EPA
+Alias: $sid-identifier-rx-originator-process = https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier
+Alias: $sid-identifier-dispensation = https://gematik.de/fhir/epa-medication/sid/dispensation-identifier
