@@ -781,7 +781,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_EU_Access_Code.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 15
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
@@ -885,7 +885,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_Access_Authorization_Request.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 33
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Response.json",
