@@ -25,6 +25,7 @@ Description: "Displays Parameters for EU Access Authorization"
   * valueCoding.system 1..1
   * valueCoding.system = $cs-iso-3166
   * valueCoding from $vs-country (required)
+  
 * parameter[accessCode]
   * name MS
   * name = "accessCode"

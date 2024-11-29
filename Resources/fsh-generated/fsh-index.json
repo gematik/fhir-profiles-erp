@@ -757,7 +757,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_EU_Access_Code.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 14
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
@@ -859,15 +859,15 @@
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Request.json",
     "fshName": "GEM_ERP_PR_PAR_EU_Access_Authorization_Request",
     "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_EU_Access_Authorization_Request.fsh",
+    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_Access_Authorization_Request.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 33
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Response.json",
     "fshName": "GEM_ERP_PR_PAR_EU_Access_Authorization_Response",
     "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_EU_Access_Authorization_Response.fsh",
+    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_Access_Authorization_Response.fsh",
     "startLine": 1,
     "endLine": 51
   },
