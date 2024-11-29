@@ -864,6 +864,14 @@
     "endLine": 20
   },
   {
+    "outputFile": "StructureDefinition-logical-eu-dispense-data.json",
+    "fshName": "GEM_ERP_LOG_EU_DispenseData",
+    "fshType": "Logical",
+    "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
+    "startLine": 1,
+    "endLine": 177
+  },
+  {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
     "fshName": "TaskInClosedState",
     "fshType": "Instance",
