@@ -53,7 +53,6 @@
         "path": "logical-eu-dispense-data.PatientData.SocialInsuranceNumber",
         "short": "Social/Insurance Number",
         "definition": "Da über die Angabe der Regional/National Health Identifier (KVID) jede Person eindeutig identifizierbar ist, entfällt die Dokumentation weiterer Angaben zur Person.",
-        "comment": "-\n-",
         "min": 0,
         "max": "1",
         "type": [
@@ -67,7 +66,6 @@
         "path": "logical-eu-dispense-data.PatientData.GivenName",
         "short": "Given Name",
         "definition": "The subject's identifying name(s) within the family group or by which the subject is uniquely socially identified [ISO TS 22220].",
-        "comment": "-\n-",
         "min": 1,
         "max": "*",
         "type": [
@@ -81,7 +79,6 @@
         "path": "logical-eu-dispense-data.PatientData.FamilyNameSurname",
         "short": "Family Name/Surname",
         "definition": "The part of a name a person usually has in common with some other members of his/her family, as distinguished from his/her given names [ISO TS 22220].",
-        "comment": "-\n-",
         "min": 1,
         "max": "*",
         "type": [
@@ -95,7 +92,6 @@
         "path": "logical-eu-dispense-data.PatientData.Gender",
         "short": "Gender",
         "definition": "The gender of the patient may be noted on the prescription since this can be important for gender-specific effects of drugs, contra-indications etc.",
-        "comment": "-\n-",
         "min": 0,
         "max": "1",
         "type": [
@@ -317,7 +313,6 @@
         "path": "logical-eu-dispense-data.DispenseData.PrescriptionItemIdentifier",
         "short": "Prescription Item Identifier",
         "definition": "Dieses Feld ist im deutschen Country A Szenario ePrescription/eDispensation nicht notwendig, da deutsche eRezepte immer nur ein Prescription Item pro Verschreibung/Dispensierung beinhalten. Somit kann für eine jede Verordnung, für die im EU-Ausland eine Dispensierung erfolgte, ausschließlich ein Prescription Item enthalten sein.",
-        "comment": "-\n-",
         "min": 0,
         "max": "1",
         "type": [

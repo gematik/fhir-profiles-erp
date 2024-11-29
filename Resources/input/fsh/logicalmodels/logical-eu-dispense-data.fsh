@@ -12,22 +12,18 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
   * SocialInsuranceNumber 0..1 string "If a patient has both Regional/National Health ID and Social/Insurance Number, only the Regional/National Health ID is required by law."
     * ^short = "Social/Insurance Number"
     * ^definition = "Da über die Angabe der Regional/National Health Identifier (KVID) jede Person eindeutig identifizierbar ist, entfällt die Dokumentation weiterer Angaben zur Person."
-    * ^comment = "-\n-"
 
   * GivenName 1..* string "The first name of the patient. This field can contain more than one element."
     * ^short = "Given Name"
     * ^definition = "The subject's identifying name(s) within the family group or by which the subject is uniquely socially identified [ISO TS 22220]."
-    * ^comment = "-\n-"
 
   * FamilyNameSurname 1..* string "The surname/s of the patient. This field can contain more than one element."
     * ^short = "Family Name/Surname"
     * ^definition = "The part of a name a person usually has in common with some other members of his/her family, as distinguished from his/her given names [ISO TS 22220]."
-    * ^comment = "-\n-"
 
   * Gender 0..1 code "The gender of the patient. Gender is the biological distinction between male and female."
     * ^short = "Gender"
     * ^definition = "The gender of the patient may be noted on the prescription since this can be important for gender-specific effects of drugs, contra-indications etc."
-    * ^comment = "-\n-"
 
 * HealthCareProfessionalData 1..1 BackboneElement "HealthCareProfessional Data"
   * HPIdentifier 0..1 string "The identification of the person as Health Professional."
@@ -99,7 +95,6 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
   * PrescriptionItemIdentifier 0..1 string "Identification of the related prescription item (from Country of affiliation) of the dispensed medicine."
     * ^short = "Prescription Item Identifier"
     * ^definition = "Dieses Feld ist im deutschen Country A Szenario ePrescription/eDispensation nicht notwendig, da deutsche eRezepte immer nur ein Prescription Item pro Verschreibung/Dispensierung beinhalten. Somit kann für eine jede Verordnung, für die im EU-Ausland eine Dispensierung erfolgte, ausschließlich ein Prescription Item enthalten sein."
-    * ^comment = "-\n-"
 
   * MedicinalProductIdentifier 0..1 string "Identifier of a medicinal product refers to the product inside the package, not the packaged item as such."
     * ^short = "Medicinal Product Identifier"
