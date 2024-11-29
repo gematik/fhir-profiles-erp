@@ -357,7 +357,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 50
+    "endLine": 53
   },
   {
     "outputFile": "OperationDefinition-RejectOperation.json",

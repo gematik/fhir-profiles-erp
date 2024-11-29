@@ -15,17 +15,20 @@ Usage: #definition
 * parameter[+]
   * name = #practitionerData
   * use = #in
+  * type = #Practitioner
   * min = 1
   * max = "1"
   * documentation = "Information on the practitioner who dispensed"
 * parameter[+]
   * name = #organizationData
   * use = #in
+  * type = #Organization
   * min = 1
   * max = "1"
   * documentation = "Information on the organization where the dispensation happened"
 * parameter[+]
   * name = #practitionerRoleData
+  * type = #PractitionerRole
   * use = #in
   * min = 1
   * max = "1"
@@ -34,7 +37,7 @@ Usage: #definition
   * name = #rxDispensation
   * use = #in
   * min = 1
-  * max = "*" //TODO: Klären, ob Teilabgaben möglich sind
+  * max = "*"
   * documentation = "Information on dispensed Medication(s)"
   * part[+]
     * name = #medicationDispense
@@ -46,5 +49,5 @@ Usage: #definition
     * name = #medication
     * type = #Medication
     * use = #in
-    * min = 0 // optional durch DiGA
+    * min = 1
     * max = "1"

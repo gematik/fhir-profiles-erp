@@ -55,7 +55,7 @@ Description: "This profile defines the parameters for receiving dispense informa
     * name = "medicationDispense"
     * value[x] 0..0
     * resource 1..1
-    * resource only GEM_ERP_PR_MedicationDispense
+    * resource only GEM_ERP_PR_MedicationDispense_EU
     * part 0..0
   * part[medication]
     * name MS
