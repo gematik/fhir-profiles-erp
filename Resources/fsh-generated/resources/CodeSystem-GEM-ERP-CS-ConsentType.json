@@ -10,10 +10,6 @@
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_ConsentType",
   "concept": [
     {
-      "code": "CHARGCONS",
-      "display": "Consent for saving electronic charge item"
-    },
-    {
       "code": "EUDISPCONS",
       "display": "Consent for redeeming e-prescriptions in EU countries"
     }
@@ -32,5 +28,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 2
+  "count": 1
 }

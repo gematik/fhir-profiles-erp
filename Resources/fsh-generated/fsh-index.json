@@ -69,7 +69,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_ConsentType.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 7
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-DocumentType.json",
