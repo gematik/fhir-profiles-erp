@@ -1,0 +1,23 @@
+{
+  "resourceType": "Practitioner",
+  "id": "Example-EU-Practitioner",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitioner|1.5"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "ehdsi-dataelement-303",
+      "value": "1234567890"
+    }
+  ],
+  "name": [
+    {
+      "family": "Sanches",
+      "given": [
+        "Pedro"
+      ]
+    }
+  ]
+}

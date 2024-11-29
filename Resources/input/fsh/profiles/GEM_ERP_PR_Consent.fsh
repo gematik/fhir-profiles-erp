@@ -3,7 +3,7 @@ Parent: Consent
 Id: GEM-ERP-PR-Consent
 Title: "Consent for ePrescriptions"
 Description: "Records the consent of the patient for an operation in the context of ePrescription."
-* insert ProfileMetaSliced(GEM_ERP_PR_Consent, consent) 
+* insert Profile(GEM_ERP_PR_Consent)
 
 * status = #active (exactly)
 * scope.coding 1..1
