@@ -12,8 +12,14 @@
     {
       "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
       "name": "Mapping for EU DispenseData to EU-MedicationDispense",
-      "uri": "GEM_ERP_PR_EUMedicationDispense",
+      "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-MedicationDispense"
+    },
+    {
+      "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+      "name": "Mapping for EU MedicationData to GEM_ERP_PR_Medication",
+      "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
+      "comment": "This mapping maps the logical information of the EU MedicationData to GEM_ERP_PR_Medication"
     },
     {
       "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
@@ -396,7 +402,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
             "map": "GEM_ERP_PR_MedicationDispense_EU"
           }
         ]
@@ -416,7 +422,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU"
+            "map": "MedicationDispense"
           }
         ]
       },
@@ -436,7 +442,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "[GEM_ERP_PR_MedicationDispense_EU.id](https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense_eu)"
+            "map": "MedicationDispense.id"
           }
         ]
       },
@@ -456,7 +462,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU.identifier[prescriptionID]"
+            "map": "MedicationDispense.identifier[prescriptionID]"
           }
         ]
       },
@@ -495,7 +501,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU.whenHandedOver"
+            "map": "MedicationDispense.whenHandedOver"
           }
         ]
       },
@@ -515,7 +521,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU.substitution.wasSubstituted"
+            "map": "MedicationDispense.substitution.wasSubstituted"
           }
         ]
       },
@@ -535,7 +541,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU.quantity"
+            "map": "MedicationDispense.quantity"
           }
         ]
       },
@@ -553,7 +559,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
             "map": "GEM_ERP_PR_MedicationDispense_EU.medicationReference"
           }
         ]
@@ -573,8 +579,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.coding:[atc-de|ask|snomed]"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.coding:[atc-de|ask|snomed]"
           }
         ]
       },
@@ -593,8 +599,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medicatio.code.text"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medicatio.code.text"
           }
         ]
       },
@@ -613,8 +619,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.???"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.???"
           }
         ]
       },
@@ -633,8 +639,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.ingredient.item[x]:itemCodeableConcept"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.ingredient.item[x]:itemCodeableConcept"
           }
         ]
       },
@@ -653,8 +659,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.ingredient.isActive"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.ingredient.isActive"
           }
         ]
       },
@@ -673,8 +679,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.ingredient.strength"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.ingredient.strength"
           }
         ]
       },
@@ -693,8 +699,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.form.text, Medication.form.coding:kbvDarreichungsform"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.form.text, Medication.form.coding:kbvDarreichungsform"
           }
         ]
       },
@@ -713,8 +719,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.extension:packaging"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.extension:packaging"
           }
         ]
       },
@@ -733,8 +739,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.ingredient.itemReference(EPAMedicationPharmaceuticalProduct.code.coding:product-key)"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.ingredient.itemReference(EPAMedicationPharmaceuticalProduct.code.coding:product-key)"
           }
         ]
       },
@@ -753,8 +759,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.extension:packaging.value[x]:valueString"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.extension:packaging.value[x]:valueString"
           }
         ]
       },
@@ -773,8 +779,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.amount.numerator.extension:packagingSize"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.amount.numerator.extension:packagingSize"
           }
         ]
       },
@@ -793,8 +799,8 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_Medication.manufacturer.identifier"
+            "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Medication",
+            "map": "Medication.manufacturer.identifier"
           }
         ]
       }
