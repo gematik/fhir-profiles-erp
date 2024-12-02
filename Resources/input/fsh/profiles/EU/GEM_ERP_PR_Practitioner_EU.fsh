@@ -5,7 +5,7 @@ Title: "Practitioner Information Received from the EU"
 Description: "This Practitioner Profile is sent by the NCPeH when redeeming a Prescription in the EU"
 * insert Profile(GEM_ERP_PR_Practitioner_EU)
 
-* identifier 0..*
+* identifier 0..* MS
 * identifier
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
@@ -15,11 +15,13 @@ Description: "This Practitioner Profile is sent by the NCPeH when redeeming a Pr
   
 * identifier contains ehdsi 0..1
 
-* identifier[ehdsi]
+* identifier[ehdsi] MS
   * system MS
   * system = "ehdsi-dataelement-303" (exactly) //TODO: Check if this is the correct system
   * use = #official (exactly)
   * value MS
 
-* name 1..1 MS
 * name only HumannameDeBasis
+* name 1..* MS
+  * given MS
+  * family MS

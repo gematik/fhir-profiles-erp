@@ -973,7 +973,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Practitioner_EU.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PractitionerRole-EU.json",
@@ -981,7 +981,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
