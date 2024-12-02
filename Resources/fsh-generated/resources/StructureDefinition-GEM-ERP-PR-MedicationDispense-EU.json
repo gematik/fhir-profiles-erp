@@ -202,6 +202,22 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationDispense.quantity",
+        "path": "MedicationDispense.quantity",
+        "short": "Number of dispensed packages/ units",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.quantity.value",
+        "path": "MedicationDispense.quantity.value",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.quantity.unit",
+        "path": "MedicationDispense.quantity.unit",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationDispense.whenPrepared",
         "path": "MedicationDispense.whenPrepared",
         "constraint": [

@@ -1,0 +1,28 @@
+Mapping: GEM_ERP_MAP_EU_Dispense_Data_MedicationDispense
+Source: GEM_ERP_LOG_EU_DispenseData
+Target: "GEM_ERP_PR_EUMedicationDispense"
+Id: GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense
+Title: "Mapping for EU DispenseData to EU-MedicationDispense"
+Description: "This mapping maps the logical information of the EU DispenseData to the EU-MedicationDispense"
+* DispenseData -> "GEM_ERP_PR_MedicationDispense_EU"
+  * AdministrativeInformation -> "GEM_ERP_PR_MedicationDispense_EU"
+    * DispensationIdentifier -> "GEM_ERP_PR_MedicationDispense_EU.id"
+    * PrescriptionIdentifier -> "GEM_ERP_PR_MedicationDispense_EU.identifier[prescriptionID]"
+    * PrescriptionItemIdentifier -> "n/a"
+    * DateOfIssueOfDispensation -> "GEM_ERP_PR_MedicationDispense_EU.whenHandedOver"
+    * Substitution -> "GEM_ERP_PR_MedicationDispense_EU.substitution.wasSubstituted"
+    * NumberOfPackages -> "GEM_ERP_PR_MedicationDispense_EU.quantity"
+
+  * MedicinalInformation -> "GEM_ERP_PR_MedicationDispense_EU.medicationReference"
+    * MedicinalProductIdentifier -> "GEM_ERP_PR_Medication.coding:[atc-de|ask|snomed]"
+    * MedicinalProductBrandName -> "GEM_ERP_PR_Medicatio.code.text"
+    * MedicinalProductClassification -> "GEM_ERP_PR_Medication.???"
+    * ActiveIngredients -> "GEM_ERP_PR_Medication.ingredient.item[x]:itemCodeableConcept"
+    * ActiveIngredientRoles -> "GEM_ERP_PR_Medication.ingredient.isActive"
+    * ActiveIngredientStrengths -> "GEM_ERP_PR_Medication.ingredient.strength"
+    * PharmaceuticalDoseForm -> "GEM_ERP_PR_Medication.form.text, Medication.form.coding:kbvDarreichungsform"
+    * MedicinalProductPackageDescription -> "GEM_ERP_PR_Medication.extension:packaging"
+    * MedicinalProductPackageIdentifier -> "GEM_ERP_PR_Medication.ingredient.itemReference(EPAMedicationPharmaceuticalProduct.code.coding:product-key)"
+    * PackageType -> "GEM_ERP_PR_Medication.extension:packaging.value[x]:valueString"
+    * PackageSize -> "GEM_ERP_PR_Medication.amount.numerator.extension:packagingSize"
+    * MarketingAuthorizationHolder -> "GEM_ERP_PR_Medication.manufacturer.identifier"

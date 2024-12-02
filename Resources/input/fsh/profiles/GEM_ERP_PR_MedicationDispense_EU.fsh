@@ -69,3 +69,7 @@ Description: "Handles information about the redeem of the prescription and the s
 
 * substitution MS
 * dosageInstruction MS
+* quantity MS
+  * ^short = "Number of dispensed packages/ units"
+  * value MS
+  * unit MS

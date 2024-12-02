@@ -877,7 +877,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_EU.fsh",
     "startLine": 1,
-    "endLine": 71
+    "endLine": 75
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
@@ -1037,7 +1037,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 173
+    "endLine": 176
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
