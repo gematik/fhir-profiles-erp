@@ -436,7 +436,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-MedicationDispense",
-            "map": "GEM_ERP_PR_MedicationDispense_EU.id"
+            "map": "[GEM_ERP_PR_MedicationDispense_EU.id](https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense_eu)"
           }
         ]
       },
