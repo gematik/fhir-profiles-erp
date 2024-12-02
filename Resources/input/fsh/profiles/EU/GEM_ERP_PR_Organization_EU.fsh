@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_EUOrganization
+Profile: GEM_ERP_PR_Organization_EU
 Parent: Organization
-Id: GEM-ERP-PR-EUOrganization
+Id: GEM-ERP-PR-Organization-EU
 Title: "Organization Information Received from the EU"
 Description: "This Organization Profile is sent by the NCPeH when redeeming a Prescription in the EU"
-* insert Profile(GEM_ERP_PR_EUOrganization)
+* insert Profile(GEM_ERP_PR_Organization_EU)
 
 * identifier 0..*
 * identifier

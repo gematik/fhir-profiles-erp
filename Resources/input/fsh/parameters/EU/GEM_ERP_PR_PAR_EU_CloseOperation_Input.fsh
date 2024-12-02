@@ -22,19 +22,19 @@ Description: "This profile defines the parameters for receiving dispense informa
   * name MS
   * name = "practitionerData"
   * value[x] 0..0
-  * resource only GEM_ERP_PR_EUPractitioner
+  * resource only GEM_ERP_PR_Practitioner_EU
   * part 0..0
 * parameter[organizationData]
   * name MS
   * name = "organizationData"
   * value[x] 0..0
-  * resource only GEM_ERP_PR_EUOrganization
+  * resource only GEM_ERP_PR_Organization_EU
   * part 0..0
 * parameter[practitionerRoleData]
   * name MS
   * name = "practitionerRoleData"
   * value[x] 0..0
-  * resource only GEM_ERP_PR_EUPractitionerRole
+  * resource only GEM_ERP_PR_PractitionerRole_EU
   * part 0..0
 
 * parameter[rxDispensation]

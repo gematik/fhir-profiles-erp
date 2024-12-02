@@ -197,7 +197,7 @@
           {
             "code": "Practitioner",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitioner"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Practitioner_EU"
             ]
           }
         ]
@@ -232,7 +232,7 @@
           {
             "code": "Organization",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Organization_EU"
             ]
           }
         ]
@@ -267,7 +267,7 @@
           {
             "code": "PractitionerRole",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU"
             ]
           }
         ]

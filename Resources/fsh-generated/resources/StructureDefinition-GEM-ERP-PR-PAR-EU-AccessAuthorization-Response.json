@@ -104,7 +104,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EU_Access_Code"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Access_Code_EU"
             ]
           }
         ]

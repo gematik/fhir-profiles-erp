@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-PR-EUPractitionerRole",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole",
+  "id": "GEM-ERP-PR-PractitionerRole-EU",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU",
   "version": "1.5",
-  "name": "GEM_ERP_PR_EUPractitionerRole",
+  "name": "GEM_ERP_PR_PractitionerRole_EU",
   "title": "PractitionerRole Information Received from the EU",
   "status": "draft",
   "date": "2025-01-01",
@@ -26,7 +26,7 @@
         "path": "PractitionerRole.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU|1.5"
       },
       {
         "id": "PractitionerRole.practitioner",
@@ -35,7 +35,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitioner"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Practitioner_EU"
             ]
           }
         ]
@@ -47,7 +47,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Organization_EU"
             ]
           }
         ]

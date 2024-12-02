@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-PR-EU-AccessCode",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EU_Access_Code",
+  "id": "GEM-ERP-PR-AccessCode-EU",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Access_Code_EU",
   "version": "1.5",
-  "name": "GEM_ERP_PR_EU_Access_Code",
+  "name": "GEM_ERP_PR_Access_Code_EU",
   "title": "Identifier Profile for EU AccessCode",
   "status": "draft",
   "date": "2025-01-01",
@@ -41,7 +41,7 @@
             "severity": "error",
             "human": "Format of the AccessCode must be a 6-digit code in the Form [a-z, A-Z, 0-9].",
             "expression": "$this.matches('^[a-zA-Z0-9]{6}$')",
-            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EU_Access_Code"
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Access_Code_EU"
           }
         ],
         "mustSupport": true

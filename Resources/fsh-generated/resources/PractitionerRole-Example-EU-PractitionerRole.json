@@ -3,7 +3,7 @@
   "id": "Example-EU-PractitionerRole",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole|1.5"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU|1.5"
     ]
   },
   "practitioner": {

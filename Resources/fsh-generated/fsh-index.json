@@ -712,6 +712,14 @@
     "endLine": 26
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode-EU.json",
+    "fshName": "GEM_ERP_PR_Access_Code_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/EU/GEM_ERP_PR_Access_Code_EU.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode.json",
     "fshName": "GEM_ERP_PR_AccessCode",
     "fshType": "Profile",
@@ -824,38 +832,6 @@
     "endLine": 8
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EU-AccessCode.json",
-    "fshName": "GEM_ERP_PR_EU_Access_Code",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EU_Access_Code.fsh",
-    "startLine": 1,
-    "endLine": 15
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUOrganization.json",
-    "fshName": "GEM_ERP_PR_EUOrganization",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUOrganization.fsh",
-    "startLine": 1,
-    "endLine": 39
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitioner.json",
-    "fshName": "GEM_ERP_PR_EUPractitioner",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUPractitioner.fsh",
-    "startLine": 1,
-    "endLine": 25
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-EUPractitionerRole.json",
-    "fshName": "GEM_ERP_PR_EUPractitionerRole",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_EUPractitionerRole.fsh",
-    "startLine": 1,
-    "endLine": 9
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
     "fshName": "GEM_ERP_PR_Medication",
     "fshType": "Profile",
@@ -875,7 +851,7 @@
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-EU.json",
     "fshName": "GEM_ERP_PR_MedicationDispense_EU",
     "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_EU.fsh",
+    "fshFile": "profiles/EU/GEM_ERP_PR_MedicationDispense_EU.fsh",
     "startLine": 1,
     "endLine": 75
   },
@@ -886,6 +862,14 @@
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
     "startLine": 1,
     "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Organization-EU.json",
+    "fshName": "GEM_ERP_PR_Organization_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
+    "startLine": 1,
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -982,6 +966,22 @@
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
     "startLine": 1,
     "endLine": 66
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Practitioner-EU.json",
+    "fshName": "GEM_ERP_PR_Practitioner_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/EU/GEM_ERP_PR_Practitioner_EU.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PractitionerRole-EU.json",
+    "fshName": "GEM_ERP_PR_PractitionerRole_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
+    "startLine": 1,
+    "endLine": 9
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",

@@ -119,7 +119,7 @@
         "id": "Example-EU-Practitioner",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitioner|1.5"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Practitioner_EU|1.5"
           ]
         },
         "identifier": [
@@ -145,7 +145,7 @@
         "id": "Example-EU-Organization",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUOrganization|1.5"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Organization_EU|1.5"
           ]
         },
         "identifier": [
@@ -177,7 +177,7 @@
         "id": "Example-EU-PractitionerRole",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole|1.5"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU|1.5"
           ]
         },
         "practitioner": {

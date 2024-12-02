@@ -190,7 +190,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_EUPractitionerRole"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PractitionerRole_EU"
             ]
           }
         ]

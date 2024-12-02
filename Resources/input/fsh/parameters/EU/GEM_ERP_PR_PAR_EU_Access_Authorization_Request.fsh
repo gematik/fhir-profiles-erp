@@ -27,4 +27,4 @@ Description: "Displays Parameters for EU Access Authorization"
   * name MS
   * name = "accessCode"
   * value[x] 1..1
-  * value[x] only GEM_ERP_PR_EU_Access_Code
+  * value[x] only GEM_ERP_PR_Access_Code_EU

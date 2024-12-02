@@ -61,7 +61,7 @@ Description: "Handles information about the redeem of the prescription and the s
 * medication[x] ^definition = "The MedicationDispense references a medication which was dispensed"
 
 * performer 1..1
-* performer.actor only Reference(GEM_ERP_PR_EUPractitionerRole)
+* performer.actor only Reference(GEM_ERP_PR_PractitionerRole_EU)
 
 * whenHandedOver 1..1 MS
 * whenHandedOver obeys workflow-abgabeDatumsFormat
