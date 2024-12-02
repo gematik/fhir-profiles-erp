@@ -24,13 +24,13 @@
     {
       "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
       "name": "Mapping for EU DispenseData to EU-Organization",
-      "uri": "GEM_ERP_PR_EUOrganization",
+      "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Organization_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-Organization"
     },
     {
       "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
       "name": "Mapping for EU DispenseData to EU-Practitioner",
-      "uri": "GEM_ERP_PR_EUPractitioner",
+      "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Practitioner_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-Practitioner"
     }
   ],
@@ -141,7 +141,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
-            "map": "GEM_ERP_PR_EUPractitioner"
+            "map": "Practitioner"
           }
         ]
       },
@@ -161,7 +161,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
-            "map": "GEM_ERP_PR_EUPractitioner.identifier[ehdsi]"
+            "map": "Practitioner.identifier[ehdsi]"
           }
         ]
       },
@@ -181,7 +181,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
-            "map": "GEM_ERP_PR_EUPractitioner.name.given"
+            "map": "Practitioner.name.given"
           }
         ]
       },
@@ -201,11 +201,11 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
-            "map": "GEM_ERP_PR_EUPractitioner.family"
+            "map": "Practitioner.family"
           },
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Practitioner",
-            "map": "GEM_ERP_PR_EUPractitioner.family.extension[nachname]"
+            "map": "Practitioner.family.extension[nachname]"
           }
         ]
       },
@@ -224,7 +224,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization"
+            "map": "Organization"
           }
         ]
       },
@@ -244,7 +244,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.identifier[facilityId]"
+            "map": "Organization.identifier[facilityId]"
           }
         ]
       },
@@ -264,7 +264,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.address.line"
+            "map": "Organization.address.line"
           }
         ]
       },
@@ -284,7 +284,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.address.city"
+            "map": "Organization.address.city"
           }
         ]
       },
@@ -304,7 +304,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.address.postalCode"
+            "map": "Organization.address.postalCode"
           }
         ]
       },
@@ -324,7 +324,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.address.state"
+            "map": "Organization.address.state"
           }
         ]
       },
@@ -344,7 +344,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.address.country"
+            "map": "Organization.address.country"
           }
         ]
       },
@@ -364,7 +364,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.name"
+            "map": "Organization.name"
           }
         ]
       },
@@ -384,7 +384,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-MedicationDispense-DiGA-Organization",
-            "map": "GEM_ERP_PR_EUOrganization.identifier[ehdsi]"
+            "map": "Organization.identifier[ehdsi]"
           }
         ]
       },
