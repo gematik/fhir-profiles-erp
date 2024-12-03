@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_PAR_EU_CloseOperation_Input
+Profile: GEM_ERP_PR_PAR_EU_GET_Prescription_Input
 Parent: Parameters
-Id: GEM-ERP-PR-PAR-EU-Close-Operation-Input
-Title: "GEM ERP PR EU CloseOperation Input"
+Id: GEM-ERP-PR-PAR-EU-GET-Prescription-Input
+Title: "GEM_ERP_PR_PAR_EU_GET_Prescription_Input"
 Description: "This profile defines the parameters for receiving dispense information for a prescription that was redeemed in the EU"
-* insert Profile(GEM_ERP_PR_PAR_EU_CloseOperation_Input)
+* insert Profile(GEM_ERP_PR_PAR_EU_GET_Prescription_Input)
 
 * parameter MS
 
@@ -12,31 +12,8 @@ Description: "This profile defines the parameters for receiving dispense informa
 * parameter ^slicing.rules = #closed
 
 * parameter contains 
-  rxDispensation 1..*
-  and practitionerData 1..1
-  and organizationData 1..1
-  and practitionerRoleData 1..1
-  and requestData 1..1
+  requestData 1..1
 
-// Generic Data that applys to all dispensations
-* parameter[practitionerData]
-  * name MS
-  * name = "practitionerData"
-  * value[x] 0..0
-  * resource only GEM_ERP_PR_Practitioner_EU
-  * part 0..0
-* parameter[organizationData]
-  * name MS
-  * name = "organizationData"
-  * value[x] 0..0
-  * resource only GEM_ERP_PR_Organization_EU
-  * part 0..0
-* parameter[practitionerRoleData]
-  * name MS
-  * name = "practitionerRoleData"
-  * value[x] 0..0
-  * resource only GEM_ERP_PR_PractitionerRole_EU
-  * part 0..0
 * parameter[requestData]
   * name MS
   * name = "requestData"
@@ -115,30 +92,3 @@ Description: "This profile defines the parameters for receiving dispense informa
     * resource 0..0
     * part 0..0
 
-* parameter[rxDispensation]
-  * name MS
-  * name = "rxDispensation"
-  * value[x] 0..0
-  * resource 0..0
-  * obeys workflow-parameters-close-dispense-medication-references
-  * part MS
-    * ^slicing.discriminator.type = #pattern
-    * ^slicing.discriminator.path = "name"
-    * ^slicing.rules = #closed
-  * part contains
-    medicationDispense 1..1 and
-    medication 1..1
-  * part[medicationDispense]
-    * name MS
-    * name = "medicationDispense"
-    * value[x] 0..0
-    * resource 1..1
-    * resource only GEM_ERP_PR_MedicationDispense_EU
-    * part 0..0
-  * part[medication]
-    * name MS
-    * name = "medication"
-    * value[x] 0..0
-    * resource 1..1
-    * resource only GEM_ERP_PR_Medication
-    * part 0..0

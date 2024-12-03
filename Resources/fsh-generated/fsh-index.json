@@ -96,12 +96,28 @@
     "endLine": 16
   },
   {
+    "outputFile": "CodeSystem-GEM-ERP-CS-HealthCareFacilityType-EU.json",
+    "fshName": "GEM_ERP_CS_HealthCareFacilityType_EU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/GEM_ERP_CS_HealthCareFacilityType_EU.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
     "outputFile": "CodeSystem-GEM-ERP-CS-OrganizationType.json",
     "fshName": "GEM_ERP_CS_OrganizationType",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_OrganizationType.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "CodeSystem-GEM-ERP-CS-RequestType-EU.json",
+    "fshName": "GEM_ERP_CS_RequestType_EU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/GEM_ERP_CS_RequestType_EU.fsh",
+    "startLine": 1,
+    "endLine": 9
   },
   {
     "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
@@ -573,7 +589,15 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example_Parameters_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 50
+  },
+  {
+    "outputFile": "Parameters-ExampleEUGETPrescription.json",
+    "fshName": "ExampleEUGETPrescription",
+    "fshType": "Instance",
+    "fshFile": "examples/EU/Example_EU_Parameters_GET_Prescription.fsh",
+    "startLine": 1,
+    "endLine": 31
   },
   {
     "outputFile": "Parameters-ExampleOperationActivateParametersInput.json",
@@ -965,7 +989,15 @@
     "fshType": "Profile",
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
     "startLine": 1,
-    "endLine": 66
+    "endLine": 144
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-GET-Prescription-Input.json",
+    "fshName": "GEM_ERP_PR_PAR_EU_GET_Prescription_Input",
+    "fshType": "Profile",
+    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_GET_Prescription_Input.fsh",
+    "startLine": 1,
+    "endLine": 93
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Practitioner-EU.json",
@@ -1128,6 +1160,14 @@
     "endLine": 6
   },
   {
+    "outputFile": "ValueSet-GEM-ERP-VS-HealthCareFacilityType-EU.json",
+    "fshName": "GEM_ERP_VS_HealthCareFacilityType_EU",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/GEM_ERP_VS_HealthCareFacilityType_EU.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
     "outputFile": "ValueSet-GEM-ERP-VS-OrganizationType.json",
     "fshName": "GEM_ERP_VS_OrganizationType",
     "fshType": "ValueSet",
@@ -1142,5 +1182,13 @@
     "fshFile": "valuesets/GEM_ERP_VS_PerformerType.fsh",
     "startLine": 5,
     "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-GEM-ERP-VS-RequestType-EU.json",
+    "fshName": "GEM_ERP_VS_RequestType_EU",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/GEM_ERP_VS_RequestType_EU.fsh",
+    "startLine": 1,
+    "endLine": 6
   }
 ]
