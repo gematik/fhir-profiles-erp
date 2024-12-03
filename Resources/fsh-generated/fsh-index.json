@@ -808,12 +808,20 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Consent-EU.json",
+    "fshName": "GEM_ERP_PR_Consent_EU",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Consent_EU.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Consent.json",
     "fshName": "GEM_ERP_PR_Consent",
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Consent.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 23
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",

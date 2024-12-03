@@ -3,6 +3,7 @@
   "id": "f97a0772-c99f-4159-90c6-2a41c7d96779",
   "meta": {
     "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Consent",
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent|1.5"
     ]
   },

@@ -1,33 +1,20 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Consent",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent",
-  "version": "1.5",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-PR-Consent",
+  "version": "1.5.0-beta",
   "name": "GEM_ERP_PR_Consent",
   "title": "Consent for ePrescriptions",
   "status": "draft",
-  "date": "2025-01-01",
   "description": "Records the consent of the patient for an operation in the context of ePrescription.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Consent",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Consent",
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "Consent.meta",
-        "path": "Consent.meta",
-        "min": 1
-      },
-      {
-        "id": "Consent.meta.profile",
-        "path": "Consent.meta.profile",
-        "min": 1,
-        "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Consent|1.5"
-      },
       {
         "id": "Consent.status",
         "path": "Consent.status",
@@ -37,36 +24,27 @@
         "id": "Consent.scope.coding",
         "path": "Consent.scope.coding",
         "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Consent.scope.coding.system",
-        "path": "Consent.scope.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/consentscope"
-      },
-      {
-        "id": "Consent.scope.coding.code",
-        "path": "Consent.scope.coding.code",
-        "fixedCode": "patient-privacy"
-      },
-      {
-        "id": "Consent.scope.coding.display",
-        "path": "Consent.scope.coding.display",
-        "fixedString": "Privacy Consent"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Consent.category",
         "path": "Consent.category",
         "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_ConsentType"
-        }
+        "mustSupport": true
+      },
+      {
+        "id": "Consent.category.coding",
+        "path": "Consent.category.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Consent.patient",
         "path": "Consent.patient",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Consent.patient.identifier",
@@ -79,7 +57,8 @@
               "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Consent.patient.identifier.assigner",
@@ -102,7 +81,7 @@
       {
         "id": "Consent.dateTime",
         "path": "Consent.dateTime",
-        "min": 1
+        "mustSupport": true
       },
       {
         "id": "Consent.policyRule",
