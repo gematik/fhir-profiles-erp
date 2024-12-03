@@ -23,7 +23,9 @@ Description: "Handles information about the redeem of the prescription and the s
 * whenPrepared obeys workflow-abgabeDatumsFormat
 * whenHandedOver 1..
 * whenHandedOver obeys workflow-abgabeDatumsFormat
+
 * dosageInstruction MS
+* dosageInstruction only EPADosage
 
 Invariant: workflow-abgabeDatumsFormat
 Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
