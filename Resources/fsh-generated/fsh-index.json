@@ -105,7 +105,7 @@
   },
   {
     "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
-    "fshName": "Communication_Reply_KTR",
+    "fshName": "Communication_Reply_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Diga.fsh",
     "startLine": 2,
@@ -766,6 +766,14 @@
     "fshFile": "profiles/GEM_ERP_PR_Bundle.fsh",
     "startLine": 1,
     "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DiGA.json",
+    "fshName": "GEM_ERP_PR_Communication_DiGA",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Communication_DiGA.fsh",
+    "startLine": 1,
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DispReq.json",
