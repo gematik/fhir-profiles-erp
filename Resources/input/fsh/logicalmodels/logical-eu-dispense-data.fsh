@@ -3,6 +3,8 @@ Parent: Element
 Id: logical-eu-dispense-data
 Title: "Dispense Data from EU"
 Description: "Logical Information that is Provided by the NCPeH for Dispensing Medication"
+* insert StructureDefinition(GEM_ERP_LOG_EU_DispenseData)
+
 * PatientData 1..1 BackboneElement "Patient Data"
   * RegionalNationalHealthIdentifier 0..1 string "If the patient has a regional or national Health Identification. This field is required by some national laws."
     * ^short = "Regional/National Health Identifier"
