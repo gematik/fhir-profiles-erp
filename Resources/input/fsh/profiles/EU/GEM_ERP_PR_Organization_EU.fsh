@@ -13,6 +13,7 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * ^slicing.description = "Identifier for the practitioner"
   * ^slicing.ordered = false
   
+//TODO: change name of identifier
 * identifier contains 
   ehdsi 0..1 MS
   and facilityId 0..1 MS
