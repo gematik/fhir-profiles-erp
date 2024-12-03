@@ -5,7 +5,7 @@ Title: "Organization Information Received from the EU"
 Description: "This Organization Profile is sent by the NCPeH when redeeming a Prescription in the EU"
 * insert Profile(GEM_ERP_PR_Organization_EU)
 
-* identifier 0..*
+* identifier 0..* MS
 * identifier
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
@@ -14,8 +14,8 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * ^slicing.ordered = false
   
 * identifier contains 
-  ehdsi 0..1
-  and facilityId 0..1
+  ehdsi 0..1 MS
+  and facilityId 0..1 MS
 
 * identifier[ehdsi]
   * system MS

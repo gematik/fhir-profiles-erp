@@ -41,14 +41,16 @@
           "rules": "open",
           "description": "Identifier for the practitioner",
           "ordered": false
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:ehdsi",
         "path": "Organization.identifier",
         "sliceName": "ehdsi",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:ehdsi.use",
@@ -72,7 +74,8 @@
         "path": "Organization.identifier",
         "sliceName": "facilityId",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:facilityId.use",
