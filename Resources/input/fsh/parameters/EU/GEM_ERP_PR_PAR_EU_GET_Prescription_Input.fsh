@@ -28,6 +28,7 @@ Description: "This profile defines the parameters for receiving dispense informa
     kvnr 1..1 MS and
     accessCode 1..1 MS and
     countryCode 1..1 MS and
+    prescription-ids 0..1 MS and
     practitionerName 1..1 MS and
     practitionerRole 1..1 MS and
     pointOfCare 1..1 MS and
@@ -65,6 +66,26 @@ Description: "This profile defines the parameters for receiving dispense informa
     * valueCoding.system 1..1
     * valueCoding.system = $cs-iso-3166
     * valueCoding from Iso3166-1-2 (required) // Nach VZD Profil NCPeHCountryEx
+    * resource 0..0
+    * part 0..0
+  * part[prescription-ids]
+    * name MS
+    * name = "prescription-ids"
+    * value[x] 0..0
+    * resource 0..0
+    * part MS
+      * ^slicing.discriminator.type = #pattern
+      * ^slicing.discriminator.path = "name"
+      * ^slicing.rules = #closed
+    * part contains prescription-id 1..* MS
+    * part[prescription-id]
+      * name MS
+      * name = "prescription-id"
+      * value[x] 1..1
+      * value[x] only Identifier
+      * valueIdentifier only GEM_ERP_PR_PrescriptionId
+      * resource 0..0
+      * part 0..0
   * part[practitionerName]
     * name MS
     * name = "practitionerName"

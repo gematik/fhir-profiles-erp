@@ -254,6 +254,102 @@
         "patternUri": "urn:iso:std:iso:3166"
       },
       {
+        "id": "Parameters.parameter:requestData.part:countryCode.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:countryCode.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids",
+        "path": "Parameters.parameter.part",
+        "sliceName": "prescription-ids",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "prescription-ids",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part",
+        "path": "Parameters.parameter.part.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part:prescription-id",
+        "path": "Parameters.parameter.part.part",
+        "sliceName": "prescription-id",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part:prescription-id.name",
+        "path": "Parameters.parameter.part.part.name",
+        "patternString": "prescription-id",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part:prescription-id.value[x]",
+        "path": "Parameters.parameter.part.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part:prescription-id.resource",
+        "path": "Parameters.parameter.part.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:prescription-ids.part:prescription-id.part",
+        "path": "Parameters.parameter.part.part.part",
+        "max": "0"
+      },
+      {
         "id": "Parameters.parameter:requestData.part:practitionerName",
         "path": "Parameters.parameter.part",
         "sliceName": "practitionerName",
