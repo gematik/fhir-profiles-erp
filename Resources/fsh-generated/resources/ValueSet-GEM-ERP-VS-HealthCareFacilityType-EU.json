@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "GEM_ERP_VS_HealthCareFacilityType_EU",
+  "id": "GEM-ERP-VS-HealthCareFacilityType-EU",
+  "title": "ValueSet of NCPeH HealthCareFacility Types",
+  "description": "Type of HealthCareFacility from NCPeH",
+  "version": "1.5",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_HealthCareFacilityType_EU",
+  "date": "2025-01-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+        "concept": [
+          {
+            "code": "1.2.276.0.76.4.53",
+            "display": "Krankenhaus"
+          },
+          {
+            "code": "1.2.276.0.76.4.54",
+            "display": "Öffentliche Apotheke"
+          },
+          {
+            "code": "1.2.276.0.76.4.50",
+            "display": "Betriebsstätte Arzt"
+          },
+          {
+            "code": "1.2.276.0.76.4.51",
+            "display": "Zahnarztpraxis"
+          }
+        ]
+      }
+    ]
+  }
+}

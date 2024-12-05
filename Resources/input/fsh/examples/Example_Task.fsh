@@ -11,7 +11,6 @@ Usage: #example
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * extension[acceptDate].valueDate = "2022-04-02"
-//TODO Check how to implement Task with different dates
 * insert Date(extension[acceptDate].valueDate)
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
 * extension[expiryDate].valueDate = "2022-06-02"
@@ -22,7 +21,6 @@ Usage: #example
 * status = #draft
 * intent = #order
 * authoredOn = "2022-03-18T15:26:00+00:00"
-//* performerType[+].coding = urn:ietf:rfc:3986#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 * performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType#urn:oid:1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 Instance: TaskInReadyState

@@ -8,7 +8,7 @@
   },
   "identifier": [
     {
-      "system": "ehdsi-dataelement-303",
+      "system": "https://cda.ehdsi.com/ehdsi-dataelement-303",
       "value": "1234567890"
     }
   ],

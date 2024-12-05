@@ -13,9 +13,48 @@ Description: "This profile defines the parameters for receiving dispense informa
 
 * parameter contains 
   rxDispensation 1..*
+  and requestData 1..1
   and practitionerData 1..1
   and organizationData 1..1
   and practitionerRoleData 1..1
+
+* parameter[requestData]
+  * name MS
+  * name = "requestData"
+  * value[x] 0..0
+  * resource 0..0
+  * part MS
+    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.path = "name"
+    * ^slicing.rules = #closed
+  * part contains
+    kvnr 1..1 MS and
+    accessCode 1..1 MS and
+    countryCode 1..1 MS
+  * part[kvnr]
+    * name MS
+    * name = "kvnr"
+    * value[x] 1..1
+    * value[x] only Identifier
+    * valueIdentifier only IdentifierKvid10
+    * resource 0..0
+    * part 0..0
+  * part[accessCode]
+    * name MS
+    * name = "accessCode"
+    * value[x] 1..1
+    * value[x] only Identifier
+    * valueIdentifier only GEM_ERP_PR_Access_Code_EU
+    * resource 0..0
+    * part 0..0
+  * part[countryCode]
+    * name MS
+    * name = "countryCode"
+    * value[x] 1..1
+    * value[x] only Coding
+    * valueCoding.system 1..1
+    * valueCoding.system = $cs-iso-3166
+    * valueCoding from Iso3166-1-2 (required) // Nach VZD Profil NCPeHCountryEx
 
 // Generic Data that applys to all dispensations
 * parameter[practitionerData]
