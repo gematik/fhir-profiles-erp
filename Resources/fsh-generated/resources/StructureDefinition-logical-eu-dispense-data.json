@@ -11,25 +11,25 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+      "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
       "name": "Mapping for EU DispenseData to EU-MedicationDispense",
       "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-MedicationDispense"
     },
     {
-      "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+      "identity": "GEM-ERP-MAP-EU-Data-Medication",
       "name": "Mapping for EU MedicationData to GEM_ERP_PR_Medication",
       "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
       "comment": "This mapping maps the logical information of the EU MedicationData to GEM_ERP_PR_Medication"
     },
     {
-      "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+      "identity": "GEM-ERP-MAP-EU-Data-Organization",
       "name": "Mapping for EU DispenseData to EU-Organization",
       "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Organization_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-Organization"
     },
     {
-      "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+      "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
       "name": "Mapping for EU DispenseData to EU-Practitioner",
       "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Practitioner_EU",
       "comment": "This mapping maps the logical information of the EU DispenseData to the EU-Practitioner"
@@ -138,17 +138,31 @@
           {
             "code": "BackboneElement"
           }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation",
+        "short": "Personal Information",
+        "definition": "Der Nachname der die Medikation abgebenden Person wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils NEUES PROFIL - NAME ANPASSEN eingetragen. (Achtung: Da aus der EU nur ein Datenfeld kommt, entfallen Sonderfelder für Präfixe und Suffixe)",
+        "comment": "ehdsi-dataelement-299 Family Name/Surname\nPractitioner.name.family",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "GEM_ERP_PR_Practitioner_EU"
           }
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.HPIdentifier",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.HPIdentifier",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.HPIdentifier",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.HPIdentifier",
         "short": "HP Identifier",
         "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
         "comment": "Entsprechendes FHIR-Profil für Informationen zu HCP aus Country B (Dispenser) wird erstellt. Stark angelehnt an die Strukturen des Profils 'Practitioner in gematik Directory' --> im neu erstellten FHIR Profil Practitioner Coutry B noch die Properties und Eigenschaften gegenchecken!\nPractitioner.identifier:TelematikID,\nPractitioner.identifier:LANR,\nPractitioner.identifier:ZANR",
@@ -161,14 +175,14 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "Practitioner.identifier[ehdsi]"
           }
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.GivenName",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.GivenName",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.GivenName",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.GivenName",
         "short": "Given Name",
         "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
         "comment": "ehdsi-dataelement-300 Given Name\nPractitioner.name.given",
@@ -181,17 +195,16 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "Practitioner.name.given"
           }
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.FamilyNameSurname",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.FamilyNameSurname",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.FamilyNameSurname",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.FamilyNameSurname",
         "short": "Family Name/Surname",
-        "definition": "Der Nachname der die Medikation abgebenden Person wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils NEUES PROFIL - NAME ANPASSEN eingetragen. (Achtung: Da aus der EU nur ein Datenfeld kommt, entfallen Sonderfelder für Präfixe und Suffixe)",
-        "comment": "ehdsi-dataelement-299 Family Name/Surname\nPractitioner.name.family",
+        "definition": "The surname/s of the HP dispensing the medicine to the patient. This field can contain more than one element.",
         "min": 1,
         "max": "*",
         "type": [
@@ -201,12 +214,70 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "Practitioner.family"
           },
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Practitioner",
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "Practitioner.family.extension[nachname]"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
+        "short": "Professional Information",
+        "definition": "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
+            "map": "GEM_ERP_PR_PractitionerRole_EU"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.Profession",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.Profession",
+        "short": "Profession",
+        "definition": "The profession of the HP prescribing the medicine. Example: Physician.",
+        "comment": "ehdsi-dataelement-229 Profession mit valueset: http://52.212.185.219/html/publication/epSOS/epsos-html-20240422T073854/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.1-2020-04-22T155100.html\nPractitioner.qualification:Typ.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
+            "map": "PractitionerRole.code"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
+        "short": "Medical Specialty",
+        "definition": "The field of practice/specialization of the HP prescribing the medicine.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
+            "map": "PractitionerRole.specialty.text"
           }
         ]
       },
@@ -224,7 +295,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "GEM_ERP_PR_Organization_EU"
           }
         ]
@@ -244,8 +315,67 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.identifier[facilityId]"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo",
+        "short": "Contact Info",
+        "definition": "Contact information for the facility (pharmacy) from where the HP is dispensing the medicine.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Telephone",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Telephone",
+        "short": "Telephone",
+        "definition": "The phone number of the place where the HP prescribing the medicine made the prescription. Example: +34 954123123",
+        "comment": "ehdsi-dataelement-219 Telephone\nOrganization.telecom:phone",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom[system=phone].value"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Email",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Email",
+        "short": "Email",
+        "definition": "The contact e-mail of the facility or of the HP prescribing the medicine. Example: losbermejaleshealthcentre@xxx.es",
+        "comment": "ehdsi-dataelement-218 Email\nOrganization.telecom:email",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom[system=email].value"
           }
         ]
       },
@@ -264,7 +394,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.address.line"
           }
         ]
@@ -284,7 +414,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.address.city"
           }
         ]
@@ -304,7 +434,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.address.postalCode"
           }
         ]
@@ -324,7 +454,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.address.state"
           }
         ]
@@ -344,7 +474,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.address.country"
           }
         ]
@@ -364,7 +494,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.name"
           }
         ]
@@ -384,7 +514,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Organization",
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.identifier[ehdsi]"
           }
         ]
@@ -403,11 +533,11 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "GEM_ERP_PR_MedicationDispense_EU"
           },
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "GEM_ERP_PR_MedicationDispense_EU"
           }
         ]
@@ -426,7 +556,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "GEM_ERP_PR_MedicationDispense_EU"
           }
         ]
@@ -446,7 +576,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "MedicationDispense.id"
           }
         ]
@@ -466,7 +596,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "MedicationDispense.identifier[prescriptionID]"
           }
         ]
@@ -485,7 +615,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "n/a"
           }
         ]
@@ -505,7 +635,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "MedicationDispense.whenHandedOver"
           }
         ]
@@ -525,7 +655,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "MedicationDispense.substitution.wasSubstituted"
           }
         ]
@@ -545,7 +675,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense",
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
             "map": "MedicationDispense.quantity"
           }
         ]
@@ -564,7 +694,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "GEM_ERP_PR_MedicationDispense_EU.medicationReference"
           }
         ]
@@ -584,7 +714,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.coding:[atc-de|ask|snomed]"
           }
         ]
@@ -604,7 +734,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medicatio.code.text"
           }
         ]
@@ -624,7 +754,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.???"
           }
         ]
@@ -644,7 +774,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.ingredient.item[x]:itemCodeableConcept"
           }
         ]
@@ -664,7 +794,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.ingredient.isActive"
           }
         ]
@@ -684,7 +814,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.ingredient.strength"
           }
         ]
@@ -704,7 +834,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.form.text, Medication.form.coding:kbvDarreichungsform"
           }
         ]
@@ -724,7 +854,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.extension:packaging"
           }
         ]
@@ -744,7 +874,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.ingredient.itemReference(EPAMedicationPharmaceuticalProduct.code.coding:product-key)"
           }
         ]
@@ -764,7 +894,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.extension:packaging.value[x]:valueString"
           }
         ]
@@ -784,7 +914,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.amount.numerator.extension:packagingSize"
           }
         ]
@@ -804,7 +934,7 @@
         ],
         "mapping": [
           {
-            "identity": "GEM-ERP-MAP-MedicationDispense-Data-Medication",
+            "identity": "GEM-ERP-MAP-EU-Data-Medication",
             "map": "Medication.manufacturer.identifier"
           }
         ]

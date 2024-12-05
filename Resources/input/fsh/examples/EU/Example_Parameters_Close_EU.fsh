@@ -3,6 +3,18 @@ InstanceOf: GEM_ERP_PR_PAR_EU_CloseOperation_Input
 Usage: #example
 Title: "Example EU-Close Parameters"
 
+* parameter[requestData]
+  * name = "requestData"
+  * part[kvnr]
+    * name = "kvnr"
+    * valueIdentifier.value = "X123456789"
+  * part[accessCode]
+    * name = "accessCode"
+    * valueIdentifier.value = "123456"
+  * part[countryCode]
+    * name = "countryCode"
+    * valueCoding.code = #BE
+
 * parameter[practitionerData]
   * name = "practitionerData"
   * resource = Example-EU-Practitioner

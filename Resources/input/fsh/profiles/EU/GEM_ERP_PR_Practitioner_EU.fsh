@@ -18,7 +18,7 @@ Description: "This Practitioner Profile is sent by the NCPeH when redeeming a Pr
 
 * identifier[ehdsi] MS
   * system MS
-  * system = "ehdsi-dataelement-303" (exactly) //TODO: Check if this is the correct system
+  * system = "https://cda.ehdsi.com/ehdsi-dataelement-303" (exactly) //TODO: Check if this is the correct system
   * use = #official (exactly)
   * value MS
 

@@ -1,7 +1,7 @@
 Mapping: GEM_ERP_MAP_EU_Dispense_Data_MedicationDispense
 Source: GEM_ERP_LOG_EU_DispenseData
 Target: "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_EU"
-Id: GEM-ERP-MAP-MedicationDispense-Data-MedicationDispense
+Id: GEM-ERP-MAP-EU-Data-MedicationDispense
 Title: "Mapping for EU DispenseData to EU-MedicationDispense"
 Description: "This mapping maps the logical information of the EU DispenseData to the EU-MedicationDispense"
 * DispenseData -> "GEM_ERP_PR_MedicationDispense_EU"
@@ -16,7 +16,7 @@ Description: "This mapping maps the logical information of the EU DispenseData t
 Mapping: GEM_ERP_MAP_EU_Dispense_Data_Medication
 Source: GEM_ERP_LOG_EU_DispenseData
 Target: "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
-Id: GEM-ERP-MAP-MedicationDispense-Data-Medication
+Id: GEM-ERP-MAP-EU-Data-Medication
 Title: "Mapping for EU MedicationData to GEM_ERP_PR_Medication"
 Description: "This mapping maps the logical information of the EU MedicationData to GEM_ERP_PR_Medication"
 * DispenseData -> "GEM_ERP_PR_MedicationDispense_EU"
