@@ -71,7 +71,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ]
       },
@@ -84,7 +84,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ]
       },
@@ -170,7 +170,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
@@ -227,7 +227,7 @@
         "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
         "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
         "short": "Professional Information",
-        "definition": "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist.",
+        "definition": "Professional Information",
         "min": 1,
         "max": "1",
         "type": [
@@ -266,12 +266,12 @@
         "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
         "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
         "short": "Medical Specialty",
-        "definition": "The field of practice/specialization of the HP prescribing the medicine.",
+        "definition": "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist.",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "Coding"
+            "code": "string"
           }
         ],
         "mapping": [
@@ -310,13 +310,33 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Organization",
             "map": "Organization.identifier[facilityId]"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.OrganizationIdentifier",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.OrganizationIdentifier",
+        "short": "Organization Identifier",
+        "definition": "(Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu)",
+        "comment": "ehdsi-dataelement-285 Organization Identifier\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.identifier[ehdsi]"
           }
         ]
       },
@@ -500,26 +520,6 @@
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.OrganizationIdentifier",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.OrganizationIdentifier",
-        "short": "Organization Identifier",
-        "definition": "(Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu)",
-        "comment": "ehdsi-dataelement-285 Organization Identifier\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.identifier[ehdsi]"
-          }
-        ]
-      },
-      {
         "id": "GEM_ERP_LOG_EU_DispenseData.DispenseData",
         "path": "GEM_ERP_LOG_EU_DispenseData.DispenseData",
         "short": "Dispense Data",
@@ -591,7 +591,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
@@ -610,7 +610,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
@@ -630,7 +630,7 @@
         "max": "1",
         "type": [
           {
-            "code": "date"
+            "code": "dateTime"
           }
         ],
         "mapping": [
@@ -670,7 +670,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Quantity"
           }
         ],
         "mapping": [
@@ -709,7 +709,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
@@ -769,7 +769,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "CodeableConcept"
           }
         ],
         "mapping": [
@@ -789,7 +789,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "boolean"
           }
         ],
         "mapping": [
@@ -809,7 +809,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Ratio"
           }
         ],
         "mapping": [
@@ -829,7 +829,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
         ],
         "mapping": [
@@ -869,7 +869,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [

@@ -6,12 +6,12 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
 * insert StructureDefinition(GEM_ERP_LOG_EU_DispenseData)
 
 * PatientData 1..1 BackboneElement "Patient Data"
-  * RegionalNationalHealthIdentifier 0..1 string "If the patient has a regional or national Health Identification. This field is required by some national laws."
+  * RegionalNationalHealthIdentifier 0..1 Identifier "If the patient has a regional or national Health Identification. This field is required by some national laws."
     * ^short = "Regional/National Health Identifier"
     * ^definition = "Angabe aus einem der dargestellten CDA Felder wird unter der angegebenen Element ID des FHIR Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen. Als einziges Merkmal zu den PatientInnen soll die KVID eingetragen werden, da hierüber jede gesetzlich versicherte Person eindeutig identifizierbar ist."
     * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.subject.identifier"
 
-  * SocialInsuranceNumber 0..1 string "If a patient has both Regional/National Health ID and Social/Insurance Number, only the Regional/National Health ID is required by law."
+  * SocialInsuranceNumber 0..1 Identifier "If a patient has both Regional/National Health ID and Social/Insurance Number, only the Regional/National Health ID is required by law."
     * ^short = "Social/Insurance Number"
     * ^definition = "Da über die Angabe der Regional/National Health Identifier (KVID) jede Person eindeutig identifizierbar ist, entfällt die Dokumentation weiterer Angaben zur Person."
 
@@ -29,7 +29,7 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
 
 * HealthCareProfessionalData 1..1 BackboneElement "HealthCareProfessional Data"
   * PersonalInformation 1..1 BackboneElement "Personal Information"
-    * HPIdentifier 0..1 string "The identification of the person as Health Professional."
+    * HPIdentifier 0..1 Identifier "The identification of the person as Health Professional."
       * ^short = "HP Identifier"
       * ^definition = "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen."
       * ^comment = "Entsprechendes FHIR-Profil für Informationen zu HCP aus Country B (Dispenser) wird erstellt. Stark angelehnt an die Strukturen des Profils 'Practitioner in gematik Directory' --> im neu erstellten FHIR Profil Practitioner Coutry B noch die Properties und Eigenschaften gegenchecken!\nPractitioner.identifier:TelematikID,\nPractitioner.identifier:LANR,\nPractitioner.identifier:ZANR"
@@ -50,15 +50,20 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
       * ^definition = "The profession of the HP prescribing the medicine. Example: Physician."
       * ^comment = "ehdsi-dataelement-229 Profession mit valueset: http://52.212.185.219/html/publication/epSOS/epsos-html-20240422T073854/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.1-2020-04-22T155100.html\nPractitioner.qualification:Typ.code.coding.code"
 
-    * MedicalSpecialty 0..1 Coding "The field of practice/specialization of the HP prescribing the medicine."
+    * MedicalSpecialty 0..1 string "The field of practice/specialization of the HP prescribing the medicine."
       * ^short = "Medical Specialty"
-    * ^definition = "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist."
+      * ^definition = "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist."
 
 * OrganizationData 1..1 BackboneElement "Organization Data"
-  * FacilityIdentifier 0..1 string "The identification of the facility (pharmacy) from where the HP is dispensing the medicine."
+  * FacilityIdentifier 0..1 Identifier "The identification of the facility (pharmacy) from where the HP is dispensing the medicine."
     * ^short = "Facility (Pharmacy) Identifier"
     * ^definition = "Der Identifier des abgebenden Unternehmens wird aus dem angegebenen CDA Feld in die angegebenen Element Id des Profils NEUES PROFIL - NAME ANPASSEN übermittelt. (Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu - Kardinalität Identifier 0..*)"
     * ^comment = "Entsprechendes FHIR-Profil für Informationen zu Organisation aus Country B (Dispensing Organisation) wird erstellt. Stark angelehnt an die Strukturen des Profils Organization in gematik Directory\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR"
+
+  * OrganizationIdentifier 0..1 Identifier "The identification of the healthcare provider organization of the HP dispensing the medicine."
+    * ^short = "Organization Identifier"
+    * ^definition = "(Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu)"
+    * ^comment = "ehdsi-dataelement-285 Organization Identifier\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR"
 
   * ContactInfo 0..1 ContactPoint "Contact information for the facility (pharmacy) from where the HP is dispensing the medicine."
     * ^short = "Contact Info"
@@ -103,11 +108,6 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
     * ^definition = "Der Name der Organisation, die die Medikation abgibt wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils NEUES PROFIL - NAME ANPASSEN eingetragen. (Achtung: HL7 Grundprofil lässt nur einen Organisationsnamen zu deshalb diesen und nicht Facility name gewählt)"
     * ^comment = "ehdsi-dataelement-286 Organization Name\nOrganization.name"
 
-  * OrganizationIdentifier 0..1 string "The identification of the healthcare provider organization of the HP dispensing the medicine."
-    * ^short = "Organization Identifier"
-    * ^definition = "(Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu)"
-    * ^comment = "ehdsi-dataelement-285 Organization Identifier\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR"
-
 * DispenseData 1..1 BackboneElement "Dispense Data"
   * AdministrativeInformation 1..1 BackboneElement "Information regarding the dispensation"
   
@@ -116,16 +116,16 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
       * ^definition = "Der Dispensation Identifier wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.extension:rxPrescriptionProcessIdentifier"
 
-    * PrescriptionIdentifier 0..1 string "Identification of the related prescription (from Country of affiliation) of the dispensed medicine."
+    * PrescriptionIdentifier 0..1 Identifier "Identification of the related prescription (from Country of affiliation) of the dispensed medicine."
       * ^short = "Prescription Identifier"
       * ^definition = "Der Prescription Identifier wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen. Die im CDA Feld gelieferte Information entspricht dem ursprünglich in Deutschland erstelltem Wert, weshalb sie ohne Probleme konform mit der Formatvorgabe dieses Feldes ist."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.identifier:prescriptionID"
 
-    * PrescriptionItemIdentifier 0..1 string "Identification of the related prescription item (from Country of affiliation) of the dispensed medicine."
+    * PrescriptionItemIdentifier 0..1 Identifier "Identification of the related prescription item (from Country of affiliation) of the dispensed medicine."
       * ^short = "Prescription Item Identifier"
       * ^definition = "Dieses Feld ist im deutschen Country A Szenario ePrescription/eDispensation nicht notwendig, da deutsche eRezepte immer nur ein Prescription Item pro Verschreibung/Dispensierung beinhalten. Somit kann für eine jede Verordnung, für die im EU-Ausland eine Dispensierung erfolgte, ausschließlich ein Prescription Item enthalten sein."
 
-    * DateOfIssueOfDispensation 1..1 date "Date when the medicine was dispensed."
+    * DateOfIssueOfDispensation 1..1 dateTime "Date when the medicine was dispensed."
       * ^short = "Date of issue of the dispensation"
       * ^definition = "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.whenHandedOver"
@@ -135,13 +135,13 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
       * ^definition = "Wenn im dargestellten CDA Feld übermittelt wird, dass eine Substitution erfolgte, kann diese Information unter der angegebenen Element ID des FHIR Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen werden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.substitution.wasSubstituted"
 
-    * NumberOfPackages 1..1 string "Number of boxes that have been dispensed."
+    * NumberOfPackages 1..1 Quantity "Number of boxes that have been dispensed."
       * ^short = "Number of packages"
       * ^definition = "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.quantity"
 
   * MedicinalInformation 1..1 BackboneElement "Information regarding the medication of the dispensation"
-    * MedicinalProductIdentifier 0..1 string "Identifier of a medicinal product refers to the product inside the package, not the packaged item as such."
+    * MedicinalProductIdentifier 0..1 Identifier "Identifier of a medicinal product refers to the product inside the package, not the packaged item as such."
       * ^short = "Medicinal Product Identifier"
       * ^definition = "Der Medicinal Product Identifier wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen. Da im FHIR Profil ein Data-String eingetragen werden darf, kann die übermittelte ISO-IDMP Nummer hier ohne Probleme eingetragen werden. Es ist angestrebt zusätzlich eine textuale Beschreibung abzubilden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.code.text\nHier undbedingt nochmal BfArM interne Rücksprache notwendig! Stichwort Medicinal Product Identifier/Brand Name/ Classification --> ersteres und letzteeres Optional, mittleres Mandatory --> alle drei könnten/sollten in gleiche Element ID in FHIR --> unbedingt wichtig den Brand Name einzufüllen, da diese FHIR Id immer verwendet wird zur Anzeige der Medikation --> eventuell die beiden anderen in String ergänzen falls vorhanden?"
@@ -156,22 +156,22 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
       * ^definition = "Siehe roter Vermerk an der Seite."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.code.text\nHier undbedingt nochmal BfArM interne Rücksprache notwendig! Stichwort Medicinal Product Identifier/Brand Name/ Classification --> ersteres und letzteeres Optional, mittleres Mandatory --> alle drei könnten/sollten in gleiche Element ID in FHIR --> unbedingt wichtig den Brand Name einzufüllen, da diese FHIR Id immer verwendet wird zur Anzeige der Medikation --> eventuell die beiden anderen in String ergänzen falls vorhanden?"
 
-    * ActiveIngredients 1..1 string "Substance that alone or in combination with one or more other ingredients produces the intended activity of a medicinal product."
+    * ActiveIngredients 1..1 CodeableConcept "Substance that alone or in combination with one or more other ingredients produces the intended activity of a medicinal product."
       * ^short = "Active Ingredient(s)"
       * ^definition = "In jedem Fall wird die Angabe aus dem dargestellten CDA Feld unter der angegebenen Element ID 'Medication.ingredient.item[x]:itemCodeableConcept.text' des FHIR Profils Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) als Freitext eingetragen. Handelt es sich um einen WHO-ATC Code kann dieser in Medication.ingredient.item[x]:itemCodeableConcept.coding:atc-de eingetragen werden. Handelt es sich um eine Euro-SRS Nummer, so kann diese über das oben im Zusammenhang der Prescription bereits beschriebene Mapping in eine ASK-Nummer übersetzt werden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.ingredient.item[x]:itemCodeableConcept.text,\nMedication.ingredient.item[x]:itemCodeableConcept.coding:ask,\nMedication.ingredient.item[x]:itemCodeableConcept.coding:atc-de"
 
-    * ActiveIngredientRoles 1..1 string "The role of the active ingredient in the strength calculation."
+    * ActiveIngredientRoles 1..1 boolean "The role of the active ingredient in the strength calculation."
       * ^short = "Active Ingredient Role(s)"
       * ^definition = "In Deutschland werden grundsätzlich nur solche Inhaltsstoffe in den FHIR Profilen angegeben, die einem Wirkstoff entsprechen."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.ingredient.isActive"
 
-    * ActiveIngredientStrengths 0..1 string "The content of the active ingredient expressed quantifiable per dosage unit, per unit of volume or per unit of weight, according to the pharmaceutical dose form."
+    * ActiveIngredientStrengths 0..1 Ratio "The content of the active ingredient expressed quantifiable per dosage unit, per unit of volume or per unit of weight, according to the pharmaceutical dose form."
       * ^short = "Active Ingredient Strength(s)"
       * ^definition = "Angabe aus dem dargestellten CDA Feld kann einerseits unter der angegebenen Element ID des FHIR Profils Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) eingetragen. Alternativ könnten die Element IDs Medication.ingredient.strength.numerator.code.value und Medication.ingredient.strength.denominator.code.value. in Kombination genutzt werden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.ingredient.strength.extension:amountText.value[x]:valueString,\nMedication.ingredient.strength.numerator.code.value,\nMedication.ingredient.strength.denominator.code.value"
 
-    * PharmaceuticalDoseForm 1..1 string "The form in which a pharmaceutical product is presented (e.g. tablets, syrup)."
+    * PharmaceuticalDoseForm 1..1 Coding "The form in which a pharmaceutical product is presented (e.g. tablets, syrup)."
       * ^short = "Pharmaceutical Dose Form"
       * ^definition = "Angabe aus dem dargestellten CDA Feld wird auf jeden Fall als Valuestring und somit in Textform unter der angegebenen Element ID Medication.form.text des FHIR Profils Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) eingetragen. Zusätzlich sollen aus dem CDA Feld erhaltene Informationen über ein EDQM - KBV Darreichungsform Mapping in Medication.form.coding:kbvDarreichungsform eingetragen werden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.form.text,\nMedication.form.coding:kbvDarreichungsform"
@@ -181,7 +181,7 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
       * ^definition = "Angabe aus dem dargestellten CDA Feld kann unter der angegebenen Element ID des FHIR Profils Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) eingetragen werden. Bei Kombipackungen kann über eine Extension im FHIR Profil Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) auf das FHIR Profil EPA Pharmaceutical Product Medication und somit verschiedene Anganben im Element ID Medication.extension:packaging abgelegt werden."
       * ^comment = "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.extension:packaging,\nhttps://simplifier.net/packages/de.gematik.epa.medication/1.0.3/files/2539781\nFeld nach Beispiel in https://simplifier.net/erezept-workflow/medication-kombipackung erschlossen. Bitte noch einmal gegenprüfen, ob verständlich bzw. beabsichtigte Intention des Feldes erfüllt"
 
-    * MedicinalProductPackageIdentifier 0..1 string "Identifier of a packaged medicinal product refers to a specific pack size of a specific product."
+    * MedicinalProductPackageIdentifier 0..1 Identifier "Identifier of a packaged medicinal product refers to a specific pack size of a specific product."
       * ^short = "Medicinal Product Package identifier"
       * ^definition = "Angabe aus dem dargestellten CDA Feld kann unter der angegebenen Element ID des FHIR Profils EPA Pharmaceutical Product Medication eingetragen werden."
       * ^comment = "https://simplifier.net/packages/de.gematik.epa.medication/1.0.3/files/2539781\nMedication.code.coding:product-key\nFeld nach Beispiel in https://simplifier.net/erezept-workflow/medication-kombipackung erschlossen. Bitte noch einmal gegenprüfen, ob verständlich bzw. beabsichtigte Intention des Feldes erfüllt"
