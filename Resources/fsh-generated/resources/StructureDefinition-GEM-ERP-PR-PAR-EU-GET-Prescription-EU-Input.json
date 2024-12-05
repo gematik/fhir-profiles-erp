@@ -17,6 +17,19 @@
   "differential": {
     "element": [
       {
+        "id": "Parameters",
+        "path": "Parameters",
+        "constraint": [
+          {
+            "key": "workflow-parameters-get-prescription-eu-1",
+            "severity": "error",
+            "human": "Prescription IDs must be present if the request type is 'e-prescriptions-retrieval'",
+            "expression": "parameter.where(name = 'requestData').part.where(name = 'requesttype').valueCoding.code = 'e-prescriptions-retrieval' implies parameter.where(name = 'requestData').part.where(name = 'prescription-ids').exists()",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input"
+          }
+        ]
+      },
+      {
         "id": "Parameters.meta",
         "path": "Parameters.meta",
         "min": 1

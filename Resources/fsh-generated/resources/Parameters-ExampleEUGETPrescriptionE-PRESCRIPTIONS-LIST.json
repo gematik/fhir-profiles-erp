@@ -1,6 +1,6 @@
 {
   "resourceType": "Parameters",
-  "id": "ExampleEUGETPrescription",
+  "id": "ExampleEUGETPrescriptionE-PRESCRIPTIONS-LIST",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input|1.5"
@@ -13,7 +13,7 @@
         {
           "name": "requesttype",
           "valueCoding": {
-            "code": "demographics",
+            "code": "e-prescriptions-list",
             "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_RequestType_EU"
           }
         },
