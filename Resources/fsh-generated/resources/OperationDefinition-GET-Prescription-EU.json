@@ -6,7 +6,7 @@
   "version": "1.5",
   "date": "2025-01-01",
   "description": "The Operation gets Presciption Information from the ERP System for usage in the e-prescription workflow for EU countries",
-  "code": "get-prescription-eu",
+  "code": "get-eu-prescriptions",
   "name": "GET-Prescription-EU",
   "kind": "operation",
   "affectsState": false,

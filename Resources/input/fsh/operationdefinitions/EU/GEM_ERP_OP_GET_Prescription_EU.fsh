@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Usage: #definition
 * insert OperationVersioning
 * description = "The Operation gets Presciption Information from the ERP System for usage in the e-prescription workflow for EU countries"
-* code = #get-prescription-eu
+* code = #get-eu-prescriptions
 * url = "https://gematik.de/fhir/erp/OperationDefinition/GET-Prescription-EU-OperationDefinition"
 * name = "GET-Prescription-EU"
 * kind = #operation
