@@ -29,7 +29,7 @@ Description: "This profile defines the parameters for receiving dispense informa
     kvnr 1..1 MS and
     accessCode 1..1 MS and
     countryCode 1..1 MS and
-    prescription-ids 0..1 MS and
+    prescription-id 0..* MS and
     practitionerName 1..1 MS and
     practitionerRole 1..1 MS and
     pointOfCare 1..1 MS and
@@ -69,24 +69,13 @@ Description: "This profile defines the parameters for receiving dispense informa
     * valueCoding from Iso3166-1-2 (required) // Nach VZD Profil NCPeHCountryEx
     * resource 0..0
     * part 0..0
-  * part[prescription-ids]
+  * part[prescription-id]
     * name MS
-    * name = "prescription-ids"
-    * value[x] 0..0
+    * name = "prescription-id"
+    * value[x] 1..1
+    * value[x] only Identifier
+    * valueIdentifier only GEM_ERP_PR_PrescriptionId
     * resource 0..0
-    * part MS
-      * ^slicing.discriminator.type = #pattern
-      * ^slicing.discriminator.path = "name"
-      * ^slicing.rules = #closed
-    * part contains prescription-id 1..* MS
-    * part[prescription-id]
-      * name MS
-      * name = "prescription-id"
-      * value[x] 1..1
-      * value[x] only Identifier
-      * valueIdentifier only GEM_ERP_PR_PrescriptionId
-      * resource 0..0
-      * part 0..0
   * part[practitionerName]
     * name MS
     * name = "practitionerName"
@@ -122,6 +111,6 @@ Description: "This profile defines the parameters for receiving dispense informa
 
 Invariant: workflow-parameters-get-prescription-eu-1
 Description: "Prescription IDs must be present if the request type is 'e-prescriptions-retrieval'"
-Expression: "parameter.where(name = 'requestData').part.where(name = 'requesttype').valueCoding.code = 'e-prescriptions-retrieval' implies parameter.where(name = 'requestData').part.where(name = 'prescription-ids').exists()"
+Expression: "parameter.where(name = 'requestData').part.where(name = 'requesttype').valueCoding.code = 'e-prescriptions-retrieval' implies parameter.where(name = 'requestData').part.where(name = 'prescription-id').exists()"
 Severity: #error
 

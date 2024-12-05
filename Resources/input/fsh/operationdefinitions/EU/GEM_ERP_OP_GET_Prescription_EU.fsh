@@ -28,16 +28,11 @@ Usage: #definition
     * max = "1"
     * type = #Coding
   * part[+]
-    * name = #prescription-ids
+    * name = #prescription-id
     * use = #in
     * min = 0
-    * max = "1"
-    * part[+]
-      * name = #prescription-id
-      * use = #in
-      * min = 1
-      * max = "*"
-      * type = #Identifier
+    * max = "*"
+    * type = #Identifier
   * part[+]
     * name = #kvnr
     * use = #in

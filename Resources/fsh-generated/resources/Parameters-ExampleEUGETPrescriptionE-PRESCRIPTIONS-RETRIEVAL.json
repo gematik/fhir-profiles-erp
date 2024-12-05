@@ -63,37 +63,32 @@
           }
         },
         {
-          "name": "prescription-ids",
-          "part": [
-            {
-              "name": "prescription-id",
-              "valueIdentifier": {
-                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-                "value": "160.000.000.000.000.01"
-              }
-            },
-            {
-              "name": "prescription-id",
-              "valueIdentifier": {
-                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-                "value": "160.000.000.000.000.02"
-              }
-            },
-            {
-              "name": "prescription-id",
-              "valueIdentifier": {
-                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-                "value": "160.000.000.000.000.03"
-              }
-            },
-            {
-              "name": "prescription-id",
-              "valueIdentifier": {
-                "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-                "value": "160.000.000.000.000.04"
-              }
-            }
-          ]
+          "name": "prescription-id",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+            "value": "160.000.000.000.000.01"
+          }
+        },
+        {
+          "name": "prescription-id",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+            "value": "160.000.000.000.000.02"
+          }
+        },
+        {
+          "name": "prescription-id",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+            "value": "160.000.000.000.000.03"
+          }
+        },
+        {
+          "name": "prescription-id",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+            "value": "160.000.000.000.000.04"
+          }
         }
       ]
     }
