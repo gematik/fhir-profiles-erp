@@ -135,6 +135,30 @@
             "system": "urn:iso:std:iso:3166",
             "code": "BE"
           }
+        },
+        {
+          "name": "practitionerName",
+          "valueString": "Sanches"
+        },
+        {
+          "name": "practitionerRole",
+          "valueCoding": {
+            "code": "2262",
+            "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
+            "display": "Pharmacists"
+          }
+        },
+        {
+          "name": "pointOfCare",
+          "valueString": "Super Pharmacia"
+        },
+        {
+          "name": "healthcare-facility-type",
+          "valueCoding": {
+            "code": "1.2.276.0.76.4.54",
+            "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+            "display": "Öffentliche Apotheke"
+          }
         }
       ]
     },

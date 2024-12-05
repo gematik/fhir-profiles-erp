@@ -36,6 +36,30 @@ Usage: #definition
     * min = 1
     * max = "1"
     * type = #Coding
+  * part[+]
+    * name = #practitionerName
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #string
+  * part[+]
+    * name = #practitionerRole
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #Coding
+  * part[+]
+    * name = #pointOfCare
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #string
+  * part[+]
+    * name = #healthcare-facility-type
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #Coding
 
 * parameter[+]
   * name = #practitionerData

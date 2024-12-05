@@ -381,7 +381,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 78
+    "endLine": 102
   },
   {
     "outputFile": "OperationDefinition-GET-Prescription-EU.json",
@@ -589,7 +589,7 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example_Parameters_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 35
+    "endLine": 47
   },
   {
     "outputFile": "Parameters-ExampleEUGETPrescriptionDEMOGRAPHICS.json",
@@ -1013,7 +1013,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
     "startLine": 1,
-    "endLine": 105
+    "endLine": 141
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-GET-Prescription-EU-Input.json",
