@@ -79,52 +79,6 @@
           "type": "Coding"
         }
       ]
-    },
-    {
-      "name": "practitionerData",
-      "use": "in",
-      "type": "Practitioner",
-      "min": 1,
-      "max": "1",
-      "documentation": "Information on the practitioner who dispensed"
-    },
-    {
-      "name": "organizationData",
-      "use": "in",
-      "type": "Organization",
-      "min": 1,
-      "max": "1",
-      "documentation": "Information on the organization where the dispensation happened"
-    },
-    {
-      "name": "practitionerRoleData",
-      "type": "PractitionerRole",
-      "use": "in",
-      "min": 1,
-      "max": "1"
-    },
-    {
-      "name": "rxDispensation",
-      "use": "in",
-      "min": 1,
-      "max": "*",
-      "documentation": "Information on dispensed Medication(s)",
-      "part": [
-        {
-          "name": "medicationDispense",
-          "type": "MedicationDispense",
-          "use": "in",
-          "min": 1,
-          "max": "1"
-        },
-        {
-          "name": "medication",
-          "type": "Medication",
-          "use": "in",
-          "min": 1,
-          "max": "1"
-        }
-      ]
     }
   ]
 }
