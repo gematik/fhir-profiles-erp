@@ -314,6 +314,11 @@
         "max": "0"
       },
       {
+        "id": "Parameters.parameter:requestData.part:prescription-id.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
         "id": "Parameters.parameter:requestData.part:practitionerName",
         "path": "Parameters.parameter.part",
         "sliceName": "practitionerName",
