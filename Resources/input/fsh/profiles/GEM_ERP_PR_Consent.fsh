@@ -19,7 +19,7 @@ Description: "Records the consent of the patient for an operation in the context
     * assigner MS
     * assigner.identifier MS
     * assigner.identifier only IdentifierIknr
-* dateTime 1..1
+* dateTime MS
 
 * policyRule MS
 * policyRule from GEM_ERP_VS_Consent_PolicyRule (required)
