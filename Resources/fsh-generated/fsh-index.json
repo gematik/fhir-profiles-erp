@@ -629,7 +629,7 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example-EU-Entities.fsh",
     "startLine": 24,
-    "endLine": 30
+    "endLine": 32
   },
   {
     "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
@@ -1013,7 +1013,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
@@ -1069,7 +1069,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 201
+    "endLine": 203
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
