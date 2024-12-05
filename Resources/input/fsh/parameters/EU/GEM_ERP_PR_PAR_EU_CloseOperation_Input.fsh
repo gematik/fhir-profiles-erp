@@ -30,7 +30,11 @@ Description: "This profile defines the parameters for receiving dispense informa
   * part contains
     kvnr 1..1 MS and
     accessCode 1..1 MS and
-    countryCode 1..1 MS
+    countryCode 1..1 MS and
+    practitionerName 1..1 MS and
+    practitionerRole 1..1 MS and
+    pointOfCare 1..1 MS and
+    healthcare-facility-type 1..1 MS
   * part[kvnr]
     * name MS
     * name = "kvnr"
@@ -55,6 +59,38 @@ Description: "This profile defines the parameters for receiving dispense informa
     * valueCoding.system 1..1
     * valueCoding.system = $cs-iso-3166
     * valueCoding from Iso3166-1-2 (required) // Nach VZD Profil NCPeHCountryEx
+  * part[practitionerName]
+    * name MS
+    * name = "practitionerName"
+    * value[x] 1..1
+    * value[x] only string
+    * resource 0..0
+    * part 0..0
+  * part[practitionerRole]
+    * name MS
+    * name = "practitionerRole"
+    * value[x] 1..1
+    * value[x] only Coding
+    * valueCoding from GEM_ERP_VS_PractitionerRole_EU (required)
+      * system 1..1 MS
+    * resource 0..0
+    * part 0..0
+  * part[pointOfCare]
+    * name MS
+    * name = "pointOfCare"
+    * value[x] 1..1
+    * value[x] only string
+    * resource 0..0
+    * part 0..0
+  * part[healthcare-facility-type]
+    * name MS
+    * name = "healthcare-facility-type"
+    * value[x] 1..1
+    * value[x] only Coding
+    * valueCoding from GEM_ERP_VS_HealthCareFacilityType_EU (required)
+      * system 1..1 MS
+    * resource 0..0
+    * part 0..0
 
 // Generic Data that applys to all dispensations
 * parameter[practitionerData]

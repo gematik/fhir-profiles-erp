@@ -14,6 +14,18 @@ Title: "Example EU-Close Parameters"
   * part[countryCode]
     * name = "countryCode"
     * valueCoding.code = #BE
+  * part[practitionerName]
+    * name = "practitionerName"
+    * valueString = "Sanches"
+  * part[practitionerRole]
+    * name = "practitionerRole"
+    * valueCoding = urn:oid:2.16.840.1.113883.2.9.6.2.7#2262 "Pharmacists"
+  * part[pointOfCare]
+    * name = "pointOfCare"
+    * valueString = "Super Pharmacia"
+  * part[healthcare-facility-type]
+    * name = "healthcare-facility-type"
+    * valueCoding = $cs-organization-profession-oid#1.2.276.0.76.4.54 "Öffentliche Apotheke"
 
 * parameter[practitionerData]
   * name = "practitionerData"
