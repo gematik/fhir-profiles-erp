@@ -13,3 +13,6 @@ Description: "This mapping maps the logical information of the EU DispenseData t
   * ZipOrPostalCode -> "Organization.address.postalCode"
   * StateOrProvince -> "Organization.address.state"
   * Country -> "Organization.address.country"
+  * ContactInfo -> "Organization.telecom" 
+    * Telephone -> "Organization.telecom[system=phone].value"
+    * Email -> "Organization.telecom[system=email].value"

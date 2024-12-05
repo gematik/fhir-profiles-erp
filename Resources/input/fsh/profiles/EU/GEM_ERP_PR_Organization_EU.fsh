@@ -39,6 +39,8 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
 
 * name 1..1 MS
 
+* telecom 0..* MS
+
 * address 0..1 MS
   * line MS
   * city MS

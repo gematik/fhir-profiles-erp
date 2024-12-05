@@ -893,7 +893,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
-    "endLine": 47
+    "endLine": 49
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -1174,14 +1174,6 @@
     "fshFile": "valuesets/GEM_ERP_VS_OrganizationType.fsh",
     "startLine": 1,
     "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-PerformerType.json",
-    "fshName": "PerformerTypeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/GEM_ERP_VS_PerformerType.fsh",
-    "startLine": 5,
-    "endLine": 16
   },
   {
     "outputFile": "ValueSet-GEM-ERP-VS-PractitionerRole-EU.json",

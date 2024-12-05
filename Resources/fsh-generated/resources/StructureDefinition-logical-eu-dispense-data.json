@@ -331,6 +331,12 @@
           {
             "code": "ContactPoint"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom"
+          }
         ]
       },
       {
@@ -345,6 +351,12 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom[system=phone].value"
+          }
         ]
       },
       {
@@ -358,6 +370,12 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.telecom[system=email].value"
           }
         ]
       },

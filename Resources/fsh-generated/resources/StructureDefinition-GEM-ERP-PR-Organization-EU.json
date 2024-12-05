@@ -136,6 +136,11 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.telecom",
+        "path": "Organization.telecom",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.address",
         "path": "Organization.address",
         "max": "1",
