@@ -60,7 +60,6 @@ Description: "Logical Information that is Provided by the NCPeH for Dispensing M
     * ^definition = "Der Identifier des abgebenden Unternehmens wird aus dem angegebenen CDA Feld in die angegebenen Element Id des Profils NEUES PROFIL - NAME ANPASSEN übermittelt. (Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu - Kardinalität Identifier 0..*)"
     * ^comment = "Entsprechendes FHIR-Profil für Informationen zu Organisation aus Country B (Dispensing Organisation) wird erstellt. Stark angelehnt an die Strukturen des Profils Organization in gematik Directory\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR"
 
-//TODO: Mapping
   * ContactInfo 0..1 ContactPoint "Contact information for the facility (pharmacy) from where the HP is dispensing the medicine."
     * ^short = "Contact Info"
     

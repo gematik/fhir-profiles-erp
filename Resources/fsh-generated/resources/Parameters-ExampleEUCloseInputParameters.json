@@ -150,7 +150,7 @@
         },
         "identifier": [
           {
-            "system": "ehdsi-dataelement-303",
+            "system": "https://cda.ehdsi.com/ehdsi-dataelement-303",
             "value": "1234567890"
           }
         ],
@@ -176,11 +176,11 @@
         },
         "identifier": [
           {
-            "system": "ehdsi-dataelement-285",
+            "system": "https://cda.ehdsi.com/ehdsi-dataelement-285",
             "value": "1234567890"
           },
           {
-            "system": "facilityId",
+            "system": "https://cda.ehdsi.com/facilityId",
             "value": "136ad69f"
           }
         ],
@@ -229,7 +229,7 @@
               {
                 "code": "2262",
                 "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
-                "display": "Pharmacist"
+                "display": "Pharmacists"
               }
             ]
           }

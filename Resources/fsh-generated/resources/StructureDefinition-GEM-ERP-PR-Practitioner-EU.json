@@ -61,7 +61,7 @@
         "id": "Practitioner.identifier:ehdsi.system",
         "path": "Practitioner.identifier.system",
         "min": 1,
-        "fixedUri": "ehdsi-dataelement-303",
+        "fixedUri": "https://cda.ehdsi.com/ehdsi-dataelement-303",
         "mustSupport": true
       },
       {

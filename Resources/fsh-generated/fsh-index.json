@@ -1013,7 +1013,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 22
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
@@ -1069,7 +1069,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 203
+    "endLine": 202
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",

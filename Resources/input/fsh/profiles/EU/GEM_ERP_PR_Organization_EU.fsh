@@ -20,13 +20,13 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
 
 * identifier[ehdsi]
   * system MS
-  * system = "ehdsi-dataelement-285" (exactly) //TODO: Check if this is the correct system
+  * system = "https://cda.ehdsi.com/ehdsi-dataelement-285" (exactly) //TODO: Check if this is the correct system
   * use = #official (exactly)
   * value MS
 
 * identifier[facilityId]
   * system MS
-  * system = "facilityId" (exactly) //TODO: Check if this is the correct system
+  * system = "https://cda.ehdsi.com/facilityId" (exactly) //TODO: Check if this is the correct system
   * use = #official (exactly)
   * value MS
 

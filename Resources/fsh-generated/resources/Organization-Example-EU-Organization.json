@@ -8,11 +8,11 @@
   },
   "identifier": [
     {
-      "system": "ehdsi-dataelement-285",
+      "system": "https://cda.ehdsi.com/ehdsi-dataelement-285",
       "value": "1234567890"
     },
     {
-      "system": "facilityId",
+      "system": "https://cda.ehdsi.com/facilityId",
       "value": "136ad69f"
     }
   ],

@@ -28,5 +28,5 @@ Title: "Example-EU-PractitionerRole"
 Description: "Example of an EU PractitionerRole"
 * practitioner = Reference(Example-EU-Practitioner)
 * organization = Reference(Example-EU-Organization)
-* code.coding = urn:oid:2.16.840.1.113883.2.9.6.2.7#2262 "Pharmacist"
+* code.coding = urn:oid:2.16.840.1.113883.2.9.6.2.7#2262 "Pharmacists"
 * specialty.text = "Onkology"

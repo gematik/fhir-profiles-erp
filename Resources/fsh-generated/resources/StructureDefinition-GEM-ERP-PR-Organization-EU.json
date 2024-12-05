@@ -61,7 +61,7 @@
         "id": "Organization.identifier:ehdsi.system",
         "path": "Organization.identifier.system",
         "min": 1,
-        "fixedUri": "ehdsi-dataelement-285",
+        "fixedUri": "https://cda.ehdsi.com/ehdsi-dataelement-285",
         "mustSupport": true
       },
       {
@@ -86,7 +86,7 @@
         "id": "Organization.identifier:facilityId.system",
         "path": "Organization.identifier.system",
         "min": 1,
-        "fixedUri": "facilityId",
+        "fixedUri": "https://cda.ehdsi.com/facilityId",
         "mustSupport": true
       },
       {
