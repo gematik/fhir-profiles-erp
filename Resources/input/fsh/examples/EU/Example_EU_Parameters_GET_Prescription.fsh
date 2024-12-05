@@ -13,7 +13,7 @@ Title: "Example EU-GET Prescription Parameters"
     * valueIdentifier.value = "X123456789"
   * part[accessCode]
     * name = "accessCode"
-    * valueIdentifier.value = "123456"
+    * valueIdentifier.value = "ABC123"
   * part[countryCode]
     * name = "countryCode"
     * valueCoding.code = #BE

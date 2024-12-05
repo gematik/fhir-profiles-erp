@@ -116,8 +116,8 @@
     "fshName": "Communication_Reply_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Diga.fsh",
-    "startLine": 2,
-    "endLine": 17
+    "startLine": 1,
+    "endLine": 16
   },
   {
     "outputFile": "Communication-2be1c6ac-5d10-47f6-84ee-8318b2c22c76.json",
