@@ -110,6 +110,18 @@
             "expression": "toString().length()=10"
           }
         ]
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction",
+        "path": "MedicationDispense.dosageInstruction",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-dosage"
+            ]
+          }
+        ]
       }
     ]
   }

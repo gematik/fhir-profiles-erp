@@ -113,6 +113,32 @@
       ]
     },
     {
+      "name": "requestData",
+      "part": [
+        {
+          "name": "kvnr",
+          "valueIdentifier": {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "X123456789"
+          }
+        },
+        {
+          "name": "accessCode",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode",
+            "value": "123456"
+          }
+        },
+        {
+          "name": "countryCode",
+          "valueCoding": {
+            "system": "urn:iso:std:iso:3166",
+            "code": "BE"
+          }
+        }
+      ]
+    },
+    {
       "name": "practitionerData",
       "resource": {
         "resourceType": "Practitioner",
@@ -124,7 +150,7 @@
         },
         "identifier": [
           {
-            "system": "ehdsi-dataelement-303",
+            "system": "https://cda.ehdsi.com/ehdsi-dataelement-303",
             "value": "1234567890"
           }
         ],
@@ -150,15 +176,26 @@
         },
         "identifier": [
           {
-            "system": "ehdsi-dataelement-285",
+            "system": "https://cda.ehdsi.com/ehdsi-dataelement-285",
             "value": "1234567890"
           },
           {
-            "system": "facilityId",
+            "system": "https://cda.ehdsi.com/facilityId",
             "value": "136ad69f"
           }
         ],
         "name": "Pharmacia de Santa Maria",
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "1.2.276.0.76.4.54",
+                "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+                "display": "Öffentliche Apotheke"
+              }
+            ]
+          }
+        ],
         "address": [
           {
             "line": [
@@ -185,7 +222,23 @@
         },
         "organization": {
           "reference": "Organization/Example-EU-Organization"
-        }
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "2262",
+                "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
+                "display": "Pharmacists"
+              }
+            ]
+          }
+        ],
+        "specialty": [
+          {
+            "text": "Onkology"
+          }
+        ]
       }
     }
   ]

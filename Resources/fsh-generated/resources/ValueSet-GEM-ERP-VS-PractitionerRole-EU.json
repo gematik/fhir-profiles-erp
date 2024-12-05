@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "GEM_ERP_VS_PractitionerRole_EU",
+  "id": "GEM-ERP-VS-PractitionerRole-EU",
+  "title": "ValueSet of NCPeH PractitionerRoles",
+  "description": "Type of PractitionerRole from NCPeH",
+  "version": "1.5",
+  "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PractitionerRole_EU",
+  "date": "2025-01-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7"
+      }
+    ]
+  }
+}
