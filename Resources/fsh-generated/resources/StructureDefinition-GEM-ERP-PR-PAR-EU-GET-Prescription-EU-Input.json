@@ -410,7 +410,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID"
+          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_HealthCareFacilityType_EU"
         }
       },
       {

@@ -93,7 +93,7 @@ Description: "This profile defines the parameters for receiving dispense informa
     * name = "healthcare-facility-type"
     * value[x] 1..1
     * value[x] only Coding
-    * valueCoding from $cs-organization-profession-oid (required)
+    * valueCoding from GEM_ERP_VS_HealthCareFacilityType_EU (required)
       * system 1..1 MS
     * resource 0..0
     * part 0..0

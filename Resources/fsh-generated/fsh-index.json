@@ -96,14 +96,6 @@
     "endLine": 16
   },
   {
-    "outputFile": "CodeSystem-GEM-ERP-CS-HealthCareFacilityType-EU.json",
-    "fshName": "GEM_ERP_CS_HealthCareFacilityType_EU",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/GEM_ERP_CS_HealthCareFacilityType_EU.fsh",
-    "startLine": 1,
-    "endLine": 9
-  },
-  {
     "outputFile": "CodeSystem-GEM-ERP-CS-OrganizationType.json",
     "fshName": "GEM_ERP_CS_OrganizationType",
     "fshType": "CodeSystem",
@@ -493,7 +485,7 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example-EU-Entities.fsh",
     "startLine": 10,
-    "endLine": 21
+    "endLine": 22
   },
   {
     "outputFile": "Parameters-Example-EU-PermissionRequest.json",
@@ -636,8 +628,8 @@
     "fshName": "Example-EU-PractitionerRole",
     "fshType": "Instance",
     "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 23,
-    "endLine": 29
+    "startLine": 24,
+    "endLine": 30
   },
   {
     "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
@@ -901,7 +893,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
-    "endLine": 42
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -1173,7 +1165,7 @@
     "fshType": "ValueSet",
     "fshFile": "valuesets/EU/GEM_ERP_VS_HealthCareFacilityType_EU.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 9
   },
   {
     "outputFile": "ValueSet-GEM-ERP-VS-OrganizationType.json",

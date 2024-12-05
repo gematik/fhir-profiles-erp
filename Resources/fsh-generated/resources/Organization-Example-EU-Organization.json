@@ -17,6 +17,17 @@
     }
   ],
   "name": "Pharmacia de Santa Maria",
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "1.2.276.0.76.4.54",
+          "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+          "display": "Öffentliche Apotheke"
+        }
+      ]
+    }
+  ],
   "address": [
     {
       "line": [

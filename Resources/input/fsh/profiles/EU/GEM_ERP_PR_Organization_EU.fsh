@@ -30,7 +30,12 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * use = #official (exactly)
   * value MS
 
-//TODO: Add facility Type: Krankenhaus, Apotheke oder Arztpraxis
+* type 1..1 MS
+  * coding 1..1 MS
+  * coding from GEM_ERP_VS_HealthCareFacilityType_EU (required)
+    * system 1..1 MS
+    * code 1..1 MS
+    * display 0..1 MS
 
 * name 1..1 MS
 

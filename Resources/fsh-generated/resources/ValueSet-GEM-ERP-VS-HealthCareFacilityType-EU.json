@@ -22,7 +22,25 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_HealthCareFacilityType_EU"
+        "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+        "concept": [
+          {
+            "code": "1.2.276.0.76.4.53",
+            "display": "Krankenhaus"
+          },
+          {
+            "code": "1.2.276.0.76.4.54",
+            "display": "Öffentliche Apotheke"
+          },
+          {
+            "code": "1.2.276.0.76.4.50",
+            "display": "Betriebsstätte Arzt"
+          },
+          {
+            "code": "1.2.276.0.76.4.51",
+            "display": "Zahnarztpraxis"
+          }
+        ]
       }
     ]
   }

@@ -15,6 +15,7 @@ Description: "Example of an EU Organization"
 * identifier[ehdsi].value = "1234567890"
 * identifier[facilityId].value = "136ad69f"
 * name = "Pharmacia de Santa Maria"
+* type.coding = $cs-organization-profession-oid#1.2.276.0.76.4.54 "Öffentliche Apotheke"
 * address
   * line = "Rua da Alegria, 123"
   * city = "Lisbon"
