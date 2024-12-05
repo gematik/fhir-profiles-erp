@@ -113,6 +113,32 @@
       ]
     },
     {
+      "name": "requestData",
+      "part": [
+        {
+          "name": "kvnr",
+          "valueIdentifier": {
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "X123456789"
+          }
+        },
+        {
+          "name": "accessCode",
+          "valueIdentifier": {
+            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode",
+            "value": "123456"
+          }
+        },
+        {
+          "name": "countryCode",
+          "valueCoding": {
+            "system": "urn:iso:std:iso:3166",
+            "code": "BE"
+          }
+        }
+      ]
+    },
+    {
       "name": "practitionerData",
       "resource": {
         "resourceType": "Practitioner",
@@ -187,57 +213,6 @@
           "reference": "Organization/Example-EU-Organization"
         }
       }
-    },
-    {
-      "name": "requestData",
-      "part": [
-        {
-          "name": "requesttype",
-          "valueCoding": {
-            "code": "demographics",
-            "system": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_RequestType_EU"
-          }
-        },
-        {
-          "name": "kvnr",
-          "valueIdentifier": {
-            "system": "http://fhir.de/sid/gkv/kvid-10",
-            "value": "X123456789"
-          }
-        },
-        {
-          "name": "zugriffscode",
-          "valueIdentifier": {
-            "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode",
-            "value": "123456"
-          }
-        },
-        {
-          "name": "countryCode",
-          "valueCoding": {
-            "system": "urn:iso:std:iso:3166",
-            "code": "BE"
-          }
-        },
-        {
-          "name": "practitionerName",
-          "valueString": "Sanches"
-        },
-        {
-          "name": "practitionerRole",
-          "valueString": "Doctor"
-        },
-        {
-          "name": "pointOfCare",
-          "valueString": "Super Pharmacia"
-        },
-        {
-          "name": "healthcare-facility-type",
-          "valueCoding": {
-            "code": "apotheke"
-          }
-        }
-      ]
     }
   ]
 }

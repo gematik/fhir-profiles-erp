@@ -389,7 +389,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 53
+    "endLine": 78
   },
   {
     "outputFile": "OperationDefinition-Grant-EU-Access-Permission.json",
@@ -589,7 +589,7 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example_Parameters_Close_EU.fsh",
     "startLine": 1,
-    "endLine": 50
+    "endLine": 35
   },
   {
     "outputFile": "Parameters-ExampleEUGETPrescription.json",
@@ -893,7 +893,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
-    "endLine": 40
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -989,7 +989,7 @@
     "fshType": "Profile",
     "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
     "startLine": 1,
-    "endLine": 144
+    "endLine": 105
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-GET-Prescription-Input.json",
@@ -1069,7 +1069,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 178
+    "endLine": 201
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",

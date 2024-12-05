@@ -30,6 +30,8 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
   * use = #official (exactly)
   * value MS
 
+//TODO: Add facility Type: Krankenhaus, Apotheke oder Arztpraxis
+
 * name 1..1 MS
 
 * address 0..1 MS

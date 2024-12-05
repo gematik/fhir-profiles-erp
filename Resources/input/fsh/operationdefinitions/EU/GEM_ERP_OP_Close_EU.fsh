@@ -13,6 +13,31 @@ Usage: #definition
 
 // in
 * parameter[+]
+  * name = #requestData
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Additional request information"
+  * part[+]
+    * name = #kvnr
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #Identifier
+  * part[+]
+    * name = #accessCode
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #Identifier
+  * part[+]
+    * name = #countryCode
+    * use = #in
+    * min = 1
+    * max = "1"
+    * type = #Coding
+
+* parameter[+]
   * name = #practitionerData
   * use = #in
   * type = #Practitioner
