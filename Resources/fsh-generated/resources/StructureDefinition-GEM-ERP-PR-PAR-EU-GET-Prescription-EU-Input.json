@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-PR-PAR-EU-GET-Prescription-Input",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_Input",
+  "id": "GEM-ERP-PR-PAR-EU-GET-Prescription-EU-Input",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input",
   "version": "1.5",
-  "name": "GEM_ERP_PR_PAR_EU_GET_Prescription_Input",
-  "title": "GEM_ERP_PR_PAR_EU_GET_Prescription_Input",
+  "name": "GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input",
+  "title": "GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input",
   "status": "draft",
   "date": "2025-01-01",
   "description": "This profile defines the parameters for receiving dispense information for a prescription that was redeemed in the EU",
@@ -26,7 +26,7 @@
         "path": "Parameters.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_Input|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input|1.5"
       },
       {
         "id": "Parameters.parameter",
@@ -115,6 +115,12 @@
         }
       },
       {
+        "id": "Parameters.parameter:requestData.part:requesttype.value[x].system",
+        "path": "Parameters.parameter.part.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Parameters.parameter:requestData.part:requesttype.resource",
         "path": "Parameters.parameter.part.resource",
         "max": "0"
@@ -167,9 +173,9 @@
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:requestData.part:zugriffscode",
+        "id": "Parameters.parameter:requestData.part:accessCode",
         "path": "Parameters.parameter.part",
-        "sliceName": "zugriffscode",
+        "sliceName": "accessCode",
         "min": 1,
         "max": "1",
         "type": [
@@ -180,13 +186,13 @@
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:requestData.part:zugriffscode.name",
+        "id": "Parameters.parameter:requestData.part:accessCode.name",
         "path": "Parameters.parameter.part.name",
-        "patternString": "zugriffscode",
+        "patternString": "accessCode",
         "mustSupport": true
       },
       {
-        "id": "Parameters.parameter:requestData.part:zugriffscode.value[x]",
+        "id": "Parameters.parameter:requestData.part:accessCode.value[x]",
         "path": "Parameters.parameter.part.value[x]",
         "min": 1,
         "type": [
@@ -199,12 +205,12 @@
         ]
       },
       {
-        "id": "Parameters.parameter:requestData.part:zugriffscode.resource",
+        "id": "Parameters.parameter:requestData.part:accessCode.resource",
         "path": "Parameters.parameter.part.resource",
         "max": "0"
       },
       {
-        "id": "Parameters.parameter:requestData.part:zugriffscode.part",
+        "id": "Parameters.parameter:requestData.part:accessCode.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
       },
@@ -311,9 +317,19 @@
         "min": 1,
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_PractitionerRole_EU"
+        }
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:practitionerRole.value[x].system",
+        "path": "Parameters.parameter.part.value[x].system",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:requestData.part:practitionerRole.resource",
@@ -386,7 +402,22 @@
       {
         "id": "Parameters.parameter:requestData.part:healthcare-facility-type.value[x]",
         "path": "Parameters.parameter.part.value[x]",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID"
+        }
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:healthcare-facility-type.value[x].system",
+        "path": "Parameters.parameter.part.value[x].system",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter:requestData.part:healthcare-facility-type.resource",

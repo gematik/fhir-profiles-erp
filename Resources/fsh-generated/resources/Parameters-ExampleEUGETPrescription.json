@@ -3,7 +3,7 @@
   "id": "ExampleEUGETPrescription",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_Input|1.5"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input|1.5"
     ]
   },
   "parameter": [
@@ -25,7 +25,7 @@
           }
         },
         {
-          "name": "zugriffscode",
+          "name": "accessCode",
           "valueIdentifier": {
             "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode",
             "value": "123456"
@@ -44,7 +44,11 @@
         },
         {
           "name": "practitionerRole",
-          "valueString": "Doctor"
+          "valueCoding": {
+            "code": "2262",
+            "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
+            "display": "Pharmacists"
+          }
         },
         {
           "name": "pointOfCare",
@@ -53,7 +57,9 @@
         {
           "name": "healthcare-facility-type",
           "valueCoding": {
-            "code": "apotheke"
+            "code": "1.2.276.0.76.4.54",
+            "system": "https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID",
+            "display": "Öffentliche Apotheke"
           }
         }
       ]

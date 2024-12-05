@@ -1,0 +1,130 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "GET-Prescription-EU",
+  "url": "https://gematik.de/fhir/erp/OperationDefinition/GET-Prescription-EU-OperationDefinition",
+  "status": "draft",
+  "version": "1.5",
+  "date": "2025-01-01",
+  "description": "The Operation gets Presciption Information from the ERP System for usage in the e-prescription workflow for EU countries",
+  "code": "get-prescription-eu",
+  "name": "GET-Prescription-EU",
+  "kind": "operation",
+  "affectsState": false,
+  "system": true,
+  "type": false,
+  "instance": false,
+  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input",
+  "parameter": [
+    {
+      "name": "requestData",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "Additional request information",
+      "part": [
+        {
+          "name": "requesttype",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Coding"
+        },
+        {
+          "name": "kvnr",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Identifier"
+        },
+        {
+          "name": "accessCode",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Identifier"
+        },
+        {
+          "name": "countryCode",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Coding"
+        },
+        {
+          "name": "practitionerName",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "string"
+        },
+        {
+          "name": "practitionerRole",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Coding"
+        },
+        {
+          "name": "pointOfCare",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "string"
+        },
+        {
+          "name": "healthcare-facility-type",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "type": "Coding"
+        }
+      ]
+    },
+    {
+      "name": "practitionerData",
+      "use": "in",
+      "type": "Practitioner",
+      "min": 1,
+      "max": "1",
+      "documentation": "Information on the practitioner who dispensed"
+    },
+    {
+      "name": "organizationData",
+      "use": "in",
+      "type": "Organization",
+      "min": 1,
+      "max": "1",
+      "documentation": "Information on the organization where the dispensation happened"
+    },
+    {
+      "name": "practitionerRoleData",
+      "type": "PractitionerRole",
+      "use": "in",
+      "min": 1,
+      "max": "1"
+    },
+    {
+      "name": "rxDispensation",
+      "use": "in",
+      "min": 1,
+      "max": "*",
+      "documentation": "Information on dispensed Medication(s)",
+      "part": [
+        {
+          "name": "medicationDispense",
+          "type": "MedicationDispense",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        },
+        {
+          "name": "medication",
+          "type": "Medication",
+          "use": "in",
+          "min": 1,
+          "max": "1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-Profile: GEM_ERP_PR_PAR_EU_GET_Prescription_Input
+Profile: GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input
 Parent: Parameters
-Id: GEM-ERP-PR-PAR-EU-GET-Prescription-Input
-Title: "GEM_ERP_PR_PAR_EU_GET_Prescription_Input"
+Id: GEM-ERP-PR-PAR-EU-GET-Prescription-EU-Input
+Title: "GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input"
 Description: "This profile defines the parameters for receiving dispense information for a prescription that was redeemed in the EU"
-* insert Profile(GEM_ERP_PR_PAR_EU_GET_Prescription_Input)
+* insert Profile(GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input)
 
 * parameter MS
 
@@ -26,7 +26,7 @@ Description: "This profile defines the parameters for receiving dispense informa
   * part contains
     requesttype 1..1 MS and
     kvnr 1..1 MS and
-    zugriffscode 1..1 MS and
+    accessCode 1..1 MS and
     countryCode 1..1 MS and
     practitionerName 1..1 MS and
     practitionerRole 1..1 MS and
@@ -38,6 +38,7 @@ Description: "This profile defines the parameters for receiving dispense informa
     * value[x] 1..1
     * value[x] only Coding
     * valueCoding from GEM_ERP_VS_RequestType_EU (required)
+      * system 1..1 MS
     * resource 0..0
     * part 0..0
   * part[kvnr]
@@ -45,12 +46,12 @@ Description: "This profile defines the parameters for receiving dispense informa
     * name = "kvnr"
     * value[x] 1..1
     * value[x] only Identifier
-    * value[x] only IdentifierKvid10
+    * valueIdentifier only IdentifierKvid10
     * resource 0..0
     * part 0..0
-  * part[zugriffscode]
+  * part[accessCode]
     * name MS
-    * name = "zugriffscode"
+    * name = "accessCode"
     * value[x] 1..1
     * value[x] only Identifier
     * valueIdentifier only GEM_ERP_PR_Access_Code_EU
@@ -75,7 +76,9 @@ Description: "This profile defines the parameters for receiving dispense informa
     * name MS
     * name = "practitionerRole"
     * value[x] 1..1
-    * value[x] only string
+    * value[x] only Coding
+    * valueCoding from GEM_ERP_VS_PractitionerRole_EU (required)
+      * system 1..1 MS
     * resource 0..0
     * part 0..0
   * part[pointOfCare]
@@ -89,6 +92,9 @@ Description: "This profile defines the parameters for receiving dispense informa
     * name MS
     * name = "healthcare-facility-type"
     * value[x] 1..1
+    * value[x] only Coding
+    * valueCoding from $cs-organization-profession-oid (required)
+      * system 1..1 MS
     * resource 0..0
     * part 0..0
 

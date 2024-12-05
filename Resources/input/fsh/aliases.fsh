@@ -21,6 +21,9 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt
 
+//VZD
+Alias: $cs-organization-profession-oid = https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID
+
 // Codings
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
 
