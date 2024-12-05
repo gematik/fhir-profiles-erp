@@ -13,11 +13,12 @@ Description: "This Practitioner Profile is sent by the NCPeH when redeeming a Pr
   * ^slicing.description = "Identifier for the practitioner"
   * ^slicing.ordered = false
   
+//TODO: change name of identifier
 * identifier contains ehdsi 0..1
 
 * identifier[ehdsi] MS
   * system MS
-  * system = "ehdsi-dataelement-303" (exactly) //TODO: Check if this is the correct system
+  * system = "https://cda.ehdsi.com/ehdsi-dataelement-303" (exactly) //TODO: Check if this is the correct system
   * use = #official (exactly)
   * value MS
 

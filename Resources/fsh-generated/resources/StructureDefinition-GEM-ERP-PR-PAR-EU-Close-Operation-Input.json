@@ -40,7 +40,7 @@
           ],
           "rules": "closed"
         },
-        "min": 4,
+        "min": 5,
         "mustSupport": true
       },
       {
@@ -171,6 +171,167 @@
         "id": "Parameters.parameter:rxDispensation.part:medication.part",
         "path": "Parameters.parameter.part.part",
         "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData",
+        "path": "Parameters.parameter",
+        "sliceName": "requestData",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:requestData.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "requestData",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 3,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:kvnr",
+        "path": "Parameters.parameter.part",
+        "sliceName": "kvnr",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:kvnr.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "kvnr",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:kvnr.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:kvnr.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:kvnr.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:accessCode",
+        "path": "Parameters.parameter.part",
+        "sliceName": "accessCode",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:accessCode.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "accessCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:accessCode.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Access_Code_EU"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:accessCode.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:accessCode.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:countryCode",
+        "path": "Parameters.parameter.part",
+        "sliceName": "countryCode",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:countryCode.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "countryCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:countryCode.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+        }
+      },
+      {
+        "id": "Parameters.parameter:requestData.part:countryCode.value[x].system",
+        "path": "Parameters.parameter.part.value[x].system",
+        "min": 1,
+        "patternUri": "urn:iso:std:iso:3166"
       },
       {
         "id": "Parameters.parameter:practitionerData",

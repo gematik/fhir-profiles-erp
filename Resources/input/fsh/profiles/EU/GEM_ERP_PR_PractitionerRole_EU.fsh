@@ -10,3 +10,13 @@ Description: "This PractitionerRole Profile is sent by the NCPeH when redeeming 
 
 * organization 1..1 MS
 * organization only Reference(GEM_ERP_PR_Organization_EU)
+
+* code 1..1 MS
+* code.coding 1..1 MS
+* code.coding from GEM_ERP_VS_PractitionerRole_EU (required)
+  * system 1..1 MS
+  * code 1..1 MS
+  * display 0..1 MS
+
+* specialty MS
+  * text MS
