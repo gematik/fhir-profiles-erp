@@ -174,8 +174,7 @@
         },
         "identifier": [
           {
-            "system": "https://cda.ehdsi.com/ehdsi-dataelement-303",
-            "value": "1234567890"
+            "value": "EU-1234567890"
           }
         ],
         "name": [
@@ -200,12 +199,10 @@
         },
         "identifier": [
           {
-            "system": "https://cda.ehdsi.com/ehdsi-dataelement-285",
             "value": "1234567890"
           },
           {
-            "system": "https://cda.ehdsi.com/facilityId",
-            "value": "136ad69f"
+            "value": "EU-136ad69f"
           }
         ],
         "name": "Pharmacia de Santa Maria",
@@ -226,7 +223,9 @@
               "Rua da Alegria, 123"
             ],
             "city": "Lisbon",
-            "country": "Portugal"
+            "country": "Portugal",
+            "state": "Estremadura",
+            "postalCode": "1234-567"
           }
         ]
       }
@@ -246,23 +245,7 @@
         },
         "organization": {
           "reference": "Organization/Example-EU-Organization"
-        },
-        "code": [
-          {
-            "coding": [
-              {
-                "code": "2262",
-                "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
-                "display": "Pharmacists"
-              }
-            ]
-          }
-        ],
-        "specialty": [
-          {
-            "text": "Onkology"
-          }
-        ]
+        }
       }
     }
   ]

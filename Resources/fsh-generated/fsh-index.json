@@ -485,7 +485,7 @@
     "fshType": "Instance",
     "fshFile": "examples/EU/Example-EU-Entities.fsh",
     "startLine": 10,
-    "endLine": 22
+    "endLine": 24
   },
   {
     "outputFile": "Parameters-Example-EU-PermissionRequest.json",
@@ -644,7 +644,7 @@
     "fshName": "Example-EU-PractitionerRole",
     "fshType": "Instance",
     "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 24,
+    "startLine": 26,
     "endLine": 32
   },
   {
@@ -917,7 +917,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 28
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -1029,7 +1029,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Practitioner_EU.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 17
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PractitionerRole-EU.json",
@@ -1037,7 +1037,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
     "startLine": 1,
-    "endLine": 22
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
@@ -1093,7 +1093,7 @@
     "fshType": "Logical",
     "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
     "startLine": 1,
-    "endLine": 202
+    "endLine": 159
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",

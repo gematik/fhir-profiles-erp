@@ -59,71 +59,31 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
+            "map": "GEM_ERP_PR_MedicationDispense_EU"
+          }
         ]
       },
       {
         "id": "GEM_ERP_LOG_EU_DispenseData.PatientData.RegionalNationalHealthIdentifier",
         "path": "GEM_ERP_LOG_EU_DispenseData.PatientData.RegionalNationalHealthIdentifier",
-        "short": "Regional/National Health Identifier",
+        "short": "Regional/National Health Identifier (KVNR)",
         "definition": "Angabe aus einem der dargestellten CDA Felder wird unter der angegebenen Element ID des FHIR Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen. Als einziges Merkmal zu den PatientInnen soll die KVID eingetragen werden, da hierüber jede gesetzlich versicherte Person eindeutig identifizierbar ist.",
         "comment": "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.subject.identifier",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Identifier"
           }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.PatientData.SocialInsuranceNumber",
-        "path": "GEM_ERP_LOG_EU_DispenseData.PatientData.SocialInsuranceNumber",
-        "short": "Social/Insurance Number",
-        "definition": "Da über die Angabe der Regional/National Health Identifier (KVID) jede Person eindeutig identifizierbar ist, entfällt die Dokumentation weiterer Angaben zur Person.",
-        "min": 0,
-        "max": "1",
-        "type": [
+        ],
+        "mapping": [
           {
-            "code": "Identifier"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.PatientData.GivenName",
-        "path": "GEM_ERP_LOG_EU_DispenseData.PatientData.GivenName",
-        "short": "Given Name",
-        "definition": "The subject's identifying name(s) within the family group or by which the subject is uniquely socially identified [ISO TS 22220].",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.PatientData.FamilyNameSurname",
-        "path": "GEM_ERP_LOG_EU_DispenseData.PatientData.FamilyNameSurname",
-        "short": "Family Name/Surname",
-        "definition": "The part of a name a person usually has in common with some other members of his/her family, as distinguished from his/her given names [ISO TS 22220].",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.PatientData.Gender",
-        "path": "GEM_ERP_LOG_EU_DispenseData.PatientData.Gender",
-        "short": "Gender",
-        "definition": "The gender of the patient may be noted on the prescription since this can be important for gender-specific effects of drugs, contra-indications etc.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
+            "identity": "GEM-ERP-MAP-EU-Data-MedicationDispense",
+            "map": "MedicationDispense.subject.identifier"
           }
         ]
       },
@@ -131,19 +91,6 @@
         "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData",
         "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData",
         "short": "HealthCareProfessional Data",
-        "definition": "HealthCareProfessional Data",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation",
-        "short": "Personal Information",
         "definition": "Der Nachname der die Medikation abgebenden Person wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils NEUES PROFIL - NAME ANPASSEN eingetragen. (Achtung: Da aus der EU nur ein Datenfeld kommt, entfallen Sonderfelder für Präfixe und Suffixe)",
         "comment": "ehdsi-dataelement-299 Family Name/Surname\nPractitioner.name.family",
         "min": 1,
@@ -161,12 +108,12 @@
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.HPIdentifier",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.HPIdentifier",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.HPIdentifier",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.HPIdentifier",
         "short": "HP Identifier",
         "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
         "comment": "Entsprechendes FHIR-Profil für Informationen zu HCP aus Country B (Dispenser) wird erstellt. Stark angelehnt an die Strukturen des Profils 'Practitioner in gematik Directory' --> im neu erstellten FHIR Profil Practitioner Coutry B noch die Properties und Eigenschaften gegenchecken!\nPractitioner.identifier:TelematikID,\nPractitioner.identifier:LANR,\nPractitioner.identifier:ZANR",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -176,13 +123,13 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
-            "map": "Practitioner.identifier[ehdsi]"
+            "map": "Practitioner.identifier"
           }
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.GivenName",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.GivenName",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.GivenName",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.GivenName",
         "short": "Given Name",
         "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
         "comment": "ehdsi-dataelement-300 Given Name\nPractitioner.name.given",
@@ -201,8 +148,8 @@
         ]
       },
       {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.FamilyNameSurname",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.PersonalInformation.FamilyNameSurname",
+        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.FamilyNameSurname",
+        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.FamilyNameSurname",
         "short": "Family Name/Surname",
         "definition": "The surname/s of the HP dispensing the medicine to the patient. This field can contain more than one element.",
         "min": 1,
@@ -220,64 +167,6 @@
           {
             "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
             "map": "Practitioner.family.extension[nachname]"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation",
-        "short": "Professional Information",
-        "definition": "Professional Information",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
-            "map": "GEM_ERP_PR_PractitionerRole_EU"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.Profession",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.Profession",
-        "short": "Profession",
-        "definition": "The profession of the HP prescribing the medicine. Example: Physician.",
-        "comment": "ehdsi-dataelement-229 Profession mit valueset: http://52.212.185.219/html/publication/epSOS/epsos-html-20240422T073854/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.1-2020-04-22T155100.html\nPractitioner.qualification:Typ.code.coding.code",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
-            "map": "PractitionerRole.code"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
-        "path": "GEM_ERP_LOG_EU_DispenseData.HealthCareProfessionalData.ProfessionalInformation.MedicalSpecialty",
-        "short": "Medical Specialty",
-        "definition": "The field of practice/specialization of the HP prescribing the medicine. Example: Dermatologist.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Practitioner",
-            "map": "PractitionerRole.specialty.text"
           }
         ]
       },
@@ -306,7 +195,7 @@
         "short": "Facility (Pharmacy) Identifier",
         "definition": "Der Identifier des abgebenden Unternehmens wird aus dem angegebenen CDA Feld in die angegebenen Element Id des Profils NEUES PROFIL - NAME ANPASSEN übermittelt. (Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu - Kardinalität Identifier 0..*)",
         "comment": "Entsprechendes FHIR-Profil für Informationen zu Organisation aus Country B (Dispensing Organisation) wird erstellt. Stark angelehnt an die Strukturen des Profils Organization in gematik Directory\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -316,7 +205,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.identifier[facilityId]"
+            "map": "Organization.identifier"
           }
         ]
       },
@@ -326,7 +215,7 @@
         "short": "Organization Identifier",
         "definition": "(Achtung wir werden vermutlich im neu erstellten EU Profil sowohl die Möglichkeit einen Facility als auch einen Organisation Identifier abzubilden - FHIR Grundprofil lässt dies zu)",
         "comment": "ehdsi-dataelement-285 Organization Identifier\nMedicationDispense.performer.actor.identifier,\nOrganization.identifier:TelematikID,\nOrganization.identifier:BSNR,\nOrganization.identifier:KZVA,\nOrganization.identifier:IKNR",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -336,166 +225,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.identifier[ehdsi]"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo",
-        "short": "Contact Info",
-        "definition": "Contact information for the facility (pharmacy) from where the HP is dispensing the medicine.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.telecom"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Telephone",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Telephone",
-        "short": "Telephone",
-        "definition": "The phone number of the place where the HP prescribing the medicine made the prescription. Example: +34 954123123",
-        "comment": "ehdsi-dataelement-219 Telephone\nOrganization.telecom:phone",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.telecom[system=phone].value"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Email",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ContactInfo.Email",
-        "short": "Email",
-        "definition": "The contact e-mail of the facility or of the HP prescribing the medicine. Example: losbermejaleshealthcentre@xxx.es",
-        "comment": "ehdsi-dataelement-218 Email\nOrganization.telecom:email",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.telecom[system=email].value"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StreetAddress",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StreetAddress",
-        "short": "Street address",
-        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
-        "comment": "ehdsi-dataelement-293 Street address\nOrganization.address.line",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.address.line"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.City",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.City",
-        "short": "City",
-        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
-        "comment": "ehdsi-dataelement-292 City\nOrganization.address.city",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.address.city"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ZipOrPostalCode",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ZipOrPostalCode",
-        "short": "Zip or Postal Code",
-        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
-        "comment": "ehdsi-dataelement-291 Zip or Postal Code\nOrganization.address.postalCode",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.address.postalCode"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StateOrProvince",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StateOrProvince",
-        "short": "State or Province",
-        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
-        "comment": "ehdsi-dataelement-290 State or Province\nOrganization.address.state",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.address.state"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.Country",
-        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.Country",
-        "short": "Country",
-        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
-        "comment": "ehdsi-dataelement-289 Country\nOrganization.address.country",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Organization",
-            "map": "Organization.address.country"
+            "map": "Organization.identifier"
           }
         ]
       },
@@ -520,12 +250,112 @@
         ]
       },
       {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StreetAddress",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StreetAddress",
+        "short": "Street address",
+        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
+        "comment": "ehdsi-dataelement-293 Street address\nOrganization.address.line",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.address.line"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.City",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.City",
+        "short": "City",
+        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
+        "comment": "ehdsi-dataelement-292 City\nOrganization.address.city",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.address.city"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ZipOrPostalCode",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.ZipOrPostalCode",
+        "short": "Zip or Postal Code",
+        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
+        "comment": "ehdsi-dataelement-291 Zip or Postal Code\nOrganization.address.postalCode",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.address.postalCode"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StateOrProvince",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.StateOrProvince",
+        "short": "State or Province",
+        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
+        "comment": "ehdsi-dataelement-290 State or Province\nOrganization.address.state",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.address.state"
+          }
+        ]
+      },
+      {
+        "id": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.Country",
+        "path": "GEM_ERP_LOG_EU_DispenseData.OrganizationData.Country",
+        "short": "Country",
+        "definition": "Angabe aus dem dargestellten CDA Feld wird unter der angegebenen Element ID des FHIR Profils NEUES PROFIL - NAME ANPASSEN eingetragen.",
+        "comment": "ehdsi-dataelement-289 Country\nOrganization.address.country",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "GEM-ERP-MAP-EU-Data-Organization",
+            "map": "Organization.address.country"
+          }
+        ]
+      },
+      {
         "id": "GEM_ERP_LOG_EU_DispenseData.DispenseData",
         "path": "GEM_ERP_LOG_EU_DispenseData.DispenseData",
         "short": "Dispense Data",
         "definition": "Dispense Data",
         "min": 1,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "BackboneElement"
@@ -587,7 +417,7 @@
         "short": "Prescription Identifier",
         "definition": "Der Prescription Identifier wird aus dem dargestellten CDA Feld unter der angegebenen Element Ids des Profils Dispensation of the Prescription (GEM_ERP_PR_MedicationDispense) eingetragen. Die im CDA Feld gelieferte Information entspricht dem ursprünglich in Deutschland erstelltem Wert, weshalb sie ohne Probleme konform mit der Formatvorgabe dieses Feldes ist.",
         "comment": "https://simplifier.net/erezept-workflow/gem_erp_pr_medicationdispense\nMedicationDispense.identifier:prescriptionID",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -606,7 +436,7 @@
         "path": "GEM_ERP_LOG_EU_DispenseData.DispenseData.AdministrativeInformation.PrescriptionItemIdentifier",
         "short": "Prescription Item Identifier",
         "definition": "Dieses Feld ist im deutschen Country A Szenario ePrescription/eDispensation nicht notwendig, da deutsche eRezepte immer nur ein Prescription Item pro Verschreibung/Dispensierung beinhalten. Somit kann für eine jede Verordnung, für die im EU-Ausland eine Dispensierung erfolgte, ausschließlich ein Prescription Item enthalten sein.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -709,13 +539,13 @@
         "max": "1",
         "type": [
           {
-            "code": "Identifier"
+            "code": "Coding"
           }
         ],
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Medication",
-            "map": "Medication.coding:[atc-de|ask|snomed]"
+            "map": "Medication.code.[eu-??]"
           }
         ]
       },
@@ -735,27 +565,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Medication",
-            "map": "Medicatio.code.text"
-          }
-        ]
-      },
-      {
-        "id": "GEM_ERP_LOG_EU_DispenseData.DispenseData.MedicinalInformation.MedicinalProductClassification",
-        "path": "GEM_ERP_LOG_EU_DispenseData.DispenseData.MedicinalInformation.MedicinalProductClassification",
-        "short": "Medicinal Product Classification",
-        "definition": "Siehe roter Vermerk an der Seite.",
-        "comment": "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.code.text\nHier undbedingt nochmal BfArM interne Rücksprache notwendig! Stichwort Medicinal Product Identifier/Brand Name/ Classification --> ersteres und letzteeres Optional, mittleres Mandatory --> alle drei könnten/sollten in gleiche Element ID in FHIR --> unbedingt wichtig den Brand Name einzufüllen, da diese FHIR Id immer verwendet wird zur Anzeige der Medikation --> eventuell die beiden anderen in String ergänzen falls vorhanden?",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "GEM-ERP-MAP-EU-Data-Medication",
-            "map": "Medication.???"
+            "map": "Medication.code.text"
           }
         ]
       },
@@ -805,7 +615,7 @@
         "short": "Active Ingredient Strength(s)",
         "definition": "Angabe aus dem dargestellten CDA Feld kann einerseits unter der angegebenen Element ID des FHIR Profils Medication for the Dispensation of the Prescription (GEM_ERP_PR_Medication) eingetragen. Alternativ könnten die Element IDs Medication.ingredient.strength.numerator.code.value und Medication.ingredient.strength.denominator.code.value. in Kombination genutzt werden.",
         "comment": "https://simplifier.net/erezept-workflow/gem_erp_pr_medication\nMedication.ingredient.strength.extension:amountText.value[x]:valueString,\nMedication.ingredient.strength.numerator.code.value,\nMedication.ingredient.strength.denominator.code.value",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -875,7 +685,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Medication",
-            "map": "Medication.ingredient.itemReference(EPAMedicationPharmaceuticalProduct.code.coding:product-key)"
+            "map": "Medication.extension:packageIdentifier"
           }
         ]
       },
@@ -935,7 +745,7 @@
         "mapping": [
           {
             "identity": "GEM-ERP-MAP-EU-Data-Medication",
-            "map": "Medication.manufacturer.identifier"
+            "map": "Medication.manufacturer.display"
           }
         ]
       }

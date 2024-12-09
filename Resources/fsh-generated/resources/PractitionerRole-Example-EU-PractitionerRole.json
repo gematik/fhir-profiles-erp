@@ -11,21 +11,5 @@
   },
   "organization": {
     "reference": "Organization/Example-EU-Organization"
-  },
-  "code": [
-    {
-      "coding": [
-        {
-          "code": "2262",
-          "system": "urn:oid:2.16.840.1.113883.2.9.6.2.7",
-          "display": "Pharmacists"
-        }
-      ]
-    }
-  ],
-  "specialty": [
-    {
-      "text": "Onkology"
-    }
-  ]
+  }
 }

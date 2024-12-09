@@ -31,42 +31,18 @@
       {
         "id": "Practitioner.identifier",
         "path": "Practitioner.identifier",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open",
-          "description": "Identifier for the practitioner",
-          "ordered": false
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier:ehdsi",
-        "path": "Practitioner.identifier",
-        "sliceName": "ehdsi",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier:ehdsi.use",
-        "path": "Practitioner.identifier.use",
-        "fixedCode": "official"
-      },
-      {
-        "id": "Practitioner.identifier:ehdsi.system",
-        "path": "Practitioner.identifier.system",
         "min": 1,
-        "fixedUri": "https://cda.ehdsi.com/ehdsi-dataelement-303",
         "mustSupport": true
       },
       {
-        "id": "Practitioner.identifier:ehdsi.value",
+        "id": "Practitioner.identifier.system",
+        "path": "Practitioner.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.value",
         "path": "Practitioner.identifier.value",
+        "min": 1,
         "mustSupport": true
       },
       {

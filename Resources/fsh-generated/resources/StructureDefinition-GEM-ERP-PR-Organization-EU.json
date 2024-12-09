@@ -31,67 +31,18 @@
       {
         "id": "Organization.identifier",
         "path": "Organization.identifier",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open",
-          "description": "Identifier for the practitioner",
-          "ordered": false
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:ehdsi",
-        "path": "Organization.identifier",
-        "sliceName": "ehdsi",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:ehdsi.use",
-        "path": "Organization.identifier.use",
-        "fixedCode": "official"
-      },
-      {
-        "id": "Organization.identifier:ehdsi.system",
-        "path": "Organization.identifier.system",
         "min": 1,
-        "fixedUri": "https://cda.ehdsi.com/ehdsi-dataelement-285",
         "mustSupport": true
       },
       {
-        "id": "Organization.identifier:ehdsi.value",
-        "path": "Organization.identifier.value",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:facilityId",
-        "path": "Organization.identifier",
-        "sliceName": "facilityId",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:facilityId.use",
-        "path": "Organization.identifier.use",
-        "fixedCode": "official"
-      },
-      {
-        "id": "Organization.identifier:facilityId.system",
+        "id": "Organization.identifier.system",
         "path": "Organization.identifier.system",
-        "min": 1,
-        "fixedUri": "https://cda.ehdsi.com/facilityId",
         "mustSupport": true
       },
       {
-        "id": "Organization.identifier:facilityId.value",
+        "id": "Organization.identifier.value",
         "path": "Organization.identifier.value",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -136,39 +87,40 @@
         "mustSupport": true
       },
       {
-        "id": "Organization.telecom",
-        "path": "Organization.telecom",
-        "mustSupport": true
-      },
-      {
         "id": "Organization.address",
         "path": "Organization.address",
+        "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
         "id": "Organization.address.line",
         "path": "Organization.address.line",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Organization.address.city",
         "path": "Organization.address.city",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Organization.address.state",
         "path": "Organization.address.state",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Organization.address.postalCode",
         "path": "Organization.address.postalCode",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Organization.address.country",
         "path": "Organization.address.country",
+        "min": 1,
         "mustSupport": true
       }
     ]

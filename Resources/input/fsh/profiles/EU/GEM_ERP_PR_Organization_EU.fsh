@@ -5,30 +5,11 @@ Title: "Organization Information Received from the EU"
 Description: "This Organization Profile is sent by the NCPeH when redeeming a Prescription in the EU"
 * insert Profile(GEM_ERP_PR_Organization_EU)
 
-* identifier 0..* MS
+* identifier 1..* MS
+
 * identifier
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
-  * ^slicing.rules = #open
-  * ^slicing.description = "Identifier for the practitioner"
-  * ^slicing.ordered = false
-  
-//TODO: change name of identifier
-* identifier contains 
-  ehdsi 0..1 MS
-  and facilityId 0..1 MS
-
-* identifier[ehdsi]
   * system MS
-  * system = "https://cda.ehdsi.com/ehdsi-dataelement-285" (exactly) //TODO: Check if this is the correct system
-  * use = #official (exactly)
-  * value MS
-
-* identifier[facilityId]
-  * system MS
-  * system = "https://cda.ehdsi.com/facilityId" (exactly) //TODO: Check if this is the correct system
-  * use = #official (exactly)
-  * value MS
+  * value 1..1 MS
 
 * type 1..1 MS
   * coding 1..1 MS
@@ -39,11 +20,9 @@ Description: "This Organization Profile is sent by the NCPeH when redeeming a Pr
 
 * name 1..1 MS
 
-* telecom 0..* MS
-
-* address 0..1 MS
-  * line MS
-  * city MS
-  * postalCode MS
-  * state MS
-  * country MS
+* address 1..1 MS
+  * line 1..* MS
+  * city 1..1 MS
+  * postalCode 1..1 MS
+  * state 1..1 MS
+  * country 1..1 MS
