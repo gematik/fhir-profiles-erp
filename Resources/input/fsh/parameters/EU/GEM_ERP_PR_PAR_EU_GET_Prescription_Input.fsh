@@ -6,7 +6,7 @@ Description: "This profile defines the parameters for receiving dispense informa
 * insert Profile(GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input)
 * obeys workflow-parameters-get-prescription-eu-1
 
-* parameter MS
+* parameter 1..1 MS
 
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
