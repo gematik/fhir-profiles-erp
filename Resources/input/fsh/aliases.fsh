@@ -20,10 +20,6 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 // National Codings
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt
-
-//VZD
-Alias: $cs-organization-profession-oid = https://gematik.de/fhir/directory/CodeSystem/OrganizationProfessionOID
-
 // Codings
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
 
@@ -39,10 +35,3 @@ Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_
 Alias: $sct = http://snomed.info/sct
 Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org
-Alias: $cs-iso-3166 = urn:iso:std:iso:3166
-Alias: $cs-consent-scope = http://terminology.hl7.org/CodeSystem/consentscope
-
-// EPA
-Alias: $sid-identifier-rx-originator-process = https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier
-Alias: $sid-identifier-dispensation = https://gematik.de/fhir/epa-medication/sid/dispensation-identifier
-
