@@ -2,7 +2,7 @@ Logical: GEM_ERP_LOG_EU_DispenseData
 Parent: Element
 Id: logical-eu-dispense-data
 Title: "Dispense Data from EU"
-Description: "Logical Information that is Provided by the NCPeH for Dispensing Medication"
+Description: "Logical Information that is Provided in the dispensation document by the NCPeH of country B for Dispensing Medication"
 * insert StructureDefinition(GEM_ERP_LOG_EU_DispenseData)
 
 * PatientData 1..1 BackboneElement "Patient Data"

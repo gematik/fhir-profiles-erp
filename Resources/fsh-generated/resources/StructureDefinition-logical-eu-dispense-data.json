@@ -7,7 +7,7 @@
   "title": "Dispense Data from EU",
   "status": "draft",
   "date": "2025-01-01",
-  "description": "Logical Information that is Provided by the NCPeH for Dispensing Medication",
+  "description": "Logical Information that is Provided in the dispensation document by the NCPeH of country B for Dispensing Medication",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -46,7 +46,7 @@
         "id": "GEM_ERP_LOG_EU_DispenseData",
         "path": "GEM_ERP_LOG_EU_DispenseData",
         "short": "Dispense Data from EU",
-        "definition": "Logical Information that is Provided by the NCPeH for Dispensing Medication"
+        "definition": "Logical Information that is Provided in the dispensation document by the NCPeH of country B for Dispensing Medication"
       },
       {
         "id": "GEM_ERP_LOG_EU_DispenseData.PatientData",
