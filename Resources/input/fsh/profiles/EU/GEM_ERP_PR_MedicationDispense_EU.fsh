@@ -58,9 +58,10 @@ Description: "Handles information about the redeem of the prescription and the s
 
 * medication[x] only Reference(GEM_ERP_PR_Medication)
 * medication[x] MS
-* medication[x] ^definition = "The MedicationDispense references a medication which was dispensed"
+  * ^definition = "The MedicationDispense references a medication which was dispensed"
 
 * performer 1..1
+  * ^definition = "References a pracitioner role in order to state practitioner and organization information"
 * performer.actor only Reference(GEM_ERP_PR_PractitionerRole_EU)
 
 * whenHandedOver 1..1 MS
@@ -68,7 +69,11 @@ Description: "Handles information about the redeem of the prescription and the s
 * whenPrepared obeys workflow-abgabeDatumsFormat
 
 * substitution MS
+* substitution.wasSubstituted MS
+  * ^short = "Indicates whether a substitution was made on the dispensed medication"
+
 * dosageInstruction MS
+
 * quantity MS
   * ^short = "Number of dispensed packages/ units"
   * value MS

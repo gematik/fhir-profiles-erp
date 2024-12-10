@@ -901,7 +901,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_MedicationDispense_EU.fsh",
     "startLine": 1,
-    "endLine": 75
+    "endLine": 80
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
@@ -917,7 +917,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",

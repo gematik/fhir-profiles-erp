@@ -179,6 +179,7 @@
       {
         "id": "MedicationDispense.performer",
         "path": "MedicationDispense.performer",
+        "definition": "References a pracitioner role in order to state practitioner and organization information",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -253,6 +254,12 @@
       {
         "id": "MedicationDispense.substitution",
         "path": "MedicationDispense.substitution",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.substitution.wasSubstituted",
+        "path": "MedicationDispense.substitution.wasSubstituted",
+        "short": "Indicates whether a substitution was made on the dispensed medication",
         "mustSupport": true
       }
     ]
