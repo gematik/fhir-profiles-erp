@@ -16,14 +16,6 @@
     "endLine": 45
   },
   {
-    "outputFile": "Bundle-ExampleGetConsent.json",
-    "fshName": "ExampleGetConsent",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Consent.fsh",
-    "startLine": 16,
-    "endLine": 24
-  },
-  {
     "outputFile": "Bundle-KomplexMedicationDispenseBundle.json",
     "fshName": "KomplexMedicationDispenseBundle",
     "fshType": "Instance",
@@ -72,14 +64,6 @@
     "endLine": 12
   },
   {
-    "outputFile": "CodeSystem-GEM-ERP-CS-ConsentType.json",
-    "fshName": "GEM_ERP_CS_ConsentType",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/GEM_ERP_CS_ConsentType.fsh",
-    "startLine": 1,
-    "endLine": 7
-  },
-  {
     "outputFile": "CodeSystem-GEM-ERP-CS-DocumentType.json",
     "fshName": "GEM_ERP_CS_DocumentType",
     "fshType": "CodeSystem",
@@ -102,14 +86,6 @@
     "fshFile": "codesystems/GEM_ERP_CS_OrganizationType.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "CodeSystem-GEM-ERP-CS-RequestType-EU.json",
-    "fshName": "GEM_ERP_CS_RequestType_EU",
-    "fshType": "CodeSystem",
-    "fshFile": "codesystems/GEM_ERP_CS_RequestType_EU.fsh",
-    "startLine": 1,
-    "endLine": 9
   },
   {
     "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
@@ -142,14 +118,6 @@
     "fshFile": "examples/Example_Communication_DispReq.fsh",
     "startLine": 1,
     "endLine": 18
-  },
-  {
-    "outputFile": "Consent-f97a0772-c99f-4159-90c6-2a41c7d96779.json",
-    "fshName": "ExampleEUConsent",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Consent.fsh",
-    "startLine": 2,
-    "endLine": 14
   },
   {
     "outputFile": "Medication-Augentropfen.json",
@@ -288,14 +256,6 @@
     "endLine": 49
   },
   {
-    "outputFile": "MedicationDispense-Example-MedicationDispense-EU.json",
-    "fshName": "Example-MedicationDispense-EU",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example_EU-MedicationDispense.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "MedicationDispense-Example-MedicationDispense-Kombipackung.json",
     "fshName": "Example-MedicationDispense-Kombipackung",
     "fshType": "Instance",
@@ -376,52 +336,12 @@
     "endLine": 69
   },
   {
-    "outputFile": "OperationDefinition-EUCloseOperation.json",
-    "fshName": "EUCloseOperation",
-    "fshType": "Instance",
-    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Close_EU.fsh",
-    "startLine": 1,
-    "endLine": 102
-  },
-  {
-    "outputFile": "OperationDefinition-GET-Prescription-EU.json",
-    "fshName": "GET-Prescription-EU",
-    "fshType": "Instance",
-    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_GET_Prescription_EU.fsh",
-    "startLine": 1,
-    "endLine": 77
-  },
-  {
-    "outputFile": "OperationDefinition-Grant-EU-Access-Permission.json",
-    "fshName": "Grant-EU-Access-Permission",
-    "fshType": "Instance",
-    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Grant_EU_Access_Permission.fsh",
-    "startLine": 1,
-    "endLine": 64
-  },
-  {
-    "outputFile": "OperationDefinition-Read-EU-Access-Permission.json",
-    "fshName": "Read-EU-Access-Permission",
-    "fshType": "Instance",
-    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Read_EU_Access_Permission.fsh",
-    "startLine": 1,
-    "endLine": 45
-  },
-  {
     "outputFile": "OperationDefinition-RejectOperation.json",
     "fshName": "RejectOperation",
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Reject.fsh",
     "startLine": 1,
     "endLine": 15
-  },
-  {
-    "outputFile": "OperationDefinition-Revoke-EU-Access-Permission.json",
-    "fshName": "Revoke-EU-Access-Permission",
-    "fshType": "Instance",
-    "fshFile": "operationdefinitions/EU/GEM_ERP_OP_Revoke_EU_Access_Permission.fsh",
-    "startLine": 1,
-    "endLine": 10
   },
   {
     "outputFile": "OperationOutcome-ExampleOperationAbortErrorAVS.json",
@@ -478,30 +398,6 @@
     "fshFile": "examples/Example_Operation_Reject.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "Organization-Example-EU-Organization.json",
-    "fshName": "Example-EU-Organization",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 10,
-    "endLine": 24
-  },
-  {
-    "outputFile": "Parameters-Example-EU-PermissionRequest.json",
-    "fshName": "Example-EU-PermissionRequest",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-AccessCode.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
-    "outputFile": "Parameters-Example-EU-PermissionResponse.json",
-    "fshName": "Example-EU-PermissionResponse",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-AccessCode.fsh",
-    "startLine": 9,
-    "endLine": 16
   },
   {
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
@@ -584,38 +480,6 @@
     "endLine": 59
   },
   {
-    "outputFile": "Parameters-ExampleEUCloseInputParameters.json",
-    "fshName": "ExampleEUCloseInputParameters",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example_Parameters_Close_EU.fsh",
-    "startLine": 1,
-    "endLine": 47
-  },
-  {
-    "outputFile": "Parameters-ExampleEUGETPrescriptionDEMOGRAPHICS.json",
-    "fshName": "ExampleEUGETPrescriptionDEMOGRAPHICS",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example_EU_Parameters_GET_Prescription.fsh",
-    "startLine": 1,
-    "endLine": 31
-  },
-  {
-    "outputFile": "Parameters-ExampleEUGETPrescriptionE-PRESCRIPTIONS-LIST.json",
-    "fshName": "ExampleEUGETPrescriptionE-PRESCRIPTIONS-LIST",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example_EU_Parameters_GET_Prescription.fsh",
-    "startLine": 35,
-    "endLine": 65
-  },
-  {
-    "outputFile": "Parameters-ExampleEUGETPrescriptionE-PRESCRIPTIONS-RETRIEVAL.json",
-    "fshName": "ExampleEUGETPrescriptionE-PRESCRIPTIONS-RETRIEVAL",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example_EU_Parameters_GET_Prescription.fsh",
-    "startLine": 67,
-    "endLine": 108
-  },
-  {
     "outputFile": "Parameters-ExampleOperationActivateParametersInput.json",
     "fshName": "ExampleOperationActivateParametersInput",
     "fshType": "Instance",
@@ -630,22 +494,6 @@
     "fshFile": "examples/Example_Operation_Create.fsh",
     "startLine": 1,
     "endLine": 6
-  },
-  {
-    "outputFile": "Practitioner-Example-EU-Practitioner.json",
-    "fshName": "Example-EU-Practitioner",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 1,
-    "endLine": 8
-  },
-  {
-    "outputFile": "PractitionerRole-Example-EU-PractitionerRole.json",
-    "fshName": "Example-EU-PractitionerRole",
-    "fshType": "Instance",
-    "fshFile": "examples/EU/Example-EU-Entities.fsh",
-    "startLine": 26,
-    "endLine": 32
   },
   {
     "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
@@ -752,14 +600,6 @@
     "endLine": 26
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode-EU.json",
-    "fshName": "GEM_ERP_PR_Access_Code_EU",
-    "fshType": "Profile",
-    "fshFile": "profiles/EU/GEM_ERP_PR_Access_Code_EU.fsh",
-    "startLine": 1,
-    "endLine": 15
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode.json",
     "fshName": "GEM_ERP_PR_AccessCode",
     "fshType": "Profile",
@@ -856,14 +696,6 @@
     "endLine": 51
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-Consent.json",
-    "fshName": "GEM_ERP_PR_Consent",
-    "fshType": "Profile",
-    "fshFile": "profiles/GEM_ERP_PR_Consent.fsh",
-    "startLine": 1,
-    "endLine": 25
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
     "fshName": "GEM_ERP_PR_Device",
     "fshType": "Profile",
@@ -896,26 +728,10 @@
     "endLine": 51
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-EU.json",
-    "fshName": "GEM_ERP_PR_MedicationDispense_EU",
-    "fshType": "Profile",
-    "fshFile": "profiles/EU/GEM_ERP_PR_MedicationDispense_EU.fsh",
-    "startLine": 1,
-    "endLine": 75
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
     "fshName": "GEM_ERP_PR_MedicationDispense",
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
-    "startLine": 1,
-    "endLine": 28
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-Organization-EU.json",
-    "fshName": "GEM_ERP_PR_Organization_EU",
-    "fshType": "Profile",
-    "fshFile": "profiles/EU/GEM_ERP_PR_Organization_EU.fsh",
     "startLine": 1,
     "endLine": 28
   },
@@ -992,54 +808,6 @@
     "endLine": 48
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Request.json",
-    "fshName": "GEM_ERP_PR_PAR_EU_Access_Authorization_Request",
-    "fshType": "Profile",
-    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_Access_Authorization_Request.fsh",
-    "startLine": 1,
-    "endLine": 30
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-AccessAuthorization-Response.json",
-    "fshName": "GEM_ERP_PR_PAR_EU_Access_Authorization_Response",
-    "fshType": "Profile",
-    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_Access_Authorization_Response.fsh",
-    "startLine": 1,
-    "endLine": 48
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-Close-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_EU_CloseOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_CloseOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 141
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-EU-GET-Prescription-EU-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_EU_GET_Prescription_EU_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/EU/GEM_ERP_PR_PAR_EU_GET_Prescription_Input.fsh",
-    "startLine": 1,
-    "endLine": 111
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-Practitioner-EU.json",
-    "fshName": "GEM_ERP_PR_Practitioner_EU",
-    "fshType": "Profile",
-    "fshFile": "profiles/EU/GEM_ERP_PR_Practitioner_EU.fsh",
-    "startLine": 1,
-    "endLine": 17
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PractitionerRole-EU.json",
-    "fshName": "GEM_ERP_PR_PractitionerRole_EU",
-    "fshType": "Profile",
-    "fshFile": "profiles/EU/GEM_ERP_PR_PractitionerRole_EU.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PrescriptionId.json",
     "fshName": "GEM_ERP_PR_PrescriptionId",
     "fshType": "Profile",
@@ -1086,14 +854,6 @@
     "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
     "startLine": 1,
     "endLine": 20
-  },
-  {
-    "outputFile": "StructureDefinition-logical-eu-dispense-data.json",
-    "fshName": "GEM_ERP_LOG_EU_DispenseData",
-    "fshType": "Logical",
-    "fshFile": "logicalmodels/logical-eu-dispense-data.fsh",
-    "startLine": 1,
-    "endLine": 159
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
@@ -1152,22 +912,6 @@
     "endLine": 6
   },
   {
-    "outputFile": "ValueSet-GEM-ERP-VS-Consent-PolicyRule.json",
-    "fshName": "GEM_ERP_VS_Consent_PolicyRule",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/GEM_ERP_VS_Consent_PolicyRule.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-ConsentType.json",
-    "fshName": "GEM_ERP_VS_ConsentType",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/GEM_ERP_VS_ConsentType.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
     "outputFile": "ValueSet-GEM-ERP-VS-DocumentType.json",
     "fshName": "GEM_ERP_VS_DocumentType",
     "fshType": "ValueSet",
@@ -1184,34 +928,10 @@
     "endLine": 6
   },
   {
-    "outputFile": "ValueSet-GEM-ERP-VS-HealthCareFacilityType-EU.json",
-    "fshName": "GEM_ERP_VS_HealthCareFacilityType_EU",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/EU/GEM_ERP_VS_HealthCareFacilityType_EU.fsh",
-    "startLine": 1,
-    "endLine": 9
-  },
-  {
     "outputFile": "ValueSet-GEM-ERP-VS-OrganizationType.json",
     "fshName": "GEM_ERP_VS_OrganizationType",
     "fshType": "ValueSet",
     "fshFile": "valuesets/GEM_ERP_VS_OrganizationType.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-PractitionerRole-EU.json",
-    "fshName": "GEM_ERP_VS_PractitionerRole_EU",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/EU/GEM_ERP_VS_PractitionerRole_EU.fsh",
-    "startLine": 2,
-    "endLine": 7
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-RequestType-EU.json",
-    "fshName": "GEM_ERP_VS_RequestType_EU",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/EU/GEM_ERP_VS_RequestType_EU.fsh",
     "startLine": 1,
     "endLine": 6
   }
