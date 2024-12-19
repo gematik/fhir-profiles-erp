@@ -306,6 +306,26 @@
         ]
       },
       {
+        "id": "Task.input:eu-ePrescription",
+        "path": "Task.input",
+        "sliceName": "eu-ePrescription",
+        "short": "EU-Flag",
+        "definition": "Flag to determine, if the ePrescription is available for dispensation in the EU",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Task.input:eu-ePrescription.value[x]",
+        "path": "Task.input.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Task.output",
         "path": "Task.output",
         "slicing": {

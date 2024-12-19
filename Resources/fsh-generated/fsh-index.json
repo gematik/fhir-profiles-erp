@@ -837,7 +837,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
-    "endLine": 83
+    "endLine": 89
   },
   {
     "outputFile": "StructureDefinition-logMedDispense.json",

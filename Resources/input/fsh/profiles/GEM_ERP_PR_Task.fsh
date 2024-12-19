@@ -43,7 +43,7 @@ Description: "This resource manages the ePrescription workflow"
   * ^slicing.rules = #closed
   * ^short = "Input Bundle"
   * ^definition = "Reference to ePrescription input and outcome during the process"
-* input contains ePrescription 0..1 and patientReceipt 0..1
+* input contains ePrescription 0..1 and patientReceipt 0..1 and eu-ePrescription 0..1
 
 // QES Binary ePrescription
 * input[ePrescription] 0..1 MS
@@ -64,6 +64,12 @@ Description: "This resource manages the ePrescription workflow"
     * system 1..1
     * code 1..1
     * code = #2 (exactly)
+
+* input[eu-ePrescription] 0..1 MS
+  * ^short = "EU-Flag"
+  * ^definition = "Flag to determine, if the ePrescription is available for dispensation in the EU"
+  * value[x] only boolean
+  * valueBoolean 1..1 MS
 
 * output MS
   * ^slicing.discriminator.type = #value
