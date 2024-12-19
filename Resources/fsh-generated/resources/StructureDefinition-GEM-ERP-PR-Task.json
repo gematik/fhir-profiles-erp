@@ -104,6 +104,21 @@
         ]
       },
       {
+        "id": "Task.extension:eu-eprescription",
+        "path": "Task.extension",
+        "sliceName": "eu-eprescription",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Task.identifier",
         "path": "Task.identifier",
         "slicing": {
@@ -304,26 +319,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Task.input:eu-ePrescription",
-        "path": "Task.input",
-        "sliceName": "eu-ePrescription",
-        "short": "EU-Flag",
-        "definition": "Flag to determine, if the ePrescription is available for dispensation in the EU",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Task.input:eu-ePrescription.value[x]",
-        "path": "Task.input.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "Task.output",

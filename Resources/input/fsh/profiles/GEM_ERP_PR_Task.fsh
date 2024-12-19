@@ -6,9 +6,10 @@ Description: "This resource manages the ePrescription workflow"
 * insert Profile(GEM_ERP_PR_Task)
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
-* extension contains GEM_ERP_EX_AcceptDate named acceptDate 0..1
-* extension contains GEM_ERP_EX_ExpiryDate named expiryDate 0..1
-* extension contains GEM_ERP_EX_LastMedicationDispense named lastMedicationDispense 0..1
+and GEM_ERP_EX_AcceptDate named acceptDate 0..1
+and GEM_ERP_EX_ExpiryDate named expiryDate 0..1
+and GEM_ERP_EX_LastMedicationDispense named lastMedicationDispense 0..1
+and GEM_ERP_EX_EU_EPrescription named eu-eprescription 0..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
@@ -43,7 +44,7 @@ Description: "This resource manages the ePrescription workflow"
   * ^slicing.rules = #closed
   * ^short = "Input Bundle"
   * ^definition = "Reference to ePrescription input and outcome during the process"
-* input contains ePrescription 0..1 and patientReceipt 0..1 and eu-ePrescription 0..1
+* input contains ePrescription 0..1 and patientReceipt 0..1
 
 // QES Binary ePrescription
 * input[ePrescription] 0..1 MS
@@ -64,12 +65,6 @@ Description: "This resource manages the ePrescription workflow"
     * system 1..1
     * code 1..1
     * code = #2 (exactly)
-
-* input[eu-ePrescription] 0..1 MS
-  * ^short = "EU-Flag"
-  * ^definition = "Flag to determine, if the ePrescription is available for dispensation in the EU"
-  * value[x] only boolean
-  * valueBoolean 1..1 MS
 
 * output MS
   * ^slicing.discriminator.type = #value
