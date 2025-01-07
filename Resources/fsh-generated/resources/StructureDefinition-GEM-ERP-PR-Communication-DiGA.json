@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-PR-Communication-Representative",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative",
+  "id": "GEM-ERP-PR-Communication-DiGA",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA",
   "version": "1.5",
-  "name": "GEM_ERP_PR_Communication_Representative",
-  "title": "Communication between Patient and Representative",
+  "name": "GEM_ERP_PR_Communication_DiGA",
+  "title": "Reply from HealthCare Provider to Patient",
   "status": "draft",
   "date": "2025-01-01",
-  "description": "Ressource used for the communication between patients and their representative pertaining to an ePrescription",
+  "description": "Ressource used for the communication of the health care provider to the patient in the context of dispensing DiGA prescriptions",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -26,7 +26,7 @@
         "path": "Communication.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA|1.5"
       },
       {
         "id": "Communication.basedOn",
@@ -43,16 +43,14 @@
               "referenced"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
         "short": "States the E-Rezept-Token according to gemSpec_DM_eRp.",
         "comment": "Has the form 'Task/{{PrescriptionID}}'",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Communication.status",
@@ -79,8 +77,7 @@
         "short": "The entity (e.g. person, organization) which was the target of the communication.",
         "comment": "This needs to be set by the sender of the communication to define the target.",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.recipient.identifier",
@@ -93,8 +90,7 @@
               "http://fhir.de/StructureDefinition/identifier-kvid-10"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.sender",
@@ -112,27 +108,28 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Communication.payload",
         "path": "Communication.payload",
         "min": 1,
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
+        "short": "The actual content of the message",
+        "definition": "This content is a string message that is sent from the health care provider to the patient in the context of dispensing DiGA prescriptions.",
         "type": [
           {
             "code": "string"
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

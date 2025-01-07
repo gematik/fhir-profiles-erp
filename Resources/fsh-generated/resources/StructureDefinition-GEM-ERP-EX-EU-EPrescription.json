@@ -1,20 +1,22 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-DeepLink",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink",
+  "id": "GEM-ERP-EX-EU-EPrescription",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription",
   "version": "1.5",
-  "name": "GEM_ERP_EX_DeepLink",
-  "title": "DiGA-DeepLink",
+  "name": "GEM_ERP_EX_EU_EPrescription",
   "status": "draft",
   "date": "2025-01-01",
-  "description": "Contains information regarding deep link for a DiGA.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
     {
-      "expression": "MedicationDispense",
+      "expression": "Task",
       "type": "element"
+    },
+    {
+      "expression": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "type": "extension"
     }
   ],
   "type": "Extension",
@@ -25,7 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Statement of a deep link which can be used to open the DiGA."
+        "short": "Flag for EU ePrescription",
+        "definition": "This flag needs to be set if the ePrescription is redeemable in the EU."
       },
       {
         "id": "Extension.extension",
@@ -35,16 +38,20 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "short": "Flag for EU ePrescription",
+        "definition": "This flag needs to be set if the ePrescription is redeemable in the EU.",
+        "min": 1,
         "type": [
           {
-            "code": "url"
+            "code": "boolean"
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

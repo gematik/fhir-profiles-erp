@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-DispReq",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Request for Dispense of ePrescription",
-  "status": "active",
-  "date": "2024-07-15",
+  "status": "draft",
+  "date": "2025-01-01",
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -26,6 +26,13 @@
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
             "severity": "error",
             "expression": "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code != '162' implies payload.exists() and payload.empty().not())"
+          },
+          {
+            "key": "workflow-communication-flowtype-1",
+            "human": "Der flowType einer Zuweisung muss zu einem Task mit entsprechender Task-ID passen",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
+            "severity": "error",
+            "expression": "basedOn.reference.startsWith('Task/' + extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code + '.'"
           }
         ]
       },
@@ -39,7 +46,7 @@
         "path": "Communication.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq|1.5"
       },
       {
         "id": "Communication.extension",

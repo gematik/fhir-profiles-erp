@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-PAR-Dispense-Operation-Output",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_PAR_DispenseOperation_Output",
   "title": "GEM ERP PR DispenseOperation Output",
-  "status": "active",
-  "date": "2024-07-15",
+  "status": "draft",
+  "date": "2025-01-01",
   "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $dispense-operation.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -26,7 +26,7 @@
         "path": "Parameters.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.5"
       },
       {
         "id": "Parameters.parameter",

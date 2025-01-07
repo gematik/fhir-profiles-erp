@@ -3,7 +3,7 @@
   "id": "ExampleDispenseInputParametersMultipleMedicationDispenses",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input|1.5"
     ]
   },
   "parameter": [
@@ -17,7 +17,7 @@
             "id": "Example-MedicationDispense",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
               ]
             },
             "identifier": [
@@ -56,7 +56,7 @@
             "id": "SumatripanMedication",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
               ]
             },
             "extension": [
@@ -64,7 +64,7 @@
                 "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
                 "valueCoding": {
                   "code": "00",
-                  "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
+                  "system": "https://gematik.de/fhir/terminology/CodeSystem/epa-drug-category-cs"
                 }
               },
               {
@@ -125,7 +125,7 @@
             "id": "Example-MedicationDispense-2",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
               ]
             },
             "identifier": [
@@ -164,7 +164,7 @@
             "id": "SimpleMedication",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
               ]
             },
             "code": {

@@ -69,7 +69,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_DocumentType.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 9
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-FlowType.json",
@@ -89,11 +89,11 @@
   },
   {
     "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
-    "fshName": "Communication_Reply_KTR",
+    "fshName": "Communication_Reply_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Diga.fsh",
-    "startLine": 2,
-    "endLine": 17
+    "startLine": 1,
+    "endLine": 16
   },
   {
     "outputFile": "Communication-2be1c6ac-5d10-47f6-84ee-8318b2c22c76.json",
@@ -536,6 +536,14 @@
     "endLine": 8
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-EPrescription.json",
+    "fshName": "GEM_ERP_EX_EU_EPrescription",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_EPrescription.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-EX-ExpiryDate.json",
     "fshName": "GEM_ERP_EX_ExpiryDate",
     "fshType": "Extension",
@@ -613,7 +621,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_AuditEvent.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-BfArMApproval.json",
@@ -645,7 +653,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Bundle.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DiGA.json",
+    "fshName": "GEM_ERP_PR_Communication_DiGA",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Communication_DiGA.fsh",
+    "startLine": 1,
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DispReq.json",
@@ -653,7 +669,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_DispReq.fsh",
     "startLine": 1,
-    "endLine": 39
+    "endLine": 41
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-InfoReq.json",
@@ -661,7 +677,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_InfoReq.fsh",
     "startLine": 1,
-    "endLine": 53
+    "endLine": 52
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Reply.json",
@@ -669,7 +685,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Reply.fsh",
     "startLine": 1,
-    "endLine": 51
+    "endLine": 49
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Representative.json",
@@ -677,7 +693,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Representative.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 32
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Composition.json",
@@ -685,7 +701,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Composition.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
@@ -709,7 +725,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 33
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
@@ -717,7 +733,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_DiGA.fsh",
     "startLine": 1,
-    "endLine": 57
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
@@ -725,7 +741,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 28
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -829,7 +845,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
-    "endLine": 77
+    "endLine": 84
   },
   {
     "outputFile": "StructureDefinition-logMedDispense.json",
@@ -852,24 +868,24 @@
     "fshName": "TaskInClosedState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 146,
-    "endLine": 175
+    "startLine": 144,
+    "endLine": 173
   },
   {
     "outputFile": "Task-607255ed-ce41-47fc-aad3-cfce1c39963f.json",
     "fshName": "TaskInReadyState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 28,
-    "endLine": 55
+    "startLine": 26,
+    "endLine": 53
   },
   {
     "outputFile": "Task-9b48f82c-9c11-4a57-aa72-a805f9537a82.json",
     "fshName": "TaskIn-ProgressState-Dispensed",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 84,
-    "endLine": 113
+    "startLine": 82,
+    "endLine": 111
   },
   {
     "outputFile": "Task-b12eb5f7-91ce-4887-93c7-800454601377.json",
@@ -877,23 +893,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
     "startLine": 2,
-    "endLine": 26
+    "endLine": 24
   },
   {
     "outputFile": "Task-d70932d1-9e1c-483c-b2d4-b7dced09b35e.json",
     "fshName": "TaskIn-ProgressState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 57,
-    "endLine": 82
+    "startLine": 55,
+    "endLine": 80
   },
   {
     "outputFile": "Task-f5c21409-b84b-4125-8649-5630a00906b1.json",
     "fshName": "TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 115,
-    "endLine": 144
+    "startLine": 113,
+    "endLine": 142
   },
   {
     "outputFile": "ValueSet-GEM-ERP-VS-AvailabilityStatus.json",
@@ -926,13 +942,5 @@
     "fshFile": "valuesets/GEM_ERP_VS_OrganizationType.fsh",
     "startLine": 1,
     "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-PerformerType.json",
-    "fshName": "PerformerTypeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/GEM_ERP_VS_PerformerType.fsh",
-    "startLine": 5,
-    "endLine": 16
   }
 ]

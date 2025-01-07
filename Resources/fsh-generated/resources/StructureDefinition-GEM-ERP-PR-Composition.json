@@ -1,15 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Composition",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:43:58.4+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
-  "version": "1.4",
+  "version": "1.5",
   "name": "GEM_ERP_PR_Composition",
   "title": "Receipt for Fulfillment of ePrescription",
-  "status": "active",
-  "date": "2024-07-15",
+  "status": "draft",
+  "date": "2025-01-01",
   "description": "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -29,7 +26,7 @@
         "path": "Composition.meta.profile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.4"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition|1.5"
       },
       {
         "id": "Composition.extension",
@@ -86,8 +83,15 @@
         }
       },
       {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1,
+        "fixedUri": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+      },
+      {
         "id": "Composition.type.coding.code",
         "path": "Composition.type.coding.code",
+        "min": 1,
         "fixedCode": "3"
       },
       {

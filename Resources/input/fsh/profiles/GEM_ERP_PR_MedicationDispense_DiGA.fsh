@@ -27,26 +27,20 @@ Description: "Handles information about the dispensed DiGA"
 * medicationReference.display 0..1 MS
   * ^short = "Name of the DiGA prescription unit."
 * medicationReference.identifier 0..1 MS
-* medicationReference.identifier.system 1..1 MS
-* medicationReference.identifier.system = $cs-pzn (exactly)
-* medicationReference.identifier.value 1..1 MS
   * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
+  * system 1..1 MS
+  * system = $cs-pzn (exactly)
+  * value 1..1 MS
 
 // Extension, falls die DiGA vom Kostenträger nicht bezahlt wird
 * medicationReference.extension contains DataAbsentReason named data-absent-reason 0..1
 * medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
-// KVNR des Versicherten
-* subject 1..
-* subject.identifier 1..
-* subject.identifier only IdentifierKvid10
-* subject.identifier ^short = "The patients KVNR"
-* subject.identifier ^comment = "There is no PKV identifier available since it is not in the scope for DiGA prescriptions."
-
 // Kostenträger 
 * performer 1..1
-* performer.actor.identifier 1..
-* performer.actor.identifier only IdentifierTelematikId
+  * actor MS
+    * identifier 1..1
+    * identifier only IdentifierTelematikId
 
 // Abgabedatum
 * whenHandedOver 1..1

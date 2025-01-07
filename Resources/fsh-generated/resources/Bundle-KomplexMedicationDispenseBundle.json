@@ -10,7 +10,7 @@
         "id": "160.000.000.000.000.03",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
           ]
         },
         "identifier": [
@@ -52,7 +52,7 @@
         "id": "627e0f0c-1e11-4985-901a-033bffd9ac67",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
           ]
         },
         "extension": [
