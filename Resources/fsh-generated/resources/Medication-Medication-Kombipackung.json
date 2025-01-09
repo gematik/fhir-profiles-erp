@@ -8,14 +8,6 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
-      "valueCoding": {
-        "code": "781405001",
-        "system": "http://snomed.info/sct",
-        "display": "Medicinal product package"
-      }
-    },
-    {
       "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
       "valueBoolean": false
     },
@@ -37,6 +29,7 @@
       }
     ]
   },
+  "status": "active",
   "form": {
     "coding": [
       {
@@ -161,7 +154,6 @@
   "batch": {
     "lotNumber": "56498416854"
   },
-  "status": "active",
   "ingredient": [
     {
       "itemReference": {

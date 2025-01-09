@@ -6,7 +6,6 @@ Usage: #example
 * contained[+] = Augentropfen
 * contained[+] = NasenSpray
 * batch.lotNumber = "56498416854"
-* extension[type].valueCoding = $sct#781405001 "Medicinal product package"
 * extension[isVaccine].valueBoolean = false
 * extension[drugCategory].valueCoding = EPADrugCategoryCS#00
 * extension[drugCategory].valueCoding.display = "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
