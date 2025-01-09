@@ -14,6 +14,8 @@ Description: "Handles medical information about the redeemed prescription"
 * extension[manufacturingInstructions] MS
 * extension[type] MS
 
+* status = #active
+
 * amount.numerator.extension[totalQuantity] MS
 * amount.numerator.extension[packagingSize] MS
 
@@ -26,8 +28,18 @@ Description: "Handles medical information about the redeemed prescription"
 * ingredient.extension[darreichungsform] MS
 * ingredient.strength.extension[amountText] MS
 
-* ingredient.strength.numerator.system.extension[dataAbsentReason].value[x] = #unknown
-* ingredient.strength.numerator.code.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.numerator
+  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+  * value.extension[dataAbsentReason].value[x] = #unknown
+  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
+
+  * system.extension[dataAbsentReason].value[x] = #unknown
+  * code.extension[dataAbsentReason].value[x] = #unknown
  
-* ingredient.strength.denominator.system.extension[dataAbsentReason].value[x] = #unknown
-* ingredient.strength.denominator.code.extension[dataAbsentReason].value[x] = #unknown
+* ingredient.strength.denominator
+  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
+  * value.extension[dataAbsentReason].value[x] = #unknown
+  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
+
+  * system.extension[dataAbsentReason].value[x] = #unknown
+  * code.extension[dataAbsentReason].value[x] = #unknown
