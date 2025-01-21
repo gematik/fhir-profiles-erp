@@ -32,7 +32,7 @@
             "human": "Der flowType einer Zuweisung muss zu einem Task mit entsprechender Task-ID passen",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
             "severity": "error",
-            "expression": "basedOn.reference.startsWith('Task/' + extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code + '.'"
+            "expression": "basedOn.reference.startsWith(('Task/' | %resource.extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code).join())"
           }
         ]
       },
