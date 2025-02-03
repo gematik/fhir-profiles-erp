@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-SHOULD-REDEEM-EU-EPrescription",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription",
+  "id": "GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
   "version": "1.5",
-  "name": "GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription",
+  "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
   "status": "draft",
   "date": "2025-01-01",
   "fhirVersion": "4.0.1",
@@ -27,8 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Should be redeemed in EU Flag",
-        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemtion in the EU or not."
+        "short": "Redeemable EU ePrescription by Patient Authorization",
+        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemption in the EU or not."
       },
       {
         "id": "Extension.extension",
@@ -38,13 +38,13 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Should be redeemed in EU Flag",
-        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemtion in the EU or not.",
+        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemption in the EU or not.",
         "min": 1,
         "type": [
           {

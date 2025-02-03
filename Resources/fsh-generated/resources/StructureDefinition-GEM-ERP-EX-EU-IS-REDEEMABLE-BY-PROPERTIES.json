@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-REDEEMABLE-EU-EPrescription",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
+  "id": "GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
   "version": "1.5",
-  "name": "GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
+  "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
   "status": "draft",
   "date": "2025-01-01",
   "fhirVersion": "4.0.1",
@@ -38,7 +38,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES"
       },
       {
         "id": "Extension.value[x]",

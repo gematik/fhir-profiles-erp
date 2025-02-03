@@ -536,6 +536,22 @@
     "endLine": 8
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-EX-ExpiryDate.json",
     "fshName": "GEM_ERP_EX_ExpiryDate",
     "fshType": "Extension",
@@ -576,28 +592,12 @@
     "endLine": 16
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-EX-REDEEMABLE-EU-EPrescription.json",
-    "fshName": "GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
-    "fshType": "Extension",
-    "fshFile": "extensions/GEM_ERP_EX_REDEEMABLE_EU_EPrescription.fsh",
-    "startLine": 1,
-    "endLine": 10
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-EX-RedeemCode.json",
     "fshName": "GEM_ERP_EX_RedeemCode",
     "fshType": "Extension",
     "fshFile": "extensions/GEM_ERP_EX_RedeemCode.fsh",
     "startLine": 1,
     "endLine": 9
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-EX-SHOULD-REDEEM-EU-EPrescription.json",
-    "fshName": "GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription",
-    "fshType": "Extension",
-    "fshFile": "extensions/GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription.fsh",
-    "startLine": 1,
-    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-EX-SubstitutionAllowedType.json",

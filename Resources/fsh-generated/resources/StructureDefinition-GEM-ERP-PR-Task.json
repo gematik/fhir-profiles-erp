@@ -107,32 +107,32 @@
         ]
       },
       {
-        "id": "Task.extension:redeemable-eu-eprescription",
+        "id": "Task.extension:eu-isRedeemableByProperties",
         "path": "Task.extension",
-        "sliceName": "redeemable-eu-eprescription",
+        "sliceName": "eu-isRedeemableByProperties",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Task.extension:should-redeem-eu-eprescription",
+        "id": "Task.extension:eu-isRedeemableByPatientAuthorization",
         "path": "Task.extension",
-        "sliceName": "should-redeem-eu-eprescription",
+        "sliceName": "eu-isRedeemableByPatientAuthorization",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION"
             ]
           }
         ],
