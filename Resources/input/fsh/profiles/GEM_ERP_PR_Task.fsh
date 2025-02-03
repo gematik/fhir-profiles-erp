@@ -5,11 +5,12 @@ Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * insert Profile(GEM_ERP_PR_Task)
 * extension ^slicing.rules = #closed
-* extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
-and GEM_ERP_EX_AcceptDate named acceptDate 0..1
-and GEM_ERP_EX_ExpiryDate named expiryDate 0..1
+* extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1 MS
+and GEM_ERP_EX_AcceptDate named acceptDate 0..1 MS
+and GEM_ERP_EX_ExpiryDate named expiryDate 0..1 MS
 and GEM_ERP_EX_LastMedicationDispense named lastMedicationDispense 0..1
-and GEM_ERP_EX_EU_EPrescription named eu-eprescription 0..1
+and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES named eu-isRedeemableByProperties 0..1 MS
+and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableByPatientAuthorization 0..1 MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."

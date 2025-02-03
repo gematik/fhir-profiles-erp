@@ -56,7 +56,8 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Task.extension:acceptDate",
@@ -71,7 +72,8 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Task.extension:expiryDate",
@@ -86,7 +88,8 @@
               "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Task.extension:lastMedicationDispense",
@@ -104,19 +107,36 @@
         ]
       },
       {
-        "id": "Task.extension:eu-eprescription",
+        "id": "Task.extension:eu-isRedeemableByProperties",
         "path": "Task.extension",
-        "sliceName": "eu-eprescription",
+        "sliceName": "eu-isRedeemableByProperties",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Task.extension:eu-isRedeemableByPatientAuthorization",
+        "path": "Task.extension",
+        "sliceName": "eu-isRedeemableByPatientAuthorization",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Task.identifier",

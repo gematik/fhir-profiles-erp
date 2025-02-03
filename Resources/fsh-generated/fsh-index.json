@@ -536,10 +536,18 @@
     "endLine": 8
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-EPrescription.json",
-    "fshName": "GEM_ERP_EX_EU_EPrescription",
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
     "fshType": "Extension",
-    "fshFile": "extensions/GEM_ERP_EX_EU_EPrescription.fsh",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -845,7 +853,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
-    "endLine": 84
+    "endLine": 85
   },
   {
     "outputFile": "StructureDefinition-logMedDispense.json",
