@@ -104,16 +104,16 @@
         ]
       },
       {
-        "id": "Task.extension:eu-eprescription",
+        "id": "Task.extension:redeemable-eu-eprescription",
         "path": "Task.extension",
-        "sliceName": "eu-eprescription",
+        "sliceName": "redeemable-eu-eprescription",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription"
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription"
             ]
           }
         ]

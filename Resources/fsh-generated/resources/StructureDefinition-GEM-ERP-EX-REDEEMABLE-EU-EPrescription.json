@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-ERP-EX-EU-EPrescription",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription",
+  "id": "GEM-ERP-EX-REDEEMABLE-EU-EPrescription",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
   "version": "1.5",
-  "name": "GEM_ERP_EX_EU_EPrescription",
+  "name": "GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
   "status": "draft",
   "date": "2025-01-01",
   "fhirVersion": "4.0.1",
@@ -27,8 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Flag for EU ePrescription",
-        "definition": "This flag needs to be set if the ePrescription is redeemable in the EU."
+        "short": "Redeemable in EU Flag",
+        "definition": "This flag is set by the E-Rezept-Fachdienst, if the ePrescription is redeemable in the EU."
       },
       {
         "id": "Extension.extension",
@@ -38,13 +38,13 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_EPrescription"
+        "fixedUri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_REDEEMABLE_EU_EPrescription"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Flag for EU ePrescription",
-        "definition": "This flag needs to be set if the ePrescription is redeemable in the EU.",
+        "short": "Redeemable in EU Flag",
+        "definition": "This flag is set by the E-Rezept-Fachdienst, if the ePrescription is redeemable in the EU.",
         "min": 1,
         "type": [
           {

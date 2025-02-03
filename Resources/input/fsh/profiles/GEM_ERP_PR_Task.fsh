@@ -9,7 +9,8 @@ Description: "This resource manages the ePrescription workflow"
 and GEM_ERP_EX_AcceptDate named acceptDate 0..1
 and GEM_ERP_EX_ExpiryDate named expiryDate 0..1
 and GEM_ERP_EX_LastMedicationDispense named lastMedicationDispense 0..1
-and GEM_ERP_EX_EU_EPrescription named eu-eprescription 0..1
+and GEM_ERP_EX_REDEEMABLE_EU_EPrescription named redeemable-eu-eprescription 0..1
+//and GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription named should-redeem-eu-eprescription 0..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.description = "The task ressource contains three identifier. The first one is the identifier for the ask representing one e-prescription. The other identifier are representing the patient as owner of the prescription. One is the \"Krankenversichertennummer\" which identify each patient by his health insurance company and the other is \"Institutionskennzeichen\"."
