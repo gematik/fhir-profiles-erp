@@ -579,7 +579,7 @@
     "outputFile": "StructureDefinition-GEM-ERP-EX-REDEEMABLE-EU-EPrescription.json",
     "fshName": "GEM_ERP_EX_REDEEMABLE_EU_EPrescription",
     "fshType": "Extension",
-    "fshFile": "extensions/GEM_ERP_EX_EU_EPrescription.fsh",
+    "fshFile": "extensions/GEM_ERP_EX_REDEEMABLE_EU_EPrescription.fsh",
     "startLine": 1,
     "endLine": 10
   },
@@ -590,6 +590,14 @@
     "fshFile": "extensions/GEM_ERP_EX_RedeemCode.fsh",
     "startLine": 1,
     "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-SHOULD-REDEEM-EU-EPrescription.json",
+    "fshName": "GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_SHOULD_REDEEM_EU_EPrescription.fsh",
+    "startLine": 1,
+    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-EX-SubstitutionAllowedType.json",
