@@ -23,7 +23,7 @@ Description: "Handles medical information about the redeemed prescription"
     * ^slicing.rules = #closed
 
   * itemCodeableConcept.coding
-  *   ^slicing.rules = #closed
+    * ^slicing.rules = #closed
 
   * strength.numerator
     * value

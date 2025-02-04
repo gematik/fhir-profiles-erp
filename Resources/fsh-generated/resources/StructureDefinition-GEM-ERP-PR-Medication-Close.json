@@ -90,13 +90,6 @@
         }
       },
       {
-        "id": "Medication.ingredient",
-        "path": "Medication.ingredient",
-        "slicing": {
-          "rules": "closed"
-        }
-      },
-      {
         "id": "Medication.ingredient.extension",
         "path": "Medication.ingredient.extension",
         "slicing": {
@@ -107,6 +100,29 @@
             }
           ],
           "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.item[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
           "rules": "closed"
         }
       },
