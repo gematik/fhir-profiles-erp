@@ -1,6 +1,6 @@
 
 Instance: ReceiptBundleBinary
-InstanceOf: Binary
+InstanceOf: GEM_ERP_PR_Digest
 Usage: #inline
 * id = "b939a82a-9c23-4b6d-a139-f468d1b9d652"
 * insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Digest)

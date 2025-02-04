@@ -7,20 +7,34 @@ Description: "Handles medical information about the redeemed prescription"
  
 * contained MS
 
+* extension[rxPrescriptionProcessIdentifier] 0..0
+* extension[epaDispensationIdentifier] 0..0
+
 * extension[isVaccine] MS
 * extension[drugCategory] MS
 * extension[normSizeCode] MS
 * extension[packaging] MS
 * extension[manufacturingInstructions] MS
-* extension[type] MS
+* extension[type] MS //TODO 1..1 wenn epa-med-2 nicht mehr da ist
+
+* identifier 0..0
+
+* code.coding
+  * ^slicing.rules = #closed
 
 * status = #active
+
+* form.coding
+  * ^slicing.rules = #closed
 
 * amount.numerator.extension[totalQuantity] MS
 * amount.numerator.extension[packagingSize] MS
 
 * ingredient MS
-  * itemCodeableConcept ^short = "Component in coded form" // This line is necessary to avoid the HAPI Validator Error bug
+  * itemCodeableConcept 
+    * ^short = "Component in coded form" // This line is necessary to avoid the HAPI Validator Error bug
+    * coding
+      * ^slicing.rules = #closed
   * itemReference MS
   * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
   * itemReference ^type.aggregation = #contained
@@ -43,3 +57,6 @@ Description: "Handles medical information about the redeemed prescription"
 
   * system.extension[dataAbsentReason].value[x] = #unknown
   * code.extension[dataAbsentReason].value[x] = #unknown
+
+* batch MS
+  * lotNumber MS

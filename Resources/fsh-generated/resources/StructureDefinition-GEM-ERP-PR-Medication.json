@@ -24,9 +24,40 @@
       {
         "id": "Medication.meta.profile",
         "path": "Medication.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.meta.profile:workflowProfile",
+        "path": "Medication.meta.profile",
+        "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:rxPrescriptionProcessIdentifier",
+        "path": "Medication.extension",
+        "sliceName": "rxPrescriptionProcessIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Medication.extension:epaDispensationIdentifier",
+        "path": "Medication.extension",
+        "sliceName": "epaDispensationIdentifier",
+        "max": "0"
       },
       {
         "id": "Medication.extension:isVaccine",
@@ -59,9 +90,52 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.identifier",
+        "path": "Medication.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Medication.identifier:EPAMedicationUniqueIdentifier",
+        "path": "Medication.identifier",
+        "sliceName": "EPAMedicationUniqueIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Medication.identifier:RxOriginatorProcessIdentifier",
+        "path": "Medication.identifier",
+        "sliceName": "RxOriginatorProcessIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
+      },
+      {
         "id": "Medication.status",
         "path": "Medication.status",
         "patternCode": "active"
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
       },
       {
         "id": "Medication.amount.numerator.extension:packagingSize",
@@ -91,6 +165,19 @@
             "code": "CodeableConcept"
           }
         ]
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.item[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
       },
       {
         "id": "Medication.ingredient.item[x]:itemReference",
@@ -158,6 +245,16 @@
         "id": "Medication.ingredient.strength.denominator.value.extension:dataAbsentReason.value[x]",
         "path": "Medication.ingredient.strength.denominator.value.extension.value[x]",
         "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.batch",
+        "path": "Medication.batch",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.batch.lotNumber",
+        "path": "Medication.batch.lotNumber",
+        "mustSupport": true
       }
     ]
   }
