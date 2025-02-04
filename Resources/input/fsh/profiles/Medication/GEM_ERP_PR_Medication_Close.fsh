@@ -21,6 +21,9 @@ Description: "Handles medical information about the redeemed prescription"
 * ingredient
   * extension
     * ^slicing.rules = #closed
+  
+  * item[x]
+    * ^slicing.rules = #closed
 
   * itemCodeableConcept.coding
     * ^slicing.rules = #closed

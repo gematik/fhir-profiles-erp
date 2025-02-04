@@ -220,8 +220,8 @@
     "fshName": "SimpleSubMedication",
     "fshType": "Instance",
     "fshFile": "profiles/Medication/GEM_ERP_PR_Medication_Close.fsh",
-    "startLine": 46,
-    "endLine": 53
+    "startLine": 49,
+    "endLine": 56
   },
   {
     "outputFile": "Medication-SumatripanMedication.json",
@@ -741,7 +741,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/Medication/GEM_ERP_PR_Medication_Close.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",

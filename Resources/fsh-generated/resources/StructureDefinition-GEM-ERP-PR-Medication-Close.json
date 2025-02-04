@@ -104,6 +104,20 @@
         }
       },
       {
+        "id": "Medication.ingredient.item[x]",
+        "path": "Medication.ingredient.item[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        }
+      },
+      {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemCodeableConcept",
