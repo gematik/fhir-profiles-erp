@@ -216,6 +216,14 @@
     "endLine": 65
   },
   {
+    "outputFile": "Medication-SimpleSubMedication.json",
+    "fshName": "SimpleSubMedication",
+    "fshType": "Instance",
+    "fshFile": "profiles/Medication/GEM_ERP_PR_Medication_Close.fsh",
+    "startLine": 46,
+    "endLine": 53
+  },
+  {
     "outputFile": "Medication-SumatripanMedication.json",
     "fshName": "SumatripanMedication",
     "fshType": "Instance",
@@ -728,12 +736,20 @@
     "endLine": 8
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Medication-Close.json",
+    "fshName": "GEM_ERP_PR_Medication_Close",
+    "fshType": "Profile",
+    "fshFile": "profiles/Medication/GEM_ERP_PR_Medication_Close.fsh",
+    "startLine": 1,
+    "endLine": 44
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Medication.json",
     "fshName": "GEM_ERP_PR_Medication",
     "fshType": "Profile",
     "fshFile": "profiles/Medication/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 62
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",

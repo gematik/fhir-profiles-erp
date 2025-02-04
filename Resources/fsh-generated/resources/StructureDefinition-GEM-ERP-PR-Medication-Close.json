@@ -1,0 +1,187 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-ERP-PR-Medication-Close",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication_Close",
+  "version": "1.5",
+  "name": "GEM_ERP_PR_Medication_Close",
+  "title": "Medication for the Dispensation of the Prescription",
+  "status": "draft",
+  "date": "2025-01-01",
+  "description": "Handles medical information about the redeemed prescription",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication.meta.profile",
+        "path": "Medication.meta.profile",
+        "min": 2
+      },
+      {
+        "id": "Medication.meta.profile:workflowSubProfile",
+        "path": "Medication.meta.profile",
+        "sliceName": "workflowSubProfile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication_Close|1.5",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.identifier",
+        "path": "Medication.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.amount.numerator.extension",
+        "path": "Medication.amount.numerator.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "slicing": {
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient.extension",
+        "path": "Medication.ingredient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.value.extension",
+        "path": "Medication.ingredient.strength.numerator.value.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.value.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.numerator.value.extension",
+        "sliceName": "dataAbsentReason",
+        "comment": "This needs to be set if a compounding medication only contains a freetext amount",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.value.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.numerator.value.extension.value[x]",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.value.extension",
+        "path": "Medication.ingredient.strength.denominator.value.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "closed"
+        }
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.value.extension:dataAbsentReason",
+        "path": "Medication.ingredient.strength.denominator.value.extension",
+        "sliceName": "dataAbsentReason",
+        "comment": "This needs to be set if a compounding medication only contains a freetext amount",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.value.extension:dataAbsentReason.value[x]",
+        "path": "Medication.ingredient.strength.denominator.value.extension.value[x]",
+        "patternCode": "unknown"
+      }
+    ]
+  }
+}

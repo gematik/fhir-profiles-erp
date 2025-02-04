@@ -17,15 +17,10 @@ Description: "Handles medical information about the redeemed prescription"
 * extension[manufacturingInstructions] MS
 * extension[type] MS //TODO 1..1 wenn epa-med-2 nicht mehr da ist
 
-* identifier 0..0
-
-* code.coding
-  * ^slicing.rules = #closed
+* identifier[EPAMedicationUniqueIdentifier] 0..0
+* identifier[RxOriginatorProcessIdentifier] 0..0
 
 * status = #active
-
-* form.coding
-  * ^slicing.rules = #closed
 
 * amount.numerator.extension[totalQuantity] MS
 * amount.numerator.extension[packagingSize] MS
@@ -33,30 +28,12 @@ Description: "Handles medical information about the redeemed prescription"
 * ingredient MS
   * itemCodeableConcept 
     * ^short = "Component in coded form" // This line is necessary to avoid the HAPI Validator Error bug
-    * coding
-      * ^slicing.rules = #closed
   * itemReference MS
   * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
   * itemReference ^type.aggregation = #contained
 
 * ingredient.extension[darreichungsform] MS
 * ingredient.strength.extension[amountText] MS
-
-* ingredient.strength.numerator
-  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-  * value.extension[dataAbsentReason].value[x] = #unknown
-  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
-
-  * system.extension[dataAbsentReason].value[x] = #unknown
-  * code.extension[dataAbsentReason].value[x] = #unknown
- 
-* ingredient.strength.denominator
-  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-  * value.extension[dataAbsentReason].value[x] = #unknown
-  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
-
-  * system.extension[dataAbsentReason].value[x] = #unknown
-  * code.extension[dataAbsentReason].value[x] = #unknown
 
 * batch MS
   * lotNumber MS

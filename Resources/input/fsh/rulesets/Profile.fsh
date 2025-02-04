@@ -10,9 +10,10 @@ RuleSet: Profile(name)
   * ^slicing.ordered = false
 
 * meta.profile contains workflowProfile 1..1 MS
-
 * insert PackageMetaProfileExactly(StructureDefinition/{name})
 
 RuleSet: SubProfile(name)
+* insert StructureDefinition({name})
+
 * meta.profile contains workflowSubProfile 1..1 MS
 * insert PackageMetaProfileSliceExactly(StructureDefinition/{name}, workflowSubProfile)

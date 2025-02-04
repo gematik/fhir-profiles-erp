@@ -41,6 +41,13 @@ RuleSet: PackageMetaProfile(profile)
 RuleSet: MetaProfile(profile, version)
 * meta.profile[workflowProfile] = "{profile}|{version}"
 
+// Rules to set meta.profile in sub-profiles and instances
+RuleSet: PackageMetaProfileSlice(profile, slice)
+* insert MetaProfileSlice(https://gematik.de/fhir/erp/{profile}, 1.5, {slice})
+
+RuleSet: MetaProfileSlice(profile, version, slice)
+* meta.profile[{slice}] = "{profile}|{version}"
+
 
 // Rules to set targetProfiles for operations parameters
 RuleSet: PackageTargetProfile(profile)

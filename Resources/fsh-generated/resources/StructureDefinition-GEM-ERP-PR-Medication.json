@@ -90,11 +90,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.identifier",
-        "path": "Medication.identifier",
-        "max": "0"
-      },
-      {
         "id": "Medication.identifier:EPAMedicationUniqueIdentifier",
         "path": "Medication.identifier",
         "sliceName": "EPAMedicationUniqueIdentifier",
@@ -107,35 +102,9 @@
         "max": "0"
       },
       {
-        "id": "Medication.code.coding",
-        "path": "Medication.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        }
-      },
-      {
         "id": "Medication.status",
         "path": "Medication.status",
         "patternCode": "active"
-      },
-      {
-        "id": "Medication.form.coding",
-        "path": "Medication.form.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        }
       },
       {
         "id": "Medication.amount.numerator.extension:packagingSize",
@@ -167,19 +136,6 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
-        "path": "Medication.ingredient.item[x].coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        }
-      },
-      {
         "id": "Medication.ingredient.item[x]:itemReference",
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemReference",
@@ -201,50 +157,6 @@
         "path": "Medication.ingredient.strength.extension",
         "sliceName": "amountText",
         "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.value.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.numerator.value.extension",
-        "sliceName": "dataAbsentReason",
-        "comment": "This needs to be set if a compounding medication only contains a freetext amount",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.value.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.numerator.value.extension.value[x]",
-        "patternCode": "unknown"
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.value.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.denominator.value.extension",
-        "sliceName": "dataAbsentReason",
-        "comment": "This needs to be set if a compounding medication only contains a freetext amount",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.value.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.denominator.value.extension.value[x]",
-        "patternCode": "unknown"
       },
       {
         "id": "Medication.batch",
