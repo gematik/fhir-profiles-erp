@@ -1,4 +1,4 @@
-<img align="right" width="250" height="47" src="Gematik_Logo_Flag_With_Background.png" /> <br />    
+<img align="right" width="250" height="47" src="./Resources/images/gematik_logo.png" /> <br />    
  
 # Release Notes E-Rezept Workflow
  
