@@ -16,38 +16,6 @@
     "endLine": 43
   },
   {
-    "outputFile": "Bundle-KomplexMedicationDispenseBundle.json",
-    "fshName": "KomplexMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 33,
-    "endLine": 43
-  },
-  {
-    "outputFile": "Bundle-MultipleMedicationDispenseBundle.json",
-    "fshName": "MultipleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 14,
-    "endLine": 30
-  },
-  {
-    "outputFile": "Bundle-SearchSetMultipleMedicationDispenseBundle.json",
-    "fshName": "SearchSetMultipleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 46,
-    "endLine": 70
-  },
-  {
-    "outputFile": "Bundle-SimpleMedicationDispenseBundle.json",
-    "fshName": "SimpleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "Bundle-dffbfd6a-5712-4798-bdc8-07201eb77ab8.json",
     "fshName": "ReceiptBundleQuittung",
     "fshType": "Instance",
