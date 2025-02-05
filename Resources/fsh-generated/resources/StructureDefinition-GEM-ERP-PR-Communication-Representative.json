@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-Representative",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_Communication_Representative",
   "title": "Communication between Patient and Representative",
   "status": "draft",

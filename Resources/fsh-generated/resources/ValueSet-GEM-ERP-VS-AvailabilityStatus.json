@@ -5,7 +5,7 @@
   "id": "GEM-ERP-VS-AvailabilityStatus",
   "title": "ValueSet of AvailabilityStatus Codes",
   "description": "Type of the availability status for medication availability request",
-  "version": "1.5",
+  "version": "1.5.0",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus",
   "date": "2025-03-01",
   "publisher": "gematik GmbH",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-AuditEvent",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent for Logging of ePrescription Access",
   "status": "draft",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
   "status": "draft",
   "date": "2025-03-01",

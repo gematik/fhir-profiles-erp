@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "logMedDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_LOG_MedicationDispense",
   "title": "Logical Medication Dispense",
   "status": "draft",
