@@ -9,3 +9,4 @@ dependencies:
   de.basisprofil.r4: 1.5.2
   de.gematik.epa.medication: 1.0.3 #TODO Update ePA Dependency
   kbv.ita.erp: 1.2.x #TODO Update in package.json
+  kbv.itv.evdga: 1.1.x #TODO Update in package.json

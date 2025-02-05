@@ -1,9 +1,11 @@
 {
-  "updated": "2025-02-05T11:26:24.5509+01:00",
+  "updated": "2025-02-05T11:27:52.152568+01:00",
   "dependencies": {
     "kbv.ita.erp": "1.2.0-alpha",
     "kbv.basis": "1.7.0-alpha2",
     "hl7.fhir.r4.core": "4.0.1",
+    "kbv.itv.evdga": "1.1.0",
+    "kbv.ita.for": "1.1.0",
     "de.basisprofil.r4": "1.5.2",
     "de.gematik.epa.medication": "1.0.3",
     "de.gematik.fhir.directory": "0.11.12",
