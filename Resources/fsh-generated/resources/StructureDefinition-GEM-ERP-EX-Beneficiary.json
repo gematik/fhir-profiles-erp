@@ -5,7 +5,7 @@
   "version": "1.5",
   "name": "GEM_ERP_EX_Beneficiary",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-03-01",
   "description": "The beneficiary (e.g. pharmacy) of the erx-receipt that is created when the ePrescription-workflow finishes",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

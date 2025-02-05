@@ -7,7 +7,7 @@
   "description": "Type of Organiziation",
   "version": "1.5",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType",
-  "date": "2025-01-01",
+  "date": "2025-03-01",
   "publisher": "gematik GmbH",
   "contact": [
     {

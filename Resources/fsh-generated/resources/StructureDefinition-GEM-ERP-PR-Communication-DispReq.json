@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Request for Dispense of ePrescription",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-03-01",
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",

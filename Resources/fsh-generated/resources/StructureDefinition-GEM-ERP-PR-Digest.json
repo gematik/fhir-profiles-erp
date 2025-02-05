@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Digest",
   "title": "QES-Digest in Binary",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-03-01",
   "description": "QES-Digest in Binary",
   "fhirVersion": "4.0.1",
   "kind": "resource",
