@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Communication_DiGA",
   "title": "Reply from HealthCare Provider to Patient",
   "status": "draft",
-  "date": "2025-03-01",
+  "date": "2025-02-28",
   "description": "Ressource used for the communication of the health care provider to the patient in the context of dispensing DiGA prescriptions",
   "fhirVersion": "4.0.1",
   "kind": "resource",

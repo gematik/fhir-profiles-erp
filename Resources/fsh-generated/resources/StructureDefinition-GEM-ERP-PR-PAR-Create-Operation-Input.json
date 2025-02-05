@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_PAR_CreateOperation_Input",
   "title": "GEM ERP PR CreateOperation Input Parameter",
   "status": "draft",
-  "date": "2025-03-01",
+  "date": "2025-02-28",
   "description": "This profile defines the parameters for creating a workflow for a prescription from PVS to the E-Rezept-Fachdienst.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

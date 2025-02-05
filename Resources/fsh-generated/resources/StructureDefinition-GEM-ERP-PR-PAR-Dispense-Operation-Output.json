@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_PAR_DispenseOperation_Output",
   "title": "GEM ERP PR DispenseOperation Output",
   "status": "draft",
-  "date": "2025-03-01",
+  "date": "2025-02-28",
   "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $dispense-operation.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

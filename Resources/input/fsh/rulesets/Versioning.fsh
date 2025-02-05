@@ -2,7 +2,7 @@
 RuleSet: Versioning
 * ^status = #draft
 * ^version = "1.5.0"
-* ^date = "2025-03-01"
+* ^date = "2025-02-28"
 
 RuleSet: OperationVersioning
 * status = #draft
