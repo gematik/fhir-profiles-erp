@@ -3,7 +3,6 @@ Instance: PractitionersNarcoticsApproval
 InstanceOf: GEM_ERP_PR_BfArMApproval
 Usage: #example
 * id = "64d5081e-8d65-11ec-b909-0242ac120002"
-* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_BfArMApproval)
 * target[TaskReference].reference = "Task/160.100.000.000.024.67"
 * insert DateTimeStamp(recorded)
 * entity.what.identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"

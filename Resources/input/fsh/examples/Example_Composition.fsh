@@ -4,7 +4,6 @@ InstanceOf: GEM_ERP_PR_Composition
 Title:   "Composition for Receipt Bundle 'Quittung'"
 Usage: #inline
 * id = "c624cf47-e235-4624-af71-0a09dc9254dc"
-* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Composition)
 * extension[Beneficiary].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
 * extension[Beneficiary].valueIdentifier.system = $identifier-telematik-id
 * extension[Beneficiary].valueIdentifier.value = "3-SMC-B-Testkarte-883110000129070"

@@ -24,23 +24,7 @@ RuleSet: PackageMetaProfileExactly(profile)
 * insert MetaProfileExactly(https://gematik.de/fhir/erp/{profile}, 1.5)
 
 RuleSet: MetaProfileExactly(profile, version)
-* meta.profile = "{profile}|{version}" (exactly)
-
-// Rules to set meta.profile in slices
-RuleSet: PackageMetaProfileSliceExactly(profile, field)
-* insert MetaProfileSliceExactly(https://gematik.de/fhir/erp/{profile}, 1.5, {field})
-
-RuleSet: MetaProfileSliceExactly(profile, version, field)
-* {field} = "{profile}|{version}" (exactly)
-
-
-// Rules to set meta.profile in profiles and instances
-RuleSet: PackageMetaProfile(profile)
-* insert MetaProfile(https://gematik.de/fhir/erp/{profile}, 1.5)
-
-RuleSet: MetaProfile(profile, version)
-* meta.profile[+] = "{profile}|{version}"
-
+* meta.profile[workflowProfile] = "{profile}|{version}" (exactly)
 
 // Rules to set targetProfiles for operations parameters
 RuleSet: PackageTargetProfile(profile)
