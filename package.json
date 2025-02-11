@@ -13,6 +13,7 @@
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.2",
     "de.gematik.dev.epa.medication": "1.0.5-beta",
+    "de.gematik.dev.epa": "1.0.5-alpha.3",
     "de.gematik.dev.terminology": "1.0.5-alpha.1"
   }
 }
