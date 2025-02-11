@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-PAR-Close-Operation-Input",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_PAR_CloseOperation_Input",
   "title": "GEM ERP PR CloseOperation Input",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-02-28",
   "description": "This profile defines the parameters for closing a workflow for a prescription from AVS to the E-Rezept-Fachdienst. This can be used for the Operations $close and $dispense.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -19,14 +19,34 @@
       {
         "id": "Parameters.meta",
         "path": "Parameters.meta",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Parameters.meta.profile",
         "path": "Parameters.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "openAtEnd",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.meta.profile:workflowProfile",
+        "path": "Parameters.meta.profile",
+        "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.5",
+        "mustSupport": true
       },
       {
         "id": "Parameters.parameter",

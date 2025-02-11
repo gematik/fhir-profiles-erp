@@ -4,7 +4,6 @@ InstanceOf: GEM_ERP_PR_Communication_InfoReq
 Title: "Communication message sent by patient to pharmacy to ask for availybility of medicine WITHOUT providing the AccessCode"
 Usage: #example
 * id = "8ca3c379-ac86-470f-bc12-178c9008f5c9"
-* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Communication_InfoReq)
 * meta.tag.display = "Communication message sent by patient to pharmacy to ask for availybility of medicine WITHOUT providing the AccessCode"
 * contained[+] = SumatripanMedication
 * basedOn.reference = "Task/160.000.033.491.280.78"

@@ -60,7 +60,7 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
 // ePriscription for the patient
 * input[patientReceipt] 0..1 MS
   * ^short = "JSON Bundle of the ePrescription to be consumed by the E-Rezept-FdV"
-  * value[x] only Reference(KBV_PR_ERP_Bundle)
+  * value[x] only Reference(KBV_PR_ERP_Bundle or KBV_PR_EVDGA_Bundle)
   * type.coding 1..1
   * type.coding from GEM_ERP_VS_DocumentType (required)
     * system 1..1

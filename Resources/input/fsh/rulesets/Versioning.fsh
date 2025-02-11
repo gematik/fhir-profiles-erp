@@ -1,13 +1,13 @@
 // General rule for to handle versions for all structure definitions
 RuleSet: Versioning
 * ^status = #draft
-* ^version = "1.5"
-* ^date = "2025-01-01"
+* ^version = "1.5.0"
+* ^date = "2025-02-28"
 
 RuleSet: OperationVersioning
 * status = #draft
-* version = "1.5"
-* date = "2025-01-01"
+* version = "1.5.0"
+* date = "2025-03-01"
 
 // Dates for Examples (Date of actual release)
 RuleSet: Date(field)
@@ -21,31 +21,4 @@ RuleSet: DateTimeStamp(field)
 
 // Rules to set meta.profile in profiles and instances
 RuleSet: PackageMetaProfileExactly(profile)
-* insert MetaProfileExactly(https://gematik.de/fhir/erp/{profile}, 1.5)
-
-RuleSet: MetaProfileExactly(profile, version)
-* meta.profile = "{profile}|{version}" (exactly)
-
-// Rules to set meta.profile in slices
-RuleSet: PackageMetaProfileSliceExactly(profile, field)
-* insert MetaProfileSliceExactly(https://gematik.de/fhir/erp/{profile}, 1.5, {field})
-
-RuleSet: MetaProfileSliceExactly(profile, version, field)
-* {field} = "{profile}|{version}" (exactly)
-
-
-// Rules to set meta.profile in profiles and instances
-RuleSet: PackageMetaProfile(profile)
-* insert MetaProfile(https://gematik.de/fhir/erp/{profile}, 1.5)
-
-RuleSet: MetaProfile(profile, version)
-* meta.profile[+] = "{profile}|{version}"
-
-
-// Rules to set targetProfiles for operations parameters
-RuleSet: PackageTargetProfile(profile)
-* insert TargetProfile(https://gematik.de/fhir/erp/{profile}, 1.5)
-
-RuleSet: TargetProfile(profile, version)
-* targetProfile[+] = "{profile}|{version}"
-
+* meta.profile[workflowProfile] = "https://gematik.de/fhir/erp/{profile}|1.5" (exactly)

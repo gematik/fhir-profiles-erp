@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-BfArMApproval",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_BfArMApproval",
   "title": "BfArM Approval of admissibility for doctor s prescription of narcotics",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-02-28",
   "description": "On serverside validton of prescription (QES, FHIR-validity, etc.) the eprescription server requests authorization for narcotics within the doctor s quota. If approved, the server returns a signed Provenance for documentation purpose",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -24,7 +24,8 @@
       {
         "id": "Provenance.meta",
         "path": "Provenance.meta",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Provenance.meta.extension",
@@ -49,9 +50,28 @@
       {
         "id": "Provenance.meta.profile",
         "path": "Provenance.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "openAtEnd",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.meta.profile:workflowProfile",
+        "path": "Provenance.meta.profile",
+        "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.5",
+        "mustSupport": true
       },
       {
         "id": "Provenance.meta.security",

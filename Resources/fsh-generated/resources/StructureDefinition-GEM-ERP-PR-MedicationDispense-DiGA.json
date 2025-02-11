@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense-DiGA",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA",
-  "version": "1.5",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_MedicationDispense_DiGA",
   "title": "Dispensation of a DiGA-Prescription",
   "status": "draft",
-  "date": "2025-01-01",
+  "date": "2025-02-28",
   "description": "Handles information about the dispensed DiGA",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -51,9 +51,28 @@
       {
         "id": "MedicationDispense.meta.profile",
         "path": "MedicationDispense.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "openAtEnd",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.meta.profile:workflowProfile",
+        "path": "MedicationDispense.meta.profile",
+        "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.5"
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.5",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.extension:redeemCode",

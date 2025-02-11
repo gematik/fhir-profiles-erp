@@ -6,7 +6,7 @@
   "id": "GEM-ERP-CS-FlowType",
   "title": "CodeSystem of Flowtypes",
   "description": "Shows the different types of the ePrescription according to the prescription forms.",
-  "version": "1.5",
+  "version": "1.5.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
   "concept": [
     {
@@ -50,7 +50,7 @@
       "display": "reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker"
     }
   ],
-  "date": "2025-01-01",
+  "date": "2025-02-28",
   "publisher": "gematik GmbH",
   "contact": [
     {
