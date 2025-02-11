@@ -31,19 +31,3 @@ Description: "Handles medical information about the redeemed prescription"
 
 * ingredient.extension[darreichungsform] MS
 * ingredient.strength.extension[amountText] MS
-
-* ingredient.strength.numerator
-  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-  * value.extension[dataAbsentReason].value[x] = #unknown
-  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
-
-  * system.extension[dataAbsentReason].value[x] = #unknown
-  * code.extension[dataAbsentReason].value[x] = #unknown
- 
-* ingredient.strength.denominator
-  * value.extension contains $data-absent-reason named dataAbsentReason 0..1 MS
-  * value.extension[dataAbsentReason].value[x] = #unknown
-  * value.extension[dataAbsentReason] ^comment = "This needs to be set if a compounding medication only contains a freetext amount"
-
-  * system.extension[dataAbsentReason].value[x] = #unknown
-  * code.extension[dataAbsentReason].value[x] = #unknown

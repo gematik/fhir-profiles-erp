@@ -109,7 +109,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
     "startLine": 2,
-    "endLine": 45
+    "endLine": 37
   },
   {
     "outputFile": "Medication-Medication-Rezeptur.json",
@@ -125,23 +125,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 68,
-    "endLine": 85
+    "endLine": 81
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Numerator.json",
     "fshName": "Medication-Without-Strength-Numerator",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 87,
-    "endLine": 105
+    "startLine": 83,
+    "endLine": 99
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
     "fshName": "MedicationDexpanthenol-FD",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 57,
-    "endLine": 65
+    "startLine": 49,
+    "endLine": 57
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol.json",
@@ -156,8 +156,8 @@
     "fshName": "MedicationHydrocortison-FD",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 47,
-    "endLine": 55
+    "startLine": 39,
+    "endLine": 47
   },
   {
     "outputFile": "Medication-MedicationHydrocortison.json",
@@ -701,7 +701,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 33
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
@@ -717,7 +717,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",

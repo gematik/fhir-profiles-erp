@@ -7,7 +7,9 @@ version: "1.5.0-beta"
 dependencies:
   hl7.fhir.r4.core: 4.0.1
   de.basisprofil.r4: 1.5.2
-  de.gematik.epa.medication: 1.1.1 #TODO Downgrade ePA Dependency
-  de.gematik.terminology: 1.0.1 #TODO Downgrade ePA Dependency
+  #de.gematik.epa.medication: 1.1.1 #TODO Downgrade ePA Dependency
+  #de.gematik.terminology: 1.0.1 #TODO Downgrade ePA Dependency
+  de.gematik.dev.epa.medication: 1.0.5-beta
+  de.gematik.dev.terminology: 1.0.5-alpha.1
   kbv.ita.erp: 1.2.0-alpha #TODO Update in package.json
   kbv.itv.evdga: 1.1.x #TODO Update in package.json
