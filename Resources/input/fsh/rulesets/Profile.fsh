@@ -5,7 +5,7 @@ RuleSet: Profile(name)
 * meta.profile 1..* MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
+  * ^slicing.rules = #openAtEnd
   * ^slicing.description = "Slicing for meta profile"
   * ^slicing.ordered = false
 
