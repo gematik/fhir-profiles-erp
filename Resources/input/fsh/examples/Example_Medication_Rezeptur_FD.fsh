@@ -25,24 +25,16 @@ Usage: #example
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
 * ingredient[=].strength.numerator.unit = "g"
-* ingredient[=].strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 * ingredient[=].strength.denominator.value = 100
 * ingredient[=].strength.denominator.unit = "g"
-* ingredient[=].strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
 * ingredient[+].itemReference = Reference(MedicationDexpanthenol-FD)
 * ingredient[=].extension[darreichungsform].valueString = "Salbe"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
 * ingredient[=].strength.numerator.unit = "g"
-* ingredient[=].strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 * ingredient[=].strength.denominator.value = 100
 * ingredient[=].strength.denominator.unit = "g"
-* ingredient[=].strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
 Instance: MedicationHydrocortison-FD
 InstanceOf: EPAMedicationPZNIngredient

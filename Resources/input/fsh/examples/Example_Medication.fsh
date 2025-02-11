@@ -76,13 +76,9 @@ Usage: #example
   * isActive = true
   * strength.numerator.value = 85
   * strength.numerator.unit = "mg"
-  * strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-  * strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 
   * strength.denominator.value = 250
   * strength.denominator.unit = "Milliliter"
-  * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-  * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
 Instance: Medication-Without-Strength-Numerator
 InstanceOf: GEM_ERP_PR_Medication
@@ -101,5 +97,3 @@ Usage: #example
   * strength.numerator.code.extension.valueCode = #unknown
 
   * strength.denominator.value = 1
-  * strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-  * strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown

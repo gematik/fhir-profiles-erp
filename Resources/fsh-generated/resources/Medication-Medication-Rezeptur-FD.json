@@ -23,7 +23,7 @@
       "valueString": "Tube"
     },
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
       "valueBoolean": false
     },
     {
@@ -59,52 +59,20 @@
           "valueString": "Salbe"
         }
       ],
-      "strength": {
-        "numerator": {
-          "value": 50,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        },
-        "denominator": {
-          "value": 100,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        }
-      },
       "itemReference": {
         "reference": "#MedicationHydrocortison-FD"
       },
-      "isActive": true
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 50,
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 100,
+          "unit": "g"
+        }
+      }
     },
     {
       "extension": [
@@ -113,52 +81,20 @@
           "valueString": "Salbe"
         }
       ],
-      "strength": {
-        "numerator": {
-          "value": 50,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        },
-        "denominator": {
-          "value": 100,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        }
-      },
       "itemReference": {
         "reference": "#MedicationDexpanthenol-FD"
       },
-      "isActive": true
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 50,
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 100,
+          "unit": "g"
+        }
+      }
     }
   ],
   "contained": [
