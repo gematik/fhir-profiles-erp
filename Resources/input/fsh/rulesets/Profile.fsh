@@ -2,10 +2,10 @@ RuleSet: Profile(name)
 * insert StructureDefinition({name})
 
 * meta 1..1 MS
-* meta.profile 1..* MS
+* meta.profile 1..1 MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #openAtEnd
+  * ^slicing.rules = #closed
   * ^slicing.description = "Slicing for meta profile"
   * ^slicing.ordered = false
 
