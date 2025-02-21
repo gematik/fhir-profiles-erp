@@ -1,5 +1,5 @@
 {
-  "updated": "2025-02-20T06:51:51.363358+01:00",
+  "updated": "2025-02-20T13:35:54.36659+01:00",
   "dependencies": {
     "kbv.ita.erp": "1.2.0-alpha",
     "kbv.basis": "1.7.0-alpha2",
@@ -13,7 +13,5 @@
     "de.gematik.terminology": "1.0.5-ballot.1",
     "de.gematik.epa": "1.0.5-ballot.1"
   },
-  "missing": {
-    "kbv.basis": "1.3.0"
-  }
+  "missing": {}
 }

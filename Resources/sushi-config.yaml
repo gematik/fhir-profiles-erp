@@ -10,4 +10,4 @@ dependencies:
   de.gematik.epa.medication: 1.0.5-ballot.1
   de.gematik.terminology: 1.0.5-ballot.1
   kbv.ita.erp: 1.2.0-alpha #TODO Update in package.json
-  kbv.itv.evdga: 1.1.x #TODO Update in package.json
+  kbv.itv.evdga: 1.1.1 #TODO Update in package.json
