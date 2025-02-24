@@ -101,16 +101,6 @@
                     "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
                   ]
                 },
-                "extension": [
-                  {
-                    "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
-                    "valueCoding": {
-                      "code": "373873005",
-                      "system": "http://snomed.info/sct",
-                      "display": "Pharmaceutical / biologic product (product)"
-                    }
-                  }
-                ],
                 "code": {
                   "coding": [
                     {
@@ -156,16 +146,6 @@
                     "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
                   ]
                 },
-                "extension": [
-                  {
-                    "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
-                    "valueCoding": {
-                      "code": "373873005",
-                      "system": "http://snomed.info/sct",
-                      "display": "Pharmaceutical / biologic product (product)"
-                    }
-                  }
-                ],
                 "code": {
                   "coding": [
                     {
