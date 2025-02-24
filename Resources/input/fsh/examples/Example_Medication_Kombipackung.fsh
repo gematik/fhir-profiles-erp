@@ -18,7 +18,7 @@ Usage: #example
 
 Instance: Augentropfen
 InstanceOf: EPAMedicationPharmaceuticalProduct
-* extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
+//TODO * extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
 * code.coding[product-key] = $cs-product-key#01746517-1 "Augentropfen"
 * ingredient[+]
   * itemCodeableConcept
@@ -37,7 +37,7 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 
 Instance: NasenSpray
 InstanceOf: EPAMedicationPharmaceuticalProduct
-* extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
+//TODO * extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
 * code.coding[product-key] = $cs-product-key#01746517-2 "Nasenspray, Lösung"
 * ingredient[+]
   * itemCodeableConcept
