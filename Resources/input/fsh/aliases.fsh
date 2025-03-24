@@ -22,6 +22,7 @@ Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
 Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt
 // Codings
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
+Alias: $cs-ask = http://fhir.de/CodeSystem/ask
 
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
