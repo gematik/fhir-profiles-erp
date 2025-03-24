@@ -8,11 +8,12 @@
   "description": "ePrescription workflow specification.",
   "author": "gematik",
   "dependencies": {
-    "kbv.ita.erp": "1.2.0-alpha",
-    "kbv.itv.evdga": "1.1.1",
+    "kbv.ita.erp": "1.2.0",
+    "kbv.itv.evdga": "1.2.0",
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.2",
-    "de.gematik.epa.medication": "1.0.5-ballot.1",
-    "de.gematik.terminology": "1.0.5-ballot.1"
+    "de.gematik.epa.medication": "1.0.5-1",
+    "de.gematik.terminology": "1.0.5",
+    "kbv.basis": "1.7.0"
   }
 }
