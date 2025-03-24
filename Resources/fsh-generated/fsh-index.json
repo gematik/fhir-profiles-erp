@@ -96,6 +96,14 @@
     "endLine": 36
   },
   {
+    "outputFile": "Medication-ExampleUnitMedication.json",
+    "fshName": "ExampleUnitMedication",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Medication_units.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
     "outputFile": "Medication-Medication-Kombipackung.json",
     "fshName": "Medication-Kombipackung",
     "fshType": "Instance",
