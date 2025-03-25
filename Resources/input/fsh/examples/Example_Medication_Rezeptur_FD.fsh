@@ -11,7 +11,7 @@ Usage: #example
 * extension[manufacturingInstructions].valueString = "Bitte kühl zubereiten und lagern."
 * extension[packaging].valueString = "Tube"
 * extension[isVaccine].valueBoolean = false
-* extension[type].valueCoding = $sct-and-version#1208954007 "Extemporaneous preparation (product)"
+* extension[type].valueCoding = $sct#1208954007 "Extemporaneous preparation (product)"
 
 * code.text = "Hydrocortison-Dexpanthenol-Salbe"
 * form.text = "Salbe"
@@ -37,7 +37,7 @@ Usage: #example
 
 Instance: MedicationHydrocortison-FD
 InstanceOf: EPAMedicationPZNIngredient
-* extension[type].valueCoding = $sct-and-version#781405001 "Medicinal product package (product)"
+* extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
     * code = #03424249
@@ -46,7 +46,7 @@ InstanceOf: EPAMedicationPZNIngredient
 
 Instance: MedicationDexpanthenol-FD
 InstanceOf: EPAMedicationPZNIngredient
-* extension[type].valueCoding = $sct-and-version#781405001 "Medicinal product package (product)"
+* extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
     * code = #16667195

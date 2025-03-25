@@ -34,5 +34,4 @@ Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_
 
 // International
 Alias: $sct = http://snomed.info/sct
-Alias: $sct-and-version = http://snomed.info/sct|http://snomed.info/sct/11000274103/version/20240515
 Alias: $cs-ucum = http://unitsofmeasure.org

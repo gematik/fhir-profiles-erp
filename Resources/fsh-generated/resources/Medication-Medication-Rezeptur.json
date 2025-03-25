@@ -19,7 +19,6 @@
       "valueCoding": {
         "code": "1208954007",
         "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "display": "Extemporaneous preparation (product)"
       }
     },
@@ -66,7 +65,6 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "version": "http://snomed.info/sct/11000274103/version/20240515",
             "display": "Medicinal product package (product)"
           }
         }
@@ -98,7 +96,6 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "version": "http://snomed.info/sct/11000274103/version/20240515",
             "display": "Medicinal product package (product)"
           }
         }

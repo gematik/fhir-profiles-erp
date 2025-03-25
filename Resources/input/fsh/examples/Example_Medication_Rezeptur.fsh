@@ -9,7 +9,7 @@ Usage: #example
 * extension[drugCategory].valueCoding = EPADrugCategoryCS#00
 
 //MedicationType
-* extension[type].valueCoding = $sct-and-version#1208954007 "Extemporaneous preparation (product)"
+* extension[type].valueCoding = $sct#1208954007 "Extemporaneous preparation (product)"
 
 // Impfstoff
 * extension[isVaccine].valueBoolean = false
@@ -41,7 +41,7 @@ Usage: #example
 
 Instance: MedicationHydrocortison
 InstanceOf: EPAMedicationPZNIngredient
-* extension[type].valueCoding = $sct-and-version#781405001 "Medicinal product package (product)"
+* extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
     * code = #03424249
@@ -50,7 +50,7 @@ InstanceOf: EPAMedicationPZNIngredient
 
 Instance: MedicationDexpanthenol
 InstanceOf: EPAMedicationPZNIngredient
-* extension[type].valueCoding = $sct-and-version#781405001 "Medicinal product package (product)"
+* extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
     * code = #16667195
