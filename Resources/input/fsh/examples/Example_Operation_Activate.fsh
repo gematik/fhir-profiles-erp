@@ -1,10 +1,3 @@
-Instance: ExampleOperationActivateParametersInput
-InstanceOf: GEM_ERP_PR_PAR_ActivateOperation_Input
-Title: "Example Activate operation input parameters"
-Usage: #example
-* parameter[ePrescription].name = "ePrescription"
-* parameter[ePrescription].resource = PrescriptionBinary
-
 Instance: ExampleOperationActivateError
 InstanceOf: OperationOutcome
 Title: "Example Activate operation error response"

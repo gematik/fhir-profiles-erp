@@ -4,7 +4,6 @@ Usage: #definition
 * insert Operation(Activate)
 * description = "This operation activates the created Task for the prescription. The input parameter must contain the qualified signed Bundle of the prescription. The prescription server validates the prescription, updates the task ressource and starts the workflow."
 * code = #activate
-* inputProfile = Canonical(GEM_ERP_PR_PAR_ActivateOperation_Input)
 * outputProfile = Canonical(GEM_ERP_PR_PAR_ActivateOperation_Output)
 
 // in

@@ -1,10 +1,3 @@
-Instance: OperationCreateParametersInputExample
-InstanceOf: GEM_ERP_PR_PAR_CreateOperation_Input
-Title: "$create Operation Parameters sample"
-Usage: #example
-* parameter[workflowType].name = "workflowType"
-* parameter[workflowType].valueCoding = GEM_ERP_CS_FlowType#160
-
 Instance: ExampleOperationCreateError
 InstanceOf: OperationOutcome
 Title: "Example Create operation error response"
