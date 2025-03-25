@@ -6,15 +6,17 @@
       "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-        "code": "01746517-2",
-        "display": "Nasenspray, Lösung"
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
+      "valueCoding": {
+        "code": "373873005",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Pharmaceutical / biologic product (product)"
       }
-    ]
-  },
+    }
+  ],
   "ingredient": [
     {
       "itemCodeableConcept": {

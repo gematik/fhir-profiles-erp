@@ -61,16 +61,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.extension:drugCategory.value[x].system",
-        "path": "Medication.extension.value[x].system",
-        "min": 1
-      },
-      {
-        "id": "Medication.extension:drugCategory.value[x].code",
-        "path": "Medication.extension.value[x].code",
-        "min": 1
-      },
-      {
         "id": "Medication.extension:normSizeCode",
         "path": "Medication.extension",
         "sliceName": "normSizeCode",

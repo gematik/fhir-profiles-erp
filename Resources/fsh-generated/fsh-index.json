@@ -93,7 +93,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
     "startLine": 19,
-    "endLine": 36
+    "endLine": 35
   },
   {
     "outputFile": "Medication-ExampleUnitMedication.json",
@@ -180,8 +180,8 @@
     "fshName": "NasenSpray",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 38,
-    "endLine": 55
+    "startLine": 37,
+    "endLine": 53
   },
   {
     "outputFile": "Medication-SimpleMedication.json",
@@ -709,7 +709,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 33
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",

@@ -6,6 +6,17 @@
       "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
     ]
   },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
+      "valueCoding": {
+        "code": "781405001",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Medicinal product package (product)"
+      }
+    }
+  ],
   "code": {
     "coding": [
       {

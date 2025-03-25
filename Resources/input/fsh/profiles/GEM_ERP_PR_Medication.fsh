@@ -9,9 +9,6 @@ Description: "Handles medical information about the redeemed prescription"
 
 * extension[isVaccine] MS
 * extension[drugCategory] MS
-  * valueCoding
-    * system 1..1 //TODO Check if with ePA 3.0.5 can be removed
-    * code 1..1
 
 * extension[normSizeCode] MS
 * extension[packaging] MS

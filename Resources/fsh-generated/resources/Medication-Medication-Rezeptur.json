@@ -11,7 +11,16 @@
       "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
-        "system": "https://gematik.de/fhir/terminology/CodeSystem/epa-drug-category-cs"
+        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
+      "valueCoding": {
+        "code": "1208954007",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "display": "Extemporaneous preparation (product)"
       }
     },
     {
@@ -51,6 +60,17 @@
           "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
+      "extension": [
+        {
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
+          "valueCoding": {
+            "code": "781405001",
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/11000274103/version/20240515",
+            "display": "Medicinal product package (product)"
+          }
+        }
+      ],
       "code": {
         "coding": [
           {
@@ -72,6 +92,17 @@
           "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
         ]
       },
+      "extension": [
+        {
+          "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
+          "valueCoding": {
+            "code": "781405001",
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/11000274103/version/20240515",
+            "display": "Medicinal product package (product)"
+          }
+        }
+      ],
       "code": {
         "coding": [
           {

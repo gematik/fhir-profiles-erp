@@ -18,8 +18,7 @@ Usage: #example
 
 Instance: Augentropfen
 InstanceOf: EPAMedicationPharmaceuticalProduct
-//TODO * extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
-* code.coding[product-key] = $cs-product-key#01746517-1 "Augentropfen"
+* extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
     * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"
@@ -37,8 +36,7 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 
 Instance: NasenSpray
 InstanceOf: EPAMedicationPharmaceuticalProduct
-//TODO * extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
-* code.coding[product-key] = $cs-product-key#01746517-2 "Nasenspray, Lösung"
+* extension[type].valueCoding = $sct-and-version#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
     * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"
