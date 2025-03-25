@@ -285,7 +285,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Activate.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 26
   },
   {
     "outputFile": "OperationDefinition-CloseOperation.json",
@@ -301,7 +301,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Create.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 29
   },
   {
     "outputFile": "OperationDefinition-DispenseOperation.json",
@@ -348,8 +348,8 @@
     "fshName": "ExampleOperationActivateError",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Activate.fsh",
-    "startLine": 1,
-    "endLine": 9
+    "startLine": 8,
+    "endLine": 16
   },
   {
     "outputFile": "OperationOutcome-ExampleOperationCloseError.json",
@@ -364,8 +364,8 @@
     "fshName": "ExampleOperationCreateError",
     "fshType": "Instance",
     "fshFile": "examples/Example_Operation_Create.fsh",
-    "startLine": 1,
-    "endLine": 9
+    "startLine": 8,
+    "endLine": 16
   },
   {
     "outputFile": "OperationOutcome-ExampleOperationRejectError.json",
@@ -454,6 +454,22 @@
     "fshFile": "examples/parameters_examples/Example_Parameters_Dispense.fsh",
     "startLine": 48,
     "endLine": 59
+  },
+  {
+    "outputFile": "Parameters-ExampleOperationActivateParametersInput.json",
+    "fshName": "ExampleOperationActivateParametersInput",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Operation_Activate.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "Parameters-OperationCreateParametersInputExample.json",
+    "fshName": "OperationCreateParametersInputExample",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Operation_Create.fsh",
+    "startLine": 1,
+    "endLine": 6
   },
   {
     "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",

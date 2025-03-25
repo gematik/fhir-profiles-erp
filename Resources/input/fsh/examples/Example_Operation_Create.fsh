@@ -1,3 +1,10 @@
+Instance: OperationCreateParametersInputExample
+InstanceOf: Parameters
+Title: "$create Operation Parameters sample"
+Usage: #example
+* parameter[+].name = "workflowType"
+* parameter[=].valueCoding = GEM_ERP_CS_FlowType#160
+
 Instance: ExampleOperationCreateError
 InstanceOf: OperationOutcome
 Title: "Example Create operation error response"

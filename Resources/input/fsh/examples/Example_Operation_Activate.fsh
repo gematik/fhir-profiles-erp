@@ -1,3 +1,10 @@
+Instance: ExampleOperationActivateParametersInput
+InstanceOf: Parameters
+Title: "Example Activate operation input parameters"
+Usage: #example
+* parameter[+].name = "ePrescription"
+* parameter[=].resource = PrescriptionBinary
+
 Instance: ExampleOperationActivateError
 InstanceOf: OperationOutcome
 Title: "Example Activate operation error response"

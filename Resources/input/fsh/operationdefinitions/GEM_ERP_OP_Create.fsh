@@ -6,6 +6,7 @@ Usage: #definition
 * code = #create
 * type = true
 * instance = false
+* inputProfile = Canonical(Parameters)
 * outputProfile = Canonical(GEM_ERP_PR_PAR_CreateOperation_Output)
 
 // in
