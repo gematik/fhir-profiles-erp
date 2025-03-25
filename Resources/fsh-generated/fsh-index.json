@@ -301,7 +301,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Create.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 29
   },
   {
     "outputFile": "OperationDefinition-DispenseOperation.json",
@@ -736,14 +736,6 @@
     "endLine": 22
   },
   {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_ActivateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_ActivateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 21
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Output.json",
     "fshName": "GEM_ERP_PR_PAR_ActivateOperation_Output",
     "fshType": "Profile",
@@ -766,14 +758,6 @@
     "fshFile": "parameters/GEM_ERP_PR_PAR_CloseOperation_Output.fsh",
     "startLine": 1,
     "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_CreateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_CreateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 21
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.json",

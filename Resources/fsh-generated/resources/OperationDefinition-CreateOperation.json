@@ -16,7 +16,7 @@
   "instance": false,
   "description": "This operation creates a Task for the prescription of a specific workflowType.",
   "code": "create",
-  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Input",
+  "inputProfile": "http://hl7.org/fhir/StructureDefinition/Parameters",
   "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Output",
   "parameter": [
     {

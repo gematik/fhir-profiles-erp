@@ -6,8 +6,9 @@ Usage: #definition
 * code = #create
 * type = true
 * instance = false
-* inputProfile = Canonical(GEM_ERP_PR_PAR_CreateOperation_Input)
+* inputProfile = Canonical(Parameters)
 * outputProfile = Canonical(GEM_ERP_PR_PAR_CreateOperation_Output)
+
 // in
 * parameter[+]
   * name = #workflowType
