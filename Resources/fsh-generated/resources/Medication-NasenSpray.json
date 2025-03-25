@@ -16,15 +16,6 @@
       }
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-        "code": "01746517-2",
-        "display": "Nasenspray, Lösung"
-      }
-    ]
-  },
   "ingredient": [
     {
       "itemCodeableConcept": {

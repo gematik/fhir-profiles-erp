@@ -64,7 +64,7 @@
                 "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
                 "valueCoding": {
                   "code": "00",
-                  "system": "https://gematik.de/fhir/terminology/CodeSystem/epa-drug-category-cs"
+                  "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs"
                 }
               },
               {
@@ -72,12 +72,11 @@
                 "valueCoding": {
                   "code": "1208954007",
                   "system": "http://snomed.info/sct",
-                  "display": "Extemporaneous preparation (product)",
-                  "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+                  "display": "Extemporaneous preparation (product)"
                 }
               },
               {
-                "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+                "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
                 "valueBoolean": false
               }
             ],
@@ -119,8 +118,7 @@
                     "valueCoding": {
                       "code": "781405001",
                       "system": "http://snomed.info/sct",
-                      "display": "Medicinal product package (product)",
-                      "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+                      "display": "Medicinal product package (product)"
                     }
                   }
                 ],
@@ -151,8 +149,7 @@
                     "valueCoding": {
                       "code": "781405001",
                       "system": "http://snomed.info/sct",
-                      "display": "Medicinal product package (product)",
-                      "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+                      "display": "Medicinal product package (product)"
                     }
                   }
                 ],

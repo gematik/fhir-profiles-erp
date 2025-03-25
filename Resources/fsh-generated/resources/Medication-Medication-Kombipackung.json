@@ -8,14 +8,14 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
       "valueBoolean": false
     },
     {
       "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
       "valueCoding": {
         "code": "00",
-        "system": "https://gematik.de/fhir/terminology/CodeSystem/epa-drug-category-cs",
+        "system": "https://gematik.de/fhir/epa-medication/CodeSystem/epa-drug-category-cs",
         "display": "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
       }
     }
@@ -58,15 +58,6 @@
           }
         }
       ],
-      "code": {
-        "coding": [
-          {
-            "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-            "code": "01746517-1",
-            "display": "Augentropfen"
-          }
-        ]
-      },
       "ingredient": [
         {
           "itemCodeableConcept": {
@@ -113,15 +104,6 @@
           }
         }
       ],
-      "code": {
-        "coding": [
-          {
-            "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-            "code": "01746517-2",
-            "display": "Nasenspray, Lösung"
-          }
-        ]
-      },
       "ingredient": [
         {
           "itemCodeableConcept": {

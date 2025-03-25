@@ -12,7 +12,6 @@ Usage: #example
 * extension[packaging].valueString = "Tube"
 * extension[isVaccine].valueBoolean = false
 * extension[type].valueCoding = $sct#1208954007 "Extemporaneous preparation (product)"
-  * version = $sct_20240201
 
 * code.text = "Hydrocortison-Dexpanthenol-Salbe"
 * form.text = "Salbe"
@@ -25,29 +24,20 @@ Usage: #example
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
 * ingredient[=].strength.numerator.unit = "g"
-* ingredient[=].strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 * ingredient[=].strength.denominator.value = 100
 * ingredient[=].strength.denominator.unit = "g"
-* ingredient[=].strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
 * ingredient[+].itemReference = Reference(MedicationDexpanthenol-FD)
 * ingredient[=].extension[darreichungsform].valueString = "Salbe"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator.value = 50
 * ingredient[=].strength.numerator.unit = "g"
-* ingredient[=].strength.numerator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.numerator.code.extension[dataAbsentReason].valueCode = #unknown
 * ingredient[=].strength.denominator.value = 100
 * ingredient[=].strength.denominator.unit = "g"
-* ingredient[=].strength.denominator.system.extension[dataAbsentReason].valueCode = #unknown
-* ingredient[=].strength.denominator.code.extension[dataAbsentReason].valueCode = #unknown
 
 Instance: MedicationHydrocortison-FD
 InstanceOf: EPAMedicationPZNIngredient
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
-  * version = $sct_20240201
 * code
   * coding[pzn]
     * code = #03424249
@@ -57,7 +47,6 @@ InstanceOf: EPAMedicationPZNIngredient
 Instance: MedicationDexpanthenol-FD
 InstanceOf: EPAMedicationPZNIngredient
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
-  * version = $sct_20240201
 * code
   * coding[pzn]
     * code = #16667195

@@ -16,15 +16,6 @@
       }
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-        "code": "01746517-1",
-        "display": "Augentropfen"
-      }
-    ]
-  },
   "ingredient": [
     {
       "itemCodeableConcept": {

@@ -93,7 +93,15 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
     "startLine": 19,
-    "endLine": 36
+    "endLine": 35
+  },
+  {
+    "outputFile": "Medication-ExampleUnitMedication.json",
+    "fshName": "ExampleUnitMedication",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Medication_units.fsh",
+    "startLine": 1,
+    "endLine": 19
   },
   {
     "outputFile": "Medication-Medication-Kombipackung.json",
@@ -109,7 +117,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
     "startLine": 2,
-    "endLine": 45
+    "endLine": 36
   },
   {
     "outputFile": "Medication-Medication-Rezeptur.json",
@@ -117,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur.fsh",
     "startLine": 2,
-    "endLine": 41
+    "endLine": 40
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Code.json",
@@ -125,55 +133,55 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 68,
-    "endLine": 85
+    "endLine": 81
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Numerator.json",
     "fshName": "Medication-Without-Strength-Numerator",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 87,
-    "endLine": 105
+    "startLine": 83,
+    "endLine": 99
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol-FD.json",
     "fshName": "MedicationDexpanthenol-FD",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 57,
-    "endLine": 65
+    "startLine": 47,
+    "endLine": 54
   },
   {
     "outputFile": "Medication-MedicationDexpanthenol.json",
     "fshName": "MedicationDexpanthenol",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 53,
-    "endLine": 61
+    "startLine": 51,
+    "endLine": 58
   },
   {
     "outputFile": "Medication-MedicationHydrocortison-FD.json",
     "fshName": "MedicationHydrocortison-FD",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 47,
-    "endLine": 55
+    "startLine": 38,
+    "endLine": 45
   },
   {
     "outputFile": "Medication-MedicationHydrocortison.json",
     "fshName": "MedicationHydrocortison",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 43,
-    "endLine": 51
+    "startLine": 42,
+    "endLine": 49
   },
   {
     "outputFile": "Medication-NasenSpray.json",
     "fshName": "NasenSpray",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 38,
-    "endLine": 55
+    "startLine": 37,
+    "endLine": 53
   },
   {
     "outputFile": "Medication-SimpleMedication.json",
@@ -701,7 +709,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
@@ -717,7 +725,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",

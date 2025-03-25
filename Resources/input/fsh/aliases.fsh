@@ -19,9 +19,10 @@ Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 
 // National Codings
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
-Alias: $cs-product-key = https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt
+
 // Codings
 Alias: $cs-pzn = http://fhir.de/CodeSystem/ifa/pzn
+Alias: $cs-ask = http://fhir.de/CodeSystem/ask
 
 // ePA Medication
 Alias: $ePAMedicationDispense = https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense
@@ -33,5 +34,4 @@ Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_
 
 // International
 Alias: $sct = http://snomed.info/sct
-Alias: $sct_20240201 = http://snomed.info/sct/900000000000207008/version/20240201
 Alias: $cs-ucum = http://unitsofmeasure.org
