@@ -1,13 +1,8 @@
 {
-  "updated": "2025-03-27T06:30:55.666068+01:00",
+  "updated": "2025-04-04T15:45:34.179909+02:00",
   "dependencies": {
-    "kbv.ita.erp": "1.2.0",
     "hl7.fhir.r4.core": "4.0.1",
-    "kbv.basis": "1.7.0",
     "de.basisprofil.r4": "1.5.2",
-    "kbv.ita.for": "1.2.0",
-    "kbv.itv.evdga": "1.2.0",
-    "kbv.all.st": "1.15.0",
     "de.gematik.epa.medication": "1.0.5-1",
     "de.gematik.fhir.directory": "0.11.25",
     "de.ihe-d.terminology": "3.0.1",
