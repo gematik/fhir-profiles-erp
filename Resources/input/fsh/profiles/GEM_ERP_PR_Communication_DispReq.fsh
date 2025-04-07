@@ -48,4 +48,4 @@ Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arznei
 Invariant: workflow-communication-flowtype-1
 Description: "Der flowType einer Zuweisung muss zu einem Task mit entsprechender Task-ID passen"
 * severity = #error
-* expression = "basedOn.reference.startsWith(('Task/' | %resource.extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code).join())"
+* expression = "basedOn.reference.startsWith(('Task/' + extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code))"

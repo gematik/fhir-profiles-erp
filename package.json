@@ -4,12 +4,10 @@
   ],
   "name": "de.gematik.erezept-workflow.r4",
   "jurisdiction": "urn:iso:std:iso:3166#DE",
-  "version": "1.5.0-rc2",
+  "version": "1.5.0-rc3",
   "description": "ePrescription workflow specification.",
   "author": "gematik",
   "dependencies": {
-    "kbv.ita.erp": "1.2.0",
-    "kbv.itv.evdga": "1.2.0",
     "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.2",
     "de.gematik.epa.medication": "1.0.5-1",

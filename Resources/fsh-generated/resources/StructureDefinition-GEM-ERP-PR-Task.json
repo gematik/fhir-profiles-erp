@@ -352,12 +352,12 @@
       {
         "id": "Task.input:patientReceipt.value[x]",
         "path": "Task.input.value[x]",
+        "comment": "This is a bundle of a prescription, e.g. KBV_PR_ERP_Bundle or KBV_PR_EVDGA_Bundle",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle",
-              "https://fhir.kbv.de/StructureDefinition/KBV_PR_EVDGA_Bundle"
+              "http://hl7.org/fhir/StructureDefinition/Bundle"
             ]
           }
         ]
