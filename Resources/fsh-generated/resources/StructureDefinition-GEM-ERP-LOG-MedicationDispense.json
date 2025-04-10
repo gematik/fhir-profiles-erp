@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "logMedDispense",
-  "url": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
+  "id": "GEM-ERP-LOG-MedicationDispense",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense",
   "version": "1.5.0",
   "name": "GEM_ERP_LOG_MedicationDispense",
   "title": "Logical Medication Dispense",
@@ -11,20 +11,20 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
-  "type": "https://gematik.de/fhir/erp/StructureDefinition/logMedDispense",
+  "type": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "logMedDispense",
-        "path": "logMedDispense",
+        "id": "GEM-ERP-LOG-MedicationDispense",
+        "path": "GEM-ERP-LOG-MedicationDispense",
         "short": "Logical Medication Dispense",
         "definition": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden."
       },
       {
-        "id": "logMedDispense.prescriptionId",
-        "path": "logMedDispense.prescriptionId",
+        "id": "GEM-ERP-LOG-MedicationDispense.prescriptionId",
+        "path": "GEM-ERP-LOG-MedicationDispense.prescriptionId",
         "short": "ID des Rezepts",
         "definition": "ID des Rezepts",
         "min": 1,
@@ -36,8 +36,8 @@
         ]
       },
       {
-        "id": "logMedDispense.status",
-        "path": "logMedDispense.status",
+        "id": "GEM-ERP-LOG-MedicationDispense.status",
+        "path": "GEM-ERP-LOG-MedicationDispense.status",
         "short": "Status fixedValue: #completed",
         "definition": "Status fixedValue: #completed",
         "min": 1,
@@ -49,8 +49,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication",
-        "path": "logMedDispense.medication",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication",
         "short": "Medikation",
         "definition": "Medikation",
         "min": 1,
@@ -62,21 +62,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.profilInformation",
-        "path": "logMedDispense.medication.profilInformation",
-        "short": "Profilinformationen aus meta.profile",
-        "definition": "Profilinformationen aus meta.profile",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "Meta"
-          }
-        ]
-      },
-      {
-        "id": "logMedDispense.medication.medicationArzneimittel",
-        "path": "logMedDispense.medication.medicationArzneimittel",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel",
         "short": "Medikation als contained Element",
         "definition": "Medikation als contained Element",
         "min": 0,
@@ -88,21 +75,21 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension",
         "short": "Erweiterungen",
         "definition": "Erweiterungen",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Extension"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.impfung",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.impfung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.impfung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.impfung",
         "short": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "definition": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "min": 1,
@@ -114,8 +101,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
         "short": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "definition": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "min": 1,
@@ -127,8 +114,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.kategorie",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.kategorie",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.kategorie",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.kategorie",
         "short": "Angabe zur Kategorie",
         "definition": "Angabe zur Kategorie",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -141,8 +128,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.normgroesse",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.normgroesse",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.normgroesse",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.normgroesse",
         "short": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "definition": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -155,8 +142,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
         "short": "Herstellungsanweisung",
         "definition": "Herstellungsanweisung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -169,8 +156,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.extension.verpackung",
-        "path": "logMedDispense.medication.medicationArzneimittel.extension.verpackung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.verpackung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.verpackung",
         "short": "Angabe zur Verpackung",
         "definition": "Angabe zur Verpackung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -183,8 +170,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code",
         "short": "Information und Identifizierung zum Arzneimittel",
         "definition": "Information und Identifizierung zum Arzneimittel",
         "min": 1,
@@ -196,8 +183,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn",
         "short": "PZN",
         "definition": "PZN",
         "min": 0,
@@ -209,8 +196,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn.code",
         "short": "PZN-Code",
         "definition": "PZN-Code",
         "min": 1,
@@ -222,8 +209,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.pzn.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.pzn.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.pzn.display",
         "short": "PZN-Name",
         "definition": "PZN-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -236,8 +223,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe",
         "short": "atc-de",
         "definition": "atc-de",
         "min": 0,
@@ -249,8 +236,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe.code",
         "short": "atc-de-Code",
         "definition": "atc-de-Code",
         "min": 1,
@@ -262,8 +249,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.atcDe.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.atcDe.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.atcDe.display",
         "short": "atc-de-Name",
         "definition": "atc-de-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -276,8 +263,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.ask",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.ask",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask",
         "short": "ask",
         "definition": "ask",
         "min": 0,
@@ -289,8 +276,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.ask.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.ask.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask.code",
         "short": "ask-Code",
         "definition": "ask-Code",
         "min": 1,
@@ -302,8 +289,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.ask.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.ask.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.ask.display",
         "short": "ask-Name",
         "definition": "ask-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -316,8 +303,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14",
         "short": "wg14",
         "definition": "wg14",
         "min": 0,
@@ -329,8 +316,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14.code",
         "short": "wg14-Code",
         "definition": "wg14-Code",
         "min": 1,
@@ -342,8 +329,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.wg14.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.wg14.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.wg14.display",
         "short": "wg14-Name",
         "definition": "wg14-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -356,8 +343,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -369,8 +356,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
@@ -382,8 +369,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.snomed.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.snomed.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -396,8 +383,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.code.text",
-        "path": "logMedDispense.medication.medicationArzneimittel.code.text",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.text",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.code.text",
         "short": "Name des Arzneimittels",
         "definition": "Name des Arzneimittels",
         "min": 0,
@@ -409,8 +396,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form",
-        "path": "logMedDispense.medication.medicationArzneimittel.form",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -422,8 +409,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm",
         "short": "edqm",
         "definition": "edqm",
         "min": 0,
@@ -435,8 +422,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm.code",
         "short": "edqm-Code",
         "definition": "edqm-Code",
         "min": 1,
@@ -448,8 +435,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.edqm.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.edqm.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.edqm.display",
         "short": "edqm-Name",
         "definition": "edqm-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -462,8 +449,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -475,8 +462,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
@@ -488,8 +475,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.snomed.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.snomed.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -502,8 +489,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform",
         "short": "kbvDarreichungsform",
         "definition": "kbvDarreichungsform",
         "min": 0,
@@ -515,8 +502,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.code",
         "short": "kbvDarreichungsform-Code",
         "definition": "kbvDarreichungsform-Code",
         "min": 1,
@@ -528,8 +515,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.kbvDarreichungsform.display",
         "short": "kbvDarreichungsform-Name",
         "definition": "kbvDarreichungsform-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -542,8 +529,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.form.text",
-        "path": "logMedDispense.medication.medicationArzneimittel.form.text",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.text",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.form.text",
         "short": "Name der Darreichungsform",
         "definition": "Name der Darreichungsform",
         "min": 0,
@@ -555,8 +542,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.menge",
-        "path": "logMedDispense.medication.medicationArzneimittel.menge",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.menge",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.menge",
         "short": "Verordnete Menge des Arzneimittels",
         "definition": "Verordnete Menge des Arzneimittels",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -569,8 +556,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe",
         "short": "Inhaltsstoffe",
         "definition": "Inhaltsstoffe",
         "min": 0,
@@ -582,8 +569,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
         "short": "Erweiterungen",
         "definition": "Erweiterungen",
         "min": 0,
@@ -595,8 +582,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -608,8 +595,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff",
         "short": "Inhaltsstoff",
         "definition": "Inhaltsstoff",
         "min": 0,
@@ -621,8 +608,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding",
         "short": "Kodierung des Inhaltsstoffs",
         "definition": "Kodierung des Inhaltsstoffs",
         "min": 0,
@@ -634,8 +621,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn",
         "short": "PZN",
         "definition": "PZN",
         "min": 0,
@@ -647,8 +634,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.code",
         "short": "PZN-Code",
         "definition": "PZN-Code",
         "min": 1,
@@ -660,8 +647,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.pzn.display",
         "short": "PZN-Name",
         "definition": "PZN-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -674,8 +661,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe",
         "short": "atc-de",
         "definition": "atc-de",
         "min": 0,
@@ -687,8 +674,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.code",
         "short": "atc-de-Code",
         "definition": "atc-de-Code",
         "min": 1,
@@ -700,8 +687,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.atcDe.display",
         "short": "atc-de-Name",
         "definition": "atc-de-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -714,8 +701,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask",
         "short": "ask",
         "definition": "ask",
         "min": 0,
@@ -727,8 +714,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.code",
         "short": "ask-Code",
         "definition": "ask-Code",
         "min": 1,
@@ -740,8 +727,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.ask.display",
         "short": "ask-Name",
         "definition": "ask-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -754,8 +741,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14",
         "short": "wg14",
         "definition": "wg14",
         "min": 0,
@@ -767,8 +754,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.code",
         "short": "wg14-Code",
         "definition": "wg14-Code",
         "min": 1,
@@ -780,8 +767,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.wg14.display",
         "short": "wg14-Name",
         "definition": "wg14-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -794,8 +781,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed",
         "short": "snomed",
         "definition": "snomed",
         "min": 0,
@@ -807,8 +794,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.code",
         "short": "snomed-Code",
         "definition": "snomed-Code",
         "min": 1,
@@ -820,8 +807,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffCoding.snomed.display",
         "short": "snomed-Name",
         "definition": "snomed-Name",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -834,8 +821,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.inhaltsstoff.inhaltsstoffReference",
         "short": "Referenz zum Inhaltsstoff",
         "definition": "Referenz zum Inhaltsstoff",
         "min": 0,
@@ -847,8 +834,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.wirkstaerke",
         "short": "Wirkstärke des Inhaltsstoffes",
         "definition": "Wirkstärke des Inhaltsstoffes",
         "min": 0,
@@ -860,8 +847,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.menge",
         "short": "Menge des Inhaltsstoffes",
         "definition": "Menge des Inhaltsstoffes",
         "min": 0,
@@ -873,8 +860,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
-        "path": "logMedDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.einheit",
         "short": "Einheit der Menge des Inhaltsstoffes",
         "definition": "Einheit der Menge des Inhaltsstoffes",
         "min": 0,
@@ -886,8 +873,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation",
-        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation",
         "short": "Chargeninformation",
         "definition": "Chargeninformation",
         "comment": "Da die ePA Medication nur bei der Abgabe verwendet wird ist die Angabe der Chargeninformation verpflichtend.",
@@ -900,8 +887,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
-        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation.chargennummer",
         "short": "Chargennummer",
         "definition": "Chargennummer",
         "min": 0,
@@ -913,8 +900,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
-        "path": "logMedDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.chargenInformation.ablaufdatum",
         "short": "Ablaufdatum der Charge",
         "definition": "Ablaufdatum der Charge",
         "min": 0,
@@ -926,8 +913,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationArzneimittel.darreichungsform",
-        "path": "logMedDispense.medication.medicationArzneimittel.darreichungsform",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.darreichungsform",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.darreichungsform",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -939,8 +926,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationDiGA",
-        "path": "logMedDispense.medication.medicationDiGA",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationDiGA",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationDiGA",
         "short": "Angabe der Medikation bei DiGA Verordnung",
         "definition": "Angabe der Medikation bei DiGA Verordnung",
         "min": 0,
@@ -952,8 +939,8 @@
         ]
       },
       {
-        "id": "logMedDispense.medication.medicationDiGA.display",
-        "path": "logMedDispense.medication.medicationDiGA.display",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationDiGA.display",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationDiGA.display",
         "short": "Name der verordneten DiGA",
         "definition": "Name der verordneten DiGA",
         "min": 1,
@@ -965,8 +952,8 @@
         ]
       },
       {
-        "id": "logMedDispense.patientKVNR",
-        "path": "logMedDispense.patientKVNR",
+        "id": "GEM-ERP-LOG-MedicationDispense.patientKVNR",
+        "path": "GEM-ERP-LOG-MedicationDispense.patientKVNR",
         "short": "KVNR des Patienten",
         "definition": "KVNR des Patienten",
         "min": 1,
@@ -978,8 +965,8 @@
         ]
       },
       {
-        "id": "logMedDispense.angabeAbgebendeInstutition",
-        "path": "logMedDispense.angabeAbgebendeInstutition",
+        "id": "GEM-ERP-LOG-MedicationDispense.angabeAbgebendeInstutition",
+        "path": "GEM-ERP-LOG-MedicationDispense.angabeAbgebendeInstutition",
         "short": "Telematik-ID der abgebenden Institution",
         "definition": "Telematik-ID der abgebenden Institution",
         "min": 1,
@@ -994,8 +981,8 @@
         ]
       },
       {
-        "id": "logMedDispense.menge",
-        "path": "logMedDispense.menge",
+        "id": "GEM-ERP-LOG-MedicationDispense.menge",
+        "path": "GEM-ERP-LOG-MedicationDispense.menge",
         "short": "Abgegebene Menge des Arzneimittels.",
         "definition": "Abgegebene Menge des Arzneimittels.",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -1008,8 +995,8 @@
         ]
       },
       {
-        "id": "logMedDispense.abgabeDatum",
-        "path": "logMedDispense.abgabeDatum",
+        "id": "GEM-ERP-LOG-MedicationDispense.abgabeDatum",
+        "path": "GEM-ERP-LOG-MedicationDispense.abgabeDatum",
         "short": "Abgabedatum im Format YYYY-MM-DD",
         "definition": "Abgabedatum im Format YYYY-MM-DD",
         "min": 1,
@@ -1021,8 +1008,8 @@
         ]
       },
       {
-        "id": "logMedDispense.dosieranweisung",
-        "path": "logMedDispense.dosieranweisung",
+        "id": "GEM-ERP-LOG-MedicationDispense.dosieranweisung",
+        "path": "GEM-ERP-LOG-MedicationDispense.dosieranweisung",
         "short": "Dosieranweisung,",
         "definition": "Dosieranweisung,",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -1035,8 +1022,8 @@
         ]
       },
       {
-        "id": "logMedDispense.verweisZumTask",
-        "path": "logMedDispense.verweisZumTask",
+        "id": "GEM-ERP-LOG-MedicationDispense.verweisZumTask",
+        "path": "GEM-ERP-LOG-MedicationDispense.verweisZumTask",
         "short": "Verweis auf den Task, der die Abgabe enthält. Wird vom E-Rezept-Fachdienst gesetzt.",
         "definition": "Verweis auf den Task, der die Abgabe enthält. Wird vom E-Rezept-Fachdienst gesetzt.",
         "min": 0,
@@ -1048,8 +1035,8 @@
         ]
       },
       {
-        "id": "logMedDispense.substituierung",
-        "path": "logMedDispense.substituierung",
+        "id": "GEM-ERP-LOG-MedicationDispense.substituierung",
+        "path": "GEM-ERP-LOG-MedicationDispense.substituierung",
         "short": "Substituierung",
         "definition": "Substituierung",
         "min": 0,
@@ -1061,8 +1048,8 @@
         ]
       },
       {
-        "id": "logMedDispense.substituierung.wurdeSubstituiert",
-        "path": "logMedDispense.substituierung.wurdeSubstituiert",
+        "id": "GEM-ERP-LOG-MedicationDispense.substituierung.wurdeSubstituiert",
+        "path": "GEM-ERP-LOG-MedicationDispense.substituierung.wurdeSubstituiert",
         "short": "Angabe, ob substituiert wurde",
         "definition": "Angabe, ob substituiert wurde",
         "min": 1,
@@ -1074,8 +1061,8 @@
         ]
       },
       {
-        "id": "logMedDispense.abgabeHinweise",
-        "path": "logMedDispense.abgabeHinweise",
+        "id": "GEM-ERP-LOG-MedicationDispense.abgabeHinweise",
+        "path": "GEM-ERP-LOG-MedicationDispense.abgabeHinweise",
         "short": "Hinweise zur Abgabe, wenn vorhanden",
         "definition": "Hinweise zur Abgabe, wenn vorhanden",
         "min": 0,

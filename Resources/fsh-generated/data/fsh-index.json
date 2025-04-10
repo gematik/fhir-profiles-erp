@@ -544,6 +544,22 @@
     "endLine": 26
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-LOG-MedicationDispense-DiGA.json",
+    "fshName": "GEM_ERP_LOG_MedicationDispense_DiGA",
+    "fshType": "Logical",
+    "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-LOG-MedicationDispense.json",
+    "fshName": "GEM_ERP_LOG_MedicationDispense",
+    "fshType": "Logical",
+    "fshFile": "logicalmodels/logical-medication-dispense.fsh",
+    "startLine": 1,
+    "endLine": 113
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode.json",
     "fshName": "GEM_ERP_PR_AccessCode",
     "fshType": "Profile",
@@ -766,22 +782,6 @@
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
     "endLine": 86
-  },
-  {
-    "outputFile": "StructureDefinition-logMedDispense.json",
-    "fshName": "GEM_ERP_LOG_MedicationDispense",
-    "fshType": "Logical",
-    "fshFile": "logicalmodels/logical-medication-dispense.fsh",
-    "startLine": 1,
-    "endLine": 114
-  },
-  {
-    "outputFile": "StructureDefinition-logMedDispenseDiGA.json",
-    "fshName": "GEM_ERP_LOG_MedicationDispense_DiGA",
-    "fshType": "Logical",
-    "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
-    "startLine": 1,
-    "endLine": 20
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
