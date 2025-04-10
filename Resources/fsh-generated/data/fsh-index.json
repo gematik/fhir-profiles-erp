@@ -144,46 +144,6 @@
     "endLine": 99
   },
   {
-    "outputFile": "Medication-MedicationDexpanthenol-FD.json",
-    "fshName": "MedicationDexpanthenol-FD",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 47,
-    "endLine": 54
-  },
-  {
-    "outputFile": "Medication-MedicationDexpanthenol.json",
-    "fshName": "MedicationDexpanthenol",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 51,
-    "endLine": 58
-  },
-  {
-    "outputFile": "Medication-MedicationHydrocortison-FD.json",
-    "fshName": "MedicationHydrocortison-FD",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 38,
-    "endLine": 45
-  },
-  {
-    "outputFile": "Medication-MedicationHydrocortison.json",
-    "fshName": "MedicationHydrocortison",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 42,
-    "endLine": 49
-  },
-  {
-    "outputFile": "Medication-NasenSpray.json",
-    "fshName": "NasenSpray",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 37,
-    "endLine": 53
-  },
-  {
     "outputFile": "Medication-SimpleMedication.json",
     "fshName": "SimpleMedication",
     "fshType": "Instance",

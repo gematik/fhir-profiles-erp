@@ -36,6 +36,7 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 
 Instance: NasenSpray
 InstanceOf: EPAMedicationPharmaceuticalProduct
+Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept

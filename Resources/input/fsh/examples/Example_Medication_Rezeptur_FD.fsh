@@ -37,6 +37,7 @@ Usage: #example
 
 Instance: MedicationHydrocortison-FD
 InstanceOf: EPAMedicationPZNIngredient
+Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
@@ -46,6 +47,7 @@ InstanceOf: EPAMedicationPZNIngredient
 
 Instance: MedicationDexpanthenol-FD
 InstanceOf: EPAMedicationPZNIngredient
+Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
   * coding[pzn]
