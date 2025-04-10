@@ -6,7 +6,7 @@
   "name": "GEM_ERP_EX_ExpiryDate",
   "title": "Presciption expiry date",
   "status": "draft",
-  "date": "2025-02-28",
+  "date": "2025-04-10",
   "description": "This extension should be used in the Task ressource. It shows the presciption expiry date.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

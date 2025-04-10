@@ -5,7 +5,7 @@
   "version": "1.5.0",
   "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
   "status": "draft",
-  "date": "2025-02-28",
+  "date": "2025-04-10",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition",
   "status": "draft",
   "version": "1.5.0",
-  "date": "2025-03-01",
+  "date": "2025-04-10",
   "name": "Abort",
   "kind": "operation",
   "affectsState": true,

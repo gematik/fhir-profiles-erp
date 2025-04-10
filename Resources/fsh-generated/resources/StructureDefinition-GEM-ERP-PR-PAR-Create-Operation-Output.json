@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_PAR_CreateOperation_Output",
   "title": "GEM ERP PR CreateOperation Output",
   "status": "draft",
-  "date": "2025-02-28",
+  "date": "2025-04-10",
   "description": "This profile defines the parameters for creating a Task from PVS to the E-Rezept-Fachdienst. This can be used for the $create-operation.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
