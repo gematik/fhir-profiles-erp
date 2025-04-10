@@ -10,7 +10,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.display = "Gematico Diabetestherapie"
 * medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
@@ -28,7 +28,7 @@ Description: "Example of a Medication Dispense for DiGAs which states a deep lin
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.display = "Gematico Diabetestherapie"
 * medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
@@ -44,7 +44,7 @@ Description: "Example of a Medication Dispense for DiGAs which has no redeem cod
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * note.text = "Freischaltcode für DiGA konnte nicht erstellt werden"
 * medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
@@ -61,7 +61,7 @@ Description: "Example of a Medication Dispense for DiGAs only stating the name o
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.display = "Gematico Diabetestherapie"
 
 Instance: INVALID-Example-MedicationDispense-DiGA-MissingNote
@@ -75,7 +75,7 @@ Description: "A Note needs to be provided if no redeem code is provided."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.extension[data-absent-reason].valueCode = #asked-declined
 
 Instance: INVALID-Example-MedicationDispense-DiGA-MissingDataAbsentReason
@@ -89,7 +89,7 @@ Description: "A DataAbsentReason needs to be provided if no redeem code is provi
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * note.text = "Freischaltcode für DiGA konnte nicht erstellt werden"
 * medicationReference.display = "whitespace"
 
@@ -105,7 +105,7 @@ Description: "When a redeem code is provided, the name of the DiGA is mandatory.
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.identifier.system = $cs-pzn
 * medicationReference.identifier.value = "12345678"
 
@@ -121,7 +121,7 @@ Description: "When a redeem code is provided, the DiGA-PZN is mandatory."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.display = "Gematico Diabetestherapie"
 
 Instance: INVALID-Example-MedicationDispense-Missing-DiGA-Name-And-PZN
@@ -136,7 +136,7 @@ Description: "When a redeem code is provided, the Name and DiGA-PZN are mandator
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "8-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference.display = "whitespace"
 
 */

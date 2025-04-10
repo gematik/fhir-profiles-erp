@@ -19,6 +19,9 @@ RuleSet: DateTime(field)
 RuleSet: DateTimeStamp(field)
 * {field} = "2025-10-01T15:29:00.434+00:00"
 
+RuleSet: DateTimeStampPlus1Hr(field)
+* {field} = "2025-10-01T16:44:00.434+00:00"
+
 // Rules to set meta.profile in profiles and instances
 RuleSet: PackageMetaProfileExactly(profile)
 * meta.profile[workflowProfile] = "https://gematik.de/fhir/erp/{profile}|1.5" (exactly)
