@@ -5,7 +5,6 @@ Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
 * obeys workflow-communication-payload-1
-* obeys workflow-communication-flowtype-1
 
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * basedOn 1..1 MS
@@ -44,8 +43,3 @@ Invariant: workflow-communication-payload-1
 Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird"
 * severity = #error
 * expression = "(extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code = '162' implies payload.exists().not()) and (extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code != '162' implies payload.exists() and payload.empty().not())"
-
-Invariant: workflow-communication-flowtype-1
-Description: "Der flowType einer Zuweisung muss zu einem Task mit entsprechender Task-ID passen"
-* severity = #error
-* expression = "basedOn.reference.substring(0,9) = ('Task/' + extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType').value.code + '.')"
