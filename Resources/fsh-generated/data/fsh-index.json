@@ -432,14 +432,6 @@
     "endLine": 6
   },
   {
-    "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
-    "fshName": "PractitionersNarcoticsApproval",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Provenance.fsh",
-    "startLine": 2,
-    "endLine": 20
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-EX-AcceptDate.json",
     "fshName": "GEM_ERP_EX_AcceptDate",
     "fshType": "Extension",
