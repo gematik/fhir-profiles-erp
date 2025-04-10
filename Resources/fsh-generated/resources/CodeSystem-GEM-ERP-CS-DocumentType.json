@@ -6,7 +6,7 @@
   "id": "GEM-ERP-CS-DocumentType",
   "title": "CodeSystem of Documenttypes",
   "description": "Type of document depending on the recipient of the Bundle.",
-  "version": "1.4",
+  "version": "1.5.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
   "concept": [
     {
@@ -20,13 +20,9 @@
     {
       "code": "3",
       "display": "Receipt"
-    },
-    {
-      "code": "4",
-      "display": "Medication Dispense"
     }
   ],
-  "date": "2024-07-15",
+  "date": "2025-04-10",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -40,5 +36,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 4
+  "count": 3
 }

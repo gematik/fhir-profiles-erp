@@ -3,7 +3,7 @@
   "id": "b12eb5f7-91ce-4887-93c7-800454601377",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.5"
     ],
     "tag": [
       {
@@ -23,11 +23,11 @@
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
-      "valueDate": "2025-01-15"
+      "valueDate": "2025-10-01"
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
-      "valueDate": "2022-06-02"
+      "valueDate": "2025-10-01"
     }
   ],
   "identifier": [
@@ -41,7 +41,7 @@
     }
   ],
   "status": "draft",
-  "authoredOn": "2022-03-18T15:26:00+00:00",
+  "authoredOn": "2025-10-01T15:29:00+00:00",
   "performerType": [
     {
       "coding": [

@@ -3,7 +3,7 @@
   "id": "Medication-Rezeptur",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
     ]
   },
   "extension": [
@@ -19,12 +19,11 @@
       "valueCoding": {
         "code": "1208954007",
         "system": "http://snomed.info/sct",
-        "display": "Extemporaneous preparation (product)",
-        "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+        "display": "Extemporaneous preparation (product)"
       }
     },
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
       "valueBoolean": false
     }
   ],
@@ -66,8 +65,7 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "display": "Medicinal product package (product)",
-            "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+            "display": "Medicinal product package (product)"
           }
         }
       ],
@@ -98,8 +96,7 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "display": "Medicinal product package (product)",
-            "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+            "display": "Medicinal product package (product)"
           }
         }
       ],

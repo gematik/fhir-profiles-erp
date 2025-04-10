@@ -5,7 +5,7 @@ Title: "Request for Dispense of ePrescription"
 Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
 * obeys workflow-communication-payload-1
-* ^abstract = true
+
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)

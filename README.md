@@ -10,6 +10,9 @@
 
 This Repo contains the fsh files to the published E-Rezept Worklow files on <https://simplifier.net/erezept-workflow> and a script to validate them.
 
+### Release Notes
+See [ReleaseNotes.md](./ReleaseNotes.md) for all information regarding the (newest) releases.
+
 ## Getting Started <a name = "getting_started"></a>
 
 1. Clone this project to your local machine.

@@ -3,7 +3,7 @@
   "id": "Example-MedicationDispense-DiGA-NoRedeemCode",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.5"
     ]
   },
   "identifier": [
@@ -37,7 +37,7 @@
       }
     ]
   },
-  "whenHandedOver": "2024-04-03",
+  "whenHandedOver": "2025-10-01",
   "note": [
     {
       "text": "Freischaltcode für DiGA konnte nicht erstellt werden"

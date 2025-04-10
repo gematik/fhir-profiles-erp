@@ -3,7 +3,7 @@
   "id": "Example-MedicationDispense-2",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
     ]
   },
   "identifier": [
@@ -29,7 +29,7 @@
       }
     }
   ],
-  "whenHandedOver": "2024-04-03",
+  "whenHandedOver": "2025-10-01",
   "medicationReference": {
     "reference": "Medication/SimpleMedication"
   }

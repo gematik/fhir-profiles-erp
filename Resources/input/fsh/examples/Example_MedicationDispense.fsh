@@ -8,7 +8,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
 
 Instance: Example-MedicationDispense-ToID
@@ -22,7 +22,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(30e0e53f-275c-46f5-9e59-04d55735dabb)
 
 Instance: Example-MedicationDispense-Without-Medication
@@ -35,7 +35,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
 
 Instance: Example-MedicationDispense-2
@@ -48,7 +48,7 @@ Description: "Example of another Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(SimpleMedication)
 
 Instance: Example-MedicationDispense-Kombipackung
@@ -61,7 +61,7 @@ Description: "Example of a Kombipackung Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(Medication-Kombipackung)
 
 Instance: Example-MedicationDispense-Rezeptur
@@ -74,7 +74,7 @@ Description: "Example of a Rezeptur Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03"
+* insert Date(whenHandedOver)
 * medicationReference = Reference(Medication-Rezeptur)
 
 /*
@@ -89,7 +89,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024"
+* insert Date(whenHandedOver)
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -103,7 +103,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04"
+* insert Date(whenHandedOver)
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -117,7 +117,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "1-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03T15:28:00+00:00"
+* insert Date(whenHandedOver)
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 
@@ -131,7 +131,7 @@ Description: "Example of a Medication Dispense."
 * subject.identifier.value = "X123456789"
 * performer.actor.identifier.system = $identifier-telematik-id
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
-* whenHandedOver = "2024-04-03T00:00:00.000Z"
+* insert Date(whenHandedOver)
 * contained[+] = SumatripanMedication
 * medicationReference = Reference(SumatripanMedication)
 

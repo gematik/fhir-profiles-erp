@@ -23,6 +23,7 @@ Description: "Handles information about the redeem of the prescription and the s
 * whenPrepared obeys workflow-abgabeDatumsFormat
 * whenHandedOver 1..
 * whenHandedOver obeys workflow-abgabeDatumsFormat
+
 * dosageInstruction MS
 
 Invariant: workflow-abgabeDatumsFormat

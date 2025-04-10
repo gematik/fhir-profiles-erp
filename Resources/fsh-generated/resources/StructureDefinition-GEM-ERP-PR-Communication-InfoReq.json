@@ -1,19 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-InfoReq",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:43:30.128+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq",
-  "version": "1.4",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_Communication_InfoReq",
   "title": "Informative request from Patient to Provider",
-  "status": "active",
-  "date": "2024-07-15",
+  "status": "retired",
+  "date": "2025-04-10",
   "description": "Ressource used for the communication of informative requests between patient and provider.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
-  "abstract": true,
+  "abstract": false,
   "type": "Communication",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
   "derivation": "constraint",
@@ -22,14 +19,35 @@
       {
         "id": "Communication.meta",
         "path": "Communication.meta",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Communication.meta.profile",
         "path": "Communication.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.4"
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.meta.profile:workflowProfile",
+        "path": "Communication.meta.profile",
+        "sliceName": "workflowProfile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_InfoReq|1.5",
+        "mustSupport": true
       },
       {
         "id": "Communication.basedOn",

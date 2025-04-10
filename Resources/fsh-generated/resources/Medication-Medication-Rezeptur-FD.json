@@ -3,7 +3,7 @@
   "id": "Medication-Rezeptur-FD",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
     ]
   },
   "extension": [
@@ -23,7 +23,7 @@
       "valueString": "Tube"
     },
     {
-      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
       "valueBoolean": false
     },
     {
@@ -31,8 +31,7 @@
       "valueCoding": {
         "code": "1208954007",
         "system": "http://snomed.info/sct",
-        "display": "Extemporaneous preparation (product)",
-        "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+        "display": "Extemporaneous preparation (product)"
       }
     }
   ],
@@ -59,52 +58,20 @@
           "valueString": "Salbe"
         }
       ],
-      "strength": {
-        "numerator": {
-          "value": 50,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        },
-        "denominator": {
-          "value": 100,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        }
-      },
       "itemReference": {
         "reference": "#MedicationHydrocortison-FD"
       },
-      "isActive": true
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 50,
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 100,
+          "unit": "g"
+        }
+      }
     },
     {
       "extension": [
@@ -113,52 +80,20 @@
           "valueString": "Salbe"
         }
       ],
-      "strength": {
-        "numerator": {
-          "value": 50,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        },
-        "denominator": {
-          "value": 100,
-          "unit": "g",
-          "_system": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          },
-          "_code": {
-            "extension": [
-              {
-                "valueCode": "unknown",
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-              }
-            ]
-          }
-        }
-      },
       "itemReference": {
         "reference": "#MedicationDexpanthenol-FD"
       },
-      "isActive": true
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 50,
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 100,
+          "unit": "g"
+        }
+      }
     }
   ],
   "contained": [
@@ -176,8 +111,7 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "display": "Medicinal product package (product)",
-            "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+            "display": "Medicinal product package (product)"
           }
         }
       ],
@@ -206,8 +140,7 @@
           "valueCoding": {
             "code": "781405001",
             "system": "http://snomed.info/sct",
-            "display": "Medicinal product package (product)",
-            "version": "http://snomed.info/sct/900000000000207008/version/20240201"
+            "display": "Medicinal product package (product)"
           }
         }
       ],

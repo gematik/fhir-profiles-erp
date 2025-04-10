@@ -1,15 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-AuditEvent",
-  "meta": {
-    "lastUpdated": "2020-04-16T13:41:55.87+00:00"
-  },
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
-  "version": "1.4",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent for Logging of ePrescription Access",
   "status": "active",
-  "date": "2024-07-15",
+  "date": "2025-04-10",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -21,24 +18,44 @@
       {
         "id": "AuditEvent.meta",
         "path": "AuditEvent.meta",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.meta.profile",
         "path": "AuditEvent.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.4"
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.meta.profile:workflowProfile",
+        "path": "AuditEvent.meta.profile",
+        "sliceName": "workflowProfile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.5",
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.type",
+        "path": "AuditEvent.type",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.type.system",
         "path": "AuditEvent.type.system",
-        "code": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
-            "display": "rest"
-          }
-        ],
         "min": 1,
         "fixedUri": "http://terminology.hl7.org/CodeSystem/audit-event-type"
       },
@@ -65,6 +82,11 @@
         "min": 1
       },
       {
+        "id": "AuditEvent.agent",
+        "path": "AuditEvent.agent",
+        "mustSupport": true
+      },
+      {
         "id": "AuditEvent.agent.type",
         "path": "AuditEvent.agent.type",
         "min": 1
@@ -87,6 +109,11 @@
         "id": "AuditEvent.agent.name",
         "path": "AuditEvent.agent.name",
         "min": 1
+      },
+      {
+        "id": "AuditEvent.source",
+        "path": "AuditEvent.source",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.source.site",
@@ -115,7 +142,8 @@
         "id": "AuditEvent.entity",
         "path": "AuditEvent.entity",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.entity.what",

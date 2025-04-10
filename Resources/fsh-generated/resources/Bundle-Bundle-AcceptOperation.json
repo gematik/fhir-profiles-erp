@@ -20,7 +20,7 @@
         "id": "d70932d1-9e1c-483c-b2d4-b7dced09b35e",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.4"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.5"
           ],
           "tag": [
             {
@@ -40,11 +40,11 @@
           },
           {
             "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
-            "valueDate": "2022-04-02"
+            "valueDate": "2025-10-01"
           },
           {
             "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
-            "valueDate": "2022-06-02"
+            "valueDate": "2025-10-01"
           }
         ],
         "identifier": [
@@ -80,7 +80,7 @@
           }
         ],
         "status": "in-progress",
-        "authoredOn": "2022-03-18T15:26:00+00:00",
+        "authoredOn": "2025-10-01T15:29:00+00:00",
         "performerType": [
           {
             "coding": [
@@ -92,23 +92,23 @@
             ]
           }
         ],
-        "lastModified": "2022-03-18T15:28:00+00:00"
+        "lastModified": "2025-10-01T16:44:00.434+00:00"
       },
       "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
     },
     {
       "resource": {
         "resourceType": "Binary",
-        "id": "PrescriptionBinary",
+        "id": "PrescriptionBinaryWithMeta",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.4"
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.5"
           ]
         },
         "contentType": "application/pkcs7-mime",
         "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
       },
-      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinary"
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinaryWithMeta"
     }
   ]
 }

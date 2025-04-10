@@ -6,7 +6,6 @@ Usage: #example
 * contained[+] = Augentropfen
 * contained[+] = NasenSpray
 * batch.lotNumber = "56498416854"
-* extension[type].valueCoding = $sct#781405001 "Medicinal product package"
 * extension[isVaccine].valueBoolean = false
 * extension[drugCategory].valueCoding = EPADrugCategoryCS#00
 * extension[drugCategory].valueCoding.display = "Arzneimittel oder in die Arzneimittelversorgung nach § 31 SGB V einbezogenes Produkt"
@@ -20,7 +19,6 @@ Usage: #example
 Instance: Augentropfen
 InstanceOf: EPAMedicationPharmaceuticalProduct
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
-* code.coding[product-key] = $cs-product-key#01746517-1 "Augentropfen"
 * ingredient[+]
   * itemCodeableConcept
     * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"
@@ -38,8 +36,8 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 
 Instance: NasenSpray
 InstanceOf: EPAMedicationPharmaceuticalProduct
+Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
-* code.coding[product-key] = $cs-product-key#01746517-2 "Nasenspray, Lösung"
 * ingredient[+]
   * itemCodeableConcept
     * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"

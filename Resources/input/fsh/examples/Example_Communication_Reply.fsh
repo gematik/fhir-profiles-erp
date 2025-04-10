@@ -3,7 +3,6 @@ InstanceOf: GEM_ERP_PR_Communication_Reply
 Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
-* insert PackageMetaProfile(StructureDefinition/GEM_ERP_PR_Communication_Reply)
 * meta.tag[+].display = "Reply from Pharmacy to Patient"
 * meta.tag[+].display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
 * basedOn.reference = "Task/160.000.033.491.280.78"

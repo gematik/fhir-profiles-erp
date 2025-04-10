@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Medication",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
-  "version": "1.4",
+  "version": "1.5.0",
   "name": "GEM_ERP_PR_Medication",
   "title": "Medication for the Dispensation of the Prescription",
   "status": "active",
-  "date": "2024-07-15",
+  "date": "2025-04-10",
   "description": "Handles medical information about the redeemed prescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -24,9 +24,82 @@
       {
         "id": "Medication.meta.profile",
         "path": "Medication.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.meta.profile:workflowProfile",
+        "path": "Medication.meta.profile",
+        "sliceName": "workflowProfile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:isVaccine",
+        "path": "Medication.extension",
+        "sliceName": "isVaccine",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:drugCategory",
+        "path": "Medication.extension",
+        "sliceName": "drugCategory",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:normSizeCode",
+        "path": "Medication.extension",
+        "sliceName": "normSizeCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:packaging",
+        "path": "Medication.extension",
+        "sliceName": "packaging",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:manufacturingInstructions",
+        "path": "Medication.extension",
+        "sliceName": "manufacturingInstructions",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.status",
+        "path": "Medication.status",
+        "patternCode": "active"
+      },
+      {
+        "id": "Medication.amount.numerator.extension:packagingSize",
+        "path": "Medication.amount.numerator.extension",
+        "sliceName": "packagingSize",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator.extension:totalQuantity",
+        "path": "Medication.amount.numerator.extension",
+        "sliceName": "totalQuantity",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.extension:darreichungsform",
+        "path": "Medication.ingredient.extension",
+        "sliceName": "darreichungsform",
+        "mustSupport": true
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
@@ -57,88 +130,10 @@
         ]
       },
       {
-        "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.numerator.system.extension",
-        "sliceName": "dataAbsentReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
+        "id": "Medication.ingredient.strength.extension:amountText",
+        "path": "Medication.ingredient.strength.extension",
+        "sliceName": "amountText",
         "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.system.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.numerator.system.extension.value[x]",
-        "patternCode": "unknown"
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.code.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.numerator.code.extension",
-        "sliceName": "dataAbsentReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.code.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.numerator.code.extension.value[x]",
-        "patternCode": "unknown"
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.system.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.denominator.system.extension",
-        "sliceName": "dataAbsentReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.system.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.denominator.system.extension.value[x]",
-        "patternCode": "unknown"
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.code.extension:dataAbsentReason",
-        "path": "Medication.ingredient.strength.denominator.code.extension",
-        "sliceName": "dataAbsentReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.code.extension:dataAbsentReason.value[x]",
-        "path": "Medication.ingredient.strength.denominator.code.extension.value[x]",
-        "patternCode": "unknown"
       }
     ]
   }

@@ -5,55 +5,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_AuditEvent.fsh",
     "startLine": 2,
-    "endLine": 33
+    "endLine": 31
   },
   {
     "outputFile": "Bundle-Bundle-AcceptOperation.json",
     "fshName": "Bundle-AcceptOperation",
     "fshType": "Instance",
     "fshFile": "examples/Example_Bundle.fsh",
-    "startLine": 34,
-    "endLine": 45
-  },
-  {
-    "outputFile": "Bundle-KomplexMedicationDispenseBundle.json",
-    "fshName": "KomplexMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 33,
+    "startLine": 32,
     "endLine": 43
-  },
-  {
-    "outputFile": "Bundle-MultipleMedicationDispenseBundle.json",
-    "fshName": "MultipleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 14,
-    "endLine": 30
-  },
-  {
-    "outputFile": "Bundle-SearchSetMultipleMedicationDispenseBundle.json",
-    "fshName": "SearchSetMultipleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 46,
-    "endLine": 70
-  },
-  {
-    "outputFile": "Bundle-SimpleMedicationDispenseBundle.json",
-    "fshName": "SimpleMedicationDispenseBundle",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_For_MedicationDispense_Reference.fsh",
-    "startLine": 1,
-    "endLine": 11
   },
   {
     "outputFile": "Bundle-dffbfd6a-5712-4798-bdc8-07201eb77ab8.json",
     "fshName": "ReceiptBundleQuittung",
     "fshType": "Instance",
     "fshFile": "examples/Example_Bundle.fsh",
-    "startLine": 10,
-    "endLine": 32
+    "startLine": 9,
+    "endLine": 30
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-AvailabilityStatus.json",
@@ -69,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_DocumentType.fsh",
     "startLine": 1,
-    "endLine": 10
+    "endLine": 9
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-FlowType.json",
@@ -89,19 +57,19 @@
   },
   {
     "outputFile": "Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.json",
-    "fshName": "Communication_Reply_KTR",
+    "fshName": "Communication_Reply_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Diga.fsh",
-    "startLine": 2,
-    "endLine": 17
+    "startLine": 1,
+    "endLine": 15
   },
   {
     "outputFile": "Communication-2be1c6ac-5d10-47f6-84ee-8318b2c22c76.json",
     "fshName": "Communication_DispenseRequest_DiGA",
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
-    "startLine": 20,
-    "endLine": 36
+    "startLine": 19,
+    "endLine": 34
   },
   {
     "outputFile": "Communication-7977a4ab-97a9-4d95-afb3-6c4c1e2ac596.json",
@@ -109,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_Reply.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 24
   },
   {
     "outputFile": "Communication-a218a36e-f2fd-4603-ba67-c827acfef01b.json",
@@ -117,15 +85,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Communication_DispReq.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 17
   },
   {
     "outputFile": "Medication-Augentropfen.json",
     "fshName": "Augentropfen",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 20,
-    "endLine": 37
+    "startLine": 19,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Medication-ExampleUnitMedication.json",
+    "fshName": "ExampleUnitMedication",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_Medication_units.fsh",
+    "startLine": 1,
+    "endLine": 19
   },
   {
     "outputFile": "Medication-Medication-Kombipackung.json",
@@ -133,7 +109,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Kombipackung.fsh",
     "startLine": 2,
-    "endLine": 18
+    "endLine": 17
   },
   {
     "outputFile": "Medication-Medication-Rezeptur-FD.json",
@@ -141,7 +117,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
     "startLine": 2,
-    "endLine": 45
+    "endLine": 36
   },
   {
     "outputFile": "Medication-Medication-Rezeptur.json",
@@ -149,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication_Rezeptur.fsh",
     "startLine": 2,
-    "endLine": 41
+    "endLine": 40
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Code.json",
@@ -157,55 +133,15 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
     "startLine": 68,
-    "endLine": 85
+    "endLine": 81
   },
   {
     "outputFile": "Medication-Medication-Without-Strength-Numerator.json",
     "fshName": "Medication-Without-Strength-Numerator",
     "fshType": "Instance",
     "fshFile": "examples/Example_Medication.fsh",
-    "startLine": 87,
-    "endLine": 105
-  },
-  {
-    "outputFile": "Medication-MedicationDexpanthenol-FD.json",
-    "fshName": "MedicationDexpanthenol-FD",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 57,
-    "endLine": 65
-  },
-  {
-    "outputFile": "Medication-MedicationDexpanthenol.json",
-    "fshName": "MedicationDexpanthenol",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 53,
-    "endLine": 61
-  },
-  {
-    "outputFile": "Medication-MedicationHydrocortison-FD.json",
-    "fshName": "MedicationHydrocortison-FD",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur_FD.fsh",
-    "startLine": 47,
-    "endLine": 55
-  },
-  {
-    "outputFile": "Medication-MedicationHydrocortison.json",
-    "fshName": "MedicationHydrocortison",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Rezeptur.fsh",
-    "startLine": 43,
-    "endLine": 51
-  },
-  {
-    "outputFile": "Medication-NasenSpray.json",
-    "fshName": "NasenSpray",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Medication_Kombipackung.fsh",
-    "startLine": 39,
-    "endLine": 56
+    "startLine": 83,
+    "endLine": 99
   },
   {
     "outputFile": "Medication-SimpleMedication.json",
@@ -325,7 +261,7 @@
     "fshType": "Instance",
     "fshFile": "operationdefinitions/GEM_ERP_OP_Create.fsh",
     "startLine": 1,
-    "endLine": 28
+    "endLine": 29
   },
   {
     "outputFile": "OperationDefinition-DispenseOperation.json",
@@ -496,14 +432,6 @@
     "endLine": 6
   },
   {
-    "outputFile": "Provenance-64d5081e-8d65-11ec-b909-0242ac120002.json",
-    "fshName": "PractitionersNarcoticsApproval",
-    "fshType": "Instance",
-    "fshFile": "examples/Example_Provenance.fsh",
-    "startLine": 2,
-    "endLine": 21
-  },
-  {
     "outputFile": "StructureDefinition-GEM-ERP-EX-AcceptDate.json",
     "fshName": "GEM_ERP_EX_AcceptDate",
     "fshType": "Extension",
@@ -534,6 +462,22 @@
     "fshFile": "extensions/GEM_ERP_EX_DeepLink.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.json",
+    "fshName": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
+    "fshType": "Extension",
+    "fshFile": "extensions/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES.fsh",
+    "startLine": 1,
+    "endLine": 10
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-EX-ExpiryDate.json",
@@ -600,6 +544,22 @@
     "endLine": 26
   },
   {
+    "outputFile": "StructureDefinition-GEM-ERP-LOG-MedicationDispense-DiGA.json",
+    "fshName": "GEM_ERP_LOG_MedicationDispense_DiGA",
+    "fshType": "Logical",
+    "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-LOG-MedicationDispense.json",
+    "fshName": "GEM_ERP_LOG_MedicationDispense",
+    "fshType": "Logical",
+    "fshFile": "logicalmodels/logical-medication-dispense.fsh",
+    "startLine": 1,
+    "endLine": 113
+  },
+  {
     "outputFile": "StructureDefinition-GEM-ERP-PR-AccessCode.json",
     "fshName": "GEM_ERP_PR_AccessCode",
     "fshType": "Profile",
@@ -613,7 +573,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_AuditEvent.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-BfArMApproval.json",
@@ -645,7 +605,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Bundle.fsh",
     "startLine": 1,
-    "endLine": 49
+    "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DiGA.json",
+    "fshName": "GEM_ERP_PR_Communication_DiGA",
+    "fshType": "Profile",
+    "fshFile": "profiles/GEM_ERP_PR_Communication_DiGA.fsh",
+    "startLine": 1,
+    "endLine": 42
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-DispReq.json",
@@ -661,7 +629,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_InfoReq.fsh",
     "startLine": 1,
-    "endLine": 53
+    "endLine": 52
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Reply.json",
@@ -669,7 +637,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Reply.fsh",
     "startLine": 1,
-    "endLine": 51
+    "endLine": 49
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Communication-Representative.json",
@@ -677,7 +645,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Communication_Representative.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 32
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Composition.json",
@@ -685,7 +653,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Composition.fsh",
     "startLine": 1,
-    "endLine": 44
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-Device.json",
@@ -709,7 +677,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Medication.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.json",
@@ -717,7 +685,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense_DiGA.fsh",
     "startLine": 1,
-    "endLine": 57
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-MedicationDispense.json",
@@ -725,7 +693,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_MedicationDispense.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 27
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.json",
@@ -734,14 +702,6 @@
     "fshFile": "parameters/GEM_ERP_PR_PAR_AcceptOperation_Output.fsh",
     "startLine": 1,
     "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_ActivateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_ActivateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 21
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Output.json",
@@ -766,14 +726,6 @@
     "fshFile": "parameters/GEM_ERP_PR_PAR_CloseOperation_Output.fsh",
     "startLine": 1,
     "endLine": 22
-  },
-  {
-    "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Input.json",
-    "fshName": "GEM_ERP_PR_PAR_CreateOperation_Input",
-    "fshType": "Profile",
-    "fshFile": "parameters/GEM_ERP_PR_PAR_CreateOperation_Input.fsh",
-    "startLine": 1,
-    "endLine": 21
   },
   {
     "outputFile": "StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.json",
@@ -829,47 +781,31 @@
     "fshType": "Profile",
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
-    "endLine": 77
-  },
-  {
-    "outputFile": "StructureDefinition-logMedDispense.json",
-    "fshName": "GEM_ERP_LOG_MedicationDispense",
-    "fshType": "Logical",
-    "fshFile": "logicalmodels/logical-medication-dispense.fsh",
-    "startLine": 1,
-    "endLine": 114
-  },
-  {
-    "outputFile": "StructureDefinition-logMedDispenseDiGA.json",
-    "fshName": "GEM_ERP_LOG_MedicationDispense_DiGA",
-    "fshType": "Logical",
-    "fshFile": "logicalmodels/logical-medication-dispense-diga.fsh",
-    "startLine": 1,
-    "endLine": 20
+    "endLine": 86
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",
     "fshName": "TaskInClosedState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 146,
-    "endLine": 175
+    "startLine": 138,
+    "endLine": 166
   },
   {
     "outputFile": "Task-607255ed-ce41-47fc-aad3-cfce1c39963f.json",
     "fshName": "TaskInReadyState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 28,
-    "endLine": 55
+    "startLine": 24,
+    "endLine": 50
   },
   {
     "outputFile": "Task-9b48f82c-9c11-4a57-aa72-a805f9537a82.json",
     "fshName": "TaskIn-ProgressState-Dispensed",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 84,
-    "endLine": 113
+    "startLine": 78,
+    "endLine": 106
   },
   {
     "outputFile": "Task-b12eb5f7-91ce-4887-93c7-800454601377.json",
@@ -877,23 +813,23 @@
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
     "startLine": 2,
-    "endLine": 26
+    "endLine": 22
   },
   {
     "outputFile": "Task-d70932d1-9e1c-483c-b2d4-b7dced09b35e.json",
     "fshName": "TaskIn-ProgressState",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 57,
-    "endLine": 82
+    "startLine": 52,
+    "endLine": 76
   },
   {
     "outputFile": "Task-f5c21409-b84b-4125-8649-5630a00906b1.json",
     "fshName": "TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses",
     "fshType": "Instance",
     "fshFile": "examples/Example_Task.fsh",
-    "startLine": 115,
-    "endLine": 144
+    "startLine": 108,
+    "endLine": 136
   },
   {
     "outputFile": "ValueSet-GEM-ERP-VS-AvailabilityStatus.json",
@@ -926,13 +862,5 @@
     "fshFile": "valuesets/GEM_ERP_VS_OrganizationType.fsh",
     "startLine": 1,
     "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-GEM-ERP-VS-PerformerType.json",
-    "fshName": "PerformerTypeVS",
-    "fshType": "ValueSet",
-    "fshFile": "valuesets/GEM_ERP_VS_PerformerType.fsh",
-    "startLine": 5,
-    "endLine": 16
   }
 ]

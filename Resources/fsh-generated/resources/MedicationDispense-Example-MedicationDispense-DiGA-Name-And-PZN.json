@@ -3,7 +3,7 @@
   "id": "Example-MedicationDispense-DiGA-Name-And-PZN",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA|1.5"
     ]
   },
   "identifier": [
@@ -42,5 +42,5 @@
       "valueString": "DE12345678901234"
     }
   ],
-  "whenHandedOver": "2024-04-03"
+  "whenHandedOver": "2025-10-01"
 }

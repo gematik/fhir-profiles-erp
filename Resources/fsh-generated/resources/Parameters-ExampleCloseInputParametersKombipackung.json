@@ -3,7 +3,7 @@
   "id": "ExampleCloseInputParametersKombipackung",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.4"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input|1.5"
     ]
   },
   "parameter": [
@@ -17,7 +17,7 @@
             "id": "Example-MedicationDispense-Kombipackung",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
               ]
             },
             "identifier": [
@@ -43,7 +43,7 @@
                 }
               }
             ],
-            "whenHandedOver": "2024-04-03",
+            "whenHandedOver": "2025-10-01",
             "medicationReference": {
               "reference": "Medication/Medication-Kombipackung"
             }
@@ -56,20 +56,12 @@
             "id": "Medication-Kombipackung",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.4"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
               ]
             },
             "extension": [
               {
-                "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-type-extension",
-                "valueCoding": {
-                  "code": "781405001",
-                  "system": "http://snomed.info/sct",
-                  "display": "Medicinal product package"
-                }
-              },
-              {
-                "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+                "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-is-vaccine-extension",
                 "valueBoolean": false
               },
               {
@@ -90,6 +82,7 @@
                 }
               ]
             },
+            "status": "active",
             "form": {
               "coding": [
                 {
@@ -118,15 +111,6 @@
                     }
                   }
                 ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-                      "code": "01746517-1",
-                      "display": "Augentropfen"
-                    }
-                  ]
-                },
                 "ingredient": [
                   {
                     "itemCodeableConcept": {
@@ -173,15 +157,6 @@
                     }
                   }
                 ],
-                "code": {
-                  "coding": [
-                    {
-                      "system": "https://terminologieserver.bfarm.de/fhir/CodeSystem/arzneimittel-referenzdaten-pharmazeutisches-produkt",
-                      "code": "01746517-2",
-                      "display": "Nasenspray, Lösung"
-                    }
-                  ]
-                },
                 "ingredient": [
                   {
                     "itemCodeableConcept": {
@@ -214,7 +189,6 @@
             "batch": {
               "lotNumber": "56498416854"
             },
-            "status": "active",
             "ingredient": [
               {
                 "itemReference": {

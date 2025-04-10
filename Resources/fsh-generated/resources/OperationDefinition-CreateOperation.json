@@ -3,8 +3,8 @@
   "id": "CreateOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition",
   "status": "active",
-  "version": "1.4",
-  "date": "2024-07-15",
+  "version": "1.5.0",
+  "date": "2025-04-10",
   "name": "Create",
   "kind": "operation",
   "affectsState": true,
@@ -16,7 +16,7 @@
   "instance": false,
   "description": "This operation creates a Task for the prescription of a specific workflowType.",
   "code": "create",
-  "inputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Input",
+  "inputProfile": "http://hl7.org/fhir/StructureDefinition/Parameters",
   "outputProfile": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Output",
   "parameter": [
     {
