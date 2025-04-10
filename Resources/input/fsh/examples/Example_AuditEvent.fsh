@@ -14,7 +14,6 @@ Usage: #example
 * language = #de
 * action = #C
 * insert DateTimeStamp(recorded)
-* recorded = "2025-01-15T08:01:02.434+00:00"
 * outcome = #0
 * agent[+].type.coding[+].system = "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
 * agent[=].type.coding[=].code = #humanuser

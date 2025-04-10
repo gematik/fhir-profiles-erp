@@ -10,9 +10,7 @@ Usage: #example
 * extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#160 "Muster 16 (Apothekenpflichtige Arzneimittel)"
 * extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * insert Date(extension[acceptDate].valueDate)
-* insert Date(extension[acceptDate].valueDate)
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[expiryDate].valueDate = "2022-06-02"
 * insert Date(extension[expiryDate].valueDate)
 * identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[PrescriptionID].value = "160.000.033.491.280.78"
@@ -34,7 +32,6 @@ Usage: #example
 * extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * insert Date(extension[acceptDate].valueDate)
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[expiryDate].valueDate = "2022-06-02"
 * insert Date(extension[expiryDate].valueDate)
 * identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[PrescriptionID].value = "160.000.033.491.280.78"
@@ -63,7 +60,6 @@ Usage: #example
 * extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
 * insert Date(extension[acceptDate].valueDate)
 * extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
-* extension[expiryDate].valueDate = "2022-06-02"
 * insert Date(extension[expiryDate].valueDate)
 * identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
 * identifier[PrescriptionID].value = "160.000.033.491.280.78"
