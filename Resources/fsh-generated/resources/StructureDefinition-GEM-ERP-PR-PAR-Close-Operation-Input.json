@@ -5,7 +5,7 @@
   "version": "1.5.0",
   "name": "GEM_ERP_PR_PAR_CloseOperation_Input",
   "title": "GEM ERP PR CloseOperation Input",
-  "status": "active",
+  "status": "draft",
   "date": "2025-04-10",
   "description": "This profile defines the parameters for closing a workflow for a prescription from AVS to the E-Rezept-Fachdienst. This can be used for the Operations $close and $dispense.",
   "fhirVersion": "4.0.1",

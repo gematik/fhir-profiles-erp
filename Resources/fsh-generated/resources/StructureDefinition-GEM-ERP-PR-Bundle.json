@@ -5,7 +5,7 @@
   "version": "1.5.0",
   "name": "GEM_ERP_PR_Bundle",
   "title": "Document Bundle for Receipt",
-  "status": "active",
+  "status": "draft",
   "date": "2025-04-10",
   "description": "A document style representation of the receipt (complete, self-contained, signed)",
   "fhirVersion": "4.0.1",

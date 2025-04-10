@@ -2,7 +2,7 @@
   "resourceType": "OperationDefinition",
   "id": "ActivateOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition",
-  "status": "active",
+  "status": "draft",
   "version": "1.5.0",
   "date": "2025-04-10",
   "name": "Activate",

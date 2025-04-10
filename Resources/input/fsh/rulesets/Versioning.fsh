@@ -1,11 +1,11 @@
 // General rule for to handle versions for all structure definitions
 RuleSet: Versioning
-* ^status = #active
+* ^status = #draft
 * ^version = "1.5.0"
 * ^date = "2025-04-10"
 
 RuleSet: OperationVersioning
-* status = #active
+* status = #draft
 * version = "1.5.0"
 * date = "2025-04-10"
 
