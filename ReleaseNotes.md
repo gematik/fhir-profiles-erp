@@ -16,7 +16,7 @@
 - `retired profile` retired GEM_ERP_PR_Communication_InfoReq as it is not allowed
 - `removed` Removed $create and $activate Input Parameter Profiles and in OperationDefinitions
 - `removed` EPADosage for GEM_ERP_PR_Medication.dosageInstruction
-- `changed` Add Flag for Task to identify a Task redeemable in the EU
+- `added` Add Flag for Task to identify a Task redeemable in the EU
 
 ### Terminology Changes
 - `removed` Removed unused GEM_ERP_VS_PerformerType
