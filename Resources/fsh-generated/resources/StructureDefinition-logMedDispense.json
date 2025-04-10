@@ -62,25 +62,25 @@
         ]
       },
       {
+        "id": "logMedDispense.medication.profilInformation",
+        "path": "logMedDispense.medication.profilInformation",
+        "short": "Profilinformationen aus meta.profile",
+        "definition": "Profilinformationen aus meta.profile",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ]
+      },
+      {
         "id": "logMedDispense.medication.medicationArzneimittel",
         "path": "logMedDispense.medication.medicationArzneimittel",
         "short": "Medikation als contained Element",
         "definition": "Medikation als contained Element",
         "min": 0,
         "max": "1",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "logMedDispense.medication.medicationArzneimittel.profilInformation",
-        "path": "logMedDispense.medication.medicationArzneimittel.profilInformation",
-        "short": "Profilinformationen aus meta.profile",
-        "definition": "Profilinformationen aus meta.profile",
-        "min": 1,
-        "max": "*",
         "type": [
           {
             "code": "BackboneElement"
