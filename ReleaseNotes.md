@@ -2,12 +2,11 @@
  
 # Release Notes E-Rezept Workflow
  
-## Release 1.5.0 (2025-02-28)
+## Release 1.5.0 (2025-04-10)
 
 ### Breaking Changes
 - `breaking-change` new meta.profile Version 1.5
 - `breaking-change` new dependencies:
-	- kbv.ita.erp
 	- de.basisprofil.r4
 	- de gematik.epa.medication
 	- de gematik.terminology
@@ -16,14 +15,17 @@
 ### Profile Changes
 - `new profile` GEM_ERP_PR_Communication_DiGA, used by Health Care Provider to interact with Patient concerning DiGA Prescriptions
 - `retired profile` retired GEM_ERP_PR_Communication_InfoReq as it is not allowed
-- `removed` Removed unused PerformerTypeVS
+- `removed` Removed $create and $activate Input Parameter Profiles and in OperationDefinitions
+- `removed` EPADosage for GEM_ERP_PR_Medication.dosageInstruction
+- `changed` Add Flag for Task to identify a Task redeemable in the EU
+
+## Terminology Changes
+- `removed` Removed unused GEM_ERP_VS_PerformerType
+- `removed` Removed unused Code in GEM_ERP_CS_DocumentType
 
 ### Changed
-- `changed` Remove unused DocumentType Code #4 "Medication Dispense"
-- `changed` Add Flag for Task to identify a Task redeemable in the EU
+- `changed` Remove Dependency for KBV Packages
 - `changed` Add Must Supports in GEM_ERP_PR_Medication
-- `changed` EPADosage for GEM_ERP_PR_Medication.dosageInstruction
-- `changed` Task now includes field for eVDGA Bundle
 
 ## Release 1.4.0 (2024-07-15)
 
