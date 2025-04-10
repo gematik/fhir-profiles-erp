@@ -10,7 +10,6 @@
 	- de.basisprofil.r4
 	- de gematik.epa.medication
 	- de gematik.terminology
-- `breaking-change` Constraint for GEM_ERP_PR_Communication_DispReq to check if flowType matches referenced Task
 
 ### Profile Changes
 - `new profile` GEM_ERP_PR_Communication_DiGA, used by Health Care Provider to interact with Patient concerning DiGA Prescriptions
