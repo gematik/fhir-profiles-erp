@@ -7,7 +7,7 @@ Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $clo
 * prescriptionId 1..1 string "ID des Rezepts"
 * status 1..1 code "Status fixedValue: #completed"
 * medication 1..1 BackboneElement "Medikation"
-  * medicationArzneimittel 0..1 Meta "Medikation als contained Element"
+  * medicationArzneimittel 0..1 BackboneElement "Medikation als contained Element"
     * profilInformation 1..* BackboneElement "Profilinformationen aus meta.profile"
     * extension 0..* Extension "Erweiterungen"
       * impfung 1..1 boolean "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine"

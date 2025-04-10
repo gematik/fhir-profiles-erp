@@ -70,7 +70,7 @@
         "max": "1",
         "type": [
           {
-            "code": "Meta"
+            "code": "BackboneElement"
           }
         ]
       },
