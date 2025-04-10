@@ -19,7 +19,7 @@
 - `removed` EPADosage for GEM_ERP_PR_Medication.dosageInstruction
 - `changed` Add Flag for Task to identify a Task redeemable in the EU
 
-## Terminology Changes
+### Terminology Changes
 - `removed` Removed unused GEM_ERP_VS_PerformerType
 - `removed` Removed unused Code in GEM_ERP_CS_DocumentType
 
