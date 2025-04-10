@@ -99,11 +99,16 @@
     {
       "resource": {
         "resourceType": "Binary",
-        "id": "PrescriptionBinary",
+        "id": "PrescriptionBinaryWithMeta",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.5"
+          ]
+        },
         "contentType": "application/pkcs7-mime",
         "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
       },
-      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinary"
+      "fullUrl": "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinaryWithMeta"
     }
   ]
 }
