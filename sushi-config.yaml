@@ -1,0 +1,94 @@
+canonical: https://gematik.de/fhir/erp
+title: E-Rezept-Workflow 
+fhirVersion: 4.0.1
+FSHOnly: false
+applyExtensionMetadataToRoot: false
+id: de.gematik.erezept-workflow.r4
+name: E-Rezept-Workflow
+status: draft # draft | active | retired | unknown
+copyrightYear: 2025+
+#Flip releaseLabel to 'release' for publication. Flip to 'ci-build' for CI
+releaseLabel: draft  # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+
+publisher:
+  name: gematik GmbH
+  url: https://www.gematik.de
+  email: erp-umsetzung [ at ] gematik.de
+
+version: "1.5.0"
+dependencies:
+  de.basisprofil.r4: 1.5.2
+  de.gematik.epa.medication: 1.0.5-1
+  de.gematik.terminology: 1.0.5
+
+# ╭─────────────────────────pages-property───────────────────────────╮
+# | The pages property corresponds to IG.definition.page. SUSHI can  |
+# | auto-generate the page list, but if the author includes pages in |
+# | this file, it is assumed that the author will fully manage the   |
+# | pages section and SUSHI will not generate any page entries.      |
+# | The page file name is used as the key. If title is not provided, |
+# | then the title will be generated from the file name.  If a       |
+# | generation value is not provided, it will be inferred from the   |
+# | file name extension.  Any subproperties that are valid filenames |
+# | with supported extensions (e.g., .md/.xml) will be treated as    |
+# | sub-pages.                                                       |
+# ╰──────────────────────────────────────────────────────────────────╯
+pages:
+  index.md:
+    title: Einführung
+  # concept.md:
+  #   title: "Konzept: Digital gestützter Medikationsprozess (dgMP)"
+  # general-principles.md:
+  #   title: "Generelle Prinzipien"
+  # privacy-security.md:
+  #   title: "Datenschutz und Sicherheit"
+  # medication-list.md:
+  #   title: "Medikationsliste Übersicht"
+  #   read-medication-list.md:
+  #     title: "Auslesen der FHIR-Elemente zur Darstellung der eML"
+  artifacts.md:
+    title: "FHIR-Artefakte"
+  downloads.md:
+    title: "Downloads"
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
+# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
+# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
+# │ property below.                                                                                │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  # Konzept dgMP: concept.html
+  # Generelle Prinzipien:
+  #   Generelle Prinzipien: general-principles.html
+  #   Datenschutz und Sicherheit: privacy-security.html
+  # Medikationsliste:
+  #   Übersicht: medication-list.html
+  #   Auslesen der Medikationsliste (eML): read-medication-list.html
+  # Schnittstellen:
+  #   Query API: query-api.html
+  #   Operation API: operation-api.html
+  #   Render API: render-api-eml.html
+  FHIR-Artefakte: artifacts.html
+  Anhänge:
+  #   Referenzen: referenced.html
+    Downloads: downloads.html
+  #   Release Notes: release-notes.html
+  #   Steckbriefe: spec-sheet.html
+
+# The parameters property represents IG.definition.parameter. Rather
+# than a list of code/value pairs (as in the ImplementationGuide
+# resource), the code is the YAML key. If a parameter allows repeating
+# values, the value in the YAML should be a sequence/array.
+# For parameters defined by core FHIR see:
+# http://build.fhir.org/codesystem-guide-parameter-code.html
+# For parameters defined by the FHIR Tools IG see:
+# http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
+#
+
+parameters:
+  path-resource:
+    - fsh-generated/resources

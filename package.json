@@ -8,7 +8,6 @@
   "description": "ePrescription workflow specification.",
   "author": "gematik",
   "dependencies": {
-    "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.2",
     "de.gematik.epa.medication": "1.0.5-1",
     "de.gematik.terminology": "1.0.5"

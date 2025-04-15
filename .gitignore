@@ -2,3 +2,10 @@ scripts/downloaded_validation_script.sh
 validation_results/**
 fhirpkg.lock.json
 *.sh
+!_updatePublisher.sh
+*.bat
+input-cache/
+template/
+temp/
+output/
+fsh-generated/
