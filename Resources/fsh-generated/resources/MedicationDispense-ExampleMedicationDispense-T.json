@@ -1,0 +1,18 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "ExampleMedicationDispense-T",
+  "status": "completed",
+  "medicationReference": {
+    "reference": "Medication/ExampleMedication2-Ibuprofen-T"
+  },
+  "quantity": {
+    "value": 10,
+    "unit": "Tablette"
+  },
+  "dosageInstruction": [
+    {
+      "text": "1-1-1-1 nach Bedarf"
+    }
+  ],
+  "whenHandedOver": "2026-04-02"
+}

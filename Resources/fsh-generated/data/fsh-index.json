@@ -96,6 +96,22 @@
     "endLine": 35
   },
   {
+    "outputFile": "Medication-ExampleMedication1-Paracetamol-T.json",
+    "fshName": "ExampleMedication1-Paracetamol-T",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_medicationrequest.fsh",
+    "startLine": 28,
+    "endLine": 40
+  },
+  {
+    "outputFile": "Medication-ExampleMedication2-Ibuprofen-T.json",
+    "fshName": "ExampleMedication2-Ibuprofen-T",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_medicationdispense.fsh",
+    "startLine": 12,
+    "endLine": 24
+  },
+  {
     "outputFile": "Medication-ExampleUnitMedication.json",
     "fshName": "ExampleUnitMedication",
     "fshType": "Instance",
@@ -224,6 +240,22 @@
     "endLine": 12
   },
   {
+    "outputFile": "MedicationDispense-ExampleMedicationDispense-T.json",
+    "fshName": "ExampleMedicationDispense-T",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_medicationdispense.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "MedicationRequest-ExampleMedicationRequest-T.json",
+    "fshName": "ExampleMedicationRequest-T",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_medicationrequest.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
     "outputFile": "OperationDefinition-AbortOperation.json",
     "fshName": "AbortOperation",
     "fshType": "Instance",
@@ -334,6 +366,22 @@
     "fshFile": "examples/Example_Operation_Reject.fsh",
     "startLine": 1,
     "endLine": 8
+  },
+  {
+    "outputFile": "Organization-ExampleOrganization-T.json",
+    "fshName": "ExampleOrganization-T",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_organization.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "Parameters-Example-T-Prescription-CC-Post.json",
+    "fshName": "Example-T-Prescription-CC-Post",
+    "fshType": "Instance",
+    "fshFile": "test-bfarm/example_t-prescription-post.fsh",
+    "startLine": 1,
+    "endLine": 34
   },
   {
     "outputFile": "Parameters-ExampleCloseInputParameters.json",
@@ -782,6 +830,14 @@
     "fshFile": "profiles/GEM_ERP_PR_Task.fsh",
     "startLine": 1,
     "endLine": 86
+  },
+  {
+    "outputFile": "StructureDefinition-gem-erp-pr-par-t-prescription-cc.json",
+    "fshName": "GEM_ERP_PR_PAR_T_Prescription_cc",
+    "fshType": "Profile",
+    "fshFile": "test-bfarm/t-prescrition-cc.fsh",
+    "startLine": 1,
+    "endLine": 102
   },
   {
     "outputFile": "Task-09330307-16ce-4cdc-810a-ca24ef80dde3.json",

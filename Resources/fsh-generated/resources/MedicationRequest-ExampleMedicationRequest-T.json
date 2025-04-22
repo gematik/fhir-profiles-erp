@@ -1,0 +1,58 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "ExampleMedicationRequest-T",
+  "status": "active",
+  "intent": "order",
+  "authoredOn": "2026-04-01",
+  "medicationReference": {
+    "reference": "Medication/ExampleMedication1-Paracetamol-T"
+  },
+  "dosageInstruction": [
+    {
+      "text": "1-1-1-1"
+    }
+  ],
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "not-permitted"
+      }
+    ]
+  },
+  "dispenseRequest": {
+    "quantity": {
+      "value": 10,
+      "unit": "Tablette"
+    }
+  },
+  "extension": [
+    {
+      "url": "http://example.org/fhir/StructureDefinition/confirmations",
+      "_url": {
+        "extension": [
+          {
+            "url": "safetyMeasures",
+            "valueBoolean": true
+          },
+          {
+            "url": "informationMaterial",
+            "valueBoolean": true
+          },
+          {
+            "url": "offLabelUse",
+            "valueBoolean": false
+          },
+          {
+            "url": "prescriptionForWoman",
+            "valueBoolean": false
+          },
+          {
+            "url": "expertiseConfirmation",
+            "valueBoolean": true
+          }
+        ]
+      }
+    }
+  ]
+}

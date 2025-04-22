@@ -16,7 +16,7 @@ Usage: #example
 
 // normgroesse
 * code.text = "Hydrocortison-Dexpanthenol-Salbe"
-* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].system = $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
 * form.coding[kbvDarreichungsform].code = #SAL
 * amount.numerator.value = 20
 * amount.numerator.unit = "ml"

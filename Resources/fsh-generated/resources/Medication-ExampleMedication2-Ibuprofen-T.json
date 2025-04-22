@@ -1,0 +1,23 @@
+{
+  "resourceType": "Medication",
+  "id": "ExampleMedication2-Ibuprofen-T",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "M01AE01",
+        "display": "Ibuprofen"
+      }
+    ],
+    "text": "Ibuprofen 400 mg Tablette"
+  },
+  "form": {
+    "coding": [
+      {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+        "code": "TAB",
+        "display": "Filmtablette"
+      }
+    ]
+  }
+}

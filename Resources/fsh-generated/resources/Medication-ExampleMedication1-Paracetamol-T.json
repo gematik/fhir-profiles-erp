@@ -1,0 +1,23 @@
+{
+  "resourceType": "Medication",
+  "id": "ExampleMedication1-Paracetamol-T",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "N02BE01",
+        "display": "Paracetamol"
+      }
+    ],
+    "text": "Paracetamol 500 mg Tabletten"
+  },
+  "form": {
+    "coding": [
+      {
+        "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+        "code": "TAB",
+        "display": "Tablette"
+      }
+    ]
+  }
+}

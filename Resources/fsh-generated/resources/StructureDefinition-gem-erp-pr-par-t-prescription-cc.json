@@ -1,0 +1,448 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "gem-erp-pr-par-t-prescription-cc",
+  "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_T_Prescription",
+  "version": "1.5.0",
+  "name": "GEM_ERP_PR_PAR_T_Prescription_cc",
+  "status": "draft",
+  "date": "2025-04-10",
+  "description": "Parameters to send t-prescription Data to BfArM",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Parameters",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Parameters",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Parameters.meta",
+        "path": "Parameters.meta",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.meta.profile",
+        "path": "Parameters.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "Slicing for meta profile",
+          "ordered": false
+        },
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.meta.profile:workflowProfile",
+        "path": "Parameters.meta.profile",
+        "sliceName": "workflowProfile",
+        "min": 1,
+        "max": "1",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_T_Prescription|1.5",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter",
+        "path": "Parameters.parameter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "closed"
+        },
+        "min": 3,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:prescriptionSignatureDate",
+        "path": "Parameters.parameter",
+        "sliceName": "prescriptionSignatureDate",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:prescriptionSignatureDate.name",
+        "path": "Parameters.parameter.name",
+        "patternString": "prescriptionSignatureDate",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:prescriptionSignatureDate.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:prescriptionSignatureDate.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:prescriptionSignatureDate.part",
+        "path": "Parameters.parameter.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription",
+        "path": "Parameters.parameter",
+        "sliceName": "rxPrescription",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "rxPrescription",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 4,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:prescriptionId",
+        "path": "Parameters.parameter.part",
+        "sliceName": "prescriptionId",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:prescriptionId.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "prescriptionId",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:prescriptionId.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:prescriptionId.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:prescriptionId.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:authoredOn",
+        "path": "Parameters.parameter.part",
+        "sliceName": "authoredOn",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:authoredOn.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "authoredOn",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:authoredOn.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:authoredOn.resource",
+        "path": "Parameters.parameter.part.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:authoredOn.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medicationRequest",
+        "path": "Parameters.parameter.part",
+        "sliceName": "medicationRequest",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medicationRequest.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "medicationRequest",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medicationRequest.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medicationRequest.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MedicationRequest"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medicationRequest.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medication",
+        "path": "Parameters.parameter.part",
+        "sliceName": "medication",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medication.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "medication",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medication.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medication.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Medication"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxPrescription.part:medication.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation",
+        "path": "Parameters.parameter",
+        "sliceName": "rxDispensation",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.name",
+        "path": "Parameters.parameter.name",
+        "fixedString": "rxDispensation",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.value[x]",
+        "path": "Parameters.parameter.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.resource",
+        "path": "Parameters.parameter.resource",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part",
+        "path": "Parameters.parameter.part",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "name"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3,
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense",
+        "path": "Parameters.parameter.part",
+        "sliceName": "medicationDispense",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "medicationDispense",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MedicationDispense"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medicationDispense.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medication",
+        "path": "Parameters.parameter.part",
+        "sliceName": "medication",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medication.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "medication",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medication.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medication.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Medication"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:medication.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:organization",
+        "path": "Parameters.parameter.part",
+        "sliceName": "organization",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:organization.name",
+        "path": "Parameters.parameter.part.name",
+        "patternString": "organization",
+        "mustSupport": true
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:organization.value[x]",
+        "path": "Parameters.parameter.part.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:organization.resource",
+        "path": "Parameters.parameter.part.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Organization"
+          }
+        ]
+      },
+      {
+        "id": "Parameters.parameter:rxDispensation.part:organization.part",
+        "path": "Parameters.parameter.part.part",
+        "max": "0"
+      }
+    ]
+  }
+}

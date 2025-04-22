@@ -12,6 +12,8 @@ Alias: $KBV_EX_ERP_Medication_Ingredient_Amount = https://fhir.kbv.de/StructureD
 Alias: $KBV_EX_Base_Medication_Type = https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type 
 Alias: $KBV_EX_ERP_Medication_Normgroesse = http://fhir.de/StructureDefinition/normgroesse
 
+Alias: $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM = https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
+
 // DE-Basisprofile
 Alias: $identifier-kvid-10 = http://fhir.de/sid/gkv/kvid-10
 Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id

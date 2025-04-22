@@ -18,7 +18,7 @@ Usage: #example
 * code.coding[pzn].system = "http://fhir.de/CodeSystem/ifa/pzn"
 * code.coding[pzn].code = #06313728
 * code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
-* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].system = $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
 * form.coding[kbvDarreichungsform].code = #TAB
 * amount.numerator.value = 20
 * amount.numerator.unit = "St"
@@ -46,7 +46,7 @@ Usage: #inline
 * code.coding[pzn].system = "http://fhir.de/CodeSystem/ifa/pzn"
 * code.coding[pzn].code = #06313728
 * code.text = "Sumatriptan-1a Pharma 100 mg Tabletten"
-* form.coding[kbvDarreichungsform].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"
+* form.coding[kbvDarreichungsform].system = $KBV_CS_SFHIR_KBV_DARREICHUNGSFORM
 * form.coding[kbvDarreichungsform].code = #TAB
 * amount.numerator.value = 20
 * amount.numerator.unit = "St"
