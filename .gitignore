@@ -3,6 +3,7 @@ validation_results/**
 fhirpkg.lock.json
 *.sh
 !_updatePublisher.sh
+!_updatePublisher.bat
 *.bat
 input-cache/
 template/
