@@ -38,8 +38,8 @@ pages:
     title: Einführung
   # concept.md:
   #   title: "Konzept: Digital gestützter Medikationsprozess (dgMP)"
-  # general-principles.md:
-  #   title: "Generelle Prinzipien"
+  general-principles.md:
+    title: "Generelle Prinzipien"
   # privacy-security.md:
   #   title: "Datenschutz und Sicherheit"
   # medication-list.md:
@@ -62,8 +62,8 @@ pages:
 menu:
   Home: index.html
   # Konzept dgMP: concept.html
-  # Generelle Prinzipien:
-  #   Generelle Prinzipien: general-principles.html
+  Generelle Prinzipien:
+    Generelle Prinzipien: general-principles.html
   #   Datenschutz und Sicherheit: privacy-security.html
   # Medikationsliste:
   #   Übersicht: medication-list.html
