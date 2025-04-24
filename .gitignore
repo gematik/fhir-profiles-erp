@@ -2,9 +2,9 @@ scripts/downloaded_validation_script.sh
 validation_results/**
 fhirpkg.lock.json
 *.sh
+*.bat
 !_updatePublisher.sh
 !_updatePublisher.bat
-*.bat
 input-cache/
 template/
 temp/
