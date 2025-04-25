@@ -9,6 +9,13 @@ RuleSet: OperationVersioning
 * version = "1.5.0"
 * date = "2025-04-10"
 
+// Rules to set meta.profile in profiles and instances
+RuleSet: PackageMetaProfileExactly(profile)
+* meta.profile[workflowProfile] = "https://gematik.de/fhir/erp/{profile}|1.5" (exactly)
+
+RuleSet: ReleaseStatusInst
+* status = #draft
+
 // Dates for Examples (Date of actual release)
 RuleSet: Date(field)
 * {field} = "2025-10-01"
@@ -22,6 +29,4 @@ RuleSet: DateTimeStamp(field)
 RuleSet: DateTimeStampPlus1Hr(field)
 * {field} = "2025-10-01T16:44:00.434+00:00"
 
-// Rules to set meta.profile in profiles and instances
-RuleSet: PackageMetaProfileExactly(profile)
-* meta.profile[workflowProfile] = "https://gematik.de/fhir/erp/{profile}|1.5" (exactly)
+
