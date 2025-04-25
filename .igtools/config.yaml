@@ -3,5 +3,6 @@ directory: ./input
 final: null
 name: E-Rezept Workflow
 prefix: IG
-releases: []
+releases:
+- 1.5.0
 scope: FD-ERP

@@ -1,0 +1,16 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332006'
+date: '2025-04-25T11:20:30.332016'
+key: IG-FD-ERP80390YZV
+modified: '2025-04-25T11:20:30.332014'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS bei der Validierung einer Ressource prüfen, ob
+  die ID der Ressource (Bundle.entry.resource.id) und die ID ihrer fullUrl (Bundle.entry.fullurl)
+  übereinstimmen, und bei einer fehlerhaften Prüfung auf dieses Auffälligkeit gemäß
+  der Konfiguration reagieren.
+title: FHIR-Ressource validieren - Prüfung Ressource-IDs
+version: 1

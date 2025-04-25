@@ -1,0 +1,14 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332405'
+date: '2025-04-25T11:20:30.332407'
+key: IG-FD-ERP81315PRV
+modified: '2025-04-25T11:20:30.332406'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS eine Konfiguration für die Prüfung Format fullUrl
+  mit den Werten "Warnung" und "Fehler" vorsehen.
+title: FHIR-Ressource validieren - Prüfung Format fullUrl - Konfiguration bei Auffälligkeiten
+version: 1

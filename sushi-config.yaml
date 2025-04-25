@@ -48,6 +48,8 @@ pages:
   #     title: "Auslesen der FHIR-Elemente zur Darstellung der eML"
   artifacts.md:
     title: "FHIR-Artefakte"
+  validation.md:
+    title: "Validierung"
   downloads.md:
     title: "Downloads"
 
@@ -64,6 +66,7 @@ menu:
   # Konzept dgMP: concept.html
   Generelle Prinzipien:
     Generelle Prinzipien: general-principles.html
+    Validierung: validation.html
   #   Datenschutz und Sicherheit: privacy-security.html
   # Medikationsliste:
   #   Übersicht: medication-list.html

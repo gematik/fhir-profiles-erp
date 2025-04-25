@@ -1,0 +1,15 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-24T09:39:35.149602'
+date: '2025-04-24T09:39:35.149623'
+key: IG-FD-ERP69444KX6
+modified: '2025-04-24T09:39:35.149620'
+release_status: NEW
+source: ./input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS als Ausprägung eines FHIR Data Service sämtliche
+  Anforderungen aus <a href="https://gemspec.gematik.de/fhir/ig/epa-common/1.0.5/actor-erp-fd.html"
+  target="_blank"><i>TI Common</i></a> berücksichtigen.
+title: Implementierung allgemeingültiger Anforderungen an FHIR Data Services
+version: 1

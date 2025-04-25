@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332208'
+date: '2025-04-25T11:20:30.332210'
+key: IG-FD-ERP08253W0S
+modified: '2025-04-25T11:20:30.332209'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: "Der E-Rezept-Fachdienst MUSS bei der Überprüfung der Ressourcen-IDs, wenn eine\
+  \ Auffälligkeit auftritt und die Konfiguration \"Warnung\" aktiv ist, mit der Abarbeitung\
+  \ der Operation fortfahren und bei fehlerfreier Abarbeitung mit dem Http-Responsecode\
+  \ 253 antworten und den Response für die Auffälligkeit mit einem Http-Header \"\
+  Warning\" mit\n\n   warning-code: 253\n   warning-agent: \"erp-server\"\n   warning-text:\
+  \ \"Die ID einer Ressource und die ID ihrer zugehörigen fullUrl stimmen nicht überein.\"\
+  \n   versehen."
+title: FHIR-Ressource validieren - Prüfung Ressource-IDs - Konfiguration Warnung
+version: 1

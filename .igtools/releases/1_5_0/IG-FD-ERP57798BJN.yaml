@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332470'
+date: '2025-04-25T11:20:30.332472'
+key: IG-FD-ERP57798BJN
+modified: '2025-04-25T11:20:30.332471'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: "Der E-Rezept-Fachdienst MUSS bei der Prüfung Format fullUrl, wenn eine Auffälligkeit\
+  \ auftritt und die Konfiguration \"Warnung\" aktiv ist, mit der Abarbeitung der\
+  \ Operation fortfahren und bei fehlerfreier Abarbeitung mit dem Http-Responsecode\
+  \ 254 antworten und den Response mit einen Http-Header \"Warning\" mit\n\n   warning-code:\
+  \ 254\n   warning-agent: \"erp-server\"\n   warning-text: \"Format der fullUrl ist\
+  \ ungültig.\"\n   erweitern."
+title: FHIR-Ressource validieren - Prüfung Format fullUrl - Konfiguration Warnung
+version: 1

@@ -1,0 +1,16 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332344'
+date: '2025-04-25T11:20:30.332347'
+key: IG-FD-ERP18556DW6
+modified: '2025-04-25T11:20:30.332346'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS bei der Validierung einer FHIR-Ressource prüfen,
+  ob die fullUrl dem von FHIR vorgegebene Regex zur Bildung von fullUrls [RegEx fullUrl]
+  entspricht, und bei einer fehlerhaften Prüfung auf dieses Auffälligkeit gemäß der
+  Konfiguration reagieren.
+title: FHIR-Ressource validieren - Prüfung Format fullUrl
+version: 1

@@ -1,0 +1,16 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332533'
+date: '2025-04-25T11:20:30.332535'
+key: IG-FD-ERP04480UWF
+modified: '2025-04-25T11:20:30.332534'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS bei der Prüfung Format fullUrl, wenn eine Auffälligkeit
+  auftritt und die Konfiguration "Fehler" aktiv ist, mit dem HTTP-Fehlercode 400 abbrechen
+  und die Fehlermeldung "Format der fullUrl ist ungültig." in Form eines OperationOutcome
+  ausliefern.
+title: FHIR-Ressource validieren - Prüfung Format fullUrl - Konfiguration Fehler
+version: 1

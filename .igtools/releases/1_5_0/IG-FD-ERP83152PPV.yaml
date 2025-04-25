@@ -1,0 +1,17 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-24T09:39:35.150382'
+date: '2025-04-24T09:39:35.150385'
+key: IG-FD-ERP83152PPV
+modified: '2025-04-24T09:39:35.150384'
+release_status: NEW
+source: ./input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS die Funktion <code>GET [base]/metadata</code> implementieren.
+  Diese Funktionalität stellt sicher, dass bei einem Aufruf von <code>/metadata</code>
+  das FHIR CapabilityStatement des Servers zurückgegeben wird. Dieses Capability Statement
+  bietet eine detaillierte Beschreibung der Fähigkeiten des E-Rezept-Fachdienstes
+  und ist entscheidend für das Verständnis der unterstützten FHIR-Funktionalitäten.
+title: Implementierung der /metadata Funktion im E-Rezept-Fachdienst
+version: 1

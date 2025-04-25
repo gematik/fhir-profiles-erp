@@ -1,0 +1,14 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332123'
+date: '2025-04-25T11:20:30.332126'
+key: IG-FD-ERP90393RM2
+modified: '2025-04-25T11:20:30.332125'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS eine Konfiguration für Prüfung der Ressourcen-IDs
+  mit den Werten "Warnung" und "Fehler" vorsehen.
+title: FHIR-Ressource validieren - Prüfung Ressource-IDs - Konfiguration bei Auffälligkeiten
+version: 1

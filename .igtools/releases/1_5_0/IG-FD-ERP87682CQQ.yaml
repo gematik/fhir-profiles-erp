@@ -1,0 +1,17 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-24T09:39:35.149901'
+date: '2025-04-24T09:39:35.149908'
+key: IG-FD-ERP87682CQQ
+modified: '2025-04-24T09:39:35.149907'
+release_status: NEW
+source: ./input/pagecontent/general-principles.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS die in diesem Leitfaden definierten Schnittstellen
+  (d.h. <a href="./query-api.html">Query API</a>, und <a href="./operation-api.html">Operation
+  API</a>) implementieren und dabei die Vorgaben der <a href="http://hl7.org/fhir/R4/index.html">FHIR-Spezifikation</a>
+  berücksichtigen. Der Anbieter des MUSS die Konformität in einem Zulassungsverfahren
+  nachweisen.
+title: Schnittstellenimplementierung des E-Rezept-Fachdienst gemäß FHIR-Spezifikation
+version: 1

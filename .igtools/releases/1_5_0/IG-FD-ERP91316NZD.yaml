@@ -1,0 +1,16 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+created: '2025-04-25T11:20:30.332278'
+date: '2025-04-25T11:20:30.332280'
+key: IG-FD-ERP91316NZD
+modified: '2025-04-25T11:20:30.332279'
+release_status: NEW
+source: ./input/pagecontent/validation.md
+status: ACTIVE
+text: Der E-Rezept-Fachdienst MUSS bei der Überprüfung der Ressourcen-IDs, wenn eine
+  Auffälligkeit auftritt und die Konfiguration "Fehler" aktiv ist, mit dem HTTP-Fehlercode
+  400 abbrechen und die Fehlermeldung "Die ID einer Ressource und die ID der zugehörigen
+  fullUrl stimmen nicht überein." in Form eines OperationOutcome ausliefern.
+title: FHIR-Ressource validieren - Prüfung Ressource-IDs - Konfiguration Fehler
+version: 1
