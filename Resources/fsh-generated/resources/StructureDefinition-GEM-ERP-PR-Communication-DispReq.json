@@ -188,13 +188,6 @@
         "mustSupport": true
       },
       {
-        "id": "Communication.payload.extension",
-        "path": "Communication.payload.extension",
-        "slicing": {
-          "rules": "closed"
-        }
-      },
-      {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
         "short": "The actual content of the message",
