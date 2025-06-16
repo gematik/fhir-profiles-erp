@@ -65,6 +65,16 @@
       {
         "id": "Communication.extension",
         "path": "Communication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 1
       },
       {
@@ -181,13 +191,6 @@
         "id": "Communication.payload.extension",
         "path": "Communication.payload.extension",
         "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         }
       },
