@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Composition",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "name": "GEM_ERP_PR_Composition",
   "title": "Receipt for Fulfillment of ePrescription",
-  "status": "draft",
-  "date": "2025-04-10",
+  "status": "active",
+  "date": "2025-06-16",
   "description": "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -59,7 +59,6 @@
               "path": "url"
             }
           ],
-          "description": "Extensions are always sliced by (at least) url",
           "rules": "closed"
         },
         "min": 1

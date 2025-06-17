@@ -33,7 +33,8 @@ Description: "Ressource used for the communication of dispense request between p
 * payload 0..1 MS
 //* payload.extension ^slicing.discriminator.type = #value
 //* payload.extension ^slicing.discriminator.path = "url"
-* payload.extension ^slicing.rules = #closed
+// * payload.extension ^slicing.rules = #closed
+// * payload.extension ^slicing.description = "Extensions for the payload to be differentiated by url"
 //* payload.extension contains GEM_ERP_EX_InsuranceProvider named InsuranceProvider 0..1
 * payload.content[x] only string
   * ^short = "The actual content of the message"
