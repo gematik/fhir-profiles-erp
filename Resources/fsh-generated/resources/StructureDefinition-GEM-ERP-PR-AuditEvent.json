@@ -5,7 +5,7 @@
   "version": "1.5.1",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent for Logging of ePrescription Access",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-16",
   "fhirVersion": "4.0.1",
   "kind": "resource",

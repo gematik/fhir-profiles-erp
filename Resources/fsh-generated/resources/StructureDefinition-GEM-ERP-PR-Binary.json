@@ -5,7 +5,7 @@
   "version": "1.5.1",
   "name": "GEM_ERP_PR_Binary",
   "title": "PKCS7 signed Bundle envelopig style",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-16",
   "description": "PCKS7 signed ePrescription Bundle or Receipt",
   "fhirVersion": "4.0.1",

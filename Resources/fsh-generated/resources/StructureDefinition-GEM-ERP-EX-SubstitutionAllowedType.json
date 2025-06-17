@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SubstitutionAllowedType",
   "version": "1.5.1",
   "name": "GEM_ERP_EX_SubstitutionAllowedType",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-16",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

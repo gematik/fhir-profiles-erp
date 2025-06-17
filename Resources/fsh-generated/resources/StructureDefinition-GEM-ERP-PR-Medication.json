@@ -5,7 +5,7 @@
   "version": "1.5.1",
   "name": "GEM_ERP_PR_Medication",
   "title": "Medication for the Dispensation of the Prescription",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-16",
   "description": "Handles medical information about the redeemed prescription",
   "fhirVersion": "4.0.1",
