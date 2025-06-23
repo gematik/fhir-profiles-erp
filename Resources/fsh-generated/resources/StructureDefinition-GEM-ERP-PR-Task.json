@@ -59,8 +59,8 @@
               "path": "url"
             }
           ],
-          "rules": "closed",
           "description": "Extensions for the Task to be differentiated by url",
+          "rules": "closed",
           "ordered": false
         },
         "min": 1

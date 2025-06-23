@@ -7,8 +7,8 @@ Description: "This resource manages the ePrescription workflow"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #closed
 * extension ^slicing.description = "Extensions for the Task to be differentiated by url"
+* extension ^slicing.rules = #closed
 * extension ^slicing.ordered = false
 
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1 MS

@@ -59,6 +59,7 @@
               "path": "url"
             }
           ],
+          "description": "Extensions for the Composition to be differentiated by url",
           "rules": "closed"
         },
         "min": 1
