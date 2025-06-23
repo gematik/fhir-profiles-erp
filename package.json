@@ -4,7 +4,7 @@
   ],
   "name": "de.gematik.erezept-workflow.r4",
   "jurisdiction": "urn:iso:std:iso:3166#DE",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "ePrescription workflow specification.",
   "author": "gematik",
   "dependencies": {
