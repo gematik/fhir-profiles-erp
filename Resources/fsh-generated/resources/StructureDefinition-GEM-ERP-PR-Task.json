@@ -53,8 +53,15 @@
         "id": "Task.extension",
         "path": "Task.extension",
         "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
           "rules": "closed",
-          "description": "Extensions for the Task to be differentiated by url"
+          "description": "Extensions for the Task to be differentiated by url",
+          "ordered": false
         },
         "min": 1
       },
