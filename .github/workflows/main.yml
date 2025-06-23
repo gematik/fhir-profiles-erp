@@ -30,9 +30,9 @@ jobs:
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
       
       # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
       - name: Setup Java JDK
@@ -52,11 +52,11 @@ jobs:
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: RAW
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
-          JAVA_VALIDATOR_VERSION: 6.3.15
+          #JAVA_VALIDATOR_VERSION: 6.3.15
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
-          SUSHI_VERSION: 3.16.0
+          #SUSHI_VERSION: 3.16.0
           SUSHI_OPTIONS: Resources/
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
 
