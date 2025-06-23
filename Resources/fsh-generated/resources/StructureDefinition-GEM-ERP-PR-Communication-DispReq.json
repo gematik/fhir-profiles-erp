@@ -73,7 +73,8 @@
             }
           ],
           "ordered": false,
-          "rules": "open"
+          "rules": "open",
+          "description": "Extensions are always sliced by (at least) url"
         },
         "min": 1
       },

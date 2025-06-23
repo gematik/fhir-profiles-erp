@@ -9,6 +9,7 @@ Description: "Ressource used for the communication of dispense request between p
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
+* extension ^slicing.description = "Extensions are always sliced by (at least) url"
 * extension ^slicing.rules = #open
 * extension ^slicing.ordered = false
 
