@@ -7,6 +7,11 @@ Description: "Ressource used for the communication of dispense request between p
 * obeys workflow-communication-payload-1
 
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension ^slicing.ordered = false
+
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
