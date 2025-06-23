@@ -4,8 +4,9 @@ Id: GEM-ERP-PR-Task
 Title: "Task for Management of ePrescription Workflow"
 Description: "This resource manages the ePrescription workflow"
 * insert Profile(GEM_ERP_PR_Task)
-* extension ^slicing.rules = #closed
-* extension ^slicing.description = "Extensions for the Task to be differentiated by url"
+// Sobald eine Property des Slicings gesetzt wird nimmt sushi auch alles andere raus. Daher muss wenn dann das komplette slicing mit Diskriminator etc. beschrieben werden.
+// * extension ^slicing.rules = #closed
+// * extension ^slicing.description = "Extensions for the Task to be differentiated by url"
 * extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1 MS
 and GEM_ERP_EX_AcceptDate named acceptDate 0..1 MS
 and GEM_ERP_EX_ExpiryDate named expiryDate 0..1 MS
