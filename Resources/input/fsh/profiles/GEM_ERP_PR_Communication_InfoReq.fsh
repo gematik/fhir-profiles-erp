@@ -35,6 +35,7 @@ Description: "Ressource used for the communication of informative requests betwe
 * payload 1..1
 * payload.extension ^slicing.discriminator.type = #value
 * payload.extension ^slicing.discriminator.path = "url"
+* payload.extension ^slicing.description = "Extensions are always sliced by (at least) url"
 * payload.extension ^slicing.rules = #closed
 * payload.extension contains
     GEM_ERP_EX_InsuranceProvider named InsuranceProvider 1..1 and
