@@ -4,15 +4,15 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Communication_DiGA",
-  "title": "Reply from HealthCare Provider to Patient",
+  "title": "Antwort des Leistungserbringers an den Patienten",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Ressource used for the communication of the health care provider to the patient in the context of dispensing DiGA prescriptions",
+  "description": "Ressource, die für die Kommunikation des Leistungserbringers mit dem Patienten im Kontext der Einlösung von DiGA-Verordnungen verwendet wird.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Communication",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
+  "baseDefinition": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -69,8 +69,6 @@
       {
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
-        "short": "States the E-Rezept-Token according to gemSpec_DM_eRp.",
-        "comment": "Has the form 'Task/{{PrescriptionID}}'",
         "min": 1
       },
       {
@@ -81,22 +79,16 @@
       {
         "id": "Communication.sent",
         "path": "Communication.sent",
-        "short": "The time when this communication was sent.",
-        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
-        "short": "The time when this communication was received.",
-        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.recipient",
         "path": "Communication.recipient",
-        "short": "The entity (e.g. person, organization) which was the target of the communication.",
-        "comment": "This needs to be set by the sender of the communication to define the target.",
         "min": 1,
         "max": "1"
       },
@@ -116,9 +108,6 @@
       {
         "id": "Communication.sender",
         "path": "Communication.sender",
-        "short": "The entity (e.g. person, organization) which was the source of the communication.",
-        "definition": "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication.",
-        "comment": "Set by ePrescription server using client AuthN-Credential",
         "mustSupport": true
       },
       {
@@ -143,8 +132,6 @@
       {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
-        "short": "The actual content of the message",
-        "definition": "This content is a string message that is sent from the health care provider to the patient in the context of dispensing DiGA prescriptions.",
         "type": [
           {
             "code": "string"

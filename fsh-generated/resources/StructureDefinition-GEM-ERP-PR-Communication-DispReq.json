@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Communication_DispReq",
-  "title": "Request for Dispense of ePrescription",
+  "title": "Anfrage zur Einlösung des E-Rezepts",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
+  "description": "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -72,9 +72,9 @@
               "path": "url"
             }
           ],
-          "ordered": false,
+          "description": "Extensions are always sliced by (at least) url",
           "rules": "open",
-          "description": "Extensions are always sliced by (at least) url"
+          "ordered": false
         },
         "min": 1
       },
@@ -114,8 +114,6 @@
       {
         "id": "Communication.basedOn.reference",
         "path": "Communication.basedOn.reference",
-        "short": "States the E-Rezept-Token according to gemSpec_DM_eRp.",
-        "comment": "Has the form \"Task/{{PrescriptionID}}\"",
         "min": 1,
         "mustSupport": true
       },
@@ -127,22 +125,16 @@
       {
         "id": "Communication.sent",
         "path": "Communication.sent",
-        "short": "The time when this communication was sent.",
-        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.received",
         "path": "Communication.received",
-        "short": "The time when this communication was received.",
-        "comment": "Set by the eprescription server. A client therefore will always have this value available.",
         "mustSupport": true
       },
       {
         "id": "Communication.recipient",
         "path": "Communication.recipient",
-        "short": "The entity (e.g. person, organization) which was the target of the communication.",
-        "comment": "This needs to be set by the sender of the communication to define the target.",
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -164,8 +156,6 @@
       {
         "id": "Communication.sender",
         "path": "Communication.sender",
-        "short": "The entity (e.g. person, organization) which was the source of the communication.",
-        "comment": "Set by ePrescription server using client AuthN-Credential",
         "mustSupport": true
       },
       {
@@ -191,8 +181,6 @@
       {
         "id": "Communication.payload.content[x]",
         "path": "Communication.payload.content[x]",
-        "short": "The actual content of the message",
-        "comment": "This content needs to be a JSON according to gemSpec_DM_eRp.",
         "type": [
           {
             "code": "string"

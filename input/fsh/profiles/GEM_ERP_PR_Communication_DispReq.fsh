@@ -1,50 +1,38 @@
 Profile: GEM_ERP_PR_Communication_DispReq
 Parent: Communication
 Id: GEM-ERP-PR-Communication-DispReq
-Title: "Request for Dispense of ePrescription"
-Description: "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription"
+Title: "Anfrage zur Einlösung des E-Rezepts"
+Description: "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird."
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
 * obeys workflow-communication-payload-1
 
-* extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.description = "Extensions are always sliced by (at least) url"
 * extension ^slicing.rules = #open
 * extension ^slicing.ordered = false
 
+* extension contains GEM_ERP_EX_PrescriptionType named flowType 1..1
+
 * basedOn 1..1 MS
 * basedOn only Reference(GEM_ERP_PR_Task)
 * basedOn ^type.aggregation = #referenced
 * basedOn.reference 1.. MS
-  * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
-  * ^comment = "Has the form \"Task/{{PrescriptionID}}\""
+
 * status = #unknown (exactly)
 * sent MS
-  * ^short = "The time when this communication was sent."
-  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
 * received MS
-  * ^short = "The time when this communication was received."
-  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
+
 * recipient 1..1 MS
-  * ^short = "The entity (e.g. person, organization) which was the target of the communication."
-  * ^comment = "This needs to be set by the sender of the communication to define the target."
 * recipient.identifier 1.. MS
 * recipient.identifier only IdentifierTelematikId
+
 * sender MS
-  * ^short = "The entity (e.g. person, organization) which was the source of the communication."
-  * ^comment = "Set by ePrescription server using client AuthN-Credential"
 * sender.identifier 1.. MS
 * sender.identifier only IdentifierKvid10
+
 * payload 0..1 MS
-//* payload.extension ^slicing.discriminator.type = #value
-//* payload.extension ^slicing.discriminator.path = "url"
-// * payload.extension ^slicing.rules = #closed
-// * payload.extension ^slicing.description = "Extensions for the payload to be differentiated by url"
-//* payload.extension contains GEM_ERP_EX_InsuranceProvider named InsuranceProvider 0..1
 * payload.content[x] only string
-  * ^short = "The actual content of the message"
-  * ^comment = "This content needs to be a JSON according to gemSpec_DM_eRp."
 
 Invariant: workflow-communication-payload-1
 Description: "Payload muss angegeben werden, wenn eine Zuweisung für ein Arzneimittel vorgenommen wird"

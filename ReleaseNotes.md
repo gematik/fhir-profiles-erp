@@ -2,7 +2,9 @@
  
 # Release Notes E-Rezept Workflow
 
-//TODO 1.6.0
+## Release 1.6.0 (2025-09-30)
+//TODO
+- Insert generic Communication Profile to restrict all Workflow Communications
  
 ## Release 1.5.0 (2025-04-10)
 

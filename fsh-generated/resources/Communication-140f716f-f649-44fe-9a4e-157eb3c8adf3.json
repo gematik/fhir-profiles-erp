@@ -4,14 +4,6 @@
   "meta": {
     "profile": [
       "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA|1.6"
-    ],
-    "tag": [
-      {
-        "display": "Health Care Provider to Patient"
-      },
-      {
-        "display": "Communication message sent by health care provider to patient"
-      }
     ]
   },
   "status": "unknown",
