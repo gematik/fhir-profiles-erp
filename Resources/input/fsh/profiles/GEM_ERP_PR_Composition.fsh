@@ -8,6 +8,7 @@ Description: "Upon completion of the ePrescription workflow, the prescription fi
 // extensions
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
+* extension ^slicing.description = "Extensions for the Composition to be differentiated by url"
 * extension ^slicing.rules = #closed
 * extension contains GEM_ERP_EX_Beneficiary named Beneficiary 1..1
 

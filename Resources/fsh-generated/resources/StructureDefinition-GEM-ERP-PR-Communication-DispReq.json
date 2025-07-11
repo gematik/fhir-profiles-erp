@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-DispReq",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Request for Dispense of ePrescription",
-  "status": "draft",
-  "date": "2025-06-16",
+  "status": "active",
+  "date": "2025-06-23",
   "description": "Ressource used for the communication of dispense request between patient/representative and provider based on ePrescription",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -73,7 +73,8 @@
             }
           ],
           "ordered": false,
-          "rules": "open"
+          "rules": "open",
+          "description": "Extensions are always sliced by (at least) url"
         },
         "min": 1
       },
