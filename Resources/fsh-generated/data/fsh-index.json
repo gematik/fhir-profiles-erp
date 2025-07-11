@@ -45,7 +45,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/GEM_ERP_CS_FlowType.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 13
   },
   {
     "outputFile": "CodeSystem-GEM-ERP-CS-OrganizationType.json",
