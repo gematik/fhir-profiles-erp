@@ -11,43 +11,31 @@
   "concept": [
     {
       "code": "160",
-      "display": "Muster 16 (Apothekenpflichtige Arzneimittel)"
+      "display": "Flowtype für Apothekenpflichtige Arzneimittel"
     },
     {
       "code": "162",
-      "display": "Muster 16 (Digitale Gesundheitsanwendungen)"
+      "display": "Flowtype für Digitale Gesundheitsanwendungen"
     },
     {
       "code": "165",
-      "display": "Muster 16 (Betäubungsmittel)"
+      "display": "Flowtype für Betäubungsmittel"
     },
     {
       "code": "166",
-      "display": "Muster 16 (T-Rezepte)"
+      "display": "Flowtype für Arzneimittel nach § 3a AMVV"
     },
     {
       "code": "169",
-      "display": "Muster 16 (Direkte Zuweisung)"
+      "display": "Flowtype zur Workflow-Steuerung durch Leistungserbringer"
     },
     {
       "code": "200",
-      "display": "PKV (Apothekenpflichtige Arzneimittel)"
-    },
-    {
-      "code": "205",
-      "display": "PKV (Betäubungsmittel)"
-    },
-    {
-      "code": "206",
-      "display": "PKV (T-Rezepte)"
+      "display": "Flowtype für Apothekenpflichtige Arzneimittel (PKV)"
     },
     {
       "code": "209",
-      "display": "PKV (Direkte Zuweisung)"
-    },
-    {
-      "code": "9xx",
-      "display": "reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker"
+      "display": "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
     }
   ],
   "date": "2025-09-30",
@@ -64,5 +52,5 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
-  "count": 10
+  "count": 7
 }
