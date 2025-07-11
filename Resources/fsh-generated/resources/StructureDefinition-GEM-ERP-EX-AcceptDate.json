@@ -5,7 +5,7 @@
   "version": "1.5.2",
   "name": "GEM_ERP_EX_AcceptDate",
   "title": "Date of confirmation of the prescription",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-23",
   "description": "This extension should be used in the Task ressource. It stores the Date till when an insurance company will accept and pay the prescription.",
   "fhirVersion": "4.0.1",

@@ -5,7 +5,7 @@
   "version": "1.5.2",
   "name": "GEM_ERP_PR_Communication_Representative",
   "title": "Communication between Patient and Representative",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-23",
   "description": "Ressource used for the communication between patients and their representative pertaining to an ePrescription",
   "fhirVersion": "4.0.1",

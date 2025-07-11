@@ -2,7 +2,7 @@
   "resourceType": "OperationDefinition",
   "id": "DispenseOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition",
-  "status": "active",
+  "status": "draft",
   "version": "1.5.2",
   "date": "2025-06-23",
   "name": "Dispense",

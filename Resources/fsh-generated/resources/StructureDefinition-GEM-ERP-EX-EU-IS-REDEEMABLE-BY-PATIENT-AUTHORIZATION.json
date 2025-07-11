@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
   "version": "1.5.2",
   "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
-  "status": "active",
+  "status": "draft",
   "date": "2025-06-23",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
