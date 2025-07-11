@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "GEM_ERP_CS_DocumentType",
   "id": "GEM-ERP-CS-DocumentType",
-  "title": "CodeSystem of Documenttypes",
-  "description": "Type of document depending on the recipient of the Bundle.",
+  "title": "CodeSystem der Dokumententypen",
+  "description": "Dokumententyp abhängig vom Empfänger des Bundles.",
   "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
   "concept": [

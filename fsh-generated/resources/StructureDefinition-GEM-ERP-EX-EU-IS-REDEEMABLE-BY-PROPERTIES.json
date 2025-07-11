@@ -27,8 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Redeemable in EU Flag",
-        "definition": "This flag is set by the E-Rezept-Fachdienst, if the ePrescription is redeemable in the EU."
+        "short": "Einlösbar in EU-Flagge",
+        "definition": "Diese Flagge wird vom E-Rezept-Fachdienst gesetzt, wenn das E-Rezept in der EU einlösbar ist."
       },
       {
         "id": "Extension.extension",
@@ -43,8 +43,8 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Redeemable in EU Flag",
-        "definition": "This flag is set by the E-Rezept-Fachdienst, if the ePrescription is redeemable in the EU.",
+        "short": "Einlösbar in EU-Flagge",
+        "definition": "Diese Flagge wird vom E-Rezept-Fachdienst gesetzt, wenn das E-Rezept in der EU einlösbar ist.",
         "min": 1,
         "type": [
           {

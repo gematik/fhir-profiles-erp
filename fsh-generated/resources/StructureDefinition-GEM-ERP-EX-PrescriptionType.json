@@ -6,7 +6,7 @@
   "name": "GEM_ERP_EX_PrescriptionType",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Definies the Type of a prescription.",
+  "description": "Definiert den Typ eines Rezepts.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -32,8 +32,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Type of the prescription",
-        "definition": "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms."
+        "short": "Art der Verschreibung",
+        "definition": "Definiert den Typ des Rezepts. Das Codesystem enthält alle unterstützten Formulare."
       },
       {
         "id": "Extension.extension",

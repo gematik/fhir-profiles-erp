@@ -6,7 +6,7 @@
   "name": "GEM_ERP_EX_InsuranceProvider",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "IK-number (Instituskennzeichen) of Insurance Provider covering the requested medication",
+  "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

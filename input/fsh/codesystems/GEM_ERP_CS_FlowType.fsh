@@ -1,7 +1,7 @@
 CodeSystem: GEM_ERP_CS_FlowType
 Id: GEM-ERP-CS-FlowType
-Title: "CodeSystem of Flowtypes"
-Description: "Shows the different types of the ePrescription according to the prescription forms."
+Title: "CodeSystem der Flowtypen"
+Description: "Zeigt die verschiedenen Typen des E-Rezepts entsprechend der Verordnungsformulare."
 * insert CodeSystem(GEM_ERP_CS_FlowType)
 * ^content = #complete
 * #160 "Flowtype für Apothekenpflichtige Arzneimittel"

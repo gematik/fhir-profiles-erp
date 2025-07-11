@@ -7,7 +7,7 @@
   "title": "DiGA-DeepLink",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Contains information regarding deep link for a DiGA.",
+  "description": "Enthält Informationen zum Deep Link für eine DiGA.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -25,7 +25,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Statement of a deep link which can be used to open the DiGA."
+        "short": "Angabe eines Deep Links, der zum Öffnen der DiGA verwendet werden kann."
       },
       {
         "id": "Extension.extension",

@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
   "version": "1.6.0",
   "name": "GEM_ERP_EX_AcceptDate",
-  "title": "Date of confirmation of the prescription",
+  "title": "Datum der Bestätigung der Verschreibung",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "This extension should be used in the Task ressource. It stores the Date till when an insurance company will accept and pay the prescription.",
+  "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -25,8 +25,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Accept Date of the prescription",
-        "definition": "Date until insurance company accepts the prescription."
+        "short": "Akzeptanzdatum der Verschreibung",
+        "definition": "Datum, bis zu dem die Krankenkasse die Verschreibung akzeptiert."
       },
       {
         "id": "Extension.extension",

@@ -1,7 +1,7 @@
 CodeSystem: GEM_ERP_CS_AvailabilityStatus
 Id: GEM-ERP-CS-AvailabilityStatus
-Title: "CodeSystem of AvailabilityStatus"
-Description: "Type of the availability status for medication availability request."
+Title: "CodeSystem des Verfügbarkeitsstatus"
+Description: "Typ des Verfügbarkeitsstatus für die Anfrage zur Medikamentenverfügbarkeit."
 * insert CodeSystem(GEM_ERP_CS_AvailabilityStatus)
 * ^content = #complete
 * #10 "sofort verfügbar"

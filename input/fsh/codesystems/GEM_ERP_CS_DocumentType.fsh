@@ -1,7 +1,7 @@
 CodeSystem: GEM_ERP_CS_DocumentType
 Id: GEM-ERP-CS-DocumentType
-Title: "CodeSystem of Documenttypes"
-Description: "Type of document depending on the recipient of the Bundle."
+Title: "CodeSystem der Dokumententypen"
+Description: "Dokumententyp abhängig vom Empfänger des Bundles."
 * insert CodeSystem(GEM_ERP_CS_DocumentType)
 * ^content = #complete
 * #1 "Health Care Provider Prescription"

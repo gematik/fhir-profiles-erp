@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense",
   "version": "1.6.0",
   "name": "GEM_ERP_EX_LastMedicationDispense",
-  "title": "Last Medication Dispense",
+  "title": "Letzte Medikamentenabgabe",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "This extension should be used in the Task ressource. It shows the timestamp of the last dispense.",
+  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -25,8 +25,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Timestamp which is set when a medication for this task has been dispensed. Stated in the format YYYY-MM-DDTHH:MM:SS(Z|±HH:MM)",
-        "definition": "This field allows the E-Rezept-FdV to display to the user that a medication has been dispensed before it was closed by the pharmacy."
+        "short": "Zeitstempel, der gesetzt wird, wenn ein Medikament für diese Aufgabe ausgegeben wurde. Angegeben im Format YYYY-MM-DDTHH:MM:SS(Z|±HH:MM)",
+        "definition": "Dieses Feld ermöglicht es der E-Rezept-FdV, dem Benutzer anzuzeigen, dass ein Medikament abgegeben wurde, bevor es von der Apotheke abgeschlossen wurde."
       },
       {
         "id": "Extension.extension",
@@ -41,8 +41,8 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Timestamp which is set when a medication for this task has been dispensed.",
-        "comment": "Stated in the format YYYY-MM-DDTHH:MM:SS(Z|±HH:MM)",
+        "short": "Zeitstempel, der gesetzt wird, wenn ein Medikament für diese Aufgabe ausgegeben wurde.",
+        "comment": "Im Format YYYY-MM-DDTHH:MM:SS(Z|±HH:MM) angegeben",
         "type": [
           {
             "code": "instant"

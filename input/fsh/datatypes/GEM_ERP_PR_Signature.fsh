@@ -1,7 +1,7 @@
 Profile: GEM_ERP_PR_Signature
 Parent: Signature
 Id: GEM-ERP-PR-Signature
-Title: "Profile for Signature of Bundles in ePrescription Context"
+Title: "Profil für die Signatur von Bundles im E-Rezept-Kontext"
 * insert StructureDefinition(GEM_ERP_PR_Signature)
 * type ..1 MS
 * type ^slicing.discriminator.type = #value

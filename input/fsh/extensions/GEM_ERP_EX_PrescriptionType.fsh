@@ -1,9 +1,9 @@
 Extension: GEM_ERP_EX_PrescriptionType
 Id: GEM-ERP-EX-PrescriptionType
-Description: "Definies the Type of a prescription."
+Description: "Definiert den Typ eines Rezepts."
 * insert StructureDefinition(GEM_ERP_EX_PrescriptionType)
-* . ^short = "Type of the prescription"
-* . ^definition = "Definies the Type of the prescription. The codesystem contains all \"Muster 16\" forms."
+* . ^short = "Art der Verschreibung"
+* . ^definition = "Definiert den Typ des Rezepts. Das Codesystem enthält alle unterstützten Formulare."
 * ^context[0].type = #element
 * ^context[=].expression = "Task"
 * ^context[+].type = #element
