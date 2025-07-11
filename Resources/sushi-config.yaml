@@ -6,6 +6,7 @@ applyExtensionMetadataToRoot: false
 version: "1.6.0"
 dependencies:
   hl7.fhir.r4.core: 4.0.1
-  de.basisprofil.r4: 1.5.2
-  de.gematik.epa.medication: 1.0.6-2
-  de.gematik.terminology: 1.0.5-4
+  de.basisprofil.r4: 1.5.3
+  de.gematik.epa.medication: 1.1.5
+  de.gematik.terminology: 1.0.6
+  # TODO Klären ob alte Abhängigkeiten benötigt 1.0.6-2 und 1.0.5-4
