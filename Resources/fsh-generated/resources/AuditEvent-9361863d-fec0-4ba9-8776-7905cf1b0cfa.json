@@ -3,7 +3,7 @@
   "id": "9361863d-fec0-4ba9-8776-7905cf1b0cfa",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.5"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent|1.6"
     ],
     "tag": [
       {
@@ -33,7 +33,7 @@
   ],
   "language": "de",
   "action": "C",
-  "recorded": "2025-10-01T15:29:00.434+00:00",
+  "recorded": "2026-04-01T15:29:00.434+00:00",
   "outcome": "0",
   "agent": [
     {

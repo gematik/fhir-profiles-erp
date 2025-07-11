@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-BfArMApproval",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "name": "GEM_ERP_PR_BfArMApproval",
   "title": "BfArM Approval of admissibility for doctor s prescription of narcotics",
   "status": "draft",
-  "date": "2025-06-23",
+  "date": "2025-09-30",
   "description": "On serverside validton of prescription (QES, FHIR-validity, etc.) the eprescription server requests authorization for narcotics within the doctor s quota. If approved, the server returns a signed Provenance for documentation purpose",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -71,7 +71,7 @@
         "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.5",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_BfArMApproval|1.6",
         "mustSupport": true
       },
       {

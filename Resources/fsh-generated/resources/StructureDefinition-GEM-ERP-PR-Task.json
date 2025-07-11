@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Task",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "name": "GEM_ERP_PR_Task",
   "title": "Task for Management of ePrescription Workflow",
   "status": "draft",
-  "date": "2025-06-23",
+  "date": "2025-09-30",
   "description": "This resource manages the ePrescription workflow",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -46,7 +46,7 @@
         "sliceName": "workflowProfile",
         "min": 1,
         "max": "1",
-        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.5",
+        "fixedCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task|1.6",
         "mustSupport": true
       },
       {

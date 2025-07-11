@@ -3,7 +3,7 @@
   "id": "ExampleDispenseOutputParametersSuccess",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.5"
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output|1.6"
     ]
   },
   "parameter": [
@@ -17,7 +17,7 @@
             "id": "160.000.033.491.280.78",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.5"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense|1.6"
               ]
             },
             "identifier": [
@@ -43,7 +43,7 @@
                 }
               }
             ],
-            "whenHandedOver": "2025-10-01",
+            "whenHandedOver": "2026-04-01",
             "medicationReference": {
               "reference": "Medication/30e0e53f-275c-46f5-9e59-04d55735dabb"
             }
@@ -56,7 +56,7 @@
             "id": "30e0e53f-275c-46f5-9e59-04d55735dabb",
             "meta": {
               "profile": [
-                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.5"
+                "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication|1.6"
               ]
             },
             "extension": [
