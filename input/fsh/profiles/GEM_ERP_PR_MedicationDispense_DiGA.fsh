@@ -14,7 +14,7 @@ Description: "Handles information about the dispensed DiGA"
     and GEM_ERP_EX_DeepLink named deepLink 0..1
 
 * identifier contains prescriptionID 1..1
-* identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
+* identifier[prescriptionID] only EPrescriptionId
 * identifier[prescriptionID] ^patternIdentifier.system = $prescription-id-ns
 * identifier ^short = "ePrescription identifier"
 

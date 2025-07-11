@@ -63,7 +63,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+              "https://gematik.de/fhir/ti/StructureDefinition/e-prescription-id"
             ]
           }
         ],

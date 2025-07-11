@@ -6,7 +6,7 @@ Description: "A document style representation of the receipt (complete, self-con
 * insert Profile(GEM_ERP_PR_Bundle)
 * id 1..1
 * identifier 1.. MS
-* identifier only GEM_ERP_PR_PrescriptionId
+* identifier only EPrescriptionId
 * identifier ^short = "identifier of ePrescription"
 * type = #document (exactly)
 * type MS

@@ -5,7 +5,7 @@ Title: "Dispensation of the Prescription"
 Description: "Handles information about the redeem of the prescription and the submited medication."
 * insert Profile(GEM_ERP_PR_MedicationDispense)
 * identifier contains prescriptionID 1..1
-* identifier[prescriptionID] only GEM_ERP_PR_PrescriptionId
+* identifier[prescriptionID] only EPrescriptionId
 * identifier[prescriptionID] ^patternIdentifier.system = $prescription-id-ns
 * identifier ^short = "ePrescription identifier"
 

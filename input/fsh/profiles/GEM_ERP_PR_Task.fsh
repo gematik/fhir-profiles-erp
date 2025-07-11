@@ -26,7 +26,7 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
     PrescriptionID 1..1 and
     AccessCode 0..1 and
     Secret 0..1
-* identifier[PrescriptionID] only GEM_ERP_PR_PrescriptionId
+* identifier[PrescriptionID] only EPrescriptionId
   * ^short = "Prescription Identifier"
   * ^definition = "The prescription identifier is the main identifier for the task ressource and the whole prescription workflow. This identifier is genereted by the \"E-Rezept Fachdienst\" and should not be changed manually."
 * identifier[AccessCode] 
