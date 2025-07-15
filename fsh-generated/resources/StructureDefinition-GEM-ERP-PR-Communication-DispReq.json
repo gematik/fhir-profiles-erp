@@ -94,45 +94,6 @@
         ]
       },
       {
-        "id": "Communication.basedOn",
-        "path": "Communication.basedOn",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-            ],
-            "aggregation": [
-              "referenced"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Communication.basedOn.reference",
-        "path": "Communication.basedOn.reference",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Communication.status",
-        "path": "Communication.status",
-        "fixedCode": "unknown"
-      },
-      {
-        "id": "Communication.sent",
-        "path": "Communication.sent",
-        "mustSupport": true
-      },
-      {
-        "id": "Communication.received",
-        "path": "Communication.received",
-        "mustSupport": true
-      },
-      {
         "id": "Communication.recipient",
         "path": "Communication.recipient",
         "min": 1,
@@ -151,11 +112,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Communication.sender",
-        "path": "Communication.sender",
         "mustSupport": true
       },
       {

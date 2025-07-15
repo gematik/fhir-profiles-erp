@@ -6,30 +6,34 @@ Description: "Diese Communication beschreibt Felder und Anforderungen für alle 
 * insert StructureDefinition(GEM_ERP_PR_Communication)
 * ^abstract = true
 
-* basedOn
+* basedOn 1..1 MS
+* basedOn only Reference(GEM_ERP_PR_Task)
+* basedOn ^type.aggregation = #referenced
   * ^short = "Gibt das E-Rezept-Token gemäß gemSpec_DM_eRp an."
   * ^comment = "Hat die Form 'Task/{{PrescriptionID}}'"
-  * reference
+  * reference 1..1 MS
     * ^short = "Gibt das E-Rezept-Token gemäß gemSpec_DM_eRp an."
     * ^comment = "Hat die Form 'Task/{{PrescriptionID}}'"
-* status
+
+* status MS
+* status = #unknown (exactly)
   * ^comment = "Muss standardmäßig laut FHIR Core Specification angegeben werden, wird jedoch während des Lebenszyklus der Ressource nicht verändert."
-* sent
+* sent MS
   * ^short = "Der Zeitpunkt, zu dem diese Kommunikation gesendet wurde."
   * ^comment = "Wird vom E-Rezept-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar."
-* received
+* received MS
   * ^short = "Der Zeitpunkt, zu dem diese Kommunikation empfangen wurde."
   * ^comment = "Wird vom E-Rezept-Server gesetzt. Ein Client hat diesen Wert daher immer verfügbar."
 
-* recipient
+* recipient MS
   * ^short = "Die Entität (z. B. Person, Organisation), die Ziel der Kommunikation war."
   * ^comment = "Muss vom Absender der Kommunikation gesetzt werden, um das Ziel festzulegen."
 
-* sender
+* sender MS
   * ^short = "Die Entität (z. B. Person, Organisation), die Quelle der Kommunikation war."
   * ^comment = "Wird vom E-Rezept-Server unter Verwendung der AuthN-Credential des Clients gesetzt."
   * ^definition = "Nachrichtenabsender — wird vom E-Rezept-Server unter Verwendung der AuthN-Credential des Clients gesetzt.\r\nDie Entität (z. B. Person, Organisation), die Quelle der Kommunikation war."
-* payload
+* payload MS
   * content[x]
     * ^short = "Der tatsächliche Inhalt der Nachricht"
     * ^comment = "Dieser Inhalt muss ein JSON gemäß gemSpec_DM_eRp sein."

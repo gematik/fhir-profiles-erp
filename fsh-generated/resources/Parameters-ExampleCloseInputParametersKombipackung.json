@@ -82,7 +82,6 @@
                 }
               ]
             },
-            "status": "active",
             "form": {
               "coding": [
                 {
@@ -189,6 +188,7 @@
             "batch": {
               "lotNumber": "56498416854"
             },
+            "status": "active",
             "ingredient": [
               {
                 "itemReference": {

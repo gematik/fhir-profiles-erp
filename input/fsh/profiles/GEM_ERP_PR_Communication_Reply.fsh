@@ -4,15 +4,6 @@ Id: GEM-ERP-PR-Communication-Reply
 Title: "Antwort vom Leistungserbringer an den Patienten"
 Description: "Ressource, die für die Kommunikation der Antwort zur Weitergabe/Informationsanfrage vom Leistungserbringer an Patienten/Vertreter verwendet wird"
 * insert Profile(GEM_ERP_PR_Communication_Reply)
-* basedOn 1..1
-* basedOn only Reference(GEM_ERP_PR_Task)
-  * ^type.aggregation = #referenced
-  * reference 1..1
-
-* status = #unknown (exactly)
-
-* sent MS
-* received MS
 
 * recipient 1..1
   * identifier 1..1

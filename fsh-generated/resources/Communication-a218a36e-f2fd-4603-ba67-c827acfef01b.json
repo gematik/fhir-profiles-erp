@@ -14,7 +14,6 @@
       }
     ]
   },
-  "status": "unknown",
   "extension": [
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
@@ -44,6 +43,7 @@
       "reference": "Task/160.000.033.491.280.78/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
     }
   ],
+  "status": "unknown",
   "sent": "2026-04-01T15:29:00.434+00:00",
   "payload": [
     {

@@ -79,11 +79,6 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.status",
-        "path": "Medication.status",
-        "patternCode": "active"
-      },
-      {
         "id": "Medication.amount.numerator.extension:packagingSize",
         "path": "Medication.amount.numerator.extension",
         "sliceName": "packagingSize",
