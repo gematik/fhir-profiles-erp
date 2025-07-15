@@ -59,7 +59,7 @@
             }
           ],
           "rules": "closed",
-          "description": "Slicing for meta profile",
+          "description": "Slicing für meta profile",
           "ordered": false
         },
         "min": 1,
