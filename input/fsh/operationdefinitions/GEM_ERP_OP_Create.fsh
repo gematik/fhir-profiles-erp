@@ -2,7 +2,7 @@ Instance: CreateOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Create)
-* description = "This operation creates a Task for the prescription of a specific workflowType."
+* description = "Diese Operation erstellt eine Aufgabe für die Verschreibung eines bestimmten Flowtypes."
 * code = #create
 * type = true
 * instance = false
@@ -15,7 +15,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "This parameter requests the creation of a Task of a certain ePrescription flowType."
+  * documentation = "Dieser Parameter fordert die Erstellung eines Tasks mit bestimmten Flowtype an."
   * type = #Coding
   * binding.strength = #required
   * binding.valueSet = Canonical(GEM_ERP_VS_FlowType)
@@ -25,5 +25,5 @@ Usage: #definition
   * use = #out
   * min = 1
   * max = "1"
-  * documentation = "The created Task with a flowType-specific prescriptionID"
+  * documentation = "Der erstellte Task mit einer flowType-spezifischen Rezept-ID"
   * type = #Task

@@ -6,6 +6,7 @@
 //TODO
 - Insert generic Communication Profile to restrict all Workflow Communications
 - Übersetzung auf deutsch
+- remove unused GEM_ERP_EX_SubstitutionAllowedType
  
 ## Release 1.5.0 (2025-04-10)
 

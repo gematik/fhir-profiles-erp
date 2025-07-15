@@ -23,8 +23,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Options for preferred or offered supply channels",
-        "comment": "Both patient and pharmacy can state their supply options or offers for the dispensation of medication"
+        "short": "Optionen für bevorzugte oder angebotene Versorgungskanäle",
+        "comment": "Sowohl Patient als auch Apotheke können ihre Lieferoptionen oder Angebote für die Abgabe von Medikamenten angeben."
       },
       {
         "id": "Extension.extension",
@@ -45,8 +45,8 @@
         "id": "Extension.extension:delivery",
         "path": "Extension.extension",
         "sliceName": "delivery",
-        "short": "dispensation is offered/preferred by messenger",
-        "definition": "Patient or pharmacy may state their preferred or offered supply option to deliver medication by messenger",
+        "short": "Dispensation wird vom Boten angeboten/bevorzugt.",
+        "definition": "Patient oder Apotheke können ihre bevorzugte oder angebotene Lieferoption angeben, um Medikamente per Boten zuzustellen.",
         "min": 1,
         "max": "1"
       },
@@ -63,7 +63,7 @@
       {
         "id": "Extension.extension:delivery.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "true = delivery by messenger accepted/offered",
+        "short": "wahr = Lieferung per Bote akzeptiert/angeboten",
         "type": [
           {
             "code": "boolean"
@@ -74,8 +74,8 @@
         "id": "Extension.extension:onPremise",
         "path": "Extension.extension",
         "sliceName": "onPremise",
-        "short": "dispensation is offered/preferred on premise",
-        "definition": "Patient or pharmacy may state their preferred or offered supply option to pick up medications on Premise",
+        "short": "Dispensation wird vor Ort angeboten/bevorzugt.",
+        "definition": "Patient oder Apotheke können ihre bevorzugte oder angebotene Lieferoption angeben, um Medikamente vor Ort abzuholen.",
         "min": 1,
         "max": "1"
       },
@@ -92,7 +92,7 @@
       {
         "id": "Extension.extension:onPremise.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "true = pick up on premise accepted/offered",
+        "short": "wahr = auf Prämisse akzeptiert/angeboten eingehen",
         "type": [
           {
             "code": "boolean"
@@ -103,8 +103,8 @@
         "id": "Extension.extension:shipment",
         "path": "Extension.extension",
         "sliceName": "shipment",
-        "short": "dispensation is offered/preferred by shipment",
-        "definition": "Patient or pharmacy may state their preferred or offered supply option to ship medication via parcel shipping",
+        "short": "Dispensation wird durch Versand angeboten/bevorzugt.",
+        "definition": "Patient oder Apotheke können ihre bevorzugte oder angebotene Lieferoption angeben, um Medikamente per Paketversand zu versenden.",
         "min": 1,
         "max": "1"
       },
@@ -121,7 +121,7 @@
       {
         "id": "Extension.extension:shipment.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "true = parcel shipping accepted/offered",
+        "short": "wahr = Paketversand akzeptiert/angeboten",
         "type": [
           {
             "code": "boolean"

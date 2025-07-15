@@ -2,7 +2,7 @@ Instance: RejectOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Reject)
-* description = "Rejects the dispense of a ePrescription. The Task will be reset to an active state, the secret will be deleted, and the Task will be accessible by any other pharmacist or it can be deleted by the patient."
+* description = "Lehnt die Ausgabe eines eRezepts ab. Die Aufgabe wird in einen aktiven Zustand zurückgesetzt, das secret wird gelöscht, und der Task wird für jeden anderen Apotheker zugänglich oder kann vom Patienten gelöscht werden."
 * code = #reject
 
 // in
@@ -11,5 +11,5 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as an URL Parameter ?secret."
+  * documentation = "Der secret Parameter, der einer Apotheke den exklusiven Zugriff auf den Task als URL-Parameter ?secret ermöglicht."
   * type = #string

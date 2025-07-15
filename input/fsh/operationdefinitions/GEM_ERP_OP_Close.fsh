@@ -2,7 +2,7 @@ Instance: CloseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Close)
-* description = "The operation $close finishes the e-prescription workflow and creates a receipt. The Output of this operation is a signed Bundle, to be used for further financial processing. The status of the Task then changes into #completed"
+* description = "Die $close-Operation beendet den E-Rezept-Workflow und erstellt eine Quittung. Das Ergebnis dieses Vorgangs ist ein signiertes Bundle, das für weitere finanzielle Verarbeitung verwendet wird. Der Status der Aufgabe ändert sich anschließend in #completed."
 * code = #close
 * system = false
 * type = false
@@ -18,7 +18,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This parameter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
+  * documentation = "Der secret Parameter, der einer Apotheke den exklusiven Zugriff auf die Aufgabe als Teil der URL ermöglicht. Dieser Parameter muss dem Wert entsprechen, der in Task.identifier:Secret gespeichert ist. Andernfalls wird der Vorgang mit einem Fehler abgebrochen."
   * type = #string
 
 // in
@@ -27,7 +27,7 @@ Usage: #definition
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Information on dispensed Medication(s)"
+  * documentation = "Informationen zu abgegebenen Medikament(en)"
   * part[+]
     * name = #medicationDispense
     * type = #MedicationDispense
@@ -47,5 +47,5 @@ Usage: #definition
   * use = #out
   * min = 1
   * max = "1"
-  * documentation = "The receipt Bundle containing the signing Device, the pharmacy`s TelematikID and a signature."
+  * documentation = "Das Quittungs Bundle, das Angaben zum signierenden Fachdienst, die Telematik-ID der Apotheke und die Signatur enthält."
   * type = #Bundle

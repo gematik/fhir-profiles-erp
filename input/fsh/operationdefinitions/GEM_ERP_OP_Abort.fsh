@@ -2,7 +2,7 @@ Instance: AbortOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Abort)
-* description = "This Operation aborts the workflow of an e-prescription and deletes all the data related to that Task."
+* description = "Diese Operation bricht den Workflow eines E-Rezepts ab und löscht alle Daten, die mit dieser Aufgabe zusammenhängen."
 * code = #abort
 // in
 * parameter[+]
@@ -10,7 +10,7 @@ Usage: #definition
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "[To be used by patient and providers(doctors/dentists) only] The secret parameter that lets users access the Task exclusively as the URL an Parameter ?ac."
+  * documentation = "[Nur von Patienten und Anbietern (Ärzten/Zahnärzten) zu verwenden] Der geheime Parameter, der es Benutzern ermöglicht, exklusiv über die URL und den Parameter ?ac auf die Aufgabe zuzugreifen."
   * type = #string
 
 // alternative in
@@ -19,5 +19,5 @@ Usage: #definition
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "[To be used by pharmacy only] The secret parameter that lets a pharmacy access the Task exclusively as the URL an Parameter ?secret."
+  * documentation = "[Nur von der Apotheke zu verwenden] Der geheime Parameter, der es einer Apotheke ermöglicht, exklusiv über die URL und den Parameter ?secret auf die Aufgabe zuzugreifen."
   * type = #string
