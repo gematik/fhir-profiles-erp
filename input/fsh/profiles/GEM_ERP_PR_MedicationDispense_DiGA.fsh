@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
 Parent: EPAMedicationDispense
 Id: GEM-ERP-PR-MedicationDispense-DiGA
-Title: "Dispensation of a DiGA-Prescription"
-Description: "Handles information about the dispensed DiGA"
+Title: "Dispensierung einer DiGA-Verordnung"
+Description: "Verarbeitet Informationen über die ausgegebene DiGA"
 * insert Profile(GEM_ERP_PR_MedicationDispense_DiGA)
 * obeys workflow-medicationdispense-redeemcode-1
 * obeys workflow-medicationdispense-redeemcode-2
@@ -16,18 +16,18 @@ Description: "Handles information about the dispensed DiGA"
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only EPrescriptionId
 * identifier[prescriptionID] ^patternIdentifier.system = $prescription-id-ns
-* identifier ^short = "ePrescription identifier"
+* identifier ^short = "E-Rezept-ID"
 
 * status = #completed (exactly)
 * status ^short = "completed"
 
 * medication[x] only Reference
 * medication[x] MS
-* medication[x] ^definition = "Information about the medication that is being dispensed. To include are name and the PZN-identifier of a DiGA prescription unit."
+* medication[x] ^definition = "Informationen über das Medikament, das abgegeben wird. Dazu gehören der Name und die PZN-Kennzeichnung einer DiGA-Verordnungseinheit."
 * medicationReference.display 0..1 MS
-  * ^short = "Name of the DiGA prescription unit."
+  * ^short = "Name der DiGA-Verschreibungseinheit."
 * medicationReference.identifier 0..1 MS
-  * ^short = "Unique identification number for a prescription unit of a DiGA (PZN)."
+  * ^short = "Eindeutige Identifikationsnummer für eine Verschreibungseinheit einer DiGA (PZN)."
   * system 1..1 MS
   * system = $cs-pzn (exactly)
   * value 1..1 MS
@@ -44,23 +44,23 @@ Description: "Handles information about the dispensed DiGA"
 
 // Abgabedatum
 * whenHandedOver 1..1
-* whenHandedOver ^short = "Date of dispensation"
+* whenHandedOver ^short = "Abgabedatum"
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 
 * substitution 0..0
-  * ^comment = "According to BAS the substitution for DiGAs is not allowed"
+  * ^comment = "Laut Bundesamt für Soziale Sicherung ist der Ersatz für DiGAs nicht erlaubt."
 
 Invariant: workflow-medicationdispense-redeemcode-1
-Description: "A note was not found, but is mandatory if no redeem code is provided."
+Description: "Eine Notiz wurde nicht gefunden, ist jedoch obligatorisch, wenn kein Einlösecode angegeben wird."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies note.exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-2
-Description: "The data absent reason was not found, but is mandatory if no redeem code is provided."
+Description: "Der Grund für fehlende Daten wurde nicht gefunden, ist jedoch obligatorisch, wenn kein Einlösecode angegeben wird."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').empty() implies medication.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
 Severity: #error
 
 Invariant: workflow-medicationdispense-redeemcode-3
-Description: "Name and identifier of the DiGA was not found, but is mandatory if a redeem code is provided."
+Description: "Name und Kennung der DiGA wurden nicht gefunden, sind jedoch obligatorisch, wenn ein Einlösecode angegeben wird."
 Expression: "extension.where(url = 'https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode').exists() implies (medication.display.exists() and medication.identifier.exists())"
 Severity: #error

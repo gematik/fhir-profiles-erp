@@ -7,7 +7,7 @@
   "title": "GEM ERP PR AcceptOperation Output",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "This profile defines the parameters for accepting a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $accept-operation.",
+  "description": "Dieses Profil definiert die Parameter für die Annahme eines Medikaments von AVS zum E-Rezept-Fachdienst. Dies kann für die $accept-Operation verwendet werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

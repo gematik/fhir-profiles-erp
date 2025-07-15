@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Medication
 Parent: EPAMedication
 Id: GEM-ERP-PR-Medication
-Title: "Medication for the Dispensation of the Prescription"
-Description: "Handles medical information about the redeemed prescription"
+Title: "Medikament zur Ausgabe des Rezepts"
+Description: "Verarbeitet medizinische Informationen über das eingelöste Rezept"
 * insert Profile(GEM_ERP_PR_Medication)
  
 * contained MS
@@ -21,7 +21,7 @@ Description: "Handles medical information about the redeemed prescription"
 * amount.numerator.extension[packagingSize] MS
 
 * ingredient MS
-  * itemCodeableConcept ^short = "Component in coded form" // This line is necessary to avoid the HAPI Validator Error bug
+  * itemCodeableConcept ^short = "Komponente in codierter Form" // Diese Zeile ist notwendig, um den HAPI-Validator-Fehler zu vermeiden
   * itemReference MS
   * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
   * itemReference ^type.aggregation = #contained

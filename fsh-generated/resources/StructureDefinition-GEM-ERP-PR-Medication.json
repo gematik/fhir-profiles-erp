@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Medication",
-  "title": "Medication for the Dispensation of the Prescription",
+  "title": "Medikament zur Ausgabe des Rezepts",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Handles medical information about the redeemed prescription",
+  "description": "Verarbeitet medizinische Informationen über das eingelöste Rezept",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -105,7 +105,7 @@
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemCodeableConcept",
-        "short": "Component in coded form",
+        "short": "Komponente in codierter Form",
         "type": [
           {
             "code": "CodeableConcept"

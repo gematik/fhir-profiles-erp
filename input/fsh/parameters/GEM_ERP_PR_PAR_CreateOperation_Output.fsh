@@ -2,7 +2,7 @@ Profile: GEM_ERP_PR_PAR_CreateOperation_Output
 Parent: Parameters
 Id: GEM-ERP-PR-PAR-Create-Operation-Output
 Title: "GEM ERP PR CreateOperation Output"
-Description: "This profile defines the parameters for creating a Task from PVS to the E-Rezept-Fachdienst. This can be used for the $create-operation."
+Description: "Dieses Profil definiert die Parameter für die Erstellung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $create-Operation verwendet werden."
 * insert Profile(GEM_ERP_PR_PAR_CreateOperation_Output)
 
 * parameter 1..1

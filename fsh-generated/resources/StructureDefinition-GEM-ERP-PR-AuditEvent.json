@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_AuditEvent",
-  "title": "AuditEvent for Logging of ePrescription Access",
+  "title": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
   "status": "draft",
   "date": "2025-09-30",
   "fhirVersion": "4.0.1",
@@ -153,15 +153,15 @@
       {
         "id": "AuditEvent.entity.name",
         "path": "AuditEvent.entity.name",
-        "short": "KVNR of patient that the auditEvent refers to",
-        "definition": "KVNR of patient that the auditEvent refers to, used as filter criteria when patient accesses its data",
+        "short": "KVNR des Patienten, auf den sich das AuditEvent bezieht",
+        "definition": "KVNR des Patienten, auf den sich das AuditEvent bezieht, verwendet als Filterkriterium, wenn der Patient auf seine Daten zugreift.",
         "min": 1
       },
       {
         "id": "AuditEvent.entity.description",
         "path": "AuditEvent.entity.description",
-        "short": "PrescriptionID (RezeptID)",
-        "definition": "PrescriptionID (RezeptID) to have a relation to insurance company data when Task already deleted",
+        "short": "E-Rezept-ID",
+        "definition": "E-Rezept-ID soll eine Beziehung zu den Versicherungsunternehmensdaten haben, wenn der Task bereits gelöscht wurde",
         "min": 1
       }
     ]

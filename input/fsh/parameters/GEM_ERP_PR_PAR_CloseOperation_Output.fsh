@@ -2,7 +2,7 @@ Profile: GEM_ERP_PR_PAR_CloseOperation_Output
 Parent: Parameters
 Id: GEM-ERP-PR-PAR-Close-Operation-Output
 Title: "GEM ERP PR CloseOperation Output"
-Description: "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $close-operation."
+Description: "Dieses Profil definiert die Parameter für die Ausgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $close-Operation verwendet werden."
 * insert Profile(GEM_ERP_PR_PAR_CloseOperation_Output)
 
 * parameter 1..1

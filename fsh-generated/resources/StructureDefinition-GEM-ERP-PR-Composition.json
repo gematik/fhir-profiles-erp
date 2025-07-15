@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Composition",
-  "title": "Receipt for Fulfillment of ePrescription",
+  "title": "Quittung für die Einlösung eines E-Rezepts",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Upon completion of the ePrescription workflow, the prescription filler receives a signed receipt for billing and verification purposes.",
+  "description": "Nach Abschluss des E-Rezept-Workflows erhält der Rezeptausfüller eine unterschriebene Quittung für Abrechnungs- und Verifizierungszwecke.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -59,7 +59,7 @@
               "path": "url"
             }
           ],
-          "description": "Extensions for the Composition to be differentiated by url",
+          "description": "Erweiterungen für die Composition, die durch url unterschieden werden sollen",
           "rules": "closed"
         },
         "min": 1
@@ -68,7 +68,7 @@
         "id": "Composition.extension:Beneficiary",
         "path": "Composition.extension",
         "sliceName": "Beneficiary",
-        "short": "The ID of the beneficiary of the erx receipt (e.g. TelematikID of pharmacy)",
+        "short": "Die ID des Begünstigten des E-Rezept-Belegs (z. B. TelematikID der Apotheke)",
         "min": 1,
         "max": "1",
         "type": [
@@ -128,7 +128,7 @@
       {
         "id": "Composition.author",
         "path": "Composition.author",
-        "short": "Reference to verifying service (Device)",
+        "short": "Referenz zur Überprüfung des Dienstes (Gerät)",
         "type": [
           {
             "code": "Reference",
@@ -165,15 +165,16 @@
       {
         "id": "Composition.event.period.start",
         "path": "Composition.event.period.start",
-        "short": "Starting time of dispensation",
-        "definition": "Time the prescription was submitted to the dispensing organization",
+        "short": "Startzeit der Ausgabe",
+        "definition": "Zeitpunkt der Einreichung des Rezepts bei der abgebenden Leistungserbringerorganisation",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Composition.event.period.end",
         "path": "Composition.event.period.end",
-        "definition": "The end of the period. Time when the dispensation finished, i.e. when server creates the receipt.",
+        "short": "Das Ende der Ausgabe",
+        "definition": "Zeitpunkt, an dem die Abgabe abgeschlossen ist, d. h. wenn der Server die Quittung erstellt.",
         "min": 1
       },
       {

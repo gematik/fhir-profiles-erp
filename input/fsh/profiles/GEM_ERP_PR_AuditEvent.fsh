@@ -1,7 +1,7 @@
 Profile: GEM_ERP_PR_AuditEvent
 Parent: AuditEvent
 Id: GEM-ERP-PR-AuditEvent
-Title: "AuditEvent for Logging of ePrescription Access"
+Title: "AuditEvent für die Protokollierung des Zugriffs auf eRezepte"
 * insert Profile(GEM_ERP_PR_AuditEvent)
 
 * type MS
@@ -29,8 +29,8 @@ Title: "AuditEvent for Logging of ePrescription Access"
 * entity 1..1 MS
   * what 1..1
   * name 1..1
-    * ^short = "KVNR of patient that the auditEvent refers to"
-    * ^definition = "KVNR of patient that the auditEvent refers to, used as filter criteria when patient accesses its data"
+    * ^short = "KVNR des Patienten, auf den sich das AuditEvent bezieht"
+    * ^definition = "KVNR des Patienten, auf den sich das AuditEvent bezieht, verwendet als Filterkriterium, wenn der Patient auf seine Daten zugreift."
   * description 1..1
-    * ^short = "PrescriptionID (RezeptID)"
-    * ^definition = "PrescriptionID (RezeptID) to have a relation to insurance company data when Task already deleted"
+    * ^short = "E-Rezept-ID"
+    * ^definition = "E-Rezept-ID soll eine Beziehung zu den Versicherungsunternehmensdaten haben, wenn der Task bereits gelöscht wurde"

@@ -2,7 +2,7 @@ Profile: GEM_ERP_PR_PAR_DispenseOperation_Output
 Parent: Parameters
 Id: GEM-ERP-PR-PAR-Dispense-Operation-Output
 Title: "GEM ERP PR DispenseOperation Output"
-Description: "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $dispense-operation."
+Description: "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden."
 * insert Profile(GEM_ERP_PR_PAR_DispenseOperation_Output)
 
 * parameter 1..*

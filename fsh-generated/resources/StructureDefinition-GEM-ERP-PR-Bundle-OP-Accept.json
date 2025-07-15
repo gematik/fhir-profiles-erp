@@ -30,7 +30,7 @@
             }
           ],
           "rules": "closed",
-          "description": "The Task and the QES-Prescription signed Bundle."
+          "description": "Die Aufgabe und das QES signierte Bundle."
         },
         "min": 2,
         "max": "2"

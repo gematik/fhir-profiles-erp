@@ -7,7 +7,7 @@
   "title": "GEM ERP PR DispenseOperation Input",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "This profile defines the parameters for dispensing a medication from AVS to the E-Rezept-Fachdienst. This can be used for the $dispense-operation.",
+  "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
