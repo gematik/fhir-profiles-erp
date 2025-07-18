@@ -21,7 +21,7 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
-    * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"
+    * coding[atc-de] = $cs-atc-de|1.4.0#R01AC01 "Natriumcromoglicat"
   * strength
     * numerator
       * value = 20
@@ -40,7 +40,7 @@ Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
-    * coding[atc-de] = $cs-atc-de#R01AC01 "Natriumcromoglicat"
+    * coding[atc-de] = $cs-atc-de|1.4.0#R01AC01 "Natriumcromoglicat"
   * strength
     * numerator
       * value = 2.8
