@@ -92,7 +92,7 @@
       {
         "id": "Extension.extension:onPremise.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "wahr = auf Prämisse akzeptiert/angeboten eingehen",
+        "short": "true = auf Prämisse akzeptiert/angeboten eingehen",
         "type": [
           {
             "code": "boolean"

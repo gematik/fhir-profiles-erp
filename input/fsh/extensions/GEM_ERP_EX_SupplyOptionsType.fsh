@@ -15,7 +15,7 @@ Id: GEM-ERP-EX-SupplyOptionsType
 * extension[onPremise] ^short = "Dispensation wird vor Ort angeboten/bevorzugt."
 * extension[onPremise] ^definition = "Patient oder Apotheke können ihre bevorzugte oder angebotene Lieferoption angeben, um Medikamente vor Ort abzuholen."
 * extension[onPremise].value[x] only boolean
-* extension[onPremise].value[x] ^short = "wahr = auf Prämisse akzeptiert/angeboten eingehen"
+* extension[onPremise].value[x] ^short = "true = auf Prämisse akzeptiert/angeboten eingehen"
 * extension[delivery] ^short = "Dispensation wird vom Boten angeboten/bevorzugt."
 * extension[delivery] ^definition = "Patient oder Apotheke können ihre bevorzugte oder angebotene Lieferoption angeben, um Medikamente per Boten zuzustellen."
 * extension[delivery].value[x] only boolean

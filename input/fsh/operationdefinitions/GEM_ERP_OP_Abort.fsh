@@ -10,7 +10,7 @@ Usage: #definition
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "[Nur von Patienten und Anbietern (Ärzten/Zahnärzten) zu verwenden] Der geheime Parameter, der es Benutzern ermöglicht, exklusiv über die URL und den Parameter ?ac auf die Aufgabe zuzugreifen."
+  * documentation = "[Nur von Patienten und Anbietern (Ärzten/Zahnärzten) zu verwenden] Der secret Parameter, der es Benutzern ermöglicht, exklusiv über die URL und den Parameter ?ac auf die Aufgabe zuzugreifen."
   * type = #string
 
 // alternative in
@@ -19,5 +19,5 @@ Usage: #definition
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "[Nur von der Apotheke zu verwenden] Der geheime Parameter, der es einer Apotheke ermöglicht, exklusiv über die URL und den Parameter ?secret auf die Aufgabe zuzugreifen."
+  * documentation = "[Nur von der Apotheke zu verwenden] Der secret Parameter, der es einer Apotheke ermöglicht, exklusiv über die URL und den Parameter ?secret auf die Aufgabe zuzugreifen."
   * type = #string
