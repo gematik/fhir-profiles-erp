@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Signature",
-  "title": "Profile for Signature of Bundles in ePrescription Context",
+  "title": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
   "status": "draft",
   "date": "2025-09-30",
   "fhirVersion": "4.0.1",

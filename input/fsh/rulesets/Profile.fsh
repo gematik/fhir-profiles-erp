@@ -6,7 +6,7 @@ RuleSet: Profile(name)
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #closed
-  * ^slicing.description = "Slicing for meta profile"
+  * ^slicing.description = "Slicing für meta profile"
   * ^slicing.ordered = false
 
 * meta.profile contains workflowProfile 1..1 MS

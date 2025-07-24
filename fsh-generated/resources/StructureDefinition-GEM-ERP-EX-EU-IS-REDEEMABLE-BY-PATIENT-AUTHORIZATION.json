@@ -27,8 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Redeemable EU ePrescription by Patient Authorization",
-        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemption in the EU or not."
+        "short": "Einlösbares EU-E-Rezept durch Patientenautorisierung",
+        "definition": "Diese Flagge wird vom Benutzer gesetzt, um anzugeben, ob das E-Rezept in der EU zur Einlösung verfügbar sein soll oder nicht."
       },
       {
         "id": "Extension.extension",
@@ -43,8 +43,8 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Should be redeemed in EU Flag",
-        "definition": "This flag is set by the user to indicate weather the ePrescription should be available for redemption in the EU or not.",
+        "short": "Sollte in EU eingelöst werden Flagge",
+        "definition": "Diese Flagge wird vom Benutzer gesetzt, um anzugeben, ob das E-Rezept in der EU zur Einlösung verfügbar sein soll oder nicht.",
         "min": 1,
         "type": [
           {

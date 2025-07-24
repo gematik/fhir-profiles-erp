@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_MedicationDispense",
-  "title": "Dispensation of the Prescription",
+  "title": "Dispensierung eines E-Rezepts",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "Handles information about the redeem of the prescription and the submited medication.",
+  "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -32,7 +32,7 @@
             }
           ],
           "rules": "closed",
-          "description": "Slicing for meta profile",
+          "description": "Slicing für meta profile",
           "ordered": false
         },
         "min": 1,
@@ -51,7 +51,7 @@
       {
         "id": "MedicationDispense.identifier",
         "path": "MedicationDispense.identifier",
-        "short": "ePrescription identifier",
+        "short": "E-Rezept-ID",
         "min": 1
       },
       {
@@ -64,7 +64,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+              "https://gematik.de/fhir/ti/StructureDefinition/e-prescription-id"
             ]
           }
         ],
@@ -81,7 +81,7 @@
       {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
-        "definition": "The MedicationDispense references a medication which was dispensed",
+        "definition": "Die MedicationDispense verweist auf ein Medikament, das abgegeben wurde.",
         "type": [
           {
             "code": "Reference",

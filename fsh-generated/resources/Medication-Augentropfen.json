@@ -23,6 +23,7 @@
           {
             "system": "http://fhir.de/CodeSystem/bfarm/atc",
             "code": "R01AC01",
+            "version": "1.4.0",
             "display": "Natriumcromoglicat"
           }
         ]

@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "GEM_ERP_CS_AvailabilityStatus",
   "id": "GEM-ERP-CS-AvailabilityStatus",
-  "title": "CodeSystem of AvailabilityStatus",
-  "description": "Type of the availability status for medication availability request.",
+  "title": "CodeSystem des Verfügbarkeitsstatus",
+  "description": "Typ des Verfügbarkeitsstatus für die Anfrage zur Medikamentenverfügbarkeit.",
   "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus",
   "concept": [

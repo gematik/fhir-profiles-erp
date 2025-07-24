@@ -1,32 +1,16 @@
 Profile: GEM_ERP_PR_Communication_Representative
 Parent: Communication
 Id: GEM-ERP-PR-Communication-Representative
-Title: "Communication between Patient and Representative"
-Description: "Ressource used for the communication between patients and their representative pertaining to an ePrescription"
+Title: "Kommunikation zwischen Patient und Vertreter"
+Description: "Ressource, die für die Kommunikation zwischen Patienten und deren Vertreter im Zusammenhang mit einem E-Rezept verwendet wird."
 * insert Profile(GEM_ERP_PR_Communication_Representative)
-* basedOn 1..1 MS
-* basedOn only Reference(GEM_ERP_PR_Task)
-* basedOn ^type.aggregation = #referenced
-* basedOn.reference 1.. MS
-  * ^short = "States the E-Rezept-Token according to gemSpec_DM_eRp."
-  * ^comment = "Has the form 'Task/{{PrescriptionID}}'"
-* status = #unknown (exactly)
-* sent MS
-  * ^short = "The time when this communication was sent."
-  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
-* received MS
-  * ^short = "The time when this communication was received."
-  * ^comment = "Set by the eprescription server. A client therefore will always have this value available."
-* recipient 1..1 MS
-  * ^short = "The entity (e.g. person, organization) which was the target of the communication."
-  * ^comment = "This needs to be set by the sender of the communication to define the target."
-* recipient.identifier 1.. MS
+
+* recipient 1..1
+* recipient.identifier 1..
 * recipient.identifier only IdentifierKvid10
-* sender MS
-  * ^short = "The entity (e.g. person, organization) which was the source of the communication."
-  * ^comment = "Set by ePrescription server using client AuthN-Credential"
-* sender ^definition = "Message sender - set by ePrescription server using client AuthN-Credential\r\nThe entity (e.g. person, organization) which was the source of the communication."
-* sender.identifier 1.. MS
+
+* sender.identifier 1..
 * sender.identifier only IdentifierKvid10
-* payload 1..1 MS
+
+* payload 1..1
 * payload.content[x] only string

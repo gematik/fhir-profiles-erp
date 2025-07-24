@@ -8,7 +8,7 @@ Id: GEM-ERP-PR-Bundle-OP-Accept
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #closed
-* entry ^slicing.description = "The Task and the QES-Prescription signed Bundle."
+* entry ^slicing.description = "Die Aufgabe und das QES signierte Bundle."
 
 * entry contains erxTask 1..1 and erxBinary 1..1
 

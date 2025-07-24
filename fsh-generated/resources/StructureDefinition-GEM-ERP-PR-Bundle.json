@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle",
   "version": "1.6.0",
   "name": "GEM_ERP_PR_Bundle",
-  "title": "Document Bundle for Receipt",
+  "title": "Dokumentenbündel für Quittung",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "A document style representation of the receipt (complete, self-contained, signed)",
+  "description": "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -38,7 +38,7 @@
             }
           ],
           "rules": "closed",
-          "description": "Slicing for meta profile",
+          "description": "Slicing für meta profile",
           "ordered": false
         },
         "min": 1,
@@ -57,13 +57,13 @@
       {
         "id": "Bundle.identifier",
         "path": "Bundle.identifier",
-        "short": "identifier of ePrescription",
+        "short": "E-Rezept-ID",
         "min": 1,
         "type": [
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId"
+              "https://gematik.de/fhir/ti/StructureDefinition/e-prescription-id"
             ]
           }
         ],
@@ -235,7 +235,7 @@
       {
         "id": "Bundle.signature",
         "path": "Bundle.signature",
-        "short": "Enveloping signature applied to the receipt",
+        "short": "Enveloping Signatur auf die Quittung angewendet",
         "type": [
           {
             "code": "Signature",

@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "GEM_ERP_CS_OrganizationType",
   "id": "GEM-ERP-CS-OrganizationType",
-  "title": "CodeSystem of Organizationtype Codes",
-  "description": "Type of Organiziation where to get e-prescriptions dispensed",
+  "title": "CodeSystem der Organisationstyp-Codes",
+  "description": "Typ der Organisation, bei der E-Rezepte eingelöst werden können.",
   "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType",
   "concept": [

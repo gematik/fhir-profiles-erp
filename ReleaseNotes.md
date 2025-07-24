@@ -2,7 +2,13 @@
  
 # Release Notes E-Rezept Workflow
 
-//TODO 1.6.0
+## Release 1.6.0 (2025-09-30)
+//TODO
+- Einführen eines generischen und abstrakten Communication Profils. Dies ermöglicht zentral spezifikationen für alle Elemente in einem Profil zu erhalten. Bisherige Communications leiten davon ab und erhalten ihre Eigenschaften
+- Übersetzungen der Elementbezeichnungen und -definitionen auf deutsch
+- Entfernen der nicht genutzten Extension `GEM_ERP_EX_SubstitutionAllowedType`
+- Entfernen des nicht genutzten Profils `GEM-ERP-PR-BfArMApproval`
+- Ersetzen des Profils `GEM-ERP-PR-Prescriptionid` mit `EPrescriptionId` aus dem ti.common package
  
 ## Release 1.5.0 (2025-04-10)
 

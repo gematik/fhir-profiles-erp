@@ -1,13 +1,13 @@
 Profile: GEM_ERP_PR_Bundle
 Parent: Bundle
 Id: GEM-ERP-PR-Bundle
-Title: "Document Bundle for Receipt"
-Description: "A document style representation of the receipt (complete, self-contained, signed)"
+Title: "Dokumentenbündel für Quittung"
+Description: "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)"
 * insert Profile(GEM_ERP_PR_Bundle)
 * id 1..1
 * identifier 1.. MS
-* identifier only GEM_ERP_PR_PrescriptionId
-* identifier ^short = "identifier of ePrescription"
+* identifier only EPrescriptionId
+* identifier ^short = "E-Rezept-ID"
 * type = #document (exactly)
 * type MS
 * timestamp 1..
@@ -47,4 +47,4 @@ Description: "A document style representation of the receipt (complete, self-con
   * response ..0
 * signature MS
 * signature only GEM_ERP_PR_Signature
-  * ^short = "Enveloping signature applied to the receipt"
+  * ^short = "Enveloping Signatur auf die Quittung angewendet"

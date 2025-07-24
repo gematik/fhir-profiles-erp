@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
   "version": "1.6.0",
   "name": "GEM_ERP_EX_ExpiryDate",
-  "title": "Presciption expiry date",
+  "title": "Ablaufdatum des Rezepts",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "This extension should be used in the Task ressource. It shows the presciption expiry date.",
+  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -25,8 +25,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Expiry Date of the Prescription",
-        "definition": "Date when the prescription is expired and can not be redeemed in the pharmacy."
+        "short": "Ablaufdatum des Rezepts",
+        "definition": "Datum, an dem das Rezept abläuft und in der Apotheke nicht mehr eingelöst werden kann."
       },
       {
         "id": "Extension.extension",

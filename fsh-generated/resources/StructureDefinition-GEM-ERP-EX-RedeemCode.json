@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
   "version": "1.6.0",
   "name": "GEM_ERP_EX_RedeemCode",
-  "title": "DiGA-RedeemCode",
+  "title": "DiGA-Einlösecode",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "States the redeem code for a DiGA.",
+  "description": "Gibt den Einlösecode für eine DiGA an.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -35,7 +35,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "States the redeem code for a DiGA.",
+        "short": "Gibt den Einlösecode für eine DiGA an.",
         "type": [
           {
             "code": "string"

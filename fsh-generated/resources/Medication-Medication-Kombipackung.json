@@ -29,7 +29,6 @@
       }
     ]
   },
-  "status": "active",
   "form": {
     "coding": [
       {
@@ -65,6 +64,7 @@
               {
                 "system": "http://fhir.de/CodeSystem/bfarm/atc",
                 "code": "R01AC01",
+                "version": "1.4.0",
                 "display": "Natriumcromoglicat"
               }
             ]
@@ -111,6 +111,7 @@
               {
                 "system": "http://fhir.de/CodeSystem/bfarm/atc",
                 "code": "R01AC01",
+                "version": "1.4.0",
                 "display": "Natriumcromoglicat"
               }
             ]
@@ -136,6 +137,7 @@
   "batch": {
     "lotNumber": "56498416854"
   },
+  "status": "active",
   "ingredient": [
     {
       "itemReference": {

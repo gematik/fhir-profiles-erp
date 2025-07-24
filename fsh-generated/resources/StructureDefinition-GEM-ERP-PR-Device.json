@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Device",
   "status": "draft",
   "date": "2025-09-30",
-  "description": "static information on the ePrescription backend server",
+  "description": "Statische Informationen auf dem E-Rezept-Fachdienst",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -32,7 +32,7 @@
             }
           ],
           "rules": "closed",
-          "description": "Slicing for meta profile",
+          "description": "Slicing für meta profile",
           "ordered": false
         },
         "min": 1,
@@ -73,7 +73,7 @@
       {
         "id": "Device.contact",
         "path": "Device.contact",
-        "short": "Contact details of the ePrescription backend server.",
+        "short": "Kontaktdaten des E-Rezept-Fachdienst.",
         "mustSupport": true
       }
     ]

@@ -2,7 +2,7 @@ Instance: DispenseOperation
 InstanceOf: OperationDefinition
 Usage: #definition
 * insert Operation(Dispense)
-* description = "The operation $dispense lets the pharmacy perform a dispense for a medication without changing the status of the task. This actions lets a frontend display that a medication has been dispensed before it is closed by the pharmacy."
+* description = "Die Operation $dispense ermöglicht es der Apotheke, eine Ausgabe für ein Medikament durchzuführen, ohne den Status der Aufgabe zu ändern. Diese Aktion erlaubt es einem Frontend anzuzeigen, dass ein Medikament ausgegeben wurde, bevor es von der Apotheke abgeschlossen wird."
 * code = #dispense
 * system = false
 * type = false
@@ -18,7 +18,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "The secret parameter that lets a pharmacy access the Task exclusively as part of the URL. This parameter must be equal to the value stored in Task.identifier:Secret. Otherwise the Operation aborts with an error."
+  * documentation = "Der secret Parameter, der einer Apotheke den exklusiven Zugriff auf die Aufgabe als Teil der URL ermöglicht. Dieser Parameter muss dem Wert entsprechen, der in Task.identifier:Secret gespeichert ist. Andernfalls wird der Vorgang mit einem Fehler abgebrochen."
   * type = #string
 
 // in
@@ -27,7 +27,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "*"
-  * documentation = "Information on dispensed Medication(s)"
+  * documentation = "Informationen zu abgegebenen Medikament(en)"
   * part[+]
     * name = #medicationDispense
     * type = #MedicationDispense
@@ -47,7 +47,7 @@ Usage: #definition
   * use = #out
   * min = 1
   * max = "*"
-  * documentation = "The MedicationDispense that has been transmitted by the pharmacy as a confirmation, that it has been successfully uploaded."
+  * documentation = "Die MedicationDispense, die von der Apotheke als Bestätigung übermittelt wurde, dass sie erfolgreich hochgeladen wurde."
   * part[+]
     * name = #medicationDispense
     * type = #MedicationDispense
@@ -65,5 +65,5 @@ Usage: #definition
     * use = #out
     * min = 0
     * max = "1"
-    * documentation = "In case of errors or issues the E-Rezept-Fachdienst will issue an OperationOutcome."
+    * documentation = "Im Falle von Fehlern oder Problemen gibt der E-Rezept-Fachdienst ein OperationOutcome aus."
     * type = #OperationOutcome
