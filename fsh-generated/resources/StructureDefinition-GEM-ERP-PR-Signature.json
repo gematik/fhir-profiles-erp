@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Signature",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature",
-  "version": "1.6.0",
+  "version": "1.6.0-draft",
   "name": "GEM_ERP_PR_Signature",
   "title": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
   "status": "draft",

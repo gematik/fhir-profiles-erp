@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Composition",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition",
-  "version": "1.6.0",
+  "version": "1.6.0-draft",
   "name": "GEM_ERP_PR_Composition",
   "title": "Quittung für die Einlösung eines E-Rezepts",
   "status": "draft",

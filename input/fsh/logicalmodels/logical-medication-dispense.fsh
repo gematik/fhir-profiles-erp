@@ -8,7 +8,7 @@ Description: "Fachliches Modell zur Beschreibung der Informationen, die bei $clo
 * status 1..1 code "Status fixedValue: #completed"
 * medication 1..1 BackboneElement "Medikation"
   * medicationArzneimittel 0..1 BackboneElement "Medikation als contained Element"
-    * extension 0..* BackboneElement "Erweiterungen"
+    * extension 0..* Extension "Erweiterungen"
       * impfung 1..1 boolean "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine"
       * arzneimittelkategorie 1..1 code "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category"
       * kategorie 0..1 string "Angabe zur Kategorie"

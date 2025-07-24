@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-LOG-MedicationDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense",
-  "version": "1.6.0",
+  "version": "1.6.0-draft",
   "name": "GEM_ERP_LOG_MedicationDispense",
   "title": "Logical Medication Dispense",
   "status": "draft",
@@ -83,7 +83,7 @@
         "max": "*",
         "type": [
           {
-            "code": "BackboneElement"
+            "code": "Extension"
           }
         ]
       },

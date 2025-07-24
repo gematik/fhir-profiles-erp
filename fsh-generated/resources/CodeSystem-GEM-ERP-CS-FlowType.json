@@ -6,7 +6,6 @@
   "id": "GEM-ERP-CS-FlowType",
   "title": "CodeSystem der Flowtypen",
   "description": "Zeigt die verschiedenen Typen des E-Rezepts entsprechend der Verordnungsformulare.",
-  "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
   "concept": [
     {
@@ -38,6 +37,7 @@
       "display": "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
     }
   ],
+  "version": "1.6.0-draft",
   "date": "2025-09-30",
   "publisher": "gematik GmbH",
   "contact": [
