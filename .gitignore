@@ -3,8 +3,10 @@ fhirpkg.lock.json
 fsh-index.*
 .DS_Store
 Thumbs.db
-/input-cache
-/output
-/temp
-/template
 .simplifier/
+*.sh
+fsh-index.*
+input-cache/
+output/
+temp/
+template/
