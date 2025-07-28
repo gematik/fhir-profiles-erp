@@ -6,7 +6,6 @@
   "id": "GEM-ERP-CS-DocumentType",
   "title": "CodeSystem der Dokumententypen",
   "description": "Dokumententyp abhängig vom Empfänger des Bundles.",
-  "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
   "concept": [
     {
@@ -22,6 +21,7 @@
       "display": "Receipt"
     }
   ],
+  "version": "1.6.0-draft",
   "date": "2025-09-30",
   "publisher": "gematik GmbH",
   "contact": [

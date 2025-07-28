@@ -5,8 +5,8 @@
   "id": "GEM-ERP-VS-OrganizationType",
   "title": "ValueSet der Organisationstyp-Codes",
   "description": "Art der Organisation",
-  "version": "1.6.0",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType",
+  "version": "1.6.0-draft",
   "date": "2025-09-30",
   "publisher": "gematik GmbH",
   "contact": [

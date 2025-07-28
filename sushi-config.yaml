@@ -1,13 +1,29 @@
 canonical: https://gematik.de/fhir/erp
 fhirVersion: 4.0.1
-FSHOnly: true
-applyExtensionMetadataToRoot: false
+id: de.gematik.erezept-workflow.r4
+name: E-Rezept Workflow
+title: "E-Rezept Workflow"
+description: Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst
+status: draft # draft | active | retired | unknown
+version: 1.6.0-draft
+copyrightYear: 2025+
+releaseLabel: ci-build # ci-build, ballot, release
+jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+publisher:
+  name: gematik GmbH
+  url: https://gematik.de
+  email: erp-umsetzung@gematik.de
 
-version: "1.6.0"
 dependencies:
-  hl7.fhir.r4.core: 4.0.1
   de.basisprofil.r4: 1.5.3
   de.gematik.epa.medication: 1.1.5
   de.gematik.terminology: 1.0.6
-  # TODO Klären ob alte Abhängigkeiten benötigt 1.0.6-2 und 1.0.5-4
   de.gematik.ti: 1.1.0
+  de.fhir.medication: 1.0.0-ballot # TODO: Update to final release
+
+applyExtensionMetadataToRoot: false
+
+menu:
+  Start: index.html
+  Inhaltsverzeichnis: toc.html
+  FHIR-Artefakte: artifacts.html

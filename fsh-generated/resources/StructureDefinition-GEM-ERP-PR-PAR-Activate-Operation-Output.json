@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-PAR-Activate-Operation-Output",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_ActivateOperation_Output",
-  "version": "1.6.0",
+  "version": "1.6.0-draft",
   "name": "GEM_ERP_PR_PAR_ActivateOperation_Output",
   "title": "GEM ERP PR ActivateOperation Output",
   "status": "draft",
