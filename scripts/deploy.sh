@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Error handling: The script will terminate on error.
 set -e
 
-. "$(dirname "$0")/config.common.sh"
+. "$(dirname "$0")/config.sh"
 
 # Check MODE
 if [ -z "$ENVIRONMENT" ]; then

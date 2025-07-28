@@ -2,7 +2,7 @@
 
 # Load config
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "$SCRIPT_DIR/config.common.sh"
+source "$SCRIPT_DIR/config.sh"
 
 # Output path
 OUTPUT_JS="$SCRIPT_DIR/../input/content/assets/js/heading-links.js"
@@ -11,7 +11,7 @@ mkdir -p "$(dirname "$OUTPUT_JS")"
 cat > "$OUTPUT_JS" <<EOF
 
 // === AUTO-GENERATED FILE ===
-// Do not edit by hand; edit scripts/generate-heading-links-js.sh and config.common.sh instead.
+// Do not edit by hand; edit scripts/generate-heading-links-js.sh and config.sh instead.
 
 const newIssueGithubLink = "https://github.com/$GITHUB_REPO/issues/new?template=$IG_TEMPLATE_NAME";
 // TODO: make repo and parameters configurable
