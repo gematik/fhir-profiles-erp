@@ -3,3 +3,7 @@ validation_results/**
 fhirpkg.lock.json
 *.sh
 fsh-index.*
+input-cache/
+output/
+temp/
+template/
