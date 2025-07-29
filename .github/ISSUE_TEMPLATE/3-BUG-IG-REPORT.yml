@@ -1,0 +1,49 @@
+name: "📝 Implementation Guide Bug Report"
+description: Create a report to help us improve the implementation guide.
+title: "[IG] <title>"
+labels:
+  - implementation guide
+  - bug
+assignees:
+  - florianschoffke
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: Describe the bug.
+      placeholder: A clear and concise description of what the bug/issue with the implementation guide is.
+    validations:
+      required: true
+  - type: input
+    id: page-link
+    attributes:
+      label: "Page of the IG"
+      description: State the title or provide a link to the affected page of the implementation guide.
+      placeholder: Provide a link or title of the affected page.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-description
+    attributes:
+      label: "Expected Description"
+      description: Describe what you expected the implementation guide to state.
+      placeholder: A clear and concise description of what you expected the implementation guide to state.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Add screenshots here.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: Add any other context about the problem here.
+      placeholder: Add any other context about the problem here.
+    validations:
+      required: false

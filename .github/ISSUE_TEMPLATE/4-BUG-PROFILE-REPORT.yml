@@ -1,0 +1,56 @@
+name: "🪲 Profile-Bug Report"
+description: Create a report to help us improve the FHIR Profiles.
+title: "[PROFILE] <title>"
+labels:
+  - bug
+assignees:
+  - florianschoffke
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: Describe the bug.
+      placeholder: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: affected-profiles-fields
+    attributes:
+      label: "Affected Profile(s) and Field(s)"
+      description: State the profiles and fields affected by the issue/bug.
+      placeholder: Please state the profiles and within the profiles the fields that are affected by the issue/bug.
+    validations:
+      required: true
+  - type: textarea
+    id: affected-usecases
+    attributes:
+      label: "Affected UseCase(s)"
+      description: If applicable, state the UseCase(s) affected by the issue.
+      placeholder: If applicable, state the UseCase(s) that are affected by the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: improvement-suggestion
+    attributes:
+      label: "Suggestion for Improvement"
+      description: Suggest how to improve the profile and fix the issue.
+      placeholder: A clear and concise description of what you expected the profile to state and how this will fix the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Add screenshots here.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: Add any other context about the problem here.
+      placeholder: Add any other context about the problem here.
+    validations:
+      required: false

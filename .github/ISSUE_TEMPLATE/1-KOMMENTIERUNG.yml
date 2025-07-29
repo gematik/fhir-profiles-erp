@@ -1,0 +1,57 @@
+name: "☝️ Kommentierung für IG 'Rezeptanforderungen für das E-Rezept'"
+description: "Erstellen Sie einen Kommentar, um uns bei der Verbesserung des Implementierungsleitfadens oder der FHIR-Profile zu helfen."
+title: "[Kommentierung] <title>"
+labels:
+  - kommentierung
+assignees:
+  - florianschoffke
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Die zu bewertenden Ressourcen sind:**
+
+        - [FHIR IG ServiceRequest](https://simplifier.net/guide/erp-servicerequest-implementation-guide?version=1.2.0-rc2)
+        - [FHIR Package ServiceRequest](https://simplifier.net/packages/de.gematik.erp-servicerequest/1.2.0-rc2)
+        - [FHIR IG ATF](https://simplifier.net/guide/atf-implementation-guide/Home/Datenobjekte/MessageHeader?version=1.4.0-rc1)
+        - [FHIR Package ATF](https://simplifier.net/packages/de.gematik.fhir.atf/1.4.0-rc2)
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: "Beschreibung des Problems"
+      description: Beschreiben Sie das Problem oder den Kommentar zum Implementierungsleitfaden oder FHIR-Profil.
+      placeholder: Eine klare und präzise Beschreibung des Problems oder Kommentars zum Implementierungsleitfaden oder FHIR-Profil.
+    validations:
+      required: true
+  - type: input
+    id: page-link
+    attributes:
+      label: "Seite des IG oder FHIR-Profils"
+      description: Nennen Sie den Titel oder geben Sie einen Link zur betroffenen Seite des Implementierungsleitfadens oder FHIR-Profils an.
+      placeholder: Geben Sie einen Link oder Titel der betroffenen Seite oder des FHIR-Profils an.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Vorschlag zur Verbesserung"
+      description: Machen Sie Vorschläge zur Verbesserung des Implementierungsleitfadens oder FHIR-Profils.
+      placeholder: Ein klarer und präziser Vorschlag zur Verbesserung des Implementierungsleitfadens oder FHIR-Profils.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: Fügen Sie gegebenenfalls Screenshots hinzu, um Ihr Problem oder Ihren Vorschlag zu erläutern.
+      placeholder: Fügen Sie hier Screenshots hinzu.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Zusätzlicher Kontext"
+      description: Fügen Sie hier weiteren Kontext oder Informationen zum Problem oder Vorschlag hinzu.
+      placeholder: Fügen Sie hier weiteren Kontext oder Informationen zum Problem oder Vorschlag hinzu.
+    validations:
+      required: false
