@@ -35,11 +35,11 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
   * system 1..
   * system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode" (exactly)
   * value 1..
+* identifier[Secret] only GEM_ERP_PR_Secret
 * identifier[Secret] 
   * ^short = "Secret"
-  * system 1..
-  * system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_Secret" (exactly)
-  * value 1..
+  * system 1..1
+  * value 1..1
 * intent = #order (exactly)
 * for ^short = "Kennung des Patienten (KVID or PKV-Identifier)"
 * for.identifier only IdentifierKvid10

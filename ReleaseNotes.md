@@ -9,6 +9,7 @@
 - Entfernen der nicht genutzten Extension `GEM_ERP_EX_SubstitutionAllowedType`
 - Entfernen des nicht genutzten Profils `GEM-ERP-PR-BfArMApproval`
 - Ersetzen des Profils `GEM-ERP-PR-Prescriptionid` mit `EPrescriptionId` aus dem ti.common package
+- Neue Display Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`
  
 ## Release 1.5.0 (2025-04-10)
 
