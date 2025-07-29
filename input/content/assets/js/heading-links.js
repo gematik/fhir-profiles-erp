@@ -3,7 +3,6 @@
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh and config.sh instead.
 
 const newIssueGithubLink = "https://github.com/gematik/fhir-profiles-erp/issues/new?template=3-BUG-IG-REPORT.yml";
-// TODO: make repo and parameters configurable
 
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
