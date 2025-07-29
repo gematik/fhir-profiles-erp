@@ -14,7 +14,6 @@ cat > "$OUTPUT_JS" <<EOF
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh and config.sh instead.
 
 const newIssueGithubLink = "https://github.com/$GITHUB_REPO/issues/new?template=$IG_TEMPLATE_NAME";
-// TODO: make repo and parameters configurable
 
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
