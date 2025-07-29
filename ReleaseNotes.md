@@ -3,13 +3,23 @@
 # Release Notes E-Rezept Workflow
 
 ## Release 1.6.0 (2025-09-30)
-//TODO
-- Einführen eines generischen und abstrakten Communication Profils. Dies ermöglicht zentral spezifikationen für alle Elemente in einem Profil zu erhalten. Bisherige Communications leiten davon ab und erhalten ihre Eigenschaften
-- Übersetzungen der Elementbezeichnungen und -definitionen auf deutsch
-- Entfernen der nicht genutzten Extension `GEM_ERP_EX_SubstitutionAllowedType`
-- Entfernen des nicht genutzten Profils `GEM-ERP-PR-BfArMApproval`
-- Ersetzen des Profils `GEM-ERP-PR-Prescriptionid` mit `EPrescriptionId` aus dem ti.common package
-- Neue Display Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`
+
+### Profiländerungen
+- `Neu:` Einführung eines generischen und abstrakten Communication-Profils. Dadurch können Spezifikationen für alle Elemente zentral gepflegt werden. Bestehende Communication-Profile leiten davon ab und übernehmen die definierten Eigenschaften. Dies hat keine Auswirkungen auf Strukturen bestehender Communictaion Profile.
+- `Entfernt:` Nicht genutzte Extension `GEM_ERP_EX_SubstitutionAllowedType` entfernt.
+- `Entfernt:` Nicht verwendetes Profil `GEM-ERP-PR-BfArMApproval` entfernt.
+- `Ersetzt:` Profil `GEM-ERP-PR-Prescriptionid` durch `EPrescriptionId` aus dem ti.common-Paket ersetzt. Dies wirkt sich nicht in der Struktur der Instanz aus.
+- `Geändert:` Das Task-Profil verwendet nun das Identifier-Profil `GEM_ERP_PR_Secret`. Dies wirkt sich nicht in der Struktur der Instanz aus.
+
+### Terminologieänderungen
+- `(Breaking) Geändert:` Neue Display-Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`.
+- `Übersetzt:` Elementbezeichnungen und -definitionen wurden vollständig ins Deutsche übersetzt.
+
+---
+
+**Implikationen:**  
+Diese Änderungen führen zu einer besseren Wartbarkeit und Konsistenz der Spezifikation. Die Entfernung nicht genutzter Artefakte reduziert Komplexität. Die zentrale Pflege von Communication-Elementen und die vollständige Übersetzung unterstützen eine klarere Implementierung und Nutzung im deutschsprachigen Raum.
+
  
 ## Release 1.5.0 (2025-04-10)
 
