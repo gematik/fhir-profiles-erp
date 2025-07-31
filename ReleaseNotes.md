@@ -1,6 +1,25 @@
 <img align="right" width="250" height="47" src="./Resources/images/gematik_logo.png" /> <br />    
  
 # Release Notes E-Rezept Workflow
+
+## Release 1.6.0 (2025-09-30)
+
+### Profiländerungen
+- `Neu:` Einführung eines generischen und abstrakten Communication-Profils. Dadurch können Spezifikationen für alle Elemente zentral gepflegt werden. Bestehende Communication-Profile leiten davon ab und übernehmen die definierten Eigenschaften. Dies hat keine Auswirkungen auf Strukturen bestehender Communictaion Profile.
+- `Entfernt:` Nicht genutzte Extension `GEM_ERP_EX_SubstitutionAllowedType` entfernt.
+- `Entfernt:` Nicht verwendetes Profil `GEM-ERP-PR-BfArMApproval` entfernt.
+- `Ersetzt:` Profil `GEM-ERP-PR-Prescriptionid` durch `EPrescriptionId` aus dem ti.common-Paket ersetzt. Dies wirkt sich nicht in der Struktur der Instanz aus.
+- `Geändert:` Das Task-Profil verwendet nun das Identifier-Profil `GEM_ERP_PR_Secret`. Dies wirkt sich nicht in der Struktur der Instanz aus.
+
+### Terminologieänderungen
+- `(Breaking) Geändert:` Neue Display-Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`.
+- `Übersetzt:` Elementbezeichnungen und -definitionen wurden vollständig ins Deutsche übersetzt.
+
+---
+
+**Implikationen:**  
+Diese Änderungen führen zu einer besseren Wartbarkeit und Konsistenz der Spezifikation. Die Entfernung nicht genutzter Artefakte reduziert Komplexität. Die zentrale Pflege von Communication-Elementen und die vollständige Übersetzung unterstützen eine klarere Implementierung und Nutzung im deutschsprachigen Raum.
+
  
 ## Release 1.5.0 (2025-04-10)
 

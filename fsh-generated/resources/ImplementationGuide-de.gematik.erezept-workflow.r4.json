@@ -1,0 +1,913 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "de.gematik.erezept-workflow.r4",
+  "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
+  "version": "1.6.0-ballot1",
+  "name": "ERezeptWorkflow",
+  "title": "E-Rezept Workflow",
+  "status": "draft",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://gematik.de"
+        },
+        {
+          "system": "email",
+          "value": "erp-umsetzung@gematik.de"
+        }
+      ]
+    }
+  ],
+  "description": "Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "packageId": "de.gematik.erezept-workflow.r4",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.5.3",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
+    },
+    {
+      "packageId": "de.gematik.epa.medication",
+      "version": "1.1.5",
+      "uri": "https://gematik.de/fhir/epa-medication/ImplementationGuide/de.gematik.epa.medication",
+      "id": "de_gematik_epa_medication"
+    },
+    {
+      "packageId": "de.gematik.terminology",
+      "version": "1.0.6",
+      "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
+      "id": "de_gematik_terminology"
+    },
+    {
+      "packageId": "de.gematik.ti",
+      "version": "1.1.0",
+      "uri": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
+      "id": "de_gematik_ti"
+    },
+    {
+      "packageId": "de.fhir.medication",
+      "version": "1.0.0-ballot",
+      "uri": "http://ig.fhir.de/igs/medication/ImplementationGuide/de.fhir.medication",
+      "id": "de_fhir_medication"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
+        },
+        "name": "Ablaufdatum des Rezepts",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/AbortOperation"
+        },
+        "name": "AbortOperation",
+        "description": "Diese Operation bricht den Workflow eines E-Rezepts ab und löscht alle Daten, die mit dieser Aufgabe zusammenhängen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/AcceptOperation"
+        },
+        "name": "AcceptOperation",
+        "description": "Mit der $accept-Operation beansprucht eine Apotheke ein E-Rezept. Der Status der referenzierten Aufgabe ändert sich in 'in-progress'.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/ActivateOperation"
+        },
+        "name": "ActivateOperation",
+        "description": "Diese Operation aktiviert die erstellte Aufgabe für das Rezept. Der Eingabeparameter muss das qualifizierte signierte Bundle des Rezepts enthalten. Der E-Rezept-Fachdienst validiert das Rezept, aktualisiert die Task-ressource und startet den Workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DispReq"
+        },
+        "name": "Anfrage zur Einlösung des E-Rezepts",
+        "description": "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DiGA"
+        },
+        "name": "Antwort des Leistungserbringers an den Patienten",
+        "description": "Ressource, die für die Kommunikation des Leistungserbringers mit dem Patienten im Kontext der Einlösung von DiGA-Verordnungen verwendet wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Reply"
+        },
+        "name": "Antwort vom Leistungserbringer an den Patienten",
+        "description": "Ressource, die für die Kommunikation der Antwort zur Weitergabe/Informationsanfrage vom Leistungserbringer an Patienten/Vertreter verwendet wird",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Communication/7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
+        },
+        "name": "Antwort-Nachricht der Apotheke an den Patienten",
+        "description": "Beispiel für eine Antwort-Nachricht, die von der Apotheke an den Patienten als Antwort auf eine vorherige Task-bezogene Nachricht gesendet wird",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-AuditEvent"
+        },
+        "name": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "AuditEvent/9361863d-fec0-4ba9-8776-7905cf1b0cfa"
+        },
+        "name": "AuditEvent-Eintrag vom E-Rezept-Fachdienst",
+        "description": "Beispiel für einen AuditEvent-Eintrag, der vom E-Rezept-Fachdienst beim Zugriff auf Patientendaten generiert wird",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-Beneficiary"
+        },
+        "name": "Begünstigter E-Rezept-Beleg",
+        "description": "Der Begünstigte (z. B. Apotheke) des E-Rezept-Beleg, der erstellt wird, wenn der E-Rezept-Workflow abgeschlossen ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Bundle-AcceptOperation"
+        },
+        "name": "Beispiel Accept-Bundle",
+        "description": "Dieses Bundle enthält den Task und das qualifiziert signierte E-Rezept für die Accept-Operation",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleCloseInputParameters"
+        },
+        "name": "Beispiel Close-Parameter",
+        "description": "Beispiel für Eingabeparameter der Close-Operation mit einfacher Medikamentenabgabe",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleCloseInputParametersKombipackung"
+        },
+        "name": "Beispiel Close-Parameter für Kombipackung",
+        "description": "Beispiel für Eingabeparameter der Close-Operation für eine Kombipackung",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleCloseInputParametersMultipleMedicationDispenses"
+        },
+        "name": "Beispiel Close-Parameter mit mehreren MedicationDispenses",
+        "description": "Beispiel für Eingabeparameter der Close-Operation mit mehreren Medikamentenabgaben",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/OperationCreateParametersInputExample"
+        },
+        "name": "Beispiel für $create Operation Parameter",
+        "description": "Beispiel für Eingabeparameter der $create Operation zur Erstellung einer neuen Aufgabe",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationAbortErrorAVS"
+        },
+        "name": "Beispiel für Abort-Operation Fehlerantwort (AVS)",
+        "description": "Beispiel für eine Fehlerantwort bei der Abort-Operation aus Sicht des AVS",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationAbortErrorPVS"
+        },
+        "name": "Beispiel für Abort-Operation Fehlerantwort (PVS)",
+        "description": "Beispiel für eine Fehlerantwort bei der Abort-Operation aus Sicht des PVS",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationAcceptError"
+        },
+        "name": "Beispiel für Accept-Operation Fehlerantwort",
+        "description": "Beispiel für eine Fehlerantwort bei der Accept-Operation eines E-Rezepts",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationCloseError"
+        },
+        "name": "Beispiel für Close-Operation Fehlerantwort",
+        "description": "Beispiel für eine Fehlerantwort bei der Close-Operation mit FHIR-Validierungsfehlern",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationCreateError"
+        },
+        "name": "Beispiel für Create-Operation Fehlerantwort",
+        "description": "Beispiel für eine Fehlerantwort bei der Create-Operation mit FHIR-Validierungsfehlern",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationRejectError"
+        },
+        "name": "Beispiel für Reject-Operation Fehlerantwort",
+        "description": "Beispiel für eine Fehlerantwort bei der Reject-Operation wegen falschen Task-Status",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Kombipackung"
+        },
+        "name": "Beispiel Kombipackung Medikamentenabgabe",
+        "description": "Beispiel für eine Medikamentenabgabe einer Kombipackung",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense"
+        },
+        "name": "Beispiel Medikamentenabgabe",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Without-Medication"
+        },
+        "name": "Beispiel Medikamentenabgabe ohne Medikament",
+        "description": "Beispiel für eine Medikamentenabgabe ohne Medikamentenreferenz",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "Medication/ExampleUnitMedication"
+        },
+        "name": "Beispiel-Medikament mit Einheiten",
+        "description": "Beispiel für ein Medikament mit spezifischen Maßeinheiten und Wirkstoffangaben",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "Medication/SumatripanMedication"
+        },
+        "name": "Beispiel-Medikament Sumatriptan",
+        "description": "Beispiel für ein Sumatriptan-Medikament mit vollständigen Eigenschaften",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/CloseOperation"
+        },
+        "name": "CloseOperation",
+        "description": "Die $close-Operation beendet den E-Rezept-Workflow und erstellt eine Quittung. Das Ergebnis dieses Vorgangs ist ein signiertes Bundle, das für weitere finanzielle Verarbeitung verwendet wird. Der Status der Aufgabe ändert sich anschließend in #completed.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/GEM-ERP-CS-DocumentType"
+        },
+        "name": "CodeSystem der Dokumententypen",
+        "description": "Dokumententyp abhängig vom Empfänger des Bundles.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/GEM-ERP-CS-FlowType"
+        },
+        "name": "CodeSystem der Flowtypen",
+        "description": "Zeigt die verschiedenen Typen des E-Rezepts entsprechend der Verordnungsformulare.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/GEM-ERP-CS-OrganizationType"
+        },
+        "name": "CodeSystem der Organisationstyp-Codes",
+        "description": "Typ der Organisation, bei der E-Rezepte eingelöst werden können.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/GEM-ERP-CS-AvailabilityStatus"
+        },
+        "name": "CodeSystem des Verfügbarkeitsstatus",
+        "description": "Typ des Verfügbarkeitsstatus für die Anfrage zur Medikamentenverfügbarkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/CreateOperation"
+        },
+        "name": "CreateOperation",
+        "description": "Diese Operation erstellt eine Aufgabe für die Verschreibung eines bestimmten Flowtypes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
+        },
+        "name": "Datum der Bestätigung der Verschreibung",
+        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-DeepLink"
+        },
+        "name": "DiGA-DeepLink",
+        "description": "Enthält Informationen zum Deep Link für eine DiGA.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-RedeemCode"
+        },
+        "name": "DiGA-Einlösecode",
+        "description": "Gibt den Einlösecode für eine DiGA an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Communication/140f716f-f649-44fe-9a4e-157eb3c8adf3"
+        },
+        "name": "DiGA-Nachricht eines Kostenträgers an den Patienten",
+        "description": "Beispiel für eine DiGA-bezogene Nachricht, die vom Kostenträgers an den Patienten gesendet wird",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "Communication/2be1c6ac-5d10-47f6-84ee-8318b2c22c76"
+        },
+        "name": "DiGA-Zuweisung des Patienten an die Krankenkasse",
+        "description": "Beispiel für eine Nachricht des Patienten an die Krankenkasse zur Anfrage der DiGA-Abgabe mit AccessCode",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq"
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/DispenseOperation"
+        },
+        "name": "DispenseOperation",
+        "description": "Die Operation $dispense ermöglicht es der Apotheke, eine Ausgabe für ein Medikament durchzuführen, ohne den Status der Aufgabe zu ändern. Diese Aktion erlaubt es einem Frontend anzuzeigen, dass ein Medikament ausgegeben wurde, bevor es von der Apotheke abgeschlossen wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense-DiGA"
+        },
+        "name": "Dispensierung einer DiGA-Verordnung",
+        "description": "Verarbeitet Informationen über die ausgegebene DiGA",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense"
+        },
+        "name": "Dispensierung eines E-Rezepts",
+        "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Bundle"
+        },
+        "name": "Dokumentenbündel für Quittung",
+        "description": "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Medication/SimpleMedication"
+        },
+        "name": "Einfaches Beispiel-Medikament",
+        "description": "Beispiel für ein einfaches Medikament mit minimalen Eigenschaften",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleOperationActivateError"
+        },
+        "name": "Example Activate operation error response",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleOperationActivateParametersInput"
+        },
+        "name": "Example Activate operation input parameters",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleCloseInputParametersRezeptur"
+        },
+        "name": "Example Close Parameters",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleCloseInputParametersDiGA"
+        },
+        "name": "Example Close Parameters",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleDispenseInputParameters"
+        },
+        "name": "Example Dispense Parameters",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleDispenseInputParametersMultipleMedicationDispenses"
+        },
+        "name": "Example Dispense Parameters",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleDispenseInputParametersKombipackung"
+        },
+        "name": "Example Dispense Parameters",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleDispenseOutputParametersError"
+        },
+        "name": "Example Dispense Parameters Response on Error",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
+      },
+      {
+        "reference": {
+          "reference": "Parameters/ExampleDispenseOutputParametersSuccess"
+        },
+        "name": "Example Dispense Parameters Response on Success",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Rezeptur"
+        },
+        "name": "Example Rezeptur Medication Dispense",
+        "description": "Example of a Rezeptur Medication Dispense.",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Accept-Operation-Output"
+        },
+        "name": "GEM ERP PR AcceptOperation Output",
+        "description": "Dieses Profil definiert die Parameter für die Annahme eines Medikaments von AVS zum E-Rezept-Fachdienst. Dies kann für die $accept-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Activate-Operation-Output"
+        },
+        "name": "GEM ERP PR ActivateOperation Output",
+        "description": "Dieses Profil definiert die Parameter für die Aktivierung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $activate-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Close-Operation-Input"
+        },
+        "name": "GEM ERP PR CloseOperation Input",
+        "description": "Dieses Profil definiert die Parameter für das Schließen eines Workflows für ein Rezept vom AVS zum E-Rezept-Fachdienst. Dies kann für die Operationen $close und $dispense verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Close-Operation-Output"
+        },
+        "name": "GEM ERP PR CloseOperation Output",
+        "description": "Dieses Profil definiert die Parameter für die Ausgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $close-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Create-Operation-Output"
+        },
+        "name": "GEM ERP PR CreateOperation Output",
+        "description": "Dieses Profil definiert die Parameter für die Erstellung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $create-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Input"
+        },
+        "name": "GEM ERP PR DispenseOperation Input",
+        "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Output"
+        },
+        "name": "GEM ERP PR DispenseOperation Output",
+        "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AvailabilityState"
+        },
+        "name": "GEM_ERP_EX_AvailabilityState",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION"
+        },
+        "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES"
+        },
+        "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-InsuranceProvider"
+        },
+        "name": "GEM_ERP_EX_InsuranceProvider",
+        "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-PackageQuantity"
+        },
+        "name": "GEM_ERP_EX_PackageQuantity",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-PrescriptionType"
+        },
+        "name": "GEM_ERP_EX_PrescriptionType",
+        "description": "Definiert den Typ eines Rezepts.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-SupplyOptionsType"
+        },
+        "name": "GEM_ERP_EX_SupplyOptionsType",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Bundle-OP-Accept"
+        },
+        "name": "GEM_ERP_PR_Bundle_OP_Accept",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Device"
+        },
+        "name": "GEM_ERP_PR_Device",
+        "description": "Statische Informationen auf dem E-Rezept-Fachdienst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication"
+        },
+        "name": "Generische Workflow-Communication",
+        "description": "Diese Communication beschreibt Felder und Anforderungen für alle Communications im Workflow-Paket.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Secret"
+        },
+        "name": "Identifier-Profil für Secret",
+        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-AccessCode"
+        },
+        "name": "Identifier-Profil für Verschreibungs-IDs",
+        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Representative"
+        },
+        "name": "Kommunikation zwischen Patient und Vertreter",
+        "description": "Ressource, die für die Kommunikation zwischen Patienten und deren Vertreter im Zusammenhang mit einem E-Rezept verwendet wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-LastMedicationDispense"
+        },
+        "name": "Letzte Medikamentenabgabe",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-LOG-MedicationDispense-DiGA"
+        },
+        "name": "Logical DiGA Medication Dispense",
+        "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource für DiGAs übermittelt werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-LOG-MedicationDispense"
+        },
+        "name": "Logical Medication Dispense",
+        "description": "Fachliches Modell zur Beschreibung der Informationen, die bei $close und $dispense in der MedicationDispense-Ressource übermittelt werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-DiGA-DeepLink"
+        },
+        "name": "Medication Dispense DiGA with a deep link.",
+        "description": "Example of a Medication Dispense for DiGAs which states a deep link.",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-DiGA-NoRedeemCode"
+        },
+        "name": "Medication Dispense DiGA without a redeem code",
+        "description": "Example of a Medication Dispense for DiGAs which has no redeem code.",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-DiGA-Name-And-PZN"
+        },
+        "name": "Medication Dispense DiGA, Name and PZN",
+        "description": "Example of a Medication Dispense for DiGAs only stating the name of the DiGA.",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "Medication/Medication-Rezeptur-FD"
+        },
+        "name": "Medication-Rezeptur-FD",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "Medication/Medication-Without-Strength-Code"
+        },
+        "name": "Medikament ohne Stärke-Code",
+        "description": "Beispiel für ein Medikament ohne System und Code für die Wirkstoffstärke",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "Medication/Medication-Without-Strength-Numerator"
+        },
+        "name": "Medikament ohne Stärke-Numerator",
+        "description": "Beispiel für ein Medikament ohne Code oder System für die Stärkenangabe im Numerator",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Medication"
+        },
+        "name": "Medikament zur Ausgabe des Rezepts",
+        "description": "Verarbeitet medizinische Informationen über das eingelöste Rezept",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Medication/Medication-Kombipackung"
+        },
+        "name": "Medikament-Kombipackung",
+        "description": "Beispiel für eine Kombipackung mit mehreren Einzelpräparaten",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "Medication/Medication-Rezeptur"
+        },
+        "name": "Medikament-Rezeptur",
+        "description": "Beispiel für eine Rezeptur mit mehreren Wirkstoffen als zusammengesetztes Medikament",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Binary"
+        },
+        "name": "PKCS7 signiertes Bundle im enveloping style",
+        "description": "PCKS7 signiertes eRezept-Bundle oder Quittung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Signature"
+        },
+        "name": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Digest"
+        },
+        "name": "QES-Digest in Binary",
+        "description": "QES-Digest in Binary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Composition"
+        },
+        "name": "Quittung für die Einlösung eines E-Rezepts",
+        "description": "Nach Abschluss des E-Rezept-Workflows erhält der Rezeptausfüller eine unterschriebene Quittung für Abrechnungs- und Verifizierungszwecke.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/dffbfd6a-5712-4798-bdc8-07201eb77ab8"
+        },
+        "name": "Quittungs-Bundle für abgeschlossene Rezeptabgabe",
+        "description": "Beispiel für ein Quittungs-Bundle nach erfolgter Abgabe eines E-Rezepts",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/RejectOperation"
+        },
+        "name": "RejectOperation",
+        "description": "Lehnt die Ausgabe eines eRezepts ab. Die Aufgabe wird in einen aktiven Zustand zurückgesetzt, das secret wird gelöscht, und der Task wird für jeden anderen Apotheker zugänglich oder kann vom Patienten gelöscht werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Task/09330307-16ce-4cdc-810a-ca24ef80dde3"
+        },
+        "name": "Task abgeschlossen durch Apotheke via $close Operation",
+        "description": "Beispiel für einen Task, der von einer Apotheke über die $close Operation abgeschlossen wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "Task/607255ed-ce41-47fc-aad3-cfce1c39963f"
+        },
+        "name": "Task aktiviert durch (Z)PVS/KIS via $activate Operation",
+        "description": "Beispiel für einen Task, der durch (Z)PVS/KIS über die $activate Operation aktiviert wurde und ein einlösbares E-Rezept trägt",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
+        },
+        "name": "Task angenommen durch Apotheke via $accept Operation",
+        "description": "Beispiel für einen Task, der von einer Apotheke über die $accept Operation angenommen wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "Task/9b48f82c-9c11-4a57-aa72-a805f9537a82"
+        },
+        "name": "Task angenommen und abgegeben via $dispense Operation",
+        "description": "Beispiel für einen Task, der von einer Apotheke angenommen und dann über die $dispense Operation abgegeben wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "Task/b12eb5f7-91ce-4887-93c7-800454601377"
+        },
+        "name": "Task erstellt durch Fachdienst via $create Operation",
+        "description": "Beispiel für einen Task, der vom Fachdienst über die $create Operation erstellt wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Task"
+        },
+        "name": "Task für die Verwaltung des E-Rezept-Workflows",
+        "description": "Diese Ressource verwaltet den E-Rezept-Workflow",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Task/f5c21409-b84b-4125-8649-5630a00906b1"
+        },
+        "name": "Task mit mehreren MedicationDispenses",
+        "description": "Beispiel für einen Task, der von einer Apotheke angenommen und dann über die $dispense Operation mit mehreren MedicationDispenses abgegeben wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GEM-ERP-VS-DocumentType"
+        },
+        "name": "ValueSet der Dokumenttyp-Codes",
+        "description": "Art der Dokumente je nach Empfänger.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GEM-ERP-VS-FlowType"
+        },
+        "name": "ValueSet der FlowType-Codes",
+        "description": "Zeigt die verschiedenen Arten des E-Rezepts entsprechend den Verschreibungsformularen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GEM-ERP-VS-OrganizationType"
+        },
+        "name": "ValueSet der Organisationstyp-Codes",
+        "description": "Art der Organisation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GEM-ERP-VS-AvailabilityStatus"
+        },
+        "name": "ValueSet der Verfügbarkeitsstatus-Codes",
+        "description": "Art des Verfügbarkeitsstatus für die Verfügbarkeitsanfrage von Medikamenten",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Communication/a218a36e-f2fd-4603-ba67-c827acfef01b"
+        },
+        "name": "Zuweisung des Patienten an die Apotheke",
+        "description": "Beispiel für eine Nachricht des Patienten an die Apotheke zur Anfrage der Medikamentenabgabe mit AccessCode",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-2"
+        },
+        "name": "Zweites Beispiel Medikamentenabgabe",
+        "description": "Zweites Beispiel für eine Medikamentenabgabe mit anderen Eigenschaften",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ballot"
+      }
+    ]
+  }
+}

@@ -1,4 +1,12 @@
-scripts/downloaded_validation_script.sh
 validation_results/**
 fhirpkg.lock.json
+fsh-index.*
+.DS_Store
+Thumbs.db
+.simplifier/
 *.sh
+fsh-index.*
+input-cache/
+output/
+temp/
+template/

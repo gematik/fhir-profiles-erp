@@ -1,16 +1,15 @@
 {
+  "name": "de.gematik.erezept-workflow.r4",
+  "version": "1.6.0-ballot1",
+  "description": "Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst",
   "fhirVersions": [
     "4.0.1"
   ],
-  "name": "de.gematik.erezept-workflow.r4",
-  "jurisdiction": "urn:iso:std:iso:3166#DE",
-  "version": "1.5.2",
-  "description": "ePrescription workflow specification.",
-  "author": "gematik",
   "dependencies": {
-    "hl7.fhir.r4.core": "4.0.1",
-    "de.basisprofil.r4": "1.5.2",
-    "de.gematik.epa.medication": "1.0.6-2",
-    "de.gematik.terminology": "1.0.5-4"
+    "de.basisprofil.r4": "1.5.3",
+    "de.gematik.epa.medication": "1.1.5",
+    "de.gematik.terminology": "1.0.6",
+    "de.gematik.ti": "1.1.0",
+    "de.fhir.medication": "1.0.0-ballot"
   }
 }

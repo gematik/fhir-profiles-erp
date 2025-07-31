@@ -44,7 +44,7 @@ jobs:
       - name: Firely.Terminal (GitHub Actions)
         uses: FirelyTeam/firely-terminal-pipeline@v0.6.29
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
+          PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources/
           FIRELY_TERMINAL_VERSION: 3.4.0
           #PATH_TO_EXAMPLES: Examples
           #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
@@ -56,7 +56,6 @@ jobs:
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
           #SUSHI_VERSION: 3.16.0
-          SUSHI_OPTIONS: Resources/
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
 
       - name: Check for Uncommitted Changes
