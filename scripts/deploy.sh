@@ -50,8 +50,8 @@ if [ "$ENVIRONMENT" = "DEV" ]; then
     exit 1
   fi
 elif [ "$ENVIRONMENT" = "BALLOT" ]; then
-  if [[ ! "$TARGET" =~ -ballot$ ]]; then
-    echo "❌ Error: For ENVIRONMENT 'BALLOT', TARGET must end with '-ballot'."
+  if [[ ! "$TARGET" =~ -ballot[0-9]+$ ]]; then
+    echo "❌ Error: TARGET must end with '-ballot' followed by a number (e.g., -ballot1)."
     exit 1
   fi
   BUCKET_PATH="$BALLOT_BUCKET_PATH"

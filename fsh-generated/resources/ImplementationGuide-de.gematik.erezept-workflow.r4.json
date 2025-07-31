@@ -906,7 +906,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "ci-build"
+        "value": "ballot"
       }
     ]
   }
