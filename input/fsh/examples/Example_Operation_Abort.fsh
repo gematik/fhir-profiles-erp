@@ -1,6 +1,7 @@
 Instance: ExampleOperationAbortErrorAVS
 InstanceOf: OperationOutcome
-Title: "Example Abort operation error response"
+Title: "Beispiel für Abort-Operation Fehlerantwort (AVS)"
+Description: "Beispiel für eine Fehlerantwort bei der Abort-Operation aus Sicht des AVS"
 Usage: #example
 * issue[+]
   * severity = #error
@@ -9,7 +10,8 @@ Usage: #example
 
 Instance: ExampleOperationAbortErrorPVS
 InstanceOf: OperationOutcome
-Title: "Example Abort operation error response"
+Title: "Beispiel für Abort-Operation Fehlerantwort (PVS)"
+Description: "Beispiel für eine Fehlerantwort bei der Abort-Operation aus Sicht des PVS"
 Usage: #example
 * issue[+]
   * severity = #error

@@ -1,7 +1,8 @@
 Instance: ExampleCloseInputParameters
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Beispiel Close-Parameter"
+Description: "Beispiel für Eingabeparameter der Close-Operation mit einfacher Medikamentenabgabe"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]
@@ -13,8 +14,9 @@ Title: "Example Close Parameters"
 
 Instance: ExampleCloseInputParametersMultipleMedicationDispenses
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
+Title: "Beispiel Close-Parameter mit mehreren MedicationDispenses"
+Description: "Beispiel für Eingabeparameter der Close-Operation mit mehreren Medikamentenabgaben"
 Usage: #example
-Title: "Example Close Parameters"
 * parameter[rxDispensation][+]
   * name = "rxDispensation"
   * part[medicationDispense]
@@ -35,7 +37,8 @@ Title: "Example Close Parameters"
 Instance: ExampleCloseInputParametersKombipackung
 InstanceOf: GEM_ERP_PR_PAR_CloseOperation_Input
 Usage: #example
-Title: "Example Close Parameters"
+Title: "Beispiel Close-Parameter für Kombipackung"
+Description: "Beispiel für Eingabeparameter der Close-Operation für eine Kombipackung"
 * parameter[rxDispensation]
   * name = "rxDispensation"
   * part[medicationDispense]

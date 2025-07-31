@@ -1,6 +1,8 @@
 
 Instance: ReceiptBundleBinary
 InstanceOf: GEM_ERP_PR_Digest
+Title: "Quittungs-Hash Binärdaten"
+Description: "Binäre Digest-Daten für ein E-Rezept-Quittungs-Bundle"
 Usage: #inline
 * id = "b939a82a-9c23-4b6d-a139-f468d1b9d652"
 * contentType = #application/octet-stream
@@ -8,7 +10,8 @@ Usage: #inline
 
 Instance: ReceiptBundleQuittung
 InstanceOf: GEM_ERP_PR_Bundle
-Title:   "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
+Title: "Quittungs-Bundle für abgeschlossene Rezeptabgabe"
+Description: "Beispiel für ein Quittungs-Bundle nach erfolgter Abgabe eines E-Rezepts"
 Usage: #example
 * id = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
 * meta.tag.display = "Receipt Bundle 'Quittung' for completed dispensation of a prescription"
@@ -32,8 +35,8 @@ Usage: #example
 Instance: Bundle-AcceptOperation
 InstanceOf: GEM_ERP_PR_Bundle_OP_Accept
 Usage: #example
-Title: "Example Accept Bundle"
-Description: "This Bundle contains the Task and the qualified signed ePrescription."
+Title: "Beispiel Accept-Bundle"
+Description: "Dieses Bundle enthält den Task und das qualifiziert signierte E-Rezept für die Accept-Operation"
 * type = #collection
 * link[+].relation = "self"
 * link[=].url = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/160.000.033.491.280.78/$accept/"

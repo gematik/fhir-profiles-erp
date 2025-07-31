@@ -1,7 +1,8 @@
 // Rezeptur
 Instance: Medication-Rezeptur
 InstanceOf: GEM_ERP_PR_Medication
-Title: "Medication-Rezeptur"
+Title: "Medikament-Rezeptur"
+Description: "Beispiel für eine Rezeptur mit mehreren Wirkstoffen als zusammengesetztes Medikament"
 Usage: #example
 * contained[+] = MedicationHydrocortison
 * contained[+] = MedicationDexpanthenol
@@ -41,6 +42,8 @@ Usage: #example
 
 Instance: MedicationHydrocortison
 InstanceOf: EPAMedicationPZNIngredient
+Title: "Hydrocortison-Wirkstoff"
+Description: "Hydrocortison-Wirkstoff als Bestandteil einer Rezeptur"
 Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
@@ -51,6 +54,8 @@ Usage: #inline
 
 Instance: MedicationDexpanthenol
 InstanceOf: EPAMedicationPZNIngredient
+Title: "Dexpanthenol-Wirkstoff"
+Description: "Dexpanthenol-Wirkstoff als Bestandteil einer Rezeptur"
 Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code

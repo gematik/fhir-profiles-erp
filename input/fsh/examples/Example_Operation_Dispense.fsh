@@ -1,6 +1,7 @@
 Instance: ExampleOperationDispenseError
 InstanceOf: OperationOutcome
-Title: "Example Dispense operation error response"
+Title: "Beispiel für Dispense-Operation Fehlerantwort"
+Description: "Beispiel für eine Fehlerantwort bei der Dispense-Operation mit FHIR-Validierungsfehlern"
 Usage: #inline
 * issue[+]
   * severity = #error

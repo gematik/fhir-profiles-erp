@@ -1,7 +1,8 @@
 // Kombipackung
 Instance: Medication-Kombipackung
 InstanceOf: GEM_ERP_PR_Medication
-Title: "Medication-Kombipackung"
+Title: "Medikament-Kombipackung"
+Description: "Beispiel für eine Kombipackung mit mehreren Einzelpräparaten"
 Usage: #example
 * contained[+] = Augentropfen
 * contained[+] = NasenSpray
@@ -18,6 +19,9 @@ Usage: #example
 
 Instance: Augentropfen
 InstanceOf: EPAMedicationPharmaceuticalProduct
+Title: "Augentropfen-Komponente"
+Description: "Augentropfen als Teil einer Kombipackung"
+Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
@@ -36,6 +40,8 @@ InstanceOf: EPAMedicationPharmaceuticalProduct
 
 Instance: NasenSpray
 InstanceOf: EPAMedicationPharmaceuticalProduct
+Title: "Nasenspray-Komponente"
+Description: "Nasenspray als Teil einer Kombipackung"
 Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]

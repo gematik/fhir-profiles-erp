@@ -1,6 +1,7 @@
 Instance: Communication_DispenseRequest
 InstanceOf: GEM_ERP_PR_Communication_DispReq
-Title: "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
+Title: "Zuweisung des Patienten an die Apotheke"
+Description: "Beispiel für eine Nachricht des Patienten an die Apotheke zur Anfrage der Medikamentenabgabe mit AccessCode"
 Usage: #example
 * id = "a218a36e-f2fd-4603-ba67-c827acfef01b"
 * meta.tag[+].display = "Dispense Request from Patient to Pharmacy"
@@ -18,7 +19,8 @@ Usage: #example
 
 Instance: Communication_DispenseRequest_DiGA
 InstanceOf: GEM_ERP_PR_Communication_DispReq
-Title: "Communication message sent by patient to insurance company to request the dispensation of a DiGA by providing the AccessCode"
+Title: "DiGA-Zuweisung des Patienten an die Krankenkasse"
+Description: "Beispiel für eine Nachricht des Patienten an die Krankenkasse zur Anfrage der DiGA-Abgabe mit AccessCode"
 Usage: #example
 * id = "2be1c6ac-5d10-47f6-84ee-8318b2c22c76"
 * meta.tag[+].display = "Dispense Request from Patient to Health Care Provider"
@@ -52,7 +54,8 @@ Usage: #example
 
 Instance: INVALID-Communication-DispenseRequest-INV-flowType
 InstanceOf: GEM_ERP_PR_Communication_DispReq
-Title: "Communication message sent by patient to insurance company to request the dispensation of a DiGA by providing the AccessCode"
+Title: "UNGÜLTIG: DiGA-Abgabe-Anfrage mit falschem FlowType"
+Description: "Ungültiges Beispiel für eine DiGA-Abgabe-Anfrage mit inkorrektem FlowType zur Validierung"
 Usage: #example
 * meta.tag.display = "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
@@ -67,7 +70,8 @@ Usage: #example
 
 Instance: INVALID-Communication-DispenseRequest
 InstanceOf: GEM_ERP_PR_Communication_DispReq
-Title: "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
+Title: "UNGÜLTIG: Abgabe-Anfrage ohne Payload"
+Description: "Ungültiges Beispiel für eine Abgabe-Anfrage ohne erforderlichen Payload-Inhalt zur Validierung"
 Usage: #example
 * meta.tag.display = "Communication message sent by patient to pharmacy to request the dispensation of medicine by providing the AccessCode"
 * extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"

@@ -1,7 +1,8 @@
 
 Instance: ReceiptBundleComposition
 InstanceOf: GEM_ERP_PR_Composition
-Title:   "Composition for Receipt Bundle 'Quittung'"
+Title: "Zusammenstellung für Quittungs-Bundle"
+Description: "Beispiel für eine Zusammenstellung (Composition) für ein E-Rezept-Quittungs-Bundle"
 Usage: #inline
 * id = "c624cf47-e235-4624-af71-0a09dc9254dc"
 * extension[Beneficiary].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"

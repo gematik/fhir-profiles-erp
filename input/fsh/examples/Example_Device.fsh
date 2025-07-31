@@ -1,6 +1,7 @@
 Instance: ReceiptBundleDevice
 InstanceOf: GEM_ERP_PR_Device
-Title:   "Device for Receipt Bundle 'Quittung'"
+Title: "Gerät für Quittungs-Bundle"
+Description: "Beispiel für ein Gerät, das für die Erstellung von E-Rezept-Quittungen verwendet wird"
 Usage: #inline
 * id = "1"
 * status = #active
