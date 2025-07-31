@@ -1,8 +1,8 @@
 
 Instance: TaskInCreatedState
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task just created by Fachdienst via $create operation"
-Description:   "Task just created by Fachdienst via $create operation"
+Title: "Task erstellt durch Fachdienst via $create Operation"
+Description: "Beispiel für einen Task, der vom Fachdienst über die $create Operation erstellt wurde"
 Usage: #example
 * id = "b12eb5f7-91ce-4887-93c7-800454601377"
 * meta.tag.display = "Task in DRAFT state just created by Fachdienst via $create operation"
@@ -23,7 +23,8 @@ Usage: #example
 
 Instance: TaskInReadyState
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task activated by (Z)PVS/KIS via $activate operation that carries a dispensable ePrescription"
+Title: "Task aktiviert durch (Z)PVS/KIS via $activate Operation"
+Description: "Beispiel für einen Task, der durch (Z)PVS/KIS über die $activate Operation aktiviert wurde und ein einlösbares E-Rezept trägt"
 Usage: #example
 * id = "607255ed-ce41-47fc-aad3-cfce1c39963f"
 * meta.tag.display = "Task in READY state activated by (Z)PVS/KIS via $activate operation"
@@ -51,7 +52,8 @@ Usage: #example
 
 Instance: TaskIn-ProgressState
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task claimed by pharmacy via $accept operation"
+Title: "Task angenommen durch Apotheke via $accept Operation"
+Description: "Beispiel für einen Task, der von einer Apotheke über die $accept Operation angenommen wurde"
 Usage: #example
 * id = "d70932d1-9e1c-483c-b2d4-b7dced09b35e"
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
@@ -77,7 +79,8 @@ Usage: #example
 
 Instance: TaskIn-ProgressState-Dispensed
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
+Title: "Task angenommen und abgegeben via $dispense Operation"
+Description: "Beispiel für einen Task, der von einer Apotheke angenommen und dann über die $dispense Operation abgegeben wurde"
 Usage: #example
 * id = "9b48f82c-9c11-4a57-aa72-a805f9537a82"
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
@@ -107,7 +110,8 @@ Usage: #example
 
 Instance: TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task claimed by pharmacy and then dispensed via the $dispense operation"
+Title: "Task mit mehreren MedicationDispenses"
+Description: "Beispiel für einen Task, der von einer Apotheke angenommen und dann über die $dispense Operation mit mehreren MedicationDispenses abgegeben wurde"
 Usage: #example
 * id = "f5c21409-b84b-4125-8649-5630a00906b1"
 * meta.tag.display = "Task in IN-PROGRESS state claimed by pharmacy via $accept operation"
@@ -137,7 +141,8 @@ Usage: #example
 
 Instance: TaskInClosedState
 InstanceOf: GEM_ERP_PR_Task
-Title:   "Task finished by pharmacy via $close operation"
+Title: "Task abgeschlossen durch Apotheke via $close Operation"
+Description: "Beispiel für einen Task, der von einer Apotheke über die $close Operation abgeschlossen wurde"
 Usage: #example
 * id = "09330307-16ce-4cdc-810a-ca24ef80dde3"
 * meta.tag.display = "Task in COMPLETED state dispensed by pharmacy via $closed operation"

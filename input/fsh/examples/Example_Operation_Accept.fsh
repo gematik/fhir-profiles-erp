@@ -1,6 +1,7 @@
 Instance: ExampleOperationAcceptError
 InstanceOf: OperationOutcome
-Title: "Example Accept operation error response"
+Title: "Beispiel für Accept-Operation Fehlerantwort"
+Description: "Beispiel für eine Fehlerantwort bei der Accept-Operation eines E-Rezepts"
 Usage: #example
 * issue[+]
   * severity = #error

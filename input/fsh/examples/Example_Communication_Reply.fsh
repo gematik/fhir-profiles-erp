@@ -1,6 +1,7 @@
 Instance: Communication_Reply_Pharmacy
 InstanceOf: GEM_ERP_PR_Communication_Reply
-Title: "Communication message sent by pharmacy to patient in response to a previous Task-related message"
+Title: "Antwort-Nachricht der Apotheke an den Patienten"
+Description: "Beispiel für eine Antwort-Nachricht, die von der Apotheke an den Patienten als Antwort auf eine vorherige Task-bezogene Nachricht gesendet wird"
 Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
 * meta.tag[+].display = "Reply from Pharmacy to Patient"

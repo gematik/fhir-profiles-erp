@@ -1,8 +1,8 @@
 Instance: Example-MedicationDispense
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
-Title: "Example Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Beispiel Medikamentenabgabe"
+Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
@@ -14,8 +14,8 @@ Description: "Example of a Medication Dispense."
 Instance: Example-MedicationDispense-ToID
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #inline
-Title: "Example Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Beispiel Medikamentenabgabe mit ID"
+Description: "Beispiel für eine Medikamentenabgabe mit spezifischer ID zur Referenzierung"
 * id = "160.000.033.491.280.78"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
@@ -28,8 +28,8 @@ Description: "Example of a Medication Dispense."
 Instance: Example-MedicationDispense-Without-Medication
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
-Title: "Example Medication Dispense"
-Description: "Example of a Medication Dispense."
+Title: "Beispiel Medikamentenabgabe ohne Medikament"
+Description: "Beispiel für eine Medikamentenabgabe ohne Medikamentenreferenz"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
@@ -41,8 +41,8 @@ Description: "Example of a Medication Dispense."
 Instance: Example-MedicationDispense-2
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
-Title: "Example another Medication Dispense"
-Description: "Example of another Medication Dispense."
+Title: "Zweites Beispiel Medikamentenabgabe"
+Description: "Zweites Beispiel für eine Medikamentenabgabe mit anderen Eigenschaften"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"
@@ -54,8 +54,8 @@ Description: "Example of another Medication Dispense."
 Instance: Example-MedicationDispense-Kombipackung
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #example
-Title: "Example Kombipackung Medication Dispense"
-Description: "Example of a Kombipackung Medication Dispense."
+Title: "Beispiel Kombipackung Medikamentenabgabe"
+Description: "Beispiel für eine Medikamentenabgabe einer Kombipackung"
 * identifier[prescriptionID].value = "160.000.033.491.280.78"
 * subject.identifier.system = $identifier-kvid-10
 * subject.identifier.value = "X123456789"

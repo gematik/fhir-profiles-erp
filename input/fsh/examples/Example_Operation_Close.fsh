@@ -1,6 +1,7 @@
 Instance: ExampleOperationCloseError
 InstanceOf: OperationOutcome
-Title: "Example Close operation error response"
+Title: "Beispiel für Close-Operation Fehlerantwort"
+Description: "Beispiel für eine Fehlerantwort bei der Close-Operation mit FHIR-Validierungsfehlern"
 Usage: #example
 * issue[+]
   * severity = #error

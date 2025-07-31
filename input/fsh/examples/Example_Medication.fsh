@@ -1,7 +1,8 @@
 // Single Medication
 Instance: SumatripanMedication
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Sample Medication Sumatripan"
+Title: "Beispiel-Medikament Sumatriptan"
+Description: "Beispiel für ein Sumatriptan-Medikament mit vollständigen Eigenschaften"
 Usage: #example
 // Arzneimittelkategorie
 * extension[drugCategory].valueCoding = EPADrugCategoryCS#00
@@ -28,7 +29,8 @@ Usage: #example
 // Single Medication
 Instance: SumatripanMedicationWithID
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Sample Medication Sumatripan"
+Title: "Beispiel-Medikament Sumatriptan with ID"
+Description: "Beispiel für ein Sumatriptan-Medikament mit spezifischer ID für Referenzierung"
 Usage: #inline
 * id = "30e0e53f-275c-46f5-9e59-04d55735dabb"
 // Arzneimittelkategorie
@@ -55,7 +57,8 @@ Usage: #inline
 
 Instance: SimpleMedication
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Sample Simple Medication"
+Title: "Einfaches Beispiel-Medikament"
+Description: "Beispiel für ein einfaches Medikament mit minimalen Eigenschaften"
 Usage: #example
 
 // ChargenInformation
@@ -67,7 +70,8 @@ Usage: #example
 // Medication without system and code for ingredient.strengh.numerator/denominator
 Instance: Medication-Without-Strength-Code
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Medication Without code or system for Strength"
+Title: "Medikament ohne Stärke-Code"
+Description: "Beispiel für ein Medikament ohne System und Code für die Wirkstoffstärke"
 Usage: #example
 * code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
 * form = http://standardterms.edqm.eu#11210000 "Solution for infusion"
@@ -82,7 +86,8 @@ Usage: #example
 
 Instance: Medication-Without-Strength-Numerator
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Medication Without code or system for Strength"
+Title: "Medikament ohne Stärke-Numerator"
+Description: "Beispiel für ein Medikament ohne Code oder System für die Stärkenangabe im Numerator"
 Usage: #example
 * code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
 * form = http://standardterms.edqm.eu#11210000 "Solution for infusion"

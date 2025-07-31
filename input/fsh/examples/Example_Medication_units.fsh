@@ -1,6 +1,7 @@
 Instance: ExampleUnitMedication
 InstanceOf: GEM_ERP_PR_Medication
-Title:   "Example Unit Medication"
+Title: "Beispiel-Medikament mit Einheiten"
+Description: "Beispiel für ein Medikament mit spezifischen Maßeinheiten und Wirkstoffangaben"
 Usage: #example
 
 * ingredient.itemCodeableConcept.text = "Efeublätter, TE mit Ethanol/Ethanol-Wasser"
