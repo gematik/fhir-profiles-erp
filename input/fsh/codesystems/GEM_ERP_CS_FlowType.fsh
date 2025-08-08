@@ -1,7 +1,11 @@
 CodeSystem: GEM_ERP_CS_FlowType
 Id: GEM-ERP-CS-FlowType
 Title: "CodeSystem der Flowtypen"
-Description: "Zeigt die verschiedenen Typen des E-Rezepts entsprechend der Verordnungsformulare."
+Description: """
+Zeigt die verschiedenen Typen des E-Rezept Workflows entsprechend der Verordnungsformulare.
+
+WICHTIG: Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker!
+"""
 * insert CodeSystem(GEM_ERP_CS_FlowType)
 * ^content = #complete
 * #160 "Flowtype für Apothekenpflichtige Arzneimittel"
@@ -11,3 +15,4 @@ Description: "Zeigt die verschiedenen Typen des E-Rezepts entsprechend der Veror
 * #169 "Flowtype zur Workflow-Steuerung durch Leistungserbringer"
 * #200 "Flowtype für Apothekenpflichtige Arzneimittel (PKV)"
 * #209 "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
+// Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker!
