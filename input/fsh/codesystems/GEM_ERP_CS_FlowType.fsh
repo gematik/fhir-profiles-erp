@@ -4,7 +4,7 @@ Title: "CodeSystem der Flowtypen"
 Description: """
 Zeigt die verschiedenen Typen des E-Rezept Workflows entsprechend der Verordnungsformulare.
 
-WICHTIG: Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker!
+WICHTIG: Der Codebereich 9xx ist reserviert für Abrechnungsprozesse in Apotheken wie z.B. Pharmazeutische Dienstleistungen!
 """
 * insert CodeSystem(GEM_ERP_CS_FlowType)
 * ^content = #complete
@@ -15,4 +15,4 @@ WICHTIG: Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistunge
 * #169 "Flowtype zur Workflow-Steuerung durch Leistungserbringer"
 * #200 "Flowtype für Apothekenpflichtige Arzneimittel (PKV)"
 * #209 "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
-// Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker!
+// Der Codebereich 9xx ist reserviert für Abrechnungsprozesse in Apotheken wie z.B. Pharmazeutische Dienstleistungen!

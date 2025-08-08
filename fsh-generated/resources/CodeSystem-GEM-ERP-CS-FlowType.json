@@ -5,7 +5,7 @@
   "name": "GEM_ERP_CS_FlowType",
   "id": "GEM-ERP-CS-FlowType",
   "title": "CodeSystem der Flowtypen",
-  "description": "Zeigt die verschiedenen Typen des E-Rezept Workflows entsprechend der Verordnungsformulare.\n\nWICHTIG: Der Codebereich 9xx ist reserviert für Pharmazeutische Dienstleistungen bzw. Impfungen durch Apotheker!",
+  "description": "Zeigt die verschiedenen Typen des E-Rezept Workflows entsprechend der Verordnungsformulare.\n\nWICHTIG: Der Codebereich 9xx ist reserviert für Abrechnungsprozesse in Apotheken wie z.B. Pharmazeutische Dienstleistungen!",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
   "concept": [
     {
