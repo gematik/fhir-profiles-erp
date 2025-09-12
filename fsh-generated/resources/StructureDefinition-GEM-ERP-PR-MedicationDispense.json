@@ -49,6 +49,48 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationDispense.extension:renderedDosageInstruction",
+        "path": "MedicationDispense.extension",
+        "sliceName": "renderedDosageInstruction",
+        "short": "Dosierungsanweisung",
+        "definition": "Diese R5 backport Extension enthält die algorithmisch generierten gerenderten Dosierungsanweisungen, die für den Patienten bestimmt sind, um eine klare und verständliche Anweisung zur Einnahme des Medikaments zu geben.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction.value[x]",
+        "path": "MedicationDispense.extension.value[x]",
+        "short": "Hinweis: In der ersten Ausbaustufe des dgMP ist nur einfacher Text (String) zulässig; Markdown wird nicht unterstützt.",
+        "definition": "Abweichend von FHIR R5 (Typ Markdown) darf in der ersten Ausbaustufe des dgMP ausschließlich Klartext ohne Markdown‑Formatierungen (z. B. Überschriften, Listen, Links) geliefert werden."
+      },
+      {
+        "id": "MedicationDispense.extension:generatedDosageInstructionsMeta",
+        "path": "MedicationDispense.extension",
+        "sliceName": "generatedDosageInstructionsMeta",
+        "short": "Metadaten zu den generierten Dosierungsanweisungen",
+        "definition": "Diese Extension enthält zusätzliche Metadaten zu den automatisch generierten Dosierungsanweisungen, wie z.B. Informationen zur Generierung oder zum Ursprung der Daten.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "MedicationDispense.identifier",
         "path": "MedicationDispense.identifier",
         "short": "E-Rezept-ID",
