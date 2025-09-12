@@ -41,7 +41,7 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
   * system 1..1
   * value 1..1
 * intent = #order (exactly)
-* for ^short = "Kennung des Patienten (KVID or PKV-Identifier)"
+* for ^short = "Kennung des Patienten (KVID-Identifier)"
 * for.identifier only IdentifierKvid10
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..

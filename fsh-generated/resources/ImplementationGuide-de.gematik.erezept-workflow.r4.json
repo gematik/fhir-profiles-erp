@@ -915,10 +915,6 @@
       {
         "code": "releaselabel",
         "value": "ballot"
-      },
-      {
-        "code": "bundle-references-resolve",
-        "value": "false"
       }
     ]
   }

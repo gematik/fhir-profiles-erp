@@ -236,7 +236,7 @@
       {
         "id": "Task.for",
         "path": "Task.for",
-        "short": "Kennung des Patienten (KVID or PKV-Identifier)"
+        "short": "Kennung des Patienten (KVID-Identifier)"
       },
       {
         "id": "Task.for.identifier",
