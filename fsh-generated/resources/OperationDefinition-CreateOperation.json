@@ -3,7 +3,7 @@
   "id": "CreateOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition",
   "status": "draft",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "date": "2025-08-01",
   "name": "Create",
   "kind": "operation",

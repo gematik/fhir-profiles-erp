@@ -6,7 +6,7 @@
   "title": "ValueSet der Dokumenttyp-Codes",
   "description": "Art der Dokumente je nach Empfänger.",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "date": "2025-08-01",
   "publisher": "gematik GmbH",
   "contact": [

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensierung eines E-Rezepts",
   "status": "draft",

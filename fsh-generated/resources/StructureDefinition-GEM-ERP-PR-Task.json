@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Task",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "name": "GEM_ERP_PR_Task",
   "title": "Task für die Verwaltung des E-Rezept-Workflows",
   "status": "draft",

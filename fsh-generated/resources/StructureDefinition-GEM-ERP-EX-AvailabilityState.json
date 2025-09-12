@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-AvailabilityState",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "name": "GEM_ERP_EX_AvailabilityState",
   "status": "draft",
   "date": "2025-08-01",
