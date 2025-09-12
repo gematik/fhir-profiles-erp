@@ -618,6 +618,14 @@
       },
       {
         "reference": {
+          "reference": "Device/1"
+        },
+        "name": "Gerät für Quittungs-Bundle",
+        "description": "Beispiel für ein Gerät, das für die Erstellung von E-Rezept-Quittungen verwendet wird",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Secret"
         },
         "name": "Identifier-Profil für Secret",
@@ -907,6 +915,10 @@
       {
         "code": "releaselabel",
         "value": "ballot"
+      },
+      {
+        "code": "bundle-references-resolve",
+        "value": "false"
       }
     ]
   }

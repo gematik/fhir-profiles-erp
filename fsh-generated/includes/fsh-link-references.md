@@ -68,6 +68,7 @@
 [GEM_ERP_PR_Bundle_OP_Accept]: StructureDefinition-GEM-ERP-PR-Bundle-OP-Accept.html
 [GEM_ERP_PR_Device]: StructureDefinition-GEM-ERP-PR-Device.html
 [GEM_ERP_PR_Communication]: StructureDefinition-GEM-ERP-PR-Communication.html
+[1]: Device-1.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_AccessCode]: StructureDefinition-GEM-ERP-PR-AccessCode.html
 [GEM_ERP_PR_Communication_Representative]: StructureDefinition-GEM-ERP-PR-Communication-Representative.html
