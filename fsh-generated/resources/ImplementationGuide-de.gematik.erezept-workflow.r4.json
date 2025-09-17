@@ -265,10 +265,50 @@
       },
       {
         "reference": {
-          "reference": "MedicationDispense/Example-MedicationDispense-Dosage"
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-tageszeit"
         },
-        "name": "Beispiel Medikamentenabgabe mit Dosierung",
-        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung",
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach 4er Schema",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach 4er Schema",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-interval"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Interval",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Interval",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-comb-interval"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Kombination des Intervals",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Kombination des Intervals",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-comb-dayofweek"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Kombination des Wochentags",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Kombination des Wochentags",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-uhrzeit"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Uhrzeitbezug",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Uhrzeitbezug",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-weekday"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Wochentagsbezug",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Wochentagsbezug",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
       },
       {

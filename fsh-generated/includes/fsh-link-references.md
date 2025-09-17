@@ -22,7 +22,12 @@
 [ExampleOperationRejectError]: OperationOutcome-ExampleOperationRejectError.html
 [Example-MedicationDispense-Kombipackung]: MedicationDispense-Example-MedicationDispense-Kombipackung.html
 [Example-MedicationDispense]: MedicationDispense-Example-MedicationDispense.html
-[Example-MedicationDispense-Dosage]: MedicationDispense-Example-MedicationDispense-Dosage.html
+[Example-MedicationDispense-Dosage-tageszeit]: MedicationDispense-Example-MedicationDispense-Dosage-tageszeit.html
+[Example-MedicationDispense-Dosage-interval]: MedicationDispense-Example-MedicationDispense-Dosage-interval.html
+[Example-MedicationDispense-Dosage-comb-interval]: MedicationDispense-Example-MedicationDispense-Dosage-comb-interval.html
+[Example-MedicationDispense-Dosage-comb-dayofweek]: MedicationDispense-Example-MedicationDispense-Dosage-comb-dayofweek.html
+[Example-MedicationDispense-Dosage-uhrzeit]: MedicationDispense-Example-MedicationDispense-Dosage-uhrzeit.html
+[Example-MedicationDispense-Dosage-weekday]: MedicationDispense-Example-MedicationDispense-Dosage-weekday.html
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
