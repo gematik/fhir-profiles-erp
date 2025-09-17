@@ -41,32 +41,32 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.3",
+      "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "de.gematik.epa.medication",
-      "version": "1.1.5",
+      "version": "1.2.0",
       "uri": "https://gematik.de/fhir/epa-medication/ImplementationGuide/de.gematik.epa.medication",
       "id": "de_gematik_epa_medication"
     },
     {
       "packageId": "de.gematik.terminology",
-      "version": "1.0.6",
+      "version": "1.0.7",
       "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
       "id": "de_gematik_terminology"
     },
     {
       "packageId": "de.gematik.ti",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "uri": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
       "id": "de_gematik_ti"
     },
     {
       "packageId": "de.fhir.medication",
-      "version": "1.0.0-ballot",
-      "uri": "http://ig.fhir.de/igs/medication",
+      "version": "1.0.0",
+      "uri": "http://ig.fhir.de/igs/medication/ImplementationGuide/de.fhir.medication",
       "id": "de_fhir_medication"
     }
   ],
@@ -261,6 +261,14 @@
         },
         "name": "Beispiel Medikamentenabgabe",
         "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
       },
       {

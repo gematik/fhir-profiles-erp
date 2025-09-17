@@ -11,6 +11,37 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
 
+Instance: Example-MedicationDispense-Dosage
+InstanceOf: GEM_ERP_PR_MedicationDispense
+Usage: #example
+Title: "Beispiel Medikamentenabgabe mit Dosierung"
+Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung"
+* identifier[prescriptionID].value = "160.000.033.491.280.78"
+* subject.identifier.system = $identifier-kvid-10
+* subject.identifier.value = "X123456789"
+* performer.actor.identifier.system = $identifier-telematik-id
+* performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
+* insert Date(whenHandedOver)
+* medicationReference = Reference(SumatripanMedication)
+* extension[renderedDosageInstruction].valueMarkdown = "1-0-2-0 Stück"
+* extension[generatedDosageInstructionsMeta] 
+  * extension[language].valueCode = #de
+  * extension[algorithmVersion].valueString = "1.0.0"
+* dosageInstruction[+]
+  * timing.repeat
+    * when[+] = #EVE
+    * frequency = 1
+    * period = 1
+    * periodUnit = #d
+  * doseAndRate.doseQuantity = 2 $kbv-dosiereinheit#1 "Stück"
+* dosageInstruction[+]
+  * timing.repeat
+    * when[+] = #MORN
+    * frequency = 1
+    * period = 1
+    * periodUnit = #d
+  * doseAndRate.doseQuantity = 1 $kbv-dosiereinheit#1 "Stück"
+
 Instance: Example-MedicationDispense-ToID
 InstanceOf: GEM_ERP_PR_MedicationDispense
 Usage: #inline

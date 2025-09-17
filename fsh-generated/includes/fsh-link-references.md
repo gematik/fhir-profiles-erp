@@ -22,6 +22,7 @@
 [ExampleOperationRejectError]: OperationOutcome-ExampleOperationRejectError.html
 [Example-MedicationDispense-Kombipackung]: MedicationDispense-Example-MedicationDispense-Kombipackung.html
 [Example-MedicationDispense]: MedicationDispense-Example-MedicationDispense.html
+[Example-MedicationDispense-Dosage]: MedicationDispense-Example-MedicationDispense-Dosage.html
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
