@@ -11,6 +11,11 @@
 - `Ersetzt:` Profil `GEM-ERP-PR-Prescriptionid` durch `EPrescriptionId` aus dem ti.common-Paket ersetzt. Dies wirkt sich nicht in der Struktur der Instanz aus.
 - `Geändert:` Das Task-Profil verwendet nun das Identifier-Profil `GEM_ERP_PR_Secret`. Dies wirkt sich nicht in der Struktur der Instanz aus.
 
+### Operationsanpassungen
+- `Geändert:` Die $dispense Operation antwortet bei erfolgreichem Einstellen der Dispensierinformationen
+- `Entfernt:` DispenseOperation enthält nun keine output parameter mehr
+- `Entfernt:` Profil GEM_ERP_PR_PAR_DispenseOperation_Output wurde entfernt
+
 ### Terminologieänderungen
 - `(Breaking) Geändert:` Neue Display-Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`.
 - `Übersetzt:` Elementbezeichnungen und -definitionen wurden vollständig ins Deutsche übersetzt.
