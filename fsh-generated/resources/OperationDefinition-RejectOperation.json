@@ -3,7 +3,7 @@
   "id": "RejectOperation",
   "url": "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition",
   "status": "draft",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0-ballot2",
   "date": "2025-08-01",
   "name": "Reject",
   "kind": "operation",
