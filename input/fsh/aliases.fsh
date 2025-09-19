@@ -17,6 +17,7 @@ Alias: $kbv-dosiereinheit =  https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOS
 Alias: $identifier-kvid-10 = http://fhir.de/sid/gkv/kvid-10
 Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $generatedMeta = http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta
 
 // National Codings
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc

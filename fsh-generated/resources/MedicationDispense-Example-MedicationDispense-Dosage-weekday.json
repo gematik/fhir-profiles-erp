@@ -38,12 +38,12 @@
       "url": "http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta",
       "extension": [
         {
-          "url": "language",
-          "valueCode": "de-DE"
-        },
-        {
           "url": "algorithmVersion",
           "valueString": "1.0.0"
+        },
+        {
+          "url": "language",
+          "valueCode": "de-DE"
         }
       ]
     }

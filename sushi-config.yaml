@@ -20,7 +20,6 @@ dependencies:
   de.gematik.epa.medication: 1.2.0
   de.gematik.terminology: 1.0.7
   de.gematik.ti: 1.1.1
-  de.fhir.medication: 1.0.0
 
 applyExtensionMetadataToRoot: false
 
@@ -28,3 +27,8 @@ menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
   FHIR-Artefakte: artifacts.html
+
+parameters:
+  bundle-references-resolve: false
+  path-pages:
+    - input/content

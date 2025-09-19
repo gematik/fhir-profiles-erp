@@ -26,9 +26,6 @@ Description: "Verarbeitet Informationen über die Dispensierung eines E-Rezepts 
 * whenHandedOver 1..
 * whenHandedOver obeys workflow-abgabeDatumsFormat
 
-* dosageInstruction MS
-* dosageInstruction only DosageDgMP
-
 Invariant: workflow-abgabeDatumsFormat
 Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
 * severity = #error
