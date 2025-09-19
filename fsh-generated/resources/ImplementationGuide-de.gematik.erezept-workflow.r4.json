@@ -508,20 +508,6 @@
       },
       {
         "reference": {
-          "reference": "Parameters/ExampleDispenseOutputParametersError"
-        },
-        "name": "Example Dispense Parameters Response on Error",
-        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
-      },
-      {
-        "reference": {
-          "reference": "Parameters/ExampleDispenseOutputParametersSuccess"
-        },
-        "name": "Example Dispense Parameters Response on Success",
-        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
-      },
-      {
-        "reference": {
           "reference": "MedicationDispense/Example-MedicationDispense-Rezeptur"
         },
         "name": "Example Rezeptur Medication Dispense",
@@ -573,14 +559,6 @@
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Input"
         },
         "name": "GEM ERP PR DispenseOperation Input",
-        "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Output"
-        },
-        "name": "GEM ERP PR DispenseOperation Output",
         "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
         "exampleBoolean": false
       },
