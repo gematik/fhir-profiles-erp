@@ -62,13 +62,13 @@ jobs:
         working-directory: ${{ github.workspace }}
         run: |
           # Ensure path exists; fail early if missing
-          if [ ! -d "Resources/fsh-generated/resources" ]; then
-            echo "Pfad fehlt: Resources/fsh-generated/resources"
+          if [ ! -d "fsh-generated/resources" ]; then
+            echo "Pfad fehlt: fsh-generated/resources"
             exit 1
           fi
 
           # Tell git it's a path (not a revision) using -- 
-          git diff --exit-code -- Resources/fsh-generated/resources || (
+          git diff --exit-code -- fsh-generated/resources || (
             echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!"
             exit 1
           )
