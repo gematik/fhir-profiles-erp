@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "GEM_ERP_CS_FlowType",
   "id": "GEM-ERP-CS-FlowType",
@@ -37,8 +37,8 @@
       "display": "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
     }
   ],
-  "version": "1.6.0-ballot2",
-  "date": "2025-08-01",
+  "version": "1.6.0",
+  "date": "2025-09-24",
   "publisher": "gematik GmbH",
   "contact": [
     {
