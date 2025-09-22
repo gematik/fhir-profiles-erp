@@ -28,5 +28,6 @@ menu:
   Inhaltsverzeichnis: toc.html
   FHIR-Artefakte: artifacts.html
 
+parameters:
   path-pages:
     - input/content
