@@ -59,7 +59,16 @@ jobs:
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
 
       - name: Check for Uncommitted Changes
+        working-directory: ${{ github.workspace }}
         run: |
-          git diff --exit-code 'Resources/fsh-generated/resources'|| (echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!" && exit 1)
+          # Ensure path exists; fail early if missing
+          if [ ! -d "Resources/fsh-generated/resources" ]; then
+            echo "Pfad fehlt: Resources/fsh-generated/resources"
+            exit 1
+          fi
 
-
+          # Tell git it's a path (not a revision) using -- 
+          git diff --exit-code -- Resources/fsh-generated/resources || (
+            echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!"
+            exit 1
+          )
