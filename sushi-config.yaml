@@ -28,7 +28,5 @@ menu:
   Inhaltsverzeichnis: toc.html
   FHIR-Artefakte: artifacts.html
 
-parameters:
-  bundle-references-resolve: false
   path-pages:
     - input/content
