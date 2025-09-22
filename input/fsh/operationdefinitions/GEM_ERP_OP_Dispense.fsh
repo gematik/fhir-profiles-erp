@@ -10,7 +10,6 @@ Usage: #definition
 * resource = #Task
 
 * inputProfile = Canonical(GEM_ERP_PR_PAR_DispenseOperation_Input)
-* outputProfile = Canonical(GEM_ERP_PR_PAR_DispenseOperation_Output)
 
 // in
 * parameter[0]
@@ -40,30 +39,3 @@ Usage: #definition
     * use = #in
     * min = 1
     * max = "1"
-
-// out
-* parameter[+]
-  * name = #rxDispensation
-  * use = #out
-  * min = 1
-  * max = "*"
-  * documentation = "Die MedicationDispense, die von der Apotheke als Bestätigung übermittelt wurde, dass sie erfolgreich hochgeladen wurde."
-  * part[+]
-    * name = #medicationDispense
-    * type = #MedicationDispense
-    * use = #out
-    * min = 0
-    * max = "1"
-  * part[+]
-    * name = #medication
-    * type = #Medication
-    * use = #out
-    * min = 0
-    * max = "1"
-  * part[+]
-    * name = #operationOutcome
-    * use = #out
-    * min = 0
-    * max = "1"
-    * documentation = "Im Falle von Fehlern oder Problemen gibt der E-Rezept-Fachdienst ein OperationOutcome aus."
-    * type = #OperationOutcome

@@ -45,28 +45,6 @@ Title: "Example Dispense Parameters"
     * name = "medication"
     * resource = Medication-Kombipackung
 
-Instance: ExampleDispenseOutputParametersSuccess
-InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
-Usage: #example
-Title: "Example Dispense Parameters Response on Success"
-* parameter[rxDispensation]
-  * name = "rxDispensation"
-  * part[medicationDispense]
-    * name = "medicationDispense"
-    * resource = Example-MedicationDispense-ToID
-  * part[medication]
-    * name = "medication"
-    * resource = SumatripanMedicationWithID
-
-Instance: ExampleDispenseOutputParametersError
-InstanceOf: GEM_ERP_PR_PAR_DispenseOperation_Output
-Usage: #example
-Title: "Example Dispense Parameters Response on Error"
-* parameter[rxDispensation]
-  * name = "rxDispensation"
-  * part[operationOutcome]
-    * name = "operationOutcome"
-    * resource = ExampleOperationDispenseError
 
 /*
 Instance: INVALID-ExampleDispenseInputParametersWithoutMedication

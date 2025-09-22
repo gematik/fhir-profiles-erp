@@ -54,8 +54,6 @@
 [ExampleDispenseInputParameters]: Parameters-ExampleDispenseInputParameters.html
 [ExampleDispenseInputParametersMultipleMedicationDispenses]: Parameters-ExampleDispenseInputParametersMultipleMedicationDispenses.html
 [ExampleDispenseInputParametersKombipackung]: Parameters-ExampleDispenseInputParametersKombipackung.html
-[ExampleDispenseOutputParametersError]: Parameters-ExampleDispenseOutputParametersError.html
-[ExampleDispenseOutputParametersSuccess]: Parameters-ExampleDispenseOutputParametersSuccess.html
 [Example-MedicationDispense-Rezeptur]: MedicationDispense-Example-MedicationDispense-Rezeptur.html
 [GEM_ERP_PR_PAR_AcceptOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.html
 [GEM_ERP_PR_PAR_ActivateOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Output.html
@@ -63,7 +61,6 @@
 [GEM_ERP_PR_PAR_CloseOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Output.html
 [GEM_ERP_PR_PAR_CreateOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.html
 [GEM_ERP_PR_PAR_DispenseOperation_Input]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.html
-[GEM_ERP_PR_PAR_DispenseOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Output.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.html
