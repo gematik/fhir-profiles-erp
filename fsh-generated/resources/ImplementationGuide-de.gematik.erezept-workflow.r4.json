@@ -937,10 +937,6 @@
         "value": "release"
       },
       {
-        "code": "bundle-references-resolve",
-        "value": "false"
-      },
-      {
         "code": "path-pages",
         "value": "input/content"
       }
