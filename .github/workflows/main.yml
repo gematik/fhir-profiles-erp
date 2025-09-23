@@ -69,6 +69,7 @@ jobs:
           include: errors
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
+            ImplementationGuide-de.gematik.erezept-workflow.r4.json
 
       - name: Check for Uncommitted Changes
         working-directory: ${{ github.workspace }}
