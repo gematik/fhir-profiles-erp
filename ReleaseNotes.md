@@ -4,6 +4,8 @@
 
 ## Release 1.6.0 (2025-09-30)
 
+- `(breaking) Geändert:` alle Angaben von meta.profile müssen die Version `1.6` als Suffix setzen
+
 ### Profiländerungen
 - `Neu:` Einführung eines generischen und abstrakten Communication-Profils. Dadurch können Spezifikationen für alle Elemente zentral gepflegt werden. Bestehende Communication-Profile leiten davon ab und übernehmen die definierten Eigenschaften. Dies hat keine Auswirkungen auf Strukturen bestehender Communictaion Profile.
 - `Entfernt:` Nicht genutzte Extension `GEM_ERP_EX_SubstitutionAllowedType` entfernt.
@@ -11,8 +13,12 @@
 - `Ersetzt:` Profil `GEM-ERP-PR-Prescriptionid` durch `EPrescriptionId` aus dem ti.common-Paket ersetzt. Dies wirkt sich nicht in der Struktur der Instanz aus.
 - `Geändert:` Das Task-Profil verwendet nun das Identifier-Profil `GEM_ERP_PR_Secret`. Dies wirkt sich nicht in der Struktur der Instanz aus.
 
+### Strukturierte Dosierungen
+- `Neu:` mit dem Profil `GEM_ERP_PR_MedicationDispense` ist es nun möglich strukturierte Angaben zur Dosierung zu tätigen. Informationen zur Verwendung können im [Medication IG](https://ig.fhir.de/igs/medication/1.0.0/) der HL7 Deutschland eingesehen werden
+- `(breaking) Geändert:` der constraint `workflow-dosageExtensionBeiDosierung` in `GEM_ERP_PR_MedicationDispense` erfordert die Angabe der Extensions für strukturierte Dosierungen, wenn eine Angabe zur Dosierung erfolgt ist.
+
 ### Operationsanpassungen
-- `(Breaking) Geändert:` Die $dispense Operation antwortet bei erfolgreichem Einstellen der Dispensierinformationen
+- `(breaking) Geändert:` Die $dispense Operation antwortet bei erfolgreichem Einstellen der Dispensierinformationen
 - `Entfernt:` DispenseOperation enthält nun keine output parameter mehr
 - `Entfernt:` Profil GEM_ERP_PR_PAR_DispenseOperation_Output wurde entfernt
 
