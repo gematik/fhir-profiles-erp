@@ -2,7 +2,7 @@ Instance: ReceiptBundleDevice
 InstanceOf: GEM_ERP_PR_Device
 Title: "Gerät für Quittungs-Bundle"
 Description: "Beispiel für ein Gerät, das für die Erstellung von E-Rezept-Quittungen verwendet wird"
-Usage: #inline
+Usage: #example
 * id = "1"
 * status = #active
 * serialNumber = "1.14.0"

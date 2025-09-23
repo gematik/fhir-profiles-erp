@@ -25,6 +25,7 @@
           {
             "code": "L01DB01",
             "system": "http://fhir.de/CodeSystem/bfarm/atc",
+            "version": "2025",
             "display": "Doxorubicin"
           }
         ]

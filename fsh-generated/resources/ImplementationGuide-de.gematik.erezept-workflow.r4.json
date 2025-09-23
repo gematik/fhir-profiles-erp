@@ -2,10 +2,10 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.erezept-workflow.r4",
   "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0",
   "name": "ERezeptWorkflow",
   "title": "E-Rezept Workflow",
-  "status": "draft",
+  "status": "active",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -41,33 +41,27 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.3",
+      "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "de.gematik.epa.medication",
-      "version": "1.1.5",
+      "version": "1.2.0",
       "uri": "https://gematik.de/fhir/epa-medication/ImplementationGuide/de.gematik.epa.medication",
       "id": "de_gematik_epa_medication"
     },
     {
       "packageId": "de.gematik.terminology",
-      "version": "1.0.6",
+      "version": "1.0.7",
       "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
       "id": "de_gematik_terminology"
     },
     {
       "packageId": "de.gematik.ti",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "uri": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
       "id": "de_gematik_ti"
-    },
-    {
-      "packageId": "de.fhir.medication",
-      "version": "1.0.0-ballot",
-      "uri": "http://ig.fhir.de/igs/medication/ImplementationGuide/de.fhir.medication",
-      "id": "de_fhir_medication"
     }
   ],
   "definition": {
@@ -261,6 +255,54 @@
         },
         "name": "Beispiel Medikamentenabgabe",
         "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-tageszeit"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach 4er Schema",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach 4er Schema",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-interval"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Interval",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Interval",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-comb-interval"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Kombination des Intervals",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Kombination des Intervals",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-comb-dayofweek"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Kombination des Wochentags",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Kombination des Wochentags",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-uhrzeit"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Uhrzeitbezug",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Uhrzeitbezug",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/Example-MedicationDispense-Dosage-weekday"
+        },
+        "name": "Beispiel Medikamentenabgabe mit Dosierung nach Wochentagsbezug",
+        "description": "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben und Dosierung nach Wochentagsbezug",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
       },
       {
@@ -466,20 +508,6 @@
       },
       {
         "reference": {
-          "reference": "Parameters/ExampleDispenseOutputParametersError"
-        },
-        "name": "Example Dispense Parameters Response on Error",
-        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
-      },
-      {
-        "reference": {
-          "reference": "Parameters/ExampleDispenseOutputParametersSuccess"
-        },
-        "name": "Example Dispense Parameters Response on Success",
-        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Output"
-      },
-      {
-        "reference": {
           "reference": "MedicationDispense/Example-MedicationDispense-Rezeptur"
         },
         "name": "Example Rezeptur Medication Dispense",
@@ -531,14 +559,6 @@
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Input"
         },
         "name": "GEM ERP PR DispenseOperation Input",
-        "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Output"
-        },
-        "name": "GEM ERP PR DispenseOperation Output",
         "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
         "exampleBoolean": false
       },
@@ -615,6 +635,14 @@
         "name": "Generische Workflow-Communication",
         "description": "Diese Communication beschreibt Felder und Anforderungen für alle Communications im Workflow-Paket.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Device/1"
+        },
+        "name": "Gerät für Quittungs-Bundle",
+        "description": "Beispiel für ein Gerät, das für die Erstellung von E-Rezept-Quittungen verwendet wird",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
       },
       {
         "reference": {
@@ -906,7 +934,11 @@
       },
       {
         "code": "releaselabel",
-        "value": "ballot"
+        "value": "release"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/content"
       }
     ]
   }

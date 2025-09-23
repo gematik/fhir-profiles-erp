@@ -11,11 +11,13 @@ Alias: $KBV_EX_ERP_Medication_Ingredient_Form = https://fhir.kbv.de/StructureDef
 Alias: $KBV_EX_ERP_Medication_Ingredient_Amount = https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Ingredient_Amount
 Alias: $KBV_EX_Base_Medication_Type = https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type 
 Alias: $KBV_EX_ERP_Medication_Normgroesse = http://fhir.de/StructureDefinition/normgroesse
+Alias: $kbv-dosiereinheit =  https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT
 
 // DE-Basisprofile
 Alias: $identifier-kvid-10 = http://fhir.de/sid/gkv/kvid-10
 Alias: $identifier-telematik-id = https://gematik.de/fhir/sid/telematik-id
 Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $generatedMeta = http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta
 
 // National Codings
 Alias: $cs-atc-de = http://fhir.de/CodeSystem/bfarm/atc
@@ -35,3 +37,6 @@ Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_
 // International
 Alias: $sct = http://snomed.info/sct
 Alias: $cs-ucum = http://unitsofmeasure.org
+
+// R5 Backport
+Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction

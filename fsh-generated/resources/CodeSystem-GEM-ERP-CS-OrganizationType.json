@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "GEM_ERP_CS_OrganizationType",
   "id": "GEM-ERP-CS-OrganizationType",
@@ -17,8 +17,8 @@
       "display": "Kostenträger"
     }
   ],
-  "version": "1.6.0-ballot1",
-  "date": "2025-08-01",
+  "version": "1.6.0",
+  "date": "2025-09-24",
   "publisher": "gematik GmbH",
   "contact": [
     {

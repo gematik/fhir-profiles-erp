@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-  "version": "1.6.0-ballot1",
+  "version": "1.6.0",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensierung eines E-Rezepts",
-  "status": "draft",
-  "date": "2025-08-01",
+  "status": "active",
+  "date": "2025-09-24",
   "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -16,6 +16,19 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "MedicationDispense",
+        "path": "MedicationDispense",
+        "constraint": [
+          {
+            "key": "workflow-dosageExtensionBeiDosierung",
+            "severity": "error",
+            "human": "Wenn eine Dosierung angegeben wurde, muss der generierte Dosierungstext, sowie die Metainformationen zur Generierung angegeben werden.",
+            "expression": "dosageInstruction.exists() implies extension.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction').exists() and extension.where(url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta').exists()",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+          }
+        ]
+      },
       {
         "id": "MedicationDispense.meta",
         "path": "MedicationDispense.meta",
@@ -128,18 +141,6 @@
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
             "severity": "error",
             "expression": "toString().length()=10"
-          }
-        ]
-      },
-      {
-        "id": "MedicationDispense.dosageInstruction",
-        "path": "MedicationDispense.dosageInstruction",
-        "type": [
-          {
-            "code": "Dosage",
-            "profile": [
-              "http://ig.fhir.de/igs/medication/StructureDefinition/DosageDgMP"
-            ]
           }
         ]
       }

@@ -24,42 +24,64 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: '20'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: '8.0.414'
       
       # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
       - name: Setup Java JDK
         uses: actions/setup-java@v3
         with:
-          distribution: 'microsoft'
+          distribution: temurin
           java-version: '17'
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.6.29
+        uses: FirelyTeam/firely-terminal-pipeline@v0.7.15
         with:
           PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources/
           FIRELY_TERMINAL_VERSION: 3.4.0
           #PATH_TO_EXAMPLES: Examples
           #PATH_TO_QUALITY_CONTROL_RULES: qc/custom
-          DOTNET_VALIDATION_ENABLED: true
+          DOTNET_VALIDATION_ENABLED: false
           JAVA_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true
-          #JAVA_VALIDATOR_VERSION: 6.3.15
+          JAVA_VALIDATION_OPTIONS: >
+            -allow-example-urls true
+            -output validation.json
+            -html-output validation.html
+            -ig input/externalDependencies
+          JAVA_VALIDATOR_VERSION: 6.6.7
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
-          #SUSHI_VERSION: 3.16.0
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
+          SUSHI_VERSION: 3.16.5
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA #VALIDATION_EXAMPLES_JAVA
+
+      - name: Convert Validation Report
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        with:
+          bundle-file: validation.json
+          include: errors
+          filters: |
+            # Struktur: fileName|messageId|detailsWildcard|location
+            ImplementationGuide-de.gematik.erezept-workflow.r4.json
 
       - name: Check for Uncommitted Changes
+        working-directory: ${{ github.workspace }}
         run: |
-          git diff --exit-code 'Resources/fsh-generated/resources'|| (echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!" && exit 1)
+          # Ensure path exists; fail early if missing
+          if [ ! -d "fsh-generated/resources" ]; then
+            echo "Pfad fehlt: fsh-generated/resources"
+            exit 1
+          fi
 
-
+          # Tell git it's a path (not a revision) using -- 
+          git diff --exit-code -- fsh-generated/resources || (
+            echo "Es gibt Änderungen durch die Pipeline. Lokale Sushi Konfiguration prüfen!"
+            exit 1
+          )

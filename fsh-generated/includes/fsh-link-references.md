@@ -22,6 +22,12 @@
 [ExampleOperationRejectError]: OperationOutcome-ExampleOperationRejectError.html
 [Example-MedicationDispense-Kombipackung]: MedicationDispense-Example-MedicationDispense-Kombipackung.html
 [Example-MedicationDispense]: MedicationDispense-Example-MedicationDispense.html
+[Example-MedicationDispense-Dosage-tageszeit]: MedicationDispense-Example-MedicationDispense-Dosage-tageszeit.html
+[Example-MedicationDispense-Dosage-interval]: MedicationDispense-Example-MedicationDispense-Dosage-interval.html
+[Example-MedicationDispense-Dosage-comb-interval]: MedicationDispense-Example-MedicationDispense-Dosage-comb-interval.html
+[Example-MedicationDispense-Dosage-comb-dayofweek]: MedicationDispense-Example-MedicationDispense-Dosage-comb-dayofweek.html
+[Example-MedicationDispense-Dosage-uhrzeit]: MedicationDispense-Example-MedicationDispense-Dosage-uhrzeit.html
+[Example-MedicationDispense-Dosage-weekday]: MedicationDispense-Example-MedicationDispense-Dosage-weekday.html
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
@@ -48,8 +54,6 @@
 [ExampleDispenseInputParameters]: Parameters-ExampleDispenseInputParameters.html
 [ExampleDispenseInputParametersMultipleMedicationDispenses]: Parameters-ExampleDispenseInputParametersMultipleMedicationDispenses.html
 [ExampleDispenseInputParametersKombipackung]: Parameters-ExampleDispenseInputParametersKombipackung.html
-[ExampleDispenseOutputParametersError]: Parameters-ExampleDispenseOutputParametersError.html
-[ExampleDispenseOutputParametersSuccess]: Parameters-ExampleDispenseOutputParametersSuccess.html
 [Example-MedicationDispense-Rezeptur]: MedicationDispense-Example-MedicationDispense-Rezeptur.html
 [GEM_ERP_PR_PAR_AcceptOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Accept-Operation-Output.html
 [GEM_ERP_PR_PAR_ActivateOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Activate-Operation-Output.html
@@ -57,7 +61,6 @@
 [GEM_ERP_PR_PAR_CloseOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Output.html
 [GEM_ERP_PR_PAR_CreateOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.html
 [GEM_ERP_PR_PAR_DispenseOperation_Input]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.html
-[GEM_ERP_PR_PAR_DispenseOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Output.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.html
@@ -68,6 +71,7 @@
 [GEM_ERP_PR_Bundle_OP_Accept]: StructureDefinition-GEM-ERP-PR-Bundle-OP-Accept.html
 [GEM_ERP_PR_Device]: StructureDefinition-GEM-ERP-PR-Device.html
 [GEM_ERP_PR_Communication]: StructureDefinition-GEM-ERP-PR-Communication.html
+[1]: Device-1.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_AccessCode]: StructureDefinition-GEM-ERP-PR-AccessCode.html
 [GEM_ERP_PR_Communication_Representative]: StructureDefinition-GEM-ERP-PR-Communication-Representative.html
