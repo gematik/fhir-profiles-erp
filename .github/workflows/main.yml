@@ -24,21 +24,21 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: '20'
         
       # Install .NET runtime
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: '8.0.414'
       
       # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
       - name: Setup Java JDK
         uses: actions/setup-java@v3
         with:
-          distribution: 'microsoft'
+          distribution: temurin
           java-version: '17'
         
       - name: Firely.Terminal (GitHub Actions)
