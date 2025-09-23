@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensierung eines E-Rezepts",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

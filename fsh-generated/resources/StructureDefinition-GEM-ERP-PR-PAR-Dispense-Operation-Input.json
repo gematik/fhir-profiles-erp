@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_PAR_DispenseOperation_Input",
   "title": "GEM ERP PR DispenseOperation Input",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

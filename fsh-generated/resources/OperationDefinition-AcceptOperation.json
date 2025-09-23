@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition",
   "status": "draft",
   "version": "1.6.0",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "name": "Accept",
   "kind": "operation",
   "affectsState": true,

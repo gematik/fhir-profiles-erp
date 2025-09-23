@@ -6,7 +6,7 @@
   "name": "GEM_ERP_EX_LastMedicationDispense",
   "title": "Letzte Medikamentenabgabe",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

@@ -7,7 +7,7 @@
   "description": "Art des Verfügbarkeitsstatus für die Verfügbarkeitsanfrage von Medikamenten",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus",
   "version": "1.6.0",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "publisher": "gematik GmbH",
   "contact": [
     {

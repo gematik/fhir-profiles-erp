@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Communication",
   "title": "Generische Workflow-Communication",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Diese Communication beschreibt Felder und Anforderungen für alle Communications im Workflow-Paket.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

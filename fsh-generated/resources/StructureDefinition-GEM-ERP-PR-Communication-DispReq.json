@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Anfrage zur Einlösung des E-Rezepts",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

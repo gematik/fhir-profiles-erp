@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

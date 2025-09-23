@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Bundle",
   "title": "Dokumentenbündel für Quittung",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "description": "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)",
   "fhirVersion": "4.0.1",
   "kind": "resource",

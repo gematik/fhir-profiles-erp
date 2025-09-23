@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Signature",
   "title": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
   "status": "active",
-  "date": "2025-09-24",
+  "date": "2025-09-25",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
