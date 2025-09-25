@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "GEM_ERP_EX_DeepLink",
   "title": "DiGA-DeepLink",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Enthält Informationen zum Deep Link für eine DiGA.",
   "fhirVersion": "4.0.1",

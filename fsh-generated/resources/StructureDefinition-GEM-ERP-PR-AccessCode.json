@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "GEM_ERP_PR_AccessCode",
   "title": "Identifier-Profil für Verschreibungs-IDs",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
   "fhirVersion": "4.0.1",

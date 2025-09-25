@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "GEM_ERP_VS_FlowType",
   "id": "GEM-ERP-VS-FlowType",
   "title": "ValueSet der FlowType-Codes",

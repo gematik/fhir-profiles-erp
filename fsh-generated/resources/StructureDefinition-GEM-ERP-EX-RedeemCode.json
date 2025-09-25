@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "GEM_ERP_EX_RedeemCode",
   "title": "DiGA-Einlösecode",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Gibt den Einlösecode für eine DiGA an.",
   "fhirVersion": "4.0.1",

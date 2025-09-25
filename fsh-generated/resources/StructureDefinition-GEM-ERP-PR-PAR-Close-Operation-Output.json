@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "GEM_ERP_PR_PAR_CloseOperation_Output",
   "title": "GEM ERP PR CloseOperation Output",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Dieses Profil definiert die Parameter für die Ausgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $close-Operation verwendet werden.",
   "fhirVersion": "4.0.1",

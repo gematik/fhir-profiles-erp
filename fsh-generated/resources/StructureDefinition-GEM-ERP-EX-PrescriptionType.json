@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
   "version": "1.6.0",
   "name": "GEM_ERP_EX_PrescriptionType",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Definiert den Typ eines Rezepts.",
   "fhirVersion": "4.0.1",

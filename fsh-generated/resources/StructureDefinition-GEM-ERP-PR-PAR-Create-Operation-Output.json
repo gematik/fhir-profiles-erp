@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "GEM_ERP_PR_PAR_CreateOperation_Output",
   "title": "GEM ERP PR CreateOperation Output",
-  "status": "active",
+  "status": "draft",
   "date": "2025-09-25",
   "description": "Dieses Profil definiert die Parameter für die Erstellung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $create-Operation verwendet werden.",
   "fhirVersion": "4.0.1",

@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "name": "ERezeptWorkflow",
   "title": "E-Rezept Workflow",
-  "status": "active",
+  "status": "draft",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -934,7 +934,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "release"
+        "value": "ci-build"
       },
       {
         "code": "path-pages",
