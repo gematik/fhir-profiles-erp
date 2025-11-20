@@ -38,3 +38,6 @@ After successfull installation run to build the resources:
 ```bash
 sushi ./Resources
 ```
+
+## License
+See [License](./LICENSE)
