@@ -41,3 +41,6 @@ sushi ./Resources
 
 ## License
 See [License](./LICENSE)
+
+## Additional Notes and Disclaimer from gematik GmbH
+See [License](./LICENSE)
