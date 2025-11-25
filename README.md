@@ -5,6 +5,8 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [License](#license)
+- [Additional Notes and Disclaimer from gematik GmbH](#additional-notes-and-disclaimer-from-gematik-gmbh)
 
 ## About <a name = "about"></a>
 
@@ -40,13 +42,15 @@ sushi ./Resources
 ```
 
 ## License
+
 Copyright 2022-2025 gematik GmbH
 
 Apache License, Version 2.0
 
-See the `link:./LICENSE[LICENSE]` for the specific language governing permissions and limitations under the License
+See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License
 
 ## Additional Notes and Disclaimer from gematik GmbH
+
 1. Copyright notice: Each published work result is accompanied by an explicit statement of the license conditions for use. These are regularly typical conditions in connection with open source or free software. Programs described/provided/linked here are free software, unless otherwise stated.
 2. Permission notice: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     1. The copyright notice (Item 1) and the permission notice (Item 2) shall be included in all copies or substantial portions of the Software.
