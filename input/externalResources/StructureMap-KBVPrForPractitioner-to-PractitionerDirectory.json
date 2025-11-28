@@ -1,0 +1,418 @@
+{
+  "resourceType": "StructureMap",
+  "id": "E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap87afa9d1",
+  "url": "https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory/StructureMap/E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap",
+  "name": "E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap",
+  "status": "active",
+  "version": "1.0",
+  "date": "2025-11-28",
+  "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+  "structure": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Practitioner",
+      "mode": "source",
+      "alias": "KBVPRFORPractitioner"
+    },
+    {
+      "url": "https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory",
+      "mode": "target",
+      "alias": "PractitionerDirectory"
+    }
+  ],
+  "group": [
+    {
+      "name": "E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap",
+      "typeMode": "types",
+      "documentation": "Mapping generated for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+      "input": [
+        {
+          "name": "KBVPRFORPractitioner",
+          "type": "KBVPRFORPractitioner",
+          "mode": "source"
+        },
+        {
+          "name": "PractitionerDirectory",
+          "type": "PractitionerDirectory",
+          "mode": "target"
+        }
+      ],
+      "rule": [
+        {
+          "name": "PractitionerIdb90bbd64",
+          "documentation": "Automatic copy",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "id",
+              "variable": "srcKBVPRFORPractitionerId78e85b84"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "id",
+              "variable": "tgtPractitionerDirectoryId8b20355f",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFORPractitionerId78e85b84"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PractitionerIdentifierdd7a4a22",
+          "documentation": "Automatic copy",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "identifier",
+              "variable": "srcKBVPRFORPractitionerIdentifierd46d78b7"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtPractitionerDirectoryIdentifierbcb1f07a",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFORPractitionerIdentifierd46d78b7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PractitionerIdentifierLanrdad549a6",
+          "documentation": "Copied from 'Practitioner.identifier:ANR'",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "identifier",
+              "variable": "srcKBVPRFORPractitionerIdentifierAnr3c836155"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtPractitionerDirectoryIdentifierLanrc79324c3",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFORPractitionerIdentifierAnr3c836155"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PractitionerName9470411e",
+          "documentation": "Automatic copy",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "name",
+              "variable": "srcKBVPRFORPractitionerNamef7e47166"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "name",
+              "variable": "tgtPractitionerDirectoryName0e536837",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFORPractitionerNamef7e47166"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PractitionerQualificationCode37012069",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerQualificationCode37012069",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "qualification",
+                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerQualificationCode37012069",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
+                      "element": "code",
+                      "variable": "srcKBVPRFORPractitionerQualificationCodef2f76d4d"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryQualification6da58337",
+                      "contextType": "variable",
+                      "element": "code",
+                      "variable": "tgtPractitionerDirectoryQualificationCodef1bbc2f9",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcKBVPRFORPractitionerQualificationCodef2f76d4d"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ],
+          "documentation": "Automatic copy"
+        },
+        {
+          "name": "PractitionerQualificationIdbd899a43",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerQualificationIdbd899a43",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "qualification",
+                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerQualificationIdbd899a43",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
+                      "element": "id",
+                      "variable": "srcKBVPRFORPractitionerQualificationId7baeda55"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryQualification6da58337",
+                      "contextType": "variable",
+                      "element": "id",
+                      "variable": "tgtPractitionerDirectoryQualificationId39aa13c5",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcKBVPRFORPractitionerQualificationId7baeda55"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ],
+          "documentation": "Automatic copy"
+        },
+        {
+          "name": "PractitionerQualificationIdentifiera0f351ca",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerQualificationIdentifiera0f351ca",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "qualification",
+                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerQualificationIdentifiera0f351ca",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
+                      "element": "identifier",
+                      "variable": "srcKBVPRFORPractitionerQualificationIdentifier1076d039"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryQualification6da58337",
+                      "contextType": "variable",
+                      "element": "identifier",
+                      "variable": "tgtPractitionerDirectoryQualificationIdentifier0aec3baa",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcKBVPRFORPractitionerQualificationIdentifier1076d039"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ],
+          "documentation": "Automatic copy"
+        },
+        {
+          "name": "PractitionerQualificationIssuer16de1a10",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerQualificationIssuer16de1a10",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "qualification",
+                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerQualificationIssuer16de1a10",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
+                      "element": "issuer",
+                      "variable": "srcKBVPRFORPractitionerQualificationIssuerd9537450"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryQualification6da58337",
+                      "contextType": "variable",
+                      "element": "issuer",
+                      "variable": "tgtPractitionerDirectoryQualificationIssuer3e73c633",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcKBVPRFORPractitionerQualificationIssuerd9537450"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ],
+          "documentation": "Automatic copy"
+        },
+        {
+          "name": "PractitionerQualificationPeriode7fc59e2",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerQualificationPeriode7fc59e2",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "qualification",
+                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerQualificationPeriode7fc59e2",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
+                      "element": "period",
+                      "variable": "srcKBVPRFORPractitionerQualificationPeriod6a8b5dbb"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryQualification6da58337",
+                      "contextType": "variable",
+                      "element": "period",
+                      "variable": "tgtPractitionerDirectoryQualificationPerioda5a689a9",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcKBVPRFORPractitionerQualificationPeriod6a8b5dbb"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ],
+          "documentation": "Automatic copy"
+        }
+      ]
+    }
+  ]
+}
