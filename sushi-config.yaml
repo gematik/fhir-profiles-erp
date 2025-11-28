@@ -27,6 +27,7 @@ menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
   FHIR-Artefakte: artifacts.html
+  Mapping-Plan: structuremap-implementierungsplan.html
 
 parameters:
   path-pages:

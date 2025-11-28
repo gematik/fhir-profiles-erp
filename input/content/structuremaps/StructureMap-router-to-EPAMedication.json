@@ -43,7 +43,7 @@
           "source": [
             {
               "context": "KBVPRERPMedicationCompounding",
-              "condition": "meta.profile.exists(p | p = 'https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Compounding')",
+              "condition": "meta.profile.exists(p | p.matches('https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Compounding.*'))",
               "type": "Medication",
               "variable": "KBVPRERPMedicationCompoundingKbvPrErpMedicationCompoundingRouted"
             }
@@ -74,7 +74,7 @@
           "source": [
             {
               "context": "KBVPRERPMedicationCompounding",
-              "condition": "meta.profile.exists(p | p = 'https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_FreeText')",
+              "condition": "meta.profile.exists(p | p.matches('https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_FreeText.*'))",
               "type": "Medication",
               "variable": "KBVPRERPMedicationCompoundingKbvPrErpMedicationFreetextRouted"
             }
@@ -105,7 +105,7 @@
           "source": [
             {
               "context": "KBVPRERPMedicationCompounding",
-              "condition": "meta.profile.exists(p | p = 'https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Ingredient')",
+              "condition": "meta.profile.exists(p | p.matches('https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Ingredient.*'))",
               "type": "Medication",
               "variable": "KBVPRERPMedicationCompoundingKbvPrErpMedicationIngredientRouted"
             }
@@ -136,7 +136,7 @@
           "source": [
             {
               "context": "KBVPRERPMedicationCompounding",
-              "condition": "meta.profile.exists(p | p = 'https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN')",
+              "condition": "meta.profile.exists(p | p.matches('https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_PZN.*'))",
               "type": "Medication",
               "variable": "KBVPRERPMedicationCompoundingKbvPrErpMedicationPznRouted"
             }
