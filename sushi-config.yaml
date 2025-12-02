@@ -31,7 +31,9 @@ menu:
 
 parameters:
   path-resource:
-    - input/resources
+    - input/resources/structuremaps
+    - input/resources/kbv-bundles
+    - input/resources/transformed-kbv-bundles
   path-pages:
     - input/content
   autoload-resources: true

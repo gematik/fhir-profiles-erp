@@ -83,4 +83,21 @@
 
 ### KBV Medication → EPA Medication
 
-*Keine Daten vorhanden.*
+| KBV Pfad | EPA Pfad | Wert |
+| --- | --- | --- |
+| `Medication.code.coding[0].code` | `Medication.code.coding[0].code` | `11219196` |
+| `Medication.code.coding[0].system` | `Medication.code.coding[0].system` | `http://fhir.de/CodeSystem/ifa/pzn` |
+| `Medication.code.coding[0].code` | `Medication.code.coding[1].code` | `11219196` |
+| `Medication.code.coding[0].system` | `Medication.code.coding[2].system` | `http://fhir.de/CodeSystem/ifa/pzn` |
+| `Medication.code.text` | `Medication.code.text` | `Abasaglar 100 E/ML KWIKPEN PEN 10x3ml` |
+| `Medication.form.coding[0].code` | `Medication.form.coding[0].code` | `PEN` |
+| `Medication.form.coding[0].system` | `Medication.form.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM` |
+| `Medication.form.coding[0].code` | `Medication.form.coding[1].code` | `PEN` |
+| `Medication.form.coding[0].system` | `Medication.form.coding[2].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM` |
+| `Medication.id` | `Medication.id` | `a23cea34-1141-42f3-903c-69740cc94a07` |
+| `Medication.ingredient[0].itemCodeableConcept.text` | `Medication.ingredient[0].itemCodeableConcept.text` | `Insulin glargin` |
+| `Medication.ingredient[0].strength.denominator.unit` | `Medication.ingredient[1].strength.denominator.unit` | `ml` |
+| `Medication.ingredient[0].strength.denominator.value` | `Medication.ingredient[2].strength.denominator.value` | `3` |
+| `Medication.ingredient[0].strength.numerator.unit` | `Medication.ingredient[3].strength.numerator.unit` | `E.` |
+| `Medication.ingredient[0].strength.numerator.value` | `Medication.ingredient[4].strength.numerator.value` | `300` |
+| `Medication.resourceType` | `Medication.resourceType` | `Medication` |

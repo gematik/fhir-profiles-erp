@@ -82,4 +82,19 @@
 
 ### KBV Medication → EPA Medication
 
-*Keine Daten vorhanden.*
+| KBV Pfad | EPA Pfad | Wert |
+| --- | --- | --- |
+| `Medication.code.coding[0].code` | `Medication.code.coding[0].code` | `wirkstoff` |
+| `Medication.code.coding[0].system` | `Medication.code.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type` |
+| `Medication.form.text` | `Medication.form.text` | `Tabletten` |
+| `Medication.id` | `Medication.id` | `dc811d43-aad4-4c8d-a58c-2e0258710142` |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `22339` |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `http://fhir.de/CodeSystem/ask` |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `Medication.ingredient[1].itemCodeableConcept.coding[0].code` | `22339` |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `Medication.ingredient[2].itemCodeableConcept.coding[0].system` | `http://fhir.de/CodeSystem/ask` |
+| `Medication.ingredient[0].itemCodeableConcept.text` | `Medication.ingredient[3].itemCodeableConcept.text` | `Somatropin` |
+| `Medication.ingredient[0].strength.denominator.unit` | `Medication.ingredient[4].strength.denominator.unit` | `Stück` |
+| `Medication.ingredient[0].strength.denominator.value` | `Medication.ingredient[5].strength.denominator.value` | `1` |
+| `Medication.ingredient[0].strength.numerator.unit` | `Medication.ingredient[6].strength.numerator.unit` | `mg` |
+| `Medication.ingredient[0].strength.numerator.value` | `Medication.ingredient[7].strength.numerator.value` | `12` |
+| `Medication.resourceType` | `Medication.resourceType` | `Medication` |

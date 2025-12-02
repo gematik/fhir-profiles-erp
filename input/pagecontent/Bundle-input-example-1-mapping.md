@@ -83,4 +83,21 @@
 
 ### KBV Medication → EPA Medication
 
-*Keine Daten vorhanden.*
+| KBV Pfad | EPA Pfad | Wert |
+| --- | --- | --- |
+| `Medication.code.coding[0].code` | `Medication.code.coding[0].code` | `07765007` |
+| `Medication.code.coding[0].system` | `Medication.code.coding[0].system` | `http://fhir.de/CodeSystem/ifa/pzn` |
+| `Medication.code.coding[0].code` | `Medication.code.coding[1].code` | `07765007` |
+| `Medication.code.coding[0].system` | `Medication.code.coding[2].system` | `http://fhir.de/CodeSystem/ifa/pzn` |
+| `Medication.code.text` | `Medication.code.text` | `NEUPRO 8MG/24H PFT 7 ST` |
+| `Medication.form.coding[0].code` | `Medication.form.coding[0].code` | `PFT` |
+| `Medication.form.coding[0].system` | `Medication.form.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM` |
+| `Medication.form.coding[0].code` | `Medication.form.coding[1].code` | `PFT` |
+| `Medication.form.coding[0].system` | `Medication.form.coding[2].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM` |
+| `Medication.id` | `Medication.id` | `5ff1bd22-ce14-484e-be56-d2ba4adeac31` |
+| `Medication.ingredient[0].itemCodeableConcept.text` | `Medication.ingredient[0].itemCodeableConcept.text` | `Rotigotin` |
+| `Medication.ingredient[0].strength.denominator.unit` | `Medication.ingredient[1].strength.denominator.unit` | `Stück` |
+| `Medication.ingredient[0].strength.denominator.value` | `Medication.ingredient[2].strength.denominator.value` | `1` |
+| `Medication.ingredient[0].strength.numerator.unit` | `Medication.ingredient[3].strength.numerator.unit` | `mg/24 h` |
+| `Medication.ingredient[0].strength.numerator.value` | `Medication.ingredient[4].strength.numerator.value` | `8` |
+| `Medication.resourceType` | `Medication.resourceType` | `Medication` |

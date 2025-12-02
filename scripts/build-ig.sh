@@ -9,6 +9,10 @@ cd "$PROJECT_ROOT"
 ## Generate heading-links.js
 "$SCRIPT_DIR/generate-heading-links-js.sh"
 
+if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
+  rm input/resources/transformed-kbv-bundles/*
+fi
+
 # Generate Sushi
 sushi .
 

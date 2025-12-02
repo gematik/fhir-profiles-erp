@@ -1,0 +1,580 @@
+{
+  "resourceType": "StructureMap",
+  "id": "KBVPrErpBundleToProvidePrescriptionParameters",
+  "url": "https://gematik.de/fhir/erp/StructureMap/KBVPrErpBundle-to-ProvidePrescriptionParameters",
+  "name": "KBVPrErpBundleToProvidePrescriptionParameters",
+  "status": "draft",
+  "version": "0.1.0",
+  "date": "2025-11-28",
+  "description": "Aggregiertes Mapping vom KBV_PR_ERP_Bundle zu ePA Provide Prescription Parameters",
+  "import": [
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrErpPrescriptionMap",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrForOrganizationMap",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrForPractitionerMap",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/EPAMedicationMap"
+  ],
+  "structure": [
+    {
+      "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle",
+      "mode": "source",
+      "alias": "KbvErpBundle",
+      "type": "Bundle"
+    },
+    {
+      "url": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-op-provide-prescription-erp-input-parameters",
+      "mode": "target",
+      "alias": "ProvideParameters",
+      "type": "Parameters"
+    }
+  ],
+  "group": [
+    {
+      "name": "BundleToProvidePrescription",
+      "typeMode": "types",
+      "documentation": "Obergruppe: verteilt Ressourcen des Bundles in Parameter rxPrescription",
+      "input": [
+        {
+          "name": "KbvErpBundle",
+          "type": "KbvErpBundle",
+          "mode": "source",
+          "documentation": "KBV Bundle"
+        },
+        {
+          "name": "ProvideParameters",
+          "type": "ProvideParameters",
+          "mode": "target",
+          "documentation": "Provide Prescription Parameter"
+        }
+      ],
+      "rule": [
+        {
+          "name": "InitRxPrescriptionParameter",
+          "documentation": "Legt Basisparameter rxPrescription an",
+          "source": [
+            {
+              "context": "KbvErpBundle",
+              "variable": "bundleContext"
+            }
+          ],
+          "target": [
+            {
+              "context": "ProvideParameters",
+              "contextType": "variable",
+              "element": "parameter",
+              "variable": "rxParam"
+            }
+          ],
+          "rule": [
+            {
+              "name": "SetRxPrescriptionName",
+              "source": [
+                {
+                  "context": "bundleContext"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "name",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "rxPrescription"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "SetPrescriptionId",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "identifier",
+                  "variable": "bundleIdentifier"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "part",
+                  "variable": "prescriptionIdPart"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "SetPrescriptionIdName",
+                  "source": [
+                    {
+                      "context": "bundleIdentifier"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "prescriptionIdPart",
+                      "contextType": "variable",
+                      "element": "name",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueString": "prescriptionId"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "InitPrescriptionIdentifier",
+                  "source": [
+                    {
+                      "context": "bundleIdentifier"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "prescriptionIdPart",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "prescriptionIdentifier",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "Identifier"
+                        }
+                      ]
+                    }
+                  ],
+                  "rule": [
+                    {
+                      "name": "SetPrescriptionIdSystem",
+                      "source": [
+                        {
+                          "context": "bundleIdentifier",
+                          "element": "system",
+                          "variable": "bundleIdentifierSystem"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "prescriptionIdentifier",
+                          "contextType": "variable",
+                          "element": "system",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueId": "bundleIdentifierSystem"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SetPrescriptionIdValue",
+                      "source": [
+                        {
+                          "context": "bundleIdentifier",
+                          "element": "value",
+                          "variable": "bundleIdentifierValue"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "prescriptionIdentifier",
+                          "contextType": "variable",
+                          "element": "value",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueId": "bundleIdentifierValue"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "SetAuthoredOn",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "entry",
+                  "variable": "medReqEntry",
+                  "condition": "resource is MedicationRequest"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "CopyAuthoredOn",
+                  "source": [
+                    {
+                      "context": "medReqEntry",
+                      "element": "resource.authoredOn",
+                      "variable": "authoredOnValue"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "rxParam",
+                      "contextType": "variable",
+                      "element": "part",
+                      "variable": "authoredOnPart"
+                    }
+                  ],
+                  "rule": [
+                    {
+                      "name": "SetAuthoredOnName",
+                      "source": [
+                        {
+                          "context": "authoredOnValue"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "authoredOnPart",
+                          "contextType": "variable",
+                          "element": "name",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueString": "authoredOn"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SetAuthoredOnValue",
+                      "source": [
+                        {
+                          "context": "authoredOnValue"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "authoredOnPart",
+                          "contextType": "variable",
+                          "element": "valueDateTime",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueId": "authoredOnValue"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "MapMedicationRequest",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "entry",
+                  "variable": "prescriptionEntry",
+                  "condition": "resource is MedicationRequest"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "part",
+                  "variable": "medReqPart"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "SetMedReqPartName",
+                  "source": [
+                    {
+                      "context": "prescriptionEntry"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "medReqPart",
+                      "contextType": "variable",
+                      "element": "name",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueString": "medicationRequest"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "CallMedicationRequestMap",
+                  "source": [
+                    {
+                      "context": "prescriptionEntry",
+                      "element": "resource",
+                      "variable": "prescriptionResource"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "medReqPart",
+                      "contextType": "variable",
+                      "element": "resource",
+                      "variable": "epaMedicationRequest",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"
+                        }
+                      ]
+                    }
+                  ],
+                  "dependent": [
+                    {
+                      "name": "KBVPrErpPrescriptionMap",
+                      "variable": [
+                        "prescriptionResource",
+                        "epaMedicationRequest"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "MapOrganization",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "entry",
+                  "variable": "orgEntry",
+                  "condition": "resource is Organization"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "part",
+                  "variable": "orgPart"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "SetOrgName",
+                  "source": [
+                    {
+                      "context": "orgEntry"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "orgPart",
+                      "contextType": "variable",
+                      "element": "name",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueString": "organization"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "CallOrgMap",
+                  "source": [
+                    {
+                      "context": "orgEntry",
+                      "element": "resource",
+                      "variable": "orgResource"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "orgPart",
+                      "contextType": "variable",
+                      "element": "resource",
+                      "variable": "epaOrg",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"
+                        }
+                      ]
+                    }
+                  ],
+                  "dependent": [
+                    {
+                      "name": "KBVPrForOrganizationMap",
+                      "variable": [
+                        "orgResource",
+                        "epaOrg"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "MapPractitioner",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "entry",
+                  "variable": "pracEntry",
+                  "condition": "resource is Practitioner"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "part",
+                  "variable": "pracPart"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "SetPractitionerName",
+                  "source": [
+                    {
+                      "context": "pracEntry"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "pracPart",
+                      "contextType": "variable",
+                      "element": "name",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueString": "practitioner"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "CallPractitionerMap",
+                  "source": [
+                    {
+                      "context": "pracEntry",
+                      "element": "resource",
+                      "variable": "pracResource"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "pracPart",
+                      "contextType": "variable",
+                      "element": "resource",
+                      "variable": "epaPractitioner",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory"
+                        }
+                      ]
+                    }
+                  ],
+                  "dependent": [
+                    {
+                      "name": "KBVPrForPractitionerMap",
+                      "variable": [
+                        "pracResource",
+                        "epaPractitioner"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "MapMedication",
+              "source": [
+                {
+                  "context": "KbvErpBundle",
+                  "element": "entry",
+                  "variable": "medEntry",
+                  "condition": "resource is Medication"
+                }
+              ],
+              "target": [
+                {
+                  "context": "rxParam",
+                  "contextType": "variable",
+                  "element": "part",
+                  "variable": "medPart"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "SetMedicationName",
+                  "source": [
+                    {
+                      "context": "medEntry"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "medPart",
+                      "contextType": "variable",
+                      "element": "name",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueString": "medication"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "CallMedicationRouter",
+                  "source": [
+                    {
+                      "context": "medEntry",
+                      "element": "resource",
+                      "variable": "medResource"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "medPart",
+                      "contextType": "variable",
+                      "element": "resource",
+                      "variable": "epaMedication",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"
+                        }
+                      ]
+                    }
+                  ],
+                  "dependent": [
+                    {
+                      "name": "EPAMedicationMap",
+                      "variable": [
+                        "medResource",
+                        "epaMedication"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

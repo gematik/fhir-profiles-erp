@@ -68,6 +68,27 @@
     "resource": [
       {
         "reference": {
+          "reference": "Bundle/1f339db0-9e55-4946-9dfa-f1b30953be9b"
+        },
+        "exampleBoolean": false,
+        "name": "1f339db0-9e55-4946-9dfa-f1b30953be9b"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/726e6cdd-c93d-418c-aeeb-1cfe60228916"
+        },
+        "exampleBoolean": false,
+        "name": "726e6cdd-c93d-418c-aeeb-1cfe60228916"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/9c85a2a5-92ee-4a57-83cb-ba90a0df2a21"
+        },
+        "exampleBoolean": false,
+        "name": "9c85a2a5-92ee-4a57-83cb-ba90a0df2a21"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
         },
         "name": "Ablaufdatum des Rezepts",
@@ -89,6 +110,13 @@
         "name": "AcceptOperation",
         "description": "Mit der $accept-Operation beansprucht eine Apotheke ein E-Rezept. Der Status der referenzierten Aufgabe ändert sich in 'in-progress'.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/acf39375-3a2b-4017-995d-531705fc129d"
+        },
+        "exampleBoolean": false,
+        "name": "acf39375-3a2b-4017-995d-531705fc129d"
       },
       {
         "reference": {
@@ -331,6 +359,13 @@
       },
       {
         "reference": {
+          "reference": "Bundle/c48d0fb5-9d3a-4872-9879-cdd61c39fc1d"
+        },
+        "exampleBoolean": false,
+        "name": "c48d0fb5-9d3a-4872-9879-cdd61c39fc1d"
+      },
+      {
+        "reference": {
           "reference": "OperationDefinition/CloseOperation"
         },
         "name": "CloseOperation",
@@ -459,6 +494,14 @@
       },
       {
         "reference": {
+          "reference": "StructureMap/EPAMedicationMap"
+        },
+        "description": "Router StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "EPAMedicationMap"
+      },
+      {
+        "reference": {
           "reference": "OperationOutcome/ExampleOperationActivateError"
         },
         "name": "Example Activate operation error response",
@@ -564,6 +607,22 @@
       },
       {
         "reference": {
+          "reference": "StructureMap/GEMErpPrMedicationdispenseMap"
+        },
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.5.2 -> EPAMedicationDispense|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "GEMErpPrMedicationdispenseMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/GEMErpPrMedicationMap"
+        },
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.5.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "GEMErpPrMedicationMap"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-EX-AvailabilityState"
         },
         "name": "GEM_ERP_EX_AvailabilityState",
@@ -659,6 +718,70 @@
         "name": "Identifier-Profil für Verschreibungs-IDs",
         "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpBundleToProvidePrescriptionParameters"
+        },
+        "description": "Aggregiertes Mapping vom KBV_PR_ERP_Bundle zu ePA Provide Prescription Parameters",
+        "exampleBoolean": false,
+        "name": "KBVPrErpBundleToProvidePrescriptionParameters"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpMedicationCompoundingMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "KBVPrErpMedicationCompoundingMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpMedicationFreetextMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "KBVPrErpMedicationFreetextMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpMedicationIngredientMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "KBVPrErpMedicationIngredientMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpMedicationPznMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "KBVPrErpMedicationPznMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrErpPrescriptionMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.3.2 -> EPAMedicationRequest|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "KBVPrErpPrescriptionMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrForOrganizationMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
+        "exampleBoolean": false,
+        "name": "KBVPrForOrganizationMap"
+      },
+      {
+        "reference": {
+          "reference": "StructureMap/KBVPrForPractitionerMap"
+        },
+        "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+        "exampleBoolean": false,
+        "name": "KBVPrForPractitionerMap"
       },
       {
         "reference": {
@@ -926,31 +1049,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-example-1-mapping.html",
-          "title": "Bundle Example 1 Mapping",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "Bundle-example-2-mapping.html",
-          "title": "Bundle Example 2 Mapping",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "Bundle-example-3-mapping.html",
-          "title": "Bundle Example 3 Mapping",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "Bundle-example-4-mapping.html",
-          "title": "Bundle Example 4 Mapping",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "Bundle-example-5-mapping.html",
-          "title": "Bundle Example 5 Mapping",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "Bundle-input-example-1-mapping.html",
           "title": "Bundle Input Example 1 Mapping",
           "generation": "markdown"
@@ -1003,7 +1101,15 @@
       },
       {
         "code": "path-resource",
-        "value": "input/resources"
+        "value": "input/resources/structuremaps"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources/kbv-bundles"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources/transformed-kbv-bundles"
       },
       {
         "code": "path-pages",

@@ -1,6 +1,10 @@
+[1f339db0-9e55-4946-9dfa-f1b30953be9b]: Bundle-1f339db0-9e55-4946-9dfa-f1b30953be9b.html
+[726e6cdd-c93d-418c-aeeb-1cfe60228916]: Bundle-726e6cdd-c93d-418c-aeeb-1cfe60228916.html
+[9c85a2a5-92ee-4a57-83cb-ba90a0df2a21]: Bundle-9c85a2a5-92ee-4a57-83cb-ba90a0df2a21.html
 [GEM_ERP_EX_ExpiryDate]: StructureDefinition-GEM-ERP-EX-ExpiryDate.html
 [AbortOperation]: OperationDefinition-AbortOperation.html
 [AcceptOperation]: OperationDefinition-AcceptOperation.html
+[acf39375-3a2b-4017-995d-531705fc129d]: Bundle-acf39375-3a2b-4017-995d-531705fc129d.html
 [ActivateOperation]: OperationDefinition-ActivateOperation.html
 [GEM_ERP_PR_Communication_DispReq]: StructureDefinition-GEM-ERP-PR-Communication-DispReq.html
 [GEM_ERP_PR_Communication_DiGA]: StructureDefinition-GEM-ERP-PR-Communication-DiGA.html
@@ -31,6 +35,7 @@
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
+[c48d0fb5-9d3a-4872-9879-cdd61c39fc1d]: Bundle-c48d0fb5-9d3a-4872-9879-cdd61c39fc1d.html
 [CloseOperation]: OperationDefinition-CloseOperation.html
 [GEM_ERP_CS_DocumentType]: CodeSystem-GEM-ERP-CS-DocumentType.html
 [GEM_ERP_CS_FlowType]: CodeSystem-GEM-ERP-CS-FlowType.html
@@ -47,6 +52,7 @@
 [GEM_ERP_PR_MedicationDispense]: StructureDefinition-GEM-ERP-PR-MedicationDispense.html
 [GEM_ERP_PR_Bundle]: StructureDefinition-GEM-ERP-PR-Bundle.html
 [SimpleMedication]: Medication-SimpleMedication.html
+[EPAMedicationMap]: StructureMap-EPAMedicationMap.html
 [ExampleOperationActivateError]: OperationOutcome-ExampleOperationActivateError.html
 [ExampleOperationActivateParametersInput]: Parameters-ExampleOperationActivateParametersInput.html
 [ExampleCloseInputParametersRezeptur]: Parameters-ExampleCloseInputParametersRezeptur.html
@@ -61,6 +67,8 @@
 [GEM_ERP_PR_PAR_CloseOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Close-Operation-Output.html
 [GEM_ERP_PR_PAR_CreateOperation_Output]: StructureDefinition-GEM-ERP-PR-PAR-Create-Operation-Output.html
 [GEM_ERP_PR_PAR_DispenseOperation_Input]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.html
+[GEMErpPrMedicationdispenseMap]: StructureMap-GEMErpPrMedicationdispenseMap.html
+[GEMErpPrMedicationMap]: StructureMap-GEMErpPrMedicationMap.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.html
@@ -74,6 +82,14 @@
 [1]: Device-1.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_AccessCode]: StructureDefinition-GEM-ERP-PR-AccessCode.html
+[KBVPrErpBundleToProvidePrescriptionParameters]: StructureMap-KBVPrErpBundleToProvidePrescriptionParameters.html
+[KBVPrErpMedicationCompoundingMap]: StructureMap-KBVPrErpMedicationCompoundingMap.html
+[KBVPrErpMedicationFreetextMap]: StructureMap-KBVPrErpMedicationFreetextMap.html
+[KBVPrErpMedicationIngredientMap]: StructureMap-KBVPrErpMedicationIngredientMap.html
+[KBVPrErpMedicationPznMap]: StructureMap-KBVPrErpMedicationPznMap.html
+[KBVPrErpPrescriptionMap]: StructureMap-KBVPrErpPrescriptionMap.html
+[KBVPrForOrganizationMap]: StructureMap-KBVPrForOrganizationMap.html
+[KBVPrForPractitionerMap]: StructureMap-KBVPrForPractitionerMap.html
 [GEM_ERP_PR_Communication_Representative]: StructureDefinition-GEM-ERP-PR-Communication-Representative.html
 [GEM_ERP_EX_LastMedicationDispense]: StructureDefinition-GEM-ERP-EX-LastMedicationDispense.html
 [GEM_ERP_LOG_MedicationDispense_DiGA]: StructureDefinition-GEM-ERP-LOG-MedicationDispense-DiGA.html
