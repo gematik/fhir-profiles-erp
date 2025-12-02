@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureMap",
-  "id": "KBV-PR-FOR-Practitioner-Map",
-  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-FOR-Practitioner-Map",
-  "name": "KBV-PR-FOR-Practitioner-Map",
+  "id": "KBVPrForPractitionerMap",
+  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrForPractitionerMap",
+  "name": "KBVPrForPractitionerMap",
   "status": "active",
   "version": "1.0",
   "date": "2025-12-02",
@@ -21,7 +21,7 @@
   ],
   "group": [
     {
-      "name": "KBV-PR-FOR-Practitioner-Map",
+      "name": "KBVPrForPractitionerMap",
       "typeMode": "types",
       "documentation": "Mapping generated for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
       "input": [

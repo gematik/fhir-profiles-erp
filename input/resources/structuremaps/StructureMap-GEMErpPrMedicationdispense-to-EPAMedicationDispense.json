@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureMap",
-  "id": "GEM-ERP-PR-MedicationDispense-Map",
-  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/GEM-ERP-PR-MedicationDispense-Map",
-  "name": "GEM-ERP-PR-MedicationDispense-Map",
+  "id": "GEMErpPrMedicationdispenseMap",
+  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/GEMErpPrMedicationdispenseMap",
+  "name": "GEMErpPrMedicationdispenseMap",
   "status": "active",
   "version": "1.0",
   "date": "2025-12-02",
@@ -21,7 +21,7 @@
   ],
   "group": [
     {
-      "name": "GEM-ERP-PR-MedicationDispense-Map",
+      "name": "GEMErpPrMedicationdispenseMap",
       "typeMode": "types",
       "documentation": "Mapping generated for GEM_ERP_PR_MedicationDispense|1.5.2 -> EPAMedicationDispense|1.0.6-2",
       "input": [

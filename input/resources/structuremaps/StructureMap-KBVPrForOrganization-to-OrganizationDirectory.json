@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureMap",
-  "id": "KBV-PR-FOR-Organization-Map",
-  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-FOR-Organization-Map",
-  "name": "KBV-PR-FOR-Organization-Map",
+  "id": "KBVPrForOrganizationMap",
+  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrForOrganizationMap",
+  "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
   "date": "2025-12-02",
@@ -21,7 +21,7 @@
   ],
   "group": [
     {
-      "name": "KBV-PR-FOR-Organization-Map",
+      "name": "KBVPrForOrganizationMap",
       "typeMode": "types",
       "documentation": "Mapping generated for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
       "input": [

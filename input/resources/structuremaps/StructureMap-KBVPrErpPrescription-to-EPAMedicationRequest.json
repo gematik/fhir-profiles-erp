@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureMap",
-  "id": "KBV-PR-ERP-Prescription-Map",
-  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-ERP-Prescription-Map",
-  "name": "KBV-PR-ERP-Prescription-Map",
+  "id": "KBVPrErpPrescriptionMap",
+  "url": "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrErpPrescriptionMap",
+  "name": "KBVPrErpPrescriptionMap",
   "status": "active",
   "version": "1.0",
   "date": "2025-12-02",
@@ -21,7 +21,7 @@
   ],
   "group": [
     {
-      "name": "KBV-PR-ERP-Prescription-Map",
+      "name": "KBVPrErpPrescriptionMap",
       "typeMode": "types",
       "documentation": "Mapping generated for KBV_PR_ERP_Prescription|1.3.2 -> EPAMedicationRequest|1.0.6-2",
       "input": [
