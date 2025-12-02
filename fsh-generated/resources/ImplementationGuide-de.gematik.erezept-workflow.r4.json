@@ -926,28 +926,53 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-1-mapping.html",
-          "title": "Bundle 1 Mapping",
+          "nameUrl": "Bundle-example-1-mapping.html",
+          "title": "Bundle Example 1 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-2-mapping.html",
-          "title": "Bundle 2 Mapping",
+          "nameUrl": "Bundle-example-2-mapping.html",
+          "title": "Bundle Example 2 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-3-mapping.html",
-          "title": "Bundle 3 Mapping",
+          "nameUrl": "Bundle-example-3-mapping.html",
+          "title": "Bundle Example 3 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-4-mapping.html",
-          "title": "Bundle 4 Mapping",
+          "nameUrl": "Bundle-example-4-mapping.html",
+          "title": "Bundle Example 4 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-5-mapping.html",
-          "title": "Bundle 5 Mapping",
+          "nameUrl": "Bundle-example-5-mapping.html",
+          "title": "Bundle Example 5 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Bundle-input-example-1-mapping.html",
+          "title": "Bundle Input Example 1 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Bundle-input-example-2-mapping.html",
+          "title": "Bundle Input Example 2 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Bundle-input-example-3-mapping.html",
+          "title": "Bundle Input Example 3 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Bundle-input-example-4-mapping.html",
+          "title": "Bundle Input Example 4 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Bundle-input-example-5-mapping.html",
+          "title": "Bundle Input Example 5 Mapping",
           "generation": "markdown"
         },
         {
@@ -977,16 +1002,16 @@
         "value": "ci-build"
       },
       {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
         "code": "path-pages",
         "value": "input/content"
       },
       {
-        "code": "path-pages",
-        "value": "input/content/kbv-bunldes"
-      },
-      {
-        "code": "path-pages",
-        "value": "input/content/transformed-kbv-bundles"
+        "code": "autoload-resources",
+        "value": "true"
       }
     ]
   }

@@ -104,16 +104,6 @@
           },
           "system" : "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
           "value" : "754236701"
-        },
-        {
-          "type" : {
-            "coding" : [{
-              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code" : "LANR"
-            }]
-          },
-          "system" : "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
-          "value" : "754236701"
         }],
         "name" : [{
           "use" : "official",

@@ -8,10 +8,10 @@
   "date": "2025-11-28",
   "description": "Aggregiertes Mapping vom KBV_PR_ERP_Bundle zu ePA Provide Prescription Parameters",
   "import": [
-    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request/StructureMap/F3b4c5d6e7f814b92A3c42d3e4f5a6702Structuremap",
-    "https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory/StructureMap/F0c2a1b596c5f4e9b9f221a3d4b5c6e72Structuremap",
-    "https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory/StructureMap/E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap",
-    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication/StructureMap/F2a3c4d5e6f704a8192b31c2d3e4f5601Structuremap"
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-ERP-Prescription-Map",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-FOR-Organization-Map",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBV-PR-FOR-Practitioner-Map",
+    "https://gematik.de/fhir/structure-comparer/StructureMap/EPAMedication-Map"
   ],
   "structure": [
     {
@@ -337,7 +337,7 @@
                   ],
                   "dependent": [
                     {
-                      "name": "F3b4c5d6e7f814b92A3c42d3e4f5a6702Structuremap",
+                      "name": "KBV-PR-ERP-Prescription-Map",
                       "variable": [
                         "prescriptionResource",
                         "epaMedicationRequest"
@@ -412,7 +412,7 @@
                   ],
                   "dependent": [
                     {
-                      "name": "F0c2a1b596c5f4e9b9f221a3d4b5c6e72Structuremap",
+                      "name": "KBV-PR-FOR-Organization-Map",
                       "variable": [
                         "orgResource",
                         "epaOrg"
@@ -487,7 +487,7 @@
                   ],
                   "dependent": [
                     {
-                      "name": "E64f9b0a2a2a4f8f9b867b6f8f4d2d31Structuremap",
+                      "name": "KBV-PR-FOR-Practitioner-Map",
                       "variable": [
                         "pracResource",
                         "epaPractitioner"
@@ -562,7 +562,7 @@
                   ],
                   "dependent": [
                     {
-                      "name": "F2a3c4d5e6f704a8192b31c2d3e4f5601Structuremap",
+                      "name": "EPAMedication-Map",
                       "variable": [
                         "medResource",
                         "epaMedication"

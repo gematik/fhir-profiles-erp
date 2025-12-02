@@ -1,7 +1,7 @@
 ## Bundle → Parameters Mapping
 
-> Quelle: [KBV Bundle](Bundle-5.html)
-> Ziel: [EPA Provide Parameters](Bundle-5-parameters.html)
+> Quelle: [KBV Bundle](Bundle-example-2.html)
+> Ziel: [EPA Provide Parameters](Bundle-example-2-parameters.html)
 
 ### Verordnungskennung
 
@@ -9,11 +9,13 @@
 | --- | --- | --- |
 | — | `Parameters.prescriptionId.name` | `prescriptionId` |
 | `Bundle.identifier.system` | `Parameters.prescriptionId.valueIdentifier.system` | `https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId` |
-| `Bundle.identifier.value` | `Parameters.prescriptionId.valueIdentifier.value` | `160.100.000.000.040.19` |
+| `Bundle.identifier.value` | `Parameters.prescriptionId.valueIdentifier.value` | `160.100.000.000.019.82` |
 
 ### Ausstellungsdatum
 
-*Keine Daten vorhanden.*
+| KBV Pfad | EPA Pfad | Wert |
+| --- | --- | --- |
+| `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
 
 ### KBV MedicationRequest → EPA MedicationRequest
 
@@ -22,15 +24,16 @@
 | `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
 | `MedicationRequest.dispenseRequest.quantity.unit` | `MedicationRequest.dispenseRequest.quantity.unit` | `Packung` |
 | `MedicationRequest.dispenseRequest.quantity.value` | `MedicationRequest.dispenseRequest.quantity.value` | `1` |
-| `MedicationRequest.id` | `MedicationRequest.id` | `9218cbd8-71f1-4800-9b52-370860b7079f` |
-| `MedicationRequest.insurance[0].reference` | `MedicationRequest.insurance[0].reference` | `Coverage/e51239e1-ba74-48e0-97fb-9754d2b05c60` |
+| `MedicationRequest.dosageInstruction[0].text` | `MedicationRequest.dosageInstruction[0].text` | `1-0-0-0` |
+| `MedicationRequest.id` | `MedicationRequest.id` | `4a7eefdd-df71-4a72-8047-c158017534a1` |
+| `MedicationRequest.insurance[0].reference` | `MedicationRequest.insurance[0].reference` | `Coverage/da80211e-61ee-458e-a651-87370b6ec30c` |
 | `MedicationRequest.intent` | `MedicationRequest.intent` | `order` |
-| `MedicationRequest.medicationReference.reference` | `MedicationRequest.medicationReference.reference` | `Medication/523bfe94-d8f0-42ac-b4d1-92910cad5be7` |
-| `MedicationRequest.requester.reference` | `MedicationRequest.requester.reference` | `Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c` |
+| `MedicationRequest.medicationReference.reference` | `MedicationRequest.medicationReference.reference` | `Medication/86fa62c7-06a0-418e-ba26-e99baa053c07` |
+| `MedicationRequest.note[0].text` | `MedicationRequest.note[0].text` | `Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat.` |
+| `MedicationRequest.requester.reference` | `MedicationRequest.requester.reference` | `Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655` |
 | `MedicationRequest.resourceType` | `MedicationRequest.resourceType` | `MedicationRequest` |
 | `MedicationRequest.status` | `MedicationRequest.status` | `active` |
-| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/1d36152b-40c6-4aeb-a552-86a4d3277edc` |
-| `MedicationRequest.substitution.allowedBoolean` | `MedicationRequest.substitution.allowedBoolean` | `true` |
+| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf` |
 
 ### KBV Organization → EPA Organization
 
@@ -40,47 +43,49 @@
 | `Organization.address[0]._line[0].extension[0].valueString` | `Organization.address[0]._line[0].extension[0].valueString` | `2` |
 | `Organization.address[0]._line[0].extension[1].url` | `Organization.address[0]._line[0].extension[1].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName` |
 | `Organization.address[0]._line[0].extension[1].valueString` | `Organization.address[0]._line[0].extension[1].valueString` | `Herbert-Lewin-Platz` |
-| `Organization.address[0]._line[1].extension[0].url` | `Organization.address[0]._line[1].extension[0].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator` |
-| `Organization.address[0]._line[1].extension[0].valueString` | `Organization.address[0]._line[1].extension[0].valueString` | `Erdgeschoss` |
 | `Organization.address[0].city` | `Organization.address[0].city` | `Berlin` |
 | `Organization.address[0].country` | `Organization.address[0].country` | `D` |
 | `Organization.address[0].line[0]` | `Organization.address[0].line[0]` | `Herbert-Lewin-Platz 2` |
-| `Organization.address[0].line[1]` | `Organization.address[0].line[1]` | `Erdgeschoss` |
 | `Organization.address[0].postalCode` | `Organization.address[0].postalCode` | `10623` |
 | `Organization.address[0].type` | `Organization.address[0].type` | `both` |
-| `Organization.id` | `Organization.id` | `2a555cd3-0543-483c-88b3-f68647620962` |
+| `Organization.id` | `Organization.id` | `5d3f4ac0-2b44-4d48-b363-e63efa72973b` |
 | `Organization.identifier[0].system` | `Organization.identifier[0].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR` |
 | `Organization.identifier[0].type.coding[0].code` | `Organization.identifier[0].type.coding[0].code` | `BSNR` |
 | `Organization.identifier[0].type.coding[0].system` | `Organization.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Organization.identifier[0].value` | `Organization.identifier[0].value` | `724444400` |
-| `Organization.name` | `Organization.name` | `Hausarztpraxis` |
+| `Organization.identifier[0].value` | `Organization.identifier[0].value` | `721111100` |
+| `Organization.name` | `Organization.name` | `MVZ` |
 | `Organization.resourceType` | `Organization.resourceType` | `Organization` |
 | `Organization.telecom[0].system` | `Organization.telecom[0].system` | `phone` |
-| `Organization.telecom[0].value` | `Organization.telecom[0].value` | `030321654987` |
-| `Organization.telecom[1].system` | `Organization.telecom[1].system` | `email` |
-| `Organization.telecom[1].value` | `Organization.telecom[1].value` | `hausarztpraxis@e-mail.de` |
+| `Organization.telecom[0].value` | `Organization.telecom[0].value` | `0301234567` |
+| `Organization.telecom[1].system` | `Organization.telecom[1].system` | `fax` |
+| `Organization.telecom[1].value` | `Organization.telecom[1].value` | `030123456789` |
+| `Organization.telecom[2].system` | `Organization.telecom[2].system` | `email` |
+| `Organization.telecom[2].value` | `Organization.telecom[2].value` | `mvz@e-mail.de` |
 
 ### KBV Practitioner → EPA Practitioner
 
 | KBV Pfad | EPA Pfad | Wert |
 | --- | --- | --- |
-| `Practitioner.id` | `Practitioner.id` | `d6f3b55d-3095-4655-96dc-da3bec21271c` |
+| `Practitioner.id` | `Practitioner.id` | `bc329f24-3d65-4286-bf06-b54dd6cad655` |
 | `Practitioner.identifier[0].system` | `Practitioner.identifier[0].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR` |
 | `Practitioner.identifier[0].type.coding[0].code` | `Practitioner.identifier[0].type.coding[0].code` | `LANR` |
 | `Practitioner.identifier[0].type.coding[0].system` | `Practitioner.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Practitioner.identifier[0].value` | `Practitioner.identifier[0].value` | `754236701` |
-| `Practitioner.identifier[0].system` | `Practitioner.identifier[1].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR` |
-| `Practitioner.identifier[0].type.coding[0].code` | `Practitioner.identifier[1].type.coding[0].code` | `LANR` |
-| `Practitioner.identifier[0].type.coding[0].system` | `Practitioner.identifier[1].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Practitioner.identifier[0].value` | `Practitioner.identifier[1].value` | `754236701` |
-| `Practitioner.name[0]._family.extension[0].url` | `Practitioner.name[0]._family.extension[0].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-name` |
-| `Practitioner.name[0]._family.extension[0].valueString` | `Practitioner.name[0]._family.extension[0].valueString` | `Schulz` |
-| `Practitioner.name[0].family` | `Practitioner.name[0].family` | `Schulz` |
-| `Practitioner.name[0].given[0]` | `Practitioner.name[0].given[0]` | `Ben` |
+| `Practitioner.identifier[0].value` | `Practitioner.identifier[0].value` | `123456628` |
+| `Practitioner.name[0]._family.extension[0].url` | `Practitioner.name[0]._family.extension[0].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-prefix` |
+| `Practitioner.name[0]._family.extension[0].valueString` | `Practitioner.name[0]._family.extension[0].valueString` | `von` |
+| `Practitioner.name[0]._family.extension[1].url` | `Practitioner.name[0]._family.extension[1].url` | `http://fhir.de/StructureDefinition/humanname-namenszusatz` |
+| `Practitioner.name[0]._family.extension[1].valueString` | `Practitioner.name[0]._family.extension[1].valueString` | `Freiherr` |
+| `Practitioner.name[0]._family.extension[2].url` | `Practitioner.name[0]._family.extension[2].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-name` |
+| `Practitioner.name[0]._family.extension[2].valueString` | `Practitioner.name[0]._family.extension[2].valueString` | `Müller` |
+| `Practitioner.name[0]._prefix[0].extension[0].url` | `Practitioner.name[0]._prefix[0].extension[0].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier` |
+| `Practitioner.name[0]._prefix[0].extension[0].valueCode` | `Practitioner.name[0]._prefix[0].extension[0].valueCode` | `AC` |
+| `Practitioner.name[0].family` | `Practitioner.name[0].family` | `Freiherr von Müller` |
+| `Practitioner.name[0].given[0]` | `Practitioner.name[0].given[0]` | `Paul` |
+| `Practitioner.name[0].prefix[0]` | `Practitioner.name[0].prefix[0]` | `Dr. med.` |
 | `Practitioner.name[0].use` | `Practitioner.name[0].use` | `official` |
 | `Practitioner.qualification[1].code.coding[0].code` | `Practitioner.qualification[0].code.coding[0].code` | `Berufsbezeichnung` |
 | `Practitioner.qualification[1].code.coding[0].system` | `Practitioner.qualification[0].code.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_FOR_Berufsbezeichnung` |
-| `Practitioner.qualification[1].code.text` | `Practitioner.qualification[0].code.text` | `Facharzt für Allgemeinmedizin` |
+| `Practitioner.qualification[1].code.text` | `Practitioner.qualification[0].code.text` | `Facharzt für Innere Medizin: Kardiologie` |
 | `Practitioner.resourceType` | `Practitioner.resourceType` | `Practitioner` |
 
 ### KBV Medication → EPA Medication

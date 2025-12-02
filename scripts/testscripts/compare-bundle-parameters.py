@@ -235,6 +235,9 @@ def build_sections(
     )
 
     med_request = find_resource(bundle, "MedicationRequest")
+    med_request_part = find_part(rx_param, "medicationRequest") or {}
+    med_request_resource = med_request_part.get("resource") if isinstance(med_request_part, dict) else None
+
     authored_rows = build_rows(
         {"authoredOn": med_request.get("authoredOn")} if med_request else None,
         "MedicationRequest",
@@ -243,10 +246,19 @@ def build_sections(
         "Parameters.authoredOn",
     )
 
+    if not authored_rows and med_request and med_request.get("authoredOn") and med_request_resource:
+        authored_rows = build_rows(
+            {"authoredOn": med_request.get("authoredOn")},
+            "MedicationRequest",
+            {"authoredOn": med_request_resource.get("authoredOn")},
+            "Parameters.parameter[rxPrescription].part[medicationRequest].resource",
+            "MedicationRequest",
+        )
+
     med_request_rows = build_rows(
         med_request,
         "MedicationRequest",
-        (find_part(rx_param, "medicationRequest") or {}).get("resource"),
+        med_request_resource,
         "Parameters.parameter[rxPrescription].part[medicationRequest].resource",
         "MedicationRequest",
     )

@@ -72,6 +72,8 @@ def build_command(
 
     local_igs = [
         project_root / "input" / "content" / "structuremaps",
+        project_root / "input" / "resources" / "structuremaps",
+        project_root / "input" / "resources",
         project_root / "fsh-generated" / "resources",
     ]
     package_igs = [

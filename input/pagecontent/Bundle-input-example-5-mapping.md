@@ -1,7 +1,7 @@
 ## Bundle → Parameters Mapping
 
-> Quelle: [KBV Bundle](Bundle-3.html)
-> Ziel: [EPA Provide Parameters](Bundle-3-parameters.html)
+> Quelle: [KBV Bundle](Bundle-input-example-5.html)
+> Ziel: [EPA Provide Parameters](Parameters-output-example-5.html)
 
 ### Verordnungskennung
 
@@ -9,11 +9,13 @@
 | --- | --- | --- |
 | — | `Parameters.prescriptionId.name` | `prescriptionId` |
 | `Bundle.identifier.system` | `Parameters.prescriptionId.valueIdentifier.system` | `https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId` |
-| `Bundle.identifier.value` | `Parameters.prescriptionId.valueIdentifier.value` | `160.100.000.000.033.40` |
+| `Bundle.identifier.value` | `Parameters.prescriptionId.valueIdentifier.value` | `160.100.000.000.040.19` |
 
 ### Ausstellungsdatum
 
-*Keine Daten vorhanden.*
+| KBV Pfad | EPA Pfad | Wert |
+| --- | --- | --- |
+| `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
 
 ### KBV MedicationRequest → EPA MedicationRequest
 
@@ -22,14 +24,15 @@
 | `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
 | `MedicationRequest.dispenseRequest.quantity.unit` | `MedicationRequest.dispenseRequest.quantity.unit` | `Packung` |
 | `MedicationRequest.dispenseRequest.quantity.value` | `MedicationRequest.dispenseRequest.quantity.value` | `1` |
-| `MedicationRequest.id` | `MedicationRequest.id` | `a05364ab-29b1-4553-90b8-9657e2f5f5ed` |
-| `MedicationRequest.insurance[0].reference` | `MedicationRequest.insurance[0].reference` | `Coverage/1b89236c-ab14-4e92-937e-5af0b59d0cd4` |
+| `MedicationRequest.id` | `MedicationRequest.id` | `9218cbd8-71f1-4800-9b52-370860b7079f` |
+| `MedicationRequest.insurance[0].reference` | `MedicationRequest.insurance[0].reference` | `Coverage/e51239e1-ba74-48e0-97fb-9754d2b05c60` |
 | `MedicationRequest.intent` | `MedicationRequest.intent` | `order` |
-| `MedicationRequest.medicationReference.reference` | `MedicationRequest.medicationReference.reference` | `Medication/dc811d43-aad4-4c8d-a58c-2e0258710142` |
+| `MedicationRequest.medicationReference.reference` | `MedicationRequest.medicationReference.reference` | `Medication/523bfe94-d8f0-42ac-b4d1-92910cad5be7` |
 | `MedicationRequest.requester.reference` | `MedicationRequest.requester.reference` | `Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c` |
 | `MedicationRequest.resourceType` | `MedicationRequest.resourceType` | `MedicationRequest` |
 | `MedicationRequest.status` | `MedicationRequest.status` | `active` |
-| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/93866fdc-3e50-4902-a7e9-891b54737b5e` |
+| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/1d36152b-40c6-4aeb-a552-86a4d3277edc` |
+| `MedicationRequest.substitution.allowedBoolean` | `MedicationRequest.substitution.allowedBoolean` | `true` |
 
 ### KBV Organization → EPA Organization
 
@@ -68,10 +71,6 @@
 | `Practitioner.identifier[0].type.coding[0].code` | `Practitioner.identifier[0].type.coding[0].code` | `LANR` |
 | `Practitioner.identifier[0].type.coding[0].system` | `Practitioner.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
 | `Practitioner.identifier[0].value` | `Practitioner.identifier[0].value` | `754236701` |
-| `Practitioner.identifier[0].system` | `Practitioner.identifier[1].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR` |
-| `Practitioner.identifier[0].type.coding[0].code` | `Practitioner.identifier[1].type.coding[0].code` | `LANR` |
-| `Practitioner.identifier[0].type.coding[0].system` | `Practitioner.identifier[1].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Practitioner.identifier[0].value` | `Practitioner.identifier[1].value` | `754236701` |
 | `Practitioner.name[0]._family.extension[0].url` | `Practitioner.name[0]._family.extension[0].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-name` |
 | `Practitioner.name[0]._family.extension[0].valueString` | `Practitioner.name[0]._family.extension[0].valueString` | `Schulz` |
 | `Practitioner.name[0].family` | `Practitioner.name[0].family` | `Schulz` |

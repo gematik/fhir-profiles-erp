@@ -12,9 +12,6 @@ cd "$PROJECT_ROOT"
 # Generate Sushi
 sushi .
 
-# Copy relavant StructureMaps
-cp input/content/structuremaps/* fsh-generated/resources
-
 # Run scripts that need artifacts from IG Publisher
 python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 ./scripts/fml_table.sh

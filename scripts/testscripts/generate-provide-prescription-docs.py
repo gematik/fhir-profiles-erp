@@ -21,16 +21,37 @@ from typing import Iterable, List
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
+RESOURCE_ROOT = PROJECT_ROOT / "input" / "resources"
 
-DEFAULT_BUNDLE_DIR = PROJECT_ROOT / "input" / "content" / "kbv-bundles"
-DEFAULT_PARAMETER_DIR = PROJECT_ROOT / "input" / "content" / "transformed-kbv-bundles"
+DEFAULT_BUNDLE_DIR = RESOURCE_ROOT / "kbv-bundles"
+DEFAULT_PARAMETER_DIR = RESOURCE_ROOT / "transformed-kbv-bundles"
 DEFAULT_MAPPING_DIR = PROJECT_ROOT / "input" / "pagecontent"
 DEFAULT_INCLUDE_DIR = PROJECT_ROOT / "input" / "includes"
-DEFAULT_FHIR_RESOURCE_DIR = PROJECT_ROOT / "fsh-generated" / "resources"
+DEFAULT_FHIR_RESOURCE_DIR = RESOURCE_ROOT / "transformed-kbv-bundles"
 TRANSFORM_SCRIPT = SCRIPT_DIR / "transform-all-kbv-bundles.py"
 COMPARE_SCRIPT = SCRIPT_DIR / "compare-bundle-parameters.py"
 OVERVIEW_FILENAME = "provide-prescription-mappings.md"
 INCLUDE_FILENAME = "provide-prescription-mapping-links.md"
+PARAMETER_PREFIX = "Parameters-output-"
+BUNDLE_PREFIX = "Bundle-input-"
+
+
+def extract_example_token(name: str, prefix: str) -> str:
+    if name.startswith(prefix):
+        return name[len(prefix) :]
+    return name
+
+
+def bundle_token_from_parameter_file(parameter_file: Path) -> str:
+    return extract_example_token(parameter_file.stem, PARAMETER_PREFIX)
+
+
+def bundle_filename_from_token(token: str) -> str:
+    return f"{BUNDLE_PREFIX}{token}.json"
+
+
+def parameter_filename_from_token(token: str) -> str:
+    return f"{PARAMETER_PREFIX}{token}.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -85,14 +106,11 @@ def transform_bundles(args: argparse.Namespace) -> None:
 
 
 def discover_parameter_files(parameter_dir: Path) -> List[Path]:
-    return sorted(parameter_dir.glob("*-parameters.json"))
+    return sorted(parameter_dir.glob(f"{PARAMETER_PREFIX}*.json"))
 
 
 def bundle_name_from_parameter(parameter_file: Path) -> str:
-    suffix = "-parameters.json"
-    if parameter_file.name.endswith(suffix):
-        return parameter_file.name[: -len(suffix)]
-    return parameter_file.stem
+    return bundle_token_from_parameter_file(parameter_file)
 
 
 def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
@@ -108,12 +126,13 @@ def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
 
     processed: List[str] = []
     for param_file in parameter_files:
-        base_name = bundle_name_from_parameter(param_file)
-        bundle_file = args.bundle_dir / f"{base_name}.json"
+        token = bundle_name_from_parameter(param_file)
+        bundle_file = args.bundle_dir / bundle_filename_from_token(token)
         if not bundle_file.exists():
             print(f"[WARN] Kein Bundle für Parameters-Datei gefunden: {param_file.name}")
             continue
-        output_file = args.mapping_dir / f"{base_name}-mapping.md"
+        bundle_stem = bundle_file.stem
+        output_file = args.mapping_dir / f"{bundle_stem}-mapping.md"
         cmd = [
             args.python,
             str(COMPARE_SCRIPT),
@@ -122,17 +141,17 @@ def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
             "--output",
             str(output_file),
             "--source-link",
-            f"{base_name}.html",
+            f"{bundle_stem}.html",
             "--source-label",
             "KBV Bundle",
             "--target-link",
-            f"{base_name}-parameters.html",
+            f"{parameter_filename_from_token(token).replace('.json', '.html')}",
             "--target-label",
             "EPA Provide Parameters",
         ]
         run(cmd)
         print(f"[INFO] Mapping aktualisiert: {output_file.name}")
-        processed.append(base_name)
+        processed.append(token)
 
     return processed
 
@@ -241,9 +260,9 @@ def copy_resources(processed_bundles: List[str], args: argparse.Namespace) -> No
         return
     dest_dir = args.fhir_resource_dir
     dest_dir.mkdir(parents=True, exist_ok=True)
-    for base_name in processed_bundles:
-        bundle_file = args.bundle_dir / f"{base_name}.json"
-        param_file = args.parameter_dir / f"{base_name}-parameters.json"
+    for token in processed_bundles:
+        bundle_file = args.bundle_dir / bundle_filename_from_token(token)
+        param_file = args.parameter_dir / parameter_filename_from_token(token)
         for source in (bundle_file, param_file):
             if not source.exists():
                 print(f"[WARN] Quelldatei nicht gefunden: {source}")
@@ -251,6 +270,11 @@ def copy_resources(processed_bundles: List[str], args: argparse.Namespace) -> No
             resource_type = detect_resource_type(source)
             destination_name = determine_destination_name(source, resource_type)
             destination = dest_dir / destination_name
+            try:
+                if source.resolve() == destination.resolve():
+                    continue
+            except FileNotFoundError:
+                pass
             shutil.copy2(source, destination)
             try:
                 rel_path = destination.relative_to(PROJECT_ROOT)

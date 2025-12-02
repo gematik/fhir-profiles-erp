@@ -30,7 +30,8 @@ menu:
   FHIR-Artefakte: artifacts.html
 
 parameters:
+  path-resource:
+    - input/resources
   path-pages:
     - input/content
-    - input/content/kbv-bunldes
-    - input/content/transformed-kbv-bundles
+  autoload-resources: true
