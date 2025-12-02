@@ -17,9 +17,9 @@
     <a href="toc.html">Inhaltsverzeichnis</a>
   </li>
   <li>
-    <a href="artifacts.html">FHIR-Artefakte</a>
+    <a href="mapping.html">Mapping</a>
   </li>
   <li>
-    <a href="structuremap-implementierungsplan.html">Mapping-Plan</a>
+    <a href="artifacts.html">FHIR-Artefakte</a>
   </li>
 </ul>

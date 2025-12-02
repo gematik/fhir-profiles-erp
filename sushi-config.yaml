@@ -26,9 +26,11 @@ applyExtensionMetadataToRoot: false
 menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
+  Mapping: mapping.html
   FHIR-Artefakte: artifacts.html
-  Mapping-Plan: structuremap-implementierungsplan.html
 
 parameters:
   path-pages:
     - input/content
+    - input/content/kbv-bunldes
+    - input/content/transformed-kbv-bundles

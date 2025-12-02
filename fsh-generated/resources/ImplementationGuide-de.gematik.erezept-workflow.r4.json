@@ -926,28 +926,33 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-1f339db0-9e55-4946-9dfa-f1b30953be9b--47477033-mapping.html",
-          "title": "Bundle 1 F 339 Db 0 9 E 55 4946 9 Dfa F 1 B 30953 Be 9 B 47477033 Mapping",
+          "nameUrl": "Bundle-1-mapping.html",
+          "title": "Bundle 1 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-726e6cdd-c93d-418c-aeeb-1cfe60228916--42592467-mapping.html",
-          "title": "Bundle 726 E 6 Cdd C 93 D 418 C Aeeb 1 Cfe 60228916 42592467 Mapping",
+          "nameUrl": "Bundle-2-mapping.html",
+          "title": "Bundle 2 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-9c85a2a5-92ee-4a57-83cb-ba90a0df2a21--11012038-mapping.html",
-          "title": "Bundle 9 C 85 a 2 a 5 92 Ee 4 a 57 83 Cb Ba 90 a 0 Df 2 a 21 11012038 Mapping",
+          "nameUrl": "Bundle-3-mapping.html",
+          "title": "Bundle 3 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-acf39375-3a2b-4017-995d-531705fc129d--9307148-mapping.html",
-          "title": "Bundle Acf 39375 3 a 2 B 4017 995 D 531705 Fc 129 D 9307148 Mapping",
+          "nameUrl": "Bundle-4-mapping.html",
+          "title": "Bundle 4 Mapping",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-c48d0fb5-9d3a-4872-9879-cdd61c39fc1d--55758211-mapping.html",
-          "title": "Bundle C 48 D 0 Fb 5 9 D 3 a 4872 9879 Cdd 61 C 39 Fc 1 D 55758211 Mapping",
+          "nameUrl": "Bundle-5-mapping.html",
+          "title": "Bundle 5 Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mapping.html",
+          "title": "Mapping",
           "generation": "markdown"
         },
         {
@@ -974,6 +979,14 @@
       {
         "code": "path-pages",
         "value": "input/content"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/content/kbv-bunldes"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/content/transformed-kbv-bundles"
       }
     ]
   }

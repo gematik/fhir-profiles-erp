@@ -1,5 +1,5 @@
 
-**Titel:** F3b4c5d6e7f814b92A3c42d3e4f5a6702Structuremap
+**Titel:** KBV-PR-ERP-Prescription-Map
 
 **Beschreibung:** Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.3.2 -> EPAMedicationRequest|1.0.6-2
 

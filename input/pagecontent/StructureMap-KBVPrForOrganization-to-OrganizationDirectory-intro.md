@@ -1,5 +1,5 @@
 
-**Titel:** F0c2a1b596c5f4e9b9f221a3d4b5c6e72Structuremap
+**Titel:** KBV-PR-FOR-Organization-Map
 
 **Beschreibung:** Auto-generated StructureMap for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25
 

@@ -1,5 +1,5 @@
 
-**Titel:** F1d770fac529d45798ee4F1fa3fa6f4edStructuremap
+**Titel:** GEM-ERP-PR-Medication-Map
 
 **Beschreibung:** Auto-generated StructureMap for GEM_ERP_PR_Medication|1.5.2 -> EPAMedication|1.0.6-2
 

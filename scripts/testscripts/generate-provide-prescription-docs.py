@@ -23,9 +23,11 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 DEFAULT_BUNDLE_DIR = PROJECT_ROOT / "input" / "content" / "kbv-bundles"
 DEFAULT_PARAMETER_DIR = PROJECT_ROOT / "input" / "content" / "transformed-kbv-bundles"
 DEFAULT_MAPPING_DIR = PROJECT_ROOT / "input" / "pagecontent"
+DEFAULT_INCLUDE_DIR = PROJECT_ROOT / "input" / "includes"
 TRANSFORM_SCRIPT = SCRIPT_DIR / "transform-all-kbv-bundles.py"
 COMPARE_SCRIPT = SCRIPT_DIR / "compare-bundle-parameters.py"
 OVERVIEW_FILENAME = "provide-prescription-mappings.md"
+INCLUDE_FILENAME = "provide-prescription-mapping-links.md"
 
 
 def parse_args() -> argparse.Namespace:
@@ -35,6 +37,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--bundle-dir", type=Path, default=DEFAULT_BUNDLE_DIR)
     parser.add_argument("--parameter-dir", type=Path, default=DEFAULT_PARAMETER_DIR)
     parser.add_argument("--mapping-dir", type=Path, default=DEFAULT_MAPPING_DIR)
+    parser.add_argument("--include-dir", type=Path, default=DEFAULT_INCLUDE_DIR)
     parser.add_argument(
         "--python",
         type=str,
@@ -132,8 +135,11 @@ def label_for_mapping(filename: str) -> str:
     return label
 
 
-def write_overview(mapping_dir: Path) -> None:
-    mapping_files = sorted(mapping_dir.glob("Bundle-*-mapping.md"))
+def collect_mapping_files(mapping_dir: Path) -> List[Path]:
+    return sorted(mapping_dir.glob("Bundle-*-mapping.md"))
+
+
+def write_overview(mapping_files: List[Path], mapping_dir: Path) -> None:
     lines = [
         "## Provide Prescription Mapping Tables",
         "",
@@ -154,7 +160,8 @@ def write_overview(mapping_dir: Path) -> None:
             if name_without_suffix.endswith("-mapping.md"):
                 name_without_suffix = name_without_suffix[: -len("-mapping.md")]
             label = label_for_mapping(name_without_suffix)
-            lines.append(f"- [{label}]({base})")
+            html_target = base.replace(".md", ".html")
+            lines.append(f"- [{label}]({html_target})")
     lines.extend(
         [
             "",
@@ -168,11 +175,34 @@ def write_overview(mapping_dir: Path) -> None:
     print("[INFO] provide-prescription-mappings.md aktualisiert")
 
 
+def write_include_links(mapping_files: List[Path], include_dir: Path) -> None:
+    include_dir.mkdir(parents=True, exist_ok=True)
+    if not mapping_files:
+        content = "*Noch keine Mapping-Dateien generiert.*\n"
+    else:
+        lines = []
+        for file in mapping_files:
+            base = file.name
+            name_without_suffix = base
+            if name_without_suffix.endswith("-mapping.md"):
+                name_without_suffix = name_without_suffix[: -len("-mapping.md")]
+            label = label_for_mapping(name_without_suffix)
+            html_target = base.replace(".md", ".html")
+            lines.append(f"- [{label}]({html_target})")
+        content = "\n".join(lines) + "\n"
+
+    include_path = include_dir / INCLUDE_FILENAME
+    include_path.write_text(content, encoding="utf-8")
+    print("[INFO] provide-prescription-mapping-links.md aktualisiert")
+
+
 def main() -> None:
     args = parse_args()
     transform_bundles(args)
     generate_mapping_tables(args)
-    write_overview(args.mapping_dir)
+    mapping_files = collect_mapping_files(args.mapping_dir)
+    write_overview(mapping_files, args.mapping_dir)
+    write_include_links(mapping_files, args.include_dir)
 
 
 if __name__ == "__main__":
