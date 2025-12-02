@@ -32,6 +32,30 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optionaler Ausgabepfad für die Markdown-Datei (sonst STDOUT)",
     )
+    parser.add_argument(
+        "--source-link",
+        type=str,
+        default=None,
+        help="Optionaler Link zum KBV Bundle (z. B. Bundle-xyz.html)",
+    )
+    parser.add_argument(
+        "--source-label",
+        type=str,
+        default="KBV Bundle",
+        help="Anzuzeigender Text für den Bundle-Link",
+    )
+    parser.add_argument(
+        "--target-link",
+        type=str,
+        default=None,
+        help="Optionaler Link zur Parameters-Ressource (z. B. Bundle-xyz-parameters.html)",
+    )
+    parser.add_argument(
+        "--target-label",
+        type=str,
+        default="Provide Parameters",
+        help="Anzuzeigender Text für den Parameters-Link",
+    )
     return parser.parse_args()
 
 
@@ -161,6 +185,7 @@ def build_rows(
     source_prefix: str,
     target_obj: Optional[Dict[str, Any]] | Dict[str, Any],
     target_prefix: str,
+    target_display_prefix: Optional[str] = None,
 ) -> ValueMap:
     if not source_obj or not target_obj:
         return []
@@ -172,14 +197,22 @@ def build_rows(
         if isinstance(t_value, (dict, list)):
             continue
         s_path = find_matching_source(t_path, t_value, source_flat)
-        rows.append((s_path or "—", t_path, format_value(t_value)))
+        display_path = t_path
+        if target_display_prefix and t_path.startswith(target_prefix):
+            suffix = t_path[len(target_prefix) :]
+            if suffix.startswith("."):
+                suffix = suffix[1:]
+            display_path = target_display_prefix
+            if suffix:
+                display_path = f"{target_display_prefix}.{suffix}"
+        rows.append((s_path or "—", display_path, format_value(t_value)))
     return rows
 
 
 def table_for(title: str, rows: ValueMap) -> List[str]:
     if not rows:
         return [f"### {title}", "", "*Keine Daten vorhanden.*", ""]
-    lines = [f"### {title}", "", "| KBV Pfad | Parameters Pfad | Wert |", "| --- | --- | --- |"]
+    lines = [f"### {title}", "", "| KBV Pfad | EPA Pfad | Wert |", "| --- | --- | --- |"]
     for source_path, target_path, value in rows:
         source_cell = f"`{source_path}`" if source_path != "—" else "—"
         lines.append(f"| {source_cell} | `{target_path}` | {value} |")
@@ -187,13 +220,18 @@ def table_for(title: str, rows: ValueMap) -> List[str]:
     return lines
 
 
-def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[str]:
+def build_sections(
+    bundle: Dict[str, Any],
+    parameters: Dict[str, Any],
+    metadata_lines: Optional[List[str]] = None,
+) -> List[str]:
     rx_param = find_rx_parameter(parameters)
     identifier_rows = build_rows(
         bundle.get("identifier"),
         "Bundle.identifier",
         find_part(rx_param, "prescriptionId"),
         "Parameters.parameter[rxPrescription].part[prescriptionId]",
+        "Parameters.prescriptionId",
     )
 
     med_request = find_resource(bundle, "MedicationRequest")
@@ -202,6 +240,7 @@ def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[s
         "MedicationRequest",
         find_part(rx_param, "authoredOn"),
         "Parameters.parameter[rxPrescription].part[authoredOn]",
+        "Parameters.authoredOn",
     )
 
     med_request_rows = build_rows(
@@ -209,6 +248,7 @@ def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[s
         "MedicationRequest",
         (find_part(rx_param, "medicationRequest") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[medicationRequest].resource",
+        "MedicationRequest",
     )
 
     org_rows = build_rows(
@@ -216,6 +256,7 @@ def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[s
         "Organization",
         (find_part(rx_param, "organization") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[organization].resource",
+        "Organization",
     )
 
     prac_rows = build_rows(
@@ -223,6 +264,7 @@ def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[s
         "Practitioner",
         (find_part(rx_param, "practitioner") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[practitioner].resource",
+        "Practitioner",
     )
 
     med_rows = build_rows(
@@ -230,9 +272,12 @@ def build_sections(bundle: Dict[str, Any], parameters: Dict[str, Any]) -> List[s
         "Medication",
         (find_part(rx_param, "medication") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[medication].resource",
+        "Medication",
     )
 
     sections: List[str] = ["## Bundle → Parameters Mapping", ""]
+    if metadata_lines:
+        sections += metadata_lines + [""]
     sections += table_for("Verordnungskennung", identifier_rows)
     sections += table_for("Ausstellungsdatum", authored_rows)
     sections += table_for("KBV MedicationRequest → EPA MedicationRequest", med_request_rows)
@@ -255,7 +300,12 @@ def main() -> int:
     args = parse_args()
     bundle = load_json(args.bundle)
     parameters = load_json(args.parameters)
-    markdown = build_sections(bundle, parameters)
+    metadata: List[str] = []
+    if args.source_link:
+        metadata.append(f"> Quelle: [{args.source_label}]({args.source_link})")
+    if args.target_link:
+        metadata.append(f"> Ziel: [{args.target_label}]({args.target_link})")
+    markdown = build_sections(bundle, parameters, metadata_lines=metadata or None)
     write_output(markdown, args.output)
     return 0
 

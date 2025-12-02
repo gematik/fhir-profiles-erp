@@ -12,6 +12,8 @@ from __future__ import annotations
 
 import argparse
 import datetime as _dt
+import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -24,6 +26,7 @@ DEFAULT_BUNDLE_DIR = PROJECT_ROOT / "input" / "content" / "kbv-bundles"
 DEFAULT_PARAMETER_DIR = PROJECT_ROOT / "input" / "content" / "transformed-kbv-bundles"
 DEFAULT_MAPPING_DIR = PROJECT_ROOT / "input" / "pagecontent"
 DEFAULT_INCLUDE_DIR = PROJECT_ROOT / "input" / "includes"
+DEFAULT_FHIR_RESOURCE_DIR = PROJECT_ROOT / "fsh-generated" / "resources"
 TRANSFORM_SCRIPT = SCRIPT_DIR / "transform-all-kbv-bundles.py"
 COMPARE_SCRIPT = SCRIPT_DIR / "compare-bundle-parameters.py"
 OVERVIEW_FILENAME = "provide-prescription-mappings.md"
@@ -38,6 +41,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--parameter-dir", type=Path, default=DEFAULT_PARAMETER_DIR)
     parser.add_argument("--mapping-dir", type=Path, default=DEFAULT_MAPPING_DIR)
     parser.add_argument("--include-dir", type=Path, default=DEFAULT_INCLUDE_DIR)
+    parser.add_argument("--fhir-resource-dir", type=Path, default=DEFAULT_FHIR_RESOURCE_DIR)
     parser.add_argument(
         "--python",
         type=str,
@@ -91,17 +95,18 @@ def bundle_name_from_parameter(parameter_file: Path) -> str:
     return parameter_file.stem
 
 
-def generate_mapping_tables(args: argparse.Namespace) -> None:
+def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
     if args.skip_mappings:
         print("[INFO] Mapping-Erstellung übersprungen")
-        return
+        return []
 
     args.mapping_dir.mkdir(parents=True, exist_ok=True)
     parameter_files = discover_parameter_files(args.parameter_dir)
     if not parameter_files:
         print("[INFO] Keine Parameters-Dateien zum Vergleichen gefunden")
-        return
+        return []
 
+    processed: List[str] = []
     for param_file in parameter_files:
         base_name = bundle_name_from_parameter(param_file)
         bundle_file = args.bundle_dir / f"{base_name}.json"
@@ -116,9 +121,20 @@ def generate_mapping_tables(args: argparse.Namespace) -> None:
             str(param_file),
             "--output",
             str(output_file),
+            "--source-link",
+            f"{base_name}.html",
+            "--source-label",
+            "KBV Bundle",
+            "--target-link",
+            f"{base_name}-parameters.html",
+            "--target-label",
+            "EPA Provide Parameters",
         ]
         run(cmd)
         print(f"[INFO] Mapping aktualisiert: {output_file.name}")
+        processed.append(base_name)
+
+    return processed
 
 
 def label_for_mapping(filename: str) -> str:
@@ -196,13 +212,61 @@ def write_include_links(mapping_files: List[Path], include_dir: Path) -> None:
     print("[INFO] provide-prescription-mapping-links.md aktualisiert")
 
 
+def determine_destination_name(source: Path, resource_type: str | None) -> str:
+    if not resource_type:
+        return source.name
+    prefix = f"{resource_type}-"
+    name = source.name
+    if name.startswith(prefix):
+        return name
+    remainder = name
+    if "-" in name:
+        remainder = name.split("-", 1)[1]
+    return prefix + remainder
+
+
+def detect_resource_type(path: Path) -> str | None:
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+        value = data.get("resourceType")
+        return value if isinstance(value, str) else None
+    except Exception as exc:  # noqa: BLE001
+        print(f"[WARN] Konnte resourceType nicht ermitteln ({path}): {exc}")
+        return None
+
+
+def copy_resources(processed_bundles: List[str], args: argparse.Namespace) -> None:
+    if not processed_bundles:
+        return
+    dest_dir = args.fhir_resource_dir
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    for base_name in processed_bundles:
+        bundle_file = args.bundle_dir / f"{base_name}.json"
+        param_file = args.parameter_dir / f"{base_name}-parameters.json"
+        for source in (bundle_file, param_file):
+            if not source.exists():
+                print(f"[WARN] Quelldatei nicht gefunden: {source}")
+                continue
+            resource_type = detect_resource_type(source)
+            destination_name = determine_destination_name(source, resource_type)
+            destination = dest_dir / destination_name
+            shutil.copy2(source, destination)
+            try:
+                rel_path = destination.relative_to(PROJECT_ROOT)
+            except ValueError:
+                rel_path = destination
+            print(f"[INFO] Ressource aktualisiert: {rel_path}")
+
+
 def main() -> None:
     args = parse_args()
     transform_bundles(args)
-    generate_mapping_tables(args)
+    processed_bundles = generate_mapping_tables(args)
     mapping_files = collect_mapping_files(args.mapping_dir)
     write_overview(mapping_files, args.mapping_dir)
     write_include_links(mapping_files, args.include_dir)
+    copy_resources(processed_bundles, args)
 
 
 if __name__ == "__main__":
