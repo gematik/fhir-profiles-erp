@@ -6,7 +6,7 @@
   "title": "ValueSet der FlowType-Codes",
   "description": "Zeigt die verschiedenen Arten des E-Rezepts entsprechend den Verschreibungsformularen.",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "date": "2025-09-25",
   "publisher": "gematik GmbH",
   "contact": [

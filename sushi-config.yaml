@@ -5,7 +5,7 @@ name: E-Rezept Workflow
 title: "E-Rezept Workflow"
 description: Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst
 status: draft # draft | active | retired | unknown
-version: 1.6.0
+version: 1.6.1-draft
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build, ballot, release
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-LOG-MedicationDispense-DiGA",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM-ERP-LOG-MedicationDispense-DiGA",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "name": "GEM_ERP_LOG_MedicationDispense_DiGA",
   "title": "Logical DiGA Medication Dispense",
   "status": "draft",

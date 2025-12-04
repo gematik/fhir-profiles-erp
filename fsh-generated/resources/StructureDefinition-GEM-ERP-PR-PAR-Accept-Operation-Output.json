@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-PAR-Accept-Operation-Output",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "name": "GEM_ERP_PR_PAR_AcceptOperation_Output",
   "title": "GEM ERP PR AcceptOperation Output",
   "status": "draft",

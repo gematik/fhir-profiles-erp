@@ -23,11 +23,11 @@
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
-      "valueDate": "2026-04-01"
+      "valueDate": "2026-07-01"
     },
     {
       "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
-      "valueDate": "2026-04-01"
+      "valueDate": "2026-07-01"
     }
   ],
   "identifier": [
@@ -41,7 +41,7 @@
     }
   ],
   "status": "draft",
-  "authoredOn": "2026-04-01T15:29:00+00:00",
+  "authoredOn": "2026-07-01T15:29:00+00:00",
   "performerType": [
     {
       "coding": [

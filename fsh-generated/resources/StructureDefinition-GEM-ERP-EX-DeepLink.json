@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-EX-DeepLink",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "name": "GEM_ERP_EX_DeepLink",
   "title": "DiGA-DeepLink",
   "status": "draft",
