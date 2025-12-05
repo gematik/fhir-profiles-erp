@@ -5,96 +5,128 @@
 
 ### Verordnungskennung
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| — | `Parameters.prescriptionId.name` | `prescriptionId` |
-| `Bundle.identifier.system` | `Parameters.prescriptionId.valueIdentifier.system` | `https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId` |
-| `Bundle.identifier.value` | `Parameters.prescriptionId.valueIdentifier.value` | `160.100.000.000.033.40` |
+*Abgedeckt:* 0 · *Neu:* 0 · *Offen:* 2
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `Bundle.identifier.system` | — | `https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId` | ⚠️ Offen |
+| `Bundle.identifier.value` | — | `160.100.000.000.033.40` | ⚠️ Offen |
 
 ### Ausstellungsdatum
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
+*Abgedeckt:* 0 · *Neu:* 0 · *Offen:* 1
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `MedicationRequest.authoredOn` | — | `2024-05-20` | ⚠️ Offen |
 
 ### KBV MedicationRequest → EPA MedicationRequest
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| `MedicationRequest.authoredOn` | `MedicationRequest.authoredOn` | `2024-05-20` |
-| `MedicationRequest.dispenseRequest.quantity.unit` | `MedicationRequest.dispenseRequest.quantity.unit` | `Packung` |
-| `MedicationRequest.dispenseRequest.quantity.value` | `MedicationRequest.dispenseRequest.quantity.value` | `1` |
-| `MedicationRequest.id` | `MedicationRequest.id` | `a05364ab-29b1-4553-90b8-9657e2f5f5ed` |
-| `MedicationRequest.insurance[0].reference` | `MedicationRequest.insurance[0].reference` | `Coverage/1b89236c-ab14-4e92-937e-5af0b59d0cd4` |
-| `MedicationRequest.intent` | `MedicationRequest.intent` | `order` |
-| `MedicationRequest.medicationReference.reference` | `MedicationRequest.medicationReference.reference` | `Medication/dc811d43-aad4-4c8d-a58c-2e0258710142` |
-| `MedicationRequest.requester.reference` | `MedicationRequest.requester.reference` | `Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c` |
-| `MedicationRequest.resourceType` | `MedicationRequest.resourceType` | `MedicationRequest` |
-| `MedicationRequest.status` | `MedicationRequest.status` | `active` |
-| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/93866fdc-3e50-4902-a7e9-891b54737b5e` |
+*Abgedeckt:* 0 · *Neu:* 0 · *Offen:* 22
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `MedicationRequest.authoredOn` | — | `2024-05-20` | ⚠️ Offen |
+| `MedicationRequest.dispenseRequest.quantity.unit` | — | `Packung` | ⚠️ Offen |
+| `MedicationRequest.dispenseRequest.quantity.value` | — | `1` | ⚠️ Offen |
+| `MedicationRequest.extension[0].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_StatusCoPayment` | ⚠️ Offen |
+| `MedicationRequest.extension[0].valueCoding.code` | — | `0` | ⚠️ Offen |
+| `MedicationRequest.extension[0].valueCoding.system` | — | `https://fhir.kbv.de/CodeSystem/KBV_CS_FOR_StatusCoPayment` | ⚠️ Offen |
+| `MedicationRequest.extension[1].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_EmergencyServicesFee` | ⚠️ Offen |
+| `MedicationRequest.extension[1].valueBoolean` | — | `false` | ⚠️ Offen |
+| `MedicationRequest.extension[2].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER` | ⚠️ Offen |
+| `MedicationRequest.extension[2].valueBoolean` | — | `false` | ⚠️ Offen |
+| `MedicationRequest.extension[3].extension[0].url` | — | `Kennzeichen` | ⚠️ Offen |
+| `MedicationRequest.extension[3].extension[0].valueBoolean` | — | `false` | ⚠️ Offen |
+| `MedicationRequest.extension[3].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription` | ⚠️ Offen |
+| `MedicationRequest.id` | — | `a05364ab-29b1-4553-90b8-9657e2f5f5ed` | ⚠️ Offen |
+| `MedicationRequest.insurance[0].reference` | — | `Coverage/1b89236c-ab14-4e92-937e-5af0b59d0cd4` | ⚠️ Offen |
+| `MedicationRequest.intent` | — | `order` | ⚠️ Offen |
+| `MedicationRequest.medicationReference.reference` | — | `Medication/dc811d43-aad4-4c8d-a58c-2e0258710142` | ⚠️ Offen |
+| `MedicationRequest.meta.profile[0]` | — | `https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Prescription\|1.3` | ⚠️ Offen |
+| `MedicationRequest.requester.reference` | — | `Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c` | ⚠️ Offen |
+| `MedicationRequest.resourceType` | — | `MedicationRequest` | ⚠️ Offen |
+| `MedicationRequest.status` | — | `active` | ⚠️ Offen |
+| `MedicationRequest.subject.reference` | — | `Patient/93866fdc-3e50-4902-a7e9-891b54737b5e` | ⚠️ Offen |
 
 ### KBV Organization → EPA Organization
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| `Organization.address[0]._line[0].extension[0].url` | `Organization.address[0]._line[0].extension[0].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber` |
-| `Organization.address[0]._line[0].extension[0].valueString` | `Organization.address[0]._line[0].extension[0].valueString` | `2` |
-| `Organization.address[0]._line[0].extension[1].url` | `Organization.address[0]._line[0].extension[1].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName` |
-| `Organization.address[0]._line[0].extension[1].valueString` | `Organization.address[0]._line[0].extension[1].valueString` | `Herbert-Lewin-Platz` |
-| `Organization.address[0]._line[1].extension[0].url` | `Organization.address[0]._line[1].extension[0].url` | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator` |
-| `Organization.address[0]._line[1].extension[0].valueString` | `Organization.address[0]._line[1].extension[0].valueString` | `Erdgeschoss` |
-| `Organization.address[0].city` | `Organization.address[0].city` | `Berlin` |
-| `Organization.address[0].country` | `Organization.address[0].country` | `D` |
-| `Organization.address[0].line[0]` | `Organization.address[0].line[0]` | `Herbert-Lewin-Platz 2` |
-| `Organization.address[0].line[1]` | `Organization.address[0].line[1]` | `Erdgeschoss` |
-| `Organization.address[0].postalCode` | `Organization.address[0].postalCode` | `10623` |
-| `Organization.address[0].type` | `Organization.address[0].type` | `both` |
-| `Organization.id` | `Organization.id` | `2a555cd3-0543-483c-88b3-f68647620962` |
-| `Organization.identifier[0].system` | `Organization.identifier[0].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR` |
-| `Organization.identifier[0].type.coding[0].code` | `Organization.identifier[0].type.coding[0].code` | `BSNR` |
-| `Organization.identifier[0].type.coding[0].system` | `Organization.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Organization.identifier[0].value` | `Organization.identifier[0].value` | `724444400` |
-| `Organization.name` | `Organization.name` | `Hausarztpraxis` |
-| `Organization.resourceType` | `Organization.resourceType` | `Organization` |
-| `Organization.telecom[0].system` | `Organization.telecom[0].system` | `phone` |
-| `Organization.telecom[0].value` | `Organization.telecom[0].value` | `030321654987` |
-| `Organization.telecom[1].system` | `Organization.telecom[1].system` | `email` |
-| `Organization.telecom[1].value` | `Organization.telecom[1].value` | `hausarztpraxis@e-mail.de` |
+*Abgedeckt:* 10 · *Neu:* 0 · *Offen:* 14
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `Organization.id` | `Organization.id` | `2a555cd3-0543-483c-88b3-f68647620962` | ✅ Übernommen |
+| `Organization.identifier[0].system` | `Organization.identifier[0].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR` | ✅ Übernommen |
+| `Organization.identifier[0].type.coding[0].code` | `Organization.identifier[0].type.coding[0].code` | `BSNR` | ✅ Übernommen |
+| `Organization.identifier[0].type.coding[0].system` | `Organization.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` | ✅ Übernommen |
+| `Organization.identifier[0].value` | `Organization.identifier[0].value` | `724444400` | ✅ Übernommen |
+| `Organization.resourceType` | `Organization.resourceType` | `Organization` | ✅ Übernommen |
+| `Organization.telecom[0].system` | `Organization.telecom[0].system` | `phone` | ✅ Übernommen |
+| `Organization.telecom[0].value` | `Organization.telecom[0].value` | `030321654987` | ✅ Übernommen |
+| `Organization.telecom[1].system` | `Organization.telecom[1].system` | `email` | ✅ Übernommen |
+| `Organization.telecom[1].value` | `Organization.telecom[1].value` | `hausarztpraxis@e-mail.de` | ✅ Übernommen |
+| `Organization.address[0]._line[0].extension[0].url` | — | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber` | ⚠️ Offen |
+| `Organization.address[0]._line[0].extension[0].valueString` | — | `2` | ⚠️ Offen |
+| `Organization.address[0]._line[0].extension[1].url` | — | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName` | ⚠️ Offen |
+| `Organization.address[0]._line[0].extension[1].valueString` | — | `Herbert-Lewin-Platz` | ⚠️ Offen |
+| `Organization.address[0]._line[1].extension[0].url` | — | `http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator` | ⚠️ Offen |
+| `Organization.address[0]._line[1].extension[0].valueString` | — | `Erdgeschoss` | ⚠️ Offen |
+| `Organization.address[0].city` | — | `Berlin` | ⚠️ Offen |
+| `Organization.address[0].country` | — | `D` | ⚠️ Offen |
+| `Organization.address[0].line[0]` | — | `Herbert-Lewin-Platz 2` | ⚠️ Offen |
+| `Organization.address[0].line[1]` | — | `Erdgeschoss` | ⚠️ Offen |
+| `Organization.address[0].postalCode` | — | `10623` | ⚠️ Offen |
+| `Organization.address[0].type` | — | `both` | ⚠️ Offen |
+| `Organization.meta.profile[0]` | — | `https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Organization\|1.2` | ⚠️ Offen |
+| `Organization.name` | — | `Hausarztpraxis` | ⚠️ Offen |
 
 ### KBV Practitioner → EPA Practitioner
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| `Practitioner.id` | `Practitioner.id` | `d6f3b55d-3095-4655-96dc-da3bec21271c` |
-| `Practitioner.identifier[0].system` | `Practitioner.identifier[0].system` | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR` |
-| `Practitioner.identifier[0].type.coding[0].code` | `Practitioner.identifier[0].type.coding[0].code` | `LANR` |
-| `Practitioner.identifier[0].type.coding[0].system` | `Practitioner.identifier[0].type.coding[0].system` | `http://terminology.hl7.org/CodeSystem/v2-0203` |
-| `Practitioner.identifier[0].value` | `Practitioner.identifier[0].value` | `754236701` |
-| `Practitioner.name[0]._family.extension[0].url` | `Practitioner.name[0]._family.extension[0].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-name` |
-| `Practitioner.name[0]._family.extension[0].valueString` | `Practitioner.name[0]._family.extension[0].valueString` | `Schulz` |
-| `Practitioner.name[0].family` | `Practitioner.name[0].family` | `Schulz` |
-| `Practitioner.name[0].given[0]` | `Practitioner.name[0].given[0]` | `Ben` |
-| `Practitioner.name[0].use` | `Practitioner.name[0].use` | `official` |
-| `Practitioner.qualification[1].code.coding[0].code` | `Practitioner.qualification[0].code.coding[0].code` | `Berufsbezeichnung` |
-| `Practitioner.qualification[1].code.coding[0].system` | `Practitioner.qualification[0].code.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_FOR_Berufsbezeichnung` |
-| `Practitioner.qualification[1].code.text` | `Practitioner.qualification[0].code.text` | `Facharzt für Allgemeinmedizin` |
-| `Practitioner.resourceType` | `Practitioner.resourceType` | `Practitioner` |
+*Abgedeckt:* 0 · *Neu:* 0 · *Offen:* 17
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `Practitioner.id` | — | `d6f3b55d-3095-4655-96dc-da3bec21271c` | ⚠️ Offen |
+| `Practitioner.identifier[0].system` | — | `https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR` | ⚠️ Offen |
+| `Practitioner.identifier[0].type.coding[0].code` | — | `LANR` | ⚠️ Offen |
+| `Practitioner.identifier[0].type.coding[0].system` | — | `http://terminology.hl7.org/CodeSystem/v2-0203` | ⚠️ Offen |
+| `Practitioner.identifier[0].value` | — | `754236701` | ⚠️ Offen |
+| `Practitioner.meta.profile[0]` | — | `https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Practitioner\|1.2` | ⚠️ Offen |
+| `Practitioner.name[0]._family.extension[0].url` | — | `http://hl7.org/fhir/StructureDefinition/humanname-own-name` | ⚠️ Offen |
+| `Practitioner.name[0]._family.extension[0].valueString` | — | `Schulz` | ⚠️ Offen |
+| `Practitioner.name[0].family` | — | `Schulz` | ⚠️ Offen |
+| `Practitioner.name[0].given[0]` | — | `Ben` | ⚠️ Offen |
+| `Practitioner.name[0].use` | — | `official` | ⚠️ Offen |
+| `Practitioner.qualification[0].code.coding[0].code` | — | `00` | ⚠️ Offen |
+| `Practitioner.qualification[0].code.coding[0].system` | — | `https://fhir.kbv.de/CodeSystem/KBV_CS_FOR_Qualification_Type` | ⚠️ Offen |
+| `Practitioner.qualification[1].code.coding[0].code` | — | `Berufsbezeichnung` | ⚠️ Offen |
+| `Practitioner.qualification[1].code.coding[0].system` | — | `https://fhir.kbv.de/CodeSystem/KBV_CS_FOR_Berufsbezeichnung` | ⚠️ Offen |
+| `Practitioner.qualification[1].code.text` | — | `Facharzt für Allgemeinmedizin` | ⚠️ Offen |
+| `Practitioner.resourceType` | — | `Practitioner` | ⚠️ Offen |
 
 ### KBV Medication → EPA Medication
 
-| KBV Pfad | EPA Pfad | Wert |
-| --- | --- | --- |
-| `Medication.code.coding[0].code` | `Medication.code.coding[0].code` | `wirkstoff` |
-| `Medication.code.coding[0].system` | `Medication.code.coding[0].system` | `https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type` |
-| `Medication.form.text` | `Medication.form.text` | `Tabletten` |
-| `Medication.id` | `Medication.id` | `dc811d43-aad4-4c8d-a58c-2e0258710142` |
-| `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `22339` |
-| `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `http://fhir.de/CodeSystem/ask` |
-| `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | `Medication.ingredient[1].itemCodeableConcept.coding[0].code` | `22339` |
-| `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | `Medication.ingredient[2].itemCodeableConcept.coding[0].system` | `http://fhir.de/CodeSystem/ask` |
-| `Medication.ingredient[0].itemCodeableConcept.text` | `Medication.ingredient[3].itemCodeableConcept.text` | `Somatropin` |
-| `Medication.ingredient[0].strength.denominator.unit` | `Medication.ingredient[4].strength.denominator.unit` | `Stück` |
-| `Medication.ingredient[0].strength.denominator.value` | `Medication.ingredient[5].strength.denominator.value` | `1` |
-| `Medication.ingredient[0].strength.numerator.unit` | `Medication.ingredient[6].strength.numerator.unit` | `mg` |
-| `Medication.ingredient[0].strength.numerator.value` | `Medication.ingredient[7].strength.numerator.value` | `12` |
-| `Medication.resourceType` | `Medication.resourceType` | `Medication` |
+*Abgedeckt:* 0 · *Neu:* 0 · *Offen:* 20
+
+| KBV Pfad | EPA Pfad | Wert | Status |
+| --- | --- | --- | --- |
+| `Medication.code.coding[0].code` | — | `wirkstoff` | ⚠️ Offen |
+| `Medication.code.coding[0].system` | — | `https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type` | ⚠️ Offen |
+| `Medication.extension[0].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category` | ⚠️ Offen |
+| `Medication.extension[0].valueCoding.code` | — | `00` | ⚠️ Offen |
+| `Medication.extension[0].valueCoding.system` | — | `https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Category` | ⚠️ Offen |
+| `Medication.extension[1].url` | — | `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine` | ⚠️ Offen |
+| `Medication.extension[1].valueBoolean` | — | `false` | ⚠️ Offen |
+| `Medication.extension[2].url` | — | `http://fhir.de/StructureDefinition/normgroesse` | ⚠️ Offen |
+| `Medication.extension[2].valueCode` | — | `N1` | ⚠️ Offen |
+| `Medication.form.text` | — | `Tabletten` | ⚠️ Offen |
+| `Medication.id` | — | `dc811d43-aad4-4c8d-a58c-2e0258710142` | ⚠️ Offen |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].code` | — | `22339` | ⚠️ Offen |
+| `Medication.ingredient[0].itemCodeableConcept.coding[0].system` | — | `http://fhir.de/CodeSystem/ask` | ⚠️ Offen |
+| `Medication.ingredient[0].itemCodeableConcept.text` | — | `Somatropin` | ⚠️ Offen |
+| `Medication.ingredient[0].strength.denominator.unit` | — | `Stück` | ⚠️ Offen |
+| `Medication.ingredient[0].strength.denominator.value` | — | `1` | ⚠️ Offen |
+| `Medication.ingredient[0].strength.numerator.unit` | — | `mg` | ⚠️ Offen |
+| `Medication.ingredient[0].strength.numerator.value` | — | `12` | ⚠️ Offen |
+| `Medication.meta.profile[0]` | — | `https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_Ingredient\|1.3` | ⚠️ Offen |
+| `Medication.resourceType` | — | `Medication` | ⚠️ Offen |

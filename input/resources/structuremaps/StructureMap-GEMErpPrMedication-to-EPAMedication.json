@@ -5,7 +5,7 @@
   "name": "GEMErpPrMedicationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2025-12-02",
+  "date": "2025-12-05",
   "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.5.2 -> EPAMedication|1.0.6-2",
   "structure": [
     {

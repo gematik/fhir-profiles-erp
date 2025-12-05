@@ -124,6 +124,36 @@ def extract_target_transformation_info(target):
 
     return transformations
 
+
+def determine_action_label(rule, target):
+    """Return a concise action label describing what the rule does."""
+    labels = []
+    transform_type = (target or {}).get('transform')
+    parameters = (target or {}).get('parameter') or []
+
+    if transform_type == 'create':
+        labels.append("🆕 Erstellt")
+    elif transform_type == 'copy':
+        if any('valueId' in param for param in parameters):
+            labels.append("✅ Kopiert")
+        elif any(
+            key in param
+            for param in parameters
+            for key in ("valueString", "valueUri", "valueCanonical", "valueBoolean", "valueInteger")
+        ):
+            labels.append("📝 Setzt Wert")
+
+    if rule.get('dependent'):
+        labels.append("📎 Delegiert")
+
+    if any(source.get('condition') for source in rule.get('source', [])):
+        labels.append("⚙️ Bedingt")
+
+    if not labels:
+        labels.append("ℹ️ Dokumentiert")
+
+    return " · ".join(labels)
+
 def build_fhir_path(parents, context, element):
     """Build FHIR path with improved readability"""
     def is_real(part):
@@ -225,9 +255,12 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
             for tgt_path_clean, tgt in target_entries:
                 target_desc_parts = list(base_desc_parts)
                 target_desc_parts.extend(extract_target_transformation_info(tgt))
-                desc = "<br>".join(target_desc_parts)
+                desc = "<br>".join(part for part in target_desc_parts if part)
+                if not desc:
+                    desc = "*(direkte Kopie)*"
+                action = determine_action_label(rule, tgt)
                 if src_path_clean or tgt_path_clean or desc:
-                    mappings.append((src_path_clean, tgt_path_clean, desc))
+                    mappings.append((src_path_clean, tgt_path_clean, action, desc))
         
         # Recurse into nested rules
         if 'rule' in rule:
@@ -241,27 +274,42 @@ def structuremap_to_markdown(json_data):
     """Convert StructureMap to enhanced markdown table"""
     group = json_data['group'][0]
     mappings = extract_relevant_rules(group['rule'])
-    
-    # Filter out empty mappings
-    filtered_mappings = [(src, tgt, desc) for src, tgt, desc in mappings if src or desc or (tgt and 'direkte Kopie' not in desc)]
-    
+
+    filtered_mappings = [
+        (src, tgt, action, desc)
+        for src, tgt, action, desc in mappings
+        if src or desc or (tgt and 'direkte Kopie' not in desc)
+    ]
+
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"
-    
-    # Create header with better column names
+
+    total = len(filtered_mappings)
+    actions = [action for _, _, action, _ in filtered_mappings]
+    create_count = sum('🆕' in action for action in actions)
+    delegate_count = sum('📎' in action for action in actions)
+    conditional_count = sum('⚙️' in action for action in actions)
+
+    summary = (
+        f"*Regeln:* {total} · "
+        f"Neue Ressourcen: {create_count} · "
+        f"Delegiert: {delegate_count} · "
+        f"Bedingt: {conditional_count}"
+    )
+
     rows = [
-        "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Transformation & Beschreibung |",
-        "|------------------------|---------------------|-------------------------------|",
+        summary,
+        "",
+        "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |",
+        "|------------------------|---------------------|--------|-------------------------------|",
     ]
-    
-    for src, tgt, desc in filtered_mappings:
-        # Add visual indicators for empty fields
-        src_display = f"`{src}`" if src else ""
-        tgt_display = f"`{tgt}`" if tgt else "*(wird bestimmt durch Kontext)*"
+
+    for src, tgt, action, desc in filtered_mappings:
+        src_display = f"`{src}`" if src else "—"
+        tgt_display = f"`{tgt}`" if tgt else "—"
         desc_display = desc if desc else "*(direkte Kopie)*"
-        
-        rows.append(f"| {src_display} | {tgt_display} | {desc_display} |")
-    
+        rows.append(f"| {src_display} | {tgt_display} | {action} | {desc_display} |")
+
     return "\n".join(rows)
 
 def main():

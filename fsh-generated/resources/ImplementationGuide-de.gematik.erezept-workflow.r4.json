@@ -623,6 +623,14 @@
       },
       {
         "reference": {
+          "reference": "StructureMap/GEMErpPrParCloseoperationInputMap"
+        },
+        "description": "Auto-generated StructureMap for transformation GEM_ERP_PR_PAR_CloseOperation_Input|1.5.2 -> EPAOpProvideDispensationERPInputParameters|1.0.6-2",
+        "exampleBoolean": false,
+        "name": "GEMErpPrParCloseoperationInputMap"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-EX-AvailabilityState"
         },
         "name": "GEM_ERP_EX_AvailabilityState",
@@ -721,11 +729,11 @@
       },
       {
         "reference": {
-          "reference": "StructureMap/KBVPrErpBundleToProvidePrescriptionParameters"
+          "reference": "StructureMap/KBVPrErpBundleMap"
         },
-        "description": "Aggregiertes Mapping vom KBV_PR_ERP_Bundle zu ePA Provide Prescription Parameters",
+        "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.3.2 -> EPAOpProvidePrescriptionERPInputParameters|1.0.6-2",
         "exampleBoolean": false,
-        "name": "KBVPrErpBundleToProvidePrescriptionParameters"
+        "name": "KBVPrErpBundleMap"
       },
       {
         "reference": {

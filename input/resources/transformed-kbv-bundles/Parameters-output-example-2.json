@@ -3,47 +3,6 @@
   "parameter" : [{
     "name" : "rxPrescription",
     "part" : [{
-      "name" : "prescriptionId",
-      "valueIdentifier" : {
-        "system" : "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-        "value" : "160.100.000.000.019.82"
-      }
-    },
-    {
-      "name" : "medicationRequest",
-      "resource" : {
-        "resourceType" : "MedicationRequest",
-        "id" : "4a7eefdd-df71-4a72-8047-c158017534a1",
-        "status" : "active",
-        "intent" : "order",
-        "medicationReference" : {
-          "reference" : "Medication/86fa62c7-06a0-418e-ba26-e99baa053c07"
-        },
-        "authoredOn" : "2024-05-20",
-        "requester" : {
-          "reference" : "Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655"
-        },
-        "insurance" : [{
-          "reference" : "Coverage/da80211e-61ee-458e-a651-87370b6ec30c"
-        }],
-        "dispenseRequest" : {
-          "quantity" : {
-            "value" : 1,
-            "unit" : "Packung"
-          }
-        },
-        "dosageInstruction" : [{
-          "text" : "1-0-0-0"
-        }],
-        "note" : [{
-          "text" : "Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat."
-        }],
-        "subject" : {
-          "reference" : "Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf"
-        }
-      }
-    },
-    {
       "name" : "organization",
       "resource" : {
         "resourceType" : "Organization",
@@ -58,7 +17,6 @@
           "system" : "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
           "value" : "721111100"
         }],
-        "name" : "MVZ",
         "telecom" : [{
           "system" : "phone",
           "value" : "0301234567"
@@ -70,27 +28,13 @@
         {
           "system" : "email",
           "value" : "mvz@e-mail.de"
-        }],
-        "address" : [{
-          "type" : "both",
-          "line" : ["Herbert-Lewin-Platz 2"],
-          "_line" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString" : "2"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString" : "Herbert-Lewin-Platz"
-            }]
-          }],
-          "city" : "Berlin",
-          "postalCode" : "10623",
-          "country" : "D"
         }]
       }
-    },
-    {
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
       "name" : "practitioner",
       "resource" : {
         "resourceType" : "Practitioner",
@@ -141,8 +85,294 @@
           }
         }]
       }
-    },
-    {
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medicationRequest",
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "id" : "4a7eefdd-df71-4a72-8047-c158017534a1",
+        "status" : "active",
+        "intent" : "order",
+        "medicationReference" : {
+          "reference" : "Medication/86fa62c7-06a0-418e-ba26-e99baa053c07"
+        },
+        "authoredOn" : "2024-05-20",
+        "requester" : {
+          "reference" : "Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655"
+        },
+        "insurance" : [{
+          "reference" : "Coverage/da80211e-61ee-458e-a651-87370b6ec30c"
+        }],
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
+        "dosageInstruction" : [{
+          "text" : "1-0-0-0"
+        }],
+        "note" : [{
+          "text" : "Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat."
+        }],
+        "subject" : {
+          "reference" : "Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf"
+        }
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "86fa62c7-06a0-418e-ba26-e99baa053c07",
+        "amount" : {
+          "denominator" : {
+            "value" : 1
+          },
+          "numerator" : {
+            "unit" : "Stück"
+          }
+        },
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Ramipril"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 5
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "86fa62c7-06a0-418e-ba26-e99baa053c07",
+        "amount" : {
+          "denominator" : {
+            "value" : 1
+          },
+          "numerator" : {
+            "unit" : "Stück"
+          }
+        },
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Ramipril"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 5
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "86fa62c7-06a0-418e-ba26-e99baa053c07",
+        "amount" : {
+          "denominator" : {
+            "value" : 1
+          },
+          "numerator" : {
+            "unit" : "Stück"
+          }
+        },
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22686"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Ramipril"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 5
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
       "name" : "medication",
       "resource" : {
         "resourceType" : "Medication",

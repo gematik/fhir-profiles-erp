@@ -5,7 +5,7 @@
   "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2025-12-02",
+  "date": "2025-12-05",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
   "structure": [
     {
@@ -44,7 +44,8 @@
             {
               "context": "KBVPRFOROrganization",
               "element": "address",
-              "variable": "srcKBVPRFOROrganizationAddressb2458a6a"
+              "variable": "srcKBVPRFOROrganizationAddressb2458a6a",
+              "condition": "url != 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct' and url != 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox'"
             }
           ],
           "target": [
@@ -114,26 +115,10 @@
         },
         {
           "name": "OrganizationName61d5a4f1",
-          "documentation": "Automatic copy",
+          "documentation": "Manual action required | organizationName → aus dem ACCESS_TOKEN der Anfrage",
           "source": [
             {
-              "context": "KBVPRFOROrganization",
-              "element": "name",
-              "variable": "srcKBVPRFOROrganizationNameabbbdc85"
-            }
-          ],
-          "target": [
-            {
-              "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "name",
-              "variable": "tgtOrganizationDirectoryName0e007323",
-              "transform": "copy",
-              "parameter": [
-                {
-                  "valueId": "srcKBVPRFOROrganizationNameabbbdc85"
-                }
-              ]
+              "context": "KBVPRFOROrganization"
             }
           ]
         },

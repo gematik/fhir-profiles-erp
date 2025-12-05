@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 DEFAULT_TRANSFORM_URL = (
-    "https://gematik.de/fhir/erp/StructureMap/KBVPrErpBundle-to-ProvidePrescriptionParameters"
+    "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrErpBundleMap"
 )
 DEFAULT_HAPI_JAR = Path("/Users/gematik/dev/validators/current_hapi_validator.jar")
 FHIR_VERSION = "4.0.1"

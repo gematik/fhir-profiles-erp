@@ -69,6 +69,7 @@
 [GEM_ERP_PR_PAR_DispenseOperation_Input]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.html
 [GEMErpPrMedicationdispenseMap]: StructureMap-GEMErpPrMedicationdispenseMap.html
 [GEMErpPrMedicationMap]: StructureMap-GEMErpPrMedicationMap.html
+[GEMErpPrParCloseoperationInputMap]: StructureMap-GEMErpPrParCloseoperationInputMap.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.html
@@ -82,7 +83,7 @@
 [1]: Device-1.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_AccessCode]: StructureDefinition-GEM-ERP-PR-AccessCode.html
-[KBVPrErpBundleToProvidePrescriptionParameters]: StructureMap-KBVPrErpBundleToProvidePrescriptionParameters.html
+[KBVPrErpBundleMap]: StructureMap-KBVPrErpBundleMap.html
 [KBVPrErpMedicationCompoundingMap]: StructureMap-KBVPrErpMedicationCompoundingMap.html
 [KBVPrErpMedicationFreetextMap]: StructureMap-KBVPrErpMedicationFreetextMap.html
 [KBVPrErpMedicationIngredientMap]: StructureMap-KBVPrErpMedicationIngredientMap.html

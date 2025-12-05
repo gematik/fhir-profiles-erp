@@ -3,41 +3,6 @@
   "parameter" : [{
     "name" : "rxPrescription",
     "part" : [{
-      "name" : "prescriptionId",
-      "valueIdentifier" : {
-        "system" : "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
-        "value" : "160.100.000.000.033.40"
-      }
-    },
-    {
-      "name" : "medicationRequest",
-      "resource" : {
-        "resourceType" : "MedicationRequest",
-        "id" : "a05364ab-29b1-4553-90b8-9657e2f5f5ed",
-        "status" : "active",
-        "intent" : "order",
-        "medicationReference" : {
-          "reference" : "Medication/dc811d43-aad4-4c8d-a58c-2e0258710142"
-        },
-        "authoredOn" : "2024-05-20",
-        "requester" : {
-          "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
-        },
-        "insurance" : [{
-          "reference" : "Coverage/1b89236c-ab14-4e92-937e-5af0b59d0cd4"
-        }],
-        "dispenseRequest" : {
-          "quantity" : {
-            "value" : 1,
-            "unit" : "Packung"
-          }
-        },
-        "subject" : {
-          "reference" : "Patient/93866fdc-3e50-4902-a7e9-891b54737b5e"
-        }
-      }
-    },
-    {
       "name" : "organization",
       "resource" : {
         "resourceType" : "Organization",
@@ -52,7 +17,6 @@
           "system" : "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
           "value" : "724444400"
         }],
-        "name" : "Hausarztpraxis",
         "telecom" : [{
           "system" : "phone",
           "value" : "030321654987"
@@ -60,34 +24,13 @@
         {
           "system" : "email",
           "value" : "hausarztpraxis@e-mail.de"
-        }],
-        "address" : [{
-          "type" : "both",
-          "line" : ["Herbert-Lewin-Platz 2",
-          "Erdgeschoss"],
-          "_line" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString" : "2"
-            },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString" : "Herbert-Lewin-Platz"
-            }]
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-              "valueString" : "Erdgeschoss"
-            }]
-          }],
-          "city" : "Berlin",
-          "postalCode" : "10623",
-          "country" : "D"
         }]
       }
-    },
-    {
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
       "name" : "practitioner",
       "resource" : {
         "resourceType" : "Practitioner",
@@ -123,8 +66,264 @@
           }
         }]
       }
-    },
-    {
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medicationRequest",
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "id" : "a05364ab-29b1-4553-90b8-9657e2f5f5ed",
+        "status" : "active",
+        "intent" : "order",
+        "medicationReference" : {
+          "reference" : "Medication/dc811d43-aad4-4c8d-a58c-2e0258710142"
+        },
+        "authoredOn" : "2024-05-20",
+        "requester" : {
+          "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
+        },
+        "insurance" : [{
+          "reference" : "Coverage/1b89236c-ab14-4e92-937e-5af0b59d0cd4"
+        }],
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
+        "subject" : {
+          "reference" : "Patient/93866fdc-3e50-4902-a7e9-891b54737b5e"
+        }
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "dc811d43-aad4-4c8d-a58c-2e0258710142",
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Somatropin"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 12
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "dc811d43-aad4-4c8d-a58c-2e0258710142",
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Somatropin"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 12
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "dc811d43-aad4-4c8d-a58c-2e0258710142",
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        },
+        "ingredient" : [{
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask",
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "code" : "22339"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/ask"
+            }]
+          }
+        },
+        {
+          "itemCodeableConcept" : {
+            "text" : "Somatropin"
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "unit" : "Stück"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "denominator" : {
+              "value" : 1
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "strength" : {
+            "numerator" : {
+              "value" : 12
+            }
+          }
+        }]
+      }
+    }]
+  },
+  {
+    "name" : "rxPrescription",
+    "part" : [{
       "name" : "medication",
       "resource" : {
         "resourceType" : "Medication",

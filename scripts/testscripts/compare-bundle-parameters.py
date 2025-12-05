@@ -12,10 +12,20 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
-ValueMap = List[Tuple[str, str, str]]
+ValueRow = Tuple[str, str, str, str]
+ValueMap = List[ValueRow]
+
+STATUS_LABELS = {
+    "mapped": "✅ Übernommen",
+    "new": "🆕 Nur Ziel",
+    "unmapped": "⚠️ Offen"
+}
+
+STATUS_ORDER = {"mapped": 0, "new": 1, "unmapped": 2}
 
 
 def parse_args() -> argparse.Namespace:
@@ -187,16 +197,18 @@ def build_rows(
     target_prefix: str,
     target_display_prefix: Optional[str] = None,
 ) -> ValueMap:
-    if not source_obj or not target_obj:
-        return []
-    source_flat = flatten(source_obj, source_prefix)
-    target_flat = flatten(target_obj, target_prefix)
+    source_flat = flatten(source_obj, source_prefix) if source_obj else {}
+    target_flat = flatten(target_obj, target_prefix) if target_obj else {}
     rows: ValueMap = []
+    matched_sources: set[str] = set()
+
     for t_path in sorted(target_flat):
         t_value = target_flat[t_path]
         if isinstance(t_value, (dict, list)):
             continue
         s_path = find_matching_source(t_path, t_value, source_flat)
+        if s_path:
+            matched_sources.add(s_path)
         display_path = t_path
         if target_display_prefix and t_path.startswith(target_prefix):
             suffix = t_path[len(target_prefix) :]
@@ -205,17 +217,46 @@ def build_rows(
             display_path = target_display_prefix
             if suffix:
                 display_path = f"{target_display_prefix}.{suffix}"
-        rows.append((s_path or "—", display_path, format_value(t_value)))
+        rows.append((s_path or "—", display_path, format_value(t_value), "mapped" if s_path else "new"))
+
+    for s_path in sorted(source_flat):
+        if s_path in matched_sources:
+            continue
+        s_value = source_flat[s_path]
+        if isinstance(s_value, (dict, list)):
+            continue
+        rows.append((s_path, "—", format_value(s_value), "unmapped"))
+
     return rows
 
 
 def table_for(title: str, rows: ValueMap) -> List[str]:
     if not rows:
         return [f"### {title}", "", "*Keine Daten vorhanden.*", ""]
-    lines = [f"### {title}", "", "| KBV Pfad | EPA Pfad | Wert |", "| --- | --- | --- |"]
-    for source_path, target_path, value in rows:
-        source_cell = f"`{source_path}`" if source_path != "—" else "—"
-        lines.append(f"| {source_cell} | `{target_path}` | {value} |")
+    counts = Counter(status for *_, status in rows)
+    summary = (
+        f"*Abgedeckt:* {counts.get('mapped', 0)} · "
+        f"*Neu:* {counts.get('new', 0)} · "
+        f"*Offen:* {counts.get('unmapped', 0)}"
+    )
+    lines = [
+        f"### {title}",
+        "",
+        summary,
+        "",
+        "| KBV Pfad | EPA Pfad | Wert | Status |",
+        "| --- | --- | --- | --- |",
+    ]
+    sorted_rows = sorted(
+        rows,
+        key=lambda r: (STATUS_ORDER.get(r[3], 99), r[0], r[1]),
+    )
+    for source_path, target_path, value, status in sorted_rows:
+        source_cell = f"`{source_path}`" if source_path not in {"—", ""} else "—"
+        target_cell = f"`{target_path}`" if target_path not in {"—", ""} else "—"
+        lines.append(
+            f"| {source_cell} | {target_cell} | {value} | {STATUS_LABELS.get(status, status)} |"
+        )
     lines.append("")
     return lines
 
