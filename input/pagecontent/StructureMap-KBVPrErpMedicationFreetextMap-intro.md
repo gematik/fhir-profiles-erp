@@ -1,37 +1,8 @@
-
-**Titel:** KBV-PR-ERP-Medication-FreeText-Map
-
-**Beschreibung:** Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2
-
-| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Transformation & Beschreibung |
-|------------------------|---------------------|-------------------------------|
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Fixed value 'http://standardterms.edqm.eu' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding.form.coding.system` | `system` | → setzt URL 'http://standardterms.edqm.eu' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Fixed value 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding.form.coding.system` | `system` | → setzt URL 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Fixed value 'http://snomed.info/sct' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding.form.coding.system` | `system` | → setzt URL 'http://snomed.info/sct' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding.id` | `EPAMedication.id` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationFreeText.batch` | `EPAMedication.batch` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues BackboneElement |
+| `KBVPRERPMedicationFreeText.batch.expirationDate` | `EPAMedication.batch.expirationDate` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationFreeText.batch.lotNumber` | `EPAMedication.batch.lotNumber` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationFreeText` | `EPAMedication.extension` | 🆕 Erstellt | Copied from 'Medication.extension:Impfstoff'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationFreeText` | `EPAMedication.extension.url` | 📝 Setzt Wert | Copied from 'Medication.extension:Impfstoff'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' |
+| `KBVPRERPMedicationFreeText` | `EPAMedication.meta.profile` | 📝 Setzt Wert | Fixed value 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication' |

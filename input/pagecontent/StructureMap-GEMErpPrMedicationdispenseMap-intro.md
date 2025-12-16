@@ -1,63 +1,32 @@
-
-**Titel:** GEM-ERP-PR-MedicationDispense-Map
-
-**Beschreibung:** Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.5.2 -> EPAMedicationDispense|1.0.6-2
-
-| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Transformation & Beschreibung |
-|------------------------|---------------------|-------------------------------|
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.authorizingPrescription` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.authorizingPrescription` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.authorizingPrescription` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.authorizingPrescription` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.authorizingPrescription` | Automatic copy |
-| `GEMERPPRMedicationDispense.category` | `EPAMedicationDispense.category` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.contained` | `EPAMedicationDispense.contained` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.context` | `EPAMedicationDispense.context` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.daysSupply` | `EPAMedicationDispense.daysSupply` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.destination` | `EPAMedicationDispense.destination` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.detectedIssue` | `EPAMedicationDispense.detectedIssue` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.dosageInstruction` | Automatic copy |
-| `GEMERPPRMedicationDispense.eventHistory` | `EPAMedicationDispense.eventHistory` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.id` | `EPAMedicationDispense.id` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.identifier` | `EPAMedicationDispense.identifier` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.identifier` | `EPAMedicationDispense.identifier` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.implicitRules` | `EPAMedicationDispense.implicitRules` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.language` | `EPAMedicationDispense.language` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.location` | `EPAMedicationDispense.location` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.medication` | `EPAMedicationDispense.medication` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.note` | `EPAMedicationDispense.note` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.partOf` | `EPAMedicationDispense.partOf` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.performer` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.performer` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.performer` | Automatic copy |
-| `GEMERPPRMedicationDispense.quantity` | `EPAMedicationDispense.quantity` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.receiver` | `EPAMedicationDispense.receiver` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.status` | `EPAMedicationDispense.status` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.subject` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.subject` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.subject` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.subject` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.subject` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.substitution` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.substitution` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.substitution` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.substitution` | Automatic copy |
-| `GEMERPPRMedicationDispense` | `EPAMedicationDispense.substitution` | Automatic copy |
-| `GEMERPPRMedicationDispense.supportingInformation` | `EPAMedicationDispense.supportingInformation` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.text` | `EPAMedicationDispense.text` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.type` | `EPAMedicationDispense.type` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.whenHandedOver` | `EPAMedicationDispense.whenHandedOver` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `GEMERPPRMedicationDispense.whenPrepared` | `EPAMedicationDispense.whenPrepared` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `GEMERPPRMedicationDispense.authorizingPrescription` | `EPAMedicationDispense.authorizingPrescription` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues Reference |
+| `GEMERPPRMedicationDispense.authorizingPrescription.display` | `EPAMedicationDispense.authorizingPrescription.display` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.authorizingPrescription.extension` | `EPAMedicationDispense.authorizingPrescription.extension` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.authorizingPrescription.id` | `EPAMedicationDispense.authorizingPrescription.id` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.authorizingPrescription.identifier` | `EPAMedicationDispense.authorizingPrescription.identifier` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.authorizingPrescription.reference` | `EPAMedicationDispense.authorizingPrescription.reference` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.authorizingPrescription.type` | `EPAMedicationDispense.authorizingPrescription.type` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.authorizingPrescription<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.extension` | `EPAMedicationDispense.extension` | ✅ Kopiert | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.extension [Bedingung: url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' and url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta']` | `EPAMedicationDispense.extension` | ✅ Kopiert · ⚙️ Bedingt | Automatic copy \| Inherited from MedicationDispense.extension<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.extension [Bedingung: url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction' and url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction']` | `EPAMedicationDispense.extension` | ✅ Kopiert · ⚙️ Bedingt | Automatic copy \| Inherited from MedicationDispense.extension<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.extension [Bedingung: url = 'https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension' and url = 'https://gematik.de/fhir/epa-medication/StructureDefinition/rx-prescription-process-identifier-extension']` | `EPAMedicationDispense.extension` | ✅ Kopiert · ⚙️ Bedingt | Automatic copy \| Inherited from MedicationDispense.extension<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.identifier` | `EPAMedicationDispense.identifier` | ✅ Kopiert | Copied to 'MedicationDispense.identifier'<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.meta` | `EPAMedicationDispense.meta` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues Meta |
+| `GEMERPPRMedicationDispense.meta` | `EPAMedicationDispense.meta.profile` | 📝 Setzt Wert | Fixed value 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense' |
+| `GEMERPPRMedicationDispense.performer.actor` | `EPAMedicationDispense.performer.actor` | ✅ Kopiert | Copied to 'MedicationDispense.performer.actor'<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject` | `EPAMedicationDispense.subject` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues Reference |
+| `GEMERPPRMedicationDispense.subject.display` | `EPAMedicationDispense.subject.display` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject.extension` | `EPAMedicationDispense.subject.extension` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject.id` | `EPAMedicationDispense.subject.id` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject.identifier` | `EPAMedicationDispense.subject.identifier` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject.reference` | `EPAMedicationDispense.subject.reference` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.subject.type` | `EPAMedicationDispense.subject.type` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.subject<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution` | `EPAMedicationDispense.substitution` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues BackboneElement |
+| `GEMERPPRMedicationDispense.substitution.extension` | `EPAMedicationDispense.substitution.extension` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.id` | `EPAMedicationDispense.substitution.id` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.modifierExtension` | `EPAMedicationDispense.substitution.modifierExtension` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.reason` | `EPAMedicationDispense.substitution.reason` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.responsibleParty` | `EPAMedicationDispense.substitution.responsibleParty` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.type` | `EPAMedicationDispense.substitution.type` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |
+| `GEMERPPRMedicationDispense.substitution.wasSubstituted` | `EPAMedicationDispense.substitution.wasSubstituted` | ✅ Kopiert | Automatic copy \| Inherited from MedicationDispense.substitution<br>→ übernimmt Wert aus Quellvariable |

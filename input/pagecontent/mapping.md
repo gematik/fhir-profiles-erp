@@ -5,11 +5,15 @@ Der E-Rezept-Fachdienst muss für die Verordnungen und Dispensierungen von Arzne
 1. Übertragen von Verordnungsdaten an den ePA Medication Service ([Operation API: Verschreibungsdaten einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-prescription-erp.html))
 2. Übertragen von Dispensierinformationen an den ePA Medication Service ([Operation API: Dispensierinformationen einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-dispensation-erp.html))
 
-Der E-Rezept-Fachdienst führt keine Interpretation oder Anreicherung von medizinischen Daten durch und führt daher rein technische Mappings aus. Die Mappings werden einer Anwendung der gematik definiert und in diesem Projekt als StructureMaps angegeben. Die Ressourcenseiten der StructrureMaps enthalten jeweils eine Tabelle, die darstellt welche Daten gemappt werden.
+Der E-Rezept-Fachdienst führt keine Interpretation oder Anreicherung von medizinischen Daten durch und führt daher rein technische Mappings aus. Die Mappings werden einer Anwendung der gematik definiert und in diesem Projekt als StructureMaps angegeben.
 
-{% sql select Name, Title, Description from Resources where Type = 'StructureMap' %}
+Die folgenden Seiten beschreiben für jedes Profil, was vom E-Rezept-Fachdienst gemappt wird, wie das Mapping aussieht und welche Daten an den ePA Medication Service übertragen werden:
 
-Die folgenden Beispiele zeigen funktional, wie das mapping für konkrete Instanzen aussieht:
+- [Mapping vom KBV_Bundle zu Provide_Prescription_Parameters](./mapping-bundle-parameters.html)
+
+{% sql select '[' + Name + '](StructureMap-' + Name + '.html)' as Name, Description from Resources where Type = 'StructureMap' %}
+
+Die folgenden Beispiele zeigen funktional, wie das mapping für konkrete Instanzen aussieht.
 
 ### Beispiele für das Mapping von Verordnungsdaten
 

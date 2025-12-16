@@ -5,8 +5,8 @@
   "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2025-12-05",
-  "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
+  "date": "2025-12-16",
+  "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
   "structure": [
     {
       "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Organization",
@@ -23,7 +23,7 @@
     {
       "name": "KBVPrForOrganizationMap",
       "typeMode": "types",
-      "documentation": "Mapping generated for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
+      "documentation": "Mapping generated for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
       "input": [
         {
           "name": "KBVPRFOROrganization",
@@ -39,13 +39,12 @@
       "rule": [
         {
           "name": "OrganizationAddress042e251f",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'Organization.address'",
           "source": [
             {
               "context": "KBVPRFOROrganization",
               "element": "address",
-              "variable": "srcKBVPRFOROrganizationAddressb2458a6a",
-              "condition": "url != 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct' and url != 'http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox'"
+              "variable": "srcKBVPRFOROrganizationAddressb2458a6a"
             }
           ],
           "target": [
@@ -54,48 +53,24 @@
               "contextType": "variable",
               "element": "address",
               "variable": "tgtOrganizationDirectoryAddress56874d06",
-              "transform": "copy",
+              "transform": "create",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRFOROrganizationAddressb2458a6a"
+                  "valueString": "Address"
                 }
               ]
             }
           ]
         },
         {
-          "name": "OrganizationIdb231e2a0",
-          "documentation": "Automatic copy",
-          "source": [
-            {
-              "context": "KBVPRFOROrganization",
-              "element": "id",
-              "variable": "srcKBVPRFOROrganizationId76e5f600"
-            }
-          ],
-          "target": [
-            {
-              "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "id",
-              "variable": "tgtOrganizationDirectoryId4f7236b9",
-              "transform": "copy",
-              "parameter": [
-                {
-                  "valueId": "srcKBVPRFOROrganizationId76e5f600"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "OrganizationIdentifiercd09dff1",
-          "documentation": "Automatic copy",
+          "name": "OrganizationIdentifierBetriebsstaettennummerd282829b",
+          "documentation": "Copied to 'Organization.identifier:BSNR'",
           "source": [
             {
               "context": "KBVPRFOROrganization",
               "element": "identifier",
-              "variable": "srcKBVPRFOROrganizationIdentifier520cdc39"
+              "variable": "srcKBVPRFOROrganizationIdentifierBetriebsstaettennummer10bcc9e5",
+              "condition": "use = 'official' and system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR'"
             }
           ],
           "target": [
@@ -103,19 +78,102 @@
               "context": "OrganizationDirectory",
               "contextType": "variable",
               "element": "identifier",
-              "variable": "tgtOrganizationDirectoryIdentifierb9fb6742",
+              "variable": "tgtOrganizationDirectoryIdentifierBsnr5530a72d",
               "transform": "copy",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRFOROrganizationIdentifier520cdc39"
+                  "valueId": "srcKBVPRFOROrganizationIdentifierBetriebsstaettennummer10bcc9e5"
                 }
               ]
             }
           ]
         },
         {
-          "name": "OrganizationName61d5a4f1",
-          "documentation": "Manual action required | organizationName → aus dem ACCESS_TOKEN der Anfrage",
+          "name": "OrganizationIdentifierInstitutionskennzeichen298c285b",
+          "documentation": "Copied to 'Organization.identifier:IKNR'",
+          "source": [
+            {
+              "context": "KBVPRFOROrganization",
+              "element": "identifier",
+              "variable": "srcKBVPRFOROrganizationIdentifierInstitutionskennzeichenf4e9068e",
+              "condition": "system = 'http://fhir.de/sid/arge-ik/iknr'"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtOrganizationDirectoryIdentifierIknr272d4c4d",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFOROrganizationIdentifierInstitutionskennzeichenf4e9068e"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OrganizationIdentifierKzvAbrechnungsnummer18ca9fd4",
+          "documentation": "Copied to 'Organization.identifier:KZVA'",
+          "source": [
+            {
+              "context": "KBVPRFOROrganization",
+              "element": "identifier",
+              "variable": "srcKBVPRFOROrganizationIdentifierKzvAbrechnungsnummerd991d7ce",
+              "condition": "use = 'official' and system = 'http://fhir.de/sid/kzbv/kzvabrechnungsnummer'"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtOrganizationDirectoryIdentifierKzvac903ff4f",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRFOROrganizationIdentifierKzvAbrechnungsnummerd991d7ce"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OrganizationMetaProfile4d6334ac",
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "element": "meta",
+              "variable": "tgtOrganizationDirectoryMetacbe6e64f",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "OrganizationMetaProfile4d6334ac",
+              "documentation": "Fixed value 'https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory'",
+              "source": [
+                {
+                  "context": "KBVPRFOROrganization"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtOrganizationDirectoryMetacbe6e64f",
+                  "contextType": "variable",
+                  "element": "profile",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "source": [
             {
               "context": "KBVPRFOROrganization"
@@ -123,27 +181,107 @@
           ]
         },
         {
-          "name": "OrganizationTelecomb3f55102",
-          "documentation": "Automatic copy",
-          "source": [
-            {
-              "context": "KBVPRFOROrganization",
-              "element": "telecom",
-              "variable": "srcKBVPRFOROrganizationTelecomca093d46"
-            }
-          ],
+          "name": "OrganizationMetaTagOrigin65e28a80",
           "target": [
             {
               "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "telecom",
-              "variable": "tgtOrganizationDirectoryTelecom22bcd8ec",
-              "transform": "copy",
-              "parameter": [
+              "element": "meta",
+              "variable": "tgtOrganizationDirectoryMetacbe6e64f",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "OrganizationMetaTagOrigin65e28a80",
+              "source": [
                 {
-                  "valueId": "srcKBVPRFOROrganizationTelecomca093d46"
+                  "context": "KBVPRFOROrganization",
+                  "element": "meta",
+                  "variable": "srcKBVPRFOROrganizationMeta25dbc5a5"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "OrganizationMetaTagOrigin65e28a80",
+                  "documentation": "Automatic copy",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFOROrganizationMeta25dbc5a5",
+                      "element": "tag",
+                      "variable": "srcKBVPRFOROrganizationMetaTagOriginf3cad7e9"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtOrganizationDirectoryMetacbe6e64f",
+                      "contextType": "variable",
+                      "element": "tag",
+                      "variable": "tgtOrganizationDirectoryMetaTagOrigin615a7476",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "Coding"
+                        }
+                      ]
+                    }
+                  ],
+                  "rule": [
+                    {
+                      "name": "OrganizationMetaTagOriginCodeae7288a8",
+                      "source": [
+                        {
+                          "context": "srcKBVPRFOROrganizationMetaTagOriginf3cad7e9",
+                          "variable": "srcOrganizationMetaTagOriginCodeae7288a8"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "tgtOrganizationDirectoryMetaTagOrigin615a7476",
+                          "contextType": "variable",
+                          "element": "code",
+                          "variable": "tgtOrganizationMetaTagOriginCodeae7288a8",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueString": "ldap"
+                            }
+                          ]
+                        }
+                      ],
+                      "documentation": "Fixed value 'ldap'"
+                    },
+                    {
+                      "name": "OrganizationMetaTagOriginSystem681676f7",
+                      "source": [
+                        {
+                          "context": "srcKBVPRFOROrganizationMetaTagOriginf3cad7e9",
+                          "variable": "srcOrganizationMetaTagOriginSystem681676f7"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "tgtOrganizationDirectoryMetaTagOrigin615a7476",
+                          "contextType": "variable",
+                          "element": "system",
+                          "variable": "tgtOrganizationMetaTagOriginSystem681676f7",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueString": "https://gematik.de/fhir/directory/CodeSystem/Origin"
+                            }
+                          ]
+                        }
+                      ],
+                      "documentation": "Fixed value 'https://gematik.de/fhir/directory/CodeSystem/Origin'"
+                    }
+                  ]
                 }
               ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFOROrganization"
             }
           ]
         }

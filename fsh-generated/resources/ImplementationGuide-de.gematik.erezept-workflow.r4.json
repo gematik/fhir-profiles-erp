@@ -494,14 +494,6 @@
       },
       {
         "reference": {
-          "reference": "StructureMap/EPAMedicationMap"
-        },
-        "description": "Router StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
-        "exampleBoolean": false,
-        "name": "EPAMedicationMap"
-      },
-      {
-        "reference": {
           "reference": "OperationOutcome/ExampleOperationActivateError"
         },
         "name": "Example Activate operation error response",
@@ -609,7 +601,7 @@
         "reference": {
           "reference": "StructureMap/GEMErpPrMedicationdispenseMap"
         },
-        "description": "Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.5.2 -> EPAMedicationDispense|1.0.6-2",
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.6.0 -> EPAMedicationDispense|1.2.0",
         "exampleBoolean": false,
         "name": "GEMErpPrMedicationdispenseMap"
       },
@@ -617,17 +609,9 @@
         "reference": {
           "reference": "StructureMap/GEMErpPrMedicationMap"
         },
-        "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.5.2 -> EPAMedication|1.0.6-2",
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.6.0 -> EPAMedication|1.2.0",
         "exampleBoolean": false,
         "name": "GEMErpPrMedicationMap"
-      },
-      {
-        "reference": {
-          "reference": "StructureMap/GEMErpPrParCloseoperationInputMap"
-        },
-        "description": "Auto-generated StructureMap for transformation GEM_ERP_PR_PAR_CloseOperation_Input|1.5.2 -> EPAOpProvideDispensationERPInputParameters|1.0.6-2",
-        "exampleBoolean": false,
-        "name": "GEMErpPrParCloseoperationInputMap"
       },
       {
         "reference": {
@@ -731,7 +715,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpBundleMap"
         },
-        "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.3.2 -> EPAOpProvidePrescriptionERPInputParameters|1.0.6-2",
+        "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.4.0 -> EPAOpProvidePrescriptionERPInputParameters|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpBundleMap"
       },
@@ -739,7 +723,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationCompoundingMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.4.0 -> EPAMedication|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationCompoundingMap"
       },
@@ -747,7 +731,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationFreetextMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_FreeText|1.4.0 -> EPAMedication|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationFreetextMap"
       },
@@ -755,7 +739,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationIngredientMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Ingredient|1.4.0 -> EPAMedication|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationIngredientMap"
       },
@@ -763,7 +747,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationPznMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_PZN|1.4.0 -> EPAMedication|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationPznMap"
       },
@@ -771,7 +755,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpPrescriptionMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.3.2 -> EPAMedicationRequest|1.0.6-2",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.2.0",
         "exampleBoolean": false,
         "name": "KBVPrErpPrescriptionMap"
       },
@@ -779,7 +763,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrForOrganizationMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.2.0 -> OrganizationDirectory|0.11.25",
+        "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
         "exampleBoolean": false,
         "name": "KBVPrForOrganizationMap"
       },
@@ -787,7 +771,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrForPractitionerMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+        "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
         "exampleBoolean": false,
         "name": "KBVPrForPractitionerMap"
       },
@@ -1084,6 +1068,16 @@
         {
           "nameUrl": "mapping.html",
           "title": "Mapping",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mapping-bundle-parameters.html",
+          "title": "Mapping Bundle Parameters",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mapping-practitioner.html",
+          "title": "Mapping Practitioner",
           "generation": "markdown"
         },
         {

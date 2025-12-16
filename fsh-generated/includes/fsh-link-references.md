@@ -52,7 +52,6 @@
 [GEM_ERP_PR_MedicationDispense]: StructureDefinition-GEM-ERP-PR-MedicationDispense.html
 [GEM_ERP_PR_Bundle]: StructureDefinition-GEM-ERP-PR-Bundle.html
 [SimpleMedication]: Medication-SimpleMedication.html
-[EPAMedicationMap]: StructureMap-EPAMedicationMap.html
 [ExampleOperationActivateError]: OperationOutcome-ExampleOperationActivateError.html
 [ExampleOperationActivateParametersInput]: Parameters-ExampleOperationActivateParametersInput.html
 [ExampleCloseInputParametersRezeptur]: Parameters-ExampleCloseInputParametersRezeptur.html
@@ -69,7 +68,6 @@
 [GEM_ERP_PR_PAR_DispenseOperation_Input]: StructureDefinition-GEM-ERP-PR-PAR-Dispense-Operation-Input.html
 [GEMErpPrMedicationdispenseMap]: StructureMap-GEMErpPrMedicationdispenseMap.html
 [GEMErpPrMedicationMap]: StructureMap-GEMErpPrMedicationMap.html
-[GEMErpPrParCloseoperationInputMap]: StructureMap-GEMErpPrParCloseoperationInputMap.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION.html
 [GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES]: StructureDefinition-GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES.html

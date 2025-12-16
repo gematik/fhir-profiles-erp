@@ -5,8 +5,8 @@
   "name": "KBVPrForPractitionerMap",
   "status": "active",
   "version": "1.0",
-  "date": "2025-12-05",
-  "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+  "date": "2025-12-16",
+  "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
   "structure": [
     {
       "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_FOR_Practitioner",
@@ -23,7 +23,7 @@
     {
       "name": "KBVPrForPractitionerMap",
       "typeMode": "types",
-      "documentation": "Mapping generated for KBV_PR_FOR_Practitioner|1.2.0 -> PractitionerDirectory|0.11.25",
+      "documentation": "Mapping generated for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
       "input": [
         {
           "name": "KBVPRFORPractitioner",
@@ -38,38 +38,14 @@
       ],
       "rule": [
         {
-          "name": "PractitionerIdb90bbd64",
-          "documentation": "Automatic copy",
-          "source": [
-            {
-              "context": "KBVPRFORPractitioner",
-              "element": "id",
-              "variable": "srcKBVPRFORPractitionerId78e85b84"
-            }
-          ],
-          "target": [
-            {
-              "context": "PractitionerDirectory",
-              "contextType": "variable",
-              "element": "id",
-              "variable": "tgtPractitionerDirectoryId8b20355f",
-              "transform": "copy",
-              "parameter": [
-                {
-                  "valueId": "srcKBVPRFORPractitionerId78e85b84"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "PractitionerIdentifierdd7a4a22",
-          "documentation": "Automatic copy",
+          "name": "PractitionerIdentifierAnr071fb4ee",
+          "documentation": "Copied to 'Practitioner.identifier:LANR'",
           "source": [
             {
               "context": "KBVPRFORPractitioner",
               "element": "identifier",
-              "variable": "srcKBVPRFORPractitionerIdentifierd46d78b7"
+              "variable": "srcKBVPRFORPractitionerIdentifierAnr3c836155",
+              "condition": "use = 'official' and system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR'"
             }
           ],
           "target": [
@@ -77,83 +53,70 @@
               "context": "PractitionerDirectory",
               "contextType": "variable",
               "element": "identifier",
-              "variable": "tgtPractitionerDirectoryIdentifierbcb1f07a",
+              "variable": "tgtPractitionerDirectoryIdentifierLanrc79324c3",
               "transform": "copy",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRFORPractitionerIdentifierd46d78b7"
+                  "valueId": "srcKBVPRFORPractitionerIdentifierAnr3c836155"
                 }
               ]
             }
           ]
         },
         {
-          "name": "PractitionerName9470411e",
-          "documentation": "Automatic copy",
+          "name": "PractitionerIdentifierTelematikId649b0852",
+          "documentation": "Copied to 'Practitioner.identifier:TelematikID'",
           "source": [
             {
               "context": "KBVPRFORPractitioner",
-              "element": "name",
-              "variable": "srcKBVPRFORPractitionerNamef7e47166"
+              "element": "identifier",
+              "variable": "srcKBVPRFORPractitionerIdentifierTelematikId908b03d1",
+              "condition": "system = 'https://gematik.de/fhir/sid/telematik-id'"
             }
           ],
           "target": [
             {
               "context": "PractitionerDirectory",
               "contextType": "variable",
-              "element": "name",
-              "variable": "tgtPractitionerDirectoryName0e536837",
+              "element": "identifier",
+              "variable": "tgtPractitionerDirectoryIdentifierTelematikid34e15dac",
               "transform": "copy",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRFORPractitionerNamef7e47166"
+                  "valueId": "srcKBVPRFORPractitionerIdentifierTelematikId908b03d1"
                 }
               ]
             }
           ]
         },
         {
-          "name": "PractitionerQualificationCode37012069",
+          "name": "PractitionerMetaProfile969fe928",
           "target": [
             {
               "context": "PractitionerDirectory",
-              "element": "qualification",
-              "variable": "tgtPractitionerDirectoryQualification6da58337",
+              "element": "meta",
+              "variable": "tgtPractitionerDirectoryMeta2975339a",
               "contextType": "variable"
             }
           ],
           "rule": [
             {
-              "name": "PractitionerQualificationCode37012069",
+              "name": "PractitionerMetaProfile969fe928",
+              "documentation": "Fixed value 'https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory'",
               "source": [
                 {
-                  "context": "KBVPRFORPractitioner",
-                  "element": "qualification",
-                  "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
+                  "context": "KBVPRFORPractitioner"
                 }
               ],
-              "rule": [
+              "target": [
                 {
-                  "name": "PractitionerQualificationCode37012069",
-                  "source": [
+                  "context": "tgtPractitionerDirectoryMeta2975339a",
+                  "contextType": "variable",
+                  "element": "profile",
+                  "transform": "copy",
+                  "parameter": [
                     {
-                      "context": "srcKBVPRFORPractitionerQualificationeae165c6",
-                      "element": "code",
-                      "variable": "srcKBVPRFORPractitionerQualificationCodef2f76d4d"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "context": "tgtPractitionerDirectoryQualification6da58337",
-                      "contextType": "variable",
-                      "element": "code",
-                      "variable": "tgtPractitionerDirectoryQualificationCodef1bbc2f9",
-                      "transform": "copy",
-                      "parameter": [
-                        {
-                          "valueId": "srcKBVPRFORPractitionerQualificationCodef2f76d4d"
-                        }
-                      ]
+                      "valueString": "https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory"
                     }
                   ]
                 }
@@ -164,8 +127,112 @@
             {
               "context": "KBVPRFORPractitioner"
             }
+          ]
+        },
+        {
+          "name": "PractitionerMetaTagOrigin86ad6596",
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "element": "meta",
+              "variable": "tgtPractitionerDirectoryMeta2975339a",
+              "contextType": "variable"
+            }
           ],
-          "documentation": "Automatic copy"
+          "rule": [
+            {
+              "name": "PractitionerMetaTagOrigin86ad6596",
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner",
+                  "element": "meta",
+                  "variable": "srcKBVPRFORPractitionerMeta0287aadd"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerMetaTagOrigin86ad6596",
+                  "documentation": "Automatic copy",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerMeta0287aadd",
+                      "element": "tag",
+                      "variable": "srcKBVPRFORPractitionerMetaTagOrigindcf20157"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtPractitionerDirectoryMeta2975339a",
+                      "contextType": "variable",
+                      "element": "tag",
+                      "variable": "tgtPractitionerDirectoryMetaTagOriginbd281a59",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "Coding"
+                        }
+                      ]
+                    }
+                  ],
+                  "rule": [
+                    {
+                      "name": "PractitionerMetaTagOriginCodea6338175",
+                      "source": [
+                        {
+                          "context": "srcKBVPRFORPractitionerMetaTagOrigindcf20157",
+                          "variable": "srcPractitionerMetaTagOriginCodea6338175"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "tgtPractitionerDirectoryMetaTagOriginbd281a59",
+                          "contextType": "variable",
+                          "element": "code",
+                          "variable": "tgtPractitionerMetaTagOriginCodea6338175",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueString": "ldap"
+                            }
+                          ]
+                        }
+                      ],
+                      "documentation": "Fixed value 'ldap'"
+                    },
+                    {
+                      "name": "PractitionerMetaTagOriginSystemd62991cf",
+                      "source": [
+                        {
+                          "context": "srcKBVPRFORPractitionerMetaTagOrigindcf20157",
+                          "variable": "srcPractitionerMetaTagOriginSystemd62991cf"
+                        }
+                      ],
+                      "target": [
+                        {
+                          "context": "tgtPractitionerDirectoryMetaTagOriginbd281a59",
+                          "contextType": "variable",
+                          "element": "system",
+                          "variable": "tgtPractitionerMetaTagOriginSystemd62991cf",
+                          "transform": "copy",
+                          "parameter": [
+                            {
+                              "valueString": "https://gematik.de/fhir/directory/CodeSystem/Origin"
+                            }
+                          ]
+                        }
+                      ],
+                      "documentation": "Fixed value 'https://gematik.de/fhir/directory/CodeSystem/Origin'"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner"
+            }
+          ]
         },
         {
           "name": "PractitionerQualificationIdbd899a43",
@@ -190,6 +257,7 @@
               "rule": [
                 {
                   "name": "PractitionerQualificationIdbd899a43",
+                  "documentation": "Automatic copy",
                   "source": [
                     {
                       "context": "srcKBVPRFORPractitionerQualificationeae165c6",
@@ -219,8 +287,7 @@
             {
               "context": "KBVPRFORPractitioner"
             }
-          ],
-          "documentation": "Automatic copy"
+          ]
         },
         {
           "name": "PractitionerQualificationIdentifiera0f351ca",
@@ -245,6 +312,7 @@
               "rule": [
                 {
                   "name": "PractitionerQualificationIdentifiera0f351ca",
+                  "documentation": "Automatic copy",
                   "source": [
                     {
                       "context": "srcKBVPRFORPractitionerQualificationeae165c6",
@@ -274,8 +342,7 @@
             {
               "context": "KBVPRFORPractitioner"
             }
-          ],
-          "documentation": "Automatic copy"
+          ]
         },
         {
           "name": "PractitionerQualificationIssuer16de1a10",
@@ -300,6 +367,7 @@
               "rule": [
                 {
                   "name": "PractitionerQualificationIssuer16de1a10",
+                  "documentation": "Automatic copy",
                   "source": [
                     {
                       "context": "srcKBVPRFORPractitionerQualificationeae165c6",
@@ -329,8 +397,7 @@
             {
               "context": "KBVPRFORPractitioner"
             }
-          ],
-          "documentation": "Automatic copy"
+          ]
         },
         {
           "name": "PractitionerQualificationPeriode7fc59e2",
@@ -355,6 +422,7 @@
               "rule": [
                 {
                   "name": "PractitionerQualificationPeriode7fc59e2",
+                  "documentation": "Automatic copy",
                   "source": [
                     {
                       "context": "srcKBVPRFORPractitionerQualificationeae165c6",
@@ -384,8 +452,7 @@
             {
               "context": "KBVPRFORPractitioner"
             }
-          ],
-          "documentation": "Automatic copy"
+          ]
         }
       ]
     }

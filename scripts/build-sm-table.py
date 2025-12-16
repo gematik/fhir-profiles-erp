@@ -2,6 +2,13 @@ import sys
 import json
 import re
 
+
+def escape_markdown(text):
+    """Escape characters that would break markdown tables."""
+    if not isinstance(text, str):
+        return text
+    return text.replace("|", "\\|")
+
 def clean_path(path):
     """Clean up FHIR paths to be more readable"""
     if not path:
@@ -67,6 +74,8 @@ def has_meaningful_transformation(rule):
     # Check for URL transformations (these are meaningful)
     if 'target' in rule and rule['target']:
         for target in rule['target']:
+            if target.get('transform'):
+                return True
             if target.get('transform') == 'copy' and 'parameter' in target:
                 for param in target['parameter']:
                     if 'valueString' in param:
@@ -89,10 +98,28 @@ def has_meaningful_transformation(rule):
     
     # Check for documentation that indicates transformation
     doc = rule.get('documentation', '')
-    if doc and not doc.lower().startswith('copies'):
+    if doc and not doc.lower().startswith('copies') and doc.lower() not in {'automatic copy'}:
         return True
     
     return False
+
+
+def build_path_for_entry(entry, parents, var_paths):
+    """Resolve nested context variables to stable FHIR paths."""
+    context = entry.get('context', '')
+    element = entry.get('element', '')
+
+    if context in var_paths:
+        base_parts = var_paths[context].split('.') if var_paths[context] else []
+        path = build_fhir_path(base_parts, '', element)
+    else:
+        path = build_fhir_path(parents, context, element)
+
+    variable = entry.get('variable')
+    if variable:
+        var_paths[variable] = path
+
+    return path
 
 def extract_target_transformation_info(target):
     """Extract transformation hints for a specific target mapping."""
@@ -107,10 +134,11 @@ def extract_target_transformation_info(target):
         for param in parameters:
             value = param.get('valueString')
             if value:
+                escaped = escape_markdown(value)
                 if 'http' in value or 'StructureDefinition' in value:
-                    transformations.append(f"→ setzt URL '{value}'")
+                    transformations.append(f"→ setzt URL '{escaped}'")
                 else:
-                    transformations.append(f"→ setzt Wert '{value}'")
+                    transformations.append(f"→ setzt Wert '{escaped}'")
             elif 'valueId' in param:
                 transformations.append("→ übernimmt Wert aus Quellvariable")
             elif 'valueBoolean' in param:
@@ -178,13 +206,17 @@ def build_fhir_path(parents, context, element):
 
 def should_include(rule):
     """Determine if a rule should be included in the output"""
+    doc = (rule.get('documentation') or '').strip()
+    doc_meaningful = bool(doc and doc.lower() not in {'automatic copy'})
+    has_children = bool(rule.get('rule'))
     return (
-        rule.get('documentation') or
-        rule.get('dependent') or
-        has_meaningful_transformation(rule)
+        doc_meaningful
+        or rule.get('dependent')
+        or has_meaningful_transformation(rule)
+        or (not has_children and (rule.get('target') or rule.get('source')))
     )
 
-def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None):
+def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None):
     """Extract relevant mapping rules with enhanced information"""
     if mappings is None:
         mappings = []
@@ -192,37 +224,40 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         src_parents = []
     if tgt_parents is None:
         tgt_parents = []
+    if var_paths is None:
+        var_paths = {}
     
     for rule in rules:
         has_source = 'source' in rule and rule['source']
         has_target = 'target' in rule and rule['target']
         
         # Build source path
+        src_path = ""
         if has_source:
-            src = rule['source'][0]
-            src_path = build_fhir_path(src_parents, src.get('context', ''), src.get('element', ''))
-            if src.get('condition'):
-                condition = src['condition']
-                # Simplify common conditions
-                if 'url=' in condition:
-                    # Extract URL from condition for readability
-                    url_match = re.search(r"url='([^']+)'", condition)
-                    if url_match:
-                        url = url_match.group(1)
-                        src_path += f" [{url.split('/')[-1]}]"
-                elif 'ofType(' in condition:
-                    resource_type = re.search(r'ofType\((\w+)\)', condition)
-                    if resource_type:
-                        src_path += f" [Typ: {resource_type.group(1)}]"
-                else:
-                    src_path += f" [Bedingung: {condition}]"
-        else:
-            src_path = ""
+            for idx, src in enumerate(rule['source']):
+                candidate = build_path_for_entry(src, src_parents, var_paths)
+                if idx == 0:
+                    src_path = candidate
+                    if src.get('condition'):
+                        condition = src['condition']
+                        # Simplify common conditions
+                        if 'url=' in condition:
+                            url_match = re.search(r"url='([^']+)'", condition)
+                            if url_match:
+                                url = url_match.group(1)
+                                src_path += f" [{url.split('/')[-1]}]"
+                        elif 'ofType(' in condition:
+                            resource_type = re.search(r'ofType\((\w+)\)', condition)
+                            if resource_type:
+                                src_path += f" [Typ: {resource_type.group(1)}]"
+                        else:
+                            src_path += f" [Bedingung: {condition}]"
+        src_path_raw = src_path
         
         # Prepare description shared across targets
         base_desc_parts = []
         if rule.get('documentation'):
-            base_desc_parts.append(rule['documentation'])
+            base_desc_parts.append(escape_markdown(rule['documentation']))
         if 'dependent' in rule:
             dependent_links = []
             for dep in rule['dependent']:
@@ -238,13 +273,14 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         tgt_path = ""
         target_entries = []
         if has_target:
-            for target in rule['target']:
-                tgt_candidate = build_fhir_path(tgt_parents, target.get('context', ''), target.get('element', ''))
-                tgt_candidate_clean = format_target_path(tgt_candidate)
-                target_entries.append((tgt_candidate_clean, target))
-            tgt_path = build_fhir_path(tgt_parents, rule['target'][0].get('context', ''), rule['target'][0].get('element', ''))
+            for idx, target in enumerate(rule['target']):
+                tgt_candidate = build_path_for_entry(target, tgt_parents, var_paths)
+                tgt_candidate_clean = format_target_path(clean_path(tgt_candidate))
+                target_entries.append((tgt_candidate_clean, target, tgt_candidate))
+                if idx == 0:
+                    tgt_path = tgt_candidate
         else:
-            target_entries.append(("", None))
+            target_entries.append(("", None, ""))
 
         # Clean paths for better readability
         src_path_clean = clean_path(src_path)
@@ -252,7 +288,7 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
             src_path_clean = ""
 
         if should_include(rule):
-            for tgt_path_clean, tgt in target_entries:
+            for tgt_path_clean, tgt, _ in target_entries:
                 target_desc_parts = list(base_desc_parts)
                 target_desc_parts.extend(extract_target_transformation_info(tgt))
                 desc = "<br>".join(part for part in target_desc_parts if part)
@@ -264,9 +300,9 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         
         # Recurse into nested rules
         if 'rule' in rule:
-            next_src_parents = src_path.split('.') if src_path else []
-            next_tgt_parents = tgt_path.split('.') if tgt_path else []
-            extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings)
+                next_src_parents = src_path_raw.split('.') if src_path_raw else src_parents
+                next_tgt_parents = tgt_path.split('.') if tgt_path else tgt_parents
+                extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths)
     
     return mappings
 
@@ -284,22 +320,7 @@ def structuremap_to_markdown(json_data):
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"
 
-    total = len(filtered_mappings)
-    actions = [action for _, _, action, _ in filtered_mappings]
-    create_count = sum('🆕' in action for action in actions)
-    delegate_count = sum('📎' in action for action in actions)
-    conditional_count = sum('⚙️' in action for action in actions)
-
-    summary = (
-        f"*Regeln:* {total} · "
-        f"Neue Ressourcen: {create_count} · "
-        f"Delegiert: {delegate_count} · "
-        f"Bedingt: {conditional_count}"
-    )
-
     rows = [
-        summary,
-        "",
         "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |",
         "|------------------------|---------------------|--------|-------------------------------|",
     ]
@@ -323,14 +344,6 @@ def main():
         with open(file_path, encoding="utf-8") as f:
             data = json.load(f)
         
-        title = data.get('title') or data.get('name') or 'Unbekannt'
-        description = data.get('description') or 'Keine Beschreibung verfügbar'
-
-        print()
-        print(f"**Titel:** {title}")
-        print()
-        print(f"**Beschreibung:** {description}")
-        print()
         print(structuremap_to_markdown(data))
         
     except FileNotFoundError:

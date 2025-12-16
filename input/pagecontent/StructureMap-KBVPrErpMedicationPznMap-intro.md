@@ -1,51 +1,38 @@
-
-**Titel:** KBV-PR-ERP-Medication-PZN-Map
-
-**Beschreibung:** Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.3.2, KBV_PR_ERP_Medication_FreeText|1.3.2, KBV_PR_ERP_Medication_Ingredient|1.3.2, KBV_PR_ERP_Medication_PZN|1.3.2 -> EPAMedication|1.0.6-2
-
-| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Transformation & Beschreibung |
-|------------------------|---------------------|-------------------------------|
-| `KBVPRERPMedicationCompounding` | `EPAMedication.amount` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.amount` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.amount` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.amount` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.amount` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.batch` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Fixed value 'http://fhir.de/CodeSystem/ifa/pzn' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding.code.coding.system` | `system` | → setzt URL 'http://fhir.de/CodeSystem/ifa/pzn' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.code` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Fixed value 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding.form.coding.system` | `system` | → setzt URL 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.form` | Automatic copy |
-| `KBVPRERPMedicationCompounding.id` | `EPAMedication.id` | Automatic copy<br>→ übernimmt Wert aus Quellvariable |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Fixed value 'http://fhir.de/CodeSystem/ask' | Auto-detected fixed value from target profile |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding.ingredient.item.coding.system` | `system` | → setzt URL 'http://fhir.de/CodeSystem/ask' |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient.item` | → erstellt neues CodeableConcept |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
-| `KBVPRERPMedicationCompounding` | `EPAMedication.ingredient` | Automatic copy |
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationPZN.amount.numerator.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize']` | `EPAMedication.amount.numerator.extension` | 🆕 Erstellt · ⚙️ Bedingt | Copied to 'Medication.amount.numerator.extension:packagingSize'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationPZN.amount.numerator.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_PackagingSize']` | `EPAMedication.amount.numerator.extension.url` | 📝 Setzt Wert · ⚙️ Bedingt | Copied to 'Medication.amount.numerator.extension:packagingSize'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension' |
+| `KBVPRERPMedicationPZN` | `EPAMedication.amount.numerator.extension` | 🆕 Erstellt | → erstellt neues https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension |
+| `KBVPRERPMedicationPZN` | `EPAMedication.amount.numerator.extension.url` | 📝 Setzt Wert | Fixed value 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension' \| Auto-detected fixed value from target profile<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-packaging-size-extension' |
+| `KBVPRERPMedicationPZN.batch` | `EPAMedication.batch` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues BackboneElement |
+| `KBVPRERPMedicationPZN.batch.expirationDate` | `EPAMedication.batch.expirationDate` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.batch.extension` | `EPAMedication.batch.extension` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.batch.id` | `EPAMedication.batch.id` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.batch.lotNumber` | `EPAMedication.batch.lotNumber` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.batch.modifierExtension` | `EPAMedication.batch.modifierExtension` | ✅ Kopiert | Automatic copy \| Inherited from Medication.batch<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding [Bedingung: system = 'http://fhir.de/CodeSystem/ifa/pzn']` | `EPAMedication.code.coding` | 🆕 Erstellt · ⚙️ Bedingt | Automatic copy<br>→ erstellt neues Coding |
+| `KBVPRERPMedicationPZN.code.coding.code` | `EPAMedication.code.coding.code` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.display` | `EPAMedication.code.coding.display` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.extension` | `EPAMedication.code.coding.extension` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.id` | `EPAMedication.code.coding.id` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.system` | `EPAMedication.code.coding.system` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.userSelected` | `EPAMedication.code.coding.userSelected` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.code.coding.version` | `EPAMedication.code.coding.version` | ✅ Kopiert | Automatic copy \| Inherited from Medication.code.coding:pzn<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension` | 🆕 Erstellt | Copied from 'Medication.extension:Arzneimittelkategorie'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension.url` | 📝 Setzt Wert | Copied from 'Medication.extension:Arzneimittelkategorie'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' |
+| `KBVPRERPMedicationPZN.value` | `EPAMedication.extension.value` | 🆕 Erstellt | Copied from 'Medication.extension:Arzneimittelkategorie.value[x]'<br>→ erstellt neues Coding |
+| `KBVPRERPMedicationPZN.value.code` | `EPAMedication.extension.value.code` | ✅ Kopiert | Copied from 'Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.code'<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension` | 🆕 Erstellt | Copied from 'Medication.extension:Impfstoff'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension.url` | 📝 Setzt Wert | Copied from 'Medication.extension:Impfstoff'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension` | 🆕 Erstellt | Copied from 'Medication.extension:Normgroesse'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension.url` | 📝 Setzt Wert | Copied from 'Medication.extension:Normgroesse'<br>→ setzt URL 'http://fhir.de/StructureDefinition/normgroesse' |
+| `KBVPRERPMedicationPZN.value` | `EPAMedication.extension.value` | ✅ Kopiert | Copied from 'Medication.extension:Normgroesse.value[x]'<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding` | `EPAMedication.form.coding` | 🆕 Erstellt | Automatic copy<br>→ erstellt neues Coding |
+| `KBVPRERPMedicationPZN.form.coding.code` | `EPAMedication.form.coding.code` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.display` | `EPAMedication.form.coding.display` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.extension` | `EPAMedication.form.coding.extension` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.id` | `EPAMedication.form.coding.id` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.system` | `EPAMedication.form.coding.system` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.userSelected` | `EPAMedication.form.coding.userSelected` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.form.coding.version` | `EPAMedication.form.coding.version` | ✅ Kopiert | Automatic copy \| Inherited from Medication.form.coding:kbvDarreichungsform<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationPZN.ingredient.item` | `EPAMedication.ingredient.item` | ✅ Kopiert | Copied to 'Medication.ingredient.item[x]:itemCodeableConcept'<br>→ übernimmt Wert aus Quellvariable |

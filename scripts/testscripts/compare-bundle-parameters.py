@@ -128,17 +128,18 @@ def find_medication_for_request(
     return None
 
 
-def find_rx_parameter(parameters: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+def collect_rx_parts(parameters: Dict[str, Any]) -> List[Dict[str, Any]]:
+    parts: List[Dict[str, Any]] = []
     for param in parameters.get("parameter", []):
         if param.get("name") == "rxPrescription":
-            return param
-    return None
+            parts.extend(param.get("part", []))
+    return parts
 
 
-def find_part(rx_param: Optional[Dict[str, Any]], name: str) -> Optional[Dict[str, Any]]:
-    if not rx_param:
+def find_part(rx_parts: Iterable[Dict[str, Any]] | None, name: str) -> Optional[Dict[str, Any]]:
+    if not rx_parts:
         return None
-    for part in rx_param.get("part", []):
+    for part in rx_parts:
         if part.get("name") == name:
             return part
     return None
@@ -266,23 +267,23 @@ def build_sections(
     parameters: Dict[str, Any],
     metadata_lines: Optional[List[str]] = None,
 ) -> List[str]:
-    rx_param = find_rx_parameter(parameters)
+    rx_parts = collect_rx_parts(parameters)
     identifier_rows = build_rows(
         bundle.get("identifier"),
         "Bundle.identifier",
-        find_part(rx_param, "prescriptionId"),
+        find_part(rx_parts, "prescriptionId"),
         "Parameters.parameter[rxPrescription].part[prescriptionId]",
         "Parameters.prescriptionId",
     )
 
     med_request = find_resource(bundle, "MedicationRequest")
-    med_request_part = find_part(rx_param, "medicationRequest") or {}
+    med_request_part = find_part(rx_parts, "medicationRequest") or {}
     med_request_resource = med_request_part.get("resource") if isinstance(med_request_part, dict) else None
 
     authored_rows = build_rows(
         {"authoredOn": med_request.get("authoredOn")} if med_request else None,
         "MedicationRequest",
-        find_part(rx_param, "authoredOn"),
+        find_part(rx_parts, "authoredOn"),
         "Parameters.parameter[rxPrescription].part[authoredOn]",
         "Parameters.authoredOn",
     )
@@ -307,7 +308,7 @@ def build_sections(
     org_rows = build_rows(
         find_resource(bundle, "Organization"),
         "Organization",
-        (find_part(rx_param, "organization") or {}).get("resource"),
+        (find_part(rx_parts, "organization") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[organization].resource",
         "Organization",
     )
@@ -315,7 +316,7 @@ def build_sections(
     prac_rows = build_rows(
         find_resource(bundle, "Practitioner"),
         "Practitioner",
-        (find_part(rx_param, "practitioner") or {}).get("resource"),
+        (find_part(rx_parts, "practitioner") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[practitioner].resource",
         "Practitioner",
     )
@@ -323,7 +324,7 @@ def build_sections(
     med_rows = build_rows(
         find_medication_for_request(bundle, med_request),
         "Medication",
-        (find_part(rx_param, "medication") or {}).get("resource"),
+        (find_part(rx_parts, "medication") or {}).get("resource"),
         "Parameters.parameter[rxPrescription].part[medication].resource",
         "Medication",
     )
