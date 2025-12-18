@@ -48,7 +48,7 @@
       ]
     }
   ],
-  "whenHandedOver": "2026-04-01",
+  "whenHandedOver": "2026-07-01",
   "medicationReference": {
     "reference": "Medication/SumatripanMedication"
   },

@@ -1,6 +1,9 @@
 <img align="right" width="250" height="47" src="./Resources/images/gematik_logo.png" /> <br />    
  
 # Release Notes E-Rezept Workflow
+//TODO: Update release date for 1.6.1
+## Release 1.6.1 (2026-01-xx)
+- `Dependencies`: Aktualisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.0
 
 ## Release 1.6.0 (2025-09-30)
 
