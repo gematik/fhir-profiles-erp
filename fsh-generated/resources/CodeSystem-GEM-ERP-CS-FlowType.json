@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "GEM_ERP_CS_FlowType",
   "id": "GEM-ERP-CS-FlowType",
@@ -38,7 +38,7 @@
     }
   ],
   "version": "1.6.1",
-  "date": "2026-01-06",
+  "date": "2025-12-19",
   "publisher": "gematik GmbH",
   "contact": [
     {
