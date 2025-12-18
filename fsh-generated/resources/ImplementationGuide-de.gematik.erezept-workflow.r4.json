@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.erezept-workflow.r4",
   "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
-  "version": "1.6.1",
+  "version": "1.6.1-draft",
   "name": "ERezeptWorkflow",
   "title": "E-Rezept Workflow",
   "status": "draft",

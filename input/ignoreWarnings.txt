@@ -1,0 +1,9 @@
+== Suppressed Messages ==
+
+# Ignore the URL Mismatch in resources
+%does not match the URL%
+%Resource id/url mismatch%
+%URL Mismatch%
+
+# Example Reference do not need to resolve
+%nicht auffindbar
