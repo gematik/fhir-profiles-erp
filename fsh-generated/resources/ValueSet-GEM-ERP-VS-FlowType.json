@@ -7,7 +7,7 @@
   "description": "Zeigt die verschiedenen Arten des E-Rezepts entsprechend den Verschreibungsformularen.",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType",
   "version": "1.6.1",
-  "date": "2025-01-06",
+  "date": "2026-01-06",
   "publisher": "gematik GmbH",
   "contact": [
     {

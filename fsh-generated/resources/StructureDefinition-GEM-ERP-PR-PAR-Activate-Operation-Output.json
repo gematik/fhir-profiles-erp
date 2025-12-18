@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_PAR_ActivateOperation_Output",
   "title": "GEM ERP PR ActivateOperation Output",
   "status": "draft",
-  "date": "2025-01-06",
+  "date": "2026-01-06",
   "description": "Dieses Profil definiert die Parameter für die Aktivierung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $activate-Operation verwendet werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

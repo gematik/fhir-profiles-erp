@@ -3,7 +3,7 @@
 # Release Notes E-Rezept Workflow
 //TODO: Update release date for 1.6.1
 ## Release 1.6.1 (2026-01-xx)
-- `Dependencies`: Aktaulisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.0
+- `Dependencies`: Aktualisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.0
 
 ## Release 1.6.0 (2025-09-30)
 
