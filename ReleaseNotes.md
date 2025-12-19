@@ -29,11 +29,6 @@
 - `(Breaking) Geändert:` Neue Display-Werte für Flowtypes im CodeSystem `GEM_ERP_CS_FlowType`.
 - `Übersetzt:` Elementbezeichnungen und -definitionen wurden vollständig ins Deutsche übersetzt.
 
----
-
-**Implikationen:**  
-Diese Änderungen führen zu einer besseren Wartbarkeit und Konsistenz der Spezifikation. Die Entfernung nicht genutzter Artefakte reduziert Komplexität. Die zentrale Pflege von Communication-Elementen und die vollständige Übersetzung unterstützen eine klarere Implementierung und Nutzung im deutschsprachigen Raum.
-
  
 ## Release 1.5.0 (2025-04-10)
 
