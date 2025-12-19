@@ -2,6 +2,9 @@
  
 # Release Notes E-Rezept Workflow
 
+## Release 1.6.1 (2025-12-19)
+- `Dependencies`: Aktualisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.0
+
 ## Release 1.6.0 (2025-09-30)
 
 - `(breaking) Geändert:` alle Angaben von meta.profile müssen die Version `1.6` als Suffix setzen
