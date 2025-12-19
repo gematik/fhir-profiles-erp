@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "GEM_ERP_VS_AvailabilityStatus",
   "id": "GEM-ERP-VS-AvailabilityStatus",
   "title": "ValueSet der Verfügbarkeitsstatus-Codes",
   "description": "Art des Verfügbarkeitsstatus für die Verfügbarkeitsanfrage von Medikamenten",
   "url": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "date": "2025-12-19",
   "publisher": "gematik GmbH",
   "contact": [
