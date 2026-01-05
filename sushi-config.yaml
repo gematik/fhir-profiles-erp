@@ -26,8 +26,30 @@ applyExtensionMetadataToRoot: false
 menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
-  Mapping: mapping.html
+  Fachlichkeit:
+    - Überblick: menu-fachlichkeit-anwendungsfälle.html
+    - Szenarien: menu-fachlichkeit-szenarien.html
+    - Anwendungsfälle: menu-fachlichkeit-ueberblick.html
+  Technische Umsetzung:
+    - Technische Anwendungsfälle: menu-technische-umsetzung-anwendungsfaelle.html
+    - Verarbeitungsregeln: menu-technische-umsetzung-verarbeitungsregeln.html
+    - Validierung von Dosierinformationen: menu-technische-umsetzung-dosierung.html
+    - Mappings: mapping.html
+  Schnittstellen:
+    - Generelle Prinzipien: menu-schnittstellen-generelle-prinzipien.html
+    - Datenschutz und Sicherheit: menu-schnittstellen-datenschutz-und-sicherheit.html
+    - Query API: menu-schnittstellen-query-api.html
+    - Operation API: menu-schnittstellen-operation-api.html
+    - Additional APIs: menu-schnittstellen-additional-api.html
   FHIR-Artefakte: artifacts.html
+  Anhänge:
+    - Referenzen: referenced.html
+    - Downloads: downloads.html
+    - OpenAPI: erp-openapi.html
+    - Release Notes: release-notes.html
+    - Steckbriefe: spec-sheet.html
+    - Versionsvergleiche: comparisons.html
+    - Lizenz: license.html
 
 parameters:
   path-resource:
