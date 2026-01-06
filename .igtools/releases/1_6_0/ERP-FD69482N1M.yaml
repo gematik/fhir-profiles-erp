@@ -1,0 +1,19 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-06T08:36:15.271174'
+date: '2026-01-06T08:36:15.271177'
+key: ERP-FD69482N1M
+modified: '2026-01-06T08:36:15.271176'
+release_status: NEW
+source: input/pagecontent/op-create.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"\
+  funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst\
+  \ MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation den Parameter\
+  \ <i>workflowType</i> (Rezepttyp) aus dem HTTP-Body des POST-Requests entnehmen,\
+  \ als Attribut <i>Task.extension:flowType</i> des zu erstellenden Tasks verwenden\
+  \ und bei Fehlen bzw. Nicht-Konformität des Parameters den Request als unzulässig\
+  \ abweisen."
+title: E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ
+version: 1

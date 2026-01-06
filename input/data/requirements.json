@@ -140,6 +140,20 @@
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
     },
     {
+        "title": "Anbieter E-Rezept-Fachdienst Speicherung Schlüsselmaterial in HSM",
+        "key": "ERP-FD75799E75",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\">\n<testprocedure id=\"Sich.techn. Eignung: Gutachten (Anbieter)\"></testprocedure>\n</actor>\nDer Anbieter des E-Rezept-Fachdienstes MUSS das private Schlüsselmaterial für kryptografische Verfahren (Entschlüsselung, Signaturen) in einem HSM speichern, dessen Eignung durch eine erfolgreiche Evaluierung nachgewiesen wurde. Als Evaluierungsschemata kommen dabei Common Criteria, ITSEC oder Federal Information Processing Standard (FIPS) in Frage.     \nDie Prüftiefe MUSS mindestens \n- FIPS 140-2 Level 3,    \n- Common Criteria EAL 4+ mit hohem Angriffspotenzial oder\n- ITSEC E3 der Stärke „hoch“ entsprechen.",
+        "source": "input/pagecontent/menu-technische-umsetzung-systemueberblick.md",
+        "conformance": "SHALL",
+        "path": "menu-technische-umsetzung-systemueberblick.html"
+    },
+    {
         "title": "E-Rezept-Fachdienst – Nutzdatenbereinigung vor physischem Zugang zu Systemen der VAU",
         "key": "ERP-FD03409QT4",
         "actor": [
@@ -182,6 +196,20 @@
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
     },
     {
+        "title": "E-Rezept-Fachdienst - Task erzeugen - Rollenprüfung",
+        "key": "ERP-FD29739F5Z",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation die Rolle <i>professionOID</i> des Aufrufenden im ACCESS_TOKEN im HTTP-RequestHeader <i>Authorization</i> feststellen und sicherstellen, dass ausschließlich verordnende Leistungserbringer die Operation aufrufen dürfen.\n  <ul>\n<li>oid_praxis_arzt</li>\n<li>oid_zahnarztpraxis</li>\n<li>oid_praxis_psychotherapeut</li>\n<li>oid_krankenhaus</li>\n<li>oid_institution-vorsorge-reha</li>\n</ul>",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
+    },
+    {
         "title": "E-Rezept-Fachdienst – Private Schlüssel von Dienstzertifikaten im HSM",
         "key": "ERP-FD01299AJA",
         "actor": [
@@ -222,6 +250,34 @@
         "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
         "conformance": "SHALL",
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst - Ergänzung Performer-Typ für Einlöseinstitutstyp",
+        "key": "ERP-FD78744A6J",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Erzeugen eines Tasks das Feld <i>Task.performerType</i> aus dem übergebenen, gültigen Parameter <i>Task.extension:flowType</i> gemäß der Prozessparameter übernehmen.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst - Task erzeugen - Generierung Rezept-ID",
+        "key": "ERP-FD69465HLH",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Anlegen eines neuen Tasks eine Rezept-ID gemäß der Bildungsregel generieren, als Identifier mit Namingsystem <i>https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId</i> dem Task hinzufügen und sicherstellen, dass diese Rezept-ID innerhalb von 11 Jahren nach ihrer Erzeugung nicht erneut vergeben wird.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
     },
     {
         "title": "E-Rezept-Fachdienst – Drosselung Rezeptfälschungen",
@@ -292,6 +348,20 @@
         "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
         "conformance": "SHALL",
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst - Task erzeugen - Generierung AccessCode",
+        "key": "ERP-FD68017FZG",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation eine 256 Bit Zufallszahl (hexadezimal kodiert, <i>[0-9a-f]{64}</i>) erzeugen und diese im zu speichernden Task als externe ID in <i>Task.identifier:AccessCode</i> hinzufügen.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
     },
     {
         "title": "E-Rezept-Fachdienst – Sicherer Kanal zum Verarbeitungskontext der VAU auf Inhaltsebene",
@@ -392,6 +462,20 @@
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
     },
     {
+        "title": "E-Rezept-Fachdienst - Status draft",
+        "key": "ERP-FD43166Q7R",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS die zulässige Anlage eines Tasks mittels HTTP-POST/$create-Operation im Status <i>Task.status = draft</i> vollziehen und beim erfolgreichen Abschluss der Operation die angelegte Ressource Task im HTTP-Body der HTTP-Response zurückgeben.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
+    },
+    {
         "title": "E-Rezept-Fachdienst – Verarbeitungskontext der VAU",
         "key": "ERP-FD94711P63",
         "actor": [
@@ -460,6 +544,20 @@
         "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
         "conformance": "SHALL",
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ",
+        "key": "ERP-FD69482N1M",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation den Parameter <i>workflowType</i> (Rezepttyp) aus dem HTTP-Body des POST-Requests entnehmen, als Attribut <i>Task.extension:flowType</i> des zu erstellenden Tasks verwenden und bei Fehlen bzw. Nicht-Konformität des Parameters den Request als unzulässig abweisen.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
     },
     {
         "title": "E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des Schlüssels im 4-Augen-Prinzip",
@@ -756,6 +854,20 @@
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
     },
     {
+        "title": "E-Rezept-Fachdienst - Task erzeugen - Schemavalidierung Rezept anlegen",
+        "key": "ERP-FD12338LVT",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS die im Body der HTTP-POST-Operation auf die Ressource Task übertragenen Parameter gegen das Schema <i>http://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition</i> prüfen und bei Nicht-Konformität das Anlegen der Ressource im Fachdienst mit dem HTTP-Status-Code <i>400</i> beantworten.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
+    },
+    {
         "title": "Anbieter E-Rezept-Fachdienst – Konfiguration und Deaktivierung Drosselung",
         "key": "ERP-FD30074ZHL",
         "actor": [
@@ -824,6 +936,20 @@
         "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
         "conformance": "SHALL",
         "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst - Task erzeugen - Task-ID=Rezept-ID",
+        "key": "ERP-FD95956VP0",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst MUSS beim Erzeugen eines neuen Tasks die Rezept-ID, welche mit Task an das verordnende Primärsystem übermittelt wird, als Task-ID verwenden.",
+        "source": "input/pagecontent/op-create.md",
+        "conformance": "SHALL",
+        "path": "op-create.html"
     },
     {
         "title": "E-Rezept-Fachdienst – Kontinuierliche Wirksamkeit des Manipulationsschutzes der VAU",

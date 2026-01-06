@@ -13,6 +13,8 @@ if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
   rm input/resources/transformed-kbv-bundles/*
 fi
 
+igtools process
+
 # Generate Sushi
 sushi .
 

@@ -1,0 +1,16 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-06T08:36:15.271348'
+date: '2026-01-06T08:36:15.271350'
+key: ERP-FD78744A6J
+modified: '2026-01-06T08:36:15.271349'
+release_status: NEW
+source: input/pagecontent/op-create.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"eRp_FD\">\n<testprocedure id=\"\
+  funkt. Eignung: Test Produkt/FA\"></testprocedure>\n</actor>\n  Der E‑Rezept-Fachdienst\
+  \ MUSS beim Erzeugen eines Tasks das Feld <i>Task.performerType</i> aus dem übergebenen,\
+  \ gültigen Parameter <i>Task.extension:flowType</i> gemäß der Prozessparameter übernehmen."
+title: E-Rezept-Fachdienst - Ergänzung Performer-Typ für Einlöseinstitutstyp
+version: 1

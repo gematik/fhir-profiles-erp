@@ -1,0 +1,21 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-06T08:36:15.272732'
+date: '2026-01-06T08:36:15.272734'
+key: ERP-FD75799E75
+modified: '2026-01-06T08:36:15.272734'
+release_status: NEW
+source: input/pagecontent/menu-technische-umsetzung-systemueberblick.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"\
+  >\n<testprocedure id=\"Sich.techn. Eignung: Gutachten (Anbieter)\"></testprocedure>\n\
+  </actor>\nDer Anbieter des E-Rezept-Fachdienstes MUSS das private Schlüsselmaterial\
+  \ für kryptografische Verfahren (Entschlüsselung, Signaturen) in einem HSM speichern,\
+  \ dessen Eignung durch eine erfolgreiche Evaluierung nachgewiesen wurde. Als Evaluierungsschemata\
+  \ kommen dabei Common Criteria, ITSEC oder Federal Information Processing Standard\
+  \ (FIPS) in Frage.     \nDie Prüftiefe MUSS mindestens \n- FIPS 140-2 Level 3, \
+  \   \n- Common Criteria EAL 4+ mit hohem Angriffspotenzial oder\n- ITSEC E3 der\
+  \ Stärke „hoch“ entsprechen."
+title: Anbieter E-Rezept-Fachdienst Speicherung Schlüsselmaterial in HSM
+version: 1

@@ -52,6 +52,8 @@
 [GEM_ERP_PR_MedicationDispense]: StructureDefinition-GEM-ERP-PR-MedicationDispense.html
 [GEM_ERP_PR_Bundle]: StructureDefinition-GEM-ERP-PR-Bundle.html
 [SimpleMedication]: Medication-SimpleMedication.html
+[erp-fachdienst-client]: CapabilityStatement-erp-fachdienst-client.html
+[erp-fachdienst-server]: CapabilityStatement-erp-fachdienst-server.html
 [ExampleOperationActivateError]: OperationOutcome-ExampleOperationActivateError.html
 [ExampleOperationActivateParametersInput]: Parameters-ExampleOperationActivateParametersInput.html
 [ExampleCloseInputParametersRezeptur]: Parameters-ExampleCloseInputParametersRezeptur.html

@@ -22,8 +22,9 @@ build:
   pipeline:
     - requirements
     - sushi
+    - shell: ./scripts/fml_table.sh
+    - shell: python3 "scripts/testscripts/generate-provide-prescription-docs.py"
     # - cap_statements
-    # - shell: touch test.txt
     - igpub
     #- openapi
     #- igpub_qa

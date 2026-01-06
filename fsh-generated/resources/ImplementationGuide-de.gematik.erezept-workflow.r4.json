@@ -494,6 +494,22 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/erp-fachdienst-client"
+        },
+        "name": "ERP Capability Statement für Clients des E-Rezept-Fachdienst",
+        "description": "Dieses Capability Statement legt die Anforderungen an Clients des E-Rezept-Fachdienst fest. Es definiert die unterstützten Interaktionen, erforderliche HTTP Header sowie erwartete Status Codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/erp-fachdienst-server"
+        },
+        "name": "ERP CapabilityStatement für den E-Rezept-Fachdienst",
+        "description": "ERP CapabilityStatement für den E-Rezept-Fachdienst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "OperationOutcome/ExampleOperationActivateError"
         },
         "name": "Example Activate operation error response",
@@ -1041,33 +1057,99 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-input-example-1-mapping.html",
-          "title": "Bundle Input Example 1 Mapping",
+          "nameUrl": "menu-fachlichkeit-ueberblick.html",
+          "title": "Überblick zur Verordnung und Belieferung von Arzneimitteln",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "menu-fachlichkeit-szenarien.html",
+              "title": "Szenarien für den Medikationsprozess",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-fachlichkeit-anwendungsfaelle.html",
+              "title": "Anwendungsfälle für den Medikationsprozess",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "menu-technische-umsetzung-systemueberblick.html",
+          "title": "Systemüberblick",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "menu-technische-umsetzung-anwendungsfaelle.html",
+              "title": "Technische Anwendungsfälle",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-technische-umsetzung-verarbeitungsregeln.html",
+              "title": "Verarbeitungsregeln für den E-Rezept-Fachdienst",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-technische-umsetzung-dosierung.html",
+              "title": "Validierung von Dosierungsinformationen",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "mapping.html",
+          "title": "Vorgaben zum Mapping von FHIR-Instanzen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-input-example-2-mapping.html",
-          "title": "Bundle Input Example 2 Mapping",
+          "nameUrl": "menu-schnittstellen-generelle-prinzipien.html",
+          "title": "Generelle Prinzipien",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-input-example-3-mapping.html",
-          "title": "Bundle Input Example 3 Mapping",
+          "nameUrl": "menu-schnittstellen-datenschutz-und-sicherheit.html",
+          "title": "Datenschutz und Sicherheit",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-input-example-4-mapping.html",
-          "title": "Bundle Input Example 4 Mapping",
+          "nameUrl": "menu-schnittstellen-query-api.html",
+          "title": "Query API",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Bundle-input-example-5-mapping.html",
-          "title": "Bundle Input Example 5 Mapping",
+          "nameUrl": "menu-schnittstellen-operation-api.html",
+          "title": "Operation API",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "op-create.html",
+              "title": "Operation $create (Task erzeugen)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "op-activate.html",
+              "title": "Operation $activate (Task aktivieren)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "op-abort.html",
+              "title": "Operation $abort (Task abbrechen)",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "menu-schnittstellen-additional-api.html",
+          "title": "Zusätzliche APIs",
           "generation": "markdown"
         },
         {
-          "nameUrl": "comparisons.html",
-          "title": "Comparisons",
+          "nameUrl": "artifacts.html",
+          "title": "FHIR-Artefakte",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "referenced.html",
+          "title": "Referenzen",
           "generation": "markdown"
         },
         {
@@ -1077,102 +1159,27 @@
         },
         {
           "nameUrl": "erp-openapi.html",
-          "title": "Erp Openapi",
+          "title": "OpenAPI: E-Rezept Produkttypen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "license.html",
-          "title": "License",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "mapping.html",
-          "title": "Mapping",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "mapping-bundle-parameters.html",
-          "title": "Mapping Bundle Parameters",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "mapping-practitioner.html",
-          "title": "Mapping Practitioner",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-fachlichkeit-anwendungsfaelle.html",
-          "title": "Menu Fachlichkeit Anwendungsfaelle",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-fachlichkeit-szenarien.html",
-          "title": "Menu Fachlichkeit Szenarien",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-fachlichkeit-ueberblick.html",
-          "title": "Menu Fachlichkeit Ueberblick",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-schnittstellen-additional-api.html",
-          "title": "Menu Schnittstellen Additional Api",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-schnittstellen-datenschutz-und-sicherheit.html",
-          "title": "Menu Schnittstellen Datenschutz Und Sicherheit",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-schnittstellen-generelle-prinzipien.html",
-          "title": "Menu Schnittstellen Generelle Prinzipien",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-schnittstellen-operation-api.html",
-          "title": "Menu Schnittstellen Operation Api",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-schnittstellen-query-api.html",
-          "title": "Menu Schnittstellen Query Api",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-technische-umsetzung-anwendungsfaelle.html",
-          "title": "Menu Technische Umsetzung Anwendungsfaelle",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-technische-umsetzung-dosierung.html",
-          "title": "Menu Technische Umsetzung Dosierung",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "menu-technische-umsetzung-verarbeitungsregeln.html",
-          "title": "Menu Technische Umsetzung Verarbeitungsregeln",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "provide-prescription-mappings.html",
-          "title": "Provide Prescription Mappings",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "referenced.html",
-          "title": "Referenced",
+          "nameUrl": "release-notes.html",
+          "title": "Release Notes",
           "generation": "markdown"
         },
         {
           "nameUrl": "spec-sheet.html",
-          "title": "Spec Sheet",
+          "title": "Steckbriefe",
           "generation": "markdown"
         },
         {
-          "nameUrl": "structuremap-implementierungsplan.html",
-          "title": "Structuremap Implementierungsplan",
+          "nameUrl": "comparisons.html",
+          "title": "Versionsvergleiche",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "license.html",
+          "title": "Apache Licence",
           "generation": "markdown"
         }
       ]
