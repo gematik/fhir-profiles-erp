@@ -24,7 +24,7 @@ from pathlib import Path
 DEFAULT_TRANSFORM_URL = (
     "https://gematik.de/fhir/structure-comparer/StructureMap/KBVPrErpBundleMap"
 )
-DEFAULT_HAPI_JAR = Path("/Users/gematik/dev/validators/current_hapi_validator.jar")
+DEFAULT_HAPI_JAR = Path("/Users/gematik/dev/validators/hapi_validator_6_5_26.jar")
 FHIR_VERSION = "4.0.1"
 
 
@@ -81,7 +81,7 @@ def build_command(
         "kbv.ita.erp",
         "de.gematik.fhir.directory",
         "de.gematik.ti",
-        "de.basisprofil.r4",
+        "de.basisprofil.r4#1.5.4",
         "de.gematik.epa.medication",
     ]
 

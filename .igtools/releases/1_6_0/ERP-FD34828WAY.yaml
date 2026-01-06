@@ -1,0 +1,17 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.404150'
+date: '2026-01-05T13:09:58.404152'
+key: ERP-FD34828WAY
+modified: '2026-01-05T13:09:58.404151'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n\
+  \    Der E-Rezept-Fachdienst MUSS jeden Zugriff über eine Schnittstelle im Internet\
+  \ mittels dem HTTP-Header \"X-api-key\" gegen die Liste zulässiger API-KEYs prüfen.\
+  \ Anfragen ohne HTTP-Header \"X-api-key\" oder einem nicht gültigen API-KEY MÜSSEN\
+  \ als nicht authentisiert (HTTP-Statuscode 401) abgelehnt werden."
+title: E-Rezept-Fachdienst – Zuordnung Abfrageursprung Client
+version: 1

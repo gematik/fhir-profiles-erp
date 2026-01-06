@@ -1,0 +1,18 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.407176'
+date: '2026-01-05T13:09:58.407178'
+key: ERP-FD42807H6K
+modified: '2026-01-05T13:09:58.407177'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n\
+  \    Die VAU des E-Rezept-Fachdienstes MUSS den Ausschluss von Manipulationen an\
+  \ der Hardware und der Software durch den Anbieter des E-Rezept-Fachdienstes mit\
+  \ Mitteln umsetzen, deren dauerhafte und kontinuierliche Wirksamkeit gewährleistet\
+  \ werden kann."
+title: E-Rezept-Fachdienst – Kontinuierliche Wirksamkeit des Manipulationsschutzes
+  der VAU
+version: 1

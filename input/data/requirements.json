@@ -1,0 +1,842 @@
+[
+    {
+        "title": "E-Rezept-Fachdienst – vertrauliche Kommunikation",
+        "key": "ERP-FD76956VH9",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass er nur transportverschlüsselt mit Komponenten außerhalb des Verarbeitungskontextes kommuniziert.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Automatisierter Abbau des sicheren Kanals",
+        "key": "ERP-FD46454DJ3",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS den sicheren Kanal zu einem Client nach Abschluss einer fachlichen Operation (die aus mehreren Requests bestehen kann) abbauen, sodass anschließend keine Zugriffe dieses Clients auf den Verarbeitungskontext mehr möglich sind, ohne dass eine neue Verbindung aufgebaut wird.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Berücksichtigung OWASP-Top-10-Risiken",
+        "key": "ERP-FD11627FC5",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS Maßnahmen zum Schutz vor den OWASP-Top-10-Risiken in der aktuellen Version umsetzen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Caching OCSP-Antworten",
+        "key": "ERP-FD90745NW1",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst KANN OCSP-Antworten aus A_20024 bis zu 4 Stunden cachen und bei einer entsprechend passenden OCSP-Anfrage, anstatt neu den OCSP-Responder anzufragen, die im Cache befindliche OCSP-Antwort ausliefern.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "MAY",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Sicherer Kanal vom Client zum Verarbeitungskontext der VAU",
+        "key": "ERP-FD74033P6P",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS den Aufbau eines vertraulichen und integritätsgeschützten Kommunikationskanals gemäß [gemSpec_Krypt#3.16] und [gemSpec_Krypt#7] zwischen einem Client und einem Verarbeitungskontext erzwingen, bevor der Verarbeitungskontext seine fachlichen Schnittstellen für den Client nutzbar macht.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Kein physischer Zugang des Anbieters zu Systemen der VAU",
+        "key": "ERP-FD27076A8J",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS mit technischen Mitteln sicherstellen, dass niemand, auch nicht der Anbieter des E-Rezept-Fachdienstes, während der Verarbeitung personenbezogener medizinischer Daten Zugriff auf physische Schnittstellen der Systeme erlangen kann, auf denen eine VAU ausgeführt wird.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Einsatz zertifizierter HSM",
+        "key": "ERP-FD09148ZQ7",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienstes MUSS beim Einsatz eines HSM sicherstellen, dass dessen Eignung durch eine erfolgreiche Evaluierung nachgewiesen wurde. Als Evaluierungsschemata kommen dabei Common Criteria, ITSEC oder Federal Information Processing Standard (FIPS) in Frage. Die Prüftiefe MUSS mindestens FIPS 140-2 Level 3, Common Criteria EAL 4+ mit hohem Angriffspotenzial oder ITSEC E3 der Stärke \"hoch\" entsprechen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Umsetzung der fachlichen Operationen in einer Vertrauenswürdigen Ausführungsumgebung",
+        "key": "ERP-FD36975N4C",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS die Verarbeitung aller fachlichen Operationen des Fachdienstes in einer Vertrauenswürdigen Ausführungsumgebung umsetzen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss Vertreterkommunikation von bzw. an Prüf-Identität",
+        "key": "ERP-FD82358ACB",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS das Einstellen einer Communication-Ressource mit dem http-Status-Code 400 ablehnen, wenn diese in den Absender- und Empfänger-Informationen eine Kombination von KVNR der Prüfkarte eGK und KVNR von Versicherten enthält.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "Medikationsplan (durch das Aktensystem gerendert) im ePA-FdV anzeigen",
+        "key": "ERP-FD23427X68",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"EPA-FdV\">\n<testprocedure id=\"Produkttest\"></testprocedure>\n</actor>\n    Das ePA-FdV MUSS es dem Nutzer ermöglichen, den Medikationsplan für sein Aktenkonto oder für das Aktenkonto des zu Vertretenden unter Verwendung von <i>Render API: Medikationsplan abrufen (eMP)</i> anzuzeigen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Nutzdatenbereinigung vor physischem Zugang zu Systemen der VAU",
+        "key": "ERP-FD03409QT4",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS mit technischen Mitteln sicherstellen, dass physischer Zugang zu Hardware-Komponenten der Verarbeitungskontexte nur erfolgen kann, nachdem gewährleistet ist, dass aus ihnen keine Nutzdaten extrahiert werden können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Richtlinien für den Paketfilter zum Internet",
+        "key": "ERP-FD01725QFP",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Paketfilter des E-Rezept-Fachdienstes MUSS die Weiterleitung von IP-Paketen an der Schnittstelle zum Internet auf die nachfolgenden Protokolle beschränken: HTTPS, und OCSP-Zugriffe für das OCSP-Stapling nach A_20026 (vgl. Hinweis nach A_19815-*), ggf. notwendige DNS-Anfragen (und Antworten), Zugriff auf den FHIR-VZD, Zugriff auf Webdienste des BfArM, Zugriff auf die authentisierten Push Gateways. Ein Verbindungsaufbau aus dem E-Rezept-Fachdienst in Richtung Internet MUSS unterbunden werden, mit Ausnahme der Verbindungen aus Punkten 2, 3, 4 und 5.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Drosselung User Agent Aufrufe",
+        "key": "ERP-FD48133QF6",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS bei einer im laufenden Betrieb konfigurierbaren Anzahl von 200 Aufrufen pro Sekunde eines User-Agents die Antwortzeit um ein konfigurierbares Zeitintervall (Default 500ms) verzögert zurückschicken, um eine Überlast am E-Rezept-Fachdienst zu verhindern. Die Drosselung muss über einen konfigurierbaren Schalter im laufenden Betrieb aktivierbar bzw. deaktivierbar sein. Der E-Rezept-Fachdienst MUSS zusätzlich ein Whitelisting implementieren, damit User-Agents von der Drosselung ausgenommen werden können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Private Schlüssel von Dienstzertifikaten im HSM",
+        "key": "ERP-FD01299AJA",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS die folgenden privaten Schlüssel in einem Hardware Security Module (HSM) erzeugen und anwenden: Privater Schlüssel (PrK.FD.ENC) des Schlüsselpaars zur Authentisierung des Verarbeitungskontextes gegenüber dem E-Rezept-Frontend des Versicherten und Primärsystemen (sicherer Kanal auf Anwendungsebene). Die Prüftiefe des HSM MUSS dabei den in [A_19712] angegebenen Standards entsprechen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Datenschutzkonformes Logging und Monitoring des Verarbeitungskontextes der VAU",
+        "key": "ERP-FD43093Z73",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS die für den Betrieb eines Fachdienstes erforderlichen Logging- und Monitoring-Informationen in solcher Art und Weise erheben und verarbeiten, dass mit technischen Mitteln ausgeschlossen ist, dass dem Anbieter des E-Rezept-Fachdienstes oder Dritten vertrauliche oder zur Profilbildung geeignete Daten zur Kenntnis gelangen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Bereitstellung OCSP-Forwarder",
+        "key": "ERP-FD88382L68",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS folgende Vorgaben umsetzen: Er MUSS unter der Adresse <fqdn>/ocspf eine Möglichkeit zur Statusabfrage über das vom E-Rezept-FdV genutzte HTTPS-Interface zur Verfügung stellen (HTTP-POST, vgl. auch [RFC-6960, Appendix [gemSpec_PKI]). Er MUSS über die Schnittstelle aus Spiegelstrich 1 OCSP-Requests [RFC-6960] entgegennehmen. Aus einem solchen OCSP-Request MUSS er aus dem issuerKeyHash [RFC-6960] die URL des entsprechenden OCSP-Responders in der TI ermitteln (Datengrundlage ist die TSL der TI) und den OCSP-Request an diese ermittelte URL weiterleiten. Er MUSS die erhaltenen OCSP-Response an das die OCSP-Anfrage stellende E-Rezept-FdV unverändert weiterreichen.\n</fqdn>",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Drosselung Rezeptfälschungen",
+        "key": "ERP-FD04712LW3",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS jede Antwort auf den Funktionsaufruf zum Aktivieren eines Tasks mittels Übergabe des QES-signierten Datensatzes um den konfigurierbaren http-Response-Header \"Warning\" (default \"999 Throttling active\") ergänzen und um ein konfigurierbares Zeitintervall (default: 500 Millisekunden) verzögert zurückschicken, sofern die QES in der Prüfung während der Operation POST /Task/<id>/$activate als ungültig erkannt wird, um Angriffe durch Rezeptfälschungen durch einen hohen Zeitaufwand unattraktiv zu machen.\n</id>",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss Vertreterzugriff auf bzw. mittels Prüf-Identität",
+        "key": "ERP-FD96295XUY",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS jeden Zugriff auf E-Rezepte mittels AccessCode (Vertreterzugriff) mit dem http-Status-Code 400 ablehnen, wenn sich aus dem Zugriff eine Kombination aus KVNR der Prüfkarte eGK und KVNR von Versicherten ergibt, d. h. Versicherte dürfen nicht auf Prüfrezepte und mit Prüfkarte eGK darf nicht auf Rezepte von Versicherten zugegriffen werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel durch ein HSM",
+        "key": "ERP-FD31982N6D",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS die zur Verschlüsselung der persistierten E-Rezept-Daten verwendeten Schlüssel von einem HSM innerhalb der VAU abrufen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit FdV",
+        "key": "ERP-FD52209B49",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass er nur transportverschlüsselt mit dem FdV kommuniziert.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Authentisierung gegenüber Clients",
+        "key": "ERP-FD32785QT5",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sich gegenüber Clients, die mit ihm kommunizieren, mittels der Fachdienstidentität oid_erp-vau mit Zertifikatsprofil C.FD.ENC (oid_fd_enc) ausweisen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Sicherer Kanal zum Verarbeitungskontext der VAU auf Inhaltsebene",
+        "key": "ERP-FD68443DFQ",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Eingangspunkt E-Rezept-Fachdienst\"></actor>\n    Der Eingangspunkt des E-Rezept-Fachdienstes MUSS Clients den Aufbau eines sicheren Kanals auf Inhaltsebene, d. h. einen Verbindungsaufbau gemäß [gemSpec_Krypt#3.16] und [gemSpec_Krypt#7], zum Verarbeitungskontext ermöglichen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Bereitstellung TSL",
+        "key": "ERP-FD96581ZZ1",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS folgende Vorgaben umsetzen: Er MUSS mindestens einmal täglich aus der TI (TI-interne Verbindung) die \"TSL(ECC-RSA)\" und deren zugehörigen Hashwert aus der TI herunterladen. Er MUSS unter dem Pfadnamen \"/TSL.xml\" über das vom E-Rezept-FdV genutzte HTTPS-Interface die \"TSL(ECC-RSA)\" der TI zur Verfügung stellen (HTTP-GET, HTTP Content-Type: text/xml). Er MUSS unter dem Pfadnamen \"/TSL.sha2\" über das vom E-Rezept-FdV genutzte HTTPS-Interface den vom TSL-Dienst heruntergeladenen SHA-256 Hashwert der Datei TSL.xml aus Spiegelstrich 2 zur Verfügung stellen (HTTP Content-Type: text/plain, Hashwert als hexdump kodiert (64 Byte + Newline)).",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Konsistenter Systemzustand des Verarbeitungskontextes der VAU",
+        "key": "ERP-FD95094TNA",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS sicherstellen, dass ein konsistenter Zustand des Verarbeitungskontextes auch bei Bedienfehlern oder technischen Problemen immer erhalten bleibt bzw. wiederhergestellt werden kann.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Unabhängige Skalierung der Dienst-Ressourcen für verschiedene Anwendergruppen",
+        "key": "ERP-FD47035F2B",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS für die Anwendergruppen Leistungserbringer (E-Rezepte ausstellen, E-Rezepte einlösen) und Versicherte (E-Rezepte einsehen, zuweisen und löschen) sicherstellen, dass eine Überlastung aufgrund außergewöhnlich hoher Aktivität einer Anwendergruppe (primär der Versicherten) keine Beeinträchtigung der Arbeitsfähigkeit der anderen Anwendergruppen (primär der Ärzte und Apotheker) zur Folge hat.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Platzierung des Paketfilters Internet",
+        "key": "ERP-FD37124TBP",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Paketfilter des E-Rezept-Fachdienstes, zum Schutz in Richtung Transportnetz Internet, DARF NICHT physisch auf Systemen der VAU des E-Rezept-Fachdienstes oder dem vorgeschalteten TLS-terminierenden Load Balancer implementiert werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL NOT",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Verschlüsselung von außerhalb des Verarbeitungskontextes der VAU gespeicherten Daten",
+        "key": "ERP-FD42451P44",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass sämtliche schützenswerten Daten vor einer Speicherung außerhalb der VAU verschlüsselt werden. Der Verarbeitungskontext MUSS dazu Schlüssel für nur jeweils ein individuelles E-Rezept (inkl. aller mit diesem E-Rezept verbundenen Daten) verwenden oder mindestens einmal pro Sekunde den verwendeten Schlüssel wechseln, sodass nur die innerhalb einer Sekunde neu angelegten E-Rezepte mit einem Schlüssel verschlüsselt werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Isolation zwischen Datenverarbeitungsprozessen mehrerer Verarbeitungskontexte der VAU",
+        "key": "ERP-FD39015GH3",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS die in ihr ablaufenden Verarbeitungen für die Daten eines Verarbeitungskontextes von den Verarbeitungen für die Daten anderer Verarbeitungskontexte in solcher Weise trennen, dass mit technischen Mitteln ausgeschlossen wird, dass die Verarbeitungen eines Verarbeitungskontextes schadhaft auf die Verarbeitungen eines anderen Verarbeitungskontextes einwirken können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Verarbeitungskontext der VAU",
+        "key": "ERP-FD94711P63",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sämtliche physikalischen Systemkomponenten sowie sämtliche Softwarekomponenten umfassen, deren Sicherheitseigenschaften sich auf den Schutz der personenbezogenen medizinischen Daten vor Zugriff durch Unbefugte bei ihrer Verarbeitung im Klartext auswirken können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel aus Merkmal der E-Rezepte",
+        "key": "ERP-FD88954YDM",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"HSM der VAU\"></actor>\n    Das HSM der VAU des E-Rezept-Fachdienstes MUSS eine Schnittstelle zur Ableitung von symmetrischen Schlüsseln für die Persistierung von E-Rezept-Daten bereitstellen. Das HSM der VAU des E-Rezept-Fachdienstes MUSS zur Ableitung des jeweiligen Schlüssels ein nach der ersten Erstellung unveränderliches Merkmal des E-Rezept-Datensatzes als Ableitungsparameter verwenden (z. B. den Zeitstempel der Registrierung von Rezept-ID und Access Code oder den Access Code selbst).",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Isolation der VAU von Datenverarbeitungsprozessen des Anbieters",
+        "key": "ERP-FD30410DZ1",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS die in ihren Verarbeitungskontexten ablaufenden Datenverarbeitungsprozesse von allen sonstigen Datenverarbeitungsprozessen des Anbieters trennen und damit gewährleisten, dass der Anbieter des E-Rezept-Fachdienstes vom Zugriff auf die in der VAU verarbeiteten schützenswerten Daten ausgeschlossen ist.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – HSM-Kryptographieschnittstelle verfügbar nur für Instanzen der VAU",
+        "key": "ERP-FD16783EK6",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS mit technischen Mitteln, die auch Manipulationen durch den Anbieter des E-Rezept-Fachdienstes ausschließen, gewährleisten, dass nur Instanzen der VAU Zugriff auf die Kryptographieschnittstelle des HSM zur Nutzung des privaten Schlüsselmaterials für ihre Dienstzertifikate erhalten können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Sicherung zum Transportnetz Internet durch Paketfilter",
+        "key": "ERP-FD35066LGS",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS zum Transportnetz Internet durch einen Paketfilter (ACL) gesichert werden, welcher ausschließlich die erforderlichen Protokolle weiterleitet. Der Paketfilter des E-Rezept-Fachdienstes MUSS frei konfigurierbar sein auf der Grundlage von Informationen aus OSI-Layer 3 und 4, das heißt Quell- und Zieladresse, IP-Protokoll sowie Quell- und Zielport.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des Schlüssels im 4-Augen-Prinzip",
+        "key": "ERP-FD16761XDX",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS sicherstellen, dass der für das Pseudonymisieren der gematik-Logdaten benötigte geheime Schlüssel key_pn_log ausschließlich im 4-Augen-Prinzip in den E-Rezept-Fachdienst eingebracht werden kann.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Erkennen der Prüfidentität",
+        "key": "ERP-FD08368UL3",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS eine eGK-Prüfkartenidentität anhand der Bildungsregel in Card-G2-A_3820 (X0000nnnnP, mit nnnn aus der Menge {0001 .. 5000} und P = Prüfziffer) für die KVNR der Prüfkarte eGK erkennen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Richtlinien zum TLS-Verbindungsaufbau",
+        "key": "ERP-FD01556A9B",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Eingangspunkt E-Rezept-Fachdienst\"></actor>\n    Der Eingangspunkt des E-Rezept-Fachdienstes MUSS sich beim TLS-Verbindungsaufbau über das Transportnetz gegenüber dem Client mit einem Extended Validation TLS-Zertifikat eines Herausgebers gemäß [CAB Forum] authentisieren. Das Zertifikat MUSS an die jeweilige Schnittstelle des Eingangspunkts für Primärsysteme und Frontends der Versicherten des E-Rezept-Fachdienstes gebunden werden, damit Clientsysteme beim TLS-Verbindungsaufbau eine vereinfachte Zertifikatsprüfung mit TLS-Standardbibliotheken durchführen können.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Prozess zur Verwaltung von API-KEYs",
+        "key": "ERP-FD69180LPZ",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienstes MUSS organisatorische Prozesse mit der gematik zur Verwaltung von API-KEYs für die Schnittstellen des E-Rezept-Fachdienstes zum Internet unterstützen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Identität des Verarbeitungskontextes für Clients",
+        "key": "ERP-FD11178S4L",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sich gegenüber Clients mittels der Fachdienstidentität oid_erp-vau mit Zertifikatsprofil C.FD.ENC ausweisen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – OCSP-Stapling",
+        "key": "ERP-FD36260L42",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS an der HTTPS-Schnittstelle zum Internet OCSP-Stapling [RFC-6066] unterstützen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "Anbieter E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – unverzüglicher Schlüsselwechsel",
+        "key": "ERP-FD99427WMG",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienst MUSS den für das Pseudonymisieren der gematik-Logdaten benötigten geheimen Schlüssel key_pn_log unverzüglich nach Bereitstellung durch die gematik wechseln.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss unbekannter FdV-Versionsnummern von der Kommunikation",
+        "key": "ERP-FD64318UGP",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\">\n<testprocedure id=\"Produkttest\"></testprocedure>\n</actor>\n    Der E-Rezept-Fachdienst MUSS an der Schnittstelle zum Internet die Produktidentifikation (Produktbezeichnung, Produktversion) des Clients erkennen und nicht zugelassene Produkte oder bestimmte Produktversionen von der Kommunikation mit dem E-Rezept-Fachdienst ausschließen können. Der E-Rezept-Fachdienst MUSS in diesen Fällen eine entsprechende Fehlermeldung mit dem http-StatusCode 403 an den aufrufenden Client geben.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – OCSP-Status für das OCSP-Stapling",
+        "key": "ERP-FD47556DVB",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Paketfilter des E-Rezept-Fachdienstes MUSS bezüglich des OCSP-Stapling gemäß A_20026 folgende Vorgaben umsetzen: Für das vom Anbieter des E-Rezept-Fachdienstes erworbene TLS-Zertifikat (vgl. Hinweis zu A_19815) MUSS der E-Rezept-Fachdienst initial die IP-Adresse (ggf. die IP-Adressen) des entsprechenden OCSP-Responsers ermitteln. Diese IP-Adresse(n) MÜSSEN gemäß A_19815 per stateful-Firewalling Verbindungen von der HTTPS-Schnittstelle an den OCSP-Responder erlaubt werden (Whitelisting). Gemäß OCSP-Stapling (https://tools.ietf.org/html/rfc6066#section-8) MUSS der E-Rezept-Fachdienst regelmäßig eine OCSP-Response vom entsprechenden OCSP-Responder beziehen (die Regelmäßigkeit wird vom zertifikatsausgebenden TSP und der Gültigkeitsdauer dessen OCSP-Responses bestimmt). Die OCSP-Responses MÜSSEN vom E-Rezept-Fachdienst geprüft werden (Signaturprüfung, CertID in der OCSP-Response passt zum angefragten Zertifikat). Falls eine der Prüfungen ein nicht-positives Ergebnis liefert, so MUSS die erhaltene OCSP-Response verworfen werden. Sollte die letzte im E-Rezept-Fachdienst vorhandene OCSP-Response zeitlich nicht mehr gültig sein (bspw. der OCSP-Responder im Internet war länger nicht erreichbar), so MUSS diese OCSP-Response verworfen werden und ein von einem Klienten (E-Rezept-FdV) initiierter TLS-Verbindungsaufbau der HTTPS-Schnittstelle ohne OCSP-Stapling durchgeführt werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Zuordnung Abfrageursprung Client",
+        "key": "ERP-FD34828WAY",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS jeden Zugriff über eine Schnittstelle im Internet mittels dem HTTP-Header \"X-api-key\" gegen die Liste zulässiger API-KEYs prüfen. Anfragen ohne HTTP-Header \"X-api-key\" oder einem nicht gültigen API-KEY MÜSSEN als nicht authentisiert (HTTP-Statuscode 401) abgelehnt werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Geschützte Weitergabe von Daten an autorisierte Nutzer durch die VAU",
+        "key": "ERP-FD22674T4Z",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass sämtliche schützenswerten Daten ausschließlich über sichere Verbindungen an autorisierte Nutzer weitergegeben werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Verarbeitungskontexte der VAU über gemeinsame Host-Adressen erreichbar",
+        "key": "ERP-FD24028HRF",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS ihre Verarbeitungskontexte über gemeinsame IP-Adressen und Ports des Eingangspunkts des Fachdienstes erreichbar machen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit AVS",
+        "key": "ERP-FD76352K95",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass er nur transportverschlüsselt mit dem AVS kommuniziert.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit PVS",
+        "key": "ERP-FD40680HRZ",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Verarbeitungskontext E-Rezept-Fachdienst\"></actor>\n    Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass er nur transportverschlüsselt mit dem PVS kommuniziert.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss von Manipulationen an der Hardware der VAU",
+        "key": "ERP-FD76154QMA",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS die Integrität der eingesetzten Hardware schützen und damit insbesondere Manipulationen an der Hardware durch den Anbieter des E-Rezept-Fachdienstes ausschließen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Drosselung Brute-Force-Anfragen",
+        "key": "ERP-FD34980N5L",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS jede Antwort auf einen Funktionsaufruf, der einen AccessCode oder Secret enthält, um den konfigurierbaren http-Response-Header \"Warning\" (default \"999 Throttling active\") ergänzen und um ein konfigurierbares Zeitintervall (default: 500 Millisekunden) verzögert zurückschicken, sofern der erwartete AccessCode bzw. Secret nicht mit dem übergebenen AccessCode bzw. Secret übereinstimmt, um Brute-Force-Angriffe durch einen hohen Zeitaufwand unattraktiv zu machen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "Anbieter E-Rezept-Fachdienst – Betrieblicher Prozess Deaktivieren von Übertragungen",
+        "key": "ERP-FD02811TYD",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienstes MUSS einen betrieblichen Prozess unterstützen, mittels dem die Konfiguration des Deaktivierens von Anwendungsfällen angepasst werden kann.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Verhalten bei Vollauslastung",
+        "key": "ERP-FD05222WAD",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der Paketfilter des E-Rezept-Fachdienstes MUSS so konfiguriert sein, dass bei Vollauslastung der Systemressourcen im E-Rezept-Fachdienst keine weiteren Verbindungen angenommen werden.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Verbindungen von Clients zu Verarbeitungskontexten der VAU über den Eingangspunkt",
+        "key": "ERP-FD55516P8F",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Eingangspunkt E-Rezept-Fachdienst\"></actor>\n    Der Eingangspunkt des E-Rezept-Fachdienstes MUSS Verbindungen von Clients (Internet oder TI) ausschließlich über TLS akzeptieren. Er MUSS die TLS-Verbindung terminieren und HTTP Requests und Responses zwischen dem Client und dem für die jeweilige Sitzung zugeordneten Verarbeitungskontext der VAU vermitteln.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "Anbieter E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des Schlüssels im 4-Augen-Prinzip",
+        "key": "ERP-FD83938KX4",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienst MUSS den für das Pseudonymisieren der gematik-Logdaten benötigten geheimen Schlüssel key_pn_log ausschließlich im 4-Augen-Prinzip in den E-Rezept-Fachdienst einbringen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss von Client-Versionen",
+        "key": "ERP-FD85389ZF9",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienstes MUSS ausschließlich auf Anweisung der gematik Clients mit einer bestimmten Produktidentifikation für die Kommunikation mit dem E-Rezept-Fachdienst zulassen.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "Anbieter E-Rezept-Fachdienst – Konfiguration und Deaktivierung Drosselung",
+        "key": "ERP-FD30074ZHL",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"Anbieter E-Rezept-Fachdienst\"></actor>\n    Der Anbieter des E-Rezept-Fachdienstes MUSS die Funktion der Drosselung sowie die Konfiguration auf Weisung der gematik aktivieren oder deaktivieren bzw. die Konfigurationsparameter anpassen, um die Wirksamkeit des Mechanismus im Feld bei Bedarf zu verbessern.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Zugriff auf Webdienste – Deaktivieren von Übertragungen",
+        "key": "ERP-FD06745UX0",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS eine Konfiguration für die Ausführung der folgenden Anwendungsfälle vorsehen: Anwendungsfall Übertragen digitaler Durchschlag E-T-Rezept, um kurzfristig auf sicherheitsrelevante Vorfälle reagieren zu können, indem die Ausführung der Anwendungsfälle deaktiviert wird.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Erkennung Clientsystem User-Agent",
+        "key": "ERP-FD65454TGD",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS das vom aufrufenden Nutzer verwendete Clientsystem anhand des im HTTP-Request enthaltenen Header-Feld \"User-Agent\" gemäß [RFC7231] erkennen und in den Einträgen zur Performance-Rohdatenerfassung gemäß [gemSpec_Perf] protokollieren. Der E-Rezept-Fachdienst MUSS bei fehlendem User-Agent-Header den Request mit dem HTTP-Status-Code 403 beantworten, damit in der Betriebsüberwachung des E-Rezept-Fachdienstes die Nutzung unzulässiger Frontends erkannt werden kann.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – geheimer Schlüssel nur in VAU",
+        "key": "ERP-FD98306PCS",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n    Der E-Rezept-Fachdienst MUSS sicherstellen, dass der für das Pseudonymisieren der gematik-Logdaten benötigte geheime Schlüssel key_pn_log im Klartext ausschließlich innerhalb einer VAU-Instanz verarbeitet wird.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Ausschluss von Manipulationen an der Software der VAU",
+        "key": "ERP-FD01507KJ4",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS eine Manipulation der eingesetzten Software erkennen und eine Ausführung der manipulierten Software verhindern.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    },
+    {
+        "title": "E-Rezept-Fachdienst – Kontinuierliche Wirksamkeit des Manipulationsschutzes der VAU",
+        "key": "ERP-FD42807H6K",
+        "actor": [
+            ""
+        ],
+        "version": 1,
+        "releasestatus": "NEW",
+        "status": "ACTIVE",
+        "text": "<meta lockversion=\"false\"/>\n<actor name=\"VAU E-Rezept-Fachdienst\"></actor>\n    Die VAU des E-Rezept-Fachdienstes MUSS den Ausschluss von Manipulationen an der Hardware und der Software durch den Anbieter des E-Rezept-Fachdienstes mit Mitteln umsetzen, deren dauerhafte und kontinuierliche Wirksamkeit gewährleistet werden kann.",
+        "source": "input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md",
+        "conformance": "SHALL",
+        "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+    }
+]

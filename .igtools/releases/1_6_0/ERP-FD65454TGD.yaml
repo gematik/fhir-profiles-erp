@@ -1,0 +1,19 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.403931'
+date: '2026-01-05T13:09:58.403934'
+key: ERP-FD65454TGD
+modified: '2026-01-05T13:09:58.403933'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n\
+  \    Der E-Rezept-Fachdienst MUSS das vom aufrufenden Nutzer verwendete Clientsystem\
+  \ anhand des im HTTP-Request enthaltenen Header-Feld \"User-Agent\" gemäß [RFC7231]\
+  \ erkennen und in den Einträgen zur Performance-Rohdatenerfassung gemäß [gemSpec_Perf]\
+  \ protokollieren. Der E-Rezept-Fachdienst MUSS bei fehlendem User-Agent-Header den\
+  \ Request mit dem HTTP-Status-Code 403 beantworten, damit in der Betriebsüberwachung\
+  \ des E-Rezept-Fachdienstes die Nutzung unzulässiger Frontends erkannt werden kann."
+title: E-Rezept-Fachdienst – Erkennung Clientsystem User-Agent
+version: 1

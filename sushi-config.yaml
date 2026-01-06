@@ -27,9 +27,9 @@ menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
   Fachlichkeit:
-    - Überblick: menu-fachlichkeit-anwendungsfälle.html
+    - Überblick: menu-fachlichkeit-ueberblick.html
     - Szenarien: menu-fachlichkeit-szenarien.html
-    - Anwendungsfälle: menu-fachlichkeit-ueberblick.html
+    - Anwendungsfälle: menu-fachlichkeit-anwendungsfälle.html
   Technische Umsetzung:
     - Technische Anwendungsfälle: menu-technische-umsetzung-anwendungsfaelle.html
     - Verarbeitungsregeln: menu-technische-umsetzung-verarbeitungsregeln.html

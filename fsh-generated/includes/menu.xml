@@ -16,10 +16,225 @@
   <li>
     <a href="toc.html">Inhaltsverzeichnis</a>
   </li>
-  <li>
-    <a href="mapping.html">Mapping</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fachlichkeit
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">0
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-fachlichkeit-ueberblick.html">Überblick</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">1
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-fachlichkeit-szenarien.html">Szenarien</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">2
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-fachlichkeit-anwendungsfälle.html">Anwendungsfälle</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Umsetzung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">0
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-technische-umsetzung-anwendungsfaelle.html">Technische Anwendungsfälle</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">1
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-technische-umsetzung-verarbeitungsregeln.html">Verarbeitungsregeln</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">2
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-technische-umsetzung-dosierung.html">Validierung von Dosierinformationen</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">3
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="mapping.html">Mappings</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Schnittstellen
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">0
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-schnittstellen-generelle-prinzipien.html">Generelle Prinzipien</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">1
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-schnittstellen-datenschutz-und-sicherheit.html">Datenschutz und Sicherheit</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">2
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-schnittstellen-query-api.html">Query API</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">3
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-schnittstellen-operation-api.html">Operation API</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">4
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="menu-schnittstellen-additional-api.html">Additional APIs</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">FHIR-Artefakte</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anhänge
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">0
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="referenced.html">Referenzen</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">1
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="downloads.html">Downloads</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">2
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="erp-openapi.html">OpenAPI</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">3
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="release-notes.html">Release Notes</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">4
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="spec-sheet.html">Steckbriefe</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">5
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="comparisons.html">Versionsvergleiche</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">6
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="license.html">Lizenz</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>

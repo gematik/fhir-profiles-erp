@@ -1,0 +1,16 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.408468'
+date: '2026-01-05T13:09:58.408470'
+key: ERP-FD68443DFQ
+modified: '2026-01-05T13:09:58.408469'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"Eingangspunkt E-Rezept-Fachdienst\"\
+  ></actor>\n    Der Eingangspunkt des E-Rezept-Fachdienstes MUSS Clients den Aufbau\
+  \ eines sicheren Kanals auf Inhaltsebene, d. h. einen Verbindungsaufbau gemäß [gemSpec_Krypt#3.16]\
+  \ und [gemSpec_Krypt#7], zum Verarbeitungskontext ermöglichen."
+title: E-Rezept-Fachdienst – Sicherer Kanal zum Verarbeitungskontext der VAU auf Inhaltsebene
+version: 1

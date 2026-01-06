@@ -1,0 +1,19 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.405987'
+date: '2026-01-05T13:09:58.405989'
+key: ERP-FD88954YDM
+modified: '2026-01-05T13:09:58.405988'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"HSM der VAU\"></actor>\n    Das\
+  \ HSM der VAU des E-Rezept-Fachdienstes MUSS eine Schnittstelle zur Ableitung von\
+  \ symmetrischen Schlüsseln für die Persistierung von E-Rezept-Daten bereitstellen.\
+  \ Das HSM der VAU des E-Rezept-Fachdienstes MUSS zur Ableitung des jeweiligen Schlüssels\
+  \ ein nach der ersten Erstellung unveränderliches Merkmal des E-Rezept-Datensatzes\
+  \ als Ableitungsparameter verwenden (z. B. den Zeitstempel der Registrierung von\
+  \ Rezept-ID und Access Code oder den Access Code selbst)."
+title: E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel aus Merkmal der E-Rezepte
+version: 1

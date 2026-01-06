@@ -1,0 +1,29 @@
+install:
+  - firely_terminal
+  - sushi
+  - igpub
+  - epatools
+  - igtools
+  - publishtools
+deploy:
+  env:
+    dev: dev_bucket
+    prod: prod_bucket
+build:
+  builtin:
+    igtools: true
+    epatools: # true would enable all steps
+      cap_statements: true
+      openapi: true
+  args:
+    openapi:
+      additional_archive:
+        - openapi.add.json
+  pipeline:
+    - requirements
+    - sushi
+    # - cap_statements
+    # - shell: touch test.txt
+    - igpub
+    #- openapi
+    #- igpub_qa

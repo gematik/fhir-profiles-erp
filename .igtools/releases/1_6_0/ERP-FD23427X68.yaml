@@ -1,0 +1,16 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.402841'
+date: '2026-01-05T13:09:58.402849'
+key: ERP-FD23427X68
+modified: '2026-01-05T13:09:58.402847'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"EPA-FdV\">\n<testprocedure id=\"\
+  Produkttest\"></testprocedure>\n</actor>\n    Das ePA-FdV MUSS es dem Nutzer ermöglichen,\
+  \ den Medikationsplan für sein Aktenkonto oder für das Aktenkonto des zu Vertretenden\
+  \ unter Verwendung von <i>Render API: Medikationsplan abrufen (eMP)</i> anzuzeigen."
+title: Medikationsplan (durch das Aktensystem gerendert) im ePA-FdV anzeigen
+version: 1

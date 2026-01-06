@@ -5,8 +5,8 @@
   "name": "KBVPrErpPrescriptionMap",
   "status": "active",
   "version": "1.0",
-  "date": "2025-12-16",
-  "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.2.0",
+  "date": "2026-01-05",
+  "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.3.0",
   "structure": [
     {
       "url": "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Prescription",
@@ -23,7 +23,7 @@
     {
       "name": "KBVPrErpPrescriptionMap",
       "typeMode": "types",
-      "documentation": "Mapping generated for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.2.0",
+      "documentation": "Mapping generated for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.3.0",
       "input": [
         {
           "name": "KBVPRERPPrescription",
@@ -64,7 +64,7 @@
         },
         {
           "name": "MedicationRequestBasedonc8b5003b",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.basedOn'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -78,70 +78,18 @@
               "contextType": "variable",
               "element": "basedOn",
               "variable": "tgtEPAMedicationRequestBasedon1481cab7",
-              "transform": "create",
+              "transform": "copy",
               "parameter": [
                 {
-                  "valueString": "Reference"
+                  "valueId": "srcKBVPRERPPrescriptionBasedon44096147"
                 }
               ]
-            }
-          ],
-          "rule": [
-            {
-              "name": "MedicationRequestBasedonIdc9c0bc41",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionBasedon44096147",
-                  "variable": "srcMedicationRequestBasedonIdc9c0bc41",
-                  "element": "id"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestBasedon1481cab7",
-                  "contextType": "variable",
-                  "element": "id",
-                  "variable": "tgtMedicationRequestBasedonIdc9c0bc41",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestBasedonIdc9c0bc41"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestBasedonIdentifier526dd928",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionBasedon44096147",
-                  "variable": "srcMedicationRequestBasedonIdentifier526dd928",
-                  "element": "identifier"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestBasedon1481cab7",
-                  "contextType": "variable",
-                  "element": "identifier",
-                  "variable": "tgtMedicationRequestBasedonIdentifier526dd928",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestBasedonIdentifier526dd928"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
             }
           ]
         },
         {
           "name": "MedicationRequestDispenserequestabc39b18",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.dispenseRequest'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -162,165 +110,11 @@
                 }
               ]
             }
-          ],
-          "rule": [
-            {
-              "name": "MedicationRequestDispenserequestExpectedsupplydurationaf6a6ca3",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionDispenserequest1783274a",
-                  "variable": "srcMedicationRequestDispenserequestExpectedsupplydurationaf6a6ca",
-                  "element": "expectedSupplyDuration"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestDispenserequest519b8c09",
-                  "contextType": "variable",
-                  "element": "expectedSupplyDuration",
-                  "variable": "tgtMedicationRequestDispenserequestExpectedsupplydurationaf6a6ca",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestDispenserequestExpectedsupplydurationaf6a6ca"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestDispenserequestId86de48fb",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionDispenserequest1783274a",
-                  "variable": "srcMedicationRequestDispenserequestId86de48fb",
-                  "element": "id"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestDispenserequest519b8c09",
-                  "contextType": "variable",
-                  "element": "id",
-                  "variable": "tgtMedicationRequestDispenserequestId86de48fb",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestDispenserequestId86de48fb"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestDispenserequestQuantity7f2ad2c9",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionDispenserequest1783274a",
-                  "variable": "srcMedicationRequestDispenserequestQuantity7f2ad2c9",
-                  "element": "quantity"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestDispenserequest519b8c09",
-                  "contextType": "variable",
-                  "element": "quantity",
-                  "variable": "tgtMedicationRequestDispenserequestQuantity7f2ad2c9",
-                  "transform": "create",
-                  "parameter": [
-                    {
-                      "valueString": "Quantity"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy",
-              "rule": [
-                {
-                  "name": "MedicationRequestDispenserequestQuantityIde562891d",
-                  "source": [
-                    {
-                      "context": "srcMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "variable": "srcMedicationRequestDispenserequestQuantityIde562891d",
-                      "element": "id"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "context": "tgtMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "contextType": "variable",
-                      "element": "id",
-                      "variable": "tgtMedicationRequestDispenserequestQuantityIde562891d",
-                      "transform": "copy",
-                      "parameter": [
-                        {
-                          "valueId": "srcMedicationRequestDispenserequestQuantityIde562891d"
-                        }
-                      ]
-                    }
-                  ],
-                  "documentation": "Automatic copy"
-                },
-                {
-                  "name": "MedicationRequestDispenserequestQuantityUnit854264a3",
-                  "source": [
-                    {
-                      "context": "srcMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "variable": "srcMedicationRequestDispenserequestQuantityUnit854264a3",
-                      "element": "unit"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "context": "tgtMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "contextType": "variable",
-                      "element": "unit",
-                      "variable": "tgtMedicationRequestDispenserequestQuantityUnit854264a3",
-                      "transform": "copy",
-                      "parameter": [
-                        {
-                          "valueId": "srcMedicationRequestDispenserequestQuantityUnit854264a3"
-                        }
-                      ]
-                    }
-                  ],
-                  "documentation": "Automatic copy"
-                },
-                {
-                  "name": "MedicationRequestDispenserequestQuantityValue2a50498c",
-                  "source": [
-                    {
-                      "context": "srcMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "variable": "srcMedicationRequestDispenserequestQuantityValue2a50498c",
-                      "element": "value"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "context": "tgtMedicationRequestDispenserequestQuantity7f2ad2c9",
-                      "contextType": "variable",
-                      "element": "value",
-                      "variable": "tgtMedicationRequestDispenserequestQuantityValue2a50498c",
-                      "transform": "copy",
-                      "parameter": [
-                        {
-                          "valueId": "srcMedicationRequestDispenserequestQuantityValue2a50498c"
-                        }
-                      ]
-                    }
-                  ],
-                  "documentation": "Automatic copy"
-                }
-              ]
-            }
           ]
         },
         {
           "name": "MedicationRequestDosageinstruction0c18f214",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.dosageInstruction'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -344,25 +138,1255 @@
           ]
         },
         {
-          "name": "MedicationRequestInsurance8b499ebd",
+          "name": "MedicationRequestExtension9fb7a1e1",
           "documentation": "Automatic copy",
           "source": [
             {
               "context": "KBVPRERPPrescription",
-              "element": "insurance",
-              "variable": "srcKBVPRERPPrescriptionInsurance97877d04"
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensione3b6d5d3",
+              "condition": "url != 'ID' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Prescriber_ID' and url != 'off-label' and url != 'security-compliance' and url != 'PatientenID' and url != 'renderedDosageInstruction' and url != 'valueIdentifier' and url != 'BtM-Sonderkennzeichen' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'AushaendigungInformationsmaterialien' and url != 'ErgaenzendeAngabenSubstitutionsmittel' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Narcotic' and url != 'period' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension' and url != 'T-Rezept' and url != 'hand-out-information-material' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'Betaeubungsmittel' and url != 'valueString' and url != 'Off-Label' and url != 'Unfallinformationen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_EmergencyServicesFee' and url != 'patientID' and url != 'counter' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_DosageFlag' and url != 'ErklaerungSachkenntnis' and url != 'multiplePrescription' and url != 'valueBoolean' and url != 'childbearing-potential' and url != 'additional-information-substitutes' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension' and url != 'teratogenic' and url != 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction' and url != 'isSer' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_StatusCoPayment' and url != 'Mehrfachverordnung' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Patient_ID' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'id' and url != 'valueCoding' and url != 'Unfallbetrieb' and url != 'GebaerfaehigeFrau' and url != 'Zuzahlungsstatus' and url != 'valuePeriod' and url != 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' and url != 'Notdienstgebuehr' and url != 'VerschreiberID' and url != 'Zeitraum' and url != 'SER' and url != 'isBvg' and url != 'Nummerierung' and url != 'Dosierungskennzeichen' and url != 'Unfalltag' and url != 'prescriberID' and url != 'Kennzeichen' and url != 'valueRatio' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension' and url != 'narcotics-markings' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_Accident' and url != 'indicator' and url != 'Unfallkennzeichen' and url != 'generatedDosageInstructionsMeta' and url != 'declaration-of-expertise' and url != 'valueDate' and url != 'narcotics'"
             }
           ],
           "target": [
             {
               "context": "EPAMedicationRequest",
               "contextType": "variable",
-              "element": "insurance",
-              "variable": "tgtEPAMedicationRequestInsurance9fe43701",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtension84dbff80",
               "transform": "copy",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRERPPrescriptionInsurance97877d04"
+                  "valueId": "srcKBVPRERPPrescriptionExtensione3b6d5d3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionGenerateddosageinstructionsmetdb6c77e4",
+          "documentation": "Automatic copy",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionGenerateddosageinstructionsa922a",
+              "condition": "url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' and url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionGenerateddosageinstructionsf5747",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueId": "srcKBVPRERPPrescriptionExtensionGenerateddosageinstructionsa922a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionIsser59899e4f",
+          "documentation": "Copied from 'MedicationRequest.extension:SER'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionSere0662047",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionIsser3ffad0d8",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionIsser3ffad0d8",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionIsserValueXc593588c",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionSere0662047",
+                  "variable": "srcMedicationRequestExtensionIsserValueXc593588c",
+                  "element": "value"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionIsser3ffad0d8",
+                  "contextType": "variable",
+                  "element": "value",
+                  "variable": "tgtMedicationRequestExtensionIsserValueXc593588c",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionIsserValueXc593588c"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:SER.value[x]'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionMultipleprescriptionbdc5607f",
+          "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'period' and url != 'counter' and url != 'id' and url != 'indicator' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionMultipleprescriptionExtensionfb1469fa",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+                  "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionfb1469",
+                  "element": "extension",
+                  "condition": "url != 'period' and url != 'counter' and url != 'id' and url != 'indicator' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'Kennzeichen' and url != 'Nummerierung' and url != 'Zeitraum' and url != 'ID' and url != 'valueBoolean' and url != 'valueRatio' and url != 'valuePeriod' and url != 'valueIdentifier'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionfb1469",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionMultipleprescriptionExtensionfb1469"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension'"
+            },
+            {
+              "name": "MedicationRequestExtensionMultipleprescriptionExtensionCfaa566e2",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+                  "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionCfaa56",
+                  "element": "extension",
+                  "condition": "url = 'Nummerierung'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionCfaa56",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionCfaa56",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "counter"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:Nummerierung'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionMultipleprescriptionExtensionC871d22e9",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionMultipleprescriptionExtensionCfaa56",
+                      "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionC871d2",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionCfaa56",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionC871d2",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "Ratio"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:Nummerierung.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionMultipleprescriptionExtensionI16b5928d",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+                  "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionI16b59",
+                  "element": "extension",
+                  "condition": "url = 'ID'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI16b59",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI16b59",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "id"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:ID'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionMultipleprescriptionExtensionIe062e3e2",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionMultipleprescriptionExtensionI16b59",
+                      "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionIe062e",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI16b59",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionIe062e",
+                      "transform": "create",
+                      "parameter": [
+                        {
+                          "valueString": "Identifier"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:ID.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionMultipleprescriptionExtensionI4e3b384b",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+                  "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionI4e3b3",
+                  "element": "extension",
+                  "condition": "url = 'Kennzeichen'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI4e3b3",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI4e3b3",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "indicator"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:Kennzeichen'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionMultipleprescriptionExtensionI405debc2",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionMultipleprescriptionExtensionI4e3b3",
+                      "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionI405de",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI4e3b3",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionI405de",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionMultipleprescriptionExtensionI405de"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:Kennzeichen.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionMultipleprescriptionExtensionP141be3dc",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
+                  "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionP141be",
+                  "element": "extension",
+                  "condition": "url = 'Zeitraum'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionMultipleprescriptionb8edbb86",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionMultipleprescriptionExtensionP141be",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionMultipleprescriptionExtensionP141be",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "period"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Mehrfachverordnung.extension:Zeitraum'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionNarcotics79f21928",
+          "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionBetaeubungsmitteld93a4b99",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Narcotic' and url != 'narcotics-markings' and url != 'additional-information-substitutes' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Narcotic'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionNarcotics6cf17625",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionNarcotics6cf17625",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionNarcoticsExtension5781be10",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionBetaeubungsmitteld93a4b99",
+                  "variable": "srcMedicationRequestExtensionNarcoticsExtension5781be10",
+                  "element": "extension",
+                  "condition": "url != 'narcotics-markings' and url != 'additional-information-substitutes' and url != 'narcotics-markings' and url != 'additional-information-substitutes' and url != 'narcotics-markings' and url != 'additional-information-substitutes' and url != 'valueCoding' and url != 'valueString' and url != 'BtM-Sonderkennzeichen' and url != 'ErgaenzendeAngabenSubstitutionsmittel' and url != 'valueCoding' and url != 'valueString'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionNarcotics6cf17625",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionNarcoticsExtension5781be10",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionNarcoticsExtension5781be10"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension'"
+            },
+            {
+              "name": "MedicationRequestExtensionNarcoticsExtensionAdditionalInceae9d9c",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionBetaeubungsmitteld93a4b99",
+                  "variable": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                  "element": "extension",
+                  "condition": "url = 'ErgaenzendeAngabenSubstitutionsmittel'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionNarcotics6cf17625",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "additional-information-substitutes"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension:ErgaenzendeAngabenSubstitutionsmittel'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionNarcoticsExtensionAdditionalIn7d0f9455",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                      "variable": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalIn7d0f9",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalIn7d0f9",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalIn7d0f9"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension:ErgaenzendeAngabenSubstitutionsmittel.value[x]'"
+                },
+                {
+                  "name": "MedicationRequestExtensionNarcoticsExtensionAdditionalIn5c447f30",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                      "variable": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalIn5c447",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalInceae9",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionNarcoticsExtensionAdditionalIn5c447",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionNarcoticsExtensionAdditionalIn5c447"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension:ErgaenzendeAngabenSubstitutionsmittel.value[x]:valueString'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c532",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionBetaeubungsmitteld93a4b99",
+                  "variable": "srcMedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c",
+                  "element": "extension",
+                  "condition": "url = 'BtM-Sonderkennzeichen'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionNarcotics6cf17625",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "narcotics-markings"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension:BtM-Sonderkennzeichen'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionNarcoticsExtensionNarcoticsMar57aa6081",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c",
+                      "variable": "srcMedicationRequestExtensionNarcoticsExtensionNarcoticsMar57aa6",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionNarcoticsExtensionNarcoticsMar7ca5c",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionNarcoticsExtensionNarcoticsMar57aa6",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionNarcoticsExtensionNarcoticsMar57aa6"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:Betaeubungsmittel.extension:BtM-Sonderkennzeichen.value[x]'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionPatientid212ef156",
+          "documentation": "Copied from 'MedicationRequest.extension:PatientenID'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionPatientenidb1aba372",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Patient_ID' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Patient_ID'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionPatientid606310bd",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionPatientid606310bd",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionPatientidValueX6b0e4b53",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionPatientenidb1aba372",
+                  "variable": "srcMedicationRequestExtensionPatientidValueX6b0e4b53",
+                  "element": "value"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionPatientid606310bd",
+                  "contextType": "variable",
+                  "element": "value",
+                  "variable": "tgtMedicationRequestExtensionPatientidValueX6b0e4b53",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Identifier"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:PatientenID.value[x]'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionPrescriberid3f6e2305",
+          "documentation": "Copied from 'MedicationRequest.extension:VerschreiberID'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionVerschreiberid969b0514",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Prescriber_ID' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Prescriber_ID'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionPrescriberid10873256",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionPrescriberid10873256",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionPrescriberidValueXaaa15668",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionVerschreiberid969b0514",
+                  "variable": "srcMedicationRequestExtensionPrescriberidValueXaaa15668",
+                  "element": "value"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionPrescriberid10873256",
+                  "contextType": "variable",
+                  "element": "value",
+                  "variable": "tgtMedicationRequestExtensionPrescriberidValueXaaa15668",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Identifier"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:VerschreiberID.value[x]'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionRendereddosageinstruction77697624",
+          "documentation": "Copied to 'MedicationRequest.extension:renderedDosageInstruction'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionRendereddosageinstruction1f1ed86",
+              "condition": "url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction' and url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionRendereddosageinstruction1278f9e",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionRendereddosageinstruction1278f9e",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionRendereddosageinstructionExten28c174a3",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionRendereddosageinstruction1f1ed86",
+                  "variable": "srcMedicationRequestExtensionRendereddosageinstructionExten28c17",
+                  "element": "extension"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionRendereddosageinstruction1278f9e",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionRendereddosageinstructionExten28c17",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionRendereddosageinstructionExten28c17"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied to 'MedicationRequest.extension:renderedDosageInstruction.extension'"
+            },
+            {
+              "name": "MedicationRequestExtensionRendereddosageinstructionId1f949ff1",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionRendereddosageinstruction1f1ed86",
+                  "variable": "srcMedicationRequestExtensionRendereddosageinstructionId1f949ff1",
+                  "element": "id"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionRendereddosageinstruction1278f9e",
+                  "contextType": "variable",
+                  "element": "id",
+                  "variable": "tgtMedicationRequestExtensionRendereddosageinstructionId1f949ff1",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionRendereddosageinstructionId1f949ff1"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied to 'MedicationRequest.extension:renderedDosageInstruction.id'"
+            },
+            {
+              "name": "MedicationRequestExtensionRendereddosageinstructionValue43194174",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionRendereddosageinstruction1f1ed86",
+                  "variable": "srcMedicationRequestExtensionRendereddosageinstructionValue43194",
+                  "element": "value"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionRendereddosageinstruction1278f9e",
+                  "contextType": "variable",
+                  "element": "value",
+                  "variable": "tgtMedicationRequestExtensionRendereddosageinstructionValue43194",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionRendereddosageinstructionValue43194"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied to 'MedicationRequest.extension:renderedDosageInstruction.value[x]'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestExtensionTeratogenic8a23741f",
+          "documentation": "Copied from 'MedicationRequest.extension:T-Rezept'",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "extension",
+              "variable": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'childbearing-potential' and url != 'off-label' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Extension"
+                }
+              ]
+            },
+            {
+              "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+              "contextType": "variable",
+              "element": "url",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "valueString": "https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtension7f45302b",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtension7f45302b",
+                  "element": "extension",
+                  "condition": "url != 'childbearing-potential' and url != 'off-label' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'Off-Label' and url != 'GebaerfaehigeFrau' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'AushaendigungInformationsmaterialien' and url != 'ErklaerungSachkenntnis' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtension7f45302b",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueId": "srcMedicationRequestExtensionTeratogenicExtension7f45302b"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension'"
+            },
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtensionChildbearid7eea4d5",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtensionChildbearid7eea",
+                  "element": "extension",
+                  "condition": "url = 'GebaerfaehigeFrau'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtensionChildbearid7eea",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionTeratogenicExtensionChildbearid7eea",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "childbearing-potential"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:GebaerfaehigeFrau'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionTeratogenicExtensionChildbeari0d33c9ce",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionTeratogenicExtensionChildbearid7eea",
+                      "variable": "srcMedicationRequestExtensionTeratogenicExtensionChildbeari0d33c",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionTeratogenicExtensionChildbearid7eea",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionTeratogenicExtensionChildbeari0d33c",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionTeratogenicExtensionChildbeari0d33c"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:GebaerfaehigeFrau.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtensionDeclaratio505fc233",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtensionDeclaratio505fc",
+                  "element": "extension",
+                  "condition": "url = 'ErklaerungSachkenntnis'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtensionDeclaratio505fc",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionTeratogenicExtensionDeclaratio505fc",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "declaration-of-expertise"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:ErklaerungSachkenntnis'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionTeratogenicExtensionDeclaratio21424ea3",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionTeratogenicExtensionDeclaratio505fc",
+                      "variable": "srcMedicationRequestExtensionTeratogenicExtensionDeclaratio21424",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionTeratogenicExtensionDeclaratio505fc",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionTeratogenicExtensionDeclaratio21424",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionTeratogenicExtensionDeclaratio21424"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:ErklaerungSachkenntnis.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b48d",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b",
+                  "element": "extension",
+                  "condition": "url = 'AushaendigungInformationsmaterialien'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "hand-out-information-material"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:AushaendigungInformationsmaterialien'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionTeratogenicExtensionHandOutInf0b865a8b",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b",
+                      "variable": "srcMedicationRequestExtensionTeratogenicExtensionHandOutInf0b865",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionTeratogenicExtensionHandOutInfb6c2b",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionTeratogenicExtensionHandOutInf0b865",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionTeratogenicExtensionHandOutInf0b865"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:AushaendigungInformationsmaterialien.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtensionOffLabel59ec860e",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtensionOffLabel59ec860",
+                  "element": "extension",
+                  "condition": "url = 'Off-Label'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtensionOffLabel59ec860",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionTeratogenicExtensionOffLabel59ec860",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "off-label"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:Off-Label'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionTeratogenicExtensionOffLabelVa7de9945c",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionTeratogenicExtensionOffLabel59ec860",
+                      "variable": "srcMedicationRequestExtensionTeratogenicExtensionOffLabelVa7de99",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionTeratogenicExtensionOffLabel59ec860",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionTeratogenicExtensionOffLabelVa7de99",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionTeratogenicExtensionOffLabelVa7de99"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:Off-Label.value[x]'"
+                }
+              ]
+            },
+            {
+              "name": "MedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9d6c",
+              "source": [
+                {
+                  "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
+                  "variable": "srcMedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9",
+                  "element": "extension",
+                  "condition": "url = 'EinhaltungSicherheitsmassnahmen'"
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestExtensionTeratogenic4ac07394",
+                  "contextType": "variable",
+                  "element": "extension",
+                  "variable": "tgtMedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9",
+                  "transform": "create",
+                  "parameter": [
+                    {
+                      "valueString": "Extension"
+                    }
+                  ]
+                },
+                {
+                  "context": "tgtMedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9",
+                  "contextType": "variable",
+                  "element": "url",
+                  "transform": "copy",
+                  "parameter": [
+                    {
+                      "valueString": "security-compliance"
+                    }
+                  ]
+                }
+              ],
+              "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:EinhaltungSicherheitsmassnahmen'",
+              "rule": [
+                {
+                  "name": "MedicationRequestExtensionTeratogenicExtensionSecurityCo39f181ed",
+                  "source": [
+                    {
+                      "context": "srcMedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9",
+                      "variable": "srcMedicationRequestExtensionTeratogenicExtensionSecurityCo39f18",
+                      "element": "value"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtMedicationRequestExtensionTeratogenicExtensionSecurityCoac4e9",
+                      "contextType": "variable",
+                      "element": "value",
+                      "variable": "tgtMedicationRequestExtensionTeratogenicExtensionSecurityCo39f18",
+                      "transform": "copy",
+                      "parameter": [
+                        {
+                          "valueId": "srcMedicationRequestExtensionTeratogenicExtensionSecurityCo39f18"
+                        }
+                      ]
+                    }
+                  ],
+                  "documentation": "Copied from 'MedicationRequest.extension:T-Rezept.extension:EinhaltungSicherheitsmassnahmen.value[x]'"
                 }
               ]
             }
@@ -394,13 +1418,13 @@
           ]
         },
         {
-          "name": "MedicationRequestMedicationX2aac9f24",
-          "documentation": "Automatic copy",
+          "name": "MedicationRequestMedicationXMedicationreferencecdf4aaa2",
+          "documentation": "Copied to 'MedicationRequest.medication[x]'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
               "element": "medication",
-              "variable": "srcKBVPRERPPrescriptionMedicationX56677694"
+              "variable": "srcKBVPRERPPrescriptionMedicationXMedicationreferencee836d317"
             }
           ],
           "target": [
@@ -412,29 +1436,43 @@
               "transform": "copy",
               "parameter": [
                 {
-                  "valueId": "srcKBVPRERPPrescriptionMedicationX56677694"
+                  "valueId": "srcKBVPRERPPrescriptionMedicationXMedicationreferencee836d317"
                 }
               ]
             }
           ]
         },
         {
-          "name": "MedicationRequestMetaProfile56c958a8",
+          "name": "MedicationRequestMeta9962a339",
+          "documentation": "Automatic copy",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "element": "meta",
+              "variable": "srcKBVPRERPPrescriptionMetaebbb9882"
+            }
+          ],
           "target": [
             {
               "context": "EPAMedicationRequest",
+              "contextType": "variable",
               "element": "meta",
               "variable": "tgtEPAMedicationRequestMeta55fad1b0",
-              "contextType": "variable"
+              "transform": "create",
+              "parameter": [
+                {
+                  "valueString": "Meta"
+                }
+              ]
             }
           ],
           "rule": [
             {
               "name": "MedicationRequestMetaProfile56c958a8",
-              "documentation": "Fixed value 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request'",
               "source": [
                 {
-                  "context": "KBVPRERPPrescription"
+                  "context": "srcKBVPRERPPrescriptionMetaebbb9882",
+                  "variable": "srcMedicationRequestMetaProfile56c958a8"
                 }
               ],
               "target": [
@@ -442,6 +1480,7 @@
                   "context": "tgtEPAMedicationRequestMeta55fad1b0",
                   "contextType": "variable",
                   "element": "profile",
+                  "variable": "tgtMedicationRequestMetaProfile56c958a8",
                   "transform": "copy",
                   "parameter": [
                     {
@@ -449,18 +1488,14 @@
                     }
                   ]
                 }
-              ]
-            }
-          ],
-          "source": [
-            {
-              "context": "KBVPRERPPrescription"
+              ],
+              "documentation": "Fixed value 'https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request'"
             }
           ]
         },
         {
           "name": "MedicationRequestNote3f48e22b",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.note'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -481,63 +1516,11 @@
                 }
               ]
             }
-          ],
-          "rule": [
-            {
-              "name": "MedicationRequestNoteId47dca6aa",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionNote271cad5f",
-                  "variable": "srcMedicationRequestNoteId47dca6aa",
-                  "element": "id"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestNote7f5e9d21",
-                  "contextType": "variable",
-                  "element": "id",
-                  "variable": "tgtMedicationRequestNoteId47dca6aa",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestNoteId47dca6aa"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestNoteText729cac67",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionNote271cad5f",
-                  "variable": "srcMedicationRequestNoteText729cac67",
-                  "element": "text"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestNote7f5e9d21",
-                  "contextType": "variable",
-                  "element": "text",
-                  "variable": "tgtMedicationRequestNoteText729cac67",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestNoteText729cac67"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            }
           ]
         },
         {
           "name": "MedicationRequestRequester3e498d80",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.requester'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -608,63 +1591,11 @@
                 }
               ]
             }
-          ],
-          "rule": [
-            {
-              "name": "MedicationRequestSubjectId30658f9f",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionSubjectb79dbef0",
-                  "variable": "srcMedicationRequestSubjectId30658f9f",
-                  "element": "id"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestSubject8a8bf8a9",
-                  "contextType": "variable",
-                  "element": "id",
-                  "variable": "tgtMedicationRequestSubjectId30658f9f",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestSubjectId30658f9f"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestSubjectReference23286ed1",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionSubjectb79dbef0",
-                  "variable": "srcMedicationRequestSubjectReference23286ed1",
-                  "element": "reference"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestSubject8a8bf8a9",
-                  "contextType": "variable",
-                  "element": "reference",
-                  "variable": "tgtMedicationRequestSubjectReference23286ed1",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestSubjectReference23286ed1"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            }
           ]
         },
         {
           "name": "MedicationRequestSubstitution5015c761",
-          "documentation": "Automatic copy",
+          "documentation": "Copied to 'MedicationRequest.substitution'",
           "source": [
             {
               "context": "KBVPRERPPrescription",
@@ -684,58 +1615,6 @@
                   "valueId": "srcKBVPRERPPrescriptionSubstitution3af41d78"
                 }
               ]
-            }
-          ],
-          "rule": [
-            {
-              "name": "MedicationRequestSubstitutionAllowedX8ca49a42",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionSubstitution3af41d78",
-                  "variable": "srcMedicationRequestSubstitutionAllowedX8ca49a42",
-                  "element": "allowed"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestSubstitution4b4fd116",
-                  "contextType": "variable",
-                  "element": "allowed",
-                  "variable": "tgtMedicationRequestSubstitutionAllowedX8ca49a42",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestSubstitutionAllowedX8ca49a42"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
-            },
-            {
-              "name": "MedicationRequestSubstitutionIddce69090",
-              "source": [
-                {
-                  "context": "srcKBVPRERPPrescriptionSubstitution3af41d78",
-                  "variable": "srcMedicationRequestSubstitutionIddce69090",
-                  "element": "id"
-                }
-              ],
-              "target": [
-                {
-                  "context": "tgtEPAMedicationRequestSubstitution4b4fd116",
-                  "contextType": "variable",
-                  "element": "id",
-                  "variable": "tgtMedicationRequestSubstitutionIddce69090",
-                  "transform": "copy",
-                  "parameter": [
-                    {
-                      "valueId": "srcMedicationRequestSubstitutionIddce69090"
-                    }
-                  ]
-                }
-              ],
-              "documentation": "Automatic copy"
             }
           ]
         }

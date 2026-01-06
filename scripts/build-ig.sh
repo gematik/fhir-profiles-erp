@@ -17,7 +17,7 @@ fi
 sushi .
 
 # Run scripts that need artifacts from IG Publisher
-#python3 "$SCRIPT_DIR/testscripts/generate-provide-presc#ription-docs.py"
+python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 ./scripts/fml_table.sh
 
 # Generate IG Publisher Content

@@ -1,6 +1,7 @@
 import sys
 import json
 import re
+from typing import List, Optional
 
 
 def escape_markdown(text):
@@ -8,6 +9,25 @@ def escape_markdown(text):
     if not isinstance(text, str):
         return text
     return text.replace("|", "\\|")
+
+
+def translate_doc(text: Optional[str]) -> str:
+    """Übersetzt häufige englische Doku-Schnipsel ins Deutsche."""
+    if not text:
+        return ""
+
+    replacements = [
+        (r"Automatic copy", "Automatische Kopie"),
+        (r"Copied to '([^']+)'", r"Kopiert nach '\1'"),
+        (r"Copied from '([^']+)'", r"Kopiert von '\1'"),
+        (r"Fixed value '([^']+)'", r"Fester Wert '\1'"),
+        (r"Copies.*", "Kopiert"),
+    ]
+
+    result = text
+    for pattern, repl in replacements:
+        result = re.sub(pattern, repl, result)
+    return result
 
 def clean_path(path):
     """Clean up FHIR paths to be more readable"""
@@ -216,6 +236,39 @@ def should_include(rule):
         or (not has_children and (rule.get('target') or rule.get('source')))
     )
 
+def format_condition(condition: str) -> str:
+    """Kürzt lange Bedingungslisten und übersetzt AND/OR ins Deutsche."""
+    if not condition:
+        return ""
+
+    cond = condition.strip()
+
+    # Sammle alle url != 'x'
+    excluded = re.findall(r"url\s*!=\s*'([^']+)'", cond)
+    if excluded:
+        unique_excluded: List[str] = list(dict.fromkeys(excluded))  # Reihenfolge beibehalten
+        preview = unique_excluded[:3]
+        rest = len(unique_excluded) - len(preview)
+        parts = ", ".join(preview)
+        if rest > 0:
+            parts += f", +{rest} weitere"
+        cond = re.sub(r"url\s*!=\s*'[^']+'\s*(and\s*)?", "", cond)
+        cond = cond.strip(" and ")
+        cond = " und ".join(p for p in [f"url != [{parts}]", cond] if p)
+
+    equals = re.findall(r"url\s*=\s*'([^']+)'", cond)
+    if equals:
+        unique_equals: List[str] = list(dict.fromkeys(equals))
+        cond = re.sub(r"url\s*=\s*'[^']+'\s*(and\s*)?", "", cond)
+        cond = cond.strip(" and ")
+        eq_text = " oder ".join(f"'{e}'" for e in unique_equals)
+        cond = " und ".join(p for p in [f"url = {eq_text}", cond] if p)
+
+    cond = cond.replace("and", "und")
+    cond = cond.replace("where", "wo")
+    return f"Bedingung: {cond}" if cond else ""
+
+
 def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None):
     """Extract relevant mapping rules with enhanced information"""
     if mappings is None:
@@ -246,18 +299,24 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                             if url_match:
                                 url = url_match.group(1)
                                 src_path += f" [{url.split('/')[-1]}]"
+                            else:
+                                simplified = format_condition(condition)
+                                if simplified:
+                                    src_path += f" [{simplified}]"
                         elif 'ofType(' in condition:
                             resource_type = re.search(r'ofType\((\w+)\)', condition)
                             if resource_type:
                                 src_path += f" [Typ: {resource_type.group(1)}]"
                         else:
-                            src_path += f" [Bedingung: {condition}]"
+                            simplified = format_condition(condition)
+                            if simplified:
+                                src_path += f" [{simplified}]"
         src_path_raw = src_path
         
         # Prepare description shared across targets
         base_desc_parts = []
         if rule.get('documentation'):
-            base_desc_parts.append(escape_markdown(rule['documentation']))
+            base_desc_parts.append(escape_markdown(translate_doc(rule['documentation'])))
         if 'dependent' in rule:
             dependent_links = []
             for dep in rule['dependent']:
@@ -300,9 +359,9 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         
         # Recurse into nested rules
         if 'rule' in rule:
-                next_src_parents = src_path_raw.split('.') if src_path_raw else src_parents
-                next_tgt_parents = tgt_path.split('.') if tgt_path else tgt_parents
-                extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths)
+            next_src_parents = src_path_raw.split('.') if src_path_raw else src_parents
+            next_tgt_parents = tgt_path.split('.') if tgt_path else tgt_parents
+            extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths)
     
     return mappings
 
@@ -316,6 +375,8 @@ def structuremap_to_markdown(json_data):
         for src, tgt, action, desc in mappings
         if src or desc or (tgt and 'direkte Kopie' not in desc)
     ]
+
+    filtered_mappings.sort(key=lambda row: ((row[0] or "~"), (row[1] or "")))
 
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"
@@ -336,7 +397,7 @@ def structuremap_to_markdown(json_data):
 def main():
     """Main function to process StructureMap file"""
     if len(sys.argv) != 2:
-        print(f"Usage: python {sys.argv[0]} <StructureMap-file>")
+        print(f"Aufruf: python {sys.argv[0]} <StructureMap-Datei>")
         sys.exit(1)
     
     file_path = sys.argv[1]

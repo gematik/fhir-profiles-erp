@@ -1,0 +1,18 @@
+actor:
+- ''
+conformance: SHALL
+created: '2026-01-05T13:09:58.403719'
+date: '2026-01-05T13:09:58.403721'
+key: ERP-FD96295XUY
+modified: '2026-01-05T13:09:58.403720'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+text: "<meta lockversion=\"false\"/>\n<actor name=\"E-Rezept-Fachdienst\"></actor>\n\
+  \    Der E-Rezept-Fachdienst MUSS jeden Zugriff auf E-Rezepte mittels AccessCode\
+  \ (Vertreterzugriff) mit dem http-Status-Code 400 ablehnen, wenn sich aus dem Zugriff\
+  \ eine Kombination aus KVNR der Prüfkarte eGK und KVNR von Versicherten ergibt,\
+  \ d. h. Versicherte dürfen nicht auf Prüfrezepte und mit Prüfkarte eGK darf nicht\
+  \ auf Rezepte von Versicherten zugegriffen werden."
+title: E-Rezept-Fachdienst – Ausschluss Vertreterzugriff auf bzw. mittels Prüf-Identität
+version: 1

@@ -601,7 +601,7 @@
         "reference": {
           "reference": "StructureMap/GEMErpPrMedicationdispenseMap"
         },
-        "description": "Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.6.0 -> EPAMedicationDispense|1.2.0",
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_MedicationDispense|1.6.1 -> EPAMedicationDispense|1.3.0",
         "exampleBoolean": false,
         "name": "GEMErpPrMedicationdispenseMap"
       },
@@ -609,7 +609,7 @@
         "reference": {
           "reference": "StructureMap/GEMErpPrMedicationMap"
         },
-        "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.6.0 -> EPAMedication|1.2.0",
+        "description": "Auto-generated StructureMap for GEM_ERP_PR_Medication|1.6.1 -> EPAMedication|1.3.0",
         "exampleBoolean": false,
         "name": "GEMErpPrMedicationMap"
       },
@@ -715,7 +715,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpBundleMap"
         },
-        "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.4.0 -> EPAOpProvidePrescriptionERPInputParameters|1.2.0",
+        "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.4.0 -> EPAOpProvidePrescriptionERPInputParameters|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpBundleMap"
       },
@@ -723,7 +723,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationCompoundingMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.4.0 -> EPAMedication|1.2.0",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Compounding|1.4.0 -> EPAMedication|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationCompoundingMap"
       },
@@ -731,7 +731,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationFreetextMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_FreeText|1.4.0 -> EPAMedication|1.2.0",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_FreeText|1.4.0 -> EPAMedication|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationFreetextMap"
       },
@@ -739,7 +739,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationIngredientMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Ingredient|1.4.0 -> EPAMedication|1.2.0",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_Ingredient|1.4.0 -> EPAMedication|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationIngredientMap"
       },
@@ -747,7 +747,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpMedicationPznMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_PZN|1.4.0 -> EPAMedication|1.2.0",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_PZN|1.4.0 -> EPAMedication|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpMedicationPznMap"
       },
@@ -755,7 +755,7 @@
         "reference": {
           "reference": "StructureMap/KBVPrErpPrescriptionMap"
         },
-        "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.2.0",
+        "description": "Auto-generated StructureMap for KBV_PR_ERP_Prescription|1.4.0 -> EPAMedicationRequest|1.3.0",
         "exampleBoolean": false,
         "name": "KBVPrErpPrescriptionMap"
       },
@@ -1066,6 +1066,26 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "comparisons.html",
+          "title": "Comparisons",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "erp-openapi.html",
+          "title": "Erp Openapi",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "license.html",
+          "title": "License",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "mapping.html",
           "title": "Mapping",
           "generation": "markdown"
@@ -1081,8 +1101,73 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "menu-fachlichkeit-anwendungsfaelle.html",
+          "title": "Menu Fachlichkeit Anwendungsfaelle",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-fachlichkeit-szenarien.html",
+          "title": "Menu Fachlichkeit Szenarien",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-fachlichkeit-ueberblick.html",
+          "title": "Menu Fachlichkeit Ueberblick",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-schnittstellen-additional-api.html",
+          "title": "Menu Schnittstellen Additional Api",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-schnittstellen-datenschutz-und-sicherheit.html",
+          "title": "Menu Schnittstellen Datenschutz Und Sicherheit",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-schnittstellen-generelle-prinzipien.html",
+          "title": "Menu Schnittstellen Generelle Prinzipien",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-schnittstellen-operation-api.html",
+          "title": "Menu Schnittstellen Operation Api",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-schnittstellen-query-api.html",
+          "title": "Menu Schnittstellen Query Api",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-technische-umsetzung-anwendungsfaelle.html",
+          "title": "Menu Technische Umsetzung Anwendungsfaelle",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-technische-umsetzung-dosierung.html",
+          "title": "Menu Technische Umsetzung Dosierung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "menu-technische-umsetzung-verarbeitungsregeln.html",
+          "title": "Menu Technische Umsetzung Verarbeitungsregeln",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "provide-prescription-mappings.html",
           "title": "Provide Prescription Mappings",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "referenced.html",
+          "title": "Referenced",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "spec-sheet.html",
+          "title": "Spec Sheet",
           "generation": "markdown"
         },
         {
