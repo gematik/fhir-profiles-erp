@@ -1,0 +1,13 @@
+@startuml
+
+title IG-ERP-BL-TASK-ACTIVATE (Beispiel)
+
+start
+:Receive POST /Task/{id}/$activate;
+:Validate request parameters (ePrescription);
+:Validate QES and schema (todo);
+:Update Task status to ready (todo);
+:return updated Task;
+stop
+
+@enduml

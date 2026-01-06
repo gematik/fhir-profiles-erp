@@ -269,8 +269,44 @@ def format_condition(condition: str) -> str:
     return f"Bedingung: {cond}" if cond else ""
 
 
-def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None):
-    """Extract relevant mapping rules with enhanced information"""
+def is_exclusion_only_condition(condition: str) -> bool:
+    """True, wenn nur url != ... Klauseln enthalten sind und keine positiven Checks."""
+    if not condition:
+        return False
+
+    has_not_equals = bool(re.search(r"url\s*!=\s*'[^']+'", condition))
+    has_equals = bool(re.search(r"url\s*=\s*'[^']+'", condition))
+    has_other_ops = bool(re.search(r"ofType\(|where\(|exists|=~", condition))
+    return has_not_equals and not has_equals and not has_other_ops
+
+
+def is_passthrough_copy_target(target: dict) -> bool:
+    """Erkennt einfache Kopien (valueId) ohne weitere Parameter."""
+    if not target:
+        return False
+    if target.get('transform') != 'copy':
+        return False
+
+    params = target.get('parameter', [])
+    if not params:
+        return True
+    return all(set(p.keys()) == {'valueId'} for p in params)
+
+
+def is_passthrough_copy_rule(rule: dict) -> bool:
+    """Skippt reine Durchreiche-Kopien (z. B. url != ... Filter)."""
+    targets = rule.get('target') or []
+    if not targets:
+        return False
+    if not all(is_passthrough_copy_target(t) for t in targets):
+        return False
+    if rule.get('dependent'):
+        return False
+    return True
+
+
+def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None, inherited_suffix=""):
+    """Extract relevant mapping rules mit Vererbungs-Hinweisen für Bedingungen."""
     if mappings is None:
         mappings = []
     if src_parents is None:
@@ -283,14 +319,22 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
     for rule in rules:
         has_source = 'source' in rule and rule['source']
         has_target = 'target' in rule and rule['target']
+        source_conditions = [src.get('condition') for src in rule.get('source', []) if src.get('condition')]
+        exclusion_only = bool(source_conditions) and all(is_exclusion_only_condition(c) for c in source_conditions)
+        passthrough_copy = is_passthrough_copy_rule(rule)
         
         # Build source path
         src_path = ""
+        src_path_plain = ""
+        first_source_element = None
+        src_suffix = inherited_suffix
         if has_source:
             for idx, src in enumerate(rule['source']):
                 candidate = build_path_for_entry(src, src_parents, var_paths)
                 if idx == 0:
+                    first_source_element = src.get('element')
                     src_path = candidate
+                    src_path_plain = candidate
                     if src.get('condition'):
                         condition = src['condition']
                         # Simplify common conditions
@@ -311,6 +355,12 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                             simplified = format_condition(condition)
                             if simplified:
                                 src_path += f" [{simplified}]"
+                    # merke Suffix des Elternpfades (z. B. [url=...]) zur Vererbung
+                    suffix_match = re.search(r"(\s*\[.*\])$", src_path)
+                    if suffix_match:
+                        src_suffix = suffix_match.group(1)
+        if src_suffix and src_suffix not in src_path:
+            src_path = f"{src_path} {src_suffix}".strip()
         src_path_raw = src_path
         
         # Prepare description shared across targets
@@ -346,9 +396,11 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         if is_generic_source(src_path_clean):
             src_path_clean = ""
 
-        if should_include(rule):
+        if should_include(rule) and not (exclusion_only and passthrough_copy):
             for tgt_path_clean, tgt, _ in target_entries:
                 target_desc_parts = list(base_desc_parts)
+                if passthrough_copy and first_source_element == 'extension' and (tgt or {}).get('element', '').startswith('extension'):
+                    target_desc_parts.append("Kopiert komplette Extension inklusive Werte")
                 target_desc_parts.extend(extract_target_transformation_info(tgt))
                 desc = "<br>".join(part for part in target_desc_parts if part)
                 if not desc:
@@ -359,9 +411,9 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         
         # Recurse into nested rules
         if 'rule' in rule:
-            next_src_parents = src_path_raw.split('.') if src_path_raw else src_parents
+            next_src_parents = src_path_plain.split('.') if src_path_plain else src_parents
             next_tgt_parents = tgt_path.split('.') if tgt_path else tgt_parents
-            extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths)
+            extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths, src_suffix)
     
     return mappings
 
@@ -376,7 +428,23 @@ def structuremap_to_markdown(json_data):
         if src or desc or (tgt and 'direkte Kopie' not in desc)
     ]
 
-    filtered_mappings.sort(key=lambda row: ((row[0] or "~"), (row[1] or "")))
+    def sort_key(row):
+        src, tgt, _, _ = row
+        tgt_parts = (tgt or "").split('.') if tgt else []
+        tgt_depth = len(tgt_parts)
+        last = tgt_parts[-1] if tgt_parts else ""
+        parent = ".".join(tgt_parts[:-1]) if tgt_parts else ""
+        priority_map = {
+            "extension": 0,
+            "url": 1,
+            "value": 2,
+            "id": 3,
+        }
+        last_prio = priority_map.get(last, 9)
+        primary = tgt or src or "~"
+        return (primary, parent, tgt_depth, last_prio, src or "", tgt or "")
+
+    filtered_mappings.sort(key=sort_key)
 
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"

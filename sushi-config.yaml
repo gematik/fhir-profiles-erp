@@ -27,29 +27,82 @@ menu:
   Start: index.html
   Inhaltsverzeichnis: toc.html
   Fachlichkeit:
-    - Überblick: menu-fachlichkeit-ueberblick.html
-    - Szenarien: menu-fachlichkeit-szenarien.html
-    - Anwendungsfälle: menu-fachlichkeit-anwendungsfälle.html
+    Überblick: menu-fachlichkeit-ueberblick.html
+    Szenarien: menu-fachlichkeit-szenarien.html
+    Anwendungsfälle: menu-fachlichkeit-anwendungsfaelle.html
   Technische Umsetzung:
-    - Technische Anwendungsfälle: menu-technische-umsetzung-anwendungsfaelle.html
-    - Verarbeitungsregeln: menu-technische-umsetzung-verarbeitungsregeln.html
-    - Validierung von Dosierinformationen: menu-technische-umsetzung-dosierung.html
-    - Mappings: mapping.html
+    Systemüberblick: menu-technische-umsetzung-systemueberblick.html
+    Technische Anwendungsfälle: menu-technische-umsetzung-anwendungsfaelle.html
+    Verarbeitungsregeln: menu-technische-umsetzung-verarbeitungsregeln.html
+    Validierung von Dosierinformationen: menu-technische-umsetzung-dosierung.html
+    Mappings: mapping.html
   Schnittstellen:
-    - Generelle Prinzipien: menu-schnittstellen-generelle-prinzipien.html
-    - Datenschutz und Sicherheit: menu-schnittstellen-datenschutz-und-sicherheit.html
-    - Query API: menu-schnittstellen-query-api.html
-    - Operation API: menu-schnittstellen-operation-api.html
-    - Additional APIs: menu-schnittstellen-additional-api.html
+    Generelle Prinzipien: menu-schnittstellen-generelle-prinzipien.html
+    Datenschutz und Sicherheit: menu-schnittstellen-datenschutz-und-sicherheit.html
+    Query API: menu-schnittstellen-query-api.html
+    Operation API: menu-schnittstellen-operation-api.html
+    Additional APIs: menu-schnittstellen-additional-api.html
   FHIR-Artefakte: artifacts.html
   Anhänge:
-    - Referenzen: referenced.html
-    - Downloads: downloads.html
-    - OpenAPI: erp-openapi.html
-    - Release Notes: release-notes.html
-    - Steckbriefe: spec-sheet.html
-    - Versionsvergleiche: comparisons.html
-    - Lizenz: license.html
+    Referenzen: referenced.html
+    Downloads: downloads.html
+    OpenAPI: erp-openapi.html
+    Release Notes: release-notes.html
+    Steckbriefe: spec-sheet.html
+    Versionsvergleiche: comparisons.html
+    Lizenz: license.html
+
+pages:
+  index.md:
+    title: "Home"
+  menu-fachlichkeit-ueberblick.md:
+    title: "Überblick zur Verordnung und Belieferung von Arzneimitteln"
+    menu-fachlichkeit-szenarien.md:
+      title: "Szenarien für den Medikationsprozess"
+    menu-fachlichkeit-anwendungsfaelle.md:
+      title: "Anwendungsfälle für den Medikationsprozess"
+  menu-technische-umsetzung-systemueberblick.md:
+    title: "Systemüberblick"
+    menu-technische-umsetzung-anwendungsfaelle.md:
+      title: "Technische Anwendungsfälle"
+    menu-technische-umsetzung-verarbeitungsregeln.md:
+      title: "Verarbeitungsregeln für den E-Rezept-Fachdienst"
+    menu-technische-umsetzung-dosierung.md:
+      title: "Validierung von Dosierungsinformationen"
+  mapping.md:
+    title: "Vorgaben zum Mapping von FHIR-Instanzen"
+  menu-schnittstellen-generelle-prinzipien.md:
+    title: "Generelle Prinzipien"
+  menu-schnittstellen-datenschutz-und-sicherheit.md:
+    title: "Datenschutz und Sicherheit"
+  menu-schnittstellen-query-api.md:
+    title: "Query API"
+  menu-schnittstellen-operation-api.md:
+    title: "Operation API"
+    op-create.md:
+      title: "Operation $create (Task erzeugen)"
+    op-activate.md:
+      title: "Operation $activate (Task aktivieren)"
+    op-abort.md:
+      title: "Operation $abort (Task abbrechen)"
+  menu-schnittstellen-additional-api.md:
+    title: "Zusätzliche APIs"
+  artifacts.md:
+    title: "FHIR-Artefakte"
+  referenced.md:
+    title: "Referenzen"
+  downloads.md:
+    title: "Downloads"
+  erp-openapi.md:
+    title: "OpenAPI: E-Rezept Produkttypen"
+  release-notes.md:
+    title: "Release Notes"
+  spec-sheet.md:
+    title: "Steckbriefe"
+  comparisons.md:
+    title: "Versionsvergleiche"
+  license.md:
+    title: "Apache Licence"
 
 parameters:
   path-resource:

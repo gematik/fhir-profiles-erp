@@ -1,0 +1,45 @@
+@startuml
+
+title IG-ERP-BL-TASK-CREATE
+
+start
+
+:Extract professionOID from ACCESS_TOKEN (Authorization);
+if (professionOID is allowed?) then (yes)
+else (no)
+  :Return HTTP 403 (forbidden);
+  stop
+endif
+
+:Validate request body against
+CreateOperationDefinition schema;
+if (schema valid?) then (yes)
+else (no)
+  :Return HTTP 400 (bad request);
+  stop
+endif
+
+:Read workflowType from Parameters;
+if (workflowType present and valid?) then (yes)
+else (no)
+  :Return HTTP 400 (bad request);
+  stop
+endif
+
+:Create Task;
+:Task.extension[flowType] = workflowType;
+:Task.performerType = derived from flowType (todo details);
+
+:Generate PrescriptionID;
+:Task.identifier[PrescriptionId] = PrescriptionID;
+:Task.id = PrescriptionID;
+
+:Generate AccessCode (256 bit random, hex);
+:Task.identifier[AccessCode] = AccessCode;
+
+:Task.status = draft;
+:return Task;
+
+stop
+
+@enduml

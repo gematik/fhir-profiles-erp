@@ -1,0 +1,31 @@
+**Rollen:** {% if use_case.roles %}{{ use_case.roles | join: ", " }}{% else %}—{% endif %}
+
+{% if use_case.description %}
+**Beschreibung**
+
+{{ use_case.description }}
+{% endif %}
+
+{% if use_case.preconditions %}
+**Vorbedingungen**
+
+{{ use_case.preconditions }}
+{% endif %}
+
+{% if use_case.actions %}
+**Ablauf**
+
+{{ use_case.actions }}
+{% endif %}
+
+{% if use_case.postconditions %}
+**Ergebnis/Nachbedingungen**
+
+{{ use_case.postconditions }}
+{% endif %}
+
+{% if use_case.relatedTechnicalUseCases %}
+**Bezug zu technischen Anwendungsfällen**
+
+{{ use_case.relatedTechnicalUseCases }}
+{% endif %}

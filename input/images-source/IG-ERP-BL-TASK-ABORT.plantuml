@@ -1,0 +1,12 @@
+@startuml
+
+title IG-ERP-BL-TASK-ABORT (Beispiel)
+
+start
+:Receive POST /Task/{id}/$abort;
+:Check authorization via ?ac or ?secret (todo);
+:Check Task state allows abort (todo);
+:Delete Task and related data (todo);
+stop
+
+@enduml
