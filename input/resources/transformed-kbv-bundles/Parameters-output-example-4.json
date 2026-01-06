@@ -1,0 +1,172 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "authoredOn",
+      "valueDateTime" : "2024-05-20"
+    },
+    {
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+          "valueCoding" : {
+            "code" : "00"
+          }
+        },
+        {
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+          "valueBoolean" : false
+        }],
+        "code" : {
+          "coding" : [{
+            "system" : "http://fhir.de/CodeSystem/ifa/pzn",
+            "code" : "11219196"
+          }],
+          "text" : "Abasaglar 100 E/ML KWIKPEN PEN 10x3ml"
+        },
+        "form" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+            "code" : "PEN"
+          }]
+        }
+      }
+    },
+    {
+      "name" : "medicationRequest",
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
+          "valueBoolean" : false
+        },
+        {
+          "extension" : [{
+            "url" : "indicator",
+            "valueBoolean" : false
+          }],
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        }],
+        "authoredOn" : "2024-05-20",
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
+        "status" : "active",
+        "intent" : "order",
+        "subject" : {
+          "reference" : "Patient/30635f5d-c233-4500-94e8-6414940236aa"
+        },
+        "requester" : {
+          "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
+        },
+        "substitution" : {
+          "allowedBoolean" : false
+        },
+        "medicationReference" : {
+          "reference" : "Medication/a23cea34-1141-42f3-903c-69740cc94a07"
+        }
+      }
+    },
+    {
+      "name" : "organization",
+      "resource" : {
+        "resourceType" : "Organization",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"]
+        },
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "030321654987"
+        },
+        {
+          "system" : "email",
+          "value" : "hausarztpraxis@e-mail.de"
+        }],
+        "address" : [{
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2",
+          "Erdgeschoss"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString" : "Erdgeschoss"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        },
+        {
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2",
+          "Erdgeschoss"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString" : "Erdgeschoss"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        }]
+      }
+    },
+    {
+      "name" : "practitioner",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory"]
+        },
+        "name" : [{
+          "use" : "official",
+          "family" : "Schulz",
+          "_family" : {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+              "valueString" : "Schulz"
+            }]
+          },
+          "given" : ["Ben"]
+        }]
+      }
+    },
+    {
+      "name" : "prescriptionId",
+      "valueString" : "160.100.000.000.043.10"
+    }]
+  }]
+}

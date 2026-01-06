@@ -1,0 +1,165 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "authoredOn",
+      "valueDateTime" : "2024-05-20"
+    },
+    {
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+          "valueCoding" : {
+            "code" : "00"
+          }
+        },
+        {
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+          "valueBoolean" : false
+        }],
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        }
+      }
+    },
+    {
+      "name" : "medicationRequest",
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
+          "valueBoolean" : false
+        },
+        {
+          "extension" : [{
+            "url" : "indicator",
+            "valueBoolean" : false
+          }],
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        }],
+        "authoredOn" : "2024-05-20",
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
+        "status" : "active",
+        "intent" : "order",
+        "subject" : {
+          "reference" : "Patient/93866fdc-3e50-4902-a7e9-891b54737b5e"
+        },
+        "requester" : {
+          "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
+        },
+        "medicationReference" : {
+          "reference" : "Medication/dc811d43-aad4-4c8d-a58c-2e0258710142"
+        }
+      }
+    },
+    {
+      "name" : "organization",
+      "resource" : {
+        "resourceType" : "Organization",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"]
+        },
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "030321654987"
+        },
+        {
+          "system" : "email",
+          "value" : "hausarztpraxis@e-mail.de"
+        }],
+        "address" : [{
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2",
+          "Erdgeschoss"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString" : "Erdgeschoss"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        },
+        {
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2",
+          "Erdgeschoss"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+              "valueString" : "Erdgeschoss"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        }]
+      }
+    },
+    {
+      "name" : "practitioner",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory"]
+        },
+        "name" : [{
+          "use" : "official",
+          "family" : "Schulz",
+          "_family" : {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+              "valueString" : "Schulz"
+            }]
+          },
+          "given" : ["Ben"]
+        }]
+      }
+    },
+    {
+      "name" : "prescriptionId",
+      "valueString" : "160.100.000.000.033.40"
+    }]
+  }]
+}

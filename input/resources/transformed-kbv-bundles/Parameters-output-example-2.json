@@ -1,0 +1,180 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "rxPrescription",
+    "part" : [{
+      "name" : "authoredOn",
+      "valueDateTime" : "2024-05-20"
+    },
+    {
+      "name" : "medication",
+      "resource" : {
+        "resourceType" : "Medication",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension",
+          "valueCoding" : {
+            "code" : "00"
+          }
+        },
+        {
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension",
+          "valueBoolean" : false
+        }],
+        "code" : {
+          "coding" : [{
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "wirkstoff"
+          }]
+        },
+        "form" : {
+          "text" : "Tabletten"
+        }
+      }
+    },
+    {
+      "name" : "medicationRequest",
+      "resource" : {
+        "resourceType" : "MedicationRequest",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
+        },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
+          "valueBoolean" : false
+        },
+        {
+          "extension" : [{
+            "url" : "indicator",
+            "valueBoolean" : false
+          }],
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        }],
+        "authoredOn" : "2024-05-20",
+        "dosageInstruction" : [{
+          "extension" : [{
+            "url" : "https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_DosageFlag",
+            "valueBoolean" : true
+          }],
+          "text" : "1-0-0-0"
+        }],
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
+        "status" : "active",
+        "intent" : "order",
+        "subject" : {
+          "reference" : "Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf"
+        },
+        "requester" : {
+          "reference" : "Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655"
+        },
+        "note" : [{
+          "text" : "Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat."
+        }],
+        "medicationReference" : {
+          "reference" : "Medication/86fa62c7-06a0-418e-ba26-e99baa053c07"
+        }
+      }
+    },
+    {
+      "name" : "organization",
+      "resource" : {
+        "resourceType" : "Organization",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"]
+        },
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "0301234567"
+        },
+        {
+          "system" : "fax",
+          "value" : "030123456789"
+        },
+        {
+          "system" : "email",
+          "value" : "mvz@e-mail.de"
+        }],
+        "address" : [{
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        },
+        {
+          "type" : "both",
+          "line" : ["Herbert-Lewin-Platz 2"],
+          "_line" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString" : "2"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString" : "Herbert-Lewin-Platz"
+            }]
+          }],
+          "city" : "Berlin",
+          "postalCode" : "10623",
+          "country" : "D"
+        }]
+      }
+    },
+    {
+      "name" : "practitioner",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "meta" : {
+          "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory"]
+        },
+        "name" : [{
+          "use" : "official",
+          "family" : "Freiherr von Müller",
+          "_family" : {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+              "valueString" : "von"
+            },
+            {
+              "url" : "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+              "valueString" : "Freiherr"
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+              "valueString" : "Müller"
+            }]
+          },
+          "given" : ["Paul"],
+          "prefix" : ["Dr. med."],
+          "_prefix" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode" : "AC"
+            }]
+          }]
+        }]
+      }
+    },
+    {
+      "name" : "prescriptionId",
+      "valueString" : "160.100.000.000.019.82"
+    }]
+  }]
+}
