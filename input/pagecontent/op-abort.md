@@ -1,6 +1,6 @@
 ### Task abbrechen ($abort)
 
-Die FHIR-Operation `$abort` bricht den Workflow eines E‑Rezepts ab und löscht alle Daten, die mit der referenzierten Aufgabe zusammenhängen.
+Die FHIR-Operation `$abort` bricht den Workflow eines E-Rezepts ab und löscht alle Daten, die mit der referenzierten Aufgabe zusammenhängen.
 
 ### Nachricht
 
@@ -48,12 +48,8 @@ Hinweis: Der Zugriff erfolgt je nach Akteur über URL-Parameter:
 
 Beispielhafte Beschreibung (wird in einem nächsten Schritt fachlich/technisch vervollständigt).
 
-<figure>
-  <div class="gem-ig-img-container" style="--box-width: 100%">
-    <img src="./IG-ERP-BL-TASK-ABORT.svg" alt="Geschäftslogik $abort" style="width: 100%;">
-  </div>
-  <figcaption><strong>Abbildung:</strong> Geschäftslogik für die Operation <i>$abort</i> (Beispiel)</figcaption>
-</figure>
+{% include IG-ERP-BL-TASK-ABORT.svg %}
+
 
 ### Sicherheitsanforderungen
 

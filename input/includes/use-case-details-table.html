@@ -1,31 +1,47 @@
-**Rollen:** {% if use_case.roles %}{{ use_case.roles | join: ", " }}{% else %}—{% endif %}
+{% assign use_case = include.use_case %}
+{% assign roles = include.roles %}
 
-{% if use_case.description %}
-**Beschreibung**
+{% assign badge-colors = "gem-ig-badge-bg-orange,
+gem-ig-badge-bg-grey,
+gem-ig-badge-bg-green,
+gem-ig-badge-bg-blue,
+gem-ig-badge-bg-red,
+gem-ig-badge-bg-darkblue"  | split: "," %}
+<figure style="width: auto;">
+  <table style="width: auto; border: 1px solid #dcdcdc;">
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Beschreibung</th>
+      <td style="padding: 5px;">{{ use_case.description | markdownify }}</td>
+    </tr>
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Vorbedingungen</th>
+      <td style="padding: 5px;">{{ use_case.preconditions | markdownify}}</td>
+    </tr>
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Durchzuführende Aktionen</th>
+      <td style="padding: 5px;">{{ use_case.actions | markdownify}}</td>
 
-{{ use_case.description }}
-{% endif %}
-
-{% if use_case.preconditions %}
-**Vorbedingungen**
-
-{{ use_case.preconditions }}
-{% endif %}
-
-{% if use_case.actions %}
-**Ablauf**
-
-{{ use_case.actions }}
-{% endif %}
-
-{% if use_case.postconditions %}
-**Ergebnis/Nachbedingungen**
-
-{{ use_case.postconditions }}
-{% endif %}
-
-{% if use_case.relatedTechnicalUseCases %}
-**Bezug zu technischen Anwendungsfällen**
-
-{{ use_case.relatedTechnicalUseCases }}
-{% endif %}
+    </tr>
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Nachbedingungen</th>
+      <td style="padding: 5px;">{{ use_case.postconditions | markdownify}}</td>
+    </tr>
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Technische Anwendungsfälle des Medication Service</th>
+      <td style="padding: 5px;">{{ use_case.relatedTechnicalUseCases | markdownify }}</td>
+    </tr>
+    <tr>
+      <th style="padding: 5px; width: 23rem;">Relevante(r) Sektor(en)</th>
+      <td style="padding: 5px;">
+        {% for role in roles %}
+          {% if use_case.roles contains role %}
+            <span class="badge gem-ig-badge {{ badge-colors[forloop.index0] }}" >
+              {{ role | upcase }}
+            </span>
+          {% endif %}
+        {% endfor %}
+      </td>
+    </tr>
+  </table>
+  <figcaption><strong>Tabelle:</strong> Fachlicher Anwendungsfall {{ use_case.title }}</figcaption>
+</figure>

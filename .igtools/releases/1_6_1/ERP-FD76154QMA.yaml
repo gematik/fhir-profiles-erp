@@ -1,0 +1,18 @@
+actor:
+- VAU E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 183ad62a483ea635586fe8635b1ae108b0898a630a84c06c259f0b7bdf0bc086
+created: '2026-01-06T10:35:03.389630'
+date: '2026-01-06T10:35:03.389633'
+key: ERP-FD76154QMA
+modified: '2026-01-06T10:35:03.389632'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  VAU E-Rezept-Fachdienst: []
+text: Die VAU des E-Rezept-Fachdienstes MUSS die Integrität der eingesetzten Hardware
+  schützen und damit insbesondere Manipulationen an der Hardware durch den Anbieter
+  des E-Rezept-Fachdienstes ausschließen.
+title: E-Rezept-Fachdienst – Ausschluss von Manipulationen an der Hardware der VAU
+version: 0

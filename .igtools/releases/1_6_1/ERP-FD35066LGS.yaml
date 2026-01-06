@@ -1,0 +1,20 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 97969d2a352f75b11e0985c97a9e13d722559380a0a4f2bcff78a4f86b53e6a5
+created: '2026-01-06T10:35:03.386347'
+date: '2026-01-06T10:35:03.386350'
+key: ERP-FD35066LGS
+modified: '2026-01-06T10:35:03.386349'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS zum Transportnetz Internet durch einen Paketfilter
+  (ACL) gesichert werden, welcher ausschließlich die erforderlichen Protokolle weiterleitet.
+  Der Paketfilter des E-Rezept-Fachdienstes MUSS frei konfigurierbar sein auf der
+  Grundlage von Informationen aus OSI-Layer 3 und 4, das heißt Quell- und Zieladresse,
+  IP-Protokoll sowie Quell- und Zielport.
+title: E-Rezept-Fachdienst – Sicherung zum Transportnetz Internet durch Paketfilter
+version: 0

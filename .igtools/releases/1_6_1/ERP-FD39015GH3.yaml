@@ -1,0 +1,21 @@
+actor:
+- VAU E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 7e371ad2bc5dd1c02a5cbe01253b910bf00bd0a21d4c876e76a551ebde90050f
+created: '2026-01-06T10:35:03.389155'
+date: '2026-01-06T10:35:03.389160'
+key: ERP-FD39015GH3
+modified: '2026-01-06T10:35:03.389159'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  VAU E-Rezept-Fachdienst: []
+text: Die VAU des E-Rezept-Fachdienstes MUSS die in ihr ablaufenden Verarbeitungen
+  für die Daten eines Verarbeitungskontextes von den Verarbeitungen für die Daten
+  anderer Verarbeitungskontexte in solcher Weise trennen, dass mit technischen Mitteln
+  ausgeschlossen wird, dass die Verarbeitungen eines Verarbeitungskontextes schadhaft
+  auf die Verarbeitungen eines anderen Verarbeitungskontextes einwirken können.
+title: E-Rezept-Fachdienst – Isolation zwischen Datenverarbeitungsprozessen mehrerer
+  Verarbeitungskontexte der VAU
+version: 0

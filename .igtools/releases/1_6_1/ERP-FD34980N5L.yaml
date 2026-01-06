@@ -1,0 +1,21 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: dd95cbdb2272636f4bd33445ea270412ffdac2f266d323aeafd0cc826fce9a59
+created: '2026-01-06T10:35:03.384765'
+date: '2026-01-06T10:35:03.384768'
+key: ERP-FD34980N5L
+modified: '2026-01-06T10:35:03.384767'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der E-Rezept-Fachdienst MUSS jede Antwort auf einen Funktionsaufruf, der einen
+  AccessCode oder Secret enthält, um den konfigurierbaren http-Response-Header "Warning"
+  (default "999 Throttling active") ergänzen und um ein konfigurierbares Zeitintervall
+  (default: 500 Millisekunden) verzögert zurückschicken, sofern der erwartete AccessCode
+  bzw. Secret nicht mit dem übergebenen AccessCode bzw. Secret übereinstimmt, um Brute-Force-Angriffe
+  durch einen hohen Zeitaufwand unattraktiv zu machen.'
+title: E-Rezept-Fachdienst – Drosselung Brute-Force-Anfragen
+version: 0

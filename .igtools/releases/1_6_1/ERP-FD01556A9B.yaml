@@ -1,0 +1,21 @@
+actor:
+- Eingangspunkt E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 0d730a0f4ed8ff116fd7b839b1f6c3172153e79c9f2badc415b965f71741ab78
+created: '2026-01-06T10:35:03.387010'
+date: '2026-01-06T10:35:03.387013'
+key: ERP-FD01556A9B
+modified: '2026-01-06T10:35:03.387012'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Eingangspunkt E-Rezept-Fachdienst: []
+text: Der Eingangspunkt des E-Rezept-Fachdienstes MUSS sich beim TLS-Verbindungsaufbau
+  über das Transportnetz gegenüber dem Client mit einem Extended Validation TLS-Zertifikat
+  eines Herausgebers gemäß [CAB Forum] authentisieren. Das Zertifikat MUSS an die
+  jeweilige Schnittstelle des Eingangspunkts für Primärsysteme und Frontends der Versicherten
+  des E-Rezept-Fachdienstes gebunden werden, damit Clientsysteme beim TLS-Verbindungsaufbau
+  eine vereinfachte Zertifikatsprüfung mit TLS-Standardbibliotheken durchführen können.
+title: E-Rezept-Fachdienst – Richtlinien zum TLS-Verbindungsaufbau
+version: 0

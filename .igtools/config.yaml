@@ -1,7 +1,10 @@
-current: 1.6.0
-directory: input/pagecontent
-final: null
-name: Test
-prefix: ERP
-releases: []
-scope: FD
+current: 1.6.1
+directory: input
+frozen_hash: null
+frozen_version: null
+migrated_with_version: 0.3.0
+name: IG E-Rezept-Fachdienst
+prefix: REQ
+releases:
+- 1.6.1
+scope: ERP

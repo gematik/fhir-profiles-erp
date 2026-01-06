@@ -1,0 +1,17 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: a00652a8b3ac69c49c730e695ecce26fbecdfe9ead04e8beabc6f5b53ccbd1b1
+created: '2026-01-06T10:35:03.384644'
+date: '2026-01-06T10:35:03.384647'
+key: ERP-FD11627FC5
+modified: '2026-01-06T10:35:03.384646'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS Maßnahmen zum Schutz vor den OWASP-Top-10-Risiken
+  in der aktuellen Version umsetzen.
+title: E-Rezept-Fachdienst – Berücksichtigung OWASP-Top-10-Risiken
+version: 0

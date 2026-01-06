@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 53e89cd9904f9b9dc0a023c79184674a13304c6d51cbb513c24783ff83b3d4e1
+created: '2026-01-06T10:35:03.391815'
+date: '2026-01-06T10:35:03.391818'
+key: ERP-FD16761XDX
+modified: '2026-01-06T10:35:03.391817'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass der für das Pseudonymisieren
+  der gematik-Logdaten benötigte geheime Schlüssel key_pn_log ausschließlich im 4-Augen-Prinzip
+  in den E-Rezept-Fachdienst eingebracht werden kann.
+title: E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des
+  Schlüssels im 4-Augen-Prinzip
+version: 0

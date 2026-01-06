@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 0d7266c84b58f61f7829bf46c48fe1157a081a2a98d32896c1197af4544f8a1d
+created: '2026-01-06T10:35:03.391706'
+date: '2026-01-06T10:35:03.391709'
+key: ERP-FD98306PCS
+modified: '2026-01-06T10:35:03.391707'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass der für das Pseudonymisieren
+  der gematik-Logdaten benötigte geheime Schlüssel key_pn_log im Klartext ausschließlich
+  innerhalb einer VAU-Instanz verarbeitet wird.
+title: E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – geheimer Schlüssel
+  nur in VAU
+version: 0

@@ -1,29 +1,29 @@
 - id: E_Rezept_erstellen
   anchor: e-rezept-erstellen
   link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-erstellen
-  title: "E‑Rezept erstellen"
+  title: "E-Rezept erstellen"
   roles: ["(Zahn-)Arzt"]
   description: |
-    Ein E‑Rezept wird im Primärsystem (PVS/KIS) als Verordnungsdatensatz erstellt.
-    Für die Bereitstellung auf dem E‑Rezept-Fachdienst wird ein Task angelegt, über den eine Rezept-ID (PrescriptionID)
+    Ein E-Rezept wird im Primärsystem (PVS/KIS) als Verordnungsdatensatz erstellt.
+    Für die Bereitstellung auf dem E-Rezept-Fachdienst wird ein Task angelegt, über den eine Rezept-ID (PrescriptionID)
     vergeben und ein AccessCode erzeugt wird.
   preconditions: |
-    - Der Leistungserbringer ist gegenüber der TI authentisiert (Institutionsidentität via SMC‑B über IdP/Konnektor).
+    - Der Leistungserbringer ist gegenüber der TI authentisiert (Institutionsidentität via SMC-B über IdP/Konnektor).
     - Der Verordnungsdatensatz liegt lokal als KBV-konformes FHIR-Bundle vor.
   actions: |
-    - Das Primärsystem legt im E‑Rezept-Fachdienst einen Task an.
-    - Der E‑Rezept-Fachdienst vergibt eine Rezept-ID (PrescriptionID) und generiert einen AccessCode.
+    - Das Primärsystem legt im E-Rezept-Fachdienst einen Task an.
+    - Der E-Rezept-Fachdienst vergibt eine Rezept-ID (PrescriptionID) und generiert einen AccessCode.
     - Das Primärsystem übernimmt die Rezept-ID in den lokalen Verordnungsdatensatz.
   postconditions: |
     - Task liegt im Status `draft` vor.
     - Rezept-ID und AccessCode sind im Primärsystem verfügbar.
   relatedTechnicalUseCases: |
-    - [Lesezugriffe](./menu-technische-umsetzung-anwendungsfaelle.html#lesezugriffe)
-
+    - [E-Rezept erstellen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-erstellen)
+    
 - id: E_Rezept_qualifiziert_signieren
   anchor: e-rezept-qualifiziert-signieren
   link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-qualifiziert-signieren
-  title: "E‑Rezept qualifiziert signieren"
+  title: "E-Rezept qualifiziert signieren"
   roles: ["(Zahn-)Arzt"]
   description: |
     Der Verordnungsdatensatz wird durch den (Zahn-)Arzt mittels HBA qualifiziert elektronisch signiert (QES).
@@ -39,44 +39,44 @@
   postconditions: |
     - QES-signierter Verordnungsdatensatz liegt im Primärsystem vor.
   relatedTechnicalUseCases: |
-    - [Lesezugriffe](./menu-technische-umsetzung-anwendungsfaelle.html#lesezugriffe)
+    - [E-Rezept qualifiziert signieren](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-qualifiziert-signieren)
 
 - id: E_Rezept_vervollstaendigen_und_Task_aktivieren
   anchor: e-rezept-vervollstaendigen-und-task-aktivieren
   link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-vervollstaendigen-und-task-aktivieren
-  title: "E‑Rezept vervollständigen und Task aktivieren"
+  title: "E-Rezept vervollständigen und Task aktivieren"
   roles: ["(Zahn-)Arzt"]
   description: |
-    Der QES-signierte Verordnungsdatensatz wird am Task hinterlegt und der Workflow des E‑Rezepts startet.
-    Der E‑Rezept-Fachdienst prüft QES und Schemakonformität und erzeugt bei Erfolg eine serverseitige Signatur zum Integritätsschutz.
+    Der QES-signierte Verordnungsdatensatz wird am Task hinterlegt und der Workflow des E-Rezepts startet.
+    Der E-Rezept-Fachdienst prüft QES und Schemakonformität und erzeugt bei Erfolg eine serverseitige Signatur zum Integritätsschutz.
   preconditions: |
     - Task existiert und hat den Status `draft`.
     - AccessCode ist im Primärsystem verfügbar.
     - QES-signierter Verordnungsdatensatz liegt vor.
   actions: |
     - Das Primärsystem übermittelt den QES-signierten Verordnungsdatensatz zum referenzierten Task und weist sich dabei (u.a. über den AccessCode) berechtigt aus.
-    - Der E‑Rezept-Fachdienst validiert Signatur und Schemakonformität.
+    - Der E-Rezept-Fachdienst validiert Signatur und Schemakonformität.
   postconditions: |
     - Task-Status wechselt von `draft` nach `ready`.
-    - Das E‑Rezept ist bereitgestellt und kann eingelöst werden.
+    - Das E-Rezept ist bereitgestellt und kann eingelöst werden.
   relatedTechnicalUseCases: |
-    - [Lesezugriffe](./menu-technische-umsetzung-anwendungsfaelle.html#lesezugriffe)
+    - [E-Rezept vervollständigen und Task aktivieren](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-vervollständigen-und-task-aktivieren)
 
 - id: E_Rezept_loeschen
   anchor: e-rezept-loeschen
   link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-loeschen
-  title: "E‑Rezept löschen"
-  roles: ["(Zahn-)Arzt"]
+  title: "E-Rezept löschen"
+  roles: ["(Zahn-)Arzt", "Versicherter"]
   description: |
-    Ein E‑Rezept kann durch den verordnenden Leistungserbringer widerrufen/gelöscht werden,
+    Ein E-Rezept kann durch den verordnenden Leistungserbringer widerrufen/gelöscht werden,
     um den Patienten vor dem Bezug und der Einnahme eines fälschlich verordneten Medikaments zu schützen.
   preconditions: |
     - AccessCode ist dem Primärsystem bekannt.
-    - Das E‑Rezept befindet sich nicht bereits in Belieferung (ansonsten ist das Löschen nicht zulässig).
+    - Das E-Rezept befindet sich nicht bereits in Belieferung (ansonsten ist das Löschen nicht zulässig).
   actions: |
-    - Das Primärsystem fordert das Löschen/Widerrufen des E‑Rezepts beim E‑Rezept-Fachdienst an.
-    - Der E‑Rezept-Fachdienst prüft die Berechtigung und löscht den referenzierten Task.
+    - Das Primärsystem fordert das Löschen/Widerrufen des E-Rezepts beim E-Rezept-Fachdienst an.
+    - Der E-Rezept-Fachdienst prüft die Berechtigung und löscht den referenzierten Task.
   postconditions: |
     - Der referenzierte Task ist gelöscht; es werden keine Nutzdaten zurückgegeben.
   relatedTechnicalUseCases: |
-    - [Lesezugriffe](./menu-technische-umsetzung-anwendungsfaelle.html#lesezugriffe)
+    - [E-Rezept löschen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-löschen)

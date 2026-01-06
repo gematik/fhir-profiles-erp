@@ -1,0 +1,22 @@
+{% assign scenario_use_case_ids = include.scenario_use_case_ids %}
+{% assign use_cases = include.use_cases %}
+{% assign caption = include.caption %}
+
+<figure style="width: 45em;">
+  <table>
+    <thead>
+      <tr>
+        <th>Anwendungsfall</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for scenario_story_id in scenario_use_case_ids %}
+        {% assign story = use_cases | where: "id", scenario_story_id | first %}
+        <tr>
+          <td><a href="{{ story.link }}">{{ story.title }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <figcaption><strong>Tabelle:</strong> {{ caption }}</figcaption>
+</figure>

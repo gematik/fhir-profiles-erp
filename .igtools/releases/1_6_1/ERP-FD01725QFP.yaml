@@ -1,0 +1,22 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: a13fb181fa058ab164d023748277a74f8232c7a5d73bbfad0106d44896c35b9a
+created: '2026-01-06T10:35:03.386561'
+date: '2026-01-06T10:35:03.386563'
+key: ERP-FD01725QFP
+modified: '2026-01-06T10:35:03.386562'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der Paketfilter des E-Rezept-Fachdienstes MUSS die Weiterleitung von IP-Paketen
+  an der Schnittstelle zum Internet auf die nachfolgenden Protokolle beschränken:
+  HTTPS, und OCSP-Zugriffe für das OCSP-Stapling nach A_20026 (vgl. Hinweis nach A_19815-*),
+  ggf. notwendige DNS-Anfragen (und Antworten), Zugriff auf den FHIR-VZD, Zugriff
+  auf Webdienste des BfArM, Zugriff auf die authentisierten Push Gateways. Ein Verbindungsaufbau
+  aus dem E-Rezept-Fachdienst in Richtung Internet MUSS unterbunden werden, mit Ausnahme
+  der Verbindungen aus Punkten 2, 3, 4 und 5.'
+title: E-Rezept-Fachdienst – Richtlinien für den Paketfilter zum Internet
+version: 0

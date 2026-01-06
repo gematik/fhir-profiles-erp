@@ -23,6 +23,6 @@ Usage: #definition
 * insert MedicationDispenseInteraction(#MAY)
 
 * insert CapSupportResource(Task, #MAY)
-* insert CapSupportResourceOperation(create, CreateOperation, #SHALL)
-* insert CapSupportResourceOperation(activate, ActivateOperation, #SHALL)
-* insert CapSupportResourceOperation(abort, AbortOperation, #SHALL)
+* insert CapSupportResourceOperation(createOperation, CreateOperation, #SHALL)
+* insert CapSupportResourceOperation(activateOperation, ActivateOperation, #SHALL)
+* insert CapSupportResourceOperation(abortOperation, AbortOperation, #SHALL)

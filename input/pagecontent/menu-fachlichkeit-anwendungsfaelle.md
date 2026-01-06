@@ -3,11 +3,11 @@
 {% assign use_cases = site.data['use-cases'] %}
 {% assign roles = site.data['roles'] %}
 
-Die folgenden fachlichen Anwendungsfälle beschreiben – aus Sicht des verordnenden Leistungserbringers – die Schritte zur Verordnung und Bereitstellung eines E‑Rezepts.
+Die folgenden fachlichen Anwendungsfälle beschreiben – aus Sicht des verordnenden Leistungserbringers – die Schritte zur Verordnung und Bereitstellung eines E-Rezepts.
 
 #### Übergreifende Vorbedingungen
 
-- Der Leistungserbringer ist gegenüber der TI authentisiert (Institutionsidentität via SMC‑B über IdP/Konnektor).
+- Der Leistungserbringer ist gegenüber der TI authentisiert (Institutionsidentität via SMC-B über IdP/Konnektor).
 - Für die QES steht ein freigeschalteter HBA zur Verfügung.
 - Der Verordnungsdatensatz wird als KBV-konformes FHIR-Bundle im Primärsystem geführt.
 

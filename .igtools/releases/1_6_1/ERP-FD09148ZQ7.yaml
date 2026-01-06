@@ -1,0 +1,21 @@
+actor:
+- Anb_eRp_FD
+conformance: SHALL
+content_hash: 38a0515ba2a994dd75b2da6de2c1e41b438ea56f2ba891dcf0c01f036e4e33ed
+created: '2026-01-06T10:35:03.390346'
+date: '2026-01-06T10:38:21.175088'
+key: ERP-FD09148ZQ7
+modified: '2026-01-06T10:35:03.390361'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Anb_eRp_FD: []
+text: Der Anbieter des E-Rezept-Fachdienstes MUSS beim Einsatz eines HSM sicherstellen,
+  dass dessen Eignung durch eine erfolgreiche Evaluierung nachgewiesen wurde. Als
+  Evaluierungsschemata kommen dabei Common Criteria, ITSEC oder Federal Information
+  Processing Standard (FIPS) in Frage. Die Prüftiefe MUSS mindestens FIPS 140-2 Level
+  3, Common Criteria EAL 4+ mit hohem Angriffspotenzial oder ITSEC E3 der Stärke "hoch"
+  entsprechen.
+title: E-Rezept-Fachdienst – Einsatz zertifizierter HSM
+version: 0

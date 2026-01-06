@@ -1,7 +1,7 @@
 canonical: https://gematik.de/fhir/erp
 fhirVersion: 4.0.1
 id: de.gematik.erezept-workflow.r4
-name: E-Rezept Workflow
+name: E-Rezept Workflow #TODO Name muss von Team Polarion vorgegeben werden gemIG...
 title: "E-Rezept Workflow"
 description: Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst
 status: draft # draft | active | retired | unknown

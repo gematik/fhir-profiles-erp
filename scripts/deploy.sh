@@ -87,7 +87,12 @@ echo "✅ PUBLISH_URL: ${PUBLISH_URL}"
 
 # TODO Add Simplifier cli
 
-"$SCRIPT_DIR/build-ig.sh"
+# Optional build step: run only when "--build" is provided
+if [[ " $* " == *" --build "* ]]; then
+  "$SCRIPT_DIR/build-ig.sh"
+else
+  echo "Skipping build step (use --build to run build-ig.sh)."
+fi
  
 
 if gsutil ls gs://$BUCKET_NAME$BUCKET_PATH/$TARGET > /dev/null 2>&1; then

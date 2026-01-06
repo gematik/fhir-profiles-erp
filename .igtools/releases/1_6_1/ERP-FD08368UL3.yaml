@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 8fc0467bb3a79f44c3b9f9e1dfb073253614736a7be8077a18a3b2e86d8ec3ce
+created: '2026-01-06T10:35:03.385121'
+date: '2026-01-06T10:35:03.385124'
+key: ERP-FD08368UL3
+modified: '2026-01-06T10:35:03.385123'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS eine eGK-Prüfkartenidentität anhand der Bildungsregel
+  in Card-G2-A_3820 (X0000nnnnP, mit nnnn aus der Menge {0001 .. 5000} und P = Prüfziffer)
+  für die KVNR der Prüfkarte eGK erkennen.
+title: E-Rezept-Fachdienst – Erkennen der Prüfidentität
+version: 0

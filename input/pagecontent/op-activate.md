@@ -1,7 +1,7 @@
 ### Task aktivieren ($activate)
 
-Die FHIR-Operation `$activate` aktiviert einen zuvor erstellten `Task` für das E‑Rezept.
-Dabei wird das qualifiziert elektronisch signierte Verordnungsbundle (QES) an den E‑Rezept-Fachdienst übergeben.
+Die FHIR-Operation `$activate` aktiviert einen zuvor erstellten `Task` für das E-Rezept.
+Dabei wird das qualifiziert elektronisch signierte Verordnungsbundle (QES) an den E-Rezept-Fachdienst übergeben.
 
 ### Nachricht
 
@@ -56,12 +56,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` auf, nachdem die Verordnung qualifi
 
 Beispielhafte Beschreibung (wird in einem nächsten Schritt fachlich/technisch vervollständigt).
 
-<figure>
-  <div class="gem-ig-img-container" style="--box-width: 100%">
-    <img src="./IG-ERP-BL-TASK-ACTIVATE.svg" alt="Geschäftslogik $activate" style="width: 100%;">
-  </div>
-  <figcaption><strong>Abbildung:</strong> Geschäftslogik für die Operation <i>$activate</i> (Beispiel)</figcaption>
-</figure>
+{% include IG-ERP-BL-TASK-ACTIVATE.svg %}
 
 ### Sicherheitsanforderungen
 

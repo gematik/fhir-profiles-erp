@@ -1,0 +1,22 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: de30b2ea8460659d2b1ca3e0b494913e19a930f36ffd9d89f6674a7a5a64a886
+created: '2026-01-06T10:35:03.384894'
+date: '2026-01-06T10:35:03.384896'
+key: ERP-FD04712LW3
+modified: '2026-01-06T10:35:03.384895'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der E-Rezept-Fachdienst MUSS jede Antwort auf den Funktionsaufruf zum Aktivieren
+  eines Tasks mittels Übergabe des QES-signierten Datensatzes um den konfigurierbaren
+  http-Response-Header "Warning" (default "999 Throttling active") ergänzen und um
+  ein konfigurierbares Zeitintervall (default: 500 Millisekunden) verzögert zurückschicken,
+  sofern die QES in der Prüfung während der Operation POST /Task/<id>/$activate als
+  ungültig erkannt wird, um Angriffe durch Rezeptfälschungen durch einen hohen Zeitaufwand
+  unattraktiv zu machen.'
+title: E-Rezept-Fachdienst – Drosselung Rezeptfälschungen
+version: 0

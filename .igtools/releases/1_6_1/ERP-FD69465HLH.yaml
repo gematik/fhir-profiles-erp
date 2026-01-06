@@ -1,0 +1,20 @@
+actor:
+- eRp_FD
+conformance: SHALL
+content_hash: 9ef55d3348206bc88e74cac36d0667b9927a74a9e2d9d8b4fea222da96e97430
+created: '2026-01-06T10:35:03.393583'
+date: '2026-01-06T11:41:23.205911'
+key: ERP-FD69465HLH
+modified: '2026-01-06T11:41:23.205911'
+release_status: NEW
+source: input/pagecontent/op-create.md
+status: ACTIVE
+test_procedures:
+  eRp_FD:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS beim Anlegen eines neuen Tasks eine Rezept-ID gemäß
+  der Bildungsregel generieren, als Identifier mit Namingsystem <i>https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId</i>
+  dem Task hinzufügen und sicherstellen, dass diese Rezept-ID innerhalb von 11 Jahren
+  nach ihrer Erzeugung nicht erneut vergeben wird.
+title: E-Rezept-Fachdienst - Task erzeugen - Generierung Rezept-ID
+version: 0

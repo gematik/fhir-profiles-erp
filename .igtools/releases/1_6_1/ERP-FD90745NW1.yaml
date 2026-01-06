@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: MAY
+content_hash: 60e9ce4d05d2307f067a76268b3f6750359786265efd7dc249ad88f1574a66d6
+created: '2026-01-06T10:35:03.386140'
+date: '2026-01-06T10:35:03.386142'
+key: ERP-FD90745NW1
+modified: '2026-01-06T10:35:03.386141'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst KANN OCSP-Antworten aus A_20024 bis zu 4 Stunden cachen
+  und bei einer entsprechend passenden OCSP-Anfrage, anstatt neu den OCSP-Responder
+  anzufragen, die im Cache befindliche OCSP-Antwort ausliefern.
+title: E-Rezept-Fachdienst – Caching OCSP-Antworten
+version: 0

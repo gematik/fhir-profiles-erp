@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 4d58870811add8f2391be98dcaf2a35ab0ae0b61e10db24294df8ff3b398e037
+created: '2026-01-06T10:35:03.385227'
+date: '2026-01-06T10:35:03.385229'
+key: ERP-FD82358ACB
+modified: '2026-01-06T10:35:03.385228'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS das Einstellen einer Communication-Ressource mit
+  dem http-Status-Code 400 ablehnen, wenn diese in den Absender- und Empfänger-Informationen
+  eine Kombination von KVNR der Prüfkarte eGK und KVNR von Versicherten enthält.
+title: E-Rezept-Fachdienst – Ausschluss Vertreterkommunikation von bzw. an Prüf-Identität
+version: 0

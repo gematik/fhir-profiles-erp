@@ -1,0 +1,17 @@
+actor:
+- Verarbeitungskontext E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: de395c33a16cb6cd4c36611b1a23c9ac8d3e04ee118f6ca75c221bfafa32fab7
+created: '2026-01-06T10:35:03.388475'
+date: '2026-01-06T10:35:03.388477'
+key: ERP-FD40680HRZ
+modified: '2026-01-06T10:35:03.388476'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Verarbeitungskontext E-Rezept-Fachdienst: []
+text: Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass
+  er nur transportverschlüsselt mit dem PVS kommuniziert.
+title: E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit PVS
+version: 0

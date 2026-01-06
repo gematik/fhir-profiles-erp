@@ -374,7 +374,7 @@
           ],
           "operation": [
             {
-              "name": "create",
+              "name": "createOperation",
               "definition": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition",
               "extension": [
                 {
@@ -384,7 +384,7 @@
               ]
             },
             {
-              "name": "activate",
+              "name": "activateOperation",
               "definition": "https://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition",
               "extension": [
                 {
@@ -394,7 +394,7 @@
               ]
             },
             {
-              "name": "abort",
+              "name": "abortOperation",
               "definition": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition",
               "extension": [
                 {

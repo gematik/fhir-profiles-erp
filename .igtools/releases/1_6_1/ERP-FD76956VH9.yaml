@@ -1,0 +1,18 @@
+actor:
+- Verarbeitungskontext E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 67dd7027bb2db5e2f3be0b6332ac94969fa96e18f04db336eac7c93deff0919e
+created: '2026-01-06T10:35:03.388789'
+date: '2026-01-06T10:35:03.388792'
+key: ERP-FD76956VH9
+modified: '2026-01-06T10:35:03.388791'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Verarbeitungskontext E-Rezept-Fachdienst: []
+text: Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sicherstellen, dass
+  er nur transportverschlüsselt mit Komponenten außerhalb des Verarbeitungskontextes
+  kommuniziert.
+title: E-Rezept-Fachdienst – vertrauliche Kommunikation
+version: 0
