@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Composition
 Parent: Composition
 Id: GEM-ERP-PR-Composition
-Title: "Quittung für die Einlösung eines E-Rezepts"
-Description: "Nach Abschluss des E-Rezept-Workflows erhält der Rezeptausfüller eine unterschriebene Quittung für Abrechnungs- und Verifizierungszwecke."
+Title: "GEM ERP PR Composition"
+Description: "Quittung für die Einlösung eines E-Rezepts"
 * insert Profile(GEM_ERP_PR_Composition)
 
 // extensions

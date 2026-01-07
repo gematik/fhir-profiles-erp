@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Task
 Parent: Task
 Id: GEM-ERP-PR-Task
-Title: "Task für die Verwaltung des E-Rezept-Workflows"
-Description: "Diese Ressource verwaltet den E-Rezept-Workflow"
+Title: "GEM ERP PR Task"
+Description: "Task für die Verwaltung des E-Rezept-Workflows"
 * insert Profile(GEM_ERP_PR_Task)
 
 * extension ^slicing.discriminator.type = #value

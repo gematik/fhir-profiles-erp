@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_MedicationDispense
 Parent: EPAMedicationDispense
 Id: GEM-ERP-PR-MedicationDispense
-Title: "Dispensierung eines E-Rezepts"
-Description: "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente."
+Title: "GEM ERP PR MedicationDispense"
+Description: "Dispensierung eines E-Rezepts"
 * insert Profile(GEM_ERP_PR_MedicationDispense)
 * obeys workflow-dosageExtensionBeiDosierung
 

@@ -1,6 +1,6 @@
 Extension: GEM_ERP_EX_RedeemCode
 Id: GEM-ERP-EX-RedeemCode
-Title: "DiGA-Einlösecode"
+Title: "GEM ERP EX RedeemCode"
 Description: "Gibt den Einlösecode für eine DiGA an."
 * insert StructureDefinition(GEM_ERP_EX_RedeemCode)
 * ^context[0].type = #element

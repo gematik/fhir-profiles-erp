@@ -89,14 +89,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
-        },
-        "name": "Ablaufdatum des Rezepts",
-        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "OperationDefinition/AbortOperation"
         },
         "name": "AbortOperation",
@@ -128,30 +120,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DispReq"
-        },
-        "name": "Anfrage zur Einlösung des E-Rezepts",
-        "description": "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DiGA"
-        },
-        "name": "Antwort des Leistungserbringers an den Patienten",
-        "description": "Ressource, die für die Kommunikation des Leistungserbringers mit dem Patienten im Kontext der Einlösung von DiGA-Verordnungen verwendet wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Reply"
-        },
-        "name": "Antwort vom Leistungserbringer an den Patienten",
-        "description": "Ressource, die für die Kommunikation der Antwort zur Weitergabe/Informationsanfrage vom Leistungserbringer an Patienten/Vertreter verwendet wird",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Communication/7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
         },
         "name": "Antwort-Nachricht der Apotheke an den Patienten",
@@ -160,26 +128,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-AuditEvent"
-        },
-        "name": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "AuditEvent/9361863d-fec0-4ba9-8776-7905cf1b0cfa"
         },
         "name": "AuditEvent-Eintrag vom E-Rezept-Fachdienst",
         "description": "Beispiel für einen AuditEvent-Eintrag, der vom E-Rezept-Fachdienst beim Zugriff auf Patientendaten generiert wird",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-Beneficiary"
-        },
-        "name": "Begünstigter E-Rezept-Beleg",
-        "description": "Der Begünstigte (z. B. Apotheke) des E-Rezept-Beleg, der erstellt wird, wenn der E-Rezept-Workflow abgeschlossen ist.",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -414,30 +367,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
-        },
-        "name": "Datum der Bestätigung der Verschreibung",
-        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-DeepLink"
-        },
-        "name": "DiGA-DeepLink",
-        "description": "Enthält Informationen zum Deep Link für eine DiGA.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-RedeemCode"
-        },
-        "name": "DiGA-Einlösecode",
-        "description": "Gibt den Einlösecode für eine DiGA an.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Communication/140f716f-f649-44fe-9a4e-157eb3c8adf3"
         },
         "name": "DiGA-Nachricht eines Kostenträgers an den Patienten",
@@ -458,30 +387,6 @@
         },
         "name": "DispenseOperation",
         "description": "Die Operation $dispense ermöglicht es der Apotheke, eine Ausgabe für ein Medikament durchzuführen, ohne den Status der Aufgabe zu ändern. Diese Aktion erlaubt es einem Frontend anzuzeigen, dass ein Medikament ausgegeben wurde, bevor es von der Apotheke abgeschlossen wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense-DiGA"
-        },
-        "name": "Dispensierung einer DiGA-Verordnung",
-        "description": "Verarbeitet Informationen über die ausgegebene DiGA",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense"
-        },
-        "name": "Dispensierung eines E-Rezepts",
-        "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Bundle"
-        },
-        "name": "Dokumentenbündel für Quittung",
-        "description": "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)",
         "exampleBoolean": false
       },
       {
@@ -567,6 +472,102 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
+        },
+        "name": "GEM ERP EX AcceptDate",
+        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AvailabilityState"
+        },
+        "name": "GEM ERP EX AvailabilityState",
+        "description": "Extension zur Angabe von Typ des Verfügbarkeitsstatus für die Anfrage zur Medikamentenverfügbarkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-Beneficiary"
+        },
+        "name": "GEM ERP EX Beneficiary",
+        "description": "Der Begünstigte (z. B. Apotheke) des E-Rezept-Beleg, der erstellt wird, wenn der E-Rezept-Workflow abgeschlossen ist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-DeepLink"
+        },
+        "name": "GEM ERP EX DeepLink",
+        "description": "Enthält Informationen zum Deep Link für eine DiGA.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION"
+        },
+        "name": "GEM ERP EX EU IS REDEEMABLE BY PATIENT AUTHORIZATION",
+        "description": "Extension zur Angabe des Nutzers, ob das E-Rezept in der EU zur Einlösung verfügbar sein soll oder nicht.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES"
+        },
+        "name": "GEM ERP EX EU IS REDEEMABLE BY PROPERTIES",
+        "description": "Extension zur vom E-Rezept-Fachdienst ermittelten Angabe, ob das E-Rezept in der EU zur Einlösung verfügbar sein soll oder nicht.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
+        },
+        "name": "GEM ERP EX ExpiryDate",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-InsuranceProvider"
+        },
+        "name": "GEM ERP EX InsuranceProvider",
+        "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-LastMedicationDispense"
+        },
+        "name": "GEM ERP EX LastMedicationDispense",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-PrescriptionType"
+        },
+        "name": "GEM ERP EX PrescriptionType",
+        "description": "Definiert den Typ eines Rezepts.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-RedeemCode"
+        },
+        "name": "GEM ERP EX RedeemCode",
+        "description": "Gibt den Einlösecode für eine DiGA an.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-SupplyOptionsType"
+        },
+        "name": "GEM ERP EX SupplyOptionsType",
+        "description": "Extension zur Angabe des bevorzugten Versorgungskanals",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Accept-Operation-Output"
         },
         "name": "GEM ERP PR AcceptOperation Output",
@@ -579,6 +580,30 @@
         },
         "name": "GEM ERP PR ActivateOperation Output",
         "description": "Dieses Profil definiert die Parameter für die Aktivierung einer Aufgabe von PVS zum E-Rezept-Fachdienst. Dies kann für die $activate-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-AuditEvent"
+        },
+        "name": "GEM ERP PR AuditEvent",
+        "description": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Binary"
+        },
+        "name": "GEM ERP PR Binary",
+        "description": "PKCS7 signiertes Bundle im enveloping style",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Bundle"
+        },
+        "name": "GEM ERP PR Bundle",
+        "description": "Dokumentenbündel für Quittung",
         "exampleBoolean": false
       },
       {
@@ -599,6 +624,54 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication"
+        },
+        "name": "GEM ERP PR Communication",
+        "description": "Generische Workflow-Communication",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DiGA"
+        },
+        "name": "GEM ERP PR Communication DiGA",
+        "description": "Antwort des Leistungserbringers an den Patienten",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-DispReq"
+        },
+        "name": "GEM ERP PR Communication DispReq",
+        "description": "Anfrage zur Einlösung des E-Rezepts",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Reply"
+        },
+        "name": "GEM ERP PR Communication Reply",
+        "description": "Antwort vom Leistungserbringer an den Patienten",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Representative"
+        },
+        "name": "GEM ERP PR Communication Representative",
+        "description": "Kommunikation zwischen Patient und Vertreter",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Composition"
+        },
+        "name": "GEM ERP PR Composition",
+        "description": "Quittung für die Einlösung eines E-Rezepts",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Create-Operation-Output"
         },
         "name": "GEM ERP PR CreateOperation Output",
@@ -607,10 +680,50 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Digest"
+        },
+        "name": "GEM ERP PR Digest",
+        "description": "QES-Digest in Binary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Dispense-Operation-Input"
         },
         "name": "GEM ERP PR DispenseOperation Input",
         "description": "Dieses Profil definiert die Parameter für die Abgabe eines Medikaments von AVS an den E-Rezept-Fachdienst. Dies kann für die $dispense-Operation verwendet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Medication"
+        },
+        "name": "GEM ERP PR Medication",
+        "description": "Medikament zur Ausgabe des Rezepts",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense"
+        },
+        "name": "GEM ERP PR MedicationDispense",
+        "description": "Dispensierung eines E-Rezepts",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-MedicationDispense-DiGA"
+        },
+        "name": "GEM ERP PR MedicationDispense DiGA",
+        "description": "Dispensierung einer DiGA-Verordnung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Task"
+        },
+        "name": "GEM ERP PR Task",
+        "description": "Task für die Verwaltung des E-Rezept-Workflows",
         "exampleBoolean": false
       },
       {
@@ -631,57 +744,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-AvailabilityState"
-        },
-        "name": "GEM_ERP_EX_AvailabilityState",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION"
-        },
-        "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PROPERTIES"
-        },
-        "name": "GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-InsuranceProvider"
-        },
-        "name": "GEM_ERP_EX_InsuranceProvider",
-        "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-PackageQuantity"
-        },
-        "name": "GEM_ERP_EX_PackageQuantity",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-PrescriptionType"
-        },
-        "name": "GEM_ERP_EX_PrescriptionType",
-        "description": "Definiert den Typ eines Rezepts.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-SupplyOptionsType"
-        },
-        "name": "GEM_ERP_EX_SupplyOptionsType",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Bundle-OP-Accept"
         },
         "name": "GEM_ERP_PR_Bundle_OP_Accept",
@@ -693,14 +755,6 @@
         },
         "name": "GEM_ERP_PR_Device",
         "description": "Statische Informationen auf dem E-Rezept-Fachdienst",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Communication"
-        },
-        "name": "Generische Workflow-Communication",
-        "description": "Diese Communication beschreibt Felder und Anforderungen für alle Communications im Workflow-Paket.",
         "exampleBoolean": false
       },
       {
@@ -793,22 +847,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Communication-Representative"
-        },
-        "name": "Kommunikation zwischen Patient und Vertreter",
-        "description": "Ressource, die für die Kommunikation zwischen Patienten und deren Vertreter im Zusammenhang mit einem E-Rezept verwendet wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-LastMedicationDispense"
-        },
-        "name": "Letzte Medikamentenabgabe",
-        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-LOG-MedicationDispense-DiGA"
         },
         "name": "Logical DiGA Medication Dispense",
@@ -872,14 +910,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Medication"
-        },
-        "name": "Medikament zur Ausgabe des Rezepts",
-        "description": "Verarbeitet medizinische Informationen über das eingelöste Rezept",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Medication/Medication-Kombipackung"
         },
         "name": "Medikament-Kombipackung",
@@ -896,33 +926,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Binary"
-        },
-        "name": "PKCS7 signiertes Bundle im enveloping style",
-        "description": "PCKS7 signiertes eRezept-Bundle oder Quittung",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Signature"
         },
         "name": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Digest"
-        },
-        "name": "QES-Digest in Binary",
-        "description": "QES-Digest in Binary",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Composition"
-        },
-        "name": "Quittung für die Einlösung eines E-Rezepts",
-        "description": "Nach Abschluss des E-Rezept-Workflows erhält der Rezeptausfüller eine unterschriebene Quittung für Abrechnungs- und Verifizierungszwecke.",
         "exampleBoolean": false
       },
       {
@@ -980,14 +986,6 @@
         "name": "Task erstellt durch Fachdienst via $create Operation",
         "description": "Beispiel für einen Task, der vom Fachdienst über die $create Operation erstellt wurde",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Task"
-        },
-        "name": "Task für die Verwaltung des E-Rezept-Workflows",
-        "description": "Diese Ressource verwaltet den E-Rezept-Workflow",
-        "exampleBoolean": false
       },
       {
         "reference": {

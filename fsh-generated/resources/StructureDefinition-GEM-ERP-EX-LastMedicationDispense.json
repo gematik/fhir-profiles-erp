@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense",
   "version": "1.6.1",
   "name": "GEM_ERP_EX_LastMedicationDispense",
-  "title": "Letzte Medikamentenabgabe",
+  "title": "GEM ERP EX LastMedicationDispense",
   "status": "draft",
   "date": "2025-09-25",
   "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an.",

@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Communication_Representative
 Parent: Communication
 Id: GEM-ERP-PR-Communication-Representative
-Title: "Kommunikation zwischen Patient und Vertreter"
-Description: "Ressource, die für die Kommunikation zwischen Patienten und deren Vertreter im Zusammenhang mit einem E-Rezept verwendet wird."
+Title: "GEM ERP PR Communication Representative"
+Description: "Kommunikation zwischen Patient und Vertreter"
 * insert Profile(GEM_ERP_PR_Communication_Representative)
 
 * recipient 1..1

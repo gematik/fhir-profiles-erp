@@ -1,7 +1,8 @@
 Profile: GEM_ERP_PR_AuditEvent
 Parent: AuditEvent
 Id: GEM-ERP-PR-AuditEvent
-Title: "AuditEvent für die Protokollierung des Zugriffs auf eRezepte"
+Title: "GEM ERP PR AuditEvent"
+Description: "AuditEvent für die Protokollierung des Zugriffs auf eRezepte"
 * insert Profile(GEM_ERP_PR_AuditEvent)
 
 * type MS

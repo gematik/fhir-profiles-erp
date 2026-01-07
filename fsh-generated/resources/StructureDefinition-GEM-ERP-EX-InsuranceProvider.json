@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider",
   "version": "1.6.1",
   "name": "GEM_ERP_EX_InsuranceProvider",
+  "title": "GEM ERP EX InsuranceProvider",
   "status": "draft",
   "date": "2025-09-25",
   "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",

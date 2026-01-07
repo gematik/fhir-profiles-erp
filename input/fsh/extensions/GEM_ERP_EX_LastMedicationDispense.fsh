@@ -1,6 +1,6 @@
 Extension: GEM_ERP_EX_LastMedicationDispense
 Id: GEM-ERP-EX-LastMedicationDispense
-Title: "Letzte Medikamentenabgabe"
+Title: "GEM ERP EX LastMedicationDispense"
 Description: "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt den Zeitstempel der letzten Ausgabe an."
 * insert StructureDefinition(GEM_ERP_EX_LastMedicationDispense)
 * . ^short = "Zeitstempel, der gesetzt wird, wenn ein Medikament für diese Aufgabe ausgegeben wurde. Angegeben im Format YYYY-MM-DDTHH:MM:SS(Z|±HH:MM)"

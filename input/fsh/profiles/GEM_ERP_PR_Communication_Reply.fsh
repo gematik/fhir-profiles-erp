@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Communication_Reply
 Parent: GEM_ERP_PR_Communication
 Id: GEM-ERP-PR-Communication-Reply
-Title: "Antwort vom Leistungserbringer an den Patienten"
-Description: "Ressource, die für die Kommunikation der Antwort zur Weitergabe/Informationsanfrage vom Leistungserbringer an Patienten/Vertreter verwendet wird"
+Title: "GEM ERP PR Communication Reply"
+Description: "Antwort vom Leistungserbringer an den Patienten"
 * insert Profile(GEM_ERP_PR_Communication_Reply)
 
 * recipient 1..1

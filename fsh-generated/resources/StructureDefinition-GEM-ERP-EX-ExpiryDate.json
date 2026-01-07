@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
   "version": "1.6.1",
   "name": "GEM_ERP_EX_ExpiryDate",
-  "title": "Ablaufdatum des Rezepts",
+  "title": "GEM ERP EX ExpiryDate",
   "status": "draft",
   "date": "2025-09-25",
   "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",

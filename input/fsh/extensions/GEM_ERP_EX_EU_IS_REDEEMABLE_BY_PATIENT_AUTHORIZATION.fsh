@@ -1,5 +1,7 @@
 Extension: GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION
 Id: GEM-ERP-EX-EU-IS-REDEEMABLE-BY-PATIENT-AUTHORIZATION
+Title: "GEM ERP EX EU IS REDEEMABLE BY PATIENT AUTHORIZATION"
+Description: "Extension zur Angabe des Nutzers, ob das E-Rezept in der EU zur Einlösung verfügbar sein soll oder nicht."
 Context: Task, Extension
 * insert StructureDefinition(GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION)
 * . ^short = "Einlösbares EU-E-Rezept durch Patientenautorisierung"

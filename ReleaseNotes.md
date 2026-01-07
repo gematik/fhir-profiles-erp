@@ -1,5 +1,5 @@
 <img align="right" width="250" height="47" src="./Resources/images/gematik_logo.png" /> <br />    
- 
+//TODO: remove EXTENSION PACKAGE QUANTITIY
 # Release Notes E-Rezept Workflow
 
 ## Release 1.6.0 (2025-09-30)

@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Communication
 Parent: Communication
 Id: GEM-ERP-PR-Communication
-Title: "Generische Workflow-Communication"
-Description: "Diese Communication beschreibt Felder und Anforderungen für alle Communications im Workflow-Paket."
+Title: "GEM ERP PR Communication"
+Description: "Generische Workflow-Communication"
 * insert StructureDefinition(GEM_ERP_PR_Communication)
 * ^abstract = true
 

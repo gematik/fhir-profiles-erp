@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Bundle
 Parent: Bundle
 Id: GEM-ERP-PR-Bundle
-Title: "Dokumentenbündel für Quittung"
-Description: "Eine dokumentenstilistische Darstellung der Quittung (vollständig, eigenständig, unterschrieben)"
+Title: "GEM ERP PR Bundle"
+Description: "Dokumentenbündel für Quittung"
 * insert Profile(GEM_ERP_PR_Bundle)
 * id 1..1
 * identifier 1.. MS

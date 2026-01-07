@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Communication_DispReq
 Parent: Communication
 Id: GEM-ERP-PR-Communication-DispReq
-Title: "Anfrage zur Einlösung des E-Rezepts"
-Description: "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird."
+Title: "GEM ERP PR Communication DispReq"
+Description: "Anfrage zur Einlösung des E-Rezepts"
 * insert Profile(GEM_ERP_PR_Communication_DispReq)
 * obeys workflow-communication-payload-1
 

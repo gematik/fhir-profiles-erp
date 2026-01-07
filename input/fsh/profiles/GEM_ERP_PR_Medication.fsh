@@ -1,8 +1,8 @@
 Profile: GEM_ERP_PR_Medication
 Parent: EPAMedication
 Id: GEM-ERP-PR-Medication
-Title: "Medikament zur Ausgabe des Rezepts"
-Description: "Verarbeitet medizinische Informationen über das eingelöste Rezept"
+Title: "GEM ERP PR Medication"
+Description: "Medikament zur Ausgabe des Rezepts"
 * insert Profile(GEM_ERP_PR_Medication)
  
 * contained MS

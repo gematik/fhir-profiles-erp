@@ -1,6 +1,6 @@
 Extension: GEM_ERP_EX_DeepLink
 Id: GEM-ERP-EX-DeepLink
-Title: "DiGA-DeepLink"
+Title: "GEM ERP EX DeepLink"
 Description: "Enthält Informationen zum Deep Link für eine DiGA."
 Context: MedicationDispense
 * insert StructureDefinition(GEM_ERP_EX_DeepLink)

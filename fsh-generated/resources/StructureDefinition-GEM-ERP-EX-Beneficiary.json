@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary",
   "version": "1.6.1",
   "name": "GEM_ERP_EX_Beneficiary",
-  "title": "Begünstigter E-Rezept-Beleg",
+  "title": "GEM ERP EX Beneficiary",
   "status": "draft",
   "date": "2025-09-25",
   "description": "Der Begünstigte (z. B. Apotheke) des E-Rezept-Beleg, der erstellt wird, wenn der E-Rezept-Workflow abgeschlossen ist.",

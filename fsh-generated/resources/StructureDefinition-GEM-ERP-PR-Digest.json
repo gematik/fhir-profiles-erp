@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest",
   "version": "1.6.1",
   "name": "GEM_ERP_PR_Digest",
-  "title": "QES-Digest in Binary",
+  "title": "GEM ERP PR Digest",
   "status": "draft",
   "date": "2025-09-25",
   "description": "QES-Digest in Binary",
