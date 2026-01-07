@@ -71,6 +71,10 @@ pages:
       title: "Validierung von Dosierungsinformationen"
   mapping.md:
     title: "Vorgaben zum Mapping von FHIR-Instanzen"
+    mapping-verordnungsdaten.md:
+      title: "Mapping von Verordnungsdaten"
+    mapping-practitioner.md:
+      title: "Mapping des Verordnenden"
   menu-schnittstellen-generelle-prinzipien.md:
     title: "Generelle Prinzipien"
   menu-schnittstellen-datenschutz-und-sicherheit.md:

@@ -27,9 +27,15 @@ gem-ig-badge-bg-darkblue"  | split: "," %}
       <td style="padding: 5px;">{{ use_case.postconditions | markdownify}}</td>
     </tr>
     <tr>
-      <th style="padding: 5px; width: 23rem;">Technische Anwendungsfälle des Medication Service</th>
+      <th style="padding: 5px; width: 23rem;">Technische Anwendungsfälle des E-Rezept-Fachdienst</th>
       <td style="padding: 5px;">{{ use_case.relatedTechnicalUseCases | markdownify }}</td>
     </tr>
+    {% if use_case.followup %}
+      <tr>
+        <th style="padding: 5px; width: 23rem;">Folgeaktionen des E-Rezept-Fachdienst</th>
+        <td style="padding: 5px;">{{ use_case.followup | markdownify }}</td>
+      </tr>
+    {% endif %}
     <tr>
       <th style="padding: 5px; width: 23rem;">Relevante(r) Sektor(en)</th>
       <td style="padding: 5px;">

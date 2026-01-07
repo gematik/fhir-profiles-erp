@@ -243,30 +243,47 @@ def format_condition(condition: str) -> str:
 
     cond = condition.strip()
 
-    # Sammle alle url != 'x'
-    excluded = re.findall(r"url\s*!=\s*'([^']+)'", cond)
-    if excluded:
-        unique_excluded: List[str] = list(dict.fromkeys(excluded))  # Reihenfolge beibehalten
-        preview = unique_excluded[:3]
-        rest = len(unique_excluded) - len(preview)
-        parts = ", ".join(preview)
-        if rest > 0:
-            parts += f", +{rest} weitere"
-        cond = re.sub(r"url\s*!=\s*'[^']+'\s*(and\s*)?", "", cond)
-        cond = cond.strip(" and ")
-        cond = " und ".join(p for p in [f"url != [{parts}]", cond] if p)
-
+    # Wenn es ein positives url = gibt, zeige nur das (url != ist i.d.R. nur Filter-Rauschen)
     equals = re.findall(r"url\s*=\s*'([^']+)'", cond)
     if equals:
         unique_equals: List[str] = list(dict.fromkeys(equals))
-        cond = re.sub(r"url\s*=\s*'[^']+'\s*(and\s*)?", "", cond)
-        cond = cond.strip(" and ")
+        if len(unique_equals) == 1:
+            return f"Bedingung: url = '{unique_equals[0]}'"
         eq_text = " oder ".join(f"'{e}'" for e in unique_equals)
-        cond = " und ".join(p for p in [f"url = {eq_text}", cond] if p)
+        return f"Bedingung: url = {eq_text}"
 
-    cond = cond.replace("and", "und")
-    cond = cond.replace("where", "wo")
+    # Entferne reine url != Filter (die werden nicht mehr angezeigt)
+    cond = re.sub(r"url\s*!=\s*'[^']+'\s*(and\s*)?", "", cond)
+    cond = re.sub(r"\s+", " ", cond).strip()
+    cond = re.sub(r"^(and\s+)+", "", cond)
+    cond = re.sub(r"(\s+and)+$", "", cond)
+
+    cond = cond.replace(" and ", " und ")
+    cond = cond.replace(" where ", " wo ")
     return f"Bedingung: {cond}" if cond else ""
+
+
+def extract_condition_text(src_path: str) -> str:
+    """Extrahiert den Bedingungs-Text aus einem Quellpfad-Suffix '[...]'."""
+    if not src_path:
+        return ""
+    match = re.search(r"\[(Bedingung: .+)\]", src_path)
+    if match:
+        return match.group(1).strip()
+    return ""
+
+
+def extract_url_value_from_condition(condition_text: str) -> str:
+    if not condition_text:
+        return ""
+    match = re.search(r"url\s*=\s*'([^']+)'", condition_text)
+    return match.group(1) if match else ""
+
+
+def shorten_url_label(url: str) -> str:
+    if not url:
+        return ""
+    return url.rstrip('/').split('/')[-1]
 
 
 def is_exclusion_only_condition(condition: str) -> bool:
@@ -449,18 +466,77 @@ def structuremap_to_markdown(json_data):
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"
 
-    rows = [
-        "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |",
-        "|------------------------|---------------------|--------|-------------------------------|",
-    ]
-
+    # Teile in "normale" Mappings und Extension-Cluster auf.
+    extension_rows = []
+    normal_rows = []
     for src, tgt, action, desc in filtered_mappings:
-        src_display = f"`{src}`" if src else "—"
-        tgt_display = f"`{tgt}`" if tgt else "—"
-        desc_display = desc if desc else "*(direkte Kopie)*"
-        rows.append(f"| {src_display} | {tgt_display} | {action} | {desc_display} |")
+        if (tgt or "").startswith("EPAMedicationRequest.extension") or (".extension" in (src or "")):
+            extension_rows.append((src, tgt, action, desc))
+        else:
+            normal_rows.append((src, tgt, action, desc))
 
-    return "\n".join(rows)
+    out_lines = []
+
+    def render_table(rows_to_render):
+        rows_out = [
+            "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |",
+            "|------------------------|---------------------|--------|-------------------------------|",
+        ]
+        for src, tgt, action, desc in rows_to_render:
+            src_display = f"`{src}`" if src else "—"
+            tgt_display = f"`{tgt}`" if tgt else "—"
+            desc_display = desc if desc else "*(direkte Kopie)*"
+            rows_out.append(f"| {src_display} | {tgt_display} | {action} | {desc_display} |")
+        return "\n".join(rows_out)
+
+    if normal_rows:
+        out_lines.append("### Feld-Mappings")
+        out_lines.append("")
+        out_lines.append(render_table(normal_rows))
+
+    if extension_rows:
+        # Gruppiere nach Bedingung/url (damit url/value direkt zusammen erscheinen)
+        groups = {}
+        for src, tgt, action, desc in extension_rows:
+            condition_text = extract_condition_text(src or "")
+            url_value = extract_url_value_from_condition(condition_text)
+            key = url_value or condition_text or "(ohne Bedingung)"
+            groups.setdefault(key, []).append((src, tgt, action, desc))
+
+        # stabile Gruppen-Reihenfolge
+        def group_sort_key(k):
+            label = shorten_url_label(k) if k.startswith("http") else k
+            return label
+
+        out_lines.append("")
+        out_lines.append("### Extensions")
+        out_lines.append("")
+
+        def row_sort_key(row):
+            src, tgt, _, _ = row
+            tgt_parts = (tgt or "").split('.') if tgt else []
+            tgt_depth = len(tgt_parts)
+            last = tgt_parts[-1] if tgt_parts else ""
+            parent = ".".join(tgt_parts[:-1]) if tgt_parts else ""
+            priority_map = {"extension": 0, "url": 1, "value": 2, "id": 3}
+            last_prio = priority_map.get(last, 9)
+            # innerhalb der Gruppe nach Ziel-Hierarchie sortieren
+            return (parent, tgt_depth, last_prio, tgt or "", src or "")
+
+        for key in sorted(groups.keys(), key=group_sort_key):
+            group_rows = groups[key]
+            group_rows.sort(key=row_sort_key)
+
+            if key.startswith("http"):
+                out_lines.append(f"#### Extension: {shorten_url_label(key)}")
+                out_lines.append(f"Bedingung: url = `{key}`")
+            else:
+                out_lines.append(f"#### Extension: {key}")
+            out_lines.append("")
+            out_lines.append(render_table(group_rows))
+            out_lines.append("")
+
+    return "\n".join(out_lines).rstrip() + "\n"
 
 def main():
     """Main function to process StructureMap file"""

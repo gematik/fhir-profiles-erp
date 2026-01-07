@@ -1098,7 +1098,19 @@
         {
           "nameUrl": "mapping.html",
           "title": "Vorgaben zum Mapping von FHIR-Instanzen",
-          "generation": "markdown"
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "mapping-verordnungsdaten.html",
+              "title": "Mapping von Verordnungsdaten",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "mapping-practitioner.html",
+              "title": "Mapping des Verordnenden",
+              "generation": "markdown"
+            }
+          ]
         },
         {
           "nameUrl": "menu-schnittstellen-generelle-prinzipien.html",

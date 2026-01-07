@@ -1,0 +1,45 @@
+{% assign transformation_rule = include['transformation-rule'] %}
+{% assign mapping_filter = include.mapping %}
+{% assign heading_level = include.level | default: 4 %}
+
+{% if mapping_filter and transformation_rule.mapping != mapping_filter %}
+	{% comment %}Filtered out by mapping tag{% endcomment %}
+{% else %}
+
+{% if transformation_rule.anchor %}
+<a id="{{ transformation_rule.anchor }}"></a>
+{% endif %}
+
+<h{{ heading_level }}>{{ transformation_rule.title }}</h{{ heading_level }}>
+
+<figure style="width: auto;">
+	<table style="width: auto; border: 1px solid #dcdcdc;">
+		{% if transformation_rule.id %}
+			<tr>
+				<th style="padding: 5px; width: 23rem;">ID</th>
+				<td style="padding: 5px;"><code>{{ transformation_rule.id }}</code></td>
+			</tr>
+		{% endif %}
+		<tr>
+			<th style="padding: 5px; width: 23rem;">Beschreibung</th>
+			<td style="padding: 5px;">{{ transformation_rule.description | markdownify }}</td>
+		</tr>
+		{% if transformation_rule.references %}
+			<tr>
+				<th style="padding: 5px; width: 23rem;">Referenzen</th>
+				<td style="padding: 5px;">
+					{% capture refs_md %}
+					{% for ref in transformation_rule.references %}
+- {{ ref }}
+					{% endfor %}
+					{% endcapture %}
+					{{ refs_md | markdownify }}
+				</td>
+			</tr>
+		{% endif %}
+	</table>
+	<figcaption><strong>Tabelle:</strong> Transformationsregel {{ transformation_rule.title }}</figcaption>
+</figure>
+
+{% endif %}
+

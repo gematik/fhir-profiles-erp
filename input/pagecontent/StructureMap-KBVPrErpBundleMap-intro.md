@@ -1,3 +1,5 @@
+### Feld-Mappings
+
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter` | ℹ️ Dokumentiert | Creates parameter:rxPrescription parameter container aggregating 6 part(s) |
@@ -30,3 +32,4 @@
 | `KBVPRERPBundle.entry [Bedingung: resource is Medication]` | — | ⚙️ Bedingt | Bundle.entry:RezeptierdatenFreitextverordnung.resource -> .parameter:rxPrescription.part:medication.resource using KBV_PR_ERP_Medication_FreeText\|1.4.0 -> EPAMedication\|1.3.0 |
 | `KBVPRERPBundle.entry [Bedingung: resource is Organization]` | — | ⚙️ Bedingt | Bundle.entry:Einrichtung.resource -> .parameter:rxPrescription.part:organization.resource using KBV_PR_FOR_Organization\|1.3.0 -> OrganizationDirectory\|1.0.0 |
 | `KBVPRERPBundle.entry [Bedingung: resource is Practitioner]` | — | ⚙️ Bedingt | Bundle.entry:AusstellendeVerschreibendeVerantwortlichePerson.resource -> .parameter:rxPrescription.part:practitioner.resource using KBV_PR_FOR_Practitioner\|1.3.0 -> PractitionerDirectory\|1.0.0 |
+

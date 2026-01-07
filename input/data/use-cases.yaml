@@ -19,6 +19,8 @@
     - Rezept-ID und AccessCode sind im Primärsystem verfügbar.
   relatedTechnicalUseCases: |
     - [E-Rezept erstellen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-erstellen)
+  followup: |
+    - [Mapping von Verordnungsdaten](./mapping-verordnungsdaten.md)
     
 - id: E_Rezept_qualifiziert_signieren
   anchor: e-rezept-qualifiziert-signieren

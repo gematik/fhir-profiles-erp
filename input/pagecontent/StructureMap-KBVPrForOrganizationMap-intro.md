@@ -1,3 +1,5 @@
+### Feld-Mappings
+
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
 | `KBVPRFOROrganization.address` | `OrganizationDirectory.address` | ✅ Kopiert | Kopiert nach 'Organization.address'<br>→ übernimmt Wert aus Quellvariable |
@@ -9,3 +11,4 @@
 | `KBVPRFOROrganization.meta` | `OrganizationDirectory.meta` | 🆕 Erstellt | Automatische Kopie<br>→ erstellt neues Meta |
 | `KBVPRFOROrganization.meta` | `OrganizationDirectory.meta.profile` | 📝 Setzt Wert | Fester Wert 'https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory'<br>→ setzt URL 'https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory' |
 | `KBVPRFOROrganization.telecom` | `OrganizationDirectory.telecom` | ✅ Kopiert | Automatische Kopie<br>→ übernimmt Wert aus Quellvariable |
+
