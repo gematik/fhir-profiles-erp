@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -234,16 +233,8 @@ def build_rows(
 def table_for(title: str, rows: ValueMap) -> List[str]:
     if not rows:
         return [f"### {title}", "", "*Keine Daten vorhanden.*", ""]
-    counts = Counter(status for *_, status in rows)
-    summary = (
-        f"*Abgedeckt:* {counts.get('mapped', 0)} · "
-        f"*Neu:* {counts.get('new', 0)} · "
-        f"*Offen:* {counts.get('unmapped', 0)}"
-    )
     lines = [
         f"### {title}",
-        "",
-        summary,
         "",
         "| KBV Pfad | EPA Pfad | Wert | Status |",
         "| --- | --- | --- | --- |",

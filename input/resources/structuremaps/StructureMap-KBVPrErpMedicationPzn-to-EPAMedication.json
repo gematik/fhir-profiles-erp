@@ -120,7 +120,7 @@
               "context": "KBVPRERPMedicationPZN",
               "element": "extension",
               "variable": "srcKBVPRERPMedicationPZNExtension84c1ba51",
-              "condition": "url != 'drugCategory' and url != 'packaging' and url != 'valueCodeableConcept' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'Normgroesse' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'Arzneimittelkategorie' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'valueCoding' and url != 'rxPrescriptionProcessIdentifier' and url != 'Kategorie' and url != 'valueCode' and url != 'Impfstoff' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'isVaccine' and url != 'normSizeCode' and url != 'type' and url != 'valueBoolean' and url != 'manufacturingInstructions'"
+              "condition": "url != 'valueCoding' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'valueBoolean' and url != 'drugCategory' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'manufacturingInstructions' and url != 'Arzneimittelkategorie' and url != 'Normgroesse' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'valueCode' and url != 'valueCodeableConcept' and url != 'type' and url != 'isVaccine' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'Kategorie' and url != 'packaging' and url != 'rxPrescriptionProcessIdentifier' and url != 'normSizeCode' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'Impfstoff'"
             }
           ],
           "target": [
@@ -387,16 +387,7 @@
           "source": [
             {
               "context": "KBVPRERPMedicationPZN",
-              "variable": "srcKBVPRERPMedicationPZNExtensionTypecd970e49",
-              "element": "extension"
-            }
-          ],
-          "target": [
-            {
-              "context": "EPAMedication",
-              "contextType": "variable",
-              "element": "extension",
-              "variable": "tgtEPAMedicationExtensionType1a2ef415"
+              "variable": "manual_srcMedicationExtensionType61374588"
             }
           ]
         },

@@ -1,0 +1,61 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" border="50" scale="3" compressed="false" locked="false" version="29.2.9">
+  <diagram name="Blank" id="YmL12bMKpDGza6XwsDPr">
+    <mxGraphModel dx="1106" dy="1035" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="1" shadow="0">
+      <root>
+        <mxCell id="X5NqExCQtvZxIxQ7pmgY-0" />
+        <mxCell id="1" parent="X5NqExCQtvZxIxQ7pmgY-0" />
+        <mxCell id="nYDBS2yTMqKcQZe_9WgS-1" connectable="0" parent="1" style="group;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="501.05" width="711.66" x="47" y="79" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-1" parent="nYDBS2yTMqKcQZe_9WgS-1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" value="" vertex="1">
+          <mxGeometry height="139.82790697674423" width="78.30362790697676" x="306.2907934131737" y="56.597009966777414" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-2" edge="1" parent="nYDBS2yTMqKcQZe_9WgS-1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="138.16378181137725" y="125.67865448504986" as="sourcePoint" />
+            <mxPoint x="268.004444236527" y="125.67865448504986" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-3" parent="nYDBS2yTMqKcQZe_9WgS-1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#6c8ebf;shadow=0;dashed=0;shape=mxgraph.ios7.icons.document;fillColor=#dae8fc;" value="" vertex="1">
+          <mxGeometry height="73.24318936877077" width="56.597211826347305" x="21.640110404191613" y="89.88936877076414" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-4" parent="nYDBS2yTMqKcQZe_9WgS-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Verordnungsdaten" vertex="1">
+          <mxGeometry height="49.93853820598007" width="99.87743263473054" y="168.1264119601329" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-5" edge="1" parent="nYDBS2yTMqKcQZe_9WgS-1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="344.61043506736524" y="349.5697674418605" as="sourcePoint" />
+            <mxPoint x="344.61043506736524" y="223.058803986711" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-6" parent="nYDBS2yTMqKcQZe_9WgS-1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.document;fillColor=#d5e8d4;" value="" vertex="1">
+          <mxGeometry height="73.24318936877077" width="56.597211826347305" x="317.1441410928143" y="372.8744186046512" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-7" parent="nYDBS2yTMqKcQZe_9WgS-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Dispensierinformation" vertex="1">
+          <mxGeometry height="49.93853820598007" width="99.87743263473054" x="295.5040306886227" y="451.11146179402" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-8" edge="1" parent="nYDBS2yTMqKcQZe_9WgS-1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="406.1682260479042" y="125.67865448504986" as="sourcePoint" />
+            <mxPoint x="554.3197511227545" y="126.51096345514954" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-9" parent="nYDBS2yTMqKcQZe_9WgS-1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" value="" vertex="1">
+          <mxGeometry height="139.82790697674423" width="78.30362790697676" x="579.2891092814372" y="56.597009966777414" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-10" parent="nYDBS2yTMqKcQZe_9WgS-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="E-Rezept-Fachdienst&amp;nbsp;" vertex="1">
+          <mxGeometry height="49.93853820598007" width="99.87743263473054" x="301.29692178143716" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-11" parent="nYDBS2yTMqKcQZe_9WgS-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ePA-&lt;div&gt;Medication Service&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49.93853820598007" width="186.43787425149702" x="525.222125748503" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-12" parent="nYDBS2yTMqKcQZe_9WgS-1" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.process" value="" vertex="1">
+          <mxGeometry height="73.32642026578074" width="61.590863787375426" x="441.1253274700599" y="149.81561461794024" as="geometry" />
+        </mxCell>
+        <mxCell id="1bIruYT7AD7MzwiPfSrV-13" parent="nYDBS2yTMqKcQZe_9WgS-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="gemapptes Artefakt" vertex="1">
+          <mxGeometry height="49.93853820598007" width="99.87743263473054" x="421.98215288173657" y="234.71112956810637" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

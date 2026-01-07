@@ -197,16 +197,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "srcKBVPRFOROrganizationIdentifierTelematikida1dd4f74",
-              "element": "identifier"
-            }
-          ],
-          "target": [
-            {
-              "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "identifier",
-              "variable": "tgtOrganizationDirectoryIdentifierTelematikidc36ffe12"
+              "variable": "manual_srcOrganizationIdentifierTelematikidd2cf7b80"
             }
           ]
         },
@@ -267,16 +258,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "srcKBVPRFOROrganizationNameabbbdc85",
-              "element": "name"
-            }
-          ],
-          "target": [
-            {
-              "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "name",
-              "variable": "tgtOrganizationDirectoryName0e007323"
+              "variable": "manual_srcOrganizationName61d5a4f1"
             }
           ]
         },
@@ -311,16 +293,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "srcKBVPRFOROrganizationTypeProfession710ff6d4",
-              "element": "type"
-            }
-          ],
-          "target": [
-            {
-              "context": "OrganizationDirectory",
-              "contextType": "variable",
-              "element": "type",
-              "variable": "tgtOrganizationDirectoryTypeProfessionf2d05bbb"
+              "variable": "manual_srcOrganizationTypeProfession6b535de2"
             }
           ]
         }

@@ -1,30 +1,32 @@
-#!/bin/bash
-publisher_jar=publisher.jar
-input_cache_path=./input-cache/
-echo Checking internet connection...
-curl -sSf tx.fhir.org > /dev/null
+#!/usr/bin/env zsh
+set -euo pipefail
 
-if [ $? -eq 0 ]; then
-	echo "Online"
-	txoption=""
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
+
+publisher_jar="publisher.jar"
+input_cache_path="./input-cache"
+tx_args=()
+
+echo "Checking internet connection..."
+if curl -sSf tx.fhir.org >/dev/null 2>&1; then
+  echo "Online"
 else
-	echo "Offline"
-	txoption="-tx n/a"
+  echo "Offline"
+  tx_args+=("-tx" "n/a")
 fi
 
-echo "$txoption"
+export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Dfile.encoding=UTF-8"
 
-export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
-
-publisher=$input_cache_path/$publisher_jar
-if test -f "$publisher"; then
-	java -jar $publisher -ig . $txoption $*
-
+publisher="$input_cache_path/$publisher_jar"
+if [ -f "$publisher" ]; then
+  java -jar "$publisher" -ig . "${tx_args[@]}" "$@"
 else
-	publisher=../$publisher_jar
-	if test -f "$publisher"; then
-		java -jar $publisher -ig . $txoption $*
-	else
-		echo IG Publisher NOT FOUND in input-cache or parent folder.  Please run _updatePublisher.  Aborting...
-	fi
+  publisher="../$publisher_jar"
+  if [ -f "$publisher" ]; then
+    java -jar "$publisher" -ig . "${tx_args[@]}" "$@"
+  else
+    echo "IG Publisher NOT FOUND in input-cache or parent folder. Please run _updatePublisher. Aborting..." >&2
+    exit 1
+  fi
 fi

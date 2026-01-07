@@ -12,6 +12,7 @@ Usage:
 Optional environment variables:
     HAPI_VALIDATOR_JAR   Override path of the HAPI validator jar
 """
+#TODO: set subject manually in MedicationDispense
 
 from __future__ import annotations
 

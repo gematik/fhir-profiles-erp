@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # Load config
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 source "$SCRIPT_DIR/config.sh"
 
 # Output path

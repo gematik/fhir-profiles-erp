@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env zsh
+set -euo pipefail
+
 pubsource=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/
 publisher_jar=publisher.jar
 dlurl=$pubsource$publisher_jar
@@ -17,6 +19,10 @@ build_bat_url=$scriptdlroot/_build.bat
 
 skipPrompts=false
 FORCE=false
+response=""
+upgrade=false
+jarlocation=""
+jarlocationname=""
 
 if ! type "curl" > /dev/null; then
 	echo "ERROR: Script needs curl to download latest IG Publisher. Please install curl."
@@ -33,9 +39,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 echo "Checking internet connection"
-curl -sSf tx.fhir.org > /dev/null
-
-if [ $? -ne 0 ] ; then
+if ! curl -sSf tx.fhir.org > /dev/null 2>&1 ; then
   echo "Offline (or the terminology server is down), unable to update.  Exiting"
   exit 1
 fi

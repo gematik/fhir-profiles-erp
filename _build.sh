@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
-set -e
+set -euo pipefail
 
 # Variables
 dlurl="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
@@ -11,6 +11,11 @@ upper_path="../"
 scriptdlroot="https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main"
 build_bat_url="${scriptdlroot}/_build.bat"
 build_sh_url="${scriptdlroot}/_build.sh"
+
+online=false
+latest_version=""
+current_version=""
+jar_location="not_found"
 
 function check_jar_location() {
   if [ -f "${input_cache_path}${publisher_jar}" ]; then

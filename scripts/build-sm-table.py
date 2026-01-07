@@ -3,7 +3,14 @@ import json
 import re
 from typing import List, Optional
 
-MANUAL_ACTION_LABEL = "🛠️ Manuell"
+MANUAL_ACTION_LABEL = "Manuell"
+FIXED_VALUE_PARAM_KEYS = (
+    "valueString",
+    "valueUri",
+    "valueCanonical",
+    "valueBoolean",
+    "valueInteger",
+)
 
 
 def escape_markdown(text):
@@ -188,22 +195,20 @@ def extract_target_transformation_info(target):
 
     if transform_type == 'copy':
         for param in parameters:
-            value = param.get('valueString')
-            if value:
-                escaped = escape_markdown(value)
-                if 'http' in value or 'StructureDefinition' in value:
-                    transformations.append(f"→ setzt URL '{escaped}'")
-                else:
-                    transformations.append(f"→ setzt Wert '{escaped}'")
+            fixed_value = next(
+                (param[key] for key in FIXED_VALUE_PARAM_KEYS if key in param),
+                None,
+            )
+            if fixed_value is not None:
+                escaped = escape_markdown(str(fixed_value))
+                transformations.append(f"setzt festen Wert: `{escaped}`")
             elif 'valueId' in param:
-                transformations.append("→ übernimmt Wert aus Quellvariable")
-            elif 'valueBoolean' in param:
-                transformations.append(f"→ setzt Wert '{param['valueBoolean']}'")
+                transformations.append("übernimmt Wert aus Quellvariable")
     elif transform_type == 'create':
         for param in parameters:
             value = param.get('valueString')
             if value:
-                transformations.append(f"→ erstellt neues {value}")
+                transformations.append(f"erstellt neues {value}")
                 break
 
     return transformations
@@ -215,26 +220,24 @@ def determine_action_label(rule, target):
     transform_type = (target or {}).get('transform')
     parameters = (target or {}).get('parameter') or []
 
+    has_fixed_value = any(
+        any(key in param for key in FIXED_VALUE_PARAM_KEYS)
+        for param in parameters
+    )
+
     if transform_type == 'create':
-        labels.append("🆕 Erstellt")
+        labels.append("Erstellt")
     elif transform_type == 'copy':
-        if any('valueId' in param for param in parameters):
-            labels.append("✅ Kopiert")
-        elif any(
-            key in param
-            for param in parameters
-            for key in ("valueString", "valueUri", "valueCanonical", "valueBoolean", "valueInteger")
-        ):
-            labels.append("📝 Setzt Wert")
+        if has_fixed_value:
+            labels.append("Fester Wert")
+        else:
+            labels.append("Kopiert")
 
     if rule.get('dependent'):
-        labels.append("📎 Delegiert")
-
-    if any(source.get('condition') for source in rule.get('source', [])):
-        labels.append("⚙️ Bedingt")
+        labels.append("Delegiert")
 
     if not labels:
-        labels.append("ℹ️ Dokumentiert")
+        labels.append("Dokumentiert")
 
     return " · ".join(labels)
 
@@ -420,7 +423,9 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         base_desc_parts = []
         rule_manual_info = parse_manual_documentation(rule.get('documentation'))
         if rule.get('documentation') and not rule_manual_info:
-            base_desc_parts.append(escape_markdown(translate_doc(rule['documentation'])))
+            translated_doc = escape_markdown(translate_doc(rule['documentation']))
+            if translated_doc and not translated_doc.startswith("Fester Wert"):
+                base_desc_parts.append(translated_doc)
         if 'dependent' in rule:
             dependent_links = []
             for dep in rule['dependent']:

@@ -1,11 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env zsh
+set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Error handling: The script will terminate on error.
-set -e
+. "$SCRIPT_DIR/config.sh"
 
-. "$(dirname "$0")/config.sh"
+ENVIRONMENT="${ENVIRONMENT:-}"
+LABEL="${LABEL:-}"
+TARGET="${TARGET:-}"
+PREV="${PREV:-}"
+PUBLISH_URL="${PUBLISH_URL:-}"
+PROD_BUCKET="${PROD_BUCKET:-}"
+PROD_BUCKET_PATH="${PROD_BUCKET_PATH:-}"
+DEV_BUCKET_PATH="${DEV_BUCKET_PATH:-}"
+BALLOT_BUCKET_PATH="${BALLOT_BUCKET_PATH:-}"
 
 # Check MODE
 if [ -z "$ENVIRONMENT" ]; then

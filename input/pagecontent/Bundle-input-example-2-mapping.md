@@ -5,8 +5,6 @@
 
 ### Verordnungskennung
 
-*Abgedeckt:* 1 · *Neu:* 1 · *Offen:* 1
-
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |
 | `Bundle.identifier.value` | `Parameters.prescriptionId.valueString` | `160.100.000.000.019.82` | ✅ Übernommen |
@@ -15,16 +13,12 @@
 
 ### Ausstellungsdatum
 
-*Abgedeckt:* 1 · *Neu:* 1 · *Offen:* 0
-
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |
 | `MedicationRequest.authoredOn` | `Parameters.authoredOn.valueDateTime` | `2024-05-20` | ✅ Übernommen |
 | — | `Parameters.authoredOn.name` | `authoredOn` | 🆕 Nur Ziel |
 
 ### KBV MedicationRequest → EPA MedicationRequest
-
-*Abgedeckt:* 15 · *Neu:* 4 · *Offen:* 12
 
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |
@@ -42,7 +36,6 @@
 | `MedicationRequest.requester.reference` | `MedicationRequest.requester.reference` | `Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655` | ✅ Übernommen |
 | `MedicationRequest.resourceType` | `MedicationRequest.resourceType` | `MedicationRequest` | ✅ Übernommen |
 | `MedicationRequest.status` | `MedicationRequest.status` | `active` | ✅ Übernommen |
-| `MedicationRequest.subject.reference` | `MedicationRequest.subject.reference` | `Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf` | ✅ Übernommen |
 | — | `MedicationRequest.extension[0].url` | `https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension` | 🆕 Nur Ziel |
 | — | `MedicationRequest.extension[1].extension[0].url` | `indicator` | 🆕 Nur Ziel |
 | — | `MedicationRequest.extension[1].url` | `https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension` | 🆕 Nur Ziel |
@@ -59,10 +52,9 @@
 | `MedicationRequest.id` | — | `4a7eefdd-df71-4a72-8047-c158017534a1` | ⚠️ Offen |
 | `MedicationRequest.insurance[0].reference` | — | `Coverage/da80211e-61ee-458e-a651-87370b6ec30c` | ⚠️ Offen |
 | `MedicationRequest.meta.profile[0]` | — | `https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Prescription\|1.3` | ⚠️ Offen |
+| `MedicationRequest.subject.reference` | — | `Patient/ce4104af-b86b-4664-afee-1b5fc3ac8acf` | ⚠️ Offen |
 
 ### KBV Organization → EPA Organization
-
-*Abgedeckt:* 25 · *Neu:* 1 · *Offen:* 7
 
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |
@@ -102,8 +94,6 @@
 
 ### KBV Practitioner → EPA Practitioner
 
-*Abgedeckt:* 13 · *Neu:* 1 · *Offen:* 11
-
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |
 | `Practitioner.name[0]._family.extension[0].url` | `Practitioner.name[0]._family.extension[0].url` | `http://hl7.org/fhir/StructureDefinition/humanname-own-prefix` | ✅ Übernommen |
@@ -133,8 +123,6 @@
 | `Practitioner.qualification[1].code.text` | — | `Facharzt für Innere Medizin: Kardiologie` | ⚠️ Offen |
 
 ### KBV Medication → EPA Medication
-
-*Abgedeckt:* 6 · *Neu:* 3 · *Offen:* 18
 
 | KBV Pfad | EPA Pfad | Wert | Status |
 | --- | --- | --- | --- |

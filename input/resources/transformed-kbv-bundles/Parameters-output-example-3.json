@@ -61,9 +61,6 @@
         },
         "status" : "active",
         "intent" : "order",
-        "subject" : {
-          "reference" : "Patient/93866fdc-3e50-4902-a7e9-891b54737b5e"
-        },
         "requester" : {
           "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
         },
