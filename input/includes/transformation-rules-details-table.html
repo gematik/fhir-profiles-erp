@@ -2,7 +2,26 @@
 {% assign mapping_filter = include.mapping %}
 {% assign heading_level = include.level | default: 4 %}
 
-{% if mapping_filter and transformation_rule.mapping != mapping_filter %}
+{% comment %}
+  Filtering behavior:
+  - If include.mapping is set and the rule has no mapping, render it ("applies to all").
+  - If the rule has mapping as a string, require equality.
+  - If the rule has mapping as an array, require it to contain the filter value.
+{% endcomment %}
+
+{% assign rule_mapping = transformation_rule.mapping %}
+{% assign mapping_matches = true %}
+
+{% if mapping_filter and rule_mapping %}
+	{% assign first_mapping = rule_mapping | first %}
+	{% if first_mapping %}
+		{% assign mapping_matches = rule_mapping contains mapping_filter %}
+	{% else %}
+		{% assign mapping_matches = rule_mapping == mapping_filter %}
+	{% endif %}
+{% endif %}
+
+{% if mapping_filter and rule_mapping and mapping_matches != true %}
 	{% comment %}Filtered out by mapping tag{% endcomment %}
 {% else %}
 
@@ -22,8 +41,25 @@
 		{% endif %}
 		<tr>
 			<th style="padding: 5px; width: 23rem;">Beschreibung</th>
-			<td style="padding: 5px;">{{ transformation_rule.description | markdownify }}</td>
+			{% assign description_html = transformation_rule.description | markdownify %}
+			{% assign description_html = description_html | replace: '<pre>', '<pre style="overflow-x:auto; max-width: 100%; white-space: pre;">' %}
+			{% assign description_html = description_html | replace: '<pre style="overflow-x:auto; max-width: 100%; white-space: pre;"><code>', '<pre style="overflow-x:auto; max-width: 100%; white-space: pre;"><code style="white-space: pre;">' %}
+			{% assign description_html = description_html | replace: '<code class="', '<code style="white-space: pre;" class="' %}
+			<td style="padding: 5px; overflow-x: auto;">{{ description_html }}</td>
 		</tr>
+		{% if transformation_rule.profiles %}
+			<tr>
+				<th style="padding: 5px; width: 23rem;">Profile</th>
+				<td style="padding: 5px;">
+					{% capture profiles_md %}
+					{% for profile in transformation_rule.profiles %}
+- {{ profile }}
+					{% endfor %}
+					{% endcapture %}
+					{{ profiles_md | markdownify }}
+				</td>
+			</tr>
+		{% endif %}
 		{% if transformation_rule.references %}
 			<tr>
 				<th style="padding: 5px; width: 23rem;">Referenzen</th>

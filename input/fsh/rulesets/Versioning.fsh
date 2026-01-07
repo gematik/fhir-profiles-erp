@@ -9,6 +9,8 @@ RuleSet: OperationVersioning
 * version = "1.6.1"
 * date = "2025-09-25"
 
+//!!!EDIT input/data/constants.yml for current ePA Medication IG!!!
+
 // Dates for Examples (Date of actual release)
 RuleSet: Date(field)
 * {field} = "2026-07-01"

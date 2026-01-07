@@ -5,7 +5,7 @@
   "name": "KBVPrErpMedicationFreetextMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-05",
+  "date": "2026-01-07",
   "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_FreeText|1.4.0 -> EPAMedication|1.3.0",
   "structure": [
     {
@@ -95,7 +95,7 @@
               "context": "KBVPRERPMedicationFreeText",
               "element": "extension",
               "variable": "srcKBVPRERPMedicationFreeTextExtensionb00bf49a",
-              "condition": "url != 'Impfstoff' and url != 'rxPrescriptionProcessIdentifier' and url != 'drugCategory' and url != 'type' and url != 'Kategorie' and url != 'Arzneimittelkategorie' and url != 'Normgroesse' and url != 'valueBoolean' and url != 'manufacturingInstructions' and url != 'valueCoding' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'packaging' and url != 'isVaccine' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'normSizeCode'"
+              "condition": "url != 'drugCategory' and url != 'packaging' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'Normgroesse' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'Arzneimittelkategorie' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'valueCoding' and url != 'rxPrescriptionProcessIdentifier' and url != 'Kategorie' and url != 'Impfstoff' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'isVaccine' and url != 'normSizeCode' and url != 'type' and url != 'valueBoolean' and url != 'manufacturingInstructions'"
             }
           ],
           "target": [
@@ -265,6 +265,25 @@
                 }
               ],
               "documentation": "Copied from 'Medication.extension:Impfstoff.value[x]'"
+            }
+          ]
+        },
+        {
+          "name": "MedicationExtensionType61374588",
+          "documentation": "Manual action required | Fester Wert: 781405001, Medicinal product package (product) | Field: Medication.extension:type",
+          "source": [
+            {
+              "context": "KBVPRERPMedicationFreeText",
+              "variable": "srcKBVPRERPMedicationFreeTextExtensionType9f16a291",
+              "element": "extension"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedication",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationExtensionType1a2ef415"
             }
           ]
         },

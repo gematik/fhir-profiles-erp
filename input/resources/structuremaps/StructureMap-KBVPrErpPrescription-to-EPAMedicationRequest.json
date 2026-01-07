@@ -145,7 +145,7 @@
               "context": "KBVPRERPPrescription",
               "element": "extension",
               "variable": "srcKBVPRERPPrescriptionExtensione3b6d5d3",
-              "condition": "url != 'BtM-Sonderkennzeichen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_Accident' and url != 'Zuzahlungsstatus' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_StatusCoPayment' and url != 'valueString' and url != 'AushaendigungInformationsmaterialien' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_EmergencyServicesFee' and url != 'patientID' and url != 'valueCoding' and url != 'Dosierungskennzeichen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'Unfalltag' and url != 'Betaeubungsmittel' and url != 'childbearing-potential' and url != 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction' and url != 'narcotics' and url != 'PatientenID' and url != 'valuePeriod' and url != 'additional-information-substitutes' and url != 'multiplePrescription' and url != 'renderedDosageInstruction' and url != 'valueRatio' and url != 'id' and url != 'narcotics-markings' and url != 'hand-out-information-material' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension' and url != 'indicator' and url != 'valueBoolean' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension' and url != 'generatedDosageInstructionsMeta' and url != 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' and url != 'Unfallbetrieb' and url != 'Off-Label' and url != 'Zeitraum' and url != 'isBvg' and url != 'counter' and url != 'period' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension' and url != 'isSer' and url != 'off-label' and url != 'declaration-of-expertise' and url != 'Notdienstgebuehr' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension' and url != 'ErgaenzendeAngabenSubstitutionsmittel' and url != 'Unfallkennzeichen' and url != 'valueIdentifier' and url != 'valueDate' and url != 'prescriberID' and url != 'VerschreiberID' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Prescriber_ID' and url != 'security-compliance' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_DosageFlag' and url != 'Kennzeichen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Narcotic' and url != 'Unfallinformationen' and url != 'ErklaerungSachkenntnis' and url != 'ID' and url != 'GebaerfaehigeFrau' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'Nummerierung' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'T-Rezept' and url != 'teratogenic' and url != 'Mehrfachverordnung' and url != 'SER' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Patient_ID'"
+              "condition": "url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER' and url != 'teratogenic' and url != 'id' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Narcotic' and url != 'ID' and url != 'Betaeubungsmittel' and url != 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' and url != 'counter' and url != 'valueIdentifier' and url != 'narcotics-markings' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'multiplePrescription' and url != 'patientID' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_Accident' and url != 'prescriberID' and url != 'ErklaerungSachkenntnis' and url != 'Zeitraum' and url != 'PatientenID' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'Unfalltag' and url != 'T-Rezept' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension' and url != 'Unfallinformationen' and url != 'hand-out-information-material' and url != 'BtM-Sonderkennzeichen' and url != 'isSer' and url != 'narcotics' and url != 'Mehrfachverordnung' and url != 'period' and url != 'valueRatio' and url != 'security-compliance' and url != 'valueCoding' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_StatusCoPayment' and url != 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction' and url != 'VerschreiberID' and url != 'AushaendigungInformationsmaterialien' and url != 'valuePeriod' and url != 'SER' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Prescriber_ID' and url != 'Notdienstgebuehr' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/prescriber-id-extension' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Patient_ID' and url != 'indicator' and url != 'additional-information-substitutes' and url != 'off-label' and url != 'Off-Label' and url != 'declaration-of-expertise' and url != 'Unfallbetrieb' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension' and url != 'Zuzahlungsstatus' and url != 'renderedDosageInstruction' and url != 'Unfallkennzeichen' and url != 'ErgaenzendeAngabenSubstitutionsmittel' and url != 'valueDate' and url != 'generatedDosageInstructionsMeta' and url != 'isBvg' and url != 'valueString' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/narcotics-extension' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/patient-id-extension' and url != 'valueBoolean' and url != 'Kennzeichen' and url != 'GebaerfaehigeFrau' and url != 'Dosierungskennzeichen' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_DosageFlag' and url != 'childbearing-potential' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/teratogenic-extension' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_EmergencyServicesFee' and url != 'Nummerierung'"
             }
           ],
           "target": [
@@ -261,7 +261,7 @@
               "context": "KBVPRERPPrescription",
               "element": "extension",
               "variable": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
-              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'period' and url != 'indicator' and url != 'id' and url != 'counter' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription'"
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription' and url != 'indicator' and url != 'period' and url != 'id' and url != 'counter' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Multiple_Prescription'"
             }
           ],
           "target": [
@@ -297,7 +297,7 @@
                   "context": "srcKBVPRERPPrescriptionExtensionMehrfachverordnungc7120a1c",
                   "variable": "srcMedicationRequestExtensionMultipleprescriptionExtensionfb1469",
                   "element": "extension",
-                  "condition": "url != 'period' and url != 'indicator' and url != 'id' and url != 'counter' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'Kennzeichen' and url != 'Nummerierung' and url != 'Zeitraum' and url != 'ID' and url != 'valueBoolean' and url != 'valueRatio' and url != 'valuePeriod' and url != 'valueIdentifier'"
+                  "condition": "url != 'indicator' and url != 'period' and url != 'id' and url != 'counter' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'indicator' and url != 'counter' and url != 'period' and url != 'id' and url != 'Kennzeichen' and url != 'Nummerierung' and url != 'Zeitraum' and url != 'ID' and url != 'valueBoolean' and url != 'valueRatio' and url != 'valuePeriod' and url != 'valueIdentifier'"
                 }
               ],
               "target": [
@@ -1015,7 +1015,7 @@
               "context": "KBVPRERPPrescription",
               "element": "extension",
               "variable": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
-              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'security-compliance' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'hand-out-information-material' and url != 'childbearing-potential' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic'"
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic' and url != 'hand-out-information-material' and url != 'off-label' and url != 'declaration-of-expertise' and url != 'security-compliance' and url != 'childbearing-potential' and url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Teratogenic'"
             }
           ],
           "target": [
@@ -1051,7 +1051,7 @@
                   "context": "srcKBVPRERPPrescriptionExtensionTRezept7033d9f5",
                   "variable": "srcMedicationRequestExtensionTeratogenicExtension7f45302b",
                   "element": "extension",
-                  "condition": "url != 'security-compliance' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'hand-out-information-material' and url != 'childbearing-potential' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'Off-Label' and url != 'GebaerfaehigeFrau' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'AushaendigungInformationsmaterialien' and url != 'ErklaerungSachkenntnis' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean'"
+                  "condition": "url != 'hand-out-information-material' and url != 'off-label' and url != 'declaration-of-expertise' and url != 'security-compliance' and url != 'childbearing-potential' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'off-label' and url != 'childbearing-potential' and url != 'security-compliance' and url != 'hand-out-information-material' and url != 'declaration-of-expertise' and url != 'Off-Label' and url != 'GebaerfaehigeFrau' and url != 'EinhaltungSicherheitsmassnahmen' and url != 'AushaendigungInformationsmaterialien' and url != 'ErklaerungSachkenntnis' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean' and url != 'valueBoolean'"
                 }
               ],
               "target": [
@@ -1565,6 +1565,74 @@
                   "valueId": "srcKBVPRERPPrescriptionStatusdacc71a5"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestSubjectfe47ad58",
+          "documentation": "Manual action required | Transformationsregel F_007: Wird aus KBV_PR_FOR_Patient.identifier:versichertenId übernommen. | Field: MedicationRequest.subject",
+          "source": [
+            {
+              "context": "KBVPRERPPrescription",
+              "variable": "srcKBVPRERPPrescriptionSubjectb79dbef0",
+              "element": "subject"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "contextType": "variable",
+              "element": "subject",
+              "variable": "tgtEPAMedicationRequestSubject8a8bf8a9"
+            }
+          ]
+        },
+        {
+          "name": "MedicationRequestSubjectIdentifier9f3d69ea",
+          "target": [
+            {
+              "context": "EPAMedicationRequest",
+              "element": "subject",
+              "variable": "tgtEPAMedicationRequestSubject8a8bf8a9",
+              "contextType": "variable"
+            }
+          ],
+          "rule": [
+            {
+              "name": "MedicationRequestSubjectIdentifier9f3d69ea",
+              "source": [
+                {
+                  "context": "KBVPRERPPrescription",
+                  "element": "subject",
+                  "variable": "srcKBVPRERPPrescriptionSubjectb79dbef0"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "MedicationRequestSubjectIdentifier9f3d69ea",
+                  "documentation": "Manual action required | Befüllen von .subject nach Transformationsregel F_010 | Field: MedicationRequest.subject.identifier",
+                  "source": [
+                    {
+                      "context": "srcKBVPRERPPrescriptionSubjectb79dbef0",
+                      "variable": "srcKBVPRERPPrescriptionSubjectIdentifier3fdf663f",
+                      "element": "identifier"
+                    }
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "context": "tgtEPAMedicationRequestSubject8a8bf8a9",
+                  "contextType": "variable",
+                  "element": "identifier",
+                  "variable": "tgtEPAMedicationRequestSubjectIdentifier1e1464d1"
+                }
+              ]
+            }
+          ],
+          "source": [
+            {
+              "context": "KBVPRERPPrescription"
             }
           ]
         },

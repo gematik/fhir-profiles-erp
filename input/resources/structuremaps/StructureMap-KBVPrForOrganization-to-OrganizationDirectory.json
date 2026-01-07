@@ -5,7 +5,7 @@
   "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-05",
+  "date": "2026-01-07",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
   "structure": [
     {
@@ -192,6 +192,25 @@
           ]
         },
         {
+          "name": "OrganizationIdentifierTelematikidd2cf7b80",
+          "documentation": "Manual action required | Telematik-ID wird aus idNummer → aus dem ACCESS_TOKEN der Anfrage bezogen | Field: Organization.identifier:TelematikID",
+          "source": [
+            {
+              "context": "KBVPRFOROrganization",
+              "variable": "srcKBVPRFOROrganizationIdentifierTelematikida1dd4f74",
+              "element": "identifier"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtOrganizationDirectoryIdentifierTelematikidc36ffe12"
+            }
+          ]
+        },
+        {
           "name": "OrganizationMeta89bf012b",
           "documentation": "Automatic copy",
           "source": [
@@ -243,6 +262,25 @@
           ]
         },
         {
+          "name": "OrganizationName61d5a4f1",
+          "documentation": "Manual action required | organizationName → aus dem ACCESS_TOKEN der Anfrage beziehen | Field: Organization.name",
+          "source": [
+            {
+              "context": "KBVPRFOROrganization",
+              "variable": "srcKBVPRFOROrganizationNameabbbdc85",
+              "element": "name"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "name",
+              "variable": "tgtOrganizationDirectoryName0e007323"
+            }
+          ]
+        },
+        {
           "name": "OrganizationTelecomb3f55102",
           "documentation": "Automatic copy",
           "source": [
@@ -264,6 +302,25 @@
                   "valueId": "srcKBVPRFOROrganizationTelecomca093d46"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "OrganizationTypeProfession6b535de2",
+          "documentation": "Manual action required | professionOID → aus dem ACCESS_TOKEN der Anfrage | Field: Organization.type:profession",
+          "source": [
+            {
+              "context": "KBVPRFOROrganization",
+              "variable": "srcKBVPRFOROrganizationTypeProfession710ff6d4",
+              "element": "type"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "type",
+              "variable": "tgtOrganizationDirectoryTypeProfessionf2d05bbb"
             }
           ]
         }

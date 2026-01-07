@@ -9,9 +9,7 @@ cd "$PROJECT_ROOT"
 ## Generate heading-links.js
 "$SCRIPT_DIR/generate-heading-links-js.sh"
 
-if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
-  rm input/resources/transformed-kbv-bundles/*
-fi
+
 
 igtools process
 
@@ -19,7 +17,10 @@ igtools process
 sushi .
 
 # Run scripts that need artifacts from IG Publisher
-python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
+# if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
+#   rm input/resources/transformed-kbv-bundles/*
+# fi
+#python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 ./scripts/fml_table.sh
 
 # Generate IG Publisher Content

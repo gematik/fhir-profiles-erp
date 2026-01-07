@@ -10,6 +10,12 @@
 
 ### Extensions
 
+#### Extension: (ohne Bedingung)
+
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationPZN.extension` | `EPAMedication.extension` | ℹ️ Dokumentiert | Manual action required \| Fester Wert: 781405001, Medicinal product package (product) \| Field: Medication.extension:type |
+
 #### Extension: KBV_EX_ERP_Medication_Category
 Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category`
 

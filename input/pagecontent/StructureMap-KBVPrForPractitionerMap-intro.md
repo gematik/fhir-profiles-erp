@@ -2,6 +2,7 @@
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
+| `KBVPRFORPractitioner.name.name.text` | — | ℹ️ Dokumentiert | Manual action required \| Zum Erzeugen von name.text siehe Transformationsregel F_011 \| Field: Practitioner.name.text |
 | `KBVPRFORPractitioner.identifier [Bedingung: (use = 'official' und system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR') != true und (system = 'https://gematik.de/fhir/sid/telematik-id') != true]` | `PractitionerDirectory.identifier` | ✅ Kopiert · ⚙️ Bedingt | Automatische Kopie<br>→ übernimmt Wert aus Quellvariable |
 | `KBVPRFORPractitioner.identifier [Bedingung: system = 'https://gematik.de/fhir/sid/telematik-id']` | `PractitionerDirectory.identifier` | ✅ Kopiert · ⚙️ Bedingt | Kopiert nach 'Practitioner.identifier:TelematikID'<br>→ übernimmt Wert aus Quellvariable |
 | `KBVPRFORPractitioner.identifier [Bedingung: use = 'official' und system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR']` | `PractitionerDirectory.identifier` | ✅ Kopiert · ⚙️ Bedingt | Kopiert nach 'Practitioner.identifier:LANR'<br>→ übernimmt Wert aus Quellvariable |

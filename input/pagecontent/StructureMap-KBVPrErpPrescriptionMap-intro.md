@@ -13,7 +13,9 @@
 | `KBVPRERPPrescription.note` | `EPAMedicationRequest.note` | ✅ Kopiert | Kopiert nach 'MedicationRequest.note'<br>→ übernimmt Wert aus Quellvariable |
 | `KBVPRERPPrescription.requester` | `EPAMedicationRequest.requester` | ✅ Kopiert | Kopiert nach 'MedicationRequest.requester'<br>→ übernimmt Wert aus Quellvariable |
 | `KBVPRERPPrescription.status` | `EPAMedicationRequest.status` | ✅ Kopiert | Automatische Kopie<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPPrescription.subject` | `EPAMedicationRequest.subject` | ℹ️ Dokumentiert | Manual action required \| Transformationsregel F_007: Wird aus KBV_PR_FOR_Patient.identifier:versichertenId übernommen. \| Field: MedicationRequest.subject |
 | `KBVPRERPPrescription.substitution` | `EPAMedicationRequest.substitution` | ✅ Kopiert | Kopiert nach 'MedicationRequest.substitution'<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPPrescription.subject.identifier` | — | ℹ️ Dokumentiert | Manual action required \| Befüllen von .subject nach Transformationsregel F_010 \| Field: MedicationRequest.subject.identifier |
 
 ### Extensions
 

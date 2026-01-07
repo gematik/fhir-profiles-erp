@@ -5,7 +5,7 @@
   "name": "KBVPrForPractitionerMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-05",
+  "date": "2026-01-07",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
   "structure": [
     {
@@ -186,6 +186,57 @@
               "parameter": [
                 {
                   "valueId": "srcKBVPRFORPractitionerNamef7e47166"
+                }
+              ]
+            }
+          ],
+          "rule": [
+            {
+              "name": "PractitionerNameText82d0e3bd",
+              "target": [
+                {
+                  "context": "tgtPractitionerDirectoryName0e536837",
+                  "element": "name",
+                  "variable": "tgtTgtPractitionerDirectoryName0e536837Name40090346",
+                  "contextType": "variable"
+                }
+              ],
+              "rule": [
+                {
+                  "name": "PractitionerNameText82d0e3bd",
+                  "source": [
+                    {
+                      "context": "srcKBVPRFORPractitionerNamef7e47166",
+                      "element": "name",
+                      "variable": "srcSrcKBVPRFORPractitionerNamef7e47166Name85634591"
+                    }
+                  ],
+                  "rule": [
+                    {
+                      "name": "PractitionerNameText82d0e3bd",
+                      "documentation": "Manual action required | Zum Erzeugen von name.text siehe Transformationsregel F_011 | Field: Practitioner.name.text",
+                      "source": [
+                        {
+                          "context": "srcSrcKBVPRFORPractitionerNamef7e47166Name85634591",
+                          "variable": "srcSrcKBVPRFORPractitionerNamef7e47166NameTexta340dee3",
+                          "element": "text"
+                        }
+                      ]
+                    }
+                  ],
+                  "target": [
+                    {
+                      "context": "tgtTgtPractitionerDirectoryName0e536837Name40090346",
+                      "contextType": "variable",
+                      "element": "text",
+                      "variable": "tgtTgtPractitionerDirectoryName0e536837NameText13ceeb1e"
+                    }
+                  ]
+                }
+              ],
+              "source": [
+                {
+                  "context": "KBVPRFORPractitioner"
                 }
               ]
             }
