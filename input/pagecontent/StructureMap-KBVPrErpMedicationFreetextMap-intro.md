@@ -10,28 +10,28 @@
 
 ### Extensions
 
-#### Extension: (ohne Bedingung)
-
-| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
-|------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPMedicationFreeText.extension` | `EPAMedication.extension` | ℹ️ Dokumentiert | Manual action required \| Fester Wert: 781405001, Medicinal product package (product) \| Field: Medication.extension:type |
-
 #### Extension: KBV_EX_ERP_Medication_Category
 Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category`
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPMedicationFreeText.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension` | 🆕 Erstellt · ⚙️ Bedingt | Kopiert von 'Medication.extension:Arzneimittelkategorie'<br>→ erstellt neues Extension |
-| `KBVPRERPMedicationFreeText.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.url` | 📝 Setzt Wert · ⚙️ Bedingt | Kopiert von 'Medication.extension:Arzneimittelkategorie'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' |
-| `KBVPRERPMedicationFreeText.extension.value  [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.value` | 🆕 Erstellt | Kopiert von 'Medication.extension:Arzneimittelkategorie.value[x]'<br>→ erstellt neues Coding |
-| `KBVPRERPMedicationFreeText.extension.value.code  [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.value.code` | ✅ Kopiert | Copied drugCategory code<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationFreeText.extension`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension` | 🆕 Erstellt · ⚙️ Bedingt | Kopiert von 'Medication.extension:Arzneimittelkategorie'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationFreeText.extension`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.url` | 📝 Setzt Wert · ⚙️ Bedingt | Kopiert von 'Medication.extension:Arzneimittelkategorie'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' |
+| `KBVPRERPMedicationFreeText.extension.value`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.value` | 🆕 Erstellt | Kopiert von 'Medication.extension:Arzneimittelkategorie.value[x]'<br>→ erstellt neues Coding |
+| `KBVPRERPMedicationFreeText.extension.value.code`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category']` | `EPAMedication.extension.value.code` | ✅ Kopiert | Copied drugCategory code<br>→ übernimmt Wert aus Quellvariable |
 
 #### Extension: KBV_EX_ERP_Medication_Vaccine
 Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine`
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPMedicationFreeText.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension` | 🆕 Erstellt · ⚙️ Bedingt | Kopiert von 'Medication.extension:Impfstoff'<br>→ erstellt neues Extension |
-| `KBVPRERPMedicationFreeText.extension [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension.url` | 📝 Setzt Wert · ⚙️ Bedingt | Kopiert von 'Medication.extension:Impfstoff'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' |
-| `KBVPRERPMedicationFreeText.extension.value  [Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension.value` | ✅ Kopiert | Kopiert von 'Medication.extension:Impfstoff.value[x]'<br>→ übernimmt Wert aus Quellvariable |
+| `KBVPRERPMedicationFreeText.extension`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension` | 🆕 Erstellt · ⚙️ Bedingt | Kopiert von 'Medication.extension:Impfstoff'<br>→ erstellt neues Extension |
+| `KBVPRERPMedicationFreeText.extension`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension.url` | 📝 Setzt Wert · ⚙️ Bedingt | Kopiert von 'Medication.extension:Impfstoff'<br>→ setzt URL 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' |
+| `KBVPRERPMedicationFreeText.extension.value`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine']` | `EPAMedication.extension.value` | ✅ Kopiert | Kopiert von 'Medication.extension:Impfstoff.value[x]'<br>→ übernimmt Wert aus Quellvariable |
+
+#### Extension: (ohne Bedingung)
+
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationFreeText.extension` | `Medication.extension:type` | 🛠️ Manuell | Fester Wert: 781405001, Medicinal product package (product) |
 

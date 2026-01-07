@@ -1,29 +1,98 @@
 {% assign transformation_rule = include['transformation-rule'] %}
 {% assign mapping_filter = include.mapping %}
+{% assign profile_filter_raw = include.profiles %}
 {% assign heading_level = include.level | default: 4 %}
 
 {% comment %}
-  Filtering behavior:
-  - If include.mapping is set and the rule has no mapping, render it ("applies to all").
-  - If the rule has mapping as a string, require equality.
-  - If the rule has mapping as an array, require it to contain the filter value.
+	Filtering behavior:
+	- If include.mapping is set and the rule has no mapping, render it ("applies to all").
+	- If include.mapping is set and the rule has mapping, render only if it contains the filter.
+		(Works for mapping as a string or as an array.)
+	- If include.profiles is set, render only rules that reference one of the requested profile names
+		(the comparison is case-insensitive and also matches Markdown links like [Profile](...)).
 {% endcomment %}
 
 {% assign rule_mapping = transformation_rule.mapping %}
-{% assign mapping_matches = true %}
+{% assign profile_filter_list = nil %}
 
-{% if mapping_filter and rule_mapping %}
-	{% assign first_mapping = rule_mapping | first %}
-	{% if first_mapping %}
-		{% assign mapping_matches = rule_mapping contains mapping_filter %}
+{% if profile_filter_raw %}
+	{% assign profile_filter_json = profile_filter_raw | jsonify %}
+	{% assign profile_filter_first = profile_filter_json | slice: 0, 1 %}
+	{% if profile_filter_first == '[' %}
+		{%- assign normalized_filters = profile_filter_json | replace: '["', '' | replace: '"]', '' -%}
+		{%- assign normalized_filters = normalized_filters | replace: '","', '|__|' -%}
+		{%- assign profile_filter_list = normalized_filters | split: '|__|' -%}
 	{% else %}
-		{% assign mapping_matches = rule_mapping == mapping_filter %}
+		{%- assign normalized_filters = profile_filter_json | replace: '"', '' -%}
+		{%- assign normalized_filters = normalized_filters | replace: '|', ',' -%}
+		{%- assign profile_filter_list = normalized_filters | split: ',' -%}
 	{% endif %}
 {% endif %}
 
-{% if mapping_filter and rule_mapping and mapping_matches != true %}
-	{% comment %}Filtered out by mapping tag{% endcomment %}
-{% else %}
+{% assign has_profile_filter = false %}
+{% if profile_filter_list %}
+	{% assign profile_filter_count = profile_filter_list | size %}
+	{% if profile_filter_count > 0 %}
+		{% assign has_profile_filter = true %}
+	{% endif %}
+{% endif %}
+
+{% assign filter_out = false %}
+
+{% if mapping_filter %}
+	{% assign mapping_matches = false %}
+	{% if rule_mapping %}
+		{% assign mapping_json = rule_mapping | jsonify %}
+		{% assign mapping_json_first = mapping_json | slice: 0, 1 %}
+		{% if mapping_json_first == '[' %}
+			{% assign normalized_mappings = mapping_json | replace: '["', '' | replace: '"]', '' %}
+			{% assign normalized_mappings = normalized_mappings | replace: '","', '|__|' %}
+			{% assign mapping_list = normalized_mappings | split: '|__|' %}
+			{% for mapping_value in mapping_list %}
+				{% assign mapping_value_normalized = mapping_value | strip | downcase %}
+				{% if mapping_value_normalized == mapping_filter | downcase %}
+					{% assign mapping_matches = true %}
+				{% endif %}
+			{% endfor %}
+		{% else %}
+			{% assign mapping_value_normalized = rule_mapping | strip | downcase %}
+			{% if mapping_value_normalized == mapping_filter | downcase %}
+				{% assign mapping_matches = true %}
+			{% endif %}
+		{% endif %}
+	{% else %}
+		{% assign mapping_matches = true %}
+	{% endif %}
+
+	{% unless mapping_matches %}
+		{% assign filter_out = true %}
+	{% endunless %}
+{% endif %}
+
+{% if filter_out != true and has_profile_filter %}
+	{% assign matches_profile_filter = false %}
+	{% if transformation_rule.profiles %}
+		{% for rule_profile in transformation_rule.profiles %}
+			{% assign profile_label = rule_profile | strip %}
+			{% if profile_label contains '](' %}
+				{% assign profile_label = profile_label | split: '](' | first %}
+				{% assign profile_label = profile_label | remove: '[' %}
+			{% endif %}
+			{% assign profile_label_normalized = profile_label | strip | downcase %}
+			{% for profile_filter in profile_filter_list %}
+				{% assign filter_value = profile_filter | strip | downcase %}
+				{% if filter_value != '' and profile_label_normalized == filter_value %}
+					{% assign matches_profile_filter = true %}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	{% endif %}
+	{% unless matches_profile_filter %}
+		{% assign filter_out = true %}
+	{% endunless %}
+{% endif %}
+
+{% unless filter_out %}
 
 {% if transformation_rule.anchor %}
 <a id="{{ transformation_rule.anchor }}"></a>
@@ -74,8 +143,7 @@
 			</tr>
 		{% endif %}
 	</table>
-	<figcaption><strong>Tabelle:</strong> Transformationsregel {{ transformation_rule.title }}</figcaption>
 </figure>
 
-{% endif %}
+{% endunless %}
 

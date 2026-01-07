@@ -3,6 +3,8 @@ import json
 import re
 from typing import List, Optional
 
+MANUAL_ACTION_LABEL = "🛠️ Manuell"
+
 
 def escape_markdown(text):
     """Escape characters that would break markdown tables."""
@@ -28,6 +30,40 @@ def translate_doc(text: Optional[str]) -> str:
     for pattern, repl in replacements:
         result = re.sub(pattern, repl, result)
     return result
+
+
+def parse_manual_documentation(text: Optional[str]) -> Optional[dict]:
+    """Erkennt und extrahiert Hinweise aus 'Manual action required' Dokumentation."""
+    if not text:
+        return None
+
+    if "manual action" not in text.lower():
+        return None
+
+    parts = [part.strip() for part in text.split('|')]
+    instructions = []
+    field_value = ""
+
+    for part in parts:
+        lower_part = part.lower()
+        if not part:
+            continue
+        if "manual action" in lower_part:
+            continue
+        if lower_part.startswith('field:'):
+            field_value = part.split(':', 1)[1].strip()
+            continue
+        instructions.append(part)
+
+    if not instructions and not field_value:
+        return None
+
+    instruction_text = " | ".join(instructions).strip()
+    return {
+        "instruction": instruction_text,
+        "field": field_value,
+        "is_manual": True,
+    }
 
 def clean_path(path):
     """Clean up FHIR paths to be more readable"""
@@ -382,7 +418,8 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         
         # Prepare description shared across targets
         base_desc_parts = []
-        if rule.get('documentation'):
+        rule_manual_info = parse_manual_documentation(rule.get('documentation'))
+        if rule.get('documentation') and not rule_manual_info:
             base_desc_parts.append(escape_markdown(translate_doc(rule['documentation'])))
         if 'dependent' in rule:
             dependent_links = []
@@ -393,7 +430,7 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                     link = f"[{readable_name}](./StructureMap-{dep_name}.html)"
                     dependent_links.append(link)
             if dependent_links:
-                base_desc_parts.append("Verwendet Mapping: " + ", ".join(dependent_links))
+                base_desc_parts.append("Verwendet StructureMap: " + ", ".join(dependent_links))
 
         # Build target paths (possibly multiple)
         tgt_path = ""
@@ -423,8 +460,21 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                 if not desc:
                     desc = "*(direkte Kopie)*"
                 action = determine_action_label(rule, tgt)
-                if src_path_clean or tgt_path_clean or desc:
-                    mappings.append((src_path_clean, tgt_path_clean, action, desc))
+                output_tgt_path = tgt_path_clean
+
+                if rule_manual_info:
+                    manual_instruction = rule_manual_info.get('instruction', '').strip()
+                    if manual_instruction:
+                        desc = escape_markdown(manual_instruction)
+                    else:
+                        desc = "Manual action required"
+                    action = MANUAL_ACTION_LABEL
+                    manual_field = rule_manual_info.get('field')
+                    if manual_field:
+                        output_tgt_path = manual_field
+
+                if src_path_clean or output_tgt_path or desc:
+                    mappings.append((src_path_clean, output_tgt_path, action, desc))
         
         # Recurse into nested rules
         if 'rule' in rule:
@@ -445,23 +495,9 @@ def structuremap_to_markdown(json_data):
         if src or desc or (tgt and 'direkte Kopie' not in desc)
     ]
 
-    def sort_key(row):
-        src, tgt, _, _ = row
-        tgt_parts = (tgt or "").split('.') if tgt else []
-        tgt_depth = len(tgt_parts)
-        last = tgt_parts[-1] if tgt_parts else ""
-        parent = ".".join(tgt_parts[:-1]) if tgt_parts else ""
-        priority_map = {
-            "extension": 0,
-            "url": 1,
-            "value": 2,
-            "id": 3,
-        }
-        last_prio = priority_map.get(last, 9)
-        primary = tgt or src or "~"
-        return (primary, parent, tgt_depth, last_prio, src or "", tgt or "")
-
-    filtered_mappings.sort(key=sort_key)
+    # IMPORTANT: Keep the natural StructureMap rule order (depth-first traversal).
+    # A global sort by source/target path destroys the rule tree grouping and makes
+    # related fields hard to read (e.g. part.name separated from its part.resource).
 
     if not filtered_mappings:
         return "*(Keine bedeutsamen Transformationen gefunden - nur direkte Kopien)*"
@@ -477,13 +513,24 @@ def structuremap_to_markdown(json_data):
 
     out_lines = []
 
+    def format_source_cell(src):
+        if not src:
+            return "—"
+        if '[' in src:
+            bracket_index = src.find('[')
+            prefix = src[:bracket_index].rstrip()
+            suffix = src[bracket_index:].strip()
+            if prefix:
+                return f"`{prefix}`<br>`{suffix}`"
+        return f"`{src}`"
+
     def render_table(rows_to_render):
         rows_out = [
             "| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |",
             "|------------------------|---------------------|--------|-------------------------------|",
         ]
         for src, tgt, action, desc in rows_to_render:
-            src_display = f"`{src}`" if src else "—"
+            src_display = format_source_cell(src)
             tgt_display = f"`{tgt}`" if tgt else "—"
             desc_display = desc if desc else "*(direkte Kopie)*"
             rows_out.append(f"| {src_display} | {tgt_display} | {action} | {desc_display} |")
@@ -497,35 +544,22 @@ def structuremap_to_markdown(json_data):
     if extension_rows:
         # Gruppiere nach Bedingung/url (damit url/value direkt zusammen erscheinen)
         groups = {}
+        group_order = []
         for src, tgt, action, desc in extension_rows:
             condition_text = extract_condition_text(src or "")
             url_value = extract_url_value_from_condition(condition_text)
             key = url_value or condition_text or "(ohne Bedingung)"
-            groups.setdefault(key, []).append((src, tgt, action, desc))
-
-        # stabile Gruppen-Reihenfolge
-        def group_sort_key(k):
-            label = shorten_url_label(k) if k.startswith("http") else k
-            return label
+            if key not in groups:
+                groups[key] = []
+                group_order.append(key)
+            groups[key].append((src, tgt, action, desc))
 
         out_lines.append("")
         out_lines.append("### Extensions")
         out_lines.append("")
 
-        def row_sort_key(row):
-            src, tgt, _, _ = row
-            tgt_parts = (tgt or "").split('.') if tgt else []
-            tgt_depth = len(tgt_parts)
-            last = tgt_parts[-1] if tgt_parts else ""
-            parent = ".".join(tgt_parts[:-1]) if tgt_parts else ""
-            priority_map = {"extension": 0, "url": 1, "value": 2, "id": 3}
-            last_prio = priority_map.get(last, 9)
-            # innerhalb der Gruppe nach Ziel-Hierarchie sortieren
-            return (parent, tgt_depth, last_prio, tgt or "", src or "")
-
-        for key in sorted(groups.keys(), key=group_sort_key):
+        for key in group_order:
             group_rows = groups[key]
-            group_rows.sort(key=row_sort_key)
 
             if key.startswith("http"):
                 out_lines.append(f"#### Extension: {shorten_url_label(key)}")

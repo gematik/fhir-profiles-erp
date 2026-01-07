@@ -101,6 +101,10 @@ StructureDefinition/rx-prescription-process-identifier
 {% include artefacts-structuredef-table-generator.html type="Extension"%}
 <div><figcaption><strong>Tabelle:</strong> Extension Definitions</figcaption></div>
 
+### Mapping Definitions (StructureMaps)
+
+{% include artifacts-table-generator.html resourceType="StructureMap" %}
+<div><figcaption><strong>Tabelle:</strong> StructureMap</figcaption></div>
 
 ### Nutzung von Cross-Version-Extensions
 

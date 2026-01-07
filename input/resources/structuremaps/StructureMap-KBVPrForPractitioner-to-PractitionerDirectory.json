@@ -45,7 +45,7 @@
               "context": "KBVPRFORPractitioner",
               "element": "identifier",
               "variable": "srcKBVPRFORPractitionerIdentifierd46d78b7",
-              "condition": "(use = 'official' and system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR') != true and (system = 'https://gematik.de/fhir/sid/telematik-id') != true"
+              "condition": "(use = 'official' and system = 'https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR') != true"
             }
           ],
           "target": [
@@ -237,31 +237,6 @@
               "source": [
                 {
                   "context": "KBVPRFORPractitioner"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "PractitionerQualificationb6a27549",
-          "documentation": "Automatic copy",
-          "source": [
-            {
-              "context": "KBVPRFORPractitioner",
-              "element": "qualification",
-              "variable": "srcKBVPRFORPractitionerQualificationeae165c6"
-            }
-          ],
-          "target": [
-            {
-              "context": "PractitionerDirectory",
-              "contextType": "variable",
-              "element": "qualification",
-              "variable": "tgtPractitionerDirectoryQualification6da58337",
-              "transform": "create",
-              "parameter": [
-                {
-                  "valueString": "BackboneElement"
                 }
               ]
             }
