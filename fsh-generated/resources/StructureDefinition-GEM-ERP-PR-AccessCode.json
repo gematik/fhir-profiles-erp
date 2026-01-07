@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AccessCode",
   "version": "1.6.1",
   "name": "GEM_ERP_PR_AccessCode",
-  "title": "Identifier-Profil für Verschreibungs-IDs",
+  "title": "GEM ERP PR AccessCode",
   "status": "draft",
   "date": "2025-09-25",
   "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",

@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device",
   "version": "1.6.1",
   "name": "GEM_ERP_PR_Device",
+  "title": "GEM ERP PR Device",
   "status": "draft",
   "date": "2025-09-25",
   "description": "Statische Informationen auf dem E-Rezept-Fachdienst",

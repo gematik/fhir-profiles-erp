@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
   "version": "1.6.1-draft",
   "name": "ERezeptWorkflow",
-  "title": "E-Rezept Workflow",
+  "title": "Implementation Guide E-Rezept-Fachdienst",
   "status": "draft",
   "publisher": "gematik GmbH",
   "contact": [
@@ -22,7 +22,6 @@
       ]
     }
   ],
-  "description": "Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst",
   "jurisdiction": [
     {
       "coding": [
@@ -576,6 +575,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-AccessCode"
+        },
+        "name": "GEM ERP PR AccessCode",
+        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-PAR-Activate-Operation-Output"
         },
         "name": "GEM ERP PR ActivateOperation Output",
@@ -604,6 +611,14 @@
         },
         "name": "GEM ERP PR Bundle",
         "description": "Dokumentenbündel für Quittung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Bundle-OP-Accept"
+        },
+        "name": "GEM ERP PR Bundle OP Accept",
+        "description": "Antwort des E-Rezept-Fachdienst auf die $accept-Operation",
         "exampleBoolean": false
       },
       {
@@ -680,6 +695,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Device"
+        },
+        "name": "GEM ERP PR Device",
+        "description": "Statische Informationen auf dem E-Rezept-Fachdienst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Digest"
         },
         "name": "GEM ERP PR Digest",
@@ -720,6 +743,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-Secret"
+        },
+        "name": "GEM ERP PR Secret",
+        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Task"
         },
         "name": "GEM ERP PR Task",
@@ -744,17 +775,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Bundle-OP-Accept"
+          "reference": "StructureDefinition/GEM-ERP-PR-Signature"
         },
-        "name": "GEM_ERP_PR_Bundle_OP_Accept",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Device"
-        },
-        "name": "GEM_ERP_PR_Device",
-        "description": "Statische Informationen auf dem E-Rezept-Fachdienst",
+        "name": "GEM_ERP_PR_Signature",
+        "description": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
         "exampleBoolean": false
       },
       {
@@ -764,22 +788,6 @@
         "name": "Gerät für Quittungs-Bundle",
         "description": "Beispiel für ein Gerät, das für die Erstellung von E-Rezept-Quittungen verwendet wird",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Secret"
-        },
-        "name": "Identifier-Profil für Secret",
-        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-AccessCode"
-        },
-        "name": "Identifier-Profil für Verschreibungs-IDs",
-        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
       },
       {
         "reference": {
@@ -923,13 +931,6 @@
         "name": "Medikament-Rezeptur",
         "description": "Beispiel für eine Rezeptur mit mehreren Wirkstoffen als zusammengesetztes Medikament",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Signature"
-        },
-        "name": "Profil für die Signatur von Bundles im E-Rezept-Kontext",
-        "exampleBoolean": false
       },
       {
         "reference": {

@@ -1,7 +1,7 @@
 Profile: GEM_ERP_PR_Secret
 Parent: Identifier
 Id: GEM-ERP-PR-Secret
-Title: "Identifier-Profil für Secret"
+Title: "GEM ERP PR Secret"
 Description: "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task."
 * insert StructureDefinition(GEM_ERP_PR_Secret)
 * use = #official (exactly)

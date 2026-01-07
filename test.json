@@ -1,0 +1,837 @@
+{
+    "releases": [
+        {
+            "version": "1.6.1",
+            "requirements": [
+                {
+                    "title": "E-Rezept-Fachdienst – vertrauliche Kommunikation",
+                    "key": "ERP-FD76956VH9",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Automatisierter Abbau des sicheren Kanals",
+                    "key": "ERP-FD46454DJ3",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Berücksichtigung OWASP-Top-10-Risiken",
+                    "key": "ERP-FD11627FC5",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Caching OCSP-Antworten",
+                    "key": "ERP-FD90745NW1",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "MAY",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Sicherer Kanal vom Client zum Verarbeitungskontext der VAU",
+                    "key": "ERP-FD74033P6P",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Kein physischer Zugang des Anbieters zu Systemen der VAU",
+                    "key": "ERP-FD27076A8J",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Einsatz zertifizierter HSM",
+                    "key": "ERP-FD09148ZQ7",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Umsetzung der fachlichen Operationen in einer Vertrauenswürdigen Ausführungsumgebung",
+                    "key": "ERP-FD36975N4C",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss Vertreterkommunikation von bzw. an Prüf-Identität",
+                    "key": "ERP-FD82358ACB",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "Medikationsplan (durch das Aktensystem gerendert) im ePA-FdV anzeigen",
+                    "key": "ERP-FD23427X68",
+                    "actor": [
+                        "EPA-FdV"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "Anbieter E-Rezept-Fachdienst Speicherung Schlüsselmaterial in HSM",
+                    "key": "ERP-FD75799E75",
+                    "actor": [
+                        "Anbieter E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-technische-umsetzung-systemueberblick.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Nutzdatenbereinigung vor physischem Zugang zu Systemen der VAU",
+                    "key": "ERP-FD03409QT4",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Richtlinien für den Paketfilter zum Internet",
+                    "key": "ERP-FD01725QFP",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Drosselung User Agent Aufrufe",
+                    "key": "ERP-FD48133QF6",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Task erzeugen - Rollenprüfung",
+                    "key": "ERP-FD29739F5Z",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Private Schlüssel von Dienstzertifikaten im HSM",
+                    "key": "ERP-FD01299AJA",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Datenschutzkonformes Logging und Monitoring des Verarbeitungskontextes der VAU",
+                    "key": "ERP-FD43093Z73",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Bereitstellung OCSP-Forwarder",
+                    "key": "ERP-FD88382L68",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Ergänzung Performer-Typ für Einlöseinstitutstyp",
+                    "key": "ERP-FD78744A6J",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Task erzeugen - Generierung Rezept-ID",
+                    "key": "ERP-FD69465HLH",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Drosselung Rezeptfälschungen",
+                    "key": "ERP-FD04712LW3",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss Vertreterzugriff auf bzw. mittels Prüf-Identität",
+                    "key": "ERP-FD96295XUY",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel durch ein HSM",
+                    "key": "ERP-FD31982N6D",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit FdV",
+                    "key": "ERP-FD52209B49",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Authentisierung gegenüber Clients",
+                    "key": "ERP-FD32785QT5",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Task erzeugen - Generierung AccessCode",
+                    "key": "ERP-FD68017FZG",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Sicherer Kanal zum Verarbeitungskontext der VAU auf Inhaltsebene",
+                    "key": "ERP-FD68443DFQ",
+                    "actor": [
+                        "Eingangspunkt E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Bereitstellung TSL",
+                    "key": "ERP-FD96581ZZ1",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Konsistenter Systemzustand des Verarbeitungskontextes der VAU",
+                    "key": "ERP-FD95094TNA",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Unabhängige Skalierung der Dienst-Ressourcen für verschiedene Anwendergruppen",
+                    "key": "ERP-FD47035F2B",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Platzierung des Paketfilters Internet",
+                    "key": "ERP-FD37124TBP",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL NOT",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Verschlüsselung von außerhalb des Verarbeitungskontextes der VAU gespeicherten Daten",
+                    "key": "ERP-FD42451P44",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Isolation zwischen Datenverarbeitungsprozessen mehrerer Verarbeitungskontexte der VAU",
+                    "key": "ERP-FD39015GH3",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Status draft",
+                    "key": "ERP-FD43166Q7R",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Verarbeitungskontext der VAU",
+                    "key": "ERP-FD94711P63",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel aus Merkmal der E-Rezepte",
+                    "key": "ERP-FD88954YDM",
+                    "actor": [
+                        "HSM der VAU"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Isolation der VAU von Datenverarbeitungsprozessen des Anbieters",
+                    "key": "ERP-FD30410DZ1",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – HSM-Kryptographieschnittstelle verfügbar nur für Instanzen der VAU",
+                    "key": "ERP-FD16783EK6",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Sicherung zum Transportnetz Internet durch Paketfilter",
+                    "key": "ERP-FD35066LGS",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ",
+                    "key": "ERP-FD69482N1M",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des Schlüssels im 4-Augen-Prinzip",
+                    "key": "ERP-FD16761XDX",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Erkennen der Prüfidentität",
+                    "key": "ERP-FD08368UL3",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Richtlinien zum TLS-Verbindungsaufbau",
+                    "key": "ERP-FD01556A9B",
+                    "actor": [
+                        "Eingangspunkt E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Prozess zur Verwaltung von API-KEYs",
+                    "key": "ERP-FD69180LPZ",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Identität des Verarbeitungskontextes für Clients",
+                    "key": "ERP-FD11178S4L",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – OCSP-Stapling",
+                    "key": "ERP-FD36260L42",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "Anbieter E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – unverzüglicher Schlüsselwechsel",
+                    "key": "ERP-FD99427WMG",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss unbekannter FdV-Versionsnummern von der Kommunikation",
+                    "key": "ERP-FD64318UGP",
+                    "actor": [
+                        "ERP"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – OCSP-Status für das OCSP-Stapling",
+                    "key": "ERP-FD47556DVB",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Zuordnung Abfrageursprung Client",
+                    "key": "ERP-FD34828WAY",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Geschützte Weitergabe von Daten an autorisierte Nutzer durch die VAU",
+                    "key": "ERP-FD22674T4Z",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Verarbeitungskontexte der VAU über gemeinsame Host-Adressen erreichbar",
+                    "key": "ERP-FD24028HRF",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit AVS",
+                    "key": "ERP-FD76352K95",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Transportverschlüsselte Übertragung von Daten mit PVS",
+                    "key": "ERP-FD40680HRZ",
+                    "actor": [
+                        "Verarbeitungskontext E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss von Manipulationen an der Hardware der VAU",
+                    "key": "ERP-FD76154QMA",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Drosselung Brute-Force-Anfragen",
+                    "key": "ERP-FD34980N5L",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "Anbieter E-Rezept-Fachdienst – Betrieblicher Prozess Deaktivieren von Übertragungen",
+                    "key": "ERP-FD02811TYD",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Verhalten bei Vollauslastung",
+                    "key": "ERP-FD05222WAD",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Verbindungen von Clients zu Verarbeitungskontexten der VAU über den Eingangspunkt",
+                    "key": "ERP-FD55516P8F",
+                    "actor": [
+                        "Eingangspunkt E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "Anbieter E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen des Schlüssels im 4-Augen-Prinzip",
+                    "key": "ERP-FD83938KX4",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss von Client-Versionen",
+                    "key": "ERP-FD85389ZF9",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Task erzeugen - Schemavalidierung Rezept anlegen",
+                    "key": "ERP-FD12338LVT",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "Anbieter E-Rezept-Fachdienst – Konfiguration und Deaktivierung Drosselung",
+                    "key": "ERP-FD30074ZHL",
+                    "actor": [
+                        "Anb_eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Zugriff auf Webdienste – Deaktivieren von Übertragungen",
+                    "key": "ERP-FD06745UX0",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Erkennung Clientsystem User-Agent",
+                    "key": "ERP-FD65454TGD",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – geheimer Schlüssel nur in VAU",
+                    "key": "ERP-FD98306PCS",
+                    "actor": [
+                        "E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Ausschluss von Manipulationen an der Software der VAU",
+                    "key": "ERP-FD01507KJ4",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst - Task erzeugen - Task-ID=Rezept-ID",
+                    "key": "ERP-FD95956VP0",
+                    "actor": [
+                        "eRp_FD"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "op-create.html"
+                },
+                {
+                    "title": "E-Rezept-Fachdienst – Kontinuierliche Wirksamkeit des Manipulationsschutzes der VAU",
+                    "key": "ERP-FD42807H6K",
+                    "actor": [
+                        "VAU E-Rezept-Fachdienst"
+                    ],
+                    "version": 0,
+                    "release_status": "NEW",
+                    "status": "ACTIVE",
+                    "conformance": "SHALL",
+                    "path": "menu-schnittstellen-datenschutz-und-sicherheit.html"
+                }
+            ]
+        }
+    ]
+}
