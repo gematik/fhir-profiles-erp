@@ -1,6 +1,6 @@
 ## Provide Prescription Mapping Tables
 
-Automatisch generiert am 2026-01-07.
+Automatisch generiert am 2026-01-08.
 
 Die folgenden Seiten beschreiben das Mapping von KBV Bundles zu Provide Parameters.
 

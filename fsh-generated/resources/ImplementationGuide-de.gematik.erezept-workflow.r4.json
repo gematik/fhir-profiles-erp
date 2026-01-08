@@ -1100,13 +1100,35 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "mapping-verordnungsdaten.html",
+              "nameUrl": "mapping-prescription.html",
               "title": "Mapping von Verordnungsdaten",
-              "generation": "markdown"
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "mapping-prescription-practitioner.html",
+                  "title": "Mapping des Verordnenden für Verordnungsdaten",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "mapping-prescription-organization.html",
+                  "title": "Mapping der Organization für Verordnungsdaten",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "mapping-prescription-medicationrequest.html",
+                  "title": "Mapping der Verschreibung für Verordnungsdaten",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "mapping-prescription-medication.html",
+                  "title": "Mapping der Arzneimitteldaten für Verordnungsdaten",
+                  "generation": "markdown"
+                }
+              ]
             },
             {
-              "nameUrl": "mapping-practitioner.html",
-              "title": "Mapping des Verordnenden",
+              "nameUrl": "mapping-dispensation.html",
+              "title": "Mapping von Dispensierinformationen",
               "generation": "markdown"
             }
           ]

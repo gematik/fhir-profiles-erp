@@ -225,6 +225,7 @@
   mapping: provide-prescription
   profiles:
     - "[KBV_PR_ERP_Bundle](https://simplifier.net/erezept/kbv_pr_erp_bundle)"
+    - "[EPAOpProvidePrescriptionERPInputParameters](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/StructureDefinition-epa-op-provide-prescription-erp-input-parameters.html)"
     - "[KBV_PR_FOR_Practitioner](https://simplifier.net/for/kbv_pr_for_practitioner)"
     - "[PractitionerDirectory](https://simplifier.net/vzd-fhir-directory/practitionerdirectorystrict)"
   references:
