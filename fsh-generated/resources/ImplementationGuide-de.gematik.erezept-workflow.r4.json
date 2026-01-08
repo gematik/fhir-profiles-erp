@@ -1130,6 +1130,31 @@
               "nameUrl": "mapping-dispensation.html",
               "title": "Mapping von Dispensierinformationen",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "comparison-Bundle-input-example-1.html",
+              "title": "Beispiel für eine Transformation einer PZN",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "comparison-Bundle-input-example-2.html",
+              "title": "Beispiel für eine Transformation einer Wirkstoffverordnung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "comparison-Bundle-input-example-3.html",
+              "title": "Beispiel für eine Transformation einer Freitextverordnung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "comparison-Bundle-input-example-4.html",
+              "title": "Beispiel für eine Transformation einer Rezepturverordnung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "comparison-Bundle-input-example-5.html",
+              "title": "Beispiel für eine Transformation einer Verordnung mit absoluter Referenzierung",
+              "generation": "markdown"
             }
           ]
         },

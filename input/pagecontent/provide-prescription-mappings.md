@@ -6,10 +6,10 @@ Die folgenden Seiten beschreiben das Mapping von KBV Bundles zu Provide Paramete
 
 ### Bundles
 
-- [Bundle input-example-1](Bundle-input-example-1-mapping.html)
-- [Bundle input-example-2](Bundle-input-example-2-mapping.html)
-- [Bundle input-example-3](Bundle-input-example-3-mapping.html)
-- [Bundle input-example-4](Bundle-input-example-4-mapping.html)
-- [Bundle input-example-5](Bundle-input-example-5-mapping.html)
+- [Bundle input-example-1](comparison-Bundle-input-example-1.html)
+- [Bundle input-example-2](comparison-Bundle-input-example-2.html)
+- [Bundle input-example-3](comparison-Bundle-input-example-3.html)
+- [Bundle input-example-4](comparison-Bundle-input-example-4.html)
+- [Bundle input-example-5](comparison-Bundle-input-example-5.html)
 
 > Diese Datei wird automatisch durch scripts/testscripts/generate-provide-prescription-docs.py erzeugt.

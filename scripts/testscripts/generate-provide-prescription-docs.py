@@ -132,7 +132,7 @@ def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
             print(f"[WARN] Kein Bundle für Parameters-Datei gefunden: {param_file.name}")
             continue
         bundle_stem = bundle_file.stem
-        output_file = args.mapping_dir / f"{bundle_stem}-mapping.md"
+        output_file = args.mapping_dir / f"comparison-{bundle_stem}.md"
         cmd = [
             args.python,
             str(COMPARE_SCRIPT),
@@ -158,6 +158,8 @@ def generate_mapping_tables(args: argparse.Namespace) -> List[str]:
 
 def label_for_mapping(filename: str) -> str:
     base = filename
+    if base.startswith("comparison-"):
+        base = base[len("comparison-") :]
     if base.startswith("Bundle-"):
         base = base[len("Bundle-") :]
     uuid_part = base
@@ -171,7 +173,7 @@ def label_for_mapping(filename: str) -> str:
 
 
 def collect_mapping_files(mapping_dir: Path) -> List[Path]:
-    return sorted(mapping_dir.glob("Bundle-*-mapping.md"))
+    return sorted(mapping_dir.glob("comparison-*.md"))
 
 
 def write_overview(mapping_files: List[Path], mapping_dir: Path) -> None:
@@ -191,11 +193,8 @@ def write_overview(mapping_files: List[Path], mapping_dir: Path) -> None:
     else:
         for file in mapping_files:
             base = file.name
-            name_without_suffix = base
-            if name_without_suffix.endswith("-mapping.md"):
-                name_without_suffix = name_without_suffix[: -len("-mapping.md")]
-            label = label_for_mapping(name_without_suffix)
-            html_target = base.replace(".md", ".html")
+            label = label_for_mapping(file.stem)
+            html_target = f"{file.stem}.html"
             lines.append(f"- [{label}]({html_target})")
     lines.extend(
         [
@@ -217,12 +216,8 @@ def write_include_links(mapping_files: List[Path], include_dir: Path) -> None:
     else:
         lines = []
         for file in mapping_files:
-            base = file.name
-            name_without_suffix = base
-            if name_without_suffix.endswith("-mapping.md"):
-                name_without_suffix = name_without_suffix[: -len("-mapping.md")]
-            label = label_for_mapping(name_without_suffix)
-            html_target = base.replace(".md", ".html")
+            label = label_for_mapping(file.stem)
+            html_target = f"{file.stem}.html"
             lines.append(f"- [{label}]({html_target})")
         content = "\n".join(lines) + "\n"
 
