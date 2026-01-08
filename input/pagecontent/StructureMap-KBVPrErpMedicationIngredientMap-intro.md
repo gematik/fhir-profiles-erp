@@ -4,7 +4,6 @@
 |------------------------|---------------------|--------|-------------------------------|
 | `KBVPRERPMedicationIngredient.amount` | `EPAMedication.amount` | Kopiert | Automatische Kopie<br>übernimmt Wert aus Quellvariable |
 | `KBVPRERPMedicationIngredient.batch` | `EPAMedication.batch` | Kopiert | Kopiert nach 'Medication.batch'<br>übernimmt Wert aus Quellvariable |
-| `KBVPRERPMedicationIngredient.code` | `EPAMedication.code` | Kopiert | Automatische Kopie<br>übernimmt Wert aus Quellvariable |
 | `KBVPRERPMedicationIngredient` | `Medication.extension:type` | Manuell | Fester Wert: 781405001, Medicinal product package (product) |
 | `KBVPRERPMedicationIngredient.form` | `EPAMedication.form` | Kopiert | Automatische Kopie<br>übernimmt Wert aus Quellvariable |
 | `KBVPRERPMedicationIngredient.ingredient` | `EPAMedication.ingredient` | Erstellt | Automatische Kopie<br>erstellt neues BackboneElement |

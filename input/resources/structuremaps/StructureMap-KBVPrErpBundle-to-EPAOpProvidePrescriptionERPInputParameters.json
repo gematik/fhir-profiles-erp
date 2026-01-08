@@ -5,7 +5,7 @@
   "name": "KBVPrErpBundleMap",
   "status": "draft",
   "version": "1.0",
-  "date": "2026-01-07",
+  "date": "2026-01-08",
   "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.4.0 -> EPAOpProvidePrescriptionERPInputParameters|1.3.0",
   "structure": [
     {
@@ -118,7 +118,7 @@
                   "source": [
                     {
                       "context": "KBVPRERPBundle",
-                      "variable": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu",
+                      "variable": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
                       "element": "entry"
                     }
                   ],
@@ -127,8 +127,8 @@
                       "name": "InlineParametersParameterRxprescriptionPartAuthoredonValueX1c6fc",
                       "source": [
                         {
-                          "context": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu",
-                          "variable": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu",
+                          "context": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
+                          "variable": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
                           "element": "resource"
                         }
                       ],
@@ -137,8 +137,8 @@
                           "name": "InlineParametersParameterRxprescriptionPartAuthoredonValueX1c6fc",
                           "source": [
                             {
-                              "context": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu",
-                              "variable": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu",
+                              "context": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
+                              "variable": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
                               "element": "authoredOn"
                             }
                           ],
@@ -147,11 +147,11 @@
                               "context": "targetPartAuthoredonPartb106c48f",
                               "contextType": "variable",
                               "element": "value",
-                              "variable": "inline_targetParametersParameterRxprescriptionPartAuthoredonValu",
+                              "variable": "inlinetargetParametersParameterRxprescriptionPartAuthoredonValue",
                               "transform": "copy",
                               "parameter": [
                                 {
-                                  "valueId": "inline_sourceParametersParameterRxprescriptionPartAuthoredonValu"
+                                  "valueId": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue"
                                 }
                               ]
                             }
@@ -766,7 +766,7 @@
                   "source": [
                     {
                       "context": "KBVPRERPBundle",
-                      "variable": "inline_sourceParametersParameterRxprescriptionPartPrescriptionid",
+                      "variable": "inlinesourceParametersParameterRxprescriptionPartPrescriptionidV",
                       "element": "identifier"
                     }
                   ],
@@ -775,8 +775,8 @@
                       "name": "InlineParametersParameterRxprescriptionPartPrescriptionidValueX9",
                       "source": [
                         {
-                          "context": "inline_sourceParametersParameterRxprescriptionPartPrescriptionid",
-                          "variable": "inline_sourceParametersParameterRxprescriptionPartPrescriptionid",
+                          "context": "inlinesourceParametersParameterRxprescriptionPartPrescriptionidV",
+                          "variable": "inlinesourceParametersParameterRxprescriptionPartPrescriptionidV",
                           "element": "value"
                         }
                       ],
@@ -785,11 +785,11 @@
                           "context": "targetPartPrescriptionidPartee663288",
                           "contextType": "variable",
                           "element": "value",
-                          "variable": "inline_targetParametersParameterRxprescriptionPartPrescriptionid",
+                          "variable": "inlinetargetParametersParameterRxprescriptionPartPrescriptionidV",
                           "transform": "copy",
                           "parameter": [
                             {
-                              "valueId": "inline_sourceParametersParameterRxprescriptionPartPrescriptionid"
+                              "valueId": "inlinesourceParametersParameterRxprescriptionPartPrescriptionidV"
                             }
                           ]
                         }

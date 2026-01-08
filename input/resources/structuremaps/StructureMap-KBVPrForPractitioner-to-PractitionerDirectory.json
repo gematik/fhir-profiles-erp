@@ -5,7 +5,7 @@
   "name": "KBVPrForPractitionerMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-07",
+  "date": "2026-01-08",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
   "structure": [
     {
@@ -197,14 +197,14 @@
               "source": [
                 {
                   "context": "srcKBVPRFORPractitionerNamef7e47166",
-                  "variable": "manual_srcPractitionerNameText82d0e3bd"
+                  "variable": "manualsrcPractitionerNameText82d0e3bd"
                 }
               ],
               "target": [
                 {
                   "context": "tgtPractitionerDirectoryName0e536837",
                   "contextType": "variable",
-                  "variable": "manual_tgtPractitionerNameText82d0e3bd"
+                  "variable": "manualtgtPractitionerNameText82d0e3bd"
                 }
               ]
             }

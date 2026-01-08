@@ -5,7 +5,7 @@
   "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-07",
+  "date": "2026-01-08",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
   "structure": [
     {
@@ -197,7 +197,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "manual_srcOrganizationIdentifierTelematikidd2cf7b80"
+              "variable": "manualsrcOrganizationIdentifierTelematikidd2cf7b80"
             }
           ]
         },
@@ -258,7 +258,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "manual_srcOrganizationName61d5a4f1"
+              "variable": "manualsrcOrganizationName61d5a4f1"
             }
           ]
         },
@@ -293,7 +293,7 @@
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "manual_srcOrganizationTypeProfession6b535de2"
+              "variable": "manualsrcOrganizationTypeProfession6b535de2"
             }
           ]
         }

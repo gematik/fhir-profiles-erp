@@ -4,7 +4,7 @@
     "name" : "rxPrescription",
     "part" : [{
       "name" : "authoredOn",
-      "valueDateTime" : "2024-05-20"
+      "valueDateTime" : "2025-05-20"
     },
     {
       "name" : "medication",
@@ -25,16 +25,12 @@
         }],
         "code" : {
           "coding" : [{
-            "system" : "http://fhir.de/CodeSystem/ifa/pzn",
-            "code" : "09943571"
-          }],
-          "text" : "Sprycel 100MG FTA 30 ST"
+            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type",
+            "code" : "rezeptur"
+          }]
         },
         "form" : {
-          "coding" : [{
-            "system" : "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
-            "code" : "FTA"
-          }]
+          "text" : "Lösung"
         }
       }
     },
@@ -46,6 +42,17 @@
           "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
         },
         "extension" : [{
+          "extension" : [{
+            "url" : "algorithmVersion",
+            "valueString" : "1.0.0"
+          },
+          {
+            "url" : "language",
+            "valueCode" : "de-DE"
+          }],
+          "url" : "http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta"
+        },
+        {
           "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
           "valueBoolean" : false
         },
@@ -55,8 +62,15 @@
             "valueBoolean" : false
           }],
           "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        },
+        {
+          "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
+          "valueMarkdown" : "1–3mal/Tag auf die erkrankten Hautstellen auftragen"
         }],
-        "authoredOn" : "2024-05-20",
+        "authoredOn" : "2025-05-20",
+        "dosageInstruction" : [{
+          "text" : "1–3mal/Tag auf die erkrankten Hautstellen auftragen"
+        }],
         "dispenseRequest" : {
           "quantity" : {
             "value" : 1,
@@ -66,13 +80,13 @@
         "status" : "active",
         "intent" : "order",
         "requester" : {
-          "reference" : "Practitioner/d6f3b55d-3095-4655-96dc-da3bec21271c"
+          "reference" : "Practitioner/ec5b4fcf-9739-4055-b23c-a5b3a65beb66"
         },
         "substitution" : {
           "allowedBoolean" : true
         },
         "medicationReference" : {
-          "reference" : "Medication/523bfe94-d8f0-42ac-b4d1-92910cad5be7"
+          "reference" : "Medication/5cd916fc-2ae2-4148-b016-911ec5f4c0a5"
         }
       }
     },
@@ -85,16 +99,19 @@
         },
         "telecom" : [{
           "system" : "phone",
-          "value" : "030321654987"
+          "value" : "0301234567"
+        },
+        {
+          "system" : "fax",
+          "value" : "030123456789"
         },
         {
           "system" : "email",
-          "value" : "hausarztpraxis@e-mail.de"
+          "value" : "mvz@e-mail.de"
         }],
         "address" : [{
           "type" : "both",
-          "line" : ["Herbert-Lewin-Platz 2",
-          "Erdgeschoss"],
+          "line" : ["Herbert-Lewin-Platz 2"],
           "_line" : [{
             "extension" : [{
               "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
@@ -103,12 +120,6 @@
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
               "valueString" : "Herbert-Lewin-Platz"
-            }]
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-              "valueString" : "Erdgeschoss"
             }]
           }],
           "city" : "Berlin",
@@ -117,8 +128,7 @@
         },
         {
           "type" : "both",
-          "line" : ["Herbert-Lewin-Platz 2",
-          "Erdgeschoss"],
+          "line" : ["Herbert-Lewin-Platz 2"],
           "_line" : [{
             "extension" : [{
               "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
@@ -127,12 +137,6 @@
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
               "valueString" : "Herbert-Lewin-Platz"
-            }]
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-              "valueString" : "Erdgeschoss"
             }]
           }],
           "city" : "Berlin",
@@ -150,20 +154,27 @@
         },
         "name" : [{
           "use" : "official",
-          "family" : "Schulz",
+          "family" : "Schmidt",
           "_family" : {
             "extension" : [{
               "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-              "valueString" : "Schulz"
+              "valueString" : "Schmidt"
             }]
           },
-          "given" : ["Ben"]
+          "given" : ["Hanna"],
+          "prefix" : ["Dr."],
+          "_prefix" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode" : "AC"
+            }]
+          }]
         }]
       }
     },
     {
       "name" : "prescriptionId",
-      "valueString" : "160.100.000.000.040.19"
+      "valueString" : "160.100.000.000.024.67"
     }]
   }]
 }

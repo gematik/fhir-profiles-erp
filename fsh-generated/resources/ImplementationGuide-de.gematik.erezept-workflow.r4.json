@@ -74,10 +74,24 @@
       },
       {
         "reference": {
-          "reference": "Bundle/726e6cdd-c93d-418c-aeeb-1cfe60228916"
+          "reference": "Bundle/44420ed9-7388-4be5-acc5-9c124fad9f34"
         },
         "exampleBoolean": false,
-        "name": "726e6cdd-c93d-418c-aeeb-1cfe60228916"
+        "name": "44420ed9-7388-4be5-acc5-9c124fad9f34"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/4863d1fb-dc26-4680-bb35-018610d1749d"
+        },
+        "exampleBoolean": false,
+        "name": "4863d1fb-dc26-4680-bb35-018610d1749d"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/9581ce65-b118-4751-9073-19c091b341e0"
+        },
+        "exampleBoolean": false,
+        "name": "9581ce65-b118-4751-9073-19c091b341e0"
       },
       {
         "reference": {
@@ -101,13 +115,6 @@
         "name": "AcceptOperation",
         "description": "Mit der $accept-Operation beansprucht eine Apotheke ein E-Rezept. Der Status der referenzierten Aufgabe ändert sich in 'in-progress'.",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Bundle/acf39375-3a2b-4017-995d-531705fc129d"
-        },
-        "exampleBoolean": false,
-        "name": "acf39375-3a2b-4017-995d-531705fc129d"
       },
       {
         "reference": {
@@ -308,13 +315,6 @@
         "name": "Beispiel-Medikament Sumatriptan",
         "description": "Beispiel für ein Sumatriptan-Medikament mit vollständigen Eigenschaften",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/c48d0fb5-9d3a-4872-9879-cdd61c39fc1d"
-        },
-        "exampleBoolean": false,
-        "name": "c48d0fb5-9d3a-4872-9879-cdd61c39fc1d"
       },
       {
         "reference": {

@@ -20,18 +20,26 @@ FHIR bietet die Möglichkeit Angaben zu Mappings zwischen verschiedenen Ressourc
 Zusätzlich zu den StructureMaps, die Regeln zum Mapping definieren, gibt es Transformationsregeln, die zusätzliche programmatische Vorgaben zum Mapping treffen. Auf den Detailseiten zu Verordnungs- bzw. Dispensierdaten ist unten jeweils eine Übersicht der verwendeten Transformationsregeln zu finden, die alle Profile der jeweiligen Übertragung betreffen. Auf den Seiten der einzelnen Ressourcen sind die gleichen Transformationsregeln zusätzlich im Kontext der jeweiligen Ressource aufgeführt.
 
 ## Übertragen von *Verordnungsdaten* an den ePA Medication Service
-([ePA Operation API: Verschreibungsdaten einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-prescription-erp.html))
 
 Der E-Rezept-Fachdienst empfängt die Verordnungsdaten durch Aufruf der [$activate-Operation](./op-activate.html) durch ein verordnendes System. Die empfangenen Daten entsprechen den Profilen und Vorgaben des E-Rezepts.
+
+Die Verordnungsdaten werden vom E-Rezept-Fachdienst an den ePA Medication Service via ([ePA Operation API: Verordnung einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-prescription-erp.html)).
 
 Für technische Details zum Mapping von Verordnungsdaten und den dazugehörigen Transformationsregeln siehe: [Mapping von Verordnungsdaten](./mapping-prescription.html).
 
 ## Übertragen von *Dispensierinformationen* an den ePA Medication Service
-([ePA Operation API: Dispensierinformationen einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-dispensation-erp.html))
 
 Der E-Rezept-Fachdienst empfängt die Dispensierinformationen durch Abschluss eines Workflows mittels der [$dispense-Operation](./op-dispense.html) und/oder [$close-Operation](./op-close.html) durch ein abgebendes System. Die empfangenen Daten entsprechen den Profilen und Vorgaben der Dispensierinformationen.
-Die Übertragung der Dispensierinformationen an den ePA Medication Service erfolgt erst nach Abschluss des Workflows indem die $close-Operation aufgerufen wird.
+Die Übertragung der Dispensierinformationen an den ePA Medication Service via ([ePA Operation API: Dispensierinformationen einstellen](https://gemspec.gematik.de/ig/fhir/epa-medication/{{ site.data.constants.epa_med_service_version }}/op-provide-dispensation-erp.html)) erfolgt erst nach Abschluss des Workflows indem die $close-Operation aufgerufen wird.
 
 Für technische Details zum Mapping von Dispensierinformationen und den dazugehörigen Transformationsregeln siehe: [Mapping von Dispensierinformationen](./mapping-dispensation.html).
 
-// TODO Beispiele
+## Beispiele
+
+Die folgenden Seiten beschreiben beispielhaft das Mapping von verschiedenen KBV_PR_ERP_Bundle Instanzen in die EPAOpProvidePrescriptionERPInputParameters Struktur:
+
+- [Beispiel des Mappings einer PZN Verordnung](./Bundle-input-example-1-mapping.html)
+- [Beispiel des Mappings einer Wirkstoffverordnung](./Bundle-input-example-2-mapping.html)
+- [Beispiel des Mappings einer Freitextverordnung](./Bundle-input-example-3-mapping.html)
+- [Beispiel des Mappings einer Rezepturverordnung](./Bundle-input-example-5-mapping.html)
+- [Beispiel des Mappings mit absoluter Referenzierung](./Bundle-input-example-4-mapping.html)
