@@ -28,3 +28,6 @@ python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 
 # Generate IG Publisher Content
 ./_genonce.sh -no-sushi
+
+#TODO Determine if we should use this and offer to download
+./scripts/package-custom-artifacts.sh

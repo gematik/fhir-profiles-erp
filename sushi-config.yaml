@@ -132,4 +132,4 @@ parameters:
     - input/resources/transformed-kbv-bundles
   path-pages:
     - input/content
-  autoload-resources: true
+  #autoload-resources: true
