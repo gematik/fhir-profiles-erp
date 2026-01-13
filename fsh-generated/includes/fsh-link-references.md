@@ -85,6 +85,7 @@
 [GEM_ERP_PR_Medication]: StructureDefinition-GEM-ERP-PR-Medication.html
 [GEM_ERP_PR_MedicationDispense]: StructureDefinition-GEM-ERP-PR-MedicationDispense.html
 [GEM_ERP_PR_MedicationDispense_DiGA]: StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.html
+[GEM_ERP_PR_OperationOutcome]: StructureDefinition-GEM-ERP-PR-OperationOutcome.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_Task]: StructureDefinition-GEM-ERP-PR-Task.html
 [GEM_ERP_VS_OperationOutcomeDetails]: ValueSet-GEM-ERP-VS-OperationOutcomeDetails.html

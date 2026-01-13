@@ -751,6 +751,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-PR-OperationOutcome"
+        },
+        "name": "GEM ERP PR OperationOutcome",
+        "description": "OperationOutcome für Angabe von Fehlermeldungen vom E-Rezept-Fachdienst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Secret"
         },
         "name": "GEM ERP PR Secret",
