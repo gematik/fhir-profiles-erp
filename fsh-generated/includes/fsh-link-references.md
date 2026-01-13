@@ -50,6 +50,7 @@
 [ExampleDispenseInputParametersMultipleMedicationDispenses]: Parameters-ExampleDispenseInputParametersMultipleMedicationDispenses.html
 [ExampleDispenseInputParametersKombipackung]: Parameters-ExampleDispenseInputParametersKombipackung.html
 [Example-MedicationDispense-Rezeptur]: MedicationDispense-Example-MedicationDispense-Rezeptur.html
+[GEM_ERP_CS_OperationOutcomeDetails]: CodeSystem-GEM-ERP-CS-OperationOutcomeDetails.html
 [GEM_ERP_EX_AcceptDate]: StructureDefinition-GEM-ERP-EX-AcceptDate.html
 [GEM_ERP_EX_AvailabilityState]: StructureDefinition-GEM-ERP-EX-AvailabilityState.html
 [GEM_ERP_EX_Beneficiary]: StructureDefinition-GEM-ERP-EX-Beneficiary.html
@@ -86,6 +87,7 @@
 [GEM_ERP_PR_MedicationDispense_DiGA]: StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.html
 [GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
 [GEM_ERP_PR_Task]: StructureDefinition-GEM-ERP-PR-Task.html
+[GEM_ERP_VS_OperationOutcomeDetails]: ValueSet-GEM-ERP-VS-OperationOutcomeDetails.html
 [GEMErpPrMedicationdispenseMap]: StructureMap-GEMErpPrMedicationdispenseMap.html
 [GEMErpPrMedicationMap]: StructureMap-GEMErpPrMedicationMap.html
 [GEM_ERP_PR_Signature]: StructureDefinition-GEM-ERP-PR-Signature.html

@@ -1,0 +1,52 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "GEM_ERP_CS_OperationOutcomeDetails",
+  "id": "GEM-ERP-CS-OperationOutcomeDetails",
+  "title": "GEM ERP CS OperationOutcomeDetails",
+  "description": "Fachliche Fehlercodes des E-Rezept-Fachdienst",
+  "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OperationOutcomeDetails",
+  "concept": [
+    {
+      "code": "ERPFD_NO_VALID_STRUCTURE",
+      "display": "Invalid Data Structure in ePrescription Service"
+    },
+    {
+      "code": "ERPFD_PRESCRIPTION_NO_EXIST",
+      "display": "Prescription Not Found in ePrescription Service"
+    },
+    {
+      "code": "ERPFD_PRESCRIPTION_STATUS",
+      "display": "Operation Not Permitted on Current Prescription Status"
+    },
+    {
+      "code": "ERPFD_PARAMETERS_REFERENCE_NO_EXIST",
+      "display": "Unresolved Reference in Parameters"
+    },
+    {
+      "code": "ERPFD_PARAMETERS_INVALID_CONTENT",
+      "display": "Provided content not allowed"
+    },
+    {
+      "code": "ERPFD_DOSAGE_INVALID",
+      "display": "Invalid dosage structure or content"
+    }
+  ],
+  "version": "1.6.1",
+  "date": "2025-09-25",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.gematik.de"
+        }
+      ]
+    }
+  ],
+  "copyright": "gematik GmbH",
+  "caseSensitive": true,
+  "count": 6
+}

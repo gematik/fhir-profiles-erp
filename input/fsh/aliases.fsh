@@ -35,9 +35,13 @@ Alias: $ePAMedication = https://gematik.de/fhir/epa-medication/StructureDefiniti
 Alias: $prescription-id-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId
 Alias: $eu-access-code-ns = https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_EU_AccessCode
 
+// TI Common
+Alias: $ti-oo = https://gematik.de/fhir/ti/CodeSystem/operation-outcome-details-codes
+
 // International
 Alias: $sct = http://snomed.info/sct
 Alias: $cs-ucum = http://unitsofmeasure.org
+Alias: $hl7-oo = http://terminology.hl7.org/CodeSystem/operation-outcome
 
 // R5 Backport
 Alias: $medicationDispense-renderedDosageInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction

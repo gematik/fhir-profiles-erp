@@ -471,6 +471,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/GEM-ERP-CS-OperationOutcomeDetails"
+        },
+        "name": "GEM ERP CS OperationOutcomeDetails",
+        "description": "Fachliche Fehlercodes des E-Rezept-Fachdienst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
         },
         "name": "GEM ERP EX AcceptDate",
@@ -755,6 +763,14 @@
         },
         "name": "GEM ERP PR Task",
         "description": "Task für die Verwaltung des E-Rezept-Workflows",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GEM-ERP-VS-OperationOutcomeDetails"
+        },
+        "name": "GEM ERP VS OperationOutcomeDetails",
+        "description": "Fachliche Fehlercodes des E-Rezept-Fachdienst",
         "exampleBoolean": false
       },
       {
@@ -1266,10 +1282,6 @@
       {
         "code": "path-pages",
         "value": "input/content"
-      },
-      {
-        "code": "autoload-resources",
-        "value": "true"
       }
     ]
   }
