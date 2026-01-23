@@ -137,17 +137,16 @@ def has_meaningful_transformation(rule):
     # Check for URL transformations (these are meaningful)
     if 'target' in rule and rule['target']:
         for target in rule['target']:
-            if target.get('transform'):
+            transform_type = target.get('transform')
+            if transform_type and transform_type != 'copy':
                 return True
-            if target.get('transform') == 'copy' and 'parameter' in target:
+            if transform_type == 'copy' and 'parameter' in target:
                 for param in target['parameter']:
                     if 'valueString' in param:
                         value = param['valueString']
                         # URL transformations are meaningful
                         if 'http' in value or 'StructureDefinition' in value:
                             return True
-            elif target.get('transform') == 'create':
-                return True
     
     # Check for dependent mappings (these are meaningful)
     if 'dependent' in rule:
@@ -216,6 +215,10 @@ def extract_target_transformation_info(target):
 
 def determine_action_label(rule, target):
     """Return a concise action label describing what the rule does."""
+    doc_text = (rule.get('documentation') or '').strip().lower()
+    if doc_text.startswith("feld wird nicht gemappt"):
+        return "Nicht Übertragen"
+
     labels = []
     transform_type = (target or {}).get('transform')
     parameters = (target or {}).get('parameter') or []
@@ -349,6 +352,22 @@ def is_passthrough_copy_target(target: dict) -> bool:
     return all(set(p.keys()) == {'valueId'} for p in params)
 
 
+def is_simple_create_target(target: dict) -> bool:
+    """Erkennt einfache create-Ziele ohne feste Werte/Parameter."""
+    if not target:
+        return False
+    if target.get('transform') != 'create':
+        return False
+    params = target.get('parameter', [])
+    if not params:
+        return True
+    # If there is any fixed value (excluding valueString type hints), treat as meaningful
+    for param in params:
+        if any(key in param for key in FIXED_VALUE_PARAM_KEYS if key != 'valueString'):
+            return False
+    return True
+
+
 def is_passthrough_copy_rule(rule: dict) -> bool:
     """Skippt reine Durchreiche-Kopien (z. B. url != ... Filter)."""
     targets = rule.get('target') or []
@@ -359,6 +378,19 @@ def is_passthrough_copy_rule(rule: dict) -> bool:
     if rule.get('dependent'):
         return False
     return True
+
+
+def has_meaningful_condition(conditions: List[str]) -> bool:
+    """True, wenn Bedingungen mehr sind als reine Ausschlussfilter."""
+    if not conditions:
+        return False
+    for condition in conditions:
+        if not condition:
+            continue
+        if is_exclusion_only_condition(condition):
+            continue
+        return True
+    return False
 
 
 def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None, inherited_suffix=""):
@@ -378,6 +410,7 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         source_conditions = [src.get('condition') for src in rule.get('source', []) if src.get('condition')]
         exclusion_only = bool(source_conditions) and all(is_exclusion_only_condition(c) for c in source_conditions)
         passthrough_copy = is_passthrough_copy_rule(rule)
+        meaningful_condition = has_meaningful_condition(source_conditions)
         
         # Build source path
         src_path = ""
@@ -422,9 +455,26 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         # Prepare description shared across targets
         base_desc_parts = []
         rule_manual_info = parse_manual_documentation(rule.get('documentation'))
+        doc_text = (rule.get('documentation') or '').strip()
+        doc_text_lower = doc_text.lower()
+        is_copy_doc = (
+            doc_text_lower == 'automatic copy'
+            or doc_text_lower.startswith('copied to')
+            or doc_text_lower.startswith('copied from')
+            or doc_text_lower.startswith('copies')
+        )
+        doc_meaningful = bool(doc_text and not is_copy_doc)
         if rule.get('documentation') and not rule_manual_info:
             translated_doc = escape_markdown(translate_doc(rule['documentation']))
-            if translated_doc and not translated_doc.startswith("Fester Wert"):
+            auto_copy_docs = {"Automatische Kopie", "Kopiert"}
+            if (
+                translated_doc
+                and not translated_doc.startswith("Fester Wert")
+                and translated_doc not in auto_copy_docs
+                and not translated_doc.startswith("Kopiert von")
+                and not translated_doc.startswith("Kopiert nach")
+                and not translated_doc.startswith("Kopiert")
+            ):
                 base_desc_parts.append(translated_doc)
         if 'dependent' in rule:
             dependent_links = []
@@ -456,6 +506,15 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
             src_path_clean = ""
 
         if should_include(rule) and not (exclusion_only and passthrough_copy):
+            # Skip pure passthrough copies without changes/conditions/docs.
+            if (
+                passthrough_copy
+                and not rule_manual_info
+                and not doc_meaningful
+                and not has_meaningful_transformation(rule)
+                and not meaningful_condition
+            ):
+                continue
             for tgt_path_clean, tgt, _ in target_entries:
                 target_desc_parts = list(base_desc_parts)
                 if passthrough_copy and first_source_element == 'extension' and (tgt or {}).get('element', '').startswith('extension'):
@@ -466,6 +525,25 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                     desc = "*(direkte Kopie)*"
                 action = determine_action_label(rule, tgt)
                 output_tgt_path = tgt_path_clean
+
+                # Skip simple create actions without meaningful transformation.
+                if (
+                    action == "Erstellt"
+                    and is_simple_create_target(tgt)
+                    and not rule_manual_info
+                    and not rule.get('dependent')
+                ):
+                    continue
+
+                # Skip plain copies without changes/logic.
+                if (
+                    action == "Kopiert"
+                    and is_passthrough_copy_target(tgt)
+                    and not rule_manual_info
+                    and not rule.get('dependent')
+                    and not meaningful_condition
+                ):
+                    continue
 
                 if rule_manual_info:
                     manual_instruction = rule_manual_info.get('instruction', '').strip()

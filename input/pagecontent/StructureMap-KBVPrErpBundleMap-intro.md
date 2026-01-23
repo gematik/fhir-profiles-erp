@@ -6,7 +6,6 @@
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.name` | Fester Wert | setzt festen Wert: `rxPrescription` |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part` | Dokumentiert | Creates part:authoredOn part container aggregating 1 child rule(s) |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.name` | Fester Wert | setzt festen Wert: `authoredOn` |
-| `KBVPRERPBundle.entry.resource.authoredOn` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.value` | Kopiert | übernimmt Wert aus Quellvariable |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part` | Dokumentiert | Creates part:medication part container aggregating 4 child rule(s) |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.name` | Fester Wert | setzt festen Wert: `medication` |
 | `KBVPRERPBundle.entry`<br>`[Bedingung: resource is Medication]` | — | Dokumentiert | Bundle.entry:RezeptierdatenPZNVerordnung.resource -> .parameter:rxPrescription.part:medication.resource using KBV_PR_ERP_Medication_PZN\|1.4.0 -> EPAMedication\|1.3.0 |
@@ -31,5 +30,4 @@
 | `KBVPRERPBundle.entry.resource`<br>`[Bedingung: resource is Practitioner]` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.resource` | Erstellt · Delegiert | Verwendet StructureMap: [KBVPrForPractitionerMap](./StructureMap-KBVPrForPractitionerMap.html)<br>erstellt neues https://gematik.de/fhir/directory/StructureDefinition/PractitionerDirectory |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part` | Dokumentiert | Creates part:prescriptionId part container aggregating 1 child rule(s) |
 | `KBVPRERPBundle` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.name` | Fester Wert | setzt festen Wert: `prescriptionId` |
-| `KBVPRERPBundle.identifier.value` | `EPAOpProvidePrescriptionERPInputParameters.parameter.part.value` | Kopiert | übernimmt Wert aus Quellvariable |
 

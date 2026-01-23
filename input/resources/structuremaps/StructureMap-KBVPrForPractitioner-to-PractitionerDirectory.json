@@ -5,7 +5,7 @@
   "name": "KBVPrForPractitionerMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-08",
+  "date": "2026-01-23",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Practitioner|1.3.0 -> PractitionerDirectory|1.0.0",
   "structure": [
     {
@@ -193,7 +193,7 @@
           "rule": [
             {
               "name": "PractitionerNameText82d0e3bd",
-              "documentation": "Manual action required | Zum Erzeugen von name.text siehe Transformationsregel F_011 | Field: Practitioner.name.text",
+              "documentation": "Manual action required | Zum Erzeugen von name.text siehe Transformationsregel F_011 | Quelle: Practitioner.name.text",
               "source": [
                 {
                   "context": "srcKBVPRFORPractitionerNamef7e47166",
@@ -207,6 +207,63 @@
                   "variable": "manualtgtPractitionerNameText82d0e3bd"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "PractitionerQualificationAsvFachgruppennummer7aa26f1b",
+          "documentation": "Feld wird nicht gemappt | Quelle: Practitioner.qualification:ASV-Fachgruppennummer",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "qualification",
+              "variable": "srcKBVPRFORPractitionerQualificationAsvFachgruppennummerb1380ba4"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualificationAsvFachgruppennummer4a060b7"
+            }
+          ]
+        },
+        {
+          "name": "PractitionerQualificationBerufsbezeichnung7f1bb5ba",
+          "documentation": "Feld wird nicht gemappt | Quelle: Practitioner.qualification:Berufsbezeichnung",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "qualification",
+              "variable": "srcKBVPRFORPractitionerQualificationBerufsbezeichnung73ee1d30"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualificationBerufsbezeichnunge66b35f5"
+            }
+          ]
+        },
+        {
+          "name": "PractitionerQualificationTyp5a2d4c78",
+          "documentation": "Feld wird nicht gemappt | Quelle: Practitioner.qualification:Typ",
+          "source": [
+            {
+              "context": "KBVPRFORPractitioner",
+              "element": "qualification",
+              "variable": "srcKBVPRFORPractitionerQualificationTypb285cc3e"
+            }
+          ],
+          "target": [
+            {
+              "context": "PractitionerDirectory",
+              "contextType": "variable",
+              "element": "qualification",
+              "variable": "tgtPractitionerDirectoryQualificationTypcf13b062"
             }
           ]
         }

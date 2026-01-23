@@ -81,6 +81,8 @@ pages:
     title: "Vorgaben zum Mapping von FHIR-Instanzen"
     mapping-prescription.md:
       title: "Mapping von Verordnungsdaten"
+      mapping-prescription-bundle-parameters.md:
+        title: "Mapping des Bundles zu Parameters für Verordnungsdaten"
       mapping-prescription-practitioner.md:
         title: "Mapping des Verordnenden für Verordnungsdaten"
       mapping-prescription-organization.md:
@@ -89,6 +91,14 @@ pages:
         title: "Mapping der Verschreibung für Verordnungsdaten"
       mapping-prescription-medication.md:
         title: "Mapping der Arzneimitteldaten für Verordnungsdaten"
+        mapping-prescription-medication-compounding.md:
+          title: "Mapping einer Rezeptur Medikation"
+        mapping-prescription-medication-freetext.md:
+          title: "Mapping einer Freitext Medikation"
+        mapping-prescription-medication-ingredient.md:
+          title: "Mapping einer Wirkstoff Medikation"
+        mapping-prescription-medication-pzn.md:
+          title: "Mapping einer PZN Medikation"
     mapping-dispensation.md:
       title: "Mapping von Dispensierinformationen"
     comparison-Bundle-input-example-1.md:

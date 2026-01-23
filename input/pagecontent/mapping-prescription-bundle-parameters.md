@@ -22,5 +22,5 @@ Die folgende Tabelle stellt generell das Mapping der beiden Profile gegenüber:
 Folgende zusätzliche Anmerkungen und Regeln sind für das Mapping zu umzusetzen:
 
 {% for transformation-rule in transformation-rules %}
-{% include transformation-rules-details-table.html transformation-rule=transformation-rule mapping="provide-prescription" profiles="EPAOpProvidePrescriptionERPInputParameters" level=4 %}
+{% include transformation-rules-details-table.html transformation-rule=transformation-rule mapping="provide-prescription" profiles="EPAOpProvidePrescriptionERPInputParameters" level=3 %}
 {% endfor %}
