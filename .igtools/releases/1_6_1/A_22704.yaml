@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 1d90a260d940ad9ce6e9d524a854d3ad5559b5677b60937bc7fbd3a2e56f5fb8
+created: '2026-01-13T13:56:37.879726'
+date: '2026-01-15T07:14:31.278554'
+key: A_22704
+modified: '2026-01-15T07:14:31.278554'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei Mehrfachverordnungen sicherstellen, dass der
+  Numerator mindestens 1 ist; ansonsten ist die Operation unzulässig.
+title: E-Rezept-Fachdienst - Task aktivieren - Numerator größer 0
+version: 0

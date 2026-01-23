@@ -13,9 +13,6 @@
   <li>
     <a href="index.html">Start</a>
   </li>
-  <li>
-    <a href="toc.html">Inhaltsverzeichnis</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fachlichkeit
       <b class="caret"></b>

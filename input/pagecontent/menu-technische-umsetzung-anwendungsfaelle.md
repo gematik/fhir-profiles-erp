@@ -48,8 +48,60 @@ Technische Einordnung des fachlichen Use Cases „E-Rezept vervollständigen und
 
 <em>Schnittstelle:</em> <i><a href="./op-activate.html">Operation API: E-Rezept aktivieren</a></i>
 
+Technischer Ablauf (vereinfachte Sicht):
+
+- Das Primärsystem ruft die Operation zur Aktivierung des referenzierten Tasks auf und übergibt dabei die QES-signierten Verordnungsdaten gemäß Operationsdefinition.
+- Der E-Rezept-Fachdienst prüft u.a. die Berechtigung (z.B. AccessCode am Task), die Integrität der Signatur sowie die Schemakonformität der fachlichen Nutzdaten.
+- Bei erfolgreicher Prüfung hinterlegt der E-Rezept-Fachdienst die Nutzdaten serverseitig und verknüpft sie mit dem Workflow (Task) so, dass die nachfolgende Einlösung/Belieferung möglich ist.
+
+Relevante Datenmodelle und Relationen (konzeptionell):
+
+- *Task* (Workflow-Ressource)
+	- Status-Transition: `draft` → `ready`.
+	- Referenzierung der bereitgestellten Verordnungsdaten (z.B. über `Task.input` auf eine serverseitig gespeicherte Ressource).
+- *Binary* (Transport-/Persistenz-Container)
+	- Persistierung der vom Primärsystem übermittelten, signierten Nutzdaten (QES/PKCS#7/CAdES) als serverseitiges Artefakt.
+	- Verknüpfung vom Task auf diese Persistenz (indirekt über Referenzen in `Task.input`/`Task.output`).
+- Verordnungsdaten (fachliche Payload, typischerweise als Bundle gemäß KBV/ERP-Profilen)
+	- Inhaltliche Konsistenzprüfungen (z.B. Identifikatoren, Prüfziffern, flowtype-spezifische Constraints) erfolgen im Rahmen der Aktivierung.
+
+Ergebnis:
+
+- Bei Erfolg liefert der E-Rezept-Fachdienst den aktualisierten Task zurück (inkl. `ready`), sodass der Einlöse-Workflow starten kann.
+- Bei Fehlern erfolgt eine ablehnende Antwort gemäß Operationsdefinition (z.B. fehlende/ungültige Berechtigung, ungültige Signatur, nicht schemakonforme oder fachlich inkonsistente Daten).
+
+<figure>
+    <div class="gem-ig-img-container" style="--box-width: 700px; margin-bottom: 30px;">
+        <img src="./t-uc-activate-diagram.png" alt="Anwendungsfall E-Rezept einstellen" style="width: 100%;">
+    </div>
+    <figcaption><strong>Abbildung: </strong>Anwendungsfall E-Rezept einstellen</figcaption>
+</figure>
+
+<br>
+
+Im E-Rezept-Fachdienst Datenraum werden die folgenden Verknüpfungen und Datenmodelle verwendet, um den Anwendungsfall technisch umzusetzen:
+
+<figure>
+    <div class="gem-ig-img-container" style="--box-width: 700px; margin-bottom: 30px;">
+        {% include IG-ERP-DM-TASK-INPUT-REFERENCES.svg %}
+    </div>
+    <figcaption><strong>Abbildung: </strong>todo</figcaption>
+</figure>
+
+<br>
+
 <a id="e-rezept-loeschen"></a>
 #### E-Rezept löschen
+
+Technische Einordnung des fachlichen Use Cases „E-Rezept löschen“:
+
+- Das E-Rezept wird (solange es nicht in Belieferung ist) über den E-Rezept-Fachdienst widerrufen/gelöscht.
+- Technisch bedeutet dies, dass der referenzierte Task gelöscht wird; Nutzdaten werden dabei nicht mehr bereitgestellt.
+
+<em>Schnittstelle:</em> <i><a href="./op-abort.html">Operation API: E-Rezept löschen</a></i>
+
+<a id="epa-ms"></a>
+#### Übertragen an den ePA MedicationService
 
 Technische Einordnung des fachlichen Use Cases „E-Rezept löschen“:
 

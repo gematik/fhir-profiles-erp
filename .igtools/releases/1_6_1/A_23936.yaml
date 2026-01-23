@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: a76b47dc33df9a1f7af27887301573ba99dd4a12ca69c58f2c6331ed1c20658b
+created: '2026-01-13T13:56:37.878050'
+date: '2026-01-15T07:14:31.276404'
+key: A_23936
+modified: '2026-01-15T07:14:31.276404'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass in der Patient-Ressource der
+  Identifier das System `http://fhir.de/sid/gkv/kvid-10` verwendet; bei Abweichung
+  ist HTTP 400 mit der entsprechenden Fehlermeldung zu liefern.
+title: E-Rezept-Fachdienst - Task aktivieren - Patientenidentifier als KVNR erzwingen
+version: 0

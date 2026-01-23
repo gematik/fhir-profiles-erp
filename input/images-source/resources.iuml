@@ -1,0 +1,33 @@
+' Simple resource macros for PlantUML diagrams
+
+!procedure createERPTask($alias)
+class "Task\n(GEM_ERP_PR_Task)" as $alias <<Task>>
+!endprocedure
+
+!procedure createTaskInputEPrescription($alias)
+class "Task.input[ePrescription]\n(DocumentType#1)" as $alias <<TaskInput>>
+!endprocedure
+
+!procedure createTaskInputPatientReceipt($alias)
+class "Task.input[patientReceipt]\n(DocumentType#2)" as $alias <<TaskInput>>
+!endprocedure
+
+!procedure createBinaryXML($alias, $label)
+class "Binary\n($label)" as $alias <<Binary>> {
+  + contentType = application/fhir+xml
+}
+!endprocedure
+
+!procedure createBinaryJSON($alias, $label)
+class "Binary\n($label)" as $alias <<Binary>> {
+  + contentType = application/fhir+json
+}
+!endprocedure
+
+!procedure createKBVBundleXML($alias)
+class "KBV_PR_ERP_Bundle\n(XML)" as $alias <<Bundle>>
+!endprocedure
+
+!procedure createKBVBundleJSON($alias)
+class "KBV_PR_ERP_Bundle\n(JSON)" as $alias <<Bundle>>
+!endprocedure

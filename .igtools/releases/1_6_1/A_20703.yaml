@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: e874025455966d1d22e53ceda29847bb94728cb63a9ee6d2785cd0927d8122e4
+created: '2026-01-13T13:56:37.875864'
+date: '2026-01-15T07:14:31.273718'
+key: A_20703
+modified: '2026-01-15T07:14:31.273718'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei fehlenden oder ungültigen AccessCodes den Aufruf
+  mit HTTP 403 abbrechen, den `Warning`-Header zur Brute-Force-Drosselung setzen und
+  die nächste mögliche Aktivierung künstlich verzögern.
+title: E-Rezept-Fachdienst - Task aktivieren - Brute-Force-Drosselung für AccessCodes
+version: 0

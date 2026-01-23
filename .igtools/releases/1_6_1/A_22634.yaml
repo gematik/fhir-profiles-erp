@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 6fddfa91a75529d43b72707a666ffb3b9eba0c928a6573dfd47098f0843f0c56
+created: '2026-01-13T13:56:37.880358'
+date: '2026-01-15T07:14:31.279293'
+key: A_22634
+modified: '2026-01-15T07:14:31.279293'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei Mehrfachverordnungen sicherstellen, dass <i>Mehrfachverordnung.Zeitraum.start</i>
+  gesetzt ist; fehlt der Wert, ist die Aktivierung mit HTTP 400 zu beenden.
+title: E-Rezept-Fachdienst - Task aktivieren - Beginn der Einlösefrist Pflicht
+version: 0

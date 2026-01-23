@@ -1,0 +1,17 @@
+' Shared PlantUML styling used by diagrams in input/images-source
+
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+
+skinparam ArrowColor #2F4F4F
+skinparam ClassBorderColor #2F4F4F
+skinparam ClassFontColor #1F2A2E
+skinparam ClassBackgroundColor #FFFFFF
+
+skinparam NoteBackgroundColor #FFFBE6
+skinparam NoteBorderColor #B59B00

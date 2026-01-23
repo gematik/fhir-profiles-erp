@@ -24,7 +24,6 @@ applyExtensionMetadataToRoot: false
 
 menu:
   Start: index.html
-  Inhaltsverzeichnis: toc.html
   Fachlichkeit:
     Überblick: menu-fachlichkeit-ueberblick.html
     Szenarien: menu-fachlichkeit-szenarien.html
@@ -53,11 +52,15 @@ menu:
 
 pages:
   index.md:
-    title: "Home"
+    title: "Implementation Guide E-Rezept-Fachdienst"
   menu-fachlichkeit-ueberblick.md:
     title: "Überblick zur Verordnung und Belieferung von Arzneimitteln"
     menu-fachlichkeit-szenarien.md:
-      title: "Szenarien für den Medikationsprozess"
+      title: "Szenarien für den Verordnungsprozess"
+      menu-fachlichkeit-szenarien-diga.md:
+        title: "Verordnung von digitalen Gesundheitsanwendungen"
+      menu-fachlichkeit-szenarien-t-rezept.md:
+        title: "Verordnung von E-T-Rezepten"
     menu-fachlichkeit-anwendungsfaelle.md:
       title: "Anwendungsfälle für den Medikationsprozess"
   menu-technische-umsetzung-systemueberblick.md:
@@ -68,6 +71,12 @@ pages:
       title: "Verarbeitungsregeln für den E-Rezept-Fachdienst"
     menu-technische-umsetzung-dosierung.md:
       title: "Validierung von Dosierungsinformationen"
+    menu-technische-umsetzung-anbindung-epa-ms.md:
+      title: "Anbindung an den ePA MedicationService"
+    menu-technische-umsetzung-anbindung-fvzd.md:
+      title: "Anbindung an den FHIR-VZD"
+    menu-technische-umsetzung-anbindung-bfarm.md:
+      title: "Anbindung an den BfArM Webdienst"
   mapping.md:
     title: "Vorgaben zum Mapping von FHIR-Instanzen"
     mapping-prescription.md:
@@ -132,4 +141,15 @@ parameters:
     - input/resources/transformed-kbv-bundles
   path-pages:
     - input/content
+  no-narrative:
+    # "StructureDefinition/*" doesn't seem to work anymore
+    - StructureDefinition/*
+    - Bundle/*
+    - OperationOutcome/*
+    - Medication/*
+    - MedicationRequest/*
+    - MedicationDispense/*
+    - Parameters/*
+    - CapabilityStatement/*
+    - Provenance/*
   #autoload-resources: true

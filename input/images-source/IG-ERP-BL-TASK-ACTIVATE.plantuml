@@ -1,13 +1,38 @@
 @startuml
 
-title IG-ERP-BL-TASK-ACTIVATE (Beispiel)
+title IG-ERP-BL-TASK-ACTIVATE
 
 start
-:Receive POST /Task/{id}/$activate;
-:Validate request parameters (ePrescription);
-:Validate QES and schema (todo);
-:Update Task status to ready (todo);
-:return updated Task;
+:Receive POST /Task/{id}/$activate with AccessCode and PKCS#7 QES;
+if (AccessCode matches Task && Task.status = draft?) then (yes)
+	:Extract KBV bundle and metadata;
+else (no)
+	:Return OperationOutcome 403 (invalid AccessCode or status);
+	stop
+endif
+if (Validate IKNR, KVNR, LANR/ZANR, PZN?) then (ok)
+	:Check Flowtype constraints (Coverage type, DiGA DeviceRequest, BtM exclusion);
+else (error)
+	:Return OperationOutcome 400 (identifier failure);
+	stop
+endif
+if (Mehrfachverordnung rules satisfied?) then (ok)
+	:Validate QES signature (ETSI), OCSP status and ASN.1 structure;
+else (error)
+	:Return OperationOutcome 400 (MVO violation);
+	stop
+endif
+if (QES + KBV bundle valid?) then (ok)
+	:Persist QES + generate serversigned bundle;
+	:Set Task.for, performerType, eu-isRedeemable flag;
+	:Set Task.status = ready;
+	:Prepare data for ePA Medication Service;
+	:Trigger push notification erp.task.activate;
+	:Return updated Task (HTTP 200);
+else (error)
+	:Return OperationOutcome 400/512 (signature/schema error);
+endif
+
 stop
 
 @enduml

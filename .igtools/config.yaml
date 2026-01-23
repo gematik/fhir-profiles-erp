@@ -4,6 +4,8 @@ frozen_hash: null
 frozen_version: null
 migrated_with_version: 0.3.0
 name: IG E-Rezept-Fachdienst
+next_req_number: 0
+numbering_mode: random
 prefix: REQ
 releases:
 - 1.6.1

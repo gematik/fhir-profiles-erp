@@ -1086,8 +1086,20 @@
           "page": [
             {
               "nameUrl": "menu-fachlichkeit-szenarien.html",
-              "title": "Szenarien für den Medikationsprozess",
-              "generation": "markdown"
+              "title": "Szenarien für den Verordnungsprozess",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "menu-fachlichkeit-szenarien-diga.html",
+                  "title": "Verordnung von digitalen Gesundheitsanwendungen",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "menu-fachlichkeit-szenarien-t-rezept.html",
+                  "title": "Verordnung von E-T-Rezepten",
+                  "generation": "markdown"
+                }
+              ]
             },
             {
               "nameUrl": "menu-fachlichkeit-anwendungsfaelle.html",
@@ -1114,6 +1126,21 @@
             {
               "nameUrl": "menu-technische-umsetzung-dosierung.html",
               "title": "Validierung von Dosierungsinformationen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-technische-umsetzung-anbindung-epa-ms.html",
+              "title": "Anbindung an den ePA MedicationService",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-technische-umsetzung-anbindung-fvzd.html",
+              "title": "Anbindung an den FHIR-VZD",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "menu-technische-umsetzung-anbindung-bfarm.html",
+              "title": "Anbindung an den BfArM Webdienst",
               "generation": "markdown"
             }
           ]
@@ -1290,6 +1317,42 @@
       {
         "code": "path-pages",
         "value": "input/content"
+      },
+      {
+        "code": "no-narrative",
+        "value": "StructureDefinition/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Bundle/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "OperationOutcome/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Medication/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "MedicationRequest/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "MedicationDispense/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Parameters/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "CapabilityStatement/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "Provenance/*"
       }
     ]
   }

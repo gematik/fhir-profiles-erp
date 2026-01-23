@@ -1,0 +1,28 @@
+@startuml
+
+' Optional: keep these if the files exist and are on PlantUML include path
+!include ./style.iuml
+!include ./resources.iuml
+
+hide empty members
+hide circle
+
+title IG-ERP-DM-TASK-INPUT-REFERENCES
+
+class ERPTask <<Task>> {
+  + status = ready
+  + extension[eu-isRedeemableByProperties] : boolean
+}
+
+class BinaryEPrescription <<Binary>> {
+  + contentType = application/xml
+}
+
+class KBVBundleXml <<Bundle>>
+class KBVBundleJson <<Bundle>>
+
+ERPTask --> BinaryEPrescription : input:ePrescription
+BinaryEPrescription --> KBVBundleXml
+ERPTask --> KBVBundleJson : input:patientReceipt
+
+@enduml

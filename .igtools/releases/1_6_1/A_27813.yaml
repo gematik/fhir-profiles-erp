@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: e5efcee03f844a9cb3f6ec2b7858656b35e2cc5042761180c2d9af3c1e9808fd
+created: '2026-01-13T13:56:37.878486'
+date: '2026-01-15T07:14:31.277018'
+key: A_27813
+modified: '2026-01-15T07:14:31.277018'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei Flowtype 166 sicherstellen, dass das Bundle
+  eine <i>MedicationRequest</i> plus eine <i>Medication</i> mit Kategorie 02 enthält;
+  andernfalls ist HTTP 400 mit dem entsprechenden Fehlertext zu liefern.
+title: E-Rezept-Fachdienst - Task aktivieren - T-Rezept-spezifische Payload-Prüfung
+version: 0

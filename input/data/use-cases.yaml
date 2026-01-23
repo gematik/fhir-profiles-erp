@@ -47,22 +47,25 @@
   title: "E-Rezept vervollständigen und Task aktivieren"
   roles: ["(Zahn-)Arzt"]
   description: |
-    Der QES-signierte Verordnungsdatensatz wird am Task hinterlegt und der Workflow des E-Rezepts startet.
-    Der E-Rezept-Fachdienst prüft QES und Schemakonformität und erzeugt bei Erfolg eine serverseitige Signatur zum Integritätsschutz.
+    Der (Zahn-)Arzt finalisiert eine bereits erstellte Verordnung und stellt sie qualifiziert signiert für den Versicherten bereit.
+    Mit der Bereitstellung startet der Einlöse-Workflow: Die Verordnung wird im E-Rezept-Fachdienst geprüft und anschließend so veröffentlicht,
+    dass sie im vorgesehenen Prozess (z. B. Einlösung in der Apotheke oder Bearbeitung durch den Kostenträger) genutzt werden kann.
   preconditions: |
-    - Task existiert und hat den Status `draft`.
-    - AccessCode ist im Primärsystem verfügbar.
-    - QES-signierter Verordnungsdatensatz liegt vor.
+    - Das E-Rezept wurde zuvor erstellt und befindet sich noch in der Vorbereitungsphase.
+    - Der qualifiziert signierte Verordnungsdatensatz (QES) liegt im Primärsystem vor.
+    - Ein Berechtigungsmerkmal zur geschützten Bereitstellung liegt vor (z. B. AccessCode).
   actions: |
-    - Das Primärsystem übermittelt den QES-signierten Verordnungsdatensatz zum referenzierten Task und weist sich dabei (u.a. über den AccessCode) berechtigt aus.
-    - Der E-Rezept-Fachdienst validiert Signatur und Schemakonformität.
+    - Das Primärsystem stellt den qualifiziert signierten Verordnungsdatensatz beim E-Rezept-Fachdienst bereit.
+    - Der E-Rezept-Fachdienst prüft Berechtigung, Signatur und fachliche Konsistenz der Verordnung.
+    - Bei erfolgreicher Prüfung wird die Verordnung für die weitere Verarbeitung (Einlösung/Bearbeitung) freigeschaltet.
   postconditions: |
-    - Task-Status wechselt von `draft` nach `ready`.
-    - Das E-Rezept ist bereitgestellt und kann eingelöst werden.
+    - Das E-Rezept ist bereitgestellt und kann im weiteren Prozess eingelöst bzw. bearbeitet werden.
+    - Der Status des Workflows entspricht der bereitgestellten Verordnung.
   relatedTechnicalUseCases: |
     - [E-Rezept vervollständigen und Task aktivieren](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-vervollständigen-und-task-aktivieren)
   followup: |
-    - [Mapping von Verordnungsdaten](./mapping-prescription.md)
+    - [Mapping von Verordnungsdaten](./mapping-prescription.html)
+    - [Übertragung von Verordnungsdaten an den ePA MedicationService](./menu-technische-umsetzung-anbindung-epa-ms.html)
 
 - id: E_Rezept_loeschen
   anchor: e-rezept-loeschen
@@ -82,3 +85,158 @@
     - Der referenzierte Task ist gelöscht; es werden keine Nutzdaten zurückgegeben.
   relatedTechnicalUseCases: |
     - [E-Rezept löschen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-löschen)
+
+- id: E_Rezept_abrufen_apotheke
+  anchor: e-rezept-abrufen-apotheke
+  link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-abrufen-apotheke
+  title: "E-Rezept abrufen (Apotheke)"
+  roles: ["Apotheke"]
+  description: |
+    Nach Übergabe von Task-ID und AccessCode durch den Versicherten ruft das Apothekenverwaltungssystem (AVS)
+    das E-Rezept mittels FHIR-Operation $accept ab. Der E-Rezept-Fachdienst liefert den Task, das
+    QES-signierte Verordnungsbundle und ein Secret zurück, das die Apotheke für weitere Schritte benötigt.
+  preconditions: |
+    - Task-ID und AccessCode wurden durch den Versicherten bereitgestellt (z. B. 2D-Code, CardLink, Nachricht).
+    - Das AVS ist gegenüber der TI authentisiert und verfügt über ein gültiges Access Token.
+    - Der referenzierte Task befindet sich in einem abrufbaren Status (ready) und ist noch keiner anderen Apotheke zugeordnet.
+  actions: |
+    - Das AVS sendet einen POST-Request auf /Task/{id}/$accept mit dem AccessCode.
+    - Der Fachdienst validiert Berechtigung und liefert Task, Binary (PKCS#7) und das Secret.
+    - Das AVS speichert Task, Secret, Binary und löst optional die lokale QES-Prüfung an.
+  postconditions: |
+    - Das Secret ist bekannt und belegt die Apotheke als aktuelle Bearbeiterin.
+    - Task-Status wechselt auf `in-progress`; Verordnungsdaten liegen im AVS vor.
+    - Falls Flowtype 200/209 mit Consent, liegt zusätzlich ein Consent-Resource vor.
+  relatedTechnicalUseCases: |
+    - [E-Rezept abrufen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-abrufen)
+
+- id: E_Rezept_secret_wiederherstellen
+  anchor: e-rezept-secret-wiederherstellen
+  link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-secret-wiederherstellen
+  title: "E-Rezept erneut abrufen"
+  roles: ["Apotheke"]
+  description: |
+    Geht das beim ersten Abruf erhaltene Secret verloren, kann die gleiche Apotheke das E-Rezept
+    nochmals abrufen, um das Secret und den Verordnungsdatensatz erneut zu erhalten.
+  preconditions: |
+    - Die Apotheke hat das E-Rezept zuvor erfolgreich abgerufen; der Task ist der Apotheke zugeordnet.
+    - Task-ID und AccessCode liegen weiterhin vor.
+    - Gleiches AVS / gleiche Telematik-ID wie beim Erstabruf (sonst HTTP 412 Precondition Failed).
+  actions: |
+    - Das AVS ruft /Task/{id}?ac=... mit HTTP GET auf.
+    - Der Fachdienst stellt Task, Binary und Secret erneut bereit.
+    - Das AVS ersetzt das verlorene Secret und setzt die Bearbeitung fort.
+  postconditions: |
+    - Secret und Verordnungsdaten stehen wieder zur Verfügung.
+    - Task-Status verbleibt bei `in-progress` und bleibt der Apotheke zugeordnet.
+  relatedTechnicalUseCases: |
+    - [E-Rezept erneut abrufen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-erneut-abrufen)
+
+- id: E_Rezept_abgabe_dokumentieren
+  anchor: e-rezept-abgabe-dokumentieren
+  link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-abgabe-dokumentieren
+  title: "E-Rezept-Abgabe zeitnah dokumentieren"
+  roles: ["Apotheke"]
+  description: |
+    Vor Abschluss des Workflows kann die Apotheke über $dispense Dispensierinformationen einstellen,
+    damit Versicherte und FdV zeitnah über die erfolgte Abgabe informiert werden, ohne eine Quittung auszulösen.
+  preconditions: |
+    - Die Apotheke besitzt das Secret aus dem vorherigen Abruf.
+    - Das Rezept wurde beliefert, aber der Workflow ist noch nicht abgeschlossen.
+    - Dispensierdaten (MedicationDispense + Medication) liegen im AVS vor und bleiben unterhalb der Größenlimits.
+  actions: |
+    - Das AVS ruft /Task/{id}/$dispense?secret=... via POST auf und übermittelt die Abgabeinformationen in einer Parameters-Ressource.
+    - Der Fachdienst plausibilisiert die Daten und speichert sie ohne Statuswechsel des Tasks.
+  postconditions: |
+    - Dispensierinformationen stehen dem Versicherten im E-Rezept-FdV zur Verfügung.
+    - Task behält Status `in-progress`; keine Quittung wurde erzeugt.
+  relatedTechnicalUseCases: |
+    - [$dispense nutzen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-dispense)
+
+- id: E_Rezept_abgabe_abschliessen
+  anchor: e-rezept-abgabe-abschliessen
+  link: menu-fachlichkeit-anwendungsfaelle.html#e-rezept-abgabe-abschliessen
+  title: "E-Rezept-Abgabe vollziehen"
+  roles: ["Apotheke"]
+  description: |
+    Nach erfolgter Belieferung schließt die Apotheke den Workflow mit $close ab, übermittelt die finalen
+    Dispensierinformationen (oder verweist auf zuvor gesendete Daten) und erhält ein serverseitig signiertes Quittungs-Bundle.
+  preconditions: |
+    - Secret liegt vor und die Apotheke ist weiterhin berechtigt.
+    - Vollständige Dispensierinformationen stehen bereit (entweder frisch oder über vorheriges $dispense).
+    - Bei Flowtype 200 muss sichergestellt sein, dass dem Versicherten eine Quittung für private Abrechnung ausgehändigt wird.
+  actions: |
+    - Das AVS ruft /Task/{id}/$close?secret=... via POST auf und sendet die Dispensierinformationen (falls noch nicht vorhanden).
+    - Der Fachdienst validiert die Daten, erstellt das Quittungs-Bundle und setzt den Task auf `completed`.
+  postconditions: |
+    - Der Workflow ist abgeschlossen; Quittung liegt im AVS vor und kann an Rechenzentrum/Kostenträger weitergegeben werden.
+    - Versicherte sehen den Abschluss im FdV; ggf. erfolgt eine Übermittlung an BfArM bzw. ePA gemäß Flowtype.
+  relatedTechnicalUseCases: |
+    - [E-Rezept-Abgabe vollziehen](./menu-technische-umsetzung-anwendungsfaelle.html#e-rezept-close)
+
+- id: DiGA_E_Rezept_zuweisen
+  anchor: diga-e-rezept-zuweisen
+  link: menu-fachlichkeit-anwendungsfaelle.html#diga-e-rezept-zuweisen
+  title: "DiGA-Verordnung einem Kostenträger zuweisen"
+  roles: ["Versicherter"]
+  description: |
+    Versicherte leiten ihr E-Rezept für eine DiGA an den zuständigen Kostenträger weiter – entweder per
+    E-Rezept-FdV nach §360 Abs. 10 SGB V oder über einen Ausdruck nach §360 Abs. 9 SGB V. Ziel ist es,
+    den Freischaltcode anzufordern und den Status des Antrags transparent zu halten.
+  preconditions: |
+    - Das E-Rezept für DiGA liegt im E-Rezept-FdV des Versicherten vor oder ein Ausdruck ist vorhanden.
+    - Die Kostenträger-IK ist bekannt (z. B. aus dem Authentifizierungs-Token oder manuell gewählt).
+    - Der Versicherte weist sich gegenüber dem E-Rezept-FdV oder der Krankenkassen-App aus (eGK oder GesundheitsID).
+  actions: |
+    - Das E-Rezept-FdV ermittelt die Telematik-ID des Kostenträgers über das FHIR-VZD oder bietet eine manuelle Auswahl an.
+    - Das System erstellt eine `Communication` (DispReq) mit dem E-Rezept-Token und adressiert diese an den Kostenträger.
+    - Alternativ übermittelt der Versicherte den Ausdruck an den Kostenträger, der daraufhin den Abrufprozess startet.
+  postconditions: |
+    - Der Kostenträger verfügt über das E-Rezept-Token und kann das DiGA-E-Rezept abrufen.
+    - Der Versicherte sieht im Protokoll den Versandzeitpunkt und kann den Status nachverfolgen.
+  relatedTechnicalUseCases: |
+    - [DiGA-Verordnung zuweisen](./menu-technische-umsetzung-anwendungsfaelle.html#diga-e-rezept-zuweisen)
+
+- id: DiGA_E_Rezept_abrufen_kostentraeger
+  anchor: diga-e-rezept-abrufen-kostentraeger
+  link: menu-fachlichkeit-anwendungsfaelle.html#diga-e-rezept-abrufen-kostentraeger
+  title: "DiGA-E-Rezept abrufen (Kostenträger)"
+  roles: ["Kostenträger"]
+  description: |
+    Der Kostenträger ruft mit Hilfe des erhaltenen E-Rezept-Tokens die DiGA-Verordnung vom E-Rezept-Fachdienst ab,
+    prüft Leistungsanspruch und bereitet die Freischaltcode-Erstellung vor.
+  preconditions: |
+    - Zugangsdaten (Access Token) auf Basis der SM-B KTR liegen vor; das System ist an die TI angebunden.
+    - Ein E-Rezept-Token mit passender IK wurde empfangen (z. B. Communication vom Versicherten oder Scan eines Ausdrucks).
+    - Der Flowtype 162 befindet sich im Status `ready` und ist noch keinem anderen Kostenträger zugeordnet.
+  actions: |
+    - Das Kostenträgersystem ruft /Task/{id}/$accept mit AccessCode auf und erhält Task, Binary und Secret.
+    - Die Verordnung wird im Backend persistiert, fachlich geprüft und mit dem Freischaltprozess verknüpft.
+    - Status- und Protokolleinträge werden im eigenen System und gegenüber dem Versicherten gepflegt.
+  postconditions: |
+    - Das Secret liegt vor und belegt den Kostenträger als Bearbeiter; Task-Status wechselt auf `in-progress`.
+    - Prüf- und Abrechnungsdaten stehen strukturiert zur Verfügung; der Versicherte sieht eine Statusänderung.
+  relatedTechnicalUseCases: |
+    - [DiGA-E-Rezept abrufen](./menu-technische-umsetzung-anwendungsfaelle.html#diga-e-rezept-abrufen)
+
+- id: DiGA_Freischaltcode_bereitstellen
+  anchor: diga-freischaltcode-bereitstellen
+  link: menu-fachlichkeit-anwendungsfaelle.html#diga-freischaltcode-bereitstellen
+  title: "Freischaltcode bereitstellen oder Rückmeldung geben"
+  roles: ["Kostenträger"]
+  description: |
+    Nach erfolgreicher Prüfung stellt der Kostenträger den Freischaltcode als Abgabeinformation im E-Rezept-Fachdienst bereit
+    oder dokumentiert, aus welchem Grund kein Code erzeugt werden kann.
+  preconditions: |
+    - Das Secret aus dem vorigen Abruf liegt vor; der Kostenträger ist autorisiert.
+    - Der Freischaltcode wurde generiert oder ein fachlicher Ablehnungsgrund ist bekannt (z. B. fehlender Anspruch).
+    - Die technischen Limitierungen (z. B. Requestgröße < 1 MB) für `$close` oder `$dispense` werden eingehalten.
+  actions: |
+    - Das Kostenträgersystem übermittelt über `$dispense` oder `$close` eine Parameters-Ressource mit dem Freischaltcode
+      bzw. einer versichertenfreundlichen Rückmeldung.
+    - Der E-Rezept-Fachdienst persistiert die Abgabeinformation und beendet bei `$close` den Workflow mit Quittung.
+  postconditions: |
+    - Der Versicherte sieht im E-Rezept-FdV (oder erhält per Krankenkasse) den Freischaltcode oder die Begründung.
+    - Der Workflow ist abgeschlossen; der Kostenträger erhält eine Quittung für die Dokumentation.
+  relatedTechnicalUseCases: |
+    - [Freischaltcode bereitstellen](./menu-technische-umsetzung-anwendungsfaelle.html#diga-freischaltcode-bereitstellen)

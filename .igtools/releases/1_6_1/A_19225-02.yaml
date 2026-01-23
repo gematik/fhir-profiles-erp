@@ -1,0 +1,20 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: d6fa00cdbd6dc4429355c51578bfaec7738718c6f094c8f2f8d3fae82c33af54
+created: '2026-01-13T13:56:37.878332'
+date: '2026-01-15T07:14:31.276787'
+key: A_19225-02
+modified: '2026-01-15T07:14:31.276787'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS für Flowtypes 160, 169, 200 und 209 prüfen, dass
+  die QES von einer zulässigen professionOID (z.B. <i>oid_arzt</i>, <i>oid_zahnarzt</i>)
+  stammt und bei unzulässigen Berufsgruppen mit HTTP 400 abbrechen.
+title: E-Rezept-Fachdienst - Task aktivieren - QES für Flowtype 160/169/200/209 nur
+  durch berechtigte Berufsgruppen
+version: 0

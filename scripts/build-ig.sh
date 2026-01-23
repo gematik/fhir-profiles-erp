@@ -11,14 +11,16 @@ cd "$PROJECT_ROOT"
 
 igtools process
 
+# TODO: Wieder reinkommentieren
+
 # Generate Sushi
-sushi .
+# sushi .
 
 # Generate Transformed Artifacts by StructureMaps
-if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
-  rm input/resources/transformed-kbv-bundles/*
-fi
-python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
+# if [ -n "$(ls -A input/resources/transformed-kbv-bundles/ 2>/dev/null)" ]; then
+#   rm input/resources/transformed-kbv-bundles/*
+# fi
+# python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 
 # Generate Images from drawio
 "$SCRIPT_DIR/generate-drawio-images.sh"
@@ -27,7 +29,7 @@ python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 ./scripts/fml_table.sh
 
 # Generate IG Publisher Content
-./_genonce.sh -no-sushi
+#./_genonce.sh -no-sushi
 
-#TODO Determine if we should use this and offer to download
-./scripts/package-custom-artifacts.sh
+#TODO dev build
+./_genonce.sh -no-sushi -validation-off

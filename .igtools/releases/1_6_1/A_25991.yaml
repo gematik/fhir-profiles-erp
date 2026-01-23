@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 701e2bbb3d16704a6f5530064b7feefc3a65169ea9bfb41cef5fe2f26fc7b18c
+created: '2026-01-13T13:56:37.878637'
+date: '2026-01-15T07:14:31.277207'
+key: A_25991
+modified: '2026-01-15T07:14:31.277207'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS für Flowtype 162 eine <i>DeviceRequest</i>-Ressource
+  sowie <i>Composition.type = e16D</i> verlangen und bei Abweichungen mit HTTP 400
+  abbrechen.
+title: E-Rezept-Fachdienst - Task aktivieren - DiGA-spezifische Payload-Prüfung
+version: 0

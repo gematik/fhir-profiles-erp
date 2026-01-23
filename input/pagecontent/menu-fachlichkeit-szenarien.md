@@ -1,30 +1,18 @@
 
-### Szenarien
+Diese Seite dient als Einstiegspunkt in alle fachlichen Szenarien rund um das E-Rezept. Jedes Szenario beschreibt einen abgeschlossenen Versorgungszusammenhang, benennt die beteiligten Rollen und referenziert die relevanten Anwendungsfälle.
 
-Die nachfolgenden Szenarien beschreiben idealtypische Teilprozessschritte rund um die Verschreibung und Bereitstellung eines E-Rezepts im Versorgungsalltag. Zu jedem Szenario sind die relevanten fachlichen Anwendungsfälle zugeordnet.
+## Unterstützte Szenarien
 
-#### Verschreibung von Arzneimitteln
+- [Verordnung von apothekenpflichtigen Arzneimitteln](./menu-fachlichkeit-szenarien-e-rezept.html): beschreibt den Standard-Workflow von der Verordnung im Primärsystem über die Bereitstellung im Fachdienst bis zur Einlösung in der Apotheke.
+- [Verordnung von Digitalen Gesundheitsanwendungen (DiGA)](./menu-fachlichkeit-szenarien-diga.html): erläutert Flowtype 162 vom Ausstellen der DiGA-Verordnung über die Zuweisung an Kostenträger bis zur Bereitstellung des Freischaltcodes.
+- [Verordnung von T-Rezepten](./menu-fachlichkeit-szenarien-t-rezept.html): beschreibt die Verschreibung, Verwaltung und Bereitstellung hochpreisiger oder besonders sensibler Arzneimittel inklusive ergänzender Apothekenprozesse.
 
-_Die Entscheidung für eine Arzneimitteltherapie, die Erstellung der Verordnung im Primärsystem und die qualifizierte elektronische Signatur (QES) sind zentrale Schritte, bevor ein E-Rezept auf dem E-Rezept-Fachdienst bereitgestellt werden kann._
 
-Im Behandlungsprozess erfolgt zunächst Anamnese und Indikationsstellung. Darauf aufbauend wählt der Arzt/die Ärztin ein geeignetes Arzneimittel und erstellt den Verordnungsdatensatz im Primärsystem (PVS/KIS).
+Weitere Szenarien werden sukzessive ergänzt. Neue Inhalte sollten den Aufbau der bestehenden Detailseiten übernehmen, damit Leserinnen und Leser erwartbare Orientierungspunkte finden.
 
-Damit das E-Rezept als digitales Artefakt genutzt werden kann, wird anschließend eine Rezept-ID über den E-Rezept-Fachdienst erzeugt (Task anlegen). Diese Rezept-ID wird in den Verordnungsdatensatz eingebettet.
+## Aufbau der Szenariobeschreibungen
 
-Vor der Bereitstellung muss der Verordnungsdatensatz qualifiziert elektronisch signiert werden. Die QES kann ausschließlich durch den (Zahn-)Arzt/die (Zahn-)Ärztin mit freigeschaltetem HBA erfolgen; vorbereitende Tätigkeiten (z.B. durch MFA) sind je nach Organisation möglich.
-
-Nach erfolgreicher QES wird der Task im E-Rezept-Fachdienst aktiviert und der signierte Verordnungsdatensatz übermittelt. Der E-Rezept-Fachdienst prüft Signatur und Schemakonformität und stellt das E-Rezept bereit.
-
-Wenn im Nachgang eine Fehlverordnung erkannt wird, kann das E-Rezept (solange es nicht bereits in Belieferung ist) durch den verordnenden Leistungserbringer widerrufen/gelöscht werden, um den Patienten vor Bezug und Einnahme zu schützen.
-
-**Beteiligte Systeme:** PVS/KIS, E-Rezept-Fachdienst, IdP/Konnektor, HBA
-
-**Fachliche Anwendungsfälle**
-
-- [E-Rezept erstellen](./menu-fachlichkeit-anwendungsfaelle.html#e-rezept-erstellen)
-- [E-Rezept qualifiziert signieren](./menu-fachlichkeit-anwendungsfaelle.html#e-rezept-qualifiziert-signieren)
-- [E-Rezept vervollständigen und Task aktivieren](./menu-fachlichkeit-anwendungsfaelle.html#e-rezept-vervollstaendigen-und-task-aktivieren)
-- [E-Rezept löschen](./menu-fachlichkeit-anwendungsfaelle.html#e-rezept-loeschen)
-
-#### Belieferung von Arzneimitteln
-tbd
+1. **Kontext und Mehrwert**: kurze Einordnung, warum das Szenario existiert und welche gesetzlichen oder organisatorischen Vorgaben maßgeblich sind.
+2. **Prozessabschnitte**: strukturierte Abschnitte (z.B. Verordnung, Zuweisung, Belieferung) mit Hinweisen auf Flowtypes, Fachdienst-Interaktionen und Besonderheiten einzelner Rollen.
+3. **Beteiligte Systeme**: konsolidierte Übersicht über Primärsysteme, Fachdienste und ggf. Zusatzlösungen wie Apps oder Kostenträger-Backends.
+4. **Fachliche Anwendungsfälle**: Stellt dar, welche fachlichen Use Cases aus dem gemeinsamen Katalog in diesem Szenario relevant sind.
