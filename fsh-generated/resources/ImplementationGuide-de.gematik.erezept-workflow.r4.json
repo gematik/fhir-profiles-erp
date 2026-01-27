@@ -1076,7 +1076,7 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Home",
+          "title": "Implementation Guide E-Rezept-Fachdienst",
           "generation": "markdown"
         },
         {
@@ -1156,6 +1156,11 @@
               "generation": "markdown",
               "page": [
                 {
+                  "nameUrl": "mapping-prescription-bundle-parameters.html",
+                  "title": "Mapping des Bundles zu Parameters für Verordnungsdaten",
+                  "generation": "markdown"
+                },
+                {
                   "nameUrl": "mapping-prescription-practitioner.html",
                   "title": "Mapping des Verordnenden für Verordnungsdaten",
                   "generation": "markdown"
@@ -1173,7 +1178,29 @@
                 {
                   "nameUrl": "mapping-prescription-medication.html",
                   "title": "Mapping der Arzneimitteldaten für Verordnungsdaten",
-                  "generation": "markdown"
+                  "generation": "markdown",
+                  "page": [
+                    {
+                      "nameUrl": "mapping-prescription-medication-compounding.html",
+                      "title": "Mapping einer Rezeptur Medikation",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "mapping-prescription-medication-freetext.html",
+                      "title": "Mapping einer Freitext Medikation",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "mapping-prescription-medication-ingredient.html",
+                      "title": "Mapping einer Wirkstoff Medikation",
+                      "generation": "markdown"
+                    },
+                    {
+                      "nameUrl": "mapping-prescription-medication-pzn.html",
+                      "title": "Mapping einer PZN Medikation",
+                      "generation": "markdown"
+                    }
+                  ]
                 }
               ]
             },

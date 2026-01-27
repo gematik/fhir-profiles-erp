@@ -5,7 +5,7 @@
   "name": "KBVPrErpBundleMap",
   "status": "draft",
   "version": "1.0",
-  "date": "2026-01-08",
+  "date": "2026-01-27",
   "description": "Auto-generated StructureMap for transformation KBV_PR_ERP_Bundle|1.4.0 -> EPAOpProvidePrescriptionERPInputParameters|1.3.0",
   "structure": [
     {
@@ -119,7 +119,8 @@
                     {
                       "context": "KBVPRERPBundle",
                       "variable": "inlinesourceParametersParameterRxprescriptionPartAuthoredonValue",
-                      "element": "entry"
+                      "element": "entry",
+                      "condition": "resource.meta.profile.where($this.contains('https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Prescription')).exists()"
                     }
                   ],
                   "rule": [

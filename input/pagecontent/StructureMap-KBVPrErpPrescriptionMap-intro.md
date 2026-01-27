@@ -3,8 +3,8 @@
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
 | `KBVPRERPPrescription.meta` | `EPAMedicationRequest.meta.profile` | Fester Wert | setzt festen Wert: `https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request` |
-| `KBVPRERPPrescription` | `MedicationRequest.subject` | Manuell | Transformationsregel F_007: Wird aus KBV_PR_FOR_Patient.identifier:versichertenId übernommen. |
-| `KBVPRERPPrescription` | `MedicationRequest.subject.identifier` | Manuell | Befüllen von .subject nach Transformationsregel F_010 |
+| `KBVPRERPPrescription.subject` | `EPAMedicationRequest.subject` | Manuell | Transformationsregel F_007: Wird aus KBV_PR_FOR_Patient.identifier:versichertenId übernommen. \| Quelle: MedicationRequest.subject |
+| `KBVPRERPPrescription` | `EPAMedicationRequest.subject.identifier` | Manuell | Befüllen von .subject nach Transformationsregel F_010 \| Quelle: MedicationRequest.subject.identifier |
 
 ### Extensions
 

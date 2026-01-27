@@ -62,11 +62,11 @@
         "requester" : {
           "reference" : "Practitioner/667ffd79-42a3-4002-b7ca-6b9098f20ccb"
         },
-        "substitution" : {
-          "allowedBoolean" : true
-        },
         "medicationReference" : {
           "reference" : "Medication/0d93504e-c6a7-47c1-8ad5-b0c5cf1b8920"
+        },
+        "substitution" : {
+          "allowedBoolean" : true
         }
       }
     },
@@ -77,18 +77,6 @@
         "meta" : {
           "profile" : ["https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory"]
         },
-        "telecom" : [{
-          "system" : "phone",
-          "value" : "0301234567"
-        },
-        {
-          "system" : "fax",
-          "value" : "030123456789"
-        },
-        {
-          "system" : "email",
-          "value" : "mvz@e-mail.de"
-        }],
         "address" : [{
           "type" : "both",
           "line" : ["Herbert-Lewin-Platz 2"],
@@ -122,6 +110,18 @@
           "city" : "Berlin",
           "postalCode" : "10623",
           "country" : "D"
+        }],
+        "telecom" : [{
+          "system" : "phone",
+          "value" : "0301234567"
+        },
+        {
+          "system" : "fax",
+          "value" : "030123456789"
+        },
+        {
+          "system" : "email",
+          "value" : "mvz@e-mail.de"
         }]
       }
     },

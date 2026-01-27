@@ -2,7 +2,7 @@
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPMedicationPZN` | `Medication.extension:type` | Manuell | Fester Wert: 781405001, Medicinal product package (product) |
+| `KBVPRERPMedicationPZN` | `EPAMedication.extension` | Manuell | Fester Wert: 781405001, Medicinal product package (product) \| Quelle: Medication.extension:type |
 
 ### Extensions
 

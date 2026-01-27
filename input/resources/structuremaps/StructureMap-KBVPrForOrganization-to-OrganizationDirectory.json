@@ -5,7 +5,7 @@
   "name": "KBVPrForOrganizationMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-08",
+  "date": "2026-01-27",
   "description": "Auto-generated StructureMap for KBV_PR_FOR_Organization|1.3.0 -> OrganizationDirectory|1.0.0",
   "structure": [
     {
@@ -193,11 +193,19 @@
         },
         {
           "name": "OrganizationIdentifierTelematikidd2cf7b80",
-          "documentation": "Manual action required | Telematik-ID wird aus idNummer → aus dem ACCESS_TOKEN der Anfrage bezogen | Field: Organization.identifier:TelematikID",
+          "documentation": "Manual action required | Telematik-ID wird aus idNummer → aus dem ACCESS_TOKEN der Anfrage bezogen | Quelle: Organization.identifier:TelematikID",
           "source": [
             {
               "context": "KBVPRFOROrganization",
               "variable": "manualsrcOrganizationIdentifierTelematikidd2cf7b80"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "identifier",
+              "variable": "tgtOrganizationDirectoryIdentifierTelematikidc36ffe12"
             }
           ]
         },
@@ -254,11 +262,20 @@
         },
         {
           "name": "OrganizationName61d5a4f1",
-          "documentation": "Manual action required | organizationName → aus dem ACCESS_TOKEN der Anfrage beziehen | Field: Organization.name",
+          "documentation": "Manual action required | organizationName → aus dem ACCESS_TOKEN der Anfrage beziehen | Quelle: Organization.name",
           "source": [
             {
               "context": "KBVPRFOROrganization",
-              "variable": "manualsrcOrganizationName61d5a4f1"
+              "element": "name",
+              "variable": "srcKBVPRFOROrganizationNameabbbdc85"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "name",
+              "variable": "tgtOrganizationDirectoryName0e007323"
             }
           ]
         },
@@ -289,11 +306,19 @@
         },
         {
           "name": "OrganizationTypeProfession6b535de2",
-          "documentation": "Manual action required | professionOID → aus dem ACCESS_TOKEN der Anfrage | Field: Organization.type:profession",
+          "documentation": "Manual action required | professionOID → aus dem ACCESS_TOKEN der Anfrage | Quelle: Organization.type:profession",
           "source": [
             {
               "context": "KBVPRFOROrganization",
               "variable": "manualsrcOrganizationTypeProfession6b535de2"
+            }
+          ],
+          "target": [
+            {
+              "context": "OrganizationDirectory",
+              "contextType": "variable",
+              "element": "type",
+              "variable": "tgtOrganizationDirectoryTypeProfessionf2d05bbb"
             }
           ]
         }

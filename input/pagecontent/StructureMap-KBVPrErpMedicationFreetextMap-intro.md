@@ -2,7 +2,7 @@
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPMedicationFreeText` | `Medication.extension:type` | Manuell | Fester Wert: 781405001, Medicinal product package (product) |
+| `KBVPRERPMedicationFreeText` | `EPAMedication.extension` | Manuell | Fester Wert: 781405001, Medicinal product package (product) \| Quelle: Medication.extension:type |
 | `KBVPRERPMedicationFreeText.meta` | `EPAMedication.meta.profile` | Fester Wert | setzt festen Wert: `https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication` |
 
 ### Extensions

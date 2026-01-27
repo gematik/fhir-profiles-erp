@@ -380,6 +380,19 @@ def is_passthrough_copy_rule(rule: dict) -> bool:
     return True
 
 
+def extract_resource_type_from_conditions(conditions: List[str]) -> str:
+    """Extract resource type from conditions like `resource is X`."""
+    if not conditions:
+        return ""
+    for condition in conditions:
+        if not condition:
+            continue
+        match = re.search(r"resource\s+is\s+(\w+)", condition)
+        if match:
+            return match.group(1)
+    return ""
+
+
 def has_meaningful_condition(conditions: List[str]) -> bool:
     """True, wenn Bedingungen mehr sind als reine Ausschlussfilter."""
     if not conditions:
@@ -393,7 +406,17 @@ def has_meaningful_condition(conditions: List[str]) -> bool:
     return False
 
 
-def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=None, var_paths=None, inherited_suffix=""):
+def extract_relevant_rules(
+    rules,
+    src_parents=None,
+    tgt_parents=None,
+    mappings=None,
+    var_paths=None,
+    inherited_suffix="",
+    keep_copy_rows=False,
+    skip_create_docs=False,
+    inherited_resource_type="",
+):
     """Extract relevant mapping rules mit Vererbungs-Hinweisen für Bedingungen."""
     if mappings is None:
         mappings = []
@@ -411,6 +434,7 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         exclusion_only = bool(source_conditions) and all(is_exclusion_only_condition(c) for c in source_conditions)
         passthrough_copy = is_passthrough_copy_rule(rule)
         meaningful_condition = has_meaningful_condition(source_conditions)
+        resource_type = extract_resource_type_from_conditions(source_conditions) or inherited_resource_type
         
         # Build source path
         src_path = ""
@@ -508,7 +532,8 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         if should_include(rule) and not (exclusion_only and passthrough_copy):
             # Skip pure passthrough copies without changes/conditions/docs.
             if (
-                passthrough_copy
+                not keep_copy_rows
+                and passthrough_copy
                 and not rule_manual_info
                 and not doc_meaningful
                 and not has_meaningful_transformation(rule)
@@ -519,12 +544,19 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                 target_desc_parts = list(base_desc_parts)
                 if passthrough_copy and first_source_element == 'extension' and (tgt or {}).get('element', '').startswith('extension'):
                     target_desc_parts.append("Kopiert komplette Extension inklusive Werte")
+                if keep_copy_rows and resource_type and "entry.resource" in (src_path_clean or ""):
+                    target_desc_parts.append(f"Ressource: {resource_type}")
                 target_desc_parts.extend(extract_target_transformation_info(tgt))
                 desc = "<br>".join(part for part in target_desc_parts if part)
                 if not desc:
                     desc = "*(direkte Kopie)*"
                 action = determine_action_label(rule, tgt)
                 output_tgt_path = tgt_path_clean
+
+                if skip_create_docs and doc_text_lower.startswith("creates "):
+                    continue
+                if skip_create_docs and action == "Dokumentiert" and desc == "*(direkte Kopie)*":
+                    continue
 
                 # Skip simple create actions without meaningful transformation.
                 if (
@@ -536,14 +568,15 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
                     continue
 
                 # Skip plain copies without changes/logic.
-                if (
-                    action == "Kopiert"
-                    and is_passthrough_copy_target(tgt)
-                    and not rule_manual_info
-                    and not rule.get('dependent')
-                    and not meaningful_condition
-                ):
-                    continue
+                if not keep_copy_rows:
+                    if (
+                        action == "Kopiert"
+                        and is_passthrough_copy_target(tgt)
+                        and not rule_manual_info
+                        and not rule.get('dependent')
+                        and not meaningful_condition
+                    ):
+                        continue
 
                 if rule_manual_info:
                     manual_instruction = rule_manual_info.get('instruction', '').strip()
@@ -563,14 +596,35 @@ def extract_relevant_rules(rules, src_parents=None, tgt_parents=None, mappings=N
         if 'rule' in rule:
             next_src_parents = src_path_plain.split('.') if src_path_plain else src_parents
             next_tgt_parents = tgt_path.split('.') if tgt_path else tgt_parents
-            extract_relevant_rules(rule['rule'], next_src_parents, next_tgt_parents, mappings, var_paths, src_suffix)
+            extract_relevant_rules(
+                rule['rule'],
+                next_src_parents,
+                next_tgt_parents,
+                mappings,
+                var_paths,
+                src_suffix,
+                keep_copy_rows=keep_copy_rows,
+                skip_create_docs=skip_create_docs,
+                inherited_resource_type=resource_type,
+            )
     
     return mappings
 
 def structuremap_to_markdown(json_data):
     """Convert StructureMap to enhanced markdown table"""
     group = json_data['group'][0]
-    mappings = extract_relevant_rules(group['rule'])
+    inputs = group.get('input', [])
+    src_type = (inputs[0].get('type') if len(inputs) > 0 else "") or ""
+    tgt_type = (inputs[1].get('type') if len(inputs) > 1 else "") or ""
+    is_bundle_to_parameters = (
+        "bundle" in src_type.lower() and "parameters" in tgt_type.lower()
+    )
+
+    mappings = extract_relevant_rules(
+        group['rule'],
+        keep_copy_rows=is_bundle_to_parameters,
+        skip_create_docs=is_bundle_to_parameters,
+    )
 
     filtered_mappings = [
         (src, tgt, action, desc)
