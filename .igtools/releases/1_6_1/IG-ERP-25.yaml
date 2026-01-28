@@ -1,0 +1,20 @@
+actor:
+- Eingangspunkt E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 072a83a6d42f1679a36b5450091f8fce84e73b9a8e39bc7453807905106c8b08
+created: '2026-01-27T07:36:31.598137'
+date: '2026-01-27T07:36:31.598139'
+key: IG-ERP-25
+modified: '2026-01-27T07:36:31.598138'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Eingangspunkt E-Rezept-Fachdienst: []
+text: Der Eingangspunkt des E-Rezept-Fachdienstes MUSS Verbindungen von Clients (Internet
+  oder TI) ausschließlich über TLS akzeptieren. Er MUSS die TLS-Verbindung terminieren
+  und HTTP Requests und Responses zwischen dem Client und dem für die jeweilige Sitzung
+  zugeordneten Verarbeitungskontext der VAU vermitteln.
+title: E-Rezept-Fachdienst – Verbindungen von Clients zu Verarbeitungskontexten der
+  VAU über den Eingangspunkt
+version: 0

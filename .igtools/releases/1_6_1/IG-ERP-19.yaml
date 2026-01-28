@@ -1,0 +1,17 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: fad57d1c3a77a375c4bee6133849030065f517ae7945b3ccb2d7cf67062b25d2
+created: '2026-01-27T07:36:31.597457'
+date: '2026-01-27T07:36:31.597459'
+key: IG-ERP-19
+modified: '2026-01-27T07:36:31.597458'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS an der HTTPS-Schnittstelle zum Internet OCSP-Stapling
+  [RFC-6066] unterstützen.
+title: E-Rezept-Fachdienst – OCSP-Stapling
+version: 0

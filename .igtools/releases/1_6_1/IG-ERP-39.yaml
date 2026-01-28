@@ -1,0 +1,18 @@
+actor:
+- Verarbeitungskontext E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 274f81f8ba76f0af13308ab4b3362d448d11003d87e7b29d36bd33a8e0f85705
+created: '2026-01-27T07:36:31.599653'
+date: '2026-01-27T07:36:31.599655'
+key: IG-ERP-39
+modified: '2026-01-27T07:36:31.599654'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Verarbeitungskontext E-Rezept-Fachdienst: []
+text: Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS sich gegenüber Clients,
+  die mit ihm kommunizieren, mittels der Fachdienstidentität oid_erp-vau mit Zertifikatsprofil
+  C.FD.ENC (oid_fd_enc) ausweisen.
+title: E-Rezept-Fachdienst – Authentisierung gegenüber Clients
+version: 0

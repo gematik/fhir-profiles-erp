@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: bc34faaea8844d07da6f4b0d5fc4c9274685375daba7a5c0c5a0df12f1660bc6
+created: '2026-01-27T07:36:31.604707'
+date: '2026-01-27T07:36:31.604709'
+key: IG-ERP-69
+modified: '2026-01-27T07:36:31.604708'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS beim Aktivieren eines Tasks das Feld <i>Task.performerType</i>
+  anhand der Prozessparameter des Flowtypes befüllen.
+title: E-Rezept-Fachdienst - Task aktivieren - PerformerType aus Flowtype ableiten
+version: 0

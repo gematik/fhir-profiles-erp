@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: c511ab87126f88f01dd7532c0d0d1ca946f9311111624523ae282bbd7ae6b054
+created: '2026-01-27T07:36:31.605441'
+date: '2026-01-27T07:36:31.605443'
+key: IG-ERP-74
+modified: '2026-01-27T07:36:31.605442'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS beim Aktivieren den Wert <i>Coverage.payor.identifier.value</i>
+  gemäß IK-Prüfziffervalidierung kontrollieren und bei Fehlern HTTP 400 mit der definierten
+  Meldung liefern.
+title: E-Rezept-Fachdienst - Task aktivieren - IKNR der Krankenkasse prüfen
+version: 0

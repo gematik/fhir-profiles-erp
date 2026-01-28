@@ -1,0 +1,24 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 3917c651343fca8c67ddabf2e1f89698ef1da4ac7efc8771f6d8ad421097af31
+created: '2026-01-27T07:36:31.597239'
+date: '2026-01-27T07:36:31.597242'
+key: IG-ERP-17
+modified: '2026-01-27T07:36:31.597241'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der E-Rezept-Fachdienst MUSS folgende Vorgaben umsetzen: Er MUSS unter der
+  Adresse <FQDN>/ocspf eine Möglichkeit zur Statusabfrage über das vom E-Rezept-FdV
+  genutzte HTTPS-Interface zur Verfügung stellen (HTTP-POST, vgl. auch [RFC-6960,
+  Appendix [gemSpec_PKI]). Er MUSS über die Schnittstelle aus Spiegelstrich 1 OCSP-Requests
+  [RFC-6960] entgegennehmen. Aus einem solchen OCSP-Request MUSS er aus dem issuerKeyHash
+  [RFC-6960] die URL des entsprechenden OCSP-Responders in der TI ermitteln (Datengrundlage
+  ist die TSL der TI) und den OCSP-Request an diese ermittelte URL weiterleiten. Er
+  MUSS die erhaltenen OCSP-Response an das die OCSP-Anfrage stellende E-Rezept-FdV
+  unverändert weiterreichen.'
+title: E-Rezept-Fachdienst – Bereitstellung OCSP-Forwarder
+version: 0

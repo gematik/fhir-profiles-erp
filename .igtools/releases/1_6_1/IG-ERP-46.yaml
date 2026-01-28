@@ -1,0 +1,20 @@
+actor:
+- VAU E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 601338f6168499459520ed80446a71156546cfbc385f0791c1c7d449a1676115
+created: '2026-01-27T07:36:31.600417'
+date: '2026-01-27T07:36:31.600420'
+key: IG-ERP-46
+modified: '2026-01-27T07:36:31.600419'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  VAU E-Rezept-Fachdienst: []
+text: Die VAU des E-Rezept-Fachdienstes MUSS mit technischen Mitteln sicherstellen,
+  dass niemand, auch nicht der Anbieter des E-Rezept-Fachdienstes, während der Verarbeitung
+  personenbezogener medizinischer Daten Zugriff auf physische Schnittstellen der Systeme
+  erlangen kann, auf denen eine VAU ausgeführt wird.
+title: E-Rezept-Fachdienst – Kein physischer Zugang des Anbieters zu Systemen der
+  VAU
+version: 0

@@ -1,0 +1,19 @@
+actor:
+- Anb_eRp_FD
+conformance: SHALL
+content_hash: cf187452ece16d1f95391d5842295618b4a57b1063f6a54a9ade4b23fa382b75
+created: '2026-01-27T07:36:31.602161'
+date: '2026-01-27T07:36:31.602164'
+key: IG-ERP-60
+modified: '2026-01-27T07:36:31.602163'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Anb_eRp_FD: []
+text: Der Anbieter des E-Rezept-Fachdienst MUSS den für das Pseudonymisieren der gematik-Logdaten
+  benötigten geheimen Schlüssel key_pn_log ausschließlich im 4-Augen-Prinzip in den
+  E-Rezept-Fachdienst einbringen.
+title: Anbieter E-Rezept-Fachdienst – Pseudonymisieren der gematik-Logdaten – Einbringen
+  des Schlüssels im 4-Augen-Prinzip
+version: 0

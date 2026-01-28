@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: bca7a13f0db9d453e6e163ca47ed9d48d6df0a414158b72735e1c405e45fd847
+created: '2026-01-27T07:36:31.598902'
+date: '2026-01-27T07:36:31.598904'
+key: IG-ERP-32
+modified: '2026-01-27T07:36:31.598903'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS die zur Verschlüsselung
+  der persistierten E-Rezept-Daten verwendeten Schlüssel von einem HSM innerhalb der
+  VAU abrufen.
+title: E-Rezept-Fachdienst – Ableitung der Persistenzschlüssel durch ein HSM
+version: 0

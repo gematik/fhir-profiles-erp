@@ -13,7 +13,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
 
 #### FHIR Operation API
 
-<requirement conformance="SHALL" key="ERP-FD29739F5Z" title="E-Rezept-Fachdienst - Task erzeugen - Rollenprüfung" version="0">
+<requirement conformance="SHALL" key="IG-ERP-101" title="E-Rezept-Fachdienst - Task erzeugen - Rollenprüfung" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -28,7 +28,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   </ul>
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD12338LVT" title="E-Rezept-Fachdienst - Task erzeugen - Schemavalidierung Rezept anlegen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-102" title="E-Rezept-Fachdienst - Task erzeugen - Schemavalidierung Rezept anlegen" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -36,7 +36,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS die im Body der HTTP-POST-Operation auf die Ressource Task übertragenen Parameter gegen das Schema <i>http://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition</i> prüfen und bei Nicht-Konformität das Anlegen der Ressource im Fachdienst mit dem HTTP-Status-Code <i>400</i> beantworten.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD69482N1M" title="E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ" version="0">
+<requirement conformance="SHALL" key="IG-ERP-103" title="E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -44,7 +44,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation den Parameter <i>workflowType</i> (Rezepttyp) aus dem HTTP-Body des POST-Requests entnehmen, als Attribut <i>Task.extension:flowType</i> des zu erstellenden Tasks verwenden und bei Fehlen bzw. Nicht-Konformität des Parameters den Request als unzulässig abweisen.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD78744A6J" title="E-Rezept-Fachdienst - Ergänzung Performer-Typ für Einlöseinstitutstyp" version="0">
+<requirement conformance="SHALL" key="IG-ERP-104" title="E-Rezept-Fachdienst - Ergänzung Performer-Typ für Einlöseinstitutstyp" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -52,7 +52,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS beim Erzeugen eines Tasks das Feld <i>Task.performerType</i> aus dem übergebenen, gültigen Parameter <i>Task.extension:flowType</i> gemäß der Prozessparameter übernehmen.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD69465HLH" title="E-Rezept-Fachdienst - Task erzeugen - Generierung Rezept-ID" version="0">
+<requirement conformance="SHALL" key="IG-ERP-105" title="E-Rezept-Fachdienst - Task erzeugen - Generierung Rezept-ID" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -60,7 +60,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS beim Anlegen eines neuen Tasks eine Rezept-ID gemäß der Bildungsregel generieren, als Identifier mit Namingsystem <i>https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PrescriptionId</i> dem Task hinzufügen und sicherstellen, dass diese Rezept-ID innerhalb von 11 Jahren nach ihrer Erzeugung nicht erneut vergeben wird.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD95956VP0" title="E-Rezept-Fachdienst - Task erzeugen - Task-ID=Rezept-ID" version="0">
+<requirement conformance="SHALL" key="IG-ERP-106" title="E-Rezept-Fachdienst - Task erzeugen - Task-ID=Rezept-ID" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -68,7 +68,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS beim Erzeugen eines neuen Tasks die Rezept-ID, welche mit Task an das verordnende Primärsystem übermittelt wird, als Task-ID verwenden.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD68017FZG" title="E-Rezept-Fachdienst - Task erzeugen - Generierung AccessCode" version="0">
+<requirement conformance="SHALL" key="IG-ERP-107" title="E-Rezept-Fachdienst - Task erzeugen - Generierung AccessCode" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>
@@ -76,7 +76,7 @@ Das Primärsystem (PVS/KIS) ruft `$create` auf, um eine Rezept-ID (PrescriptionI
   Der E-Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation eine 256 Bit Zufallszahl (hexadezimal kodiert, <i>[0-9a-f]{64}</i>) erzeugen und diese im zu speichernden Task als externe ID in <i>Task.identifier:AccessCode</i> hinzufügen.
 </requirement>
 
-<requirement conformance="SHALL" key="ERP-FD43166Q7R" title="E-Rezept-Fachdienst - Status draft" version="0">
+<requirement conformance="SHALL" key="IG-ERP-108" title="E-Rezept-Fachdienst - Status draft" version="0">
   <meta lockversion="false"/>
   <actor name="eRp_FD">
     <testProcedure id="Produkttest"/>

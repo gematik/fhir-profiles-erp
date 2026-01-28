@@ -1,0 +1,18 @@
+actor:
+- eRp_FD
+conformance: SHALL
+content_hash: c7997e33d11e98b8cd1131a478aa59a208612aafea2e5d2d6cf9946990717f95
+created: '2026-01-27T07:36:31.611802'
+date: '2026-01-27T07:36:31.611804'
+key: IG-ERP-106
+modified: '2026-01-27T07:36:31.611803'
+release_status: NEW
+source: input/pagecontent/op-create.md
+status: ACTIVE
+test_procedures:
+  eRp_FD:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS beim Erzeugen eines neuen Tasks die Rezept-ID,
+  welche mit Task an das verordnende Primärsystem übermittelt wird, als Task-ID verwenden.
+title: E-Rezept-Fachdienst - Task erzeugen - Task-ID=Rezept-ID
+version: 0

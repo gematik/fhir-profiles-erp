@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 23d4b35fcaddcfb2c02e931f69c08e04cc8559ef0dd64cb4e18c75454bcd1455
+created: '2026-01-27T07:36:31.608954'
+date: '2026-01-27T07:36:31.608957'
+key: IG-ERP-90
+modified: '2026-01-27T07:36:31.608956'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS <i>Task.extension:eu-isRedeemableByProperties</i>
+  auf „true“ setzen, wenn Flowtype 160 oder 200 mit PZN-Verordnung vorliegt, und ansonsten
+  auf „false“.
+title: E-Rezept-Fachdienst - Task aktivieren - Einlösbarkeit im EU-Ausland kennzeichnen
+version: 0

@@ -1,0 +1,23 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 36d63810cc1956ec1200394746726f8c0a0aeec8a54124292058f3c8818fb167
+created: '2026-01-27T07:36:31.597114'
+date: '2026-01-27T07:36:31.597116'
+key: IG-ERP-16
+modified: '2026-01-27T07:36:31.597115'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der E-Rezept-Fachdienst MUSS folgende Vorgaben umsetzen: Er MUSS mindestens
+  einmal täglich aus der TI (TI-interne Verbindung) die "TSL(ECC-RSA)" und deren zugehörigen
+  Hashwert aus der TI herunterladen. Er MUSS unter dem Pfadnamen "/TSL.xml" über das
+  vom E-Rezept-FdV genutzte HTTPS-Interface die "TSL(ECC-RSA)" der TI zur Verfügung
+  stellen (HTTP-GET, HTTP Content-Type: text/xml). Er MUSS unter dem Pfadnamen "/TSL.sha2"
+  über das vom E-Rezept-FdV genutzte HTTPS-Interface den vom TSL-Dienst heruntergeladenen
+  SHA-256 Hashwert der Datei TSL.xml aus Spiegelstrich 2 zur Verfügung stellen (HTTP
+  Content-Type: text/plain, Hashwert als hexdump kodiert (64 Byte + Newline)).'
+title: E-Rezept-Fachdienst – Bereitstellung TSL
+version: 0

@@ -16,7 +16,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Vorbedingungen und Transport
 
-<requirement conformance="SHALL" key="A_19128" title="E-Rezept-Fachdienst - Task aktivieren - Task nach Aktivierung bereitstellen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-62" title="E-Rezept-Fachdienst - Task aktivieren - Task nach Aktivierung bereitstellen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -24,7 +24,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS bei erfolgreichem `$activate` den adressierten Task in den Status <i>ready</i> überführen und die aktualisierte Ressource im Response zurückgeben.
 </requirement>
 
-<requirement conformance="SHALL" key="A_19020" title="E-Rezept-Fachdienst - Task aktivieren - PKCS#7-Parameter prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-63" title="E-Rezept-Fachdienst - Task aktivieren - PKCS#7-Parameter prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -32,7 +32,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS den übergebenen QES-Datensatz als Enveloping CAdES PKCS#7 entgegennehmen und bei fehlender bzw. ungültiger ASN.1-Struktur die Operation mit HTTP 400 abbrechen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_19024-03" title="E-Rezept-Fachdienst - Task aktivieren - Prüfung AccessCode Rezept aktualisieren" version="0">
+<requirement conformance="SHALL" key="IG-ERP-64" title="E-Rezept-Fachdienst - Task aktivieren - Prüfung AccessCode Rezept aktualisieren" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -40,7 +40,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS vor jeder Aktivierung den bereitgestellten AccessCode aus HTTP-Header <i>X-AccessCode</i> bzw. Parameter <i>ac</i> mit dem im Task gespeicherten Wert vergleichen und den Aufruf bei Abweichung oder fehlender Angabe mit HTTP 403 abbrechen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_20703" title="E-Rezept-Fachdienst - Task aktivieren - Brute-Force-Drosselung für AccessCodes" version="0">
+<requirement conformance="SHALL" key="IG-ERP-65" title="E-Rezept-Fachdienst - Task aktivieren - Brute-Force-Drosselung für AccessCodes" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -50,7 +50,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Signatur- und Payload-Validierung
 
-<requirement conformance="SHALL" key="A_20159-04" title="E-Rezept-Fachdienst - Task aktivieren - Signaturzertifikat des HBA validieren" version="0">
+<requirement conformance="SHALL" key="IG-ERP-66" title="E-Rezept-Fachdienst - Task aktivieren - Signaturzertifikat des HBA validieren" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -58,7 +58,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS das QES-Signaturzertifikat C.HP.QES gemäß gemSpec_PKI (inklusive OCSP-Prüfung) validieren und bei fehlgeschlagener Online-Prüfung den Aufruf mit HTTP 512 beenden.
 </requirement>
 
-<requirement conformance="SHALL" key="A_19025-03" title="E-Rezept-Fachdienst - Task aktivieren - QES und KBV-Bundle validieren" version="0">
+<requirement conformance="SHALL" key="IG-ERP-67" title="E-Rezept-Fachdienst - Task aktivieren - QES und KBV-Bundle validieren" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -66,7 +66,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS die qualifizierte Signatur prüfen, das eingebettete FHIR-Bundle gegen `kbv.ita.erp` bzw. `kbv.itv.evdga` validieren und den PKCS#7-Datensatz sicher speichern; Fehler sind mit HTTP 400 zu quittieren.
 </requirement>
 
-<requirement conformance="SHALL" key="A_23172" title="E-Rezept-Fachdienst - Task aktivieren - Signatur-MimeType prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-68" title="E-Rezept-Fachdienst - Task aktivieren - Signatur-MimeType prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -76,7 +76,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Ableitungen und Folgeverarbeitung
 
-<requirement conformance="SHALL" key="A_19999" title="E-Rezept-Fachdienst - Task aktivieren - PerformerType aus Flowtype ableiten" version="0">
+<requirement conformance="SHALL" key="IG-ERP-69" title="E-Rezept-Fachdienst - Task aktivieren - PerformerType aus Flowtype ableiten" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -84,7 +84,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS beim Aktivieren eines Tasks das Feld <i>Task.performerType</i> anhand der Prozessparameter des Flowtypes befüllen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_19127-03" title="E-Rezept-Fachdienst - Task aktivieren - KVNR in Task.for übernehmen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-70" title="E-Rezept-Fachdienst - Task aktivieren - KVNR in Task.for übernehmen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -92,7 +92,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS die KVNR aus <i>Patient.identifier</i> (System `http://fhir.de/sid/gkv/kvid-10`) in <i>Task.for</i> übernehmen, damit die Patientenreferenz im Workflow eindeutig ist.
 </requirement>
 
-<requirement conformance="SHALL" key="A_25925" title="E-Rezept-Fachdienst - Task aktivieren - Verordnungsdaten für ePA Medication Service bereitstellen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-71" title="E-Rezept-Fachdienst - Task aktivieren - Verordnungsdaten für ePA Medication Service bereitstellen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -100,7 +100,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS nach erfolgreichem `$activate` die Verordnungsdaten für den ePA Medication Service vorbereiten.
 </requirement>
 
-<requirement conformance="SHALL" key="A_28126" title="E-Rezept-Fachdienst - Task aktivieren - Push Notification erp.task.activate auslösen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-72" title="E-Rezept-Fachdienst - Task aktivieren - Push Notification erp.task.activate auslösen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -108,7 +108,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS bei erfolgreicher Aktivierung den Push-Trigger <i>erp.task.activate</i> für die KVNR aus <i>Task.for</i> starten.
 </requirement>
 
-<requirement conformance="SHALL" key="A_19029-06" title="E-Rezept-Fachdienst - Task aktivieren - Serversigniertes Bundle erzeugen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-73" title="E-Rezept-Fachdienst - Task aktivieren - Serversigniertes Bundle erzeugen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -120,7 +120,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Kostenträger (IKNR)
 
-<requirement conformance="SHALL" key="A_23888" title="E-Rezept-Fachdienst - Task aktivieren - IKNR der Krankenkasse prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-74" title="E-Rezept-Fachdienst - Task aktivieren - IKNR der Krankenkasse prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -128,7 +128,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS beim Aktivieren den Wert <i>Coverage.payor.identifier.value</i> gemäß IK-Prüfziffervalidierung kontrollieren und bei Fehlern HTTP 400 mit der definierten Meldung liefern.
 </requirement>
 
-<requirement conformance="SHALL" key="A_24030" title="E-Rezept-Fachdienst - Task aktivieren - Alternative IKNR prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-75" title="E-Rezept-Fachdienst - Task aktivieren - Alternative IKNR prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -138,7 +138,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Leistungserbringer (LANR/ZANR)
 
-<requirement conformance="SHALL" key="A_24032" title="E-Rezept-Fachdienst - Task aktivieren - ANR/ZANR prüfen und bei Konfiguration Fehler abbrechen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-76" title="E-Rezept-Fachdienst - Task aktivieren - ANR/ZANR prüfen und bei Konfiguration Fehler abbrechen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -148,7 +148,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Arzneimittel (PZN)
 
-<requirement conformance="SHALL" key="A_23892" title="E-Rezept-Fachdienst - Task aktivieren - PZN in KBV_PR_ERP_Medication_PZN validieren" version="0">
+<requirement conformance="SHALL" key="IG-ERP-77" title="E-Rezept-Fachdienst - Task aktivieren - PZN in KBV_PR_ERP_Medication_PZN validieren" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -156,7 +156,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS die PZN in <i>KBV_PR_ERP_Medication_PZN</i> gemäß Prüfziffer berechnen und bei Ungültigkeit HTTP 400 mit der vorgesehenen Meldung zurückgeben.
 </requirement>
 
-<requirement conformance="SHALL" key="A_24034" title="E-Rezept-Fachdienst - Task aktivieren - PZN in Rezepturen prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-78" title="E-Rezept-Fachdienst - Task aktivieren - PZN in Rezepturen prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -164,7 +164,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS auch für <i>KBV_PR_ERP_Medication_Compounding</i> die PZN-Prüfziffer kontrollieren und bei Fehlern die Operation beenden.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22925" title="E-Rezept-Fachdienst - Task aktivieren - PZN-Länge prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-79" title="E-Rezept-Fachdienst - Task aktivieren - PZN-Länge prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -174,7 +174,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Patient (KVNR)
 
-<requirement conformance="SHALL" key="A_23936" title="E-Rezept-Fachdienst - Task aktivieren - Patientenidentifier als KVNR erzwingen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-80" title="E-Rezept-Fachdienst - Task aktivieren - Patientenidentifier als KVNR erzwingen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -184,7 +184,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Datums- und Konsistenzprüfungen
 
-<requirement conformance="SHALL" key="A_22487" title="E-Rezept-Fachdienst - Task aktivieren - AuthoredOn und Signaturdatum abgleichen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-81" title="E-Rezept-Fachdienst - Task aktivieren - AuthoredOn und Signaturdatum abgleichen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -196,7 +196,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Flowtypes 160/169/200/209: Zulässige Berufsgruppen für QES
 
-<requirement conformance="SHALL" key="A_19225-02" title="E-Rezept-Fachdienst - Task aktivieren - QES für Flowtype 160/169/200/209 nur durch berechtigte Berufsgruppen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-82" title="E-Rezept-Fachdienst - Task aktivieren - QES für Flowtype 160/169/200/209 nur durch berechtigte Berufsgruppen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -206,7 +206,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Flowtype 166: T-Rezept-spezifische Payload-Prüfung
 
-<requirement conformance="SHALL" key="A_27813" title="E-Rezept-Fachdienst - Task aktivieren - T-Rezept-spezifische Payload-Prüfung" version="0">
+<requirement conformance="SHALL" key="IG-ERP-83" title="E-Rezept-Fachdienst - Task aktivieren - T-Rezept-spezifische Payload-Prüfung" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -216,7 +216,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Flowtype 162: DiGA-spezifische Prüfungen
 
-<requirement conformance="SHALL" key="A_25991" title="E-Rezept-Fachdienst - Task aktivieren - DiGA-spezifische Payload-Prüfung" version="0">
+<requirement conformance="SHALL" key="IG-ERP-84" title="E-Rezept-Fachdienst - Task aktivieren - DiGA-spezifische Payload-Prüfung" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -224,7 +224,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS für Flowtype 162 eine <i>DeviceRequest</i>-Ressource sowie <i>Composition.type = e16D</i> verlangen und bei Abweichungen mit HTTP 400 abbrechen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_25992" title="E-Rezept-Fachdienst - Task aktivieren - PZN in KBV_PR_EVDGA_HealthAppRequest validieren" version="0">
+<requirement conformance="SHALL" key="IG-ERP-85" title="E-Rezept-Fachdienst - Task aktivieren - PZN in KBV_PR_EVDGA_HealthAppRequest validieren" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -234,7 +234,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Coverage-Type: GKV- und PKV-Workflows
 
-<requirement conformance="SHALL" key="A_23443-01" title="E-Rezept-Fachdienst - Task aktivieren - Coverage-Type für GKV-Workflows" version="0">
+<requirement conformance="SHALL" key="IG-ERP-86" title="E-Rezept-Fachdienst - Task aktivieren - Coverage-Type für GKV-Workflows" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -242,7 +242,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS sicherstellen, dass bei Flowtypes 160, 162 und 169 <i>Coverage.type.coding.code</i> nicht den Wert <i>PKV</i> enthält; Verstöße führen zu HTTP 400.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22347-01" title="E-Rezept-Fachdienst - Task aktivieren - Coverage-Type für PKV-Workflows" version="0">
+<requirement conformance="SHALL" key="IG-ERP-87" title="E-Rezept-Fachdienst - Task aktivieren - Coverage-Type für PKV-Workflows" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -252,7 +252,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Allgemeine Inhaltsausschlüsse
 
-<requirement conformance="SHALL" key="A_22231" title="E-Rezept-Fachdienst - Task aktivieren - Betäubungsmittel ausschließen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-88" title="E-Rezept-Fachdienst - Task aktivieren - Betäubungsmittel ausschließen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -260,7 +260,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS `$activate` mit dem Fehler „BTM nicht zulässig“ abbrechen, wenn das Bundle <i>Medication.extension:KBV_EX_ERP_Medication_Category = 01</i> enthält.
 </requirement>
 
-<requirement conformance="SHALL" key="A_26372" title="E-Rezept-Fachdienst - Task aktivieren - Alternative IK für Flowtype 162 verbieten" version="0">
+<requirement conformance="SHALL" key="IG-ERP-89" title="E-Rezept-Fachdienst - Task aktivieren - Alternative IK für Flowtype 162 verbieten" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -270,7 +270,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Ableitungen aus Flowtype (EU-Einlösbarkeit)
 
-<requirement conformance="SHALL" key="A_27768" title="E-Rezept-Fachdienst - Task aktivieren - Einlösbarkeit im EU-Ausland kennzeichnen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-90" title="E-Rezept-Fachdienst - Task aktivieren - Einlösbarkeit im EU-Ausland kennzeichnen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -282,7 +282,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Flowtype-Zulässigkeit
 
-<requirement conformance="SHALL" key="A_22627-01" title="E-Rezept-Fachdienst - Task aktivieren - Zulässige Flowtypes für Mehrfachverordnungen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-91" title="E-Rezept-Fachdienst - Task aktivieren - Zulässige Flowtypes für Mehrfachverordnungen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -292,7 +292,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Zählwerte (Numerator/Denominator)
 
-<requirement conformance="SHALL" key="A_22628" title="E-Rezept-Fachdienst - Task aktivieren - Maximal vier Teilverordnungen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-92" title="E-Rezept-Fachdienst - Task aktivieren - Maximal vier Teilverordnungen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -300,7 +300,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS Numerator und Denominator auf Werte ≤ 4 prüfen und bei Überschreitung mit HTTP 400 abbrechen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22704" title="E-Rezept-Fachdienst - Task aktivieren - Numerator größer 0" version="0">
+<requirement conformance="SHALL" key="IG-ERP-93" title="E-Rezept-Fachdienst - Task aktivieren - Numerator größer 0" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -308,7 +308,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS bei Mehrfachverordnungen sicherstellen, dass der Numerator mindestens 1 ist; ansonsten ist die Operation unzulässig.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22629" title="E-Rezept-Fachdienst - Task aktivieren - Denominator mindestens 2" version="0">
+<requirement conformance="SHALL" key="IG-ERP-94" title="E-Rezept-Fachdienst - Task aktivieren - Denominator mindestens 2" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -316,7 +316,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS sicherstellen, dass der Denominator ≥ 2 ist, da Mehrfachverordnungen aus mindestens zwei Teilen bestehen.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22630" title="E-Rezept-Fachdienst - Task aktivieren - Numerator darf Denominator nicht überschreiten" version="0">
+<requirement conformance="SHALL" key="IG-ERP-95" title="E-Rezept-Fachdienst - Task aktivieren - Numerator darf Denominator nicht überschreiten" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -326,7 +326,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Ausschlüsse und Konsistenzregeln
 
-<requirement conformance="SHALL" key="A_22631" title="E-Rezept-Fachdienst - Task aktivieren - Keine MVO-Extensions bei normalen Verordnungen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-96" title="E-Rezept-Fachdienst - Task aktivieren - Keine MVO-Extensions bei normalen Verordnungen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -334,7 +334,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS `$activate` mit HTTP 400 beenden, wenn eine Verordnung MVO-Extensions enthält, obwohl das Kennzeichen = false ist.
 </requirement>
 
-<requirement conformance="SHALL" key="A_22632" title="E-Rezept-Fachdienst - Task aktivieren - Keine Kombination mit Entlassrezept" version="0">
+<requirement conformance="SHALL" key="IG-ERP-97" title="E-Rezept-Fachdienst - Task aktivieren - Keine Kombination mit Entlassrezept" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -344,7 +344,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
 
 ##### Zeitraum und ID-Schema
 
-<requirement conformance="SHALL" key="A_22634" title="E-Rezept-Fachdienst - Task aktivieren - Beginn der Einlösefrist Pflicht" version="0">
+<requirement conformance="SHALL" key="IG-ERP-98" title="E-Rezept-Fachdienst - Task aktivieren - Beginn der Einlösefrist Pflicht" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -352,7 +352,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS bei Mehrfachverordnungen sicherstellen, dass <i>Mehrfachverordnung.Zeitraum.start</i> gesetzt ist; fehlt der Wert, ist die Aktivierung mit HTTP 400 zu beenden.
 </requirement>
 
-<requirement conformance="SHALL" key="A_23164" title="E-Rezept-Fachdienst - Task aktivieren - Enddatum darf Startdatum nicht unterschreiten" version="0">
+<requirement conformance="SHALL" key="IG-ERP-99" title="E-Rezept-Fachdienst - Task aktivieren - Enddatum darf Startdatum nicht unterschreiten" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>
@@ -360,7 +360,7 @@ Das Primärsystem (PVS/KIS) ruft `$activate` unmittelbar nach der QES-Erzeugung 
   Der E-Rezept-Fachdienst MUSS sicherstellen, dass ein angegebenes Enddatum ≥ Startdatum ist; sonst ist die Operation ungültig.
 </requirement>
 
-<requirement conformance="SHALL" key="A_24901" title="E-Rezept-Fachdienst - Task aktivieren - ID-Schema für Mehrfachverordnungen prüfen" version="0">
+<requirement conformance="SHALL" key="IG-ERP-100" title="E-Rezept-Fachdienst - Task aktivieren - ID-Schema für Mehrfachverordnungen prüfen" version="0">
   <meta lockversion="false"/>
   <actor name="E-Rezept-Fachdienst">
     <testProcedure id="Produkttest"/>

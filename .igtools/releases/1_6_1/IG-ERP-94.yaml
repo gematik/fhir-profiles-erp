@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 62d659418fb138ca5539400f38edc48223bbd95a642f466c3fd404c771d666cd
+created: '2026-01-27T07:36:31.609501'
+date: '2026-01-27T07:36:31.609504'
+key: IG-ERP-94
+modified: '2026-01-27T07:36:31.609503'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass der Denominator ≥ 2 ist, da
+  Mehrfachverordnungen aus mindestens zwei Teilen bestehen.
+title: E-Rezept-Fachdienst - Task aktivieren - Denominator mindestens 2
+version: 0

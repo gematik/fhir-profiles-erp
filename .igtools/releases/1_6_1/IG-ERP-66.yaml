@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 0e100ffce1905d5368e05e1aa1a486c4697ad08c2508880b500d40aea1a5db29
+created: '2026-01-27T07:36:31.604278'
+date: '2026-01-27T07:36:31.604280'
+key: IG-ERP-66
+modified: '2026-01-27T07:36:31.604279'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS das QES-Signaturzertifikat C.HP.QES gemäß gemSpec_PKI
+  (inklusive OCSP-Prüfung) validieren und bei fehlgeschlagener Online-Prüfung den
+  Aufruf mit HTTP 512 beenden.
+title: E-Rezept-Fachdienst - Task aktivieren - Signaturzertifikat des HBA validieren
+version: 0

@@ -1,0 +1,21 @@
+actor:
+- eRp_FD
+conformance: SHALL
+content_hash: e397f2b33d28c6567a7240ca5ea14cade39eac59a32914dc7732feacb1811686
+created: '2026-01-27T07:36:31.611330'
+date: '2026-01-27T07:36:31.611332'
+key: IG-ERP-103
+modified: '2026-01-27T07:36:31.611331'
+release_status: NEW
+source: input/pagecontent/op-create.md
+status: ACTIVE
+test_procedures:
+  eRp_FD:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS beim Erzeugen eines Tasks mittels HTTP-POST/$create-Operation
+  den Parameter <i>workflowType</i> (Rezepttyp) aus dem HTTP-Body des POST-Requests
+  entnehmen, als Attribut <i>Task.extension:flowType</i> des zu erstellenden Tasks
+  verwenden und bei Fehlen bzw. Nicht-Konformität des Parameters den Request als unzulässig
+  abweisen.
+title: E-Rezept-Fachdienst - Parametrierung Task für Workflow-Typ
+version: 0

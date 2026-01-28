@@ -8,13 +8,6 @@
 
 ### Extensions
 
-#### Extension: GeneratedDosageInstructionsMeta
-Bedingung: url = `http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta`
-
-| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
-|------------------------|---------------------|--------|-------------------------------|
-| `KBVPRERPPrescription.extension`<br>`[Bedingung: url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta']` | `EPAMedicationRequest.extension` | Kopiert | Kopiert komplette Extension inklusive Werte<br>übernimmt Wert aus Quellvariable |
-
 #### Extension: KBV_EX_FOR_SER
 Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_FOR_SER`
 

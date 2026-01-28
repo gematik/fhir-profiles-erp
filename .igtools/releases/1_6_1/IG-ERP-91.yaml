@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 59825243c081f3f26fe38e9197042adb7824c33c9ed4671cb54e74668e8863d9
+created: '2026-01-27T07:36:31.609105'
+date: '2026-01-27T07:36:31.609108'
+key: IG-ERP-91
+modified: '2026-01-27T07:36:31.609107'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei <i>Mehrfachverordnung.kennzeichen = true</i>
+  sicherstellen, dass der Flowtype 160, 169, 200 oder 209 beträgt; anderenfalls ist
+  HTTP 400 zurückzugeben.
+title: E-Rezept-Fachdienst - Task aktivieren - Zulässige Flowtypes für Mehrfachverordnungen
+version: 0

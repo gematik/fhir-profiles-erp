@@ -1,0 +1,20 @@
+actor:
+- Verarbeitungskontext E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 95fb4f54edcac24422002d9058f9aecdf8af84c7340693cd0aa625db198fbb52
+created: '2026-01-27T07:36:31.601716'
+date: '2026-01-27T07:36:31.601721'
+key: IG-ERP-57
+modified: '2026-01-27T07:36:31.601720'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Verarbeitungskontext E-Rezept-Fachdienst: []
+text: Der Verarbeitungskontext des E-Rezept-Fachdienstes MUSS den sicheren Kanal zu
+  einem Client nach Abschluss einer fachlichen Operation (die aus mehreren Requests
+  bestehen kann) abbauen, sodass anschließend keine Zugriffe dieses Clients auf den
+  Verarbeitungskontext mehr möglich sind, ohne dass eine neue Verbindung aufgebaut
+  wird.
+title: E-Rezept-Fachdienst – Automatisierter Abbau des sicheren Kanals
+version: 0

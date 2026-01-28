@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 1b5fdf775278041a62a7a364361c6e88fd25ccbd0555ba102dc1b07b2eda320d
+created: '2026-01-27T07:36:31.606871'
+date: '2026-01-27T07:36:31.606874'
+key: IG-ERP-81
+modified: '2026-01-27T07:36:31.606873'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass <i>MedicationRequest.authoredOn</i>
+  und das Signaturdatum aus dem QES taggleich sind; bei Abweichungen ist HTTP 400
+  mit dem vorgesehenen Hinweis zurückzugeben.
+title: E-Rezept-Fachdienst - Task aktivieren - AuthoredOn und Signaturdatum abgleichen
+version: 0

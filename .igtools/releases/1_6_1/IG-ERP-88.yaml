@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: b6ed8aabe97db77d6fd2a6b82b288ebca16be607ee34c24e1cc4075730ad9762
+created: '2026-01-27T07:36:31.608646'
+date: '2026-01-27T07:36:31.608648'
+key: IG-ERP-88
+modified: '2026-01-27T07:36:31.608647'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS `$activate` mit dem Fehler „BTM nicht zulässig“
+  abbrechen, wenn das Bundle <i>Medication.extension:KBV_EX_ERP_Medication_Category
+  = 01</i> enthält.
+title: E-Rezept-Fachdienst - Task aktivieren - Betäubungsmittel ausschließen
+version: 0

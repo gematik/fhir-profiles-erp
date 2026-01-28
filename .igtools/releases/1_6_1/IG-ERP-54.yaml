@@ -1,0 +1,18 @@
+actor:
+- VAU E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 59b56749da1fca012ec56662d0c84d6ba46d98fc7d699e110da86a57bbabcf76
+created: '2026-01-27T07:36:31.601337'
+date: '2026-01-27T07:36:31.601339'
+key: IG-ERP-54
+modified: '2026-01-27T07:36:31.601338'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  VAU E-Rezept-Fachdienst: []
+text: Die VAU des E-Rezept-Fachdienstes MUSS ihre Verarbeitungskontexte über gemeinsame
+  IP-Adressen und Ports des Eingangspunkts des Fachdienstes erreichbar machen.
+title: E-Rezept-Fachdienst – Verarbeitungskontexte der VAU über gemeinsame Host-Adressen
+  erreichbar
+version: 0

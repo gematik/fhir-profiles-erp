@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: a85e30d5eb8db1068377eb2f41b9ffe42235e88e7517d131d99e56ad01e5589d
+created: '2026-01-27T07:36:31.603465'
+date: '2026-01-27T07:36:31.603473'
+key: IG-ERP-62
+modified: '2026-01-27T07:36:31.603472'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS bei erfolgreichem `$activate` den adressierten
+  Task in den Status <i>ready</i> überführen und die aktualisierte Ressource im Response
+  zurückgeben.
+title: E-Rezept-Fachdienst - Task aktivieren - Task nach Aktivierung bereitstellen
+version: 0

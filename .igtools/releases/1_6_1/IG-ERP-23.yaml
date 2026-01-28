@@ -1,0 +1,32 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: ff1a418cc60ff0bfe621a973f053fe6dc96441c553e27971f01ffd0fdf759713
+created: '2026-01-27T07:36:31.597917'
+date: '2026-01-27T07:36:31.597919'
+key: IG-ERP-23
+modified: '2026-01-27T07:36:31.597918'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der Paketfilter des E-Rezept-Fachdienstes MUSS bezüglich des OCSP-Stapling
+  gemäß A_20026 folgende Vorgaben umsetzen: Für das vom Anbieter des E-Rezept-Fachdienstes
+  erworbene TLS-Zertifikat (vgl. Hinweis zu A_19815) MUSS der E-Rezept-Fachdienst
+  initial die IP-Adresse (ggf. die IP-Adressen) des entsprechenden OCSP-Responsers
+  ermitteln. Diese IP-Adresse(n) MÜSSEN gemäß A_19815 per stateful-Firewalling Verbindungen
+  von der HTTPS-Schnittstelle an den OCSP-Responder erlaubt werden (Whitelisting).
+  Gemäß OCSP-Stapling (https://tools.ietf.org/html/rfc6066#section-8) MUSS der E-Rezept-Fachdienst
+  regelmäßig eine OCSP-Response vom entsprechenden OCSP-Responder beziehen (die Regelmäßigkeit
+  wird vom zertifikatsausgebenden TSP und der Gültigkeitsdauer dessen OCSP-Responses
+  bestimmt). Die OCSP-Responses MÜSSEN vom E-Rezept-Fachdienst geprüft werden (Signaturprüfung,
+  CertID in der OCSP-Response passt zum angefragten Zertifikat). Falls eine der Prüfungen
+  ein nicht-positives Ergebnis liefert, so MUSS die erhaltene OCSP-Response verworfen
+  werden. Sollte die letzte im E-Rezept-Fachdienst vorhandene OCSP-Response zeitlich
+  nicht mehr gültig sein (bspw. der OCSP-Responder im Internet war länger nicht erreichbar),
+  so MUSS diese OCSP-Response verworfen werden und ein von einem Klienten (E-Rezept-FdV)
+  initiierter TLS-Verbindungsaufbau der HTTPS-Schnittstelle ohne OCSP-Stapling durchgeführt
+  werden.'
+title: E-Rezept-Fachdienst – OCSP-Status für das OCSP-Stapling
+version: 0

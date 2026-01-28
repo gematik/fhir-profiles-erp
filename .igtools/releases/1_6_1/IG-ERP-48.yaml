@@ -1,0 +1,20 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 6c92bd64814d8c3ef62ad9a7c4ef7261a603d5137091e44e0d55fe3c67301f1e
+created: '2026-01-27T07:36:31.600634'
+date: '2026-01-27T07:36:31.600636'
+key: IG-ERP-48
+modified: '2026-01-27T07:36:31.600635'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: 'Der E-Rezept-Fachdienst MUSS die folgenden privaten Schlüssel in einem Hardware
+  Security Module (HSM) erzeugen und anwenden: Privater Schlüssel (PrK.FD.ENC) des
+  Schlüsselpaars zur Authentisierung des Verarbeitungskontextes gegenüber dem E-Rezept-Frontend
+  des Versicherten und Primärsystemen (sicherer Kanal auf Anwendungsebene). Die Prüftiefe
+  des HSM MUSS dabei den in [A_19712] angegebenen Standards entsprechen.'
+title: E-Rezept-Fachdienst – Private Schlüssel von Dienstzertifikaten im HSM
+version: 0

@@ -574,7 +574,6 @@ def extract_relevant_rules(
                         and is_passthrough_copy_target(tgt)
                         and not rule_manual_info
                         and not rule.get('dependent')
-                        and not meaningful_condition
                     ):
                         continue
 

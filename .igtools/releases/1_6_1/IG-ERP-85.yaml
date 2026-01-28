@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 7fc4a34b25576571c486e9663231afd2098f34538c52f9dd77fc8536f2be1302
+created: '2026-01-27T07:36:31.608129'
+date: '2026-01-27T07:36:31.608134'
+key: IG-ERP-85
+modified: '2026-01-27T07:36:31.608133'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS für Flowtype 162 die PZN in <i>KBV_PR_EVDGA_HealthAppRequest.code</i>
+  gemäß den Technischen Hinweisen prüfen; Fehler führen zu HTTP 400.
+title: E-Rezept-Fachdienst - Task aktivieren - PZN in KBV_PR_EVDGA_HealthAppRequest
+  validieren
+version: 0

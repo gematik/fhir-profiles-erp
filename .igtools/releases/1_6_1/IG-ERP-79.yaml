@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: d2ecdfe8693c82ae439c27e15c3d1e88fc78a9683025cf3bbfabc4a3f82e1b9d
+created: '2026-01-27T07:36:31.606581'
+date: '2026-01-27T07:36:31.606584'
+key: IG-ERP-79
+modified: '2026-01-27T07:36:31.606583'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS sicherstellen, dass jede übergebene PZN exakt achtstellig
+  ist, andernfalls ist HTTP 400 mit dem Hinweis „Länge PZN unzulässig“ zurückzugeben.
+title: E-Rezept-Fachdienst - Task aktivieren - PZN-Länge prüfen
+version: 0

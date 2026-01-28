@@ -11,8 +11,6 @@ cd "$PROJECT_ROOT"
 
 igtools process
 
-# TODO: Wieder reinkommentieren
-
 # Generate Sushi
 sushi .
 
@@ -29,7 +27,4 @@ python3 "$SCRIPT_DIR/testscripts/generate-provide-prescription-docs.py"
 ./scripts/fml_table.sh
 
 # Generate IG Publisher Content
-#./_genonce.sh -no-sushi
-
-#TODO dev build
-./_genonce.sh -no-sushi -validation-off
+./_genonce.sh -no-sushi

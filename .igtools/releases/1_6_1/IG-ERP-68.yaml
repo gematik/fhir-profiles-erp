@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 1ac0240ba582eba29dbdb425f9c456385e307f44f0048535bb7a116e0012c365
+created: '2026-01-27T07:36:31.604559'
+date: '2026-01-27T07:36:31.604561'
+key: IG-ERP-68
+modified: '2026-01-27T07:36:31.604560'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS den MimeType des signierten Dokuments auf <i>text/plain;
+  charset=utf-8</i> prüfen und bei Abweichungen mit HTTP 400 abbrechen.
+title: E-Rezept-Fachdienst - Task aktivieren - Signatur-MimeType prüfen
+version: 0

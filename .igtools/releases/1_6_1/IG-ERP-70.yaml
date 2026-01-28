@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: b8a82f76fc2d2e46125956d9bfc197b51a3053596398c6a2ffa223c0c01b4c29
+created: '2026-01-27T07:36:31.604866'
+date: '2026-01-27T07:36:31.604868'
+key: IG-ERP-70
+modified: '2026-01-27T07:36:31.604867'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS die KVNR aus <i>Patient.identifier</i> (System
+  `http://fhir.de/sid/gkv/kvid-10`) in <i>Task.for</i> übernehmen, damit die Patientenreferenz
+  im Workflow eindeutig ist.
+title: E-Rezept-Fachdienst - Task aktivieren - KVNR in Task.for übernehmen
+version: 0

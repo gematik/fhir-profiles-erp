@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 9c9912dc1b4b27b57118090a6a625ac9baa111d8dfbe24c7bcab8a3a7bb9e950
+created: '2026-01-27T07:36:31.606415'
+date: '2026-01-27T07:36:31.606419'
+key: IG-ERP-78
+modified: '2026-01-27T07:36:31.606418'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS auch für <i>KBV_PR_ERP_Medication_Compounding</i>
+  die PZN-Prüfziffer kontrollieren und bei Fehlern die Operation beenden.
+title: E-Rezept-Fachdienst - Task aktivieren - PZN in Rezepturen prüfen
+version: 0

@@ -1,0 +1,20 @@
+actor:
+- VAU E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 8b1449472f02ffeb0892201d5d36d52c4bb7da010924651afb10c7ae3cb7ffdd
+created: '2026-01-27T07:36:31.600525'
+date: '2026-01-27T07:36:31.600527'
+key: IG-ERP-47
+modified: '2026-01-27T07:36:31.600526'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  VAU E-Rezept-Fachdienst: []
+text: Die VAU des E-Rezept-Fachdienstes MUSS mit technischen Mitteln sicherstellen,
+  dass physischer Zugang zu Hardware-Komponenten der Verarbeitungskontexte nur erfolgen
+  kann, nachdem gewährleistet ist, dass aus ihnen keine Nutzdaten extrahiert werden
+  können.
+title: E-Rezept-Fachdienst – Nutzdatenbereinigung vor physischem Zugang zu Systemen
+  der VAU
+version: 0

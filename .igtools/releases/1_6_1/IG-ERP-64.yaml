@@ -1,0 +1,20 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 029a8ae9a06c81e574d8a4b227afb43083b2c77674afc968c6109ecbb83582ad
+created: '2026-01-27T07:36:31.603989'
+date: '2026-01-27T07:36:31.603992'
+key: IG-ERP-64
+modified: '2026-01-27T07:36:31.603991'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS vor jeder Aktivierung den bereitgestellten AccessCode
+  aus HTTP-Header <i>X-AccessCode</i> bzw. Parameter <i>ac</i> mit dem im Task gespeicherten
+  Wert vergleichen und den Aufruf bei Abweichung oder fehlender Angabe mit HTTP 403
+  abbrechen.
+title: E-Rezept-Fachdienst - Task aktivieren - Prüfung AccessCode Rezept aktualisieren
+version: 0

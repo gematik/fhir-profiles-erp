@@ -34,7 +34,7 @@ Leistungserbringerinstitutionen und Versicherte weisen sich gegenüber dem E-Rez
 ### Zerlegung des Produkttyps
 Der E-Rezept-Fachdienst verwaltet E-Rezepte über einen medizinischen Workflow. Dabei muss er die Vertraulichkeit und Integrität der verarbeiteten Daten sicherstellen. Daraus ergeben sich Sicherheitsanforderungen an die Betriebsumgebung, an die Fachlogik der Prozessverarbeitung sowie an die Ausführungsumgebung des Programmcodes.
 
-<requirement conformance="SHALL" key="ERP-FD75799E75" title="Anbieter E-Rezept-Fachdienst Speicherung Schlüsselmaterial in HSM" version="0">
+<requirement conformance="SHALL" key="IG-ERP-109" title="Anbieter E-Rezept-Fachdienst Speicherung Schlüsselmaterial in HSM" version="0">
     <meta lockversion="false"/>
     <actor name="Anbieter E-Rezept-Fachdienst">
         <testProcedure id="Sich.techn. Eignung: Gutachten (Anbieter)"/>

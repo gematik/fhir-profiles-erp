@@ -1,0 +1,18 @@
+actor:
+- Anb_eRp_FD
+conformance: SHALL
+content_hash: f5d1131c3e02b2eaa1b68d4cada642cb5a106e9f9b06a21aea037c6f4e5d0058
+created: '2026-01-27T07:36:31.596891'
+date: '2026-01-27T07:36:31.596894'
+key: IG-ERP-14
+modified: '2026-01-27T07:36:31.596893'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Anb_eRp_FD: []
+text: Der Anbieter des E-Rezept-Fachdienstes MUSS organisatorische Prozesse mit der
+  gematik zur Verwaltung von API-KEYs für die Schnittstellen des E-Rezept-Fachdienstes
+  zum Internet unterstützen.
+title: E-Rezept-Fachdienst – Prozess zur Verwaltung von API-KEYs
+version: 0

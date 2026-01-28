@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: daed4803e0efcbe272f586d04e08362f0fe93752474ade150259741e13344a92
+created: '2026-01-27T07:36:31.598574'
+date: '2026-01-27T07:36:31.598576'
+key: IG-ERP-29
+modified: '2026-01-27T07:36:31.598575'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der E-Rezept-Fachdienst MUSS die Verarbeitung aller fachlichen Operationen des
+  Fachdienstes in einer Vertrauenswürdigen Ausführungsumgebung umsetzen.
+title: E-Rezept-Fachdienst – Umsetzung der fachlichen Operationen in einer Vertrauenswürdigen
+  Ausführungsumgebung
+version: 0

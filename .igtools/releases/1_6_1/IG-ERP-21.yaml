@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL NOT
+content_hash: 6c4653c4fcca028b8765e4362835ba365b1adc37605983495493a6a49d9cc833
+created: '2026-01-27T07:36:31.597676'
+date: '2026-01-27T07:36:31.597679'
+key: IG-ERP-21
+modified: '2026-01-27T07:36:31.597678'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst: []
+text: Der Paketfilter des E-Rezept-Fachdienstes, zum Schutz in Richtung Transportnetz
+  Internet, DARF NICHT physisch auf Systemen der VAU des E-Rezept-Fachdienstes oder
+  dem vorgeschalteten TLS-terminierenden Load Balancer implementiert werden.
+title: E-Rezept-Fachdienst – Platzierung des Paketfilters Internet
+version: 0

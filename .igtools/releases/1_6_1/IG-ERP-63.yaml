@@ -1,0 +1,19 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: c5ca70851c24e6b9b2805ecb3f33d5988f71d2802717481e76c604f6ce796dfb
+created: '2026-01-27T07:36:31.603808'
+date: '2026-01-27T07:36:31.603811'
+key: IG-ERP-63
+modified: '2026-01-27T07:36:31.603810'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS den übergebenen QES-Datensatz als Enveloping CAdES
+  PKCS#7 entgegennehmen und bei fehlender bzw. ungültiger ASN.1-Struktur die Operation
+  mit HTTP 400 abbrechen.
+title: E-Rezept-Fachdienst - Task aktivieren - PKCS#7-Parameter prüfen
+version: 0

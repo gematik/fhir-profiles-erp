@@ -1,0 +1,19 @@
+actor:
+- Anb_eRp_FD
+conformance: SHALL
+content_hash: 6e87475df4ca0949b32c009ecf6790932c7d8187e5a0ca35b2448abe4b46acc0
+created: '2026-01-27T07:36:31.596224'
+date: '2026-01-27T07:36:31.596227'
+key: IG-ERP-8
+modified: '2026-01-27T07:36:31.596226'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Anb_eRp_FD: []
+text: Der Anbieter des E-Rezept-Fachdienstes MUSS die Funktion der Drosselung sowie
+  die Konfiguration auf Weisung der gematik aktivieren oder deaktivieren bzw. die
+  Konfigurationsparameter anpassen, um die Wirksamkeit des Mechanismus im Feld bei
+  Bedarf zu verbessern.
+title: Anbieter E-Rezept-Fachdienst – Konfiguration und Deaktivierung Drosselung
+version: 0

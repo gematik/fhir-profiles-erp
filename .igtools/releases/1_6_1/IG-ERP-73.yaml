@@ -1,0 +1,18 @@
+actor:
+- E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: 8add083432878377d345c78539cd9d57e1c01deba4eae0025cac0604ae81a5cd
+created: '2026-01-27T07:36:31.605298'
+date: '2026-01-27T07:36:31.605301'
+key: IG-ERP-73
+modified: '2026-01-27T07:36:31.605299'
+release_status: NEW
+source: input/pagecontent/op-activate.md
+status: ACTIVE
+test_procedures:
+  E-Rezept-Fachdienst:
+  - Produkttest
+text: Der E-Rezept-Fachdienst MUSS das QES-Bundle normalisieren, mit ID.FD.OSIG als
+  detached JWS signieren und das Ergebnis als Dokumenttyp 2 in <i>Task.input</i> referenzieren.
+title: E-Rezept-Fachdienst - Task aktivieren - Serversigniertes Bundle erzeugen
+version: 0

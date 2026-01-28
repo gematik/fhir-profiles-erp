@@ -1,0 +1,18 @@
+actor:
+- Eingangspunkt E-Rezept-Fachdienst
+conformance: SHALL
+content_hash: f5e462f52c65d54f0f785ff4b13c569c184887efe5a386f06406c94ef3413454
+created: '2026-01-27T07:36:31.601558'
+date: '2026-01-27T07:36:31.601561'
+key: IG-ERP-56
+modified: '2026-01-27T07:36:31.601559'
+release_status: NEW
+source: input/pagecontent/menu-schnittstellen-datenschutz-und-sicherheit.md
+status: ACTIVE
+test_procedures:
+  Eingangspunkt E-Rezept-Fachdienst: []
+text: Der Eingangspunkt des E-Rezept-Fachdienstes MUSS Clients den Aufbau eines sicheren
+  Kanals auf Inhaltsebene, d. h. einen Verbindungsaufbau gemäß [gemSpec_Krypt#3.16]
+  und [gemSpec_Krypt#7], zum Verarbeitungskontext ermöglichen.
+title: E-Rezept-Fachdienst – Sicherer Kanal zum Verarbeitungskontext der VAU auf Inhaltsebene
+version: 0

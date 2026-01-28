@@ -26,6 +26,7 @@ Technische Einordnung des fachlichen Use Cases „E-Rezept erstellen“:
 - Der E-Rezept-Fachdienst erzeugt zusätzlich einen AccessCode, der für nachfolgende, berechtigte Operationen benötigt wird.
 
 <em>Schnittstelle:</em> <i>todo</i>
+<em>Schnittstelle:</em> <i><a href="./todo.html">todo</a></i>
 <em>Schnittstelle:</em> <i><a href="./op-create.html">Operation API: E-Rezept erstellen</a></i>
 
 <a id="e-rezept-qualifiziert-signieren"></a>
