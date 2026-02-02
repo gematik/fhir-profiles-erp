@@ -5,7 +5,7 @@
   "name": "KBVPrErpMedicationFreetextMap",
   "status": "active",
   "version": "1.0",
-  "date": "2026-01-27",
+  "date": "2026-02-02",
   "description": "Auto-generated StructureMap for KBV_PR_ERP_Medication_FreeText|1.4.0 -> EPAMedication|1.3.0",
   "structure": [
     {
@@ -95,7 +95,7 @@
               "context": "KBVPRERPMedicationFreeText",
               "element": "extension",
               "variable": "srcKBVPRERPMedicationFreeTextExtensionb00bf49a",
-              "condition": "url != 'rxPrescriptionProcessIdentifier' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'drugCategory' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'Arzneimittelkategorie' and url != 'valueCoding' and url != 'type' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'valueBoolean' and url != 'packaging' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'manufacturingInstructions' and url != 'Normgroesse' and url != 'normSizeCode' and url != 'Impfstoff' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'isVaccine' and url != 'Kategorie'"
+              "condition": "url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category' and url != 'normSizeCode' and url != 'http://fhir.de/StructureDefinition/normgroesse' and url != 'Impfstoff' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type' and url != 'valueBoolean' and url != 'packaging' and url != 'valueCoding' and url != 'type' and url != 'Normgroesse' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/medication-id-vaccine-extension' and url != 'manufacturingInstructions' and url != 'https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine' and url != 'Kategorie' and url != 'https://gematik.de/fhir/epa-medication/StructureDefinition/drug-category-extension' and url != 'drugCategory' and url != 'rxPrescriptionProcessIdentifier' and url != 'Arzneimittelkategorie' and url != 'isVaccine'"
             }
           ],
           "target": [

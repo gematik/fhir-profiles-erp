@@ -14,8 +14,19 @@ Das Repository, was diesem Projekt zugrundeliegt und auch die FSH-Files enthält
 ## Wie dieser IG zu lesen ist
 
 Dieser Implementation Guide (IG) ist in mehrere Kapitel gegliedert siehe [Inhaltsverzeichnis](./toc.html).
+
 tbd...
+
 Zuerst Szenarien und Anwendungsfälle, dann technische Umsetzung, Profile, Beispiele, Abhängigkeiten, Kontakt und rechtliche Hinweise.
+
+### Weitere abhängige IGs
+Dieser FHIR-IG enthält die grundlegenden Spezifikationen und Profile für das E-Rezept. Darüber hinaus sind weitere IGs relevant, um den E-Rezept-Fachdienst vollständig zu beschreiben und zu implementieren.
+
+Diese FHIR-IGs haben jeweils ein eigenes FHIR Package, da es sich um abgegrenzte Module handelt. Die folgenden IGs sind für die vollständige Implementierung des E-Rezepts relevant:
+
+- [gemIG_eRp_ChargeInformation]
+- [gemIG_eRp_TPrescription_Transfer]
+- [gemIG_eRp_EU]
 
 ## Abhängigkeiten
 

@@ -18,10 +18,10 @@ Die folgende Tabelle stellt generell das Mapping der beiden Profile gegenüber:
 
 Die folgenden Unterseiten beschreiben die Mappings der verschiedenen KBV-Medication-Profile zu EPA Medication im Detail:
 
-- [Mapping der PZN Medication](./mapping-prescription-medication-pzn.md)
-- [Mapping der Wirkstoff Medication](./mapping-prescription-medication-ingredient.md)
-- [Mapping der Rezeptur Medication](./mapping-prescription-medication-compounding.md)
-- [Mapping der Freitext Medication](./mapping-prescription-medication-freetext.md)
+- [Mapping der PZN Medication](./mapping-prescription-medication-pzn.html)
+- [Mapping der Wirkstoff Medication](./mapping-prescription-medication-ingredient.html)
+- [Mapping der Rezeptur Medication](./mapping-prescription-medication-compounding.html)
+- [Mapping der Freitext Medication](./mapping-prescription-medication-freetext.html)
 
 ## Transformationsregeln
 
