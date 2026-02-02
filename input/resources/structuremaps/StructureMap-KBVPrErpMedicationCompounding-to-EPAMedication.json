@@ -139,6 +139,26 @@
           ]
         },
         {
+          "name": "MedicationExtensionKategorie86255b0b",
+          "documentation": "Feld wird nicht gemappt | Quelle: Medication.extension:Kategorie",
+          "source": [
+            {
+              "context": "KBVPRERPMedicationCompounding",
+              "element": "extension",
+              "variable": "srcKBVPRERPMedicationCompoundingExtensionKategorie13839029",
+              "condition": "url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type'"
+            }
+          ],
+          "target": [
+            {
+              "context": "EPAMedication",
+              "contextType": "variable",
+              "element": "extension",
+              "variable": "tgtEPAMedicationExtensionKategorie8e51c40c"
+            }
+          ]
+        },
+        {
           "name": "MedicationExtensionDrugcategorye963e601",
           "documentation": "Copied from 'Medication.extension:Arzneimittelkategorie'",
           "source": [

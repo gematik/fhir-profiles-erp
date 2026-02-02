@@ -6,6 +6,13 @@
 
 ### Extensions
 
+#### Extension: KBV_EX_Base_Medication_Type
+Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type`
+
+| Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
+|------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationPZN.extension`<br>`[Bedingung: url = 'https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type']` | `EPAMedication.extension` | Nicht Übertragen | Feld wird nicht gemappt \| Quelle: Medication.extension:Kategorie |
+
 #### Extension: KBV_EX_ERP_Medication_Category
 Bedingung: url = `https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category`
 

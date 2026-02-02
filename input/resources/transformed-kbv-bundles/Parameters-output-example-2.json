@@ -41,17 +41,6 @@
         "meta" : {
           "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
         },
-        "extension" : [{
-          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
-          "valueBoolean" : false
-        },
-        {
-          "extension" : [{
-            "url" : "indicator",
-            "valueBoolean" : false
-          }],
-          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
-        }],
         "authoredOn" : "2024-05-20",
         "dosageInstruction" : [{
           "extension" : [{
@@ -66,17 +55,28 @@
             "unit" : "Packung"
           }
         },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
+          "valueBoolean" : false
+        },
+        {
+          "extension" : [{
+            "url" : "indicator",
+            "valueBoolean" : false
+          }],
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        }],
         "status" : "active",
         "intent" : "order",
         "requester" : {
           "reference" : "Practitioner/bc329f24-3d65-4286-bf06-b54dd6cad655"
         },
-        "note" : [{
-          "text" : "Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat."
-        }],
         "medicationReference" : {
           "reference" : "Medication/86fa62c7-06a0-418e-ba26-e99baa053c07"
-        }
+        },
+        "note" : [{
+          "text" : "Bitte längliche Tabletten, da Patient Probleme mit dem Schlucken von runden hat."
+        }]
       }
     },
     {

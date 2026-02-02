@@ -45,17 +45,6 @@
         "meta" : {
           "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
         },
-        "extension" : [{
-          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
-          "valueBoolean" : false
-        },
-        {
-          "extension" : [{
-            "url" : "indicator",
-            "valueBoolean" : false
-          }],
-          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
-        }],
         "authoredOn" : "2024-05-20",
         "basedOn" : [{
           "identifier" : {
@@ -69,6 +58,17 @@
             "unit" : "Packung"
           }
         },
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/indicator-ser-extension",
+          "valueBoolean" : false
+        },
+        {
+          "extension" : [{
+            "url" : "indicator",
+            "valueBoolean" : false
+          }],
+          "url" : "https://gematik.de/fhir/epa-medication/StructureDefinition/multiple-prescription-extension"
+        }],
         "status" : "active",
         "intent" : "order",
         "requester" : {

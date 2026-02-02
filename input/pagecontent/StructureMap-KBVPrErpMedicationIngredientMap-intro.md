@@ -2,6 +2,7 @@
 
 | Quelle (Eingangsdaten) | Ziel (Ausgabedaten) | Aktion | Transformation & Beschreibung |
 |------------------------|---------------------|--------|-------------------------------|
+| `KBVPRERPMedicationIngredient` | `EPAMedication.extension` | Nicht Übertragen | Feld wird nicht gemappt \| Quelle: Medication.extension:Kategorie |
 | `KBVPRERPMedicationIngredient` | `EPAMedication.extension` | Manuell | Fester Wert: 781405001, Medicinal product package (product) \| Quelle: Medication.extension:type |
 
 ### Extensions

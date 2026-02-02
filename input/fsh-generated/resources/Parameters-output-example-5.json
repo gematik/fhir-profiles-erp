@@ -41,6 +41,16 @@
         "meta" : {
           "profile" : ["https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-request"]
         },
+        "authoredOn" : "2025-05-20",
+        "dosageInstruction" : [{
+          "text" : "1–3mal/Tag auf die erkrankten Hautstellen auftragen"
+        }],
+        "dispenseRequest" : {
+          "quantity" : {
+            "value" : 1,
+            "unit" : "Packung"
+          }
+        },
         "extension" : [{
           "extension" : [{
             "url" : "algorithmVersion",
@@ -67,16 +77,6 @@
           "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction",
           "valueMarkdown" : "1–3mal/Tag auf die erkrankten Hautstellen auftragen"
         }],
-        "authoredOn" : "2025-05-20",
-        "dosageInstruction" : [{
-          "text" : "1–3mal/Tag auf die erkrankten Hautstellen auftragen"
-        }],
-        "dispenseRequest" : {
-          "quantity" : {
-            "value" : 1,
-            "unit" : "Packung"
-          }
-        },
         "status" : "active",
         "intent" : "order",
         "requester" : {
