@@ -40,6 +40,12 @@
                 "value": "X123456789"
               }
             },
+            "extension": [
+              {
+                "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
+                "valueString": "DE12345678901234"
+              }
+            ],
             "performer": [
               {
                 "actor": {
@@ -48,12 +54,6 @@
                     "value": "8-SMC-B-Testkarte-883110000095957"
                   }
                 }
-              }
-            ],
-            "extension": [
-              {
-                "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode",
-                "valueString": "DE12345678901234"
               }
             ],
             "whenHandedOver": "2026-07-01"

@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense-DiGA",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "name": "GEM_ERP_PR_MedicationDispense_DiGA",
   "title": "Dispensierung einer DiGA-Verordnung",
   "status": "active",
-  "date": "2025-12-19",
+  "date": "2026-04-14",
   "description": "Verarbeitet Informationen über die ausgegebene DiGA",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -163,32 +163,23 @@
       {
         "id": "MedicationDispense.medication[x].identifier",
         "path": "MedicationDispense.medication[x].identifier",
-        "short": "Eindeutige Identifikationsnummer für eine Verschreibungseinheit einer DiGA (PZN).",
-        "mustSupport": true
+        "short": "Eindeutige Identifikationsnummer für eine Verschreibungseinheit einer DiGA (PZN)."
       },
       {
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
         "min": 1,
-        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn",
-        "mustSupport": true
+        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn"
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "MedicationDispense.medication[x].display",
         "path": "MedicationDispense.medication[x].display",
-        "short": "Name der DiGA-Verschreibungseinheit.",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.performer.actor",
-        "path": "MedicationDispense.performer.actor",
-        "mustSupport": true
+        "short": "Name der DiGA-Verschreibungseinheit."
       },
       {
         "id": "MedicationDispense.performer.actor.identifier",
