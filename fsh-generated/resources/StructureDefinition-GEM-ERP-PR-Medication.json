@@ -5,8 +5,8 @@
   "version": "1.6.2",
   "name": "GEM_ERP_PR_Medication",
   "title": "Medikament zur Ausgabe des Rezepts",
-  "status": "draft",
-  "date": "2025-12-19",
+  "status": "active",
+  "date": "2026-04-14",
   "description": "Verarbeitet medizinische Informationen über das eingelöste Rezept",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -55,36 +55,6 @@
         "definition": "Dieses Feld kann weitere Medication Ressourcen enthalten, die hier gelistet werden. Dies tritt z.B. bei Rezepturen auf."
       },
       {
-        "id": "Medication.extension:isVaccine",
-        "path": "Medication.extension",
-        "sliceName": "isVaccine",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:drugCategory",
-        "path": "Medication.extension",
-        "sliceName": "drugCategory",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:normSizeCode",
-        "path": "Medication.extension",
-        "sliceName": "normSizeCode",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:packaging",
-        "path": "Medication.extension",
-        "sliceName": "packaging",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.extension:manufacturingInstructions",
-        "path": "Medication.extension",
-        "sliceName": "manufacturingInstructions",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.identifier",
         "path": "Medication.identifier",
         "short": "Business-Identifier der Medication",
@@ -110,18 +80,6 @@
         "definition": "Angabe der Packungsgröße, bzw. der Gesamtmenge der Packung"
       },
       {
-        "id": "Medication.amount.numerator.extension:packagingSize",
-        "path": "Medication.amount.numerator.extension",
-        "sliceName": "packagingSize",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.extension:totalQuantity",
-        "path": "Medication.amount.numerator.extension",
-        "sliceName": "totalQuantity",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.ingredient",
         "path": "Medication.ingredient",
         "short": "Wirkstoffe",
@@ -132,8 +90,7 @@
         "path": "Medication.ingredient.extension",
         "sliceName": "darreichungsform",
         "short": "Darreichungsform",
-        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string",
-        "mustSupport": true
+        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string"
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",

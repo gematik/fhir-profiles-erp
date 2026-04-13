@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "GEM_ERP_CS_OrganizationType",
   "id": "GEM-ERP-CS-OrganizationType",
@@ -18,7 +18,7 @@
     }
   ],
   "version": "1.6.2",
-  "date": "2025-12-19",
+  "date": "2026-04-14",
   "publisher": "gematik GmbH",
   "contact": [
     {
