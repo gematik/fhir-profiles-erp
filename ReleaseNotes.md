@@ -2,6 +2,9 @@
  
 # Release Notes E-Rezept Workflow
 
+## Release 1.6.2 (2026-04-14)
+- `Dependencies`: Aktualisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.2 mit Bugfix für strukturierte Dosierung (de.medication 1.0.4)
+
 ## Release 1.6.1 (2025-12-19)
 - `Dependencies`: Aktualisierung der Abhängigkeiten auf die neueste Version von ePA Medication 1.3.0
 
