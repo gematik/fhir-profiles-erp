@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.erezept-workflow.r4",
   "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "name": "ERezeptWorkflow",
   "title": "E-Rezept Workflow",
   "status": "active",
@@ -53,7 +53,7 @@
     },
     {
       "packageId": "de.gematik.epa.medication",
-      "version": "1.3.3",
+      "version": "1.3.4",
       "uri": "https://gematik.de/fhir/epa-medication/ImplementationGuide/de.gematik.epa.medication",
       "id": "de_gematik_epa_medication"
     },
