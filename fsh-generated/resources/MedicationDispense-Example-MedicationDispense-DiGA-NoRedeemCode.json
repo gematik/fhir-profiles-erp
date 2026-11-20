@@ -19,14 +19,6 @@
       "value": "X123456789"
     }
   },
-  "medicationReference": {
-    "extension": [
-      {
-        "valueCode": "asked-declined",
-        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-      }
-    ]
-  },
   "performer": [
     {
       "actor": {
@@ -37,6 +29,14 @@
       }
     }
   ],
+  "medicationReference": {
+    "extension": [
+      {
+        "valueCode": "asked-declined",
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+      }
+    ]
+  },
   "whenHandedOver": "2026-07-01",
   "note": [
     {

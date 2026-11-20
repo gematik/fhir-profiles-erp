@@ -12,7 +12,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-dgmp",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -90,7 +90,8 @@
         "path": "Medication.ingredient.extension",
         "sliceName": "darreichungsform",
         "short": "Darreichungsform",
-        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string"
+        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string",
+        "mustSupport": true
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
@@ -115,8 +116,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+              "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pharmaceutical-product-dgmp",
+              "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pzn-ingredient-dgmp"
             ],
             "aggregation": [
               "contained"

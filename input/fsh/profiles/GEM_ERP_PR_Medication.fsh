@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_Medication
-Parent: EPAMedication
+Parent: TIMedicationDgMP
 Id: GEM-ERP-PR-Medication
 Title: "Medikament zur Ausgabe des Rezepts"
 Description: "Verarbeitet medizinische Informationen über das eingelöste Rezept"
@@ -21,7 +21,7 @@ Description: "Verarbeitet medizinische Informationen über das eingelöste Rezep
 * ingredient MS
   * itemCodeableConcept ^short = "Komponente in codierter Form" // Diese Zeile ist notwendig, um den HAPI-Validator-Fehler zu vermeiden
   * itemReference MS
-  * itemReference only Reference(EPAMedicationPharmaceuticalProduct or EPAMedicationPZNIngredient)
+  * itemReference only Reference(TIMedicationPharmaceuticalProductDgMP or TIMedicationPZNIngredientDgMP)
   * itemReference ^type.aggregation = #contained
 
 * ingredient.extension[darreichungsform] MS

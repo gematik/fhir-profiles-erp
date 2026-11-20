@@ -12,7 +12,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-dispense-dgmp",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -163,23 +163,32 @@
       {
         "id": "MedicationDispense.medication[x].identifier",
         "path": "MedicationDispense.medication[x].identifier",
-        "short": "Eindeutige Identifikationsnummer für eine Verschreibungseinheit einer DiGA (PZN)."
+        "short": "Eindeutige Identifikationsnummer für eine Verschreibungseinheit einer DiGA (PZN).",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.system",
         "path": "MedicationDispense.medication[x].identifier.system",
         "min": 1,
-        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn"
+        "fixedUri": "http://fhir.de/CodeSystem/ifa/pzn",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].identifier.value",
         "path": "MedicationDispense.medication[x].identifier.value",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.medication[x].display",
         "path": "MedicationDispense.medication[x].display",
-        "short": "Name der DiGA-Verschreibungseinheit."
+        "short": "Name der DiGA-Verschreibungseinheit.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.performer.actor",
+        "path": "MedicationDispense.performer.actor",
+        "mustSupport": true
       },
       {
         "id": "MedicationDispense.performer.actor.identifier",

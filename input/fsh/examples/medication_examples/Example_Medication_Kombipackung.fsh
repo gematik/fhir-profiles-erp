@@ -18,7 +18,7 @@ Usage: #example
 * ingredient[+].itemReference = Reference(Augentropfen)
 
 Instance: Augentropfen
-InstanceOf: EPAMedicationPharmaceuticalProduct
+InstanceOf: TIMedicationPharmaceuticalProductDgMP
 Title: "Augentropfen-Komponente"
 Description: "Augentropfen als Teil einer Kombipackung"
 Usage: #inline
@@ -39,7 +39,7 @@ Usage: #inline
       * code = #ml
 
 Instance: NasenSpray
-InstanceOf: EPAMedicationPharmaceuticalProduct
+InstanceOf: TIMedicationPharmaceuticalProductDgMP
 Title: "Nasenspray-Komponente"
 Description: "Nasenspray als Teil einer Kombipackung"
 Usage: #inline

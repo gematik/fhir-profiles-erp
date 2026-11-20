@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
-Parent: EPAMedicationDispense
+Parent: TIMedicationDispenseDgMP
 Id: GEM-ERP-PR-MedicationDispense-DiGA
 Title: "Dispensierung einer DiGA-Verordnung"
 Description: "Verarbeitet Informationen über die ausgegebene DiGA"

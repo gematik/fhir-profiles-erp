@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_MedicationDispense
-Parent: EPAMedicationDispense
+Parent: TIMedicationDispenseDgMP
 Id: GEM-ERP-PR-MedicationDispense
 Title: "Dispensierung eines E-Rezepts"
 Description: "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente."

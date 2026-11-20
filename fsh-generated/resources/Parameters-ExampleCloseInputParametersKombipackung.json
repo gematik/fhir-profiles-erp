@@ -97,7 +97,7 @@
                 "id": "Augentropfen",
                 "meta": {
                   "profile": [
-                    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+                    "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pharmaceutical-product-dgmp"
                   ]
                 },
                 "extension": [
@@ -144,7 +144,7 @@
                 "id": "NasenSpray",
                 "meta": {
                   "profile": [
-                    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product"
+                    "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pharmaceutical-product-dgmp"
                   ]
                 },
                 "extension": [

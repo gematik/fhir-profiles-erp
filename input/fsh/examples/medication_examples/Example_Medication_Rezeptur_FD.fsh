@@ -36,7 +36,7 @@ Usage: #example
 * ingredient[=].strength.denominator.unit = "g"
 
 Instance: MedicationHydrocortison-FD
-InstanceOf: EPAMedicationPZNIngredient
+InstanceOf: TIMedicationPZNIngredientDgMP
 Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code
@@ -46,7 +46,7 @@ Usage: #inline
   * text = "Hydrocortison 1% Creme"
 
 Instance: MedicationDexpanthenol-FD
-InstanceOf: EPAMedicationPZNIngredient
+InstanceOf: TIMedicationPZNIngredientDgMP
 Usage: #inline
 * extension[type].valueCoding = $sct#781405001 "Medicinal product package (product)"
 * code

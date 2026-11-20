@@ -10,10 +10,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "1-0-2-0 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("1-0-2-0 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * when[+] = #EVE
@@ -41,10 +38,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "täglich: 08:00 Uhr — je 1 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("täglich: 08:00 Uhr — je 1 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * timeOfDay[+] = "08:00:00"
@@ -65,10 +59,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "alle 8 Tage: je 1 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("alle 8 Tage: je 1 Stück")
 * dosageInstruction[+]
   * timing.repeat.frequency = 1
   * timing.repeat.period = 8
@@ -87,10 +78,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "dienstags — je 2 Stück, donnerstags — je 2 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("dienstags — je 2 Stück\, donnerstags — je 2 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * dayOfWeek[+] = #tue
@@ -112,10 +100,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "alle 2 Tage: 08:00 Uhr — je 1 Stück; 18:00 Uhr — je 2 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("alle 2 Tage: 08:00 Uhr — je 1 Stück; 18:00 Uhr — je 2 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * frequency = 1
@@ -143,10 +128,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* extension[renderedDosageInstruction].valueMarkdown = "montags 1-0-1-0 Stück; freitags 1-0-1-0 Stück"
-* extension[generatedDosageInstructionsMeta]
-  * extension[algorithmVersion].valueString = "1.0.1"
-  * extension[language].valueCode = #de-DE
+* insert RenderedDosageText("montags 1-0-1-0 Stück; freitags 1-0-1-0 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * dayOfWeek[+] = #mon
