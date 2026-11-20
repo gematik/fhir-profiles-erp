@@ -5,6 +5,7 @@ Title: "Dispensierung eines E-Rezepts"
 Description: "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente."
 * insert Profile(GEM_ERP_PR_MedicationDispense)
 * obeys workflow-dosageExtensionBeiDosierung
+* obeys workflow-ExtRequiresDosage-MD
 
 * identifier contains prescriptionID 1..1
 * identifier[prescriptionID] only EPrescriptionId
@@ -34,6 +35,12 @@ Description: "Wert muss ein Datum in der Form: YYYY-MM-DD sein."
 Invariant: workflow-dosageExtensionBeiDosierung
 Description: "Wenn eine Dosierung angegeben wurde, muss der generierte Dosierungstext, sowie die Metainformationen zur Generierung angegeben werden."
 Expression: "dosageInstruction.exists() implies extension.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction').exists() and extension.where(url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta').exists()"
+Severity: #error
+
+
+Invariant: workflow-ExtRequiresDosage-MD
+Description: "	If a dosage extension (GeneratedDosageInstructionsMeta or renderedDosageInstruction) is present, at least one dosageInstruction must be present."
+Expression: "( extension.where( url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' or url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction' ).exists() ) implies dosageInstruction.exists()"
 Severity: #error
 
 

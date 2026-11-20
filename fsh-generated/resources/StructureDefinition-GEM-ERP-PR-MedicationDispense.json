@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensierung eines E-Rezepts",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-11-26",
   "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -25,6 +25,13 @@
             "severity": "error",
             "human": "Wenn eine Dosierung angegeben wurde, muss der generierte Dosierungstext, sowie die Metainformationen zur Generierung angegeben werden.",
             "expression": "dosageInstruction.exists() implies extension.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction').exists() and extension.where(url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta').exists()",
+            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+          },
+          {
+            "key": "ExtRequiresDosage-MD",
+            "severity": "error",
+            "human": "\tIf a dosage extension (GeneratedDosageInstructionsMeta or renderedDosageInstruction) is present, at least one dosageInstruction must be present.",
+            "expression": "( extension.where( url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' or url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction' ).exists() ) implies dosageInstruction.exists()",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
           }
         ]

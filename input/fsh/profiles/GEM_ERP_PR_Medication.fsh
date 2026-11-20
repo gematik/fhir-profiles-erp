@@ -18,6 +18,8 @@ Description: "Verarbeitet medizinische Informationen über das eingelöste Rezep
 * amount.numerator.extension[totalQuantity] MS
 * amount.numerator.extension[packagingSize] MS
 
+* form.coding[ifaDarreichungsform] 0..0 //TODO: Remove for 1.7.0
+
 * ingredient MS
   * itemCodeableConcept ^short = "Komponente in codierter Form" // Diese Zeile ist notwendig, um den HAPI-Validator-Fehler zu vermeiden
   * itemReference MS
