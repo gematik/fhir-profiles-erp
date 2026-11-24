@@ -646,22 +646,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Secret"
-        },
-        "name": "Identifier-Profil für Secret",
-        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-AccessCode"
-        },
-        "name": "Identifier-Profil für Verschreibungs-IDs",
-        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Communication-Representative"
         },
         "name": "Kommunikation zwischen Patient und Vertreter",
@@ -924,6 +908,11 @@
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "artifacts.html",
+          "title": "Artifacts",
+          "generation": "markdown"
         }
       ]
     },
@@ -939,6 +928,54 @@
       {
         "code": "path-pages",
         "value": "input/content"
+      },
+      {
+        "code": "shownav",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "false"
+      },
+      {
+        "code": "default-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "no-usage-check",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "de"
+      },
+      {
+        "code": "version-comparison",
+        "value": "1.6.4"
       }
     ]
   }

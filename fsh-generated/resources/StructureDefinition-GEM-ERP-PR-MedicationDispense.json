@@ -26,13 +26,6 @@
             "human": "Wenn eine Dosierung angegeben wurde, muss der generierte Dosierungstext, sowie die Metainformationen zur Generierung angegeben werden.",
             "expression": "dosageInstruction.exists() implies extension.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction').exists() and extension.where(url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta').exists()",
             "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
-          },
-          {
-            "key": "ExtRequiresDosage-MD",
-            "severity": "error",
-            "human": "\tIf a dosage extension (GeneratedDosageInstructionsMeta or renderedDosageInstruction) is present, at least one dosageInstruction must be present.",
-            "expression": "( extension.where( url = 'http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta' or url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction' ).exists() ) implies dosageInstruction.exists()",
-            "source": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
           }
         ]
       },

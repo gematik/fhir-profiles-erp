@@ -30,3 +30,16 @@ menu:
 parameters:
   path-pages:
     - input/content
+  shownav: true
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  apply-contact: false
+  default-contact: true
+  no-usage-check: true
+  show-inherited-invariants: true
+  excludettl: true
+  i18n-default-lang: de
+  version-comparison:
+    - 1.6.4

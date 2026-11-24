@@ -72,8 +72,6 @@
 [GEM_ERP_PR_Device]: StructureDefinition-GEM-ERP-PR-Device.html
 [GEM_ERP_PR_Communication]: StructureDefinition-GEM-ERP-PR-Communication.html
 [1]: Device-1.html
-[GEM_ERP_PR_Secret]: StructureDefinition-GEM-ERP-PR-Secret.html
-[GEM_ERP_PR_AccessCode]: StructureDefinition-GEM-ERP-PR-AccessCode.html
 [GEM_ERP_PR_Communication_Representative]: StructureDefinition-GEM-ERP-PR-Communication-Representative.html
 [GEM_ERP_EX_LastMedicationDispense]: StructureDefinition-GEM-ERP-EX-LastMedicationDispense.html
 [GEM_ERP_LOG_MedicationDispense_DiGA]: StructureDefinition-GEM-ERP-LOG-MedicationDispense-DiGA.html
