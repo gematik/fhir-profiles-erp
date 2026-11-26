@@ -36,5 +36,6 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
+  "experimental": false,
   "count": 3
 }

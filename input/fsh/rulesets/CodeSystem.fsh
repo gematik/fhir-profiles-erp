@@ -6,3 +6,4 @@ RuleSet: CodeSystem(name)
 * ^contact.telecom.value = "http://www.gematik.de"
 * ^copyright = "gematik GmbH"
 * ^caseSensitive = true
+* ^experimental = false

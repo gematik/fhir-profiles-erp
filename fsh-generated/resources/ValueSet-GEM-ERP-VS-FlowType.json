@@ -19,6 +19,7 @@
       ]
     }
   ],
+  "experimental": false,
   "compose": {
     "include": [
       {

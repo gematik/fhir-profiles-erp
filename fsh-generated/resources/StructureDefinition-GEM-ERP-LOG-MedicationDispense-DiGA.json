@@ -13,7 +13,7 @@
     {
       "identity": "GEM-ERP-MAP-MedicationDispense-DiGA",
       "name": "Mapping für MedicationDispense DiGA",
-      "uri": "GEM_ERP_PR_MedicationDispense_DiGA",
+      "uri": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA",
       "comment": "This mapping maps the logical units of the DiGA MedicationDispense to the profile"
     }
   ],
