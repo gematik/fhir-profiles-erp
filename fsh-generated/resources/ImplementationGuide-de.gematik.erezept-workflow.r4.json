@@ -976,6 +976,210 @@
       {
         "code": "version-comparison",
         "value": "1.6.4"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PackageQuantity"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_ActivateOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
       }
     ]
   }

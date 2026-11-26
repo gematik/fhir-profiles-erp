@@ -75,21 +75,21 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension",
-        "short": "Erweiterungen",
-        "definition": "Erweiterungen",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben",
+        "short": "Zusatzangaben",
+        "definition": "Zusatzangaben",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Extension"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.impfung",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.impfung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.impfung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.impfung",
         "short": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "definition": "Angabe ob Impfstoff nach KBV_EX_ERP_Medication_Vaccine",
         "min": 1,
@@ -101,8 +101,8 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.arzneimittelkategorie",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.arzneimittelkategorie",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.arzneimittelkategorie",
         "short": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "definition": "Arzneimittelkategorie aus KBV_EX_ERP_Medication_Category",
         "min": 1,
@@ -114,8 +114,8 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.kategorie",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.kategorie",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.kategorie",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.kategorie",
         "short": "Angabe zur Kategorie",
         "definition": "Angabe zur Kategorie",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -128,8 +128,8 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.normgroesse",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.normgroesse",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.normgroesse",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.normgroesse",
         "short": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "definition": "Angabe der Normgröße nach KBV_VS_SFHIR_KBV_NORMGROESSE",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -142,8 +142,8 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.herstellungsanweisung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.herstellungsanweisung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.herstellungsanweisung",
         "short": "Herstellungsanweisung",
         "definition": "Herstellungsanweisung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -156,8 +156,8 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.verpackung",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.extension.verpackung",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.verpackung",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.zusatzangaben.verpackung",
         "short": "Angabe zur Verpackung",
         "definition": "Angabe zur Verpackung",
         "comment": "Muss angegeben werden, wenn vorhanden",
@@ -178,7 +178,7 @@
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "BackboneElement"
           }
         ]
       },
@@ -404,7 +404,7 @@
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "BackboneElement"
           }
         ]
       },
@@ -569,21 +569,21 @@
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension",
-        "short": "Erweiterungen",
-        "definition": "Erweiterungen",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.zusatzangaben",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.zusatzangaben",
+        "short": "Zusatzangaben",
+        "definition": "Zusatzangaben",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Extension"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
-        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.extension.darreichungsform",
+        "id": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.zusatzangaben.darreichungsform",
+        "path": "GEM-ERP-LOG-MedicationDispense.medication.medicationArzneimittel.inhaltsstoffe.zusatzangaben.darreichungsform",
         "short": "Darreichungsform",
         "definition": "Darreichungsform",
         "min": 0,
@@ -616,7 +616,7 @@
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "BackboneElement"
           }
         ]
       },
