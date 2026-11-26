@@ -198,7 +198,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4"
             ]
           }
         ]

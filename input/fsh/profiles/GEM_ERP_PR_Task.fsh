@@ -43,6 +43,7 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
 * intent = #order (exactly)
 * for ^short = "Kennung des Patienten (KVID-Identifier)"
 * for.identifier only IdentifierKvid10
+* for.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
 

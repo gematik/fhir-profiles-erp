@@ -99,8 +99,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id",
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4",
+              "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4"
             ]
           }
         ]

@@ -38,7 +38,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
+              "http://fhir.de/StructureDefinition/identifier-iknr|1.5.4"
             ]
           }
         ]

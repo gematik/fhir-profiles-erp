@@ -21,6 +21,7 @@ Description: "Verarbeitet Informationen über die Dispensierung eines E-Rezepts 
 * performer 1..1
 * performer.actor.identifier 1..
 * performer.actor.identifier only IdentifierTelematikId
+* performer.actor.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4" //TODO: Remove with next minor version
 * whenPrepared ^mustSupport = false
 * whenPrepared obeys workflow-abgabeDatumsFormat
 * whenHandedOver 1..

@@ -8,10 +8,13 @@ Description: "Ressource, die für die Kommunikation der Antwort zur Weitergabe/I
 * recipient 1..1
   * identifier 1..1
   * identifier only IdentifierKvid10
+  * identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
 
 * sender MS
   * identifier 1..1
   * identifier only IdentifierKvid10 or IdentifierTelematikId
+  * identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
+  * identifier ^type[0].profile[1] = "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4" //TODO: Remove with next minor version
 
 * payload 1..1 MS
   * content[x] only string
