@@ -1,0 +1,17 @@
+{
+  "resourceType": "Bundle",
+  "id": "f8c2298f-7c00-4a68-af29-8a2862d55d43",
+  "meta": {
+    "tag": [
+      {
+        "display": "Platzhalter: E-Rezept Bundle aus kbv.ita.erp"
+      }
+    ]
+  },
+  "identifier": {
+    "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+    "value": "160.000.033.491.280.78"
+  },
+  "type": "collection",
+  "timestamp": "2026-07-01T15:29:00+00:00"
+}

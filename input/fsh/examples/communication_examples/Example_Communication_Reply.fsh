@@ -6,7 +6,7 @@ Usage: #example
 * id = "7977a4ab-97a9-4d95-afb3-6c4c1e2ac596"
 * meta.tag[+].display = "Reply from Pharmacy to Patient"
 * meta.tag[+].display = "Communication message sent by pharmacy to patient in response to a previous Task-related message"
-* basedOn.reference = "Task/160.000.033.491.280.78"
+* basedOn = Reference(TaskInReadyState)
 * status = #unknown
 * sender.identifier.system = $identifier-telematik-id
 * sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"

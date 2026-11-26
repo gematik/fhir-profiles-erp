@@ -331,6 +331,22 @@
       },
       {
         "reference": {
+          "reference": "Binary/PrescriptionBinary"
+        },
+        "name": "Binary einer Verschreibung (QES)",
+        "description": "Beispiel für binäre Daten einer elektronischen Verschreibung im PKCS#7-Format",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Binary/PrescriptionBinaryWithMeta"
+        },
+        "name": "Binary einer Verschreibung (QES) mit Metadaten",
+        "description": "Beispiel für binäre Daten einer elektronischen Verschreibung mit erweiterten Metadaten",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+      },
+      {
+        "reference": {
           "reference": "OperationDefinition/CloseOperation"
         },
         "name": "CloseOperation",
@@ -408,6 +424,14 @@
         "name": "DiGA-Nachricht eines Kostenträgers an den Patienten",
         "description": "Beispiel für eine DiGA-bezogene Nachricht, die vom Kostenträgers an den Patienten gesendet wird",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "Task/4b3c1a2e-8f6d-4e7a-9c1b-2d5e6f7a8b90"
+        },
+        "name": "DiGA-Task angenommen durch Kostenträger",
+        "description": "Beispiel für einen Task einer DiGA-Verordnung (Flowtype 162), der von einem Kostenträger angenommen wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
       },
       {
         "reference": {
@@ -754,6 +778,22 @@
         "name": "PKCS7 signiertes Bundle im enveloping style",
         "description": "PCKS7 signiertes eRezept-Bundle oder Quittung",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60"
+        },
+        "name": "Platzhalter DiGA-Verordnungs-Bundle (kbv.ita.evdga)",
+        "description": "Das hier wäre ein DiGA-Verordnungs-Bundle aus kbv.ita.evdga",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/f8c2298f-7c00-4a68-af29-8a2862d55d43"
+        },
+        "name": "Platzhalter E-Rezept-Bundle (kbv.ita.erp)",
+        "description": "Das hier wäre ein E-Rezept Bundle aus kbv.ita.erp",
+        "exampleBoolean": true
       },
       {
         "reference": {

@@ -31,6 +31,8 @@
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
+[PrescriptionBinary]: Binary-PrescriptionBinary.html
+[PrescriptionBinaryWithMeta]: Binary-PrescriptionBinaryWithMeta.html
 [CloseOperation]: OperationDefinition-CloseOperation.html
 [GEM_ERP_CS_DocumentType]: CodeSystem-GEM-ERP-CS-DocumentType.html
 [GEM_ERP_CS_FlowType]: CodeSystem-GEM-ERP-CS-FlowType.html
@@ -41,6 +43,7 @@
 [GEM_ERP_EX_DeepLink]: StructureDefinition-GEM-ERP-EX-DeepLink.html
 [GEM_ERP_EX_RedeemCode]: StructureDefinition-GEM-ERP-EX-RedeemCode.html
 [140f716f-f649-44fe-9a4e-157eb3c8adf3]: Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.html
+[4b3c1a2e-8f6d-4e7a-9c1b-2d5e6f7a8b90]: Task-4b3c1a2e-8f6d-4e7a-9c1b-2d5e6f7a8b90.html
 [2be1c6ac-5d10-47f6-84ee-8318b2c22c76]: Communication-2be1c6ac-5d10-47f6-84ee-8318b2c22c76.html
 [DispenseOperation]: OperationDefinition-DispenseOperation.html
 [GEM_ERP_PR_MedicationDispense_DiGA]: StructureDefinition-GEM-ERP-PR-MedicationDispense-DiGA.html
@@ -86,6 +89,8 @@
 [Medication-Kombipackung]: Medication-Medication-Kombipackung.html
 [Medication-Rezeptur]: Medication-Medication-Rezeptur.html
 [GEM_ERP_PR_Binary]: StructureDefinition-GEM-ERP-PR-Binary.html
+[3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60]: Bundle-3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60.html
+[f8c2298f-7c00-4a68-af29-8a2862d55d43]: Bundle-f8c2298f-7c00-4a68-af29-8a2862d55d43.html
 [GEM_ERP_PR_Signature]: StructureDefinition-GEM-ERP-PR-Signature.html
 [GEM_ERP_PR_Digest]: StructureDefinition-GEM-ERP-PR-Digest.html
 [GEM_ERP_PR_Composition]: StructureDefinition-GEM-ERP-PR-Composition.html

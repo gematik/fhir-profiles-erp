@@ -46,9 +46,9 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * insert DateTimeStampPlus1Hr(lastModified)
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[ePrescription].valueReference = Reference(PrescriptionBinaryWithMeta)
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[patientReceipt].valueReference = Reference(KBVPrescriptionBundlePlaceholder)
 
 Instance: TaskIn-ProgressState
 InstanceOf: GEM_ERP_PR_Task
@@ -104,9 +104,9 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * insert DateTimeStampPlus1Hr(lastModified)
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[ePrescription].valueReference = Reference(PrescriptionBinaryWithMeta)
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[patientReceipt].valueReference = Reference(KBVPrescriptionBundlePlaceholder)
 
 Instance: TaskIn-ProgressState-Dispensed-Multiple-MedicationDispenses
 InstanceOf: GEM_ERP_PR_Task
@@ -135,9 +135,9 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * insert DateTimeStampPlus1Hr(lastModified)
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[ePrescription].valueReference = Reference(PrescriptionBinaryWithMeta)
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[patientReceipt].valueReference = Reference(KBVPrescriptionBundlePlaceholder)
 
 Instance: TaskInClosedState
 InstanceOf: GEM_ERP_PR_Task
@@ -164,8 +164,37 @@ Usage: #example
 * for.identifier.value = "X123456789"
 * insert DateTimeStampPlus1Hr(lastModified)
 * input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
-* input[ePrescription].valueReference.reference = "281a985c-f25b-4aae-91a6-41ad744080b0"
+* input[ePrescription].valueReference = Reference(PrescriptionBinaryWithMeta)
 * input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
-* input[patientReceipt].valueReference.reference = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* input[patientReceipt].valueReference = Reference(KBVPrescriptionBundlePlaceholder)
 * output[receipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#3 "Receipt"
-* output[receipt].valueReference.reference = "dffbfd6a-5712-4798-bdc8-07201eb77ab8"
+* output[receipt].valueReference = Reference(ReceiptBundleQuittung)
+
+Instance: TaskInProgressState-DiGA
+InstanceOf: GEM_ERP_PR_Task
+Title: "DiGA-Task angenommen durch Kostenträger"
+Description: "Beispiel für einen Task einer DiGA-Verordnung (Flowtype 162), der von einem Kostenträger angenommen wurde"
+Usage: #example
+* id = "4b3c1a2e-8f6d-4e7a-9c1b-2d5e6f7a8b90"
+* meta.tag.display = "DiGA Task in IN-PROGRESS state claimed by health insurance via $accept operation"
+* extension[flowType].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+* extension[flowType].valueCoding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType#162 "Flowtype für Digitale Gesundheitsanwendungen"
+* extension[acceptDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+* insert Date(extension[acceptDate].valueDate)
+* extension[expiryDate].url = "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+* insert Date(extension[expiryDate].valueDate)
+* identifier[PrescriptionID].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier[PrescriptionID].value = "162.000.000.000.000.01"
+* identifier[AccessCode].system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
+* identifier[AccessCode].value = "777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+* status = #in-progress
+* intent = #order
+* insert DateTime(authoredOn)
+* performerType[+].coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType#urn:oid:1.2.276.0.76.4.59 "Kostenträger"
+* for.identifier.system = $identifier-kvid-10
+* for.identifier.value = "X234567890"
+* insert DateTimeStampPlus1Hr(lastModified)
+* input[ePrescription].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#1 "Health Care Provider Prescription"
+* input[ePrescription].valueReference = Reference(PrescriptionBinaryWithMeta)
+* input[patientReceipt].type.coding = https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType#2 "Patient Confirmation"
+* input[patientReceipt].valueReference = Reference(KBVDiGAPrescriptionBundlePlaceholder)

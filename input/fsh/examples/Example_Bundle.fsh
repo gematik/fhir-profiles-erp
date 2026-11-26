@@ -44,3 +44,27 @@ Description: "Dieses Bundle enthält den Task und das qualifiziert signierte E-R
 * entry[erxTask].fullUrl = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/d70932d1-9e1c-483c-b2d4-b7dced09b35e"
 * entry[erxBinary].resource = PrescriptionBinaryWithMeta
 * entry[erxBinary].fullUrl = "https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Binary/PrescriptionBinaryWithMeta"
+
+Instance: KBVPrescriptionBundlePlaceholder
+InstanceOf: Bundle
+Title: "Platzhalter E-Rezept-Bundle (kbv.ita.erp)"
+Description: "Das hier wäre ein E-Rezept Bundle aus kbv.ita.erp"
+Usage: #example
+* id = "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+* meta.tag.display = "Platzhalter: E-Rezept Bundle aus kbv.ita.erp"
+* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier.value = "160.000.033.491.280.78"
+* type = #collection
+* insert DateTime(timestamp)
+
+Instance: KBVDiGAPrescriptionBundlePlaceholder
+InstanceOf: Bundle
+Title: "Platzhalter DiGA-Verordnungs-Bundle (kbv.ita.evdga)"
+Description: "Das hier wäre ein DiGA-Verordnungs-Bundle aus kbv.ita.evdga"
+Usage: #example
+* id = "3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60"
+* meta.tag.display = "Platzhalter: DiGA-Verordnungs-Bundle aus kbv.ita.evdga"
+* identifier.system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId"
+* identifier.value = "162.000.000.000.000.01"
+* type = #collection
+* insert DateTime(timestamp)

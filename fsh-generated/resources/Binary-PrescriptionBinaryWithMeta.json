@@ -1,0 +1,11 @@
+{
+  "resourceType": "Binary",
+  "id": "PrescriptionBinaryWithMeta",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary|1.6"
+    ]
+  },
+  "contentType": "application/pkcs7-mime",
+  "data": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+}
