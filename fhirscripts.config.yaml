@@ -18,6 +18,7 @@ build:
     # - requirements
     # - shell: reqtools polarion ./input/content
     - sushi
+    - shell: ./scripts/check-dosage-text.sh
     - cap_statements
     - requirements
     - igpub

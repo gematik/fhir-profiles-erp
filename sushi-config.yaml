@@ -25,6 +25,18 @@ dependencies:
 
 applyExtensionMetadataToRoot: false
 
+pages:
+  index.md:
+    title: Home
+  downloads.md:
+    title: "Downloads"
+  release-notes.md:
+    title: "Release Notes"
+  dependencies.md:
+    title: Abhängigkeiten
+  license.md:
+    title: "Apache License"
+
 menu:
   Home: index.html
   Über:

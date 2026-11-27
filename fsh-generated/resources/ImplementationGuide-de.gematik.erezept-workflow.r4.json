@@ -329,7 +329,7 @@
           "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
         },
         "name": "Belieferungsfrist",
-        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu welcher eine Verordnung zu Lasten der gesetzlichen Krankenkasse eingelöst werden kann.",
         "exampleBoolean": false
       },
       {
@@ -953,18 +953,23 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "dependencies.html",
-          "title": "Dependencies",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "markdown"
         },
         {
+          "nameUrl": "release-notes.html",
+          "title": "Release Notes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "dependencies.html",
+          "title": "Abhängigkeiten",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "license.html",
-          "title": "License",
+          "title": "Apache License",
           "generation": "markdown"
         }
       ]

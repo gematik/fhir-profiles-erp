@@ -7,7 +7,7 @@
   "title": "Belieferungsfrist",
   "status": "active",
   "date": "2026-12-01",
-  "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+  "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu welcher eine Verordnung zu Lasten der gesetzlichen Krankenkasse eingelöst werden kann.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

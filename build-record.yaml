@@ -6,5 +6,5 @@ versions:
   PlantUML: 1.2025.2
   Python: 3.15.2
   epatools: 0.1.5
-  fhirscripts: 0.32.1
+  fhirscripts: 0.32.2
   npm: 11.4.2

@@ -78,7 +78,7 @@ Description: "Beispiel für eine Medikamentenabgabe mit vollständigen Angaben u
 * performer.actor.identifier.value = "3-SMC-B-Testkarte-883110000095957"
 * insert Date(whenHandedOver)
 * medicationReference = Reference(SumatripanMedication)
-* insert RenderedDosageText("dienstags — je 2 Stück\, donnerstags — je 2 Stück")
+* insert RenderedDosageText("dienstags — je 2 Stück; donnerstags — je 2 Stück")
 * dosageInstruction[+]
   * timing.repeat
     * dayOfWeek[+] = #tue

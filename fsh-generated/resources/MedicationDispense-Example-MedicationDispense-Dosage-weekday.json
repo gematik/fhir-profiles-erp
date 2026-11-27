@@ -32,7 +32,7 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction",
-      "valueMarkdown": "dienstags — je 2 Stück, donnerstags — je 2 Stück"
+      "valueMarkdown": "dienstags — je 2 Stück; donnerstags — je 2 Stück"
     },
     {
       "url": "http://ig.fhir.de/igs/medication/StructureDefinition/GeneratedDosageInstructionsMeta",
