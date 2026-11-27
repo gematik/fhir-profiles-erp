@@ -7,7 +7,8 @@ Usage: #example
 * basedOn = Reference(TaskInProgressState-DiGA)
 * status = #unknown
 * sender.identifier.system = $identifier-telematik-id
-* sender.identifier.value = "8-SMC-B-Testkarte-783498105628375"
+//* sender.identifier.value = "8-SMC-B-Testkarte-783498105628375"
+* sender.identifier.value = "falsche-telematik-id"
 * recipient.identifier.system = $identifier-kvid-10
 * recipient.identifier.value = "X234567890"
 * insert DateTimeStamp(sent)

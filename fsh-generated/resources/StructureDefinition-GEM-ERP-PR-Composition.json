@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Composition",
   "title": "Quittung für die Einlösung eines E-Rezepts",
   "status": "active",
-  "date": "2026-11-27",
+  "date": "2026-12-01",
   "description": "Nach Abschluss des E-Rezept-Workflows erhält der Rezeptausfüller eine unterschriebene Quittung für Abrechnungs- und Verifizierungszwecke.",
   "fhirVersion": "4.0.1",
   "kind": "resource",

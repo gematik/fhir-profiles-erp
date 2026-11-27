@@ -1,4 +1,3 @@
-[GEM_ERP_EX_ExpiryDate]: StructureDefinition-GEM-ERP-EX-ExpiryDate.html
 [AbortOperation]: OperationDefinition-AbortOperation.html
 [AcceptOperation]: OperationDefinition-AcceptOperation.html
 [ActivateOperation]: OperationDefinition-ActivateOperation.html
@@ -31,6 +30,7 @@
 [Example-MedicationDispense-Without-Medication]: MedicationDispense-Example-MedicationDispense-Without-Medication.html
 [ExampleUnitMedication]: Medication-ExampleUnitMedication.html
 [SumatripanMedication]: Medication-SumatripanMedication.html
+[GEM_ERP_EX_AcceptDate]: StructureDefinition-GEM-ERP-EX-AcceptDate.html
 [PrescriptionBinary]: Binary-PrescriptionBinary.html
 [PrescriptionBinaryWithMeta]: Binary-PrescriptionBinaryWithMeta.html
 [CloseOperation]: OperationDefinition-CloseOperation.html
@@ -39,7 +39,6 @@
 [GEM_ERP_CS_OrganizationType]: CodeSystem-GEM-ERP-CS-OrganizationType.html
 [GEM_ERP_CS_AvailabilityStatus]: CodeSystem-GEM-ERP-CS-AvailabilityStatus.html
 [CreateOperation]: OperationDefinition-CreateOperation.html
-[GEM_ERP_EX_AcceptDate]: StructureDefinition-GEM-ERP-EX-AcceptDate.html
 [GEM_ERP_EX_DeepLink]: StructureDefinition-GEM-ERP-EX-DeepLink.html
 [GEM_ERP_EX_RedeemCode]: StructureDefinition-GEM-ERP-EX-RedeemCode.html
 [140f716f-f649-44fe-9a4e-157eb3c8adf3]: Communication-140f716f-f649-44fe-9a4e-157eb3c8adf3.html
@@ -50,6 +49,7 @@
 [GEM_ERP_PR_MedicationDispense]: StructureDefinition-GEM-ERP-PR-MedicationDispense.html
 [GEM_ERP_PR_Bundle]: StructureDefinition-GEM-ERP-PR-Bundle.html
 [SimpleMedication]: Medication-SimpleMedication.html
+[GEM_ERP_EX_ExpiryDate]: StructureDefinition-GEM-ERP-EX-ExpiryDate.html
 [ExampleOperationActivateError]: OperationOutcome-ExampleOperationActivateError.html
 [ExampleOperationActivateParametersInput]: Parameters-ExampleOperationActivateParametersInput.html
 [ExampleCloseInputParametersRezeptur]: Parameters-ExampleCloseInputParametersRezeptur.html

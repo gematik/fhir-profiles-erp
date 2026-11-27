@@ -2,12 +2,12 @@
 RuleSet: Versioning
 * ^status = #active
 * ^version = "1.6.5"
-* ^date = "2026-11-27"
+* ^date = "2026-12-01"
 
 RuleSet: OperationVersioning
 * status = #active
 * version = "1.6.5"
-* date = "2026-11-27"
+* date = "2026-12-01"
 
 // Dates for Examples (Date of actual release)
 RuleSet: Date(field)

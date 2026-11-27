@@ -6,10 +6,12 @@ title: "E-Rezept Workflow"
 description: Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst
 status: active # draft | active | retired | unknown
 version: 1.6.5
-date: 2026-11-27
+date: 2026-12-01
 copyrightYear: 2026+
+copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.
 releaseLabel: release # ci-build, ballot, release
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+license: Apache-2.0
 publisher:
   name: gematik GmbH
   url: https://gematik.de
@@ -24,8 +26,12 @@ dependencies:
 applyExtensionMetadataToRoot: false
 
 menu:
-  Start: index.html
-  Inhaltsverzeichnis: toc.html
+  Home: index.html
+  Über:
+    Downloads: downloads.html
+    Abhängigkeiten: dependencies.html
+    Release Notes: release-notes.html
+    Lizenz: license.html
   FHIR-Artefakte: artifacts.html
 
 parameters:
@@ -42,8 +48,7 @@ parameters:
   show-inherited-invariants: true
   excludettl: true
   i18n-default-lang: de
-  version-comparison:
-    - 1.6.4
+
   # Canonical URLs (mit Unterstrich) weichen bewusst von den Resource-IDs (mit Bindestrich) ab
   special-url:
     - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus

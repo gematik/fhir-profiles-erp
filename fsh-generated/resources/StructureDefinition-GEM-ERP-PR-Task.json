@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Task",
   "title": "Task für die Verwaltung des E-Rezept-Workflows",
   "status": "active",
-  "date": "2026-11-27",
+  "date": "2026-12-01",
   "description": "Diese Ressource verwaltet den E-Rezept-Workflow",
   "fhirVersion": "4.0.1",
   "kind": "resource",

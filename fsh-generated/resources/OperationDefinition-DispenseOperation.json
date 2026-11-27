@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition",
   "status": "active",
   "version": "1.6.5",
-  "date": "2026-11-27",
+  "date": "2026-12-01",
   "name": "Dispense",
   "kind": "operation",
   "affectsState": true,

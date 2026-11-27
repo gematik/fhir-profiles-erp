@@ -1,5 +1,3 @@
-## E-Rezept Workflow
-
 Diese Spezifikation beschreibt die Datenmodelle des E-Rezept Workflow.
 
 Die Fachanwendung E-Rezept ermöglicht die Übermittlung von ärztlichen bzw. zahnärztlichen Verordnungen in elektronischer Form. In der ersten Stufe sind dies Verordnungen für apothekenpflichtige Arzneimittel. In weiteren Ausbaustufen wird die Anwendung um weitere Verordnungen wie Betäubungsmittel (BtM), T-Rezepte sowie Heil- und Hilfsmittel erweitert.
@@ -14,10 +12,6 @@ Folgende Dokumente gelten über die Datenmodelle hinaus:
 - Spezifikation E-Rezept-Frontend des Versicherten [gemSpec_eRp_FdV](https://gemspec.gematik.de/docs/gemSpec/gemSpec_eRp_FdV/latest/)
 
 Das Repository, was diesem Projekt zugrundeliegt und auch die FSH-Files enthält findet sich hier: https://github.com/gematik/fhir-profiles-erp
-
-### Abhängigkeiten
-
-{% include dependency-table.xhtml %}
 
 ### Kontakt und Feedback
 

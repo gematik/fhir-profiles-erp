@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_Communication_Reply",
   "title": "Antwort vom Leistungserbringer an den Patienten",
   "status": "active",
-  "date": "2026-11-27",
+  "date": "2026-12-01",
   "description": "Ressource, die für die Kommunikation der Antwort zur Weitergabe/Informationsanfrage vom Leistungserbringer an Patienten/Vertreter verwendet wird",
   "fhirVersion": "4.0.1",
   "kind": "resource",

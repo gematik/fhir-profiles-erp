@@ -6,7 +6,7 @@
   "name": "E-Rezept Workflow",
   "title": "E-Rezept Workflow",
   "status": "active",
-  "date": "2026-11-27",
+  "date": "2026-12-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -35,7 +35,9 @@
       ]
     }
   ],
+  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "packageId": "de.gematik.erezept-workflow.r4",
+  "license": "Apache-2.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -67,14 +69,6 @@
   ],
   "definition": {
     "resource": [
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
-        },
-        "name": "Ablaufdatum des Rezepts",
-        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
-        "exampleBoolean": false
-      },
       {
         "reference": {
           "reference": "OperationDefinition/AbortOperation"
@@ -332,6 +326,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
+        },
+        "name": "Belieferungsfrist",
+        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Binary/PrescriptionBinary"
         },
         "name": "Binary einer Verschreibung (QES)",
@@ -392,14 +394,6 @@
         },
         "name": "CreateOperation",
         "description": "Diese Operation erstellt eine Aufgabe für die Verschreibung eines bestimmten Flowtypes.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
-        },
-        "name": "Datum der Bestätigung der Verschreibung",
-        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
         "exampleBoolean": false
       },
       {
@@ -481,6 +475,14 @@
         "name": "Einfaches Beispiel-Medikament",
         "description": "Beispiel für ein einfaches Medikament mit minimalen Eigenschaften",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
+        },
+        "name": "Einlösefrist der Verordnung",
+        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt die Einlösefrist der Verordnung an.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -951,8 +953,18 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "artifacts.html",
-          "title": "Artifacts",
+          "nameUrl": "dependencies.html",
+          "title": "Dependencies",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "license.html",
+          "title": "License",
           "generation": "markdown"
         }
       ]
@@ -1013,10 +1025,6 @@
       {
         "code": "i18n-default-lang",
         "value": "de"
-      },
-      {
-        "code": "version-comparison",
-        "value": "1.6.4"
       },
       {
         "code": "special-url",

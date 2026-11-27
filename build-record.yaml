@@ -1,7 +1,7 @@
 versions:
   FSH Sushi: 3.21.1
   IG Publisher: 'Picked up JAVA_TOOL_OPTIONS: -Dhttp.nonProxyHosts=''localhost|gsbeel02.int.gematik.de''
-    3.0.6'
+    3.0.8'
   Java: 21.0.7
   PlantUML: 1.2025.2
   Python: 3.15.2

@@ -9,7 +9,8 @@ Usage: #example
 * basedOn = Reference(TaskInReadyState)
 * status = #unknown
 * sender.identifier.system = $identifier-telematik-id
-* sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
+//* sender.identifier.value = "3-SMC-B-Testkarte-883110000123465"
+* sender.identifier.value = "3-04.2.0000315000.391"
 * recipient.identifier.system = $identifier-kvid-10
 * recipient.identifier.value = "X234567890"
 * insert DateTimeStamp(sent)
