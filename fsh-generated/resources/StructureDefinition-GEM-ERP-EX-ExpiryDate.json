@@ -4,10 +4,10 @@
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
   "version": "1.6.5",
   "name": "GEM_ERP_EX_ExpiryDate",
-  "title": "Ablaufdatum des Rezepts",
+  "title": "Einlösefrist der Verordnung",
   "status": "active",
-  "date": "2026-11-27",
-  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
+  "date": "2026-12-01",
+  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt die Einlösefrist der Verordnung an.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -25,8 +25,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Ablaufdatum des Rezepts",
-        "definition": "Datum, an dem das Rezept abläuft und in der Apotheke nicht mehr eingelöst werden kann."
+        "short": "Einlösefrist der Verordnung",
+        "definition": "Frist bis zu welcher ein Rezept beliefert werden darf (Frist endet zu Task.extension:expiryDate, bei Kassenrezepten 3 Monate nach Ausstellung). Danach darf ein Rezept nicht mehr von der Apotheke beliefert werden (§2, Abs. 5 AMVV)."
       },
       {
         "id": "Extension.extension",
