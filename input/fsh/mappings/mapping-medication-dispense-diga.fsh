@@ -1,6 +1,6 @@
 Mapping: GEM_ERP_MAP_MedicationDispense_DiGA
 Source: GEM_ERP_LOG_MedicationDispense_DiGA
-Target: "GEM_ERP_PR_MedicationDispense_DiGA"
+Target: "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
 Id: GEM-ERP-MAP-MedicationDispense-DiGA
 Title: "Mapping für MedicationDispense DiGA"
 Description: "This mapping maps the logical units of the DiGA MedicationDispense to the profile"

@@ -37,8 +37,8 @@
       "display": "Flowtype zur Workflow-Steuerung durch Leistungserbringer (PKV)"
     }
   ],
-  "version": "1.6.4",
-  "date": "2026-06-16",
+  "version": "1.6.5",
+  "date": "2026-12-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -52,5 +52,6 @@
   ],
   "copyright": "gematik GmbH",
   "caseSensitive": true,
+  "experimental": false,
   "count": 7
 }

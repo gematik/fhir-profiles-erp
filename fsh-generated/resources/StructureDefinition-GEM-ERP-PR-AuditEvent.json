@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-AuditEvent",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_AuditEvent",
   "title": "AuditEvent für die Protokollierung des Zugriffs auf eRezepte",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-12-01",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -99,8 +99,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id",
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4",
+              "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4"
             ]
           }
         ]

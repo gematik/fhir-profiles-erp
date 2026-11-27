@@ -56,13 +56,13 @@
   ],
   "basedOn": [
     {
-      "reference": "Task/160.000.033.491.280.78"
+      "reference": "Task/607255ed-ce41-47fc-aad3-cfce1c39963f"
     }
   ],
   "sender": {
     "identifier": {
       "system": "https://gematik.de/fhir/sid/telematik-id",
-      "value": "3-SMC-B-Testkarte-883110000123465"
+      "value": "3-04.2.0000315000.391"
     }
   },
   "sent": "2026-07-01T15:29:00.434+00:00"

@@ -109,7 +109,7 @@
                 "id": "MedicationHydrocortison",
                 "meta": {
                   "profile": [
-                    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+                    "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pzn-ingredient-dgmp"
                   ]
                 },
                 "extension": [
@@ -140,7 +140,7 @@
                 "id": "MedicationDexpanthenol",
                 "meta": {
                   "profile": [
-                    "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+                    "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pzn-ingredient-dgmp"
                   ]
                 },
                 "extension": [

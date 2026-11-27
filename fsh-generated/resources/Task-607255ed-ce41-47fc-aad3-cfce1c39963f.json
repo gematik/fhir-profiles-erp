@@ -58,7 +58,7 @@
         ]
       },
       "valueReference": {
-        "reference": "281a985c-f25b-4aae-91a6-41ad744080b0"
+        "reference": "Binary/PrescriptionBinaryWithMeta"
       }
     },
     {
@@ -72,7 +72,7 @@
         ]
       },
       "valueReference": {
-        "reference": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+        "reference": "Bundle/f8c2298f-7c00-4a68-af29-8a2862d55d43"
       }
     }
   ],

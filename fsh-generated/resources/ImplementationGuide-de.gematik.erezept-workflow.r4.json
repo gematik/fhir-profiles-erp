@@ -2,10 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.erezept-workflow.r4",
   "url": "https://gematik.de/fhir/erp/ImplementationGuide/de.gematik.erezept-workflow.r4",
-  "version": "1.6.4",
-  "name": "ERezeptWorkflow",
+  "version": "1.6.5",
+  "name": "E-Rezept Workflow",
   "title": "E-Rezept Workflow",
   "status": "active",
+  "date": "2026-12-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -34,7 +35,9 @@
       ]
     }
   ],
+  "copyright": "gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.",
   "packageId": "de.gematik.erezept-workflow.r4",
+  "license": "Apache-2.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -52,12 +55,6 @@
       "id": "de_basisprofil_r4"
     },
     {
-      "packageId": "de.gematik.epa.medication",
-      "version": "1.3.4",
-      "uri": "https://gematik.de/fhir/epa-medication/ImplementationGuide/de.gematik.epa.medication",
-      "id": "de_gematik_epa_medication"
-    },
-    {
       "packageId": "de.gematik.terminology",
       "version": "1.0.9",
       "uri": "https://gematik.de/fhir/terminology/ImplementationGuide/de.gematik.terminology",
@@ -65,21 +62,13 @@
     },
     {
       "packageId": "de.gematik.ti",
-      "version": "1.3.1",
+      "version": "1.4.1",
       "uri": "https://gematik.de/fhir/ti/ImplementationGuide/de.gematik.ti",
       "id": "de_gematik_ti"
     }
   ],
   "definition": {
     "resource": [
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
-        },
-        "name": "Ablaufdatum des Rezepts",
-        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt das Ablaufdatum des Rezepts an.",
-        "exampleBoolean": false
-      },
       {
         "reference": {
           "reference": "OperationDefinition/AbortOperation"
@@ -337,6 +326,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
+        },
+        "name": "Belieferungsfrist",
+        "description": "Frist bis zu welcher ein Rezept zu Lasten der gesetzlichen Krankenkasse eingelöst werden kann.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Binary/PrescriptionBinary"
+        },
+        "name": "Binary einer Verschreibung (QES)",
+        "description": "Beispiel für binäre Daten einer elektronischen Verschreibung im PKCS#7-Format",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Binary/PrescriptionBinaryWithMeta"
+        },
+        "name": "Binary einer Verschreibung (QES) mit Metadaten",
+        "description": "Beispiel für binäre Daten einer elektronischen Verschreibung mit erweiterten Metadaten",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+      },
+      {
+        "reference": {
           "reference": "OperationDefinition/CloseOperation"
         },
         "name": "CloseOperation",
@@ -385,14 +398,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
-        },
-        "name": "Datum der Bestätigung der Verschreibung",
-        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu dem eine Krankenkasse die Verschreibung akzeptiert und bezahlt.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-EX-DeepLink"
         },
         "name": "DiGA-DeepLink",
@@ -414,6 +419,14 @@
         "name": "DiGA-Nachricht eines Kostenträgers an den Patienten",
         "description": "Beispiel für eine DiGA-bezogene Nachricht, die vom Kostenträgers an den Patienten gesendet wird",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA"
+      },
+      {
+        "reference": {
+          "reference": "Task/4b3c1a2e-8f6d-4e7a-9c1b-2d5e6f7a8b90"
+        },
+        "name": "DiGA-Task angenommen durch Kostenträger",
+        "description": "Beispiel für einen Task einer DiGA-Verordnung (Flowtype 162), der von einem Kostenträger angenommen wurde",
+        "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
       },
       {
         "reference": {
@@ -462,6 +475,14 @@
         "name": "Einfaches Beispiel-Medikament",
         "description": "Beispiel für ein einfaches Medikament mit minimalen Eigenschaften",
         "exampleCanonical": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
+        },
+        "name": "Einlösefrist der Verordnung",
+        "description": "Frist bis zu welcher die Verordnung beliefert werden darf.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -652,22 +673,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-Secret"
-        },
-        "name": "Identifier-Profil für Secret",
-        "description": "Das Secret ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/GEM-ERP-PR-AccessCode"
-        },
-        "name": "Identifier-Profil für Verschreibungs-IDs",
-        "description": "Der AccessCode ist ein generiertes Geheimnis, das Zugriff auf eine E-Rezept-Ressource gewährt, z. B. Task.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/GEM-ERP-PR-Communication-Representative"
         },
         "name": "Kommunikation zwischen Patient und Vertreter",
@@ -776,6 +781,22 @@
         "name": "PKCS7 signiertes Bundle im enveloping style",
         "description": "PCKS7 signiertes eRezept-Bundle oder Quittung",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60"
+        },
+        "name": "Platzhalter DiGA-Verordnungs-Bundle (kbv.ita.evdga)",
+        "description": "Das hier wäre ein DiGA-Verordnungs-Bundle aus kbv.ita.evdga",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/f8c2298f-7c00-4a68-af29-8a2862d55d43"
+        },
+        "name": "Platzhalter E-Rezept-Bundle (kbv.ita.erp)",
+        "description": "Das hier wäre ein E-Rezept Bundle aus kbv.ita.erp",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -930,6 +951,26 @@
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "release-notes.html",
+          "title": "Release Notes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "dependencies.html",
+          "title": "Abhängigkeiten",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "license.html",
+          "title": "Apache License",
+          "generation": "markdown"
         }
       ]
     },
@@ -945,6 +986,254 @@
       {
         "code": "path-pages",
         "value": "input/content"
+      },
+      {
+        "code": "shownav",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "false"
+      },
+      {
+        "code": "default-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "no-usage-check",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "de"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PackageQuantity"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_ActivateOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Output"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature"
+      },
+      {
+        "code": "special-url",
+        "value": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
       }
     ]
   }

@@ -4,3 +4,4 @@ RuleSet: ValueSet(name)
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"
+* ^experimental = false

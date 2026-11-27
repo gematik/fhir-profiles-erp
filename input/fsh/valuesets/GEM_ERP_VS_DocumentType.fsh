@@ -8,4 +8,5 @@ Description: "Art der Dokumente je nach Empfänger."
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.gematik.de"
+* ^experimental = false
 * include codes from system GEM_ERP_CS_DocumentType

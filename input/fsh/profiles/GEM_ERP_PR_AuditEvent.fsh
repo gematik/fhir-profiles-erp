@@ -18,6 +18,8 @@ Title: "AuditEvent für die Protokollierung des Zugriffs auf eRezepte"
   * type 1..1
   * who.identifier 1..1
   * who.identifier only IdentifierTelematikId or IdentifierKvid10
+  * who.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4" //TODO: Remove with next minor version
+  * who.identifier ^type[0].profile[1] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
   * name 1..1
 
 * source MS

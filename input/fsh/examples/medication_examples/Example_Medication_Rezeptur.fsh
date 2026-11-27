@@ -41,7 +41,7 @@ Usage: #example
 * ingredient[=].strength.denominator.code = #g
 
 Instance: MedicationHydrocortison
-InstanceOf: EPAMedicationPZNIngredient
+InstanceOf: TIMedicationPZNIngredientDgMP
 Title: "Hydrocortison-Wirkstoff"
 Description: "Hydrocortison-Wirkstoff als Bestandteil einer Rezeptur"
 Usage: #inline
@@ -53,7 +53,7 @@ Usage: #inline
 * batch.lotNumber = "56498416854"
 
 Instance: MedicationDexpanthenol
-InstanceOf: EPAMedicationPZNIngredient
+InstanceOf: TIMedicationPZNIngredientDgMP
 Title: "Dexpanthenol-Wirkstoff"
 Description: "Dexpanthenol-Wirkstoff als Bestandteil einer Rezeptur"
 Usage: #inline

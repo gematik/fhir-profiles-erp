@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Communication-DispReq",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_Communication_DispReq",
   "title": "Anfrage zur Einlösung des E-Rezepts",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-12-01",
   "description": "Ressource, die für die Kommunikation einer Einlöseanfrage zwischen Patient und Leistungserbringer auf Basis des E-Rezepts verwendet wird.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -108,7 +108,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4"
             ]
           }
         ],
@@ -122,7 +122,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4"
             ]
           }
         ],

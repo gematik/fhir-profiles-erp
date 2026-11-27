@@ -1,5 +1,5 @@
 Profile: GEM_ERP_PR_MedicationDispense_DiGA
-Parent: EPAMedicationDispense
+Parent: TIMedicationDispenseDgMP
 Id: GEM-ERP-PR-MedicationDispense-DiGA
 Title: "Dispensierung einer DiGA-Verordnung"
 Description: "Verarbeitet Informationen über die ausgegebene DiGA"
@@ -41,6 +41,7 @@ Description: "Verarbeitet Informationen über die ausgegebene DiGA"
   * actor MS
     * identifier 1..1
     * identifier only IdentifierTelematikId
+    * identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4" //TODO: Remove with next minor version
 
 // Abgabedatum
 * whenHandedOver 1..1

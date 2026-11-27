@@ -29,13 +29,13 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
 * identifier[PrescriptionID] only EPrescriptionId
   * ^short = "E-Rezept-ID"
   * ^definition = "Die E-Rezept-ID ist der Hauptidentifikator für die Task Ressource und den gesamten E-Rezept Workflow. Dieser Identifikator wird vom E-Rezept Fachdienst generiert und darf nicht manuell geändert werden."
+* identifier[AccessCode] only TIFlowAccessCode
 * identifier[AccessCode] 
   * ^short = "AccessCode Identifier"
   * ^definition = "Generiert vom E-Rezept Fachdienst. Dieser Identifikator muss in jeder Anfrage zur Task Ressource übertragen werden."
-  * system 1..
-  * system = "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode" (exactly)
-  * value 1..
-* identifier[Secret] only GEM_ERP_PR_Secret
+  * system 1..1
+  * value 1..1
+* identifier[Secret] only TIFlowSecret
 * identifier[Secret] 
   * ^short = "Secret"
   * system 1..1
@@ -43,6 +43,7 @@ and GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION named eu-isRedeemableBy
 * intent = #order (exactly)
 * for ^short = "Kennung des Patienten (KVID-Identifier)"
 * for.identifier only IdentifierKvid10
+* for.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
 * performerType.coding from GEM_ERP_VS_OrganizationType (required)
 * performerType.coding 1..
 

@@ -2,17 +2,17 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Medication",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_Medication",
   "title": "Medikament zur Ausgabe des Rezepts",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-12-01",
   "description": "Verarbeitet medizinische Informationen über das eingelöste Rezept",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-dgmp",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -74,6 +74,12 @@
         "definition": "Beschreibt die Darreichungsform des Arzneimittels."
       },
       {
+        "id": "Medication.form.coding:ifaDarreichungsform",
+        "path": "Medication.form.coding",
+        "sliceName": "ifaDarreichungsform",
+        "max": "0"
+      },
+      {
         "id": "Medication.amount",
         "path": "Medication.amount",
         "short": "Menge des Arzneimittels in einer Packung",
@@ -90,7 +96,8 @@
         "path": "Medication.ingredient.extension",
         "sliceName": "darreichungsform",
         "short": "Darreichungsform",
-        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string"
+        "definition": "Angabe der Darreichungsform eines Wirkstoffes als string",
+        "mustSupport": true
       },
       {
         "id": "Medication.ingredient.item[x]:itemCodeableConcept",
@@ -115,8 +122,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pharmaceutical-product",
-              "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-pzn-ingredient"
+              "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pharmaceutical-product-dgmp",
+              "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-pzn-ingredient-dgmp"
             ],
             "aggregation": [
               "contained"

@@ -4,10 +4,11 @@ Title: "DiGA-Nachricht eines Kostenträgers an den Patienten"
 Description: "Beispiel für eine DiGA-bezogene Nachricht, die vom Kostenträgers an den Patienten gesendet wird"
 Usage: #example
 * id = "140f716f-f649-44fe-9a4e-157eb3c8adf3"
-* basedOn.reference = "Task/162.000.000.000.000.01"
+* basedOn = Reference(TaskInProgressState-DiGA)
 * status = #unknown
 * sender.identifier.system = $identifier-telematik-id
-* sender.identifier.value = "8-SMC-B-Testkarte-783498105628375"
+//* sender.identifier.value = "8-SMC-B-Testkarte-783498105628375"
+* sender.identifier.value = "falsche-telematik-id"
 * recipient.identifier.system = $identifier-kvid-10
 * recipient.identifier.value = "X234567890"
 * insert DateTimeStamp(sent)

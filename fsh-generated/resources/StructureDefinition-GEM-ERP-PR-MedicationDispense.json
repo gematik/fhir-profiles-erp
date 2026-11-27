@@ -2,17 +2,17 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-MedicationDispense",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_MedicationDispense",
   "title": "Dispensierung eines E-Rezepts",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-12-01",
   "description": "Verarbeitet Informationen über die Dispensierung eines E-Rezepts und die abgegebenen Medikamente.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",
-  "baseDefinition": "https://gematik.de/fhir/epa-medication/StructureDefinition/epa-medication-dispense",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-medication-dispense-dgmp",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -112,7 +112,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4"
             ]
           }
         ]

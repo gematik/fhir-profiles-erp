@@ -5,10 +5,13 @@ name: E-Rezept Workflow
 title: "E-Rezept Workflow"
 description: Dieser IG Beschreibt Datenmodelle für den E-Rezept-Fachdienst
 status: active # draft | active | retired | unknown
-version: 1.6.4
+version: 1.6.5
+date: 2026-12-01
 copyrightYear: 2026+
+copyright: gematik GmbH / Dieser Implementation Guide ist lizenziert unter [Apache License](./license.html), Version 2.0.
 releaseLabel: release # ci-build, ballot, release
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+license: Apache-2.0
 publisher:
   name: gematik GmbH
   url: https://gematik.de
@@ -17,17 +20,97 @@ publisher:
 dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   de.basisprofil.r4: 1.5.4
-  de.gematik.epa.medication: 1.3.4
   de.gematik.terminology: 1.0.9
-  de.gematik.ti: 1.3.1
+  de.gematik.ti: 1.4.1
 
 applyExtensionMetadataToRoot: false
 
+pages:
+  index.md:
+    title: Home
+  downloads.md:
+    title: "Downloads"
+  release-notes.md:
+    title: "Release Notes"
+  dependencies.md:
+    title: Abhängigkeiten
+  license.md:
+    title: "Apache License"
+
 menu:
-  Start: index.html
-  Inhaltsverzeichnis: toc.html
+  Home: index.html
+  Über:
+    Downloads: downloads.html
+    Abhängigkeiten: dependencies.html
+    Release Notes: release-notes.html
+    Lizenz: license.html
   FHIR-Artefakte: artifacts.html
 
 parameters:
   path-pages:
     - input/content
+  shownav: true
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  apply-contact: false
+  default-contact: true
+  no-usage-check: true
+  show-inherited-invariants: true
+  excludettl: true
+  i18n-default-lang: de
+
+  # Canonical URLs (mit Unterstrich) weichen bewusst von den Resource-IDs (mit Bindestrich) ab
+  special-url:
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_AvailabilityStatus
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_OrganizationType
+    - https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_AvailabilityStatus
+    - https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_FlowType
+    - https://gematik.de/fhir/erp/ValueSet/GEM_ERP_VS_OrganizationType
+    - https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType
+    - https://gematik.de/fhir/erp/OperationDefinition/AbortOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/AcceptOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/ActivateOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/CloseOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/CreateOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/DispenseOperationDefinition
+    - https://gematik.de/fhir/erp/OperationDefinition/RejectOperationDefinition
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AvailabilityState
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_Beneficiary
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_DeepLink
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PATIENT_AUTHORIZATION
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_EU_IS_REDEEMABLE_BY_PROPERTIES
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_InsuranceProvider
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_LastMedicationDispense
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PackageQuantity
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_RedeemCode
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_SupplyOptionsType
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Binary
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Bundle_OP_Accept
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DiGA
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_DispReq
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Reply
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Communication_Representative
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Composition
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Device
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Digest
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Medication
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense_DiGA
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_AcceptOperation_Output
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_ActivateOperation_Output
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Input
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CloseOperation_Output
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_CreateOperation_Output
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_PAR_DispenseOperation_Input
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Signature
+    - https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task

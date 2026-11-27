@@ -18,14 +18,14 @@ Usage: #example
 * ingredient[+].itemReference = Reference(Augentropfen)
 
 Instance: Augentropfen
-InstanceOf: EPAMedicationPharmaceuticalProduct
+InstanceOf: TIMedicationPharmaceuticalProductDgMP
 Title: "Augentropfen-Komponente"
 Description: "Augentropfen als Teil einer Kombipackung"
 Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
-    * coding[atc-de] = $cs-atc-de|1.4.0#R01AC01 "Natriumcromoglicat"
+    * coding[atc-de] = $cs-atc-de|2026#R01AC01 "Cromoglicinsäure"
   * strength
     * numerator
       * value = 20
@@ -39,14 +39,14 @@ Usage: #inline
       * code = #ml
 
 Instance: NasenSpray
-InstanceOf: EPAMedicationPharmaceuticalProduct
+InstanceOf: TIMedicationPharmaceuticalProductDgMP
 Title: "Nasenspray-Komponente"
 Description: "Nasenspray als Teil einer Kombipackung"
 Usage: #inline
 * extension[type].valueCoding = $sct#373873005 "Pharmaceutical / biologic product (product)"
 * ingredient[+]
   * itemCodeableConcept
-    * coding[atc-de] = $cs-atc-de|1.4.0#R01AC01 "Natriumcromoglicat"
+    * coding[atc-de] = $cs-atc-de|2026#R01AC01 "Cromoglicinsäure"
   * strength
     * numerator
       * value = 2.8

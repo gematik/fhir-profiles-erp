@@ -1,0 +1,25 @@
+install:
+  - firely_terminal
+  - sushi
+  - igpub
+  - requirements
+  - publishtools
+  - igtools
+  - epatools
+deploy:
+  env:
+    dev: gematik_gemspec_fhir_dev-0
+    prod: gematik_gemspec_fhir_prod-0
+build:
+  pipeline:
+    - shell: ./scripts/trust-ig-template.sh https://github.com/gematik/fhir2-ig-template
+    # - shell: ../../scripts/install-ig-packages.sh ./fhir-ig-installer.conf
+    - shell: ./scripts/generate-heading-links-js.sh
+    # - requirements
+    # - shell: reqtools polarion ./input/content
+    - sushi
+    - shell: ./scripts/check-dosage-text.sh
+    - cap_statements
+    - requirements
+    - igpub
+    - igpub_qa

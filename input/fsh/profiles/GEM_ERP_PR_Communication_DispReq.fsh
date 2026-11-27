@@ -17,9 +17,11 @@ Description: "Ressource, die für die Kommunikation einer Einlöseanfrage zwisch
 * recipient 1..1 MS
 * recipient.identifier 1.. MS
 * recipient.identifier only IdentifierTelematikId
+* recipient.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-telematik-id|1.5.4" //TODO: Remove with next minor version
 
 * sender.identifier 1.. MS
 * sender.identifier only IdentifierKvid10
+* sender.identifier ^type[0].profile[0] = "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4" //TODO: Remove with next minor version
 
 * payload 0..1 MS
 * payload.content[x] only string

@@ -1,9 +1,27 @@
 == Suppressed Messages ==
 
-# Ignore the URL Mismatch in resources
-%does not match the URL%
-%Resource id/url mismatch%
-%URL Mismatch%
-
 # Example Reference do not need to resolve
 %nicht auffindbar
+
+# Logical Models: Elementpfade beginnen mit der Id (mit Bindestrichen), rein dokumentarisch
+%eld-20%
+
+# Identifier-Systeme und Beispiel-URLs sind nicht als auflösbare Ressourcen gedacht
+%'https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId' löst nicht auf%
+%'https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode' löst nicht auf%
+%'https://gematik.de/fhir/sid/telematik-id' löst nicht auf%
+%'https://gematik.de/fhir/epa-medication/sid/rx-originator-process-identifier' löst nicht auf%
+%'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT' löst nicht auf%
+%'http://bfarm.de/DimensionsloseEinheiten' löst nicht auf%
+%'https://erp-ref.zentral.erp.splitdns.ti-dienste.de/Task/160.000.033.491.280.78/$accept/' löst nicht auf%
+%'https://gematico.de?redeemCode=DE12345678901234' löst nicht auf%
+
+# Externe Terminologie (KBV, PZN, ASK) steht dem Validator nicht zur Verfügung
+ValueSet https://fhir.kbv.de/ValueSet/%
+Das CodeSystem https://fhir.kbv.de/CodeSystem/%
+Canonical URL 'https://fhir.kbv.de/ValueSet/%
+A definition for CodeSystem 'http://fhir.de/CodeSystem/ifa/pzn' could not be found%
+A definition for CodeSystem 'http://fhir.de/CodeSystem/ask' could not be found%
+
+# SNOMED CT: keine deutschen Displays auf dem Terminologieserver verfügbar
+There are no valid display names found for the code http://snomed.info/sct#%

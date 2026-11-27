@@ -28,7 +28,7 @@
     {
       "identifier": {
         "system": "https://gematik.de/fhir/sid/telematik-id",
-        "value": "3-SMC-B-Testkarte-883110000123465"
+        "value": "3-883110000123465"
       }
     }
   ],

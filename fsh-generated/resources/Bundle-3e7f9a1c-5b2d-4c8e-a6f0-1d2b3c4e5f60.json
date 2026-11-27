@@ -1,0 +1,17 @@
+{
+  "resourceType": "Bundle",
+  "id": "3e7f9a1c-5b2d-4c8e-a6f0-1d2b3c4e5f60",
+  "meta": {
+    "tag": [
+      {
+        "display": "Platzhalter: DiGA-Verordnungs-Bundle aus kbv.ita.evdga"
+      }
+    ]
+  },
+  "identifier": {
+    "system": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_PrescriptionId",
+    "value": "162.000.000.000.000.01"
+  },
+  "type": "collection",
+  "timestamp": "2026-07-01T15:29:00+00:00"
+}

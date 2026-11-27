@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "GEM-ERP-PR-Task",
   "url": "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "name": "GEM_ERP_PR_Task",
   "title": "Task für die Verwaltung des E-Rezept-Workflows",
   "status": "active",
-  "date": "2026-06-16",
+  "date": "2026-12-01",
   "description": "Diese Ressource verwaltet den E-Rezept-Workflow",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -199,18 +199,15 @@
         "short": "AccessCode Identifier",
         "definition": "Generiert vom E-Rezept Fachdienst. Dieser Identifikator muss in jeder Anfrage zur Task Ressource übertragen werden.",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Task.identifier:AccessCode.system",
-        "path": "Task.identifier.system",
-        "min": 1,
-        "fixedUri": "https://gematik.de/fhir/erp/NamingSystem/GEM_ERP_NS_AccessCode"
-      },
-      {
-        "id": "Task.identifier:AccessCode.value",
-        "path": "Task.identifier.value",
-        "min": 1
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/ti/StructureDefinition/tiflow-access-code"
+            ]
+          }
+        ]
       },
       {
         "id": "Task.identifier:Secret",
@@ -223,7 +220,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Secret"
+              "https://gematik.de/fhir/ti/StructureDefinition/tiflow-secret"
             ]
           }
         ]
@@ -245,7 +242,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+              "http://fhir.de/StructureDefinition/identifier-kvid-10|1.5.4"
             ]
           }
         ]
