@@ -6,7 +6,7 @@
   "name": "GEM_ERP_PR_MedicationDispense_DiGA",
   "title": "Dispensierung einer DiGA-Verordnung",
   "status": "active",
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "description": "Verarbeitet Informationen über die ausgegebene DiGA",
   "fhirVersion": "4.0.1",
   "kind": "resource",

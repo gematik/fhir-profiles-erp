@@ -2,7 +2,7 @@
  
 # Release Notes E-Rezept Workflow
 
-## Release 1.6.5 (2026-12-01)
+## Release 1.6.5 (2026-11-27)
 - `Dependencies`: Aktualisierung der Abhängigkeiten von ePA Medication zu TI-Common 1.4.1 um die Bugfixes für die strukturierte Dosierung zu beziehen (de.fhir.medication 1.0.8)
 - Entfernen von GEM_ERP_PR_AccessCode und GEM_ERP_PR_Secret, da TI-Common die Profile TIFlowAccessCode und TIFlowSecret mit gleicher SID bereitstellt
 - `Geändert:` In den Profilen und Extensions werden die Identifier-Profile aus de.basisprofil.r4 (`identifier-kvid-10`, `identifier-telematik-id`, `identifier-iknr`) auf Version `1.5.4` gepinnt, da über die Abhängigkeiten mehrere Versionen von de.basisprofil.r4 geladen werden. Die Strukturen der Profile ändern sich dadurch nicht.

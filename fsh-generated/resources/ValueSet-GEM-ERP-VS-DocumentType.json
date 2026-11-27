@@ -7,7 +7,7 @@
   "description": "Art der Dokumente je nach Empfänger.",
   "url": "https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_VS_DocumentType",
   "version": "1.6.5",
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "publisher": "gematik GmbH",
   "contact": [
     {

@@ -5,7 +5,7 @@
   "version": "1.6.5",
   "name": "GEM_ERP_EX_InsuranceProvider",
   "status": "active",
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "description": "IK-Nummer (Institutionskennzeichen) des Versicherungsträgers, der das angeforderte Medikament abdeckt",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
