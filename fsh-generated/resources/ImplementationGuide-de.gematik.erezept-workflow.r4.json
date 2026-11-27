@@ -329,7 +329,7 @@
           "reference": "StructureDefinition/GEM-ERP-EX-AcceptDate"
         },
         "name": "Belieferungsfrist",
-        "description": "Diese Extension sollte in der Task-Ressource verwendet werden. Sie speichert das Datum, bis zu welcher eine Verordnung zu Lasten der gesetzlichen Krankenkasse eingelöst werden kann.",
+        "description": "Frist bis zu welcher ein Rezept zu Lasten der gesetzlichen Krankenkasse eingelöst werden kann.",
         "exampleBoolean": false
       },
       {
@@ -481,7 +481,7 @@
           "reference": "StructureDefinition/GEM-ERP-EX-ExpiryDate"
         },
         "name": "Einlösefrist der Verordnung",
-        "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt die Einlösefrist der Verordnung an.",
+        "description": "Frist bis zu welcher die Verordnung beliefert werden darf.",
         "exampleBoolean": false
       },
       {

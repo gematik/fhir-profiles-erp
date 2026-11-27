@@ -7,7 +7,7 @@
   "title": "Einlösefrist der Verordnung",
   "status": "active",
   "date": "2026-12-01",
-  "description": "Diese Erweiterung sollte in der Task-Ressource verwendet werden. Sie zeigt die Einlösefrist der Verordnung an.",
+  "description": "Frist bis zu welcher die Verordnung beliefert werden darf.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
